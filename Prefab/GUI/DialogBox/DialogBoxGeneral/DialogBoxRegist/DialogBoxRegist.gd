@@ -6,7 +6,7 @@ extends DialogPopup
 @onready var passwordLineEdit2: LineEdit = %PasswordLineEdit2
 
 func _ready() -> void :
-    super._ready()
+    super ._ready()
 
 func RegistButtonPressed() -> void :
     if passwordLineEdit.text != passwordLineEdit2.text:

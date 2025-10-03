@@ -53,7 +53,6 @@ damagePart = {
 Armor = []
 Custom = []
 DamagePartSlot/Bucket = null
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
@@ -65,14 +64,14 @@ layerSlot = [null, null, null, null, null, null, null, null, null, null, null, n
 layerSprite = [null, null, null, null, null, NodePath("Head"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 
 [node name="Head" parent="SpriteGroup/TransformPoint/SunflowerPea" index="0"]
-position = Vector2(13.55, -17.75)
+position = Vector2(14.73, -16.81)
 trueFrameRate = 30.0
 
 [node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/SunflowerPea/Head" index="0"]
 position = Vector2(26.87, -18.76)
 
 [node name="SunflowerSlot" type="Node2D" parent="SpriteGroup/TransformPoint/SunflowerPea" index="1"]
-position = Vector2(-12.4207, -15.9796)
+position = Vector2(-15.0407, -13.7996)
 scale = Vector2(0.599976, 0.533978)
 script = ExtResource("9")
 followSlotId = 21

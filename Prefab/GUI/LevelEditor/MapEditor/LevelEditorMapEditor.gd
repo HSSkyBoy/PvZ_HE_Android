@@ -18,17 +18,38 @@ func Save(isSave: bool = false) -> void :
     Release()
     if !is_instance_valid(levelConfig):
         return
+
+    var vaseMode: bool = false
+    match levelConfig.finishMethod:
+        TowerDefenseEnum.LEVEL_FINISH_METHOD.VASE:
+            vaseMode = true
     if (isSave && is_visible_in_tree()) || ( !isSave && !is_visible_in_tree()):
         levelConfig.preSpawnList.clear()
+        if vaseMode:
+            levelConfig.vaseManager.vaseList.clear()
         var characterSaveList: Array[TowerDefenseCharacter] = []
         for x in range(1, mapControl.config.gridNum.x + 1):
             for y in range(1, mapControl.config.gridNum.y + 1):
                 var cell: TowerDefenseCellInstance = mapControl.plantGrid[x][y]
                 var characterList = cell.GetCharacterListSave()
                 for character: TowerDefenseCharacter in characterList:
+                    if vaseMode:
+                        if character is TowerDefenseVase:
+                            var vaseConfig = character.Export()
+                            levelConfig.vaseManager.vaseList.append(vaseConfig)
+                            characterSaveList.append(character)
+                            continue
                     var preSpawnConfig: TowerDefenseLevelPreSpawnConfig = TowerDefenseLevelPreSpawnConfig.new()
                     preSpawnConfig.gridPos = Vector2(x, y)
                     preSpawnConfig.packetName = character.packet.saveKey
+                    if character is TowerDefenseVase:
+                        if is_instance_valid(character.packetConfig):
+                            preSpawnConfig.characterOverride = TowerDefenseCharacterOverride.new()
+                            preSpawnConfig.characterOverride.propertyChange = []
+                            var propertyChangeConfig: TowerDefenseCharacterPropertyChangeConfig = TowerDefenseCharacterPropertyChangeConfig.new()
+                            propertyChangeConfig.propertyName = "packetName"
+                            propertyChangeConfig.value = character.packetConfig.saveKey
+                            preSpawnConfig.characterOverride.propertyChange.append(propertyChangeConfig)
                     levelConfig.preSpawnList.append(preSpawnConfig)
                     characterSaveList.append(character)
         for character: TowerDefenseCharacter in TowerDefenseManager.GetCharacter():
@@ -39,11 +60,31 @@ func Save(isSave: bool = false) -> void :
             preSpawnConfig.packetName = character.packet.saveKey
             levelConfig.preSpawnList.append(preSpawnConfig)
             characterSaveList.append(character)
+        match levelConfig.finishMethod:
+            TowerDefenseEnum.LEVEL_FINISH_METHOD.WAVE:
+                levelConfig.vaseManager = null
         if ( !isSave && !is_visible_in_tree()):
             ClearCharacter()
     elif is_visible_in_tree():
         for preSpawn: TowerDefenseLevelPreSpawnConfig in levelConfig.preSpawnList:
-            preSpawn.Spawn()
+            var spawnCharacter = preSpawn.SpawnCharacter()
+            if is_instance_valid(spawnCharacter):
+                if is_instance_valid(preSpawn.characterOverride):
+                    preSpawn.characterOverride.ExecuteCharacter(spawnCharacter)
+        if is_instance_valid(levelConfig.vaseManager):
+            for vaseConfig: TowerDefenseLevelVaseConfig in levelConfig.vaseManager.vaseList:
+                var vasePacketConfig: TowerDefensePacketConfig
+                match vaseConfig.type:
+                    "Plant":
+                        vasePacketConfig = TowerDefenseManager.GetPacketConfig("VasePlant")
+                    "Zombie":
+                        vasePacketConfig = TowerDefenseManager.GetPacketConfig("VaseZombie")
+                    _:
+                        vasePacketConfig = TowerDefenseManager.GetPacketConfig("VaseNormal")
+                var vase = vasePacketConfig.Plant(vaseConfig.gridPos)
+                if is_instance_valid(vase):
+                    if vaseConfig.packetName != "":
+                        vase.packetConfig = vaseConfig.GetPacket()
 
 func Clear() -> void :
     levelConfig = null

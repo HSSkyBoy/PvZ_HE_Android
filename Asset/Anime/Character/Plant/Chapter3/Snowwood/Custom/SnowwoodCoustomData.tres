@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharacterCustomData" load_steps=3 format=4 uid="uid://c2ny3pufsxnqs"]
+
+[ext_resource type="Resource" uid="uid://4qh4limacb7s" path="res://Asset/Anime/Character/Plant/Chapter3/Snowwood/Custom/Config/SnowwoodCoustom0.tres" id="1"]
+[ext_resource type="Script" uid="uid://onv5rieax7m5" path="res://Resource/General/Character/Costom/CharacterCustomData.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+customList = [ExtResource("1")]
+customDictionary = {
+"Custom0": {
+"Close": ["SnowPea_crystals1 复制", "SnowPea_crystals2 复制", "SnowPea_crystals3 复制", "SnowPea_crystals1", "SnowPea_crystals2", "SnowPea_crystals3", "Torchwood_mouth", "anim_face"],
+"Config": ExtResource("1"),
+"Open": ["skin1", "skin3", "skin4_1", "skin4_2", "skin4_3", "skin4_1_2", "skin4_2_2", "skin4_3_2", "skin5", "skin6_1", "skin6_2", "skin7"]
+}
+}
+fliterOpenAll = ["skin1", "skin3", "skin4_1", "skin4_2", "skin4_3", "skin4_1_2", "skin4_2_2", "skin4_3_2", "skin5", "skin6_1", "skin6_2", "skin7"]
+fliterCloseAll = ["SnowPea_crystals1 复制", "SnowPea_crystals2 复制", "SnowPea_crystals3 复制", "SnowPea_crystals1", "SnowPea_crystals2", "SnowPea_crystals3", "Torchwood_mouth", "anim_face"]
+metadata/_custom_type_script = "uid://onv5rieax7m5"

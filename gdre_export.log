@@ -1,11 +1,15 @@
-GDRE Tools 1.0.1-dev.278+gb69114
-Windows 10.0.26200, NVIDIA GeForce RTX 3060 Laptop GPU, opengl3
-Opening file: E:/Tools/GDRE_tools-editor-windows/植物大战僵尸杂交版v0.5.1发布版.APK
-Loaded 2897 imported files
-Detected Engine Version: 4.4.1.stable
-Detected Bytecode Revision: 4.3.0-stable (77af6ca)
-Extracted 5911 files, no errors detected!
+GDRE Tools v1.0.2
+Windows 10.0.26220, NVIDIA GeForce RTX 3060 Laptop GPU, opengl3
+Opening file: E:\GDRE_tools\pzjbczb_441418.apk
+Loaded 3348 imported files
+Detected Engine Version: 4.5.0.beta.2
+Detected Bytecode Revision: 4.5-beta.2 (ebc36a7)
+Extracted 6860 files, no errors detected!
 Recreating plugin configs...
+WARNING: Failed to recreate plugin.cfg for AdobeAnimateEditor
+   at: ImportExporter::recreate_plugin_configs (modules\gdsdecomp\utility\import_exporter.cpp:968)
+WARNING: Failed to recreate plugin.cfg for com.heroiclabs.nakama
+   at: ImportExporter::recreate_plugin_configs (modules\gdsdecomp\utility\import_exporter.cpp:968)
 Loading resource strings, this may take a while!!
 Resource strings loaded!
 Saved project config.
@@ -14,12 +18,12 @@ Saved project config.
 ********************************EXPORT REPORT********************************
 
 Totals:                                 
-Decompiled scripts:                     533
+Decompiled scripts:                     594
 Failed scripts:                         0
-Imported resources for export session:  2897
-Successfully converted:                 2897
-Lossy:                                  63
-Rewrote metadata:                       837
+Imported resources for export session:  3348
+Successfully converted:                 3348
+Lossy:                                  71
+Rewrote metadata:                       908
 Non-importable conversions:             0
 Not converted:                          0
 Failed conversions:                     0
@@ -28,7 +32,8 @@ Failed conversions:                     0
 ------
 
 The following plugins failed to have their plugin.cfg regenerated:
-_Godot-IDE_
+AdobeAnimateEditor
+com.heroiclabs.nakama
 
 
 
@@ -36,7 +41,7 @@ _Godot-IDE_
 
 
 Translation Export Incomplete:
-WARNING: Could not recover 104 keys for res://Asset/Translate/Translate.csv
+WARNING: Could not recover 72 keys for res://Asset/Translate/Translate.csv
 
 
 ------
@@ -45,13 +50,14 @@ The following addons failed to have their plugin.cfg regenerated
 You may encounter editor errors due to this.
 Tip: Try finding the plugin in the Godot Asset Library or Github.
 
- - _Godot-IDE_
+ - AdobeAnimateEditor
+ - com.heroiclabs.nakama
 
 
 
 ------------------------------------------------------------------------------------
 
-Use Godot editor version 4.4.1.stable to edit the project.
+Use Godot editor version 4.5.0.beta.2 to edit the project.
 Note: the project may be using a custom version of Godot. Detection for this has not been implemented yet.
 If you find that you have many non-import errors upon opening the project 
 (i.e. scripts or shaders have many errors), use the original game's binary as the export template.

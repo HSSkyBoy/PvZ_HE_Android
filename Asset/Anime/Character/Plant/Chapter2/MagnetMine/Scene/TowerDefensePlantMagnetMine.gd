@@ -51,14 +51,14 @@ func FireExited() -> void :
     pass
 
 func IdleEntered() -> void :
-    super.IdleEntered()
+    super .IdleEntered()
     instance.invincible = true
     sprite.SetAnimation("Rise", false, 0.2)
     sprite.AddAnimation("Idle", 0.0, true, 0.2)
 
 @warning_ignore("unused_parameter")
 func IdleProcessing(delta: float) -> void :
-    super.IdleProcessing(delta)
+    super .IdleProcessing(delta)
     if sprite.clip == "Idle":
         instance.invincible = true
         drawCharacter = await magnetComponent.GetCanArmorDrawCharacterList()
@@ -72,7 +72,7 @@ func IdleProcessing(delta: float) -> void :
             sprite.timeScale = timeScale * 2.0
 
 func IdleExited() -> void :
-    super.IdleExited()
+    super .IdleExited()
 
 func ReadyRise() -> void :
     if rise:
@@ -88,7 +88,7 @@ func Explode() -> void :
     Destroy()
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "Fire":
             Explode()
@@ -104,5 +104,6 @@ func DestroySet() -> void :
     var characterNode: Node2D = TowerDefenseManager.GetCharacterNode()
     effect.global_position = global_position
     characterNode.add_child(effect)
+    await get_tree().physics_frame
     TowerDefenseExplode.CreateExplode(global_position, Vector2(1.0, 0.25), eventList, [], camp, -1)
     AudioManager.AudioPlay("MineExplosion", AudioManagerEnum.TYPE.SFX)

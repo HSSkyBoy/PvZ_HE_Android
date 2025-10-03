@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=4 uid="uid://dftoo8ogu8dsd"]
 
-[ext_resource type="Script" uid="uid://cgwpjld3gw53g" path="res://Asset/Anime/Character/Zombie/Chapter2/Zamboni/ZombieZamboniSprite.gd" id="1"]
+[ext_resource type="Script" path="res://Asset/Anime/Character/Zombie/Chapter2/Zamboni/ZombieZamboniSprite.gd" id="1"]
 [ext_resource type="Resource" uid="uid://dfprh7rx6oy1x" path="res://Asset/Anime/Character/Zombie/Chapter2/Zamboni/ZombieZamboni.tres" id="2"]
 
 [node name="ZombieZamboni" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]

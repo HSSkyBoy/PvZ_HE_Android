@@ -10,3 +10,4 @@ class_name TowerDefenseZombieConfig extends TowerDefenseCharacterConfig
 @export var wavePointCost: int = 100
 @export var canSpawnPlantfood: bool = true
 @export var excludeLineGridType: Array[TowerDefenseEnum.PLANTGRIDTYPE] = []
+@export var spawnLineNeed: Array[TowerDefenseEnum.PLANTGRIDTYPE] = []

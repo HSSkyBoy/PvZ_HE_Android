@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=22 format=3 uid="uid://unxwi66sc65y"]
+[gd_resource type="Theme" load_steps=22 format=4 uid="uid://unxwi66sc65y"]
 
 [ext_resource type="Texture2D" uid="uid://f0b1p4f814ew" path="res://Asset/Texture/GUI/General/General/OptionsCheckBox1.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://b45no7tmda0e1" path="res://Asset/Texture/GUI/General/General/OptionsCheckBox0.png" id="2"]

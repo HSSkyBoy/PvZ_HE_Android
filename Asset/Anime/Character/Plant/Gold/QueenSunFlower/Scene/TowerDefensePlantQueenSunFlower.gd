@@ -20,10 +20,15 @@ var attackTimer: float = 0.0
 
 var coldCheckInterval: int = 2
 
+var projectileName: String = "FirePeaTrack"
+
 func _ready() -> void :
     if Engine.is_editor_hint():
         return
-    super._ready()
+    super ._ready()
+    if currentCustom.has("Custom0"):
+        projectileName = "FireNoteTrack"
+
     attackShape.shape = attackShape.shape.duplicate(true)
     attackShape.shape.size = TowerDefenseManager.GetMapGridSize() * 2.75
 
@@ -33,7 +38,7 @@ func _ready() -> void :
 
 @warning_ignore("unused_parameter")
 func IdleProcessing(delta: float) -> void :
-    super.IdleProcessing(delta)
+    super .IdleProcessing(delta)
     sprite.timeScale = timeScale
 
     if coldCheckInterval > 0:
@@ -43,17 +48,17 @@ func IdleProcessing(delta: float) -> void :
         coldCheckInterval = 2
     if attackTimer >= attackInterval:
         if attackComponent.CanAttack():
-            TowerDefenseExplode.CreateExplode(global_position, Vector2(1.3, 1.3), eventList, [], camp, instance.collisionFlags)
+            TowerDefenseExplode.CreateExplode(global_position, Vector2(1.3, 1.3), eventList, [], camp, instance.collisionFlags | TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.UNDER_GROUND | TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.UNDER_WATER)
             attackTimer = 0.0
     else:
         attackTimer += delta
 
-    if fireComponent.CanFire("FirePeaTrack"):
+    if fireComponent.CanFire(projectileName):
         fireComponent.Refresh()
         for i in fireNum:
             var angle: float = deg_to_rad(360.0 / fireNum * float(i))
             var posOffset: Vector2 = Vector2.from_angle(angle)
-            var projectile: TowerDefenseProjectile = fireComponent.CreateProjectile(0, Vector2(600, 0), "FirePeaTrack", camp)
+            var projectile: TowerDefenseProjectile = fireComponent.CreateProjectile(0, Vector2(600, 0), projectileName, -1, camp)
             var tween = projectile.create_tween()
             tween.set_ease(Tween.EASE_OUT)
             tween.set_trans(Tween.TRANS_QUART)

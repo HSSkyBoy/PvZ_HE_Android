@@ -4,8 +4,10 @@ class_name TowerDefenseCharacterConfig extends Resource
 @export var name: String = ""
 @export var hitpointsNearDeath: float = 0.0
 @export var hitpoints: float = 300.0
+@export var explosionHurt: float = -1.0
 @export var smashHurt: float = -1.0
 @export var spikeHurt: float = -1.0
+@export var canDragIntoWater: bool = true
 @export_enum("Never", "Night", "Day") var sleepTime: String = "Never"
 @export var height: TowerDefenseEnum.CHARACTER_HEIGHT = TowerDefenseEnum.CHARACTER_HEIGHT.NORMAL
 @export var damagePointData: CharacterDamagePointData
@@ -18,6 +20,7 @@ class_name TowerDefenseCharacterConfig extends Resource
 @export var cost: int = 100
 @export var packetCooldown: float = 5.0
 @export var startingCooldown: float = 0.0
+@export var plantCoverAll: bool = false
 @export var plantCover: Array[String] = []
 @export var plantCoverRecycle: Array[int] = []
 @export var plantGridType: Array[TowerDefenseEnum.PLANTGRIDTYPE] = [TowerDefenseEnum.PLANTGRIDTYPE.GROUND, TowerDefenseEnum.PLANTGRIDTYPE.POT, TowerDefenseEnum.PLANTGRIDTYPE.LILYPAD]

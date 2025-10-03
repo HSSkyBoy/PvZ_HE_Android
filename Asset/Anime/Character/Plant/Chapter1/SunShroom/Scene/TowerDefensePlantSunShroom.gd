@@ -11,7 +11,7 @@ extends TowerDefensePlant
 func _ready() -> void :
     if Engine.is_editor_hint():
         return
-    super._ready()
+    super ._ready()
 
     produceComponent.produceInterval = produceInterval
     produceComponent.num = sunNum

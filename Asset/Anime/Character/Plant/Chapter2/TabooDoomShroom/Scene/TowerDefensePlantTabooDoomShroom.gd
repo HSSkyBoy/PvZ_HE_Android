@@ -8,11 +8,11 @@ const TABOO_DOOM_SHROOM_EXPLOSION = preload("uid://bgrs063lpcf7a")
 var over: bool = false
 
 func SleepEntered() -> void :
-    super.SleepEntered()
+    super .SleepEntered()
     instance.invincible = false
 
 func IdleEntered() -> void :
-    super.IdleEntered()
+    super .IdleEntered()
     if !is_instance_valid(TowerDefenseManager.currentControl) || !TowerDefenseManager.currentControl.isGameRunning:
         return
     if !inGame:
@@ -23,14 +23,14 @@ func IdleEntered() -> void :
 
 @warning_ignore("unused_parameter")
 func IdleProcessing(delta: float) -> void :
-    super.IdleProcessing(delta)
+    super .IdleProcessing(delta)
     sprite.timeScale = timeScale * 1.5
 
 func IdleExited() -> void :
-    super.IdleExited()
+    super .IdleExited()
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "Explode":
             Destroy()
@@ -45,10 +45,11 @@ func DestroySet() -> void :
     ViewManager.CameraShake(Vector2(randf_range(-1, 1), randf_range(-1, 1)), 5.0, 0.05, 4)
     var effect: TowerDefenseEffectParticlesOnce = TowerDefenseManager.CreateEffectParticlesOnce(TABOO_DOOM_SHROOM_EXPLOSION, gridPos)
     var characterNode: Node2D = TowerDefenseManager.GetCharacterNode()
-    effect.global_position = global_position + Vector2(0, 5)
+    effect.global_position = transformPoint.global_position - Vector2(0, 25)
     characterNode.add_child(effect)
-    TowerDefenseExplode.CreateExplode(global_position, Vector2(2.5, 2.5), eventList, [], camp, -1)
+    await get_tree().physics_frame
+    TowerDefenseExplode.CreateExplode(global_position, Vector2(3.5, 3.5), eventList, [], camp, -1)
     AudioManager.AudioPlay("ExplodeDoomShroom", AudioManagerEnum.TYPE.SFX)
-    var cell: TowerDefenseCellInstance = TowerDefenseManager.GetMapCell(gridPos)
     cell.Clear()
+    await get_tree().physics_frame
     CraterCreate(true)

@@ -14,7 +14,7 @@ var levelList: Array
 var chooseId: int = 0
 
 func _ready() -> void :
-    super._ready()
+    super ._ready()
     await get_tree().physics_frame
     var levelDataMap: Dictionary = ResourceManager.DAILY_LEVEL_DATA["LevelDateMap"]
     levelList = levelDataMap[date]
@@ -42,15 +42,15 @@ func PlayButtonPressed() -> void :
     AudioManager.AudioPlay("ButtonPress", AudioManagerEnum.TYPE.SFX)
     var meta = ResourceManager.DAILY_LEVEL_DATA["LevelMeta"]
     var levelId = levelList[chooseId]
-    var levelName = "DailyLevel-%s-%s" % [date, levelId]
-    var level = GameSaveManager.GetDailyLevel(levelName)
-    if !level:
-        levelHTTPRequest.request("https://api.pvzhe.com%s" % meta[levelId]["api"], Global.header)
-        for buttonNode in dailyChallengeLevelChooseButton:
-            buttonNode.button.disabled = true
-        playButton.disabled = true
-    else:
-        ToBattle(level)
+
+
+
+    levelHTTPRequest.request("https://api.pvzhe.com%s" % meta[levelId]["api"], Global.header)
+    for buttonNode in dailyChallengeLevelChooseButton:
+        buttonNode.button.disabled = true
+    playButton.disabled = true
+
+
 
 @warning_ignore("unused_parameter")
 func LevelHttpRequestCompleted(result: int, response_code: int, headers: PackedStringArray, body: PackedByteArray) -> void :

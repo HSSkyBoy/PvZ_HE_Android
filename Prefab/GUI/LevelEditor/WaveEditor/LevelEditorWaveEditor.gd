@@ -87,6 +87,7 @@ func Init(_levelConfig: TowerDefenseLevelConfig) -> void :
     maxNextWaveHealthPercentageSpinBox.value = waveManagerConfig.maxNextWaveHealthPercentage
     WaveNumChange()
     isInit = false
+    FlagChanged(true)
 
 func Save() -> void :
     SaveFlag(currentFlag)
@@ -110,9 +111,7 @@ func SaveFlag(flagId: int) -> void :
     waveConfig.dynamic = TowerDefenseLevelSpawnDynamicConfig.new()
     for packet in poolPacketContainer.packetList:
         var packetName: String = packet.config.saveKey
-        var point: int = packet.config.characterConfig.wavePointCost
-        if packet.config.overrideWavePointCost != -1:
-            point = packet.config.overrideWavePointCost
+        var point: int = packet.config.GetWavePointCost()
         waveConfig.dynamic.points += point
         waveConfig.dynamic.zombiePool.append(packetName)
     for packet in randomPacketContainer.packetList:
@@ -186,7 +185,8 @@ func WaveNumChange() -> void :
     flagSlider.max_value = waveIntervalSpinBox.value * bigWaveSpinBox.value - 1
     flagSlider.tick_count = int(bigWaveSpinBox.value) + 1
     flagSlider.value = 0.0
-    FlagChanged(true)
+    if !isInit:
+        FlagChanged(true)
 
 func Selected(packetContainer: LevelEditorWaveEditorPacketContainer) -> void :
     currentPacketContainer = packetContainer

@@ -15,8 +15,6 @@ sunNum = 25
 growUpTime = 60.0
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/TwinSunShroom")
-Custom = []
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)

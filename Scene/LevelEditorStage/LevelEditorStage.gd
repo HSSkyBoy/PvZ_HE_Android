@@ -38,6 +38,8 @@ var levelUid: Array[String] = []
 
 var skip: bool = false
 
+var over: bool = false
+
 func Init(_levelConfig: TowerDefenseLevelConfig) -> void :
     levelConfig = _levelConfig
     levelEditorInformationEditor.Init(levelConfig)
@@ -82,7 +84,6 @@ func PanelChange() -> void :
     levelEditorMapEditor.visible = levelMapButton.button_pressed
     levelEditorSeedbankEditor.visible = levelSeedbankButton.button_pressed
     levelEditorWaveEditor.visible = levelWaveButton.button_pressed
-
 
 func LevelMineButtonPressed() -> void :
     levelEditorChooseLayer.visible = false
@@ -148,7 +149,10 @@ func LevelLoadButtonPressed() -> void :
     CommandManager.LoadLevelButtonPressed()
 
 func LevelTestButtonPressed() -> void :
+    if over:
+        return
     Save()
+    over = true
     Global.enterLevelMode = "DiyLevel"
     Global.currentDiyLevelUid = currentUid
     levelEditorLayer.visible = false
@@ -156,6 +160,8 @@ func LevelTestButtonPressed() -> void :
     SceneManager.ChangeScene("TowerDefense")
 
 func Save() -> void :
+    if over:
+        return
     levelEditorEventEditor.Save()
     levelEditorMapEditor.Save(true)
     levelEditorSeedbankEditor.Save()
@@ -163,15 +169,15 @@ func Save() -> void :
     ResourceSaver.save(levelConfig, PATH + "/" + currentUid + ".tres")
 
 func Export() -> void :
-    if levelConfig.canExport:
-        Save()
-        DisplayServer.file_dialog_show("另存为项目", "", "", false, DisplayServer.FILE_DIALOG_MODE_SAVE_FILE, ["*.json"], SaveFileTo)
-    else:
-        var dialog = DialogManager.DialogCreate("DiyLevelChange")
-        dialog.play.connect(
-            func():
-                LevelTestButtonPressed()
-        )
+
+    Save()
+    DisplayServer.file_dialog_show("另存为项目", "", "", false, DisplayServer.FILE_DIALOG_MODE_SAVE_FILE, ["*.json"], SaveFileTo)
+
+
+
+
+
+
 
 @warning_ignore("unused_parameter")
 func SaveFileTo(status: bool, selected_paths: PackedStringArray, selected_filter_index: int) -> void :

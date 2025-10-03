@@ -52,23 +52,23 @@ layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, n
 layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ZombieDuckytube"), null, null, null, null, null, null, null, null]
 
 [node name="ZombieDuckytube" parent="SpriteGroup/TransformPoint/ZombieBalloonColour" index="0"]
-position = Vector2(-22.89, -62.28)
-rotation = -0.896114
+position = Vector2(-23.13, -63.0267)
+rotation = -0.938704
 
 [node name="PropellerSlot" parent="SpriteGroup/TransformPoint/ZombieBalloonColour" index="1"]
-position = Vector2(-38.83, -67.12)
-rotation = 0.116038
-scale = Vector2(0.799684, 0.799684)
+position = Vector2(-40.6433, -66.24)
+rotation = 0.0386791
+scale = Vector2(0.799886, 0.799886)
 
 [node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieBalloonColour" index="2"]
-position = Vector2(-28.565, -39.9569)
-rotation = 0.154778
-scale = Vector2(0.799508, 0.799508)
+position = Vector2(-28.2121, -39.6413)
+rotation = 0.0515926
+scale = Vector2(0.799827, 0.799827)
 
 [node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieBalloonColour" index="3"]
-position = Vector2(-6.13071, -4.38185)
-rotation = 0.181826
-scale = Vector2(0.599235, 0.599235)
+position = Vector2(-5.38886, -5.43737)
+rotation = 0.0606086
+scale = Vector2(0.599739, 0.599739)
 
 [node name="GroundSlot" parent="SpriteGroup/TransformPoint/ZombieBalloonColour" index="4"]
 position = Vector2(-26.975, -60)

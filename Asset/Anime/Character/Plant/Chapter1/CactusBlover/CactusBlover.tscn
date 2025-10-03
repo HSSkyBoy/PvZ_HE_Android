@@ -7,7 +7,6 @@
 script = ExtResource("1")
 flashAnimeData = ExtResource("2")
 offset = Vector2(-40, -40)
-trueFrameRate = 60.0
 useTween = false
 layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]

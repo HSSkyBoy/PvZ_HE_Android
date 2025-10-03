@@ -12,7 +12,7 @@ var projectileName: String = "PuffDefault"
 func _ready() -> void :
     if Engine.is_editor_hint():
         return
-    super._ready()
+    super ._ready()
 
     checkScaredShape.shape.size = TowerDefenseManager.GetMapGridSize() * Vector2.ONE * 2.75
 
@@ -21,18 +21,18 @@ func _ready() -> void :
 func _physics_process(delta: float) -> void :
     if Engine.is_editor_hint():
         return
-    super._physics_process(delta)
+    super ._physics_process(delta)
     fireComponent.fireInterval = fireInterval
 
 func IdleEntered() -> void :
     if Engine.is_editor_hint():
         return
-    super.IdleEntered()
+    super .IdleEntered()
     fireComponent.alive = true
 
 @warning_ignore("unused_parameter")
 func IdleProcessing(delta: float) -> void :
-    super.IdleProcessing(delta)
+    super .IdleProcessing(delta)
     if attackComponent.CanAttack(false, false, false):
         state.send_event("ToScared")
         return
@@ -41,7 +41,7 @@ func IdleProcessing(delta: float) -> void :
         return
 
 func IdleExited() -> void :
-    super.IdleExited()
+    super .IdleExited()
 
 func AttackEntered() -> void :
     fireComponent.Refresh()
@@ -70,17 +70,17 @@ func ScaredExited() -> void :
 
 @warning_ignore("unused_parameter")
 func AnimeEvent(command: String, argument: Variant) -> void :
-    super.AnimeEvent(command, argument)
+    super .AnimeEvent(command, argument)
     match command:
         "fire":
             AudioManager.AudioPlay("ProjectilePuff", AudioManagerEnum.TYPE.SFX)
             var projectile: TowerDefenseProjectile
-            projectile = fireComponent.CreateProjectile(0, Vector2(300, 0), projectileName, camp, Vector2.ZERO)
+            projectile = fireComponent.CreateProjectile(0, Vector2(300, 0), projectileName, -1, camp, Vector2.ZERO)
             projectile.gridPos = gridPos
             projectile.fireLength = -1
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "Fire":
             Idle()

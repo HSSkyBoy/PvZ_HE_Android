@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="TowerDefenseProjectileConfig" load_steps=4 format=4 uid="uid://2at515pd04ti"]
+
+[ext_resource type="PackedScene" uid="uid://du7kby6nyekqt" path="res://Asset/Anime/Projectile/FireNote/FireNote.tscn" id="1"]
+[ext_resource type="Script" uid="uid://b7ddnv74g0463" path="res://Resource/TowerDefense/Projectile/TowerDefenseProjectileConfig.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://bv4juwge7ravc" path="res://Prefab/Particles/Splats/FireSplats/FireSplats.tscn" id="3"]
+
+[resource]
+script = ExtResource("2")
+name = "FireNoteTrack"
+size = Vector2(28, 28)
+baseDamage = 40.0
+projectileScene = ExtResource("1")
+projectileObject = 316
+splatSceneType = "Sprite"
+splatAudio = "Ignite"
+splatScene = ExtResource("3")
+splatObject = 103
+hitEffect = null
+hitTargetEventList = []
+hitCharacterEventList = []
+hitGroundEventList = []
+rotateScale = 0.0
+hitBody = true
+fireLength = -1.0
+useRange = true
+rangeSize = Vector2(0.5, 0.25)
+hitPesontage = 0.25
+damageFlags = 6
+fireMethodFlags = 32
+collisionFlags = 11
+catapultHeight = 400.0
+penetrateNum = 3
+penetrateOverBack = true
+backOutGround = true
+backDuration = 1.0
+Flag/Damage = 6
+Flag/FireMethod = 32
+Flag/Collision = 11

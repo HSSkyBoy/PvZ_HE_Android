@@ -16,11 +16,11 @@ func IdleEntered() -> void :
 
 @warning_ignore("unused_parameter")
 func IdleProcessing(delta: float) -> void :
-    super.IdleProcessing(delta)
+    super .IdleProcessing(delta)
     sprite.timeScale = timeScale * 2.0
 
 func AnimeEvent(command: String, argument: Variant) -> void :
-    super.AnimeEvent(command, argument)
+    super .AnimeEvent(command, argument)
     match command:
         "blow":
             var targetList = TowerDefenseManager.GetCharacterTarget(self, false, false)
@@ -32,6 +32,10 @@ func AnimeEvent(command: String, argument: Variant) -> void :
                     continue
                 if target is TowerDefensePlant || target is TowerDefenseGravestone || target is TowerDefenseItem:
                     continue
+                if target.instance.collisionFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.UNDER_GROUND:
+                    continue
+                if target.instance.collisionFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.UNDER_WATER:
+                    continue
                 if target.instance.collisionFlags != 0:
                     target.BlowBack(0.5, 2.0)
                 if target.instance.collisionFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE:
@@ -41,8 +45,8 @@ func AnimeEvent(command: String, argument: Variant) -> void :
             for id in range(20):
                 for line in range(1, TowerDefenseManager.GetMapGridNum().y + 1):
                     var pos: Vector2 = Vector2(-50, TowerDefenseManager.GetMapCellPlantPos(Vector2(0, line)).y)
-                    var heightOffset: float = randf_range(-10, 40)
-                    var projectile: TowerDefenseProjectile = FireComponent.CreateProjectilePosition(self, null, height + heightOffset, pos - Vector2(0, heightOffset), Vector2(randf_range(400.0, 800.0), 0.0), "SpikeFull", camp)
+                    var heightOffset: float = randf_range(-10, 40) + 20
+                    var projectile: TowerDefenseProjectile = FireComponent.CreateProjectilePosition(null, null, height + heightOffset, pos + Vector2(0, 20), Vector2(randf_range(400.0, 800.0), 0.0), "SpikeFull", -1, camp)
                     projectile.gridPos.y = line
                 await get_tree().create_timer(0.1, false).timeout
             Destroy()

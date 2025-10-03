@@ -1,36 +1,20 @@
 {
-	"Name": "Level2_1",
+	"Name": "Level3_1",
 	"Description": "PLAYERS_TRIP_TO_MODERN",
-	"LevelName": "PLAYERS_MORDEN_NIGHT_LEVEL_NAME",
+	"LevelName": "PLAYERS_MORDEN_BACKYARD_LEVEL_NAME",
 	"LevelNumber": 1.0,
 	"NextLevel": "",
 	"HomeWorld": "Morden",
-	"Talk": "Level2_1Talk",
+	"Talk": "Level3_1Talk",
 	"Tutorial": "",
-	"Map": "FrontlawnNight",
-	"BGM": "FrontlawnNight",
+	"Map": "Backyard",
+	"BGM": "Backyard",
 	"Reward": {
 		"RewardType": "Packet",
-		"RewardFirst": "PlantGraveMine"
+		"RewardFirst": "PlantPeaCat"
 	},
 	"Event": {
-		"EventInit": [
-			{
-				"EventName": "GravestoneCreateRandom",
-				"Value": {
-					"GravestoneNames": [
-						"GraveStoneDefault"
-					],
-					"GravestoneNum": 6.0,
-					"GravestonePos": {
-						"x": 5.0,
-						"y": 1.0,
-						"z": 9.0,
-						"w": 5.0
-					}
-				}
-			}
-		],
+		"EventInit": [],
 		"EventReady": [],
 		"EventStart": []
 	},
@@ -43,12 +27,12 @@
 		"Open": true,
 		"Begin": 300.0,
 		"SpawnInterval": 12.0,
-		"SpawnNum": 25.0,
+		"SpawnNum": 50.0,
 		"MovingMethod": "Land"
 	},
 	"WaveManager": {
-		"FlagZombie": "ZombieFlagCone",
-		"FlagWaveInterval": 10.0,
+		"FlagZombie": "ZombieFlag",
+		"FlagWaveInterval": 7.0,
 		"MaxNextWaveHealthPercentage": 0.25,
 		"MinNextWaveHealthPercentage": 0.3,
 		"BeginCol": 20.0,
@@ -118,15 +102,13 @@
 					0.0,
 					0.0
 				],
-				"Spawn": [],
-				"Dynamic": {
-					"Point": 400.0,
-					"ZombiePool": [
-						"ZombieNormal",
-						"ZombieNormalCone",
-						"ZombiePaper"
-					]
-				},
+				"Spawn": [
+					{
+						"Zombie": "ZombieFootballBlack",
+						"Line": -1.0,
+						"Num": 1.0
+					}
+				],
 				"Event": []
 			},
 			{
@@ -139,15 +121,13 @@
 					0.0,
 					0.0
 				],
-				"Spawn": [],
-				"Dynamic": {
-					"Point": 600.0,
-					"ZombiePool": [
-						"ZombieNormal",
-						"ZombieNormalCone",
-						"ZombiePaper"
-					]
-				},
+				"Spawn": [
+					{
+						"Zombie": "ZombieDuck",
+						"Line": -1.0,
+						"Num": 3.0
+					}
+				],
 				"Event": []
 			},
 			{
@@ -187,223 +167,441 @@
 				"Spawn": [
 					{
 						"Zombie": "ZombieNormal",
+						"Line": -1.0,
+						"Num": 1.0
+					},
+					{
+						"Zombie": "ZombieNormalCone",
+						"Line": -1.0,
+						"Num": 2.0
+					},
+					{
+						"Zombie": "ZombiePolevaulter",
+						"Line": -1.0,
+						"Num": 2.0
+					}
+				],
+				"Event": []
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [
+					{
+						"Zombie": "ZombieNormal",
+						"Line": -1.0,
+						"Num": 3.0
+					},
+					{
+						"Zombie": "ZombieNormalCone",
+						"Line": -1.0,
+						"Num": 2.0
+					},
+					{
+						"Zombie": "ZombieLadder",
+						"Line": -1.0,
+						"Num": 2.0
+					},
+					{
+						"Zombie": "ZombieDuck",
+						"Line": -1.0,
+						"Num": 2.0
+					}
+				],
+				"Event": []
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [
+					{
+						"Zombie": "ZombieNormal",
+						"Line": -1.0,
+						"Num": 3.0
+					},
+					{
+						"Zombie": "ZombieLadder",
+						"Line": -1.0,
+						"Num": 2.0
+					},
+					{
+						"Zombie": "ZombieNormalCone",
+						"Line": -1.0,
+						"Num": 3.0
+					},
+					{
+						"Zombie": "ZombieDuck",
+						"Line": -1.0,
+						"Num": 2.0
+					},
+					{
+						"Zombie": "ZombieLadder",
+						"Line": -1.0,
+						"Num": 2.0
+					},
+					{
+						"Zombie": "ZombieFootballBlack",
+						"Line": -1.0,
+						"Num": 1.0
+					}
+				],
+				"Event": []
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [
+					{
+						"Zombie": "ZombieNormal",
+						"Line": -1.0,
+						"Num": 3.0
+					},
+					{
+						"Zombie": "ZombieNormalCone",
+						"Line": -1.0,
+						"Num": 1.0
+					},
+					{
+						"Zombie": "ZombieNormalBucket",
+						"Line": -1.0,
+						"Num": 2.0
+					},
+					{
+						"Zombie": "ZombieDuck",
+						"Line": -1.0,
+						"Num": 4.0
+					},
+					{
+						"Zombie": "ZombieLadder",
+						"Line": -1.0,
+						"Num": 2.0
+					}
+				],
+				"Event": []
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [
+					{
+						"Zombie": "ZombieNormal",
+						"Line": -1.0,
+						"Num": 3.0
+					},
+					{
+						"Zombie": "ZombieNormalBucket",
+						"Line": -1.0,
+						"Num": 1.0
+					},
+					{
+						"Zombie": "ZombiePolevaulter",
+						"Line": -1.0,
+						"Num": 1.0
+					},
+					{
+						"Zombie": "ZombieDuck",
+						"Line": -1.0,
+						"Num": 2.0
+					},
+					{
+						"Zombie": "ZombieFootballBlack",
+						"Line": -1.0,
+						"Num": 1.0
+					}
+				],
+				"Event": []
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [
+					{
+						"Zombie": "ZombieNormal",
+						"Line": -1.0,
+						"Num": 2.0
+					},
+					{
+						"Zombie": "ZombieNormalCone",
+						"Line": -1.0,
+						"Num": 2.0
+					},
+					{
+						"Zombie": "ZombieNormalBucket",
+						"Line": -1.0,
+						"Num": 1.0
+					},
+					{
+						"Zombie": "ZombieDuck",
+						"Line": -1.0,
+						"Num": 1.0
+					},
+					{
+						"Zombie": "ZombieLadder",
+						"Line": -1.0,
+						"Num": 2.0
+					},
+					{
+						"Zombie": "ZombiePolevaulter",
+						"Line": -1.0,
+						"Num": 1.0
+					}
+				],
+				"Event": []
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [
+					{
+						"Zombie": "ZombieNormal",
+						"Line": -1.0,
+						"Num": 2.0
+					},
+					{
+						"Zombie": "ZombieNormalCone",
+						"Line": -1.0,
+						"Num": 3.0
+					},
+					{
+						"Zombie": "ZombieNormalBucket",
+						"Line": -1.0,
+						"Num": 2.0
+					},
+					{
+						"Zombie": "ZombiePolevaulter",
+						"Line": -1.0,
+						"Num": 1.0
+					},
+					{
+						"Zombie": "ZombieDuck",
+						"Line": -1.0,
+						"Num": 1.0
+					},
+					{
+						"Zombie": "ZombieFootballBlack",
+						"Line": -1.0,
+						"Num": 1.0
+					}
+				],
+				"Event": []
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [
+					{
+						"Zombie": "ZombieNormal",
+						"Line": -1.0,
+						"Num": 2.0
+					},
+					{
+						"Zombie": "ZombieNormalCone",
+						"Line": -1.0,
+						"Num": 2.0
+					},
+					{
+						"Zombie": "ZombieNormalBucket",
+						"Line": -1.0,
+						"Num": 1.0
+					},
+					{
+						"Zombie": "ZombieDuck",
+						"Line": -1.0,
+						"Num": 2.0
+					},
+					{
+						"Zombie": "ZombiePolevaulter",
+						"Line": -1.0,
+						"Num": 1.0
+					},
+					{
+						"Zombie": "ZombieFootballBlack",
+						"Line": -1.0,
+						"Num": 1.0
+					}
+				],
+				"Event": []
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [
+					{
+						"Zombie": "ZombieNormal",
+						"Line": -1.0,
+						"Num": 4.0
+					},
+					{
+						"Zombie": "ZombieNormalCone",
+						"Line": -1.0,
+						"Num": 2.0
+					},
+					{
+						"Zombie": "ZombieNormalBucket",
+						"Line": -1.0,
+						"Num": 1.0
+					},
+					{
+						"Zombie": "ZombieDuck",
+						"Line": -1.0,
+						"Num": 2.0
+					},
+					{
+						"Zombie": "ZombieLadder",
+						"Line": -1.0,
+						"Num": 2.0
+					},
+					{
+						"Zombie": "ZombiePolevaulter",
+						"Line": -1.0,
+						"Num": 2.0
+					},
+					{
+						"Zombie": "ZombieFootballBlack",
+						"Line": -1.0,
+						"Num": 1.0
+					}
+				],
+				"Event": []
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [
+					{
+						"Zombie": "ZombieNormal",
+						"Line": -1.0,
+						"Num": 3.0
+					},
+					{
+						"Zombie": "ZombieNormalCone",
+						"Line": -1.0,
+						"Num": 2.0
+					},
+					{
+						"Zombie": "ZombieNormalBucket",
+						"Line": -1.0,
+						"Num": 3.0
+					},
+					{
+						"Zombie": "ZombieFootballBlack",
+						"Line": -1.0,
+						"Num": 1.0
+					}
+				],
+				"Event": []
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [
+					{
+						"Zombie": "ZombieNormal",
+						"Line": -1.0,
+						"Num": 3.0
+					},
+					{
+						"Zombie": "ZombieNormalCone",
+						"Line": -1.0,
+						"Num": 4.0
+					},
+					{
+						"Zombie": "ZombieNormalBucket",
+						"Line": -1.0,
+						"Num": 4.0
+					},
+					{
+						"Zombie": "ZombieDuck",
+						"Line": -1.0,
+						"Num": 5.0
+					},
+					{
+						"Zombie": "ZombiePolevaulter",
+						"Line": -1.0,
+						"Num": 5.0
+					},
+					{
+						"Zombie": "ZombieLadder",
 						"Line": -1.0,
 						"Num": 5.0
 					},
 					{
 						"Zombie": "ZombieFootballBlack",
 						"Line": -1.0,
-						"Num": 1.0
-					},
-					{
-						"Zombie": "ZombieNormalCone",
-						"Line": -1.0,
-						"Num": 3.0
-					}
-				],
-				"Event": []
-			},
-			{
-				"DynamicPlantfood": [
-					0.0,
-					0.0,
-					0.0,
-					0.0,
-					0.0,
-					0.0,
-					0.0
-				],
-				"Spawn": [
-					{
-						"Zombie": "ZombieNormal",
-						"Line": -1.0,
-						"Num": 4.0
-					},
-					{
-						"Zombie": "ZombieNormalCone",
-						"Line": -1.0,
-						"Num": 4.0
-					}
-				],
-				"Event": []
-			},
-			{
-				"DynamicPlantfood": [
-					0.0,
-					0.0,
-					0.0,
-					0.0,
-					0.0,
-					0.0,
-					0.0
-				],
-				"Spawn": [
-					{
-						"Zombie": "ZombieNormal",
-						"Line": -1.0,
-						"Num": 4.0
-					},
-					{
-						"Zombie": "ZombieNormalCone",
-						"Line": -1.0,
-						"Num": 3.0
-					},
-					{
-						"Zombie": "ZombieFootballBlack",
-						"Line": -1.0,
-						"Num": 1.0
-					},
-					{
-						"Zombie": "ZombiePaper",
-						"Line": -1.0,
-						"Num": 4.0
-					}
-				],
-				"Event": []
-			},
-			{
-				"DynamicPlantfood": [
-					0.0,
-					0.0,
-					0.0,
-					0.0,
-					0.0,
-					0.0,
-					0.0
-				],
-				"Spawn": [
-					{
-						"Zombie": "ZombieNormal",
-						"Line": -1.0,
-						"Num": 5.0
-					},
-					{
-						"Zombie": "ZombieNormalCone",
-						"Line": -1.0,
-						"Num": 3.0
-					},
-					{
-						"Zombie": "ZombieFootballBlack",
-						"Line": -1.0,
-						"Num": 1.0
-					},
-					{
-						"Zombie": "ZombiePaper",
-						"Line": -1.0,
-						"Num": 4.0
-					}
-				],
-				"Event": []
-			},
-			{
-				"DynamicPlantfood": [
-					0.0,
-					0.0,
-					0.0,
-					0.0,
-					0.0,
-					0.0,
-					0.0
-				],
-				"Spawn": [
-					{
-						"Zombie": "ZombieNormal",
-						"Line": -1.0,
-						"Num": 3.0
-					},
-					{
-						"Zombie": "ZombieFootballBlack",
-						"Line": -1.0,
 						"Num": 2.0
-					},
-					{
-						"Zombie": "ZombiePaper",
-						"Line": -1.0,
-						"Num": 4.0
 					}
 				],
 				"Event": []
-			},
-			{
-				"DynamicPlantfood": [
-					0.0,
-					0.0,
-					0.0,
-					0.0,
-					0.0,
-					0.0,
-					0.0
-				],
-				"Spawn": [
-					{
-						"Zombie": "ZombieNormal",
-						"Line": -1.0,
-						"Num": 3.0
-					},
-					{
-						"Zombie": "ZombieNormalCone",
-						"Line": -1.0,
-						"Num": 4.0
-					},
-					{
-						"Zombie": "ZombieFootballBlack",
-						"Line": -1.0,
-						"Num": 2.0
-					},
-					{
-						"Zombie": "ZombiePaper",
-						"Line": -1.0,
-						"Num": 4.0
-					}
-				],
-				"Event": []
-			},
-			{
-				"DynamicPlantfood": [
-					0.0,
-					0.0,
-					0.0,
-					0.0,
-					0.0,
-					0.0,
-					0.0
-				],
-				"Spawn": [
-					{
-						"Zombie": "ZombieNormal",
-						"Line": -1.0,
-						"Num": 8.0
-					},
-					{
-						"Zombie": "ZombieNormalCone",
-						"Line": -1.0,
-						"Num": 6.0
-					},
-					{
-						"Zombie": "ZombieFootballBlack",
-						"Line": -1.0,
-						"Num": 2.0
-					},
-					{
-						"Zombie": "ZombiePaper",
-						"Line": -1.0,
-						"Num": 8.0
-					}
-				],
-				"Event": [
-					{
-						"EventName": "GravestoneSpawnZombie",
-						"Value": {
-							"ZombieNames": [
-								"ZombieNormal",
-								"ZombieNormalCone",
-								"ZombiePaper",
-								"ZombieFootballBlack"
-							],
-							"ZombieNum": 6.0
-						}
-					}
-				]
 			}
 		]
 	}

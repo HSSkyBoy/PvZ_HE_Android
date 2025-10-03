@@ -19,7 +19,7 @@ func WalkProcessing(delta: float) -> void :
             Die()
 
 func DieEntered() -> void :
-    super.DieEntered()
+    super .DieEntered()
     DestroySet()
 
 func DestroySet() -> void :
@@ -32,6 +32,13 @@ func DestroySet() -> void :
     characterNode.add_child.call_deferred(sleeper)
     if instance.hypnoses:
         sleeper.Hypnoses.call_deferred()
+    sleeper.set_deferred("instance:hitpointScale", instance.hitpointScale)
+    sleeper.set_deferred("scale", scale)
     var tween = sleeper.create_tween()
     tween.tween_property(sleeper, ^"rotation_degrees", 0, 0.2).from(90 * scale.x)
-    get_tree().create_timer(0.1, false).timeout.connect(sleeper.Walk)
+    get_tree().create_timer(0.1, false).timeout.connect(
+        func():
+            if is_instance_valid(sleeper):
+                sleeper.Walk()
+    )
+    await get_tree().physics_frame

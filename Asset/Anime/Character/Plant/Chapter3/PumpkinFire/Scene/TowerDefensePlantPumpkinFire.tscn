@@ -14,7 +14,6 @@
 
 [sub_resource type="Resource" id="Resource_bevwy"]
 script = ExtResource("3")
-refresh = true
 metadata/_custom_type_script = "uid://fix6uw08if5s"
 
 [sub_resource type="Resource" id="Resource_3ko1g"]
@@ -22,15 +21,15 @@ script = ExtResource("4")
 buffList = [SubResource("Resource_bevwy")]
 metadata/_custom_type_script = "uid://dtvfjfgy00epu"
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o22vw"]
-size = Vector2(62, 62)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vpdpe"]
+size = Vector2(64, 33)
 
-[sub_resource type="Gradient" id="Gradient_7kd5i"]
+[sub_resource type="Gradient" id="Gradient_vpdpe"]
 offsets = PackedFloat32Array(0, 0.346154, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0.952991, 0.952991, 0.952991, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_7kd5i"]
-gradient = SubResource("Gradient_7kd5i")
+gradient = SubResource("Gradient_vpdpe")
 width = 256
 height = 256
 fill = 1
@@ -38,14 +37,12 @@ fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.8, 0.8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q77ah"]
-size = Vector2(86, 51)
+size = Vector2(98, 80)
 
 [sub_resource type="Resource" id="Resource_8eyjb"]
 script = ExtResource("10")
 num = 40.0
-playSplatAudio = true
 damageFlags = 6
-collisionFlags = 9
 Flag/Damage = 6
 Flag/Collision = 9
 metadata/_custom_type_script = "uid://cmqmtitj4tcd8"
@@ -70,23 +67,19 @@ position = Vector2(0, 30)
 
 [node name="PumpkinFire" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("6")]
 position = Vector2(0, -30)
-trueFrameRate = 30.0
 
 [node name="Node2D" parent="SpriteGroup/TransformPoint/PumpkinFire" index="0"]
 z_index = -2
 
 [node name="Back" parent="SpriteGroup/TransformPoint/PumpkinFire/Node2D" index="0"]
-trueFrameRate = 30.0
+z_index = -2
 
 [node name="ShadowSprite" parent="." index="3"]
 position = Vector2(0, 30)
 
-[node name="HitBox" parent="." index="5"]
-visible = true
-
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2(0, 13)
-shape = SubResource("RectangleShape2D_o22vw")
+position = Vector2(0, 0)
+shape = SubResource("RectangleShape2D_vpdpe")
 
 [node name="Light" type="PointLight2D" parent="." index="7"]
 unique_name_in_owner = true
@@ -104,7 +97,6 @@ collision_mask = 2
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeProjectileComponent/Area2D" index="0"]
-position = Vector2(0, 9.5)
 shape = SubResource("RectangleShape2D_q77ah")
 
 [node name="ReverseInjuryComponent" parent="." index="9" instance=ExtResource("9")]

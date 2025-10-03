@@ -1,7 +1,7 @@
 extends NpcBase
 
 func _ready() -> void :
-    super._ready()
+    super ._ready()
     sprite.SetAnimation("Enter", true, 0.2)
 
 func AnimeCompleted(clip: String) -> void :
@@ -21,7 +21,7 @@ func Talk(text: String, animeClip: String, audio: String) -> void :
     if animeClip == "Exit":
         Finish()
         return
-    super.Talk(text, animeClip, audio)
+    super .Talk(text, animeClip, audio)
 
 func Finish() -> void :
     sprite.SetAnimation("Exit", false, 0.2)

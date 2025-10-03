@@ -1,0 +1,93 @@
+[gd_scene load_steps=4 format=4 uid="uid://pr7iwjuuhqgv"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://db8lachfsay17" path="res://Asset/Anime/Character/Zombie/Chapter3/DuckRider/ZombieDuckRider.tres" id="2"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="3"]
+
+[node name="ZombieDuckRider" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -80)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/Zombie_body = true
+Animation/LayerVisible/Zombie_duckytube = true
+Animation/LayerVisible/Zombie_duckytube1 = true
+Animation/LayerVisible/Zombie_innerleg_foot = true
+Animation/LayerVisible/Zombie_innerleg_lower = true
+Animation/LayerVisible/Zombie_innerleg_upper = true
+Animation/LayerVisible/Zombie_neck = true
+Animation/LayerVisible/Zombie_outerarm_hand = true
+Animation/LayerVisible/Zombie_outerarm_lower = true
+Animation/LayerVisible/Zombie_outerarm_upper = true
+Animation/LayerVisible/Zombie_outerleg_foot = true
+Animation/LayerVisible/Zombie_outerleg_lower = true
+Animation/LayerVisible/Zombie_outerleg_upper = true
+Animation/LayerVisible/Zombie_tie = true
+Animation/LayerVisible/Zombie_whitewater = true
+"Animation/LayerVisible/Zombie_whitewater 复制" = true
+Animation/LayerVisible/Zombie_whitewater1 = true
+Animation/LayerVisible/Zombie_whitewater2 = true
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/_waterline = true
+Animation/LayerVisible/anim_bucket = false
+Animation/LayerVisible/anim_cone = false
+Animation/LayerVisible/anim_hair = true
+Animation/LayerVisible/anim_head1 = true
+Animation/LayerVisible/anim_head2 = true
+Animation/LayerVisible/anim_innerarm1 = true
+Animation/LayerVisible/anim_innerarm2 = true
+Animation/LayerVisible/anim_innerarm3 = true
+"Animation/LayerVisible/图层_894" = true
+"Animation/LayerVisible/图层_894 复制" = true
+"Animation/LayerVisible/图层_895" = true
+"Animation/LayerVisible/图层_895 复制" = true
+"Animation/LayerVisible/图层_896" = true
+"Animation/LayerVisible/图层_899" = true
+"Animation/LayerVisible/图层_900" = true
+"Animation/LayerVisible/鸭子脚" = true
+"Animation/LayerVisible/鸭子脚1" = true
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/Zombie_DuckRider_duckBody.png = null
+Animation/MediaReplace/Zombie_DuckRider_duckEngine.png = null
+Animation/MediaReplace/Zombie_DuckRider_duckFoot.png = null
+Animation/MediaReplace/Zombie_DuckRider_duckInside.png = null
+Animation/MediaReplace/Zombie_DuckRider_duckLeg_lower.png = null
+Animation/MediaReplace/Zombie_DuckRider_duckLeg_lower2.png = null
+Animation/MediaReplace/Zombie_DuckRider_duckLeg_upper.png = null
+Animation/MediaReplace/Zombie_DuckRider_duckNecklace.png = null
+Animation/MediaReplace/Zombie_body.png = null
+Animation/MediaReplace/Zombie_bucket1.png = null
+Animation/MediaReplace/Zombie_catapult_engine.png = null
+Animation/MediaReplace/Zombie_cone1.png = null
+Animation/MediaReplace/Zombie_hair.png = null
+Animation/MediaReplace/Zombie_head.png = null
+Animation/MediaReplace/Zombie_innerarm_hand.png = null
+Animation/MediaReplace/Zombie_innerarm_lower.png = null
+Animation/MediaReplace/Zombie_innerarm_upper.png = null
+Animation/MediaReplace/Zombie_innerleg_foot.png = null
+Animation/MediaReplace/Zombie_innerleg_lower.png = null
+Animation/MediaReplace/Zombie_innerleg_upper.png = null
+Animation/MediaReplace/Zombie_jaw.png = null
+Animation/MediaReplace/Zombie_mustache1.png = null
+Animation/MediaReplace/Zombie_neck.png = null
+Animation/MediaReplace/Zombie_outerarm_hand.png = null
+Animation/MediaReplace/Zombie_outerarm_lower.png = null
+Animation/MediaReplace/Zombie_outerarm_upper.png = null
+Animation/MediaReplace/Zombie_outerleg_foot.png = null
+Animation/MediaReplace/Zombie_outerleg_lower.png = null
+Animation/MediaReplace/Zombie_outerleg_upper.png = null
+Animation/MediaReplace/Zombie_tie.png = null
+Animation/MediaReplace/Zombie_whitewater1.png = null
+Animation/MediaReplace/Zombie_whitewater2.png = null
+Animation/MediaReplace/Zombie_whitewater3.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="GroundSlot" type="Node2D" parent="."]
+position = Vector2(-42.8958, -40)
+script = ExtResource("3")
+followSlotId = 1
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

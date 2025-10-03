@@ -1,0 +1,156 @@
+[gd_scene load_steps=5 format=4 uid="uid://cmf6p5u5cs8ts"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://c5y8h54m0c51y" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/ZombieGargantuar.tres" id="2"]
+[ext_resource type="Texture2D" uid="uid://cn0t8byqags8g" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/DamagePoint/Zombie_gargantuar_head_redeye.png" id="3"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="4"]
+
+[node name="ZombieGargantuarRedEyes" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -90)
+useTween = false
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ImpSlot"), null, null, null, null, null, null, null, null, null, null, null, NodePath("HeadSlot"), null, NodePath("BucketSlot"), NodePath("HelmetSlot"), null, NodePath("ScreenDoorSlot"), null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/AnimeEvents = true
+Animation/LayerVisible/Zombie_duckytube = false
+Animation/LayerVisible/Zombie_gargantua_body1 = true
+Animation/LayerVisible/Zombie_gargantua_body2 = true
+Animation/LayerVisible/Zombie_gargantua_innerleg_foot = true
+Animation/LayerVisible/Zombie_gargantua_innerleg_lower = true
+Animation/LayerVisible/Zombie_gargantua_innerleg_upper = true
+Animation/LayerVisible/Zombie_gargantua_jaw = true
+Animation/LayerVisible/Zombie_gargantuar_innerarm_hand = true
+Animation/LayerVisible/Zombie_gargantuar_innerarm_lower = true
+Animation/LayerVisible/Zombie_gargantuar_innerarm_thumb = true
+Animation/LayerVisible/Zombie_gargantuar_innerarm_upper = true
+Animation/LayerVisible/Zombie_gargantuar_outerarm_hand = true
+Animation/LayerVisible/Zombie_gargantuar_outerarm_lower = true
+Animation/LayerVisible/Zombie_gargantuar_outerarm_upper = true
+Animation/LayerVisible/Zombie_gargantuar_outerleg_foot = true
+Animation/LayerVisible/Zombie_gargantuar_outerleg_lower = true
+Animation/LayerVisible/Zombie_gargantuar_outerleg_upper = true
+Animation/LayerVisible/Zombie_gargantuar_rope = true
+Animation/LayerVisible/Zombie_gargantuar_telephonepole = true
+Animation/LayerVisible/Zombie_gargantuar_trashcan = true
+Animation/LayerVisible/Zombie_gargantuar_trashcan2 = true
+Animation/LayerVisible/Zombie_gargantuar_whiterope = true
+Animation/LayerVisible/Zombie_imp_body1 = true
+Animation/LayerVisible/Zombie_imp_body2 = true
+Animation/LayerVisible/Zombie_imp_head = true
+Animation/LayerVisible/Zombie_imp_innerarm_lower = true
+Animation/LayerVisible/Zombie_imp_innerarm_lower1 = true
+Animation/LayerVisible/Zombie_imp_innerarm_upper = true
+Animation/LayerVisible/Zombie_imp_innerleg_foot = true
+Animation/LayerVisible/Zombie_imp_innerleg_lower = true
+Animation/LayerVisible/Zombie_imp_innerleg_upper = true
+Animation/LayerVisible/Zombie_imp_jaw = true
+Animation/LayerVisible/Zombie_imp_outerarm_lower = true
+Animation/LayerVisible/Zombie_imp_outerarm_upper = true
+Animation/LayerVisible/Zombie_imp_outerleg_foot = true
+Animation/LayerVisible/Zombie_imp_outerleg_lower = true
+Animation/LayerVisible/Zombie_imp_outerleg_upper = true
+Animation/LayerVisible/Zombie_whitewater = false
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/anim_bucket = false
+Animation/LayerVisible/anim_gargantuar = false
+Animation/LayerVisible/anim_head1 = true
+Animation/LayerVisible/anim_screendoor = false
+Animation/LayerVisible/zombie_football_helmet = false
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/Zombie_bucket1.png = null
+Animation/MediaReplace/Zombie_duckytube.png = null
+Animation/MediaReplace/Zombie_football_helmet.png = null
+Animation/MediaReplace/Zombie_gargantuar_body1.png = null
+Animation/MediaReplace/Zombie_gargantuar_body2.png = null
+Animation/MediaReplace/Zombie_gargantuar_foot.png = null
+Animation/MediaReplace/Zombie_gargantuar_head.png = ExtResource("3")
+Animation/MediaReplace/Zombie_gargantuar_helmet.png = null
+Animation/MediaReplace/Zombie_gargantuar_innerarm_hand.png = null
+Animation/MediaReplace/Zombie_gargantuar_innerarm_lower.png = null
+Animation/MediaReplace/Zombie_gargantuar_innerarm_thumb.png = null
+Animation/MediaReplace/Zombie_gargantuar_innerarm_upper.png = null
+Animation/MediaReplace/Zombie_gargantuar_innerleg_lower.png = null
+Animation/MediaReplace/Zombie_gargantuar_innerleg_upper.png = null
+Animation/MediaReplace/Zombie_gargantuar_jaw.png = null
+Animation/MediaReplace/Zombie_gargantuar_outerarm_hand.png = null
+Animation/MediaReplace/Zombie_gargantuar_outerarm_lower.png = null
+Animation/MediaReplace/Zombie_gargantuar_outerarm_upper.png = null
+Animation/MediaReplace/Zombie_gargantuar_outerleg_lower.png = null
+Animation/MediaReplace/Zombie_gargantuar_outerleg_upper.png = null
+Animation/MediaReplace/Zombie_gargantuar_rope.png = null
+Animation/MediaReplace/Zombie_gargantuar_telephonepole.png = null
+Animation/MediaReplace/Zombie_gargantuar_trashcan1.png = null
+Animation/MediaReplace/Zombie_gargantuar_trashcan2.png = null
+Animation/MediaReplace/Zombie_gargantuar_water1.png = null
+Animation/MediaReplace/Zombie_gargantuar_water2.png = null
+Animation/MediaReplace/Zombie_gargantuar_water3.png = null
+Animation/MediaReplace/Zombie_gargantuar_whiterope.png = null
+Animation/MediaReplace/Zombie_imp_arm1.png = null
+Animation/MediaReplace/Zombie_imp_arm2.png = null
+Animation/MediaReplace/Zombie_imp_body1.png = null
+Animation/MediaReplace/Zombie_imp_body2.png = null
+Animation/MediaReplace/Zombie_imp_head.png = null
+Animation/MediaReplace/Zombie_imp_innerleg_foot.png = null
+Animation/MediaReplace/Zombie_imp_innerleg_lower.png = null
+Animation/MediaReplace/Zombie_imp_innerleg_upper.png = null
+Animation/MediaReplace/Zombie_imp_jaw.png = null
+Animation/MediaReplace/Zombie_imp_outerleg_foot.png = null
+Animation/MediaReplace/Zombie_imp_outerleg_lower.png = null
+Animation/MediaReplace/Zombie_imp_outerleg_upper.png = null
+Animation/MediaReplace/Zombie_screendoor1.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="HeadSlot" type="Node2D" parent="."]
+position = Vector2(-48.0246, -91.859)
+rotation = 0.118605
+scale = Vector2(0.999355, 0.999355)
+script = ExtResource("4")
+followSlotId = 33
+offset = Vector2(25, 40)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="BucketSlot" type="Node2D" parent="."]
+position = Vector2(-44.0662, -109.506)
+rotation = 0.133408
+scale = Vector2(0.999993, 0.999993)
+script = ExtResource("4")
+followSlotId = 35
+offset = Vector2(30, 35)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="HelmetSlot" type="Node2D" parent="."]
+position = Vector2(-50.4119, -94.3309)
+rotation = 0.133408
+scale = Vector2(0.999993, 0.999993)
+script = ExtResource("4")
+followSlotId = 36
+offset = Vector2(24, 38)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ScreenDoorSlot" type="Node2D" parent="."]
+position = Vector2(-61.9448, -19.5983)
+rotation = -0.10921
+scale = Vector2(0.99999, 0.99999)
+script = ExtResource("4")
+followSlotId = 38
+offset = Vector2(30, 60)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ImpSlot" type="Node2D" parent="."]
+position = Vector2(46.7705, -112.769)
+rotation = 0.245565
+scale = Vector2(0.985104, 0.998452)
+skew = -0.0455993
+script = ExtResource("4")
+followSlotId = 21
+offset = Vector2(20, 20)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="GroundSlot" type="Node2D" parent="."]
+position = Vector2(-34.904, -10)
+script = ExtResource("4")
+followSlotId = 1
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

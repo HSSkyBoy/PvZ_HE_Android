@@ -10,7 +10,7 @@ var isJump: bool = false
 var isBlock: bool = false
 
 func _ready() -> void :
-    super._ready()
+    super ._ready()
     if Engine.is_editor_hint():
         return
     if TowerDefenseMapControl.instance && TowerDefenseMapControl.instance.LineHasType(gridPos.y, TowerDefenseEnum.PLANTGRIDTYPE.WATER):
@@ -39,7 +39,7 @@ func WalkEntered() -> void :
     groundMoveComponent.alive = true
 
 func WalkProcessing(delta: float) -> void :
-    super.WalkProcessing(delta)
+    super .WalkProcessing(delta)
     if jumpOver:
         if inWater:
             sprite.timeScale = timeScale * walkSpeedScale * 1.0
@@ -47,11 +47,11 @@ func WalkProcessing(delta: float) -> void :
             sprite.timeScale = timeScale * walkSpeedScale * 0.5
 
 func AttackProcessing(delta: float) -> void :
-    super.AttackProcessing(delta)
+    super .AttackProcessing(delta)
     sprite.timeScale = timeScale * 2.0
 
 func DieProcessing(delta: float) -> void :
-    super.DieProcessing(delta)
+    super .DieProcessing(delta)
     sprite.timeScale = timeScale * 2.0
 
 func RunEntered() -> void :
@@ -67,7 +67,7 @@ func RunProcessing(delta: float) -> void :
     if nearDie:
         return
     if attackComponent2.CanAttack(false):
-        if is_instance_valid(attackComponent2.target) && (attackComponent2.target is TowerDefensePlantBowlingBase || (attackComponent2.target.gridPos.y == gridPos.y)):
+        if is_instance_valid(attackComponent2.target):
             state.send_event("ToJump")
 
 func RunExited() -> void :
@@ -110,13 +110,13 @@ func Walk() -> void :
         state.send_event("ToRun")
 
 func DamagePointReach(damangePointName: String) -> void :
-    super.DamagePointReach(damangePointName)
+    super .DamagePointReach(damangePointName)
     match damangePointName:
         "Head":
             sprite.SetFliters(["Zombie_polevaulter_innerarm_lower", "Zombie_polevaulter_innerarm_upper", "Zombie_polevaulter_innerhand", "Zombie_polevaulter_pole", "Zombie_polevaulter_pole2", "Zombie_polevaulter_pole 复制", "Zombie_polevaulter_pole2 复制"], false)
 
 func AnimeEvent(command: String, argument: Variant) -> void :
-    super.AnimeEvent(command, argument)
+    super .AnimeEvent(command, argument)
     match command:
         "audio":
             AudioManager.AudioPlay("Polevault", AudioManagerEnum.TYPE.SFX)
@@ -126,28 +126,28 @@ func AnimeEvent(command: String, argument: Variant) -> void :
             jumpOver = true
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "Jump":
             jumpMove = true
-            global_position.x -= transformPoint.scale.x * 148.0
+            global_position.x -= scale.x * transformPoint.scale.x * 148.0
             sprite.queue_redraw()
             Walk()
         "SwimJump":
             jumpMove = true
-            global_position.x -= transformPoint.scale.x * 148.0
+            global_position.x -= scale.x * transformPoint.scale.x * 148.0
             sprite.queue_redraw()
             Walk()
 
 func HitBoxDestroy() -> void :
-    super.HitBoxDestroy()
+    super .HitBoxDestroy()
     if is_instance_valid(checkJumpArea):
         checkJumpArea.queue_free()
 
 func InWater() -> void :
-    super.InWater()
+    super .InWater()
     sprite.SetFliters(["Zombie_whitewater", "Zombie_whitewater1"], true)
 
 func OutWater() -> void :
-    super.OutWater()
+    super .OutWater()
     sprite.SetFliters(["Zombie_whitewater", "Zombie_whitewater1"], false)

@@ -10,8 +10,6 @@
 [sub_resource type="Resource" id="Resource_7laa4"]
 script = ExtResource("3")
 time = 3.0
-iceSpeedDownTime = 15.0
-fliterShield = false
 metadata/_custom_type_script = "uid://bxlwoxox5hth3"
 
 [node name="TowerDefenseGraveStoneTargetCold" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]

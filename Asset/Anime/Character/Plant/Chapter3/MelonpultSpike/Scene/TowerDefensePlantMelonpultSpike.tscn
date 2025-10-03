@@ -18,20 +18,21 @@ fireInterval = 3.0
 fireNum = 1
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/MelonpultSpike")
+Custom = []
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
 
 [node name="MelonpultSpike" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("4")]
 position = Vector2(0, -30)
-layerSlot = [null, null, null, NodePath("AdobeAnimateSlot"), null, null, null, null, null, null, null, null, null, null, null]
+layerSlot = [null, null, null, null, NodePath("AdobeAnimateSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 
 [node name="AdobeAnimateSlot" type="Node2D" parent="SpriteGroup/TransformPoint/MelonpultSpike" index="0"]
-position = Vector2(-92.6785, -29.6483)
-rotation = -0.460099
-scale = Vector2(0.998041, 0.998041)
+position = Vector2(-90.515, -35.1978)
+rotation = -0.380481
+scale = Vector2(0.998384, 0.998384)
 script = ExtResource("5")
-followSlotId = 4
+followSlotId = 5
 metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
 
 [node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/MelonpultSpike/AdobeAnimateSlot" index="0"]

@@ -47,6 +47,8 @@ func AdventureButtonPressed() -> void :
 func ChallengeButtonPressed() -> void :
     if wait:
         return
+    Global.currentLevelChoose = "Challenge"
+    SceneManager.ChangeScene("LevelChoose")
     adventureButton.global_position += Vector2.ONE * 2
 
 func SurvivalButtonPressed() -> void :

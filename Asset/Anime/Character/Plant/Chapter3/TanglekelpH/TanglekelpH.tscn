@@ -6,12 +6,12 @@
 [node name="TanglekelpH" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
 script = ExtResource("1")
 flashAnimeData = ExtResource("2")
-offset = Vector2(-40, -40)
+offset = Vector2(-40, -20)
 useTween = false
 layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 Animation/Clip = "Idle"
-Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/AnimeClips = false
 "Animation/LayerVisible/Layer 29" = true
 "Animation/LayerVisible/Layer 32" = true
 Animation/LayerVisible/Tanglekelp_arm1 = true

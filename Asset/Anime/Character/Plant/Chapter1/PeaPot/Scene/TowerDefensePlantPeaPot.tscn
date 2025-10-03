@@ -18,21 +18,22 @@ b = Vector2(2000, 0)
 z_index = -13
 script = ExtResource("2")
 fireInterval = 3.0
+fireNum = 1
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/PeaPot")
 itemLayer = 2
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
 
 [node name="PeaPot" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("4")]
 position = Vector2(0, -29)
+trueFrameRate = 30.0
 layerSlot = [NodePath("../../../ShadowSprite/AdobeAnimateSlot"), null, null, NodePath("PotSlot"), null, null, null, NodePath("MouseSlot"), null, null, null]
 layerSprite = [null, null, null, null, null, null, null, null, null, null, null]
 
 [node name="PotSlot" type="Node2D" parent="SpriteGroup/TransformPoint/PeaPot" index="0"]
-position = Vector2(-32.85, -6.8767)
+position = Vector2(-32.85, -5.3367)
 script = ExtResource("5")
 followSlotId = 4
 useScale = false
@@ -42,9 +43,9 @@ metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
 position = Vector2(32, 0)
 
 [node name="MouseSlot" type="Node2D" parent="SpriteGroup/TransformPoint/PeaPot" index="1"]
-position = Vector2(19.7517, 25.6)
-rotation = -1.63811e-05
-scale = Vector2(0.395244, 0.40092)
+position = Vector2(19.7867, 26.65)
+rotation = -2.7493e-05
+scale = Vector2(0.397352, 0.397387)
 script = ExtResource("5")
 followSlotId = 8
 useRotate = false
@@ -60,8 +61,8 @@ scale = Vector2(0.821918, 0.77551)
 texture = null
 
 [node name="AdobeAnimateSlot" type="Node2D" parent="ShadowSprite" index="0"]
-position = Vector2(-26.2717, 22.25)
-scale = Vector2(0.743053, 0.799988)
+position = Vector2(-27.7767, 22.25)
+scale = Vector2(0.784282, 0.799988)
 script = ExtResource("5")
 metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
 

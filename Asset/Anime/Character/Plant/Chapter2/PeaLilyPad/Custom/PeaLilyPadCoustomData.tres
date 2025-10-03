@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharacterCustomData" load_steps=3 format=4 uid="uid://bqyk10b02q54a"]
+
+[ext_resource type="Resource" uid="uid://6we0ml7ov7qj" path="res://Asset/Anime/Character/Plant/Chapter2/PeaLilyPad/Custom/Config/PeaLilyPadCustom0.tres" id="1"]
+[ext_resource type="Script" uid="uid://onv5rieax7m5" path="res://Resource/General/Character/Costom/CharacterCustomData.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+customList = [ExtResource("1")]
+customDictionary = {
+"Custom0": {
+"Close": ["anim_shooting", "anim_idle"],
+"Config": ExtResource("1"),
+"Open": ["skin1", "skin3"]
+}
+}
+fliterOpenAll = ["skin1", "skin3"]
+fliterCloseAll = ["anim_shooting", "anim_idle"]
+metadata/_custom_type_script = "uid://onv5rieax7m5"

@@ -1,0 +1,75 @@
+[gd_scene load_steps=12 format=4 uid="uid://70uk64804ggx"]
+
+[ext_resource type="PackedScene" uid="uid://s74hf6v6x5r7" path="res://Prefab/TowerDefense/Character/TowerDefenseZombieImpBase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://c5nhnask7jdck" path="res://Asset/Anime/Character/Zombie/Chapter1/Imp/Scene/PresentBox/TowerDefenseZombieImpPresentBox.gd" id="2"]
+[ext_resource type="Resource" uid="uid://torxrkpsqhvt" path="res://Asset/Anime/Character/Zombie/Chapter1/Imp/Config/TowerDefenseZombieImpPresentBox.tres" id="3"]
+[ext_resource type="Resource" uid="uid://b1i34e3ocmogl" path="res://Asset/Anime/Character/Zombie/Chapter1/Imp/DamagePoint/Config/ZombieImpDamagePointArm.tres" id="4"]
+[ext_resource type="Resource" uid="uid://byhtsoedfw0a3" path="res://Asset/Anime/Character/Zombie/Chapter1/Imp/DamagePoint/Config/ZombieImpDamagePointHead.tres" id="5"]
+[ext_resource type="Resource" uid="uid://cmjaxhp5g71q5" path="res://Asset/Anime/Character/Zombie/Chapter1/Imp/Armor/Config/ZombieImpArmorCone.tres" id="6"]
+[ext_resource type="Resource" uid="uid://qgfffnlxkr4m" path="res://Asset/Anime/Character/Zombie/Chapter1/Imp/Armor/Config/ZombieImpArmorBucket.tres" id="7"]
+[ext_resource type="Resource" uid="uid://cs3au7yvdnjpi" path="res://Asset/Anime/Character/Zombie/Chapter1/Imp/Armor/Config/ZombieImpArmorHelmet.tres" id="8"]
+[ext_resource type="Resource" uid="uid://58r0tjmwweja" path="res://Asset/Anime/Character/Zombie/Chapter1/Imp/Armor/Config/ZombieImpArmorBlackHelmet.tres" id="9"]
+[ext_resource type="Resource" uid="uid://dnbxvkk0ikxie" path="res://Asset/Anime/Character/Zombie/Chapter1/Imp/Armor/Config/ZombieImpArmorSpecialHelmet.tres" id="10"]
+[ext_resource type="PackedScene" uid="uid://ce6h6ic565mh0" path="res://Asset/Anime/Character/Zombie/Chapter1/Imp/Sprite/PresentBox/ZombieImpPresentBox.tscn" id="11"]
+
+[node name="TowerDefenseZombieImpPresentBox" node_paths=PackedStringArray("sprite", "headSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+packetBank = "ZombieImpPresentBox"
+groan = ""
+dieWaterAnimeClip = "SwimDeath"
+waterHeightPersontage = 0.83
+waterHeight = 18.0
+idleAnimeClip = "Walk"
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieImp")
+headSlot = NodePath("SpriteGroup/TransformPoint/ZombieImp/HeadSlot")
+damagePart = {
+"Arm": ExtResource("4"),
+"BlackHelmet": ExtResource("9"),
+"Bucket": ExtResource("7"),
+"Cone": ExtResource("6"),
+"Head": ExtResource("5"),
+"Helmet": ExtResource("8"),
+"SpecialHelmet": ExtResource("10")
+}
+PreviewDamagePointPersontage = 1.0
+Armor = []
+DamagePartSlot/Arm = NodePath("SpriteGroup/TransformPoint/ZombieImp/ArmSlot")
+DamagePartSlot/Head = NodePath("SpriteGroup/TransformPoint/ZombieImp/HeadSlot")
+DamagePartSlot/Cone = NodePath("SpriteGroup/TransformPoint/ZombieImp/HeadSlot")
+DamagePartSlot/Bucket = NodePath("SpriteGroup/TransformPoint/ZombieImp/HeadSlot")
+DamagePartSlot/Helmet = NodePath("SpriteGroup/TransformPoint/ZombieImp/HeadSlot")
+DamagePartSlot/BlackHelmet = NodePath("SpriteGroup/TransformPoint/ZombieImp/HeadSlot")
+DamagePartSlot/SpecialHelmet = NodePath("SpriteGroup/TransformPoint/ZombieImp/HeadSlot")
+
+[node name="ZombieImp" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("11")]
+position = Vector2(-12, -36)
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="PresentBoxImpHead" parent="SpriteGroup/TransformPoint/ZombieImp" index="0"]
+position = Vector2(-19.51, -25.09)
+rotation = -0.109088
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieImp" index="1"]
+position = Vector2(-2.13471, -3.90805)
+rotation = -0.109088
+scale = Vector2(0.997727, 0.997727)
+
+[node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieImp" index="2"]
+position = Vector2(13.2003, 24.4457)
+rotation = -1.10258
+scale = Vector2(1.05507, 1.01901)
+skew = 0.0481679
+
+[node name="GroundSlot" parent="SpriteGroup/TransformPoint/ZombieImp" index="3"]
+position = Vector2(-71.65, 10)
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(9, 40)
+scale = Vector2(0.906977, 0.944445)
+
+[node name="GroundMoveComponent" parent="." index="8" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieImp/GroundSlot")
+
+[editable path="SpriteGroup/TransformPoint/ZombieImp"]

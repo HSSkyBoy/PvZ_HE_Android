@@ -16,7 +16,7 @@ signal sceneChange(sceneName: String)
 var scaneLoading: SceneLoading
 
 var currentScene: String
-
+var currentStopAllAudio: bool = false
 var isLoading: bool = false
 var currentSceneLoading: String = ""
 
@@ -32,10 +32,13 @@ func _physics_process(delta: float) -> void :
             currentSceneLoading = ""
             isLoading = false
             scaneLoading = null
+            if currentStopAllAudio:
+                AudioManager.AudioStopAll()
 
 func ChangeScene(scene: String, stopAllAudio: bool = true) -> void :
-    if stopAllAudio:
-        AudioManager.AudioStopAll()
+    get_tree().current_scene.process_mode = Node.PROCESS_MODE_DISABLED
+    currentStopAllAudio = stopAllAudio
+
     ObjectManager.Clear()
     if currentScene != scene:
         sceneStack.append(scene)
@@ -58,8 +61,9 @@ func ChangeScene(scene: String, stopAllAudio: bool = true) -> void :
         Global.timeScale = 1.0
 
 func ReloadScene(stopAllAudio: bool = true) -> void :
-    if stopAllAudio:
-        AudioManager.AudioStopAll()
+    get_tree().current_scene.process_mode = Node.PROCESS_MODE_DISABLED
+    currentStopAllAudio = stopAllAudio
+
     ObjectManager.Clear()
     scaneLoading = SCENE_LOADING.instantiate() as SceneLoading
     add_child.call_deferred(scaneLoading)

@@ -32,7 +32,7 @@ func PointExited() -> void :
     pass
 
 func WalkEntered() -> void :
-    super.WalkEntered()
+    super .WalkEntered()
     sprite.scale.x = 1.0
     walkTime = 2
 
@@ -41,14 +41,14 @@ func WalkProcessing(delta: float) -> void :
         groundMoveComponent.alive = jackson.groundMoveComponent.alive
     else:
         groundMoveComponent.alive = true
-    super.WalkProcessing(delta)
+    super .WalkProcessing(delta)
 
 func DieProcessing(delta: float) -> void :
-    super.DieProcessing(delta)
+    super .DieProcessing(delta)
     sprite.timeScale = timeScale * 2.0
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "Walk":
             if (TowerDefenseManager.currentControl && !TowerDefenseManager.currentControl.isGameRunning):
@@ -73,7 +73,7 @@ func AnimeCompleted(clip: String) -> void :
                 Die()
 
 func Hypnoses(time: float = -1) -> void :
-    super.Hypnoses(time)
+    super .Hypnoses(time)
     OutJackson()
 
 func OutJackson() -> void :

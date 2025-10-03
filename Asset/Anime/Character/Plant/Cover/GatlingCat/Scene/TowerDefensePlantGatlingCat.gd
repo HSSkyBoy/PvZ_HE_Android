@@ -11,57 +11,57 @@ var currentFireNum: int = 0
 func _ready() -> void :
     if Engine.is_editor_hint():
         return
-    super._ready()
+    super ._ready()
     fireComponent.fireInterval = fireInterval
 
 func _physics_process(delta: float) -> void :
     if Engine.is_editor_hint():
         return
-    super._physics_process(delta)
+    super ._physics_process(delta)
     fireComponent.fireInterval = fireInterval
 
 func IdleEntered() -> void :
     if Engine.is_editor_hint():
         return
-    super.IdleEntered()
+    super .IdleEntered()
     fireComponent.alive = true
 
 @warning_ignore("unused_parameter")
 func IdleProcessing(delta: float) -> void :
-    super.IdleProcessing(delta)
+    super .IdleProcessing(delta)
 
     if fireComponent.CanFire("PeaTrack"):
         state.send_event("ToAttack")
         return
 
 func IdleExited() -> void :
-    super.IdleExited()
+    super .IdleExited()
 
 func AttackEntered() -> void :
     fireComponent.Refresh()
-    sprite.SetAnimation("Fire", true, 0.2)
+    sprite.SetAnimation("Fire", true, 0.2 * (fireInterval + 4.5) / 6.0)
 
 @warning_ignore("unused_parameter")
 func AttackProcessing(delta: float) -> void :
-    sprite.timeScale = timeScale * 3.0
+    sprite.timeScale = timeScale * 3.0 * (1.75 / (fireInterval + 0.25))
 
 func AttackExited() -> void :
     pass
 
 @warning_ignore("unused_parameter")
 func AnimeEvent(command: String, argument: Variant) -> void :
-    super.AnimeEvent(command, argument)
+    super .AnimeEvent(command, argument)
     match command:
         "tail_fire":
             AudioManager.AudioPlay("ProjectileThrow", AudioManagerEnum.TYPE.SFX)
             var projectile1: TowerDefenseProjectile
-            projectile1 = fireComponent.CreateProjectile(0, Vector2(300, 0), "PeaTrack", camp, Vector2.ZERO)
+            projectile1 = fireComponent.CreateProjectile(0, Vector2(300, 0), "PeaTrack", -1, camp, Vector2.ZERO)
             projectile1.gridPos = gridPos
 
         "fire":
             AudioManager.AudioPlay("ProjectileThrow", AudioManagerEnum.TYPE.SFX)
             var projectile2: TowerDefenseProjectile
-            projectile2 = fireComponent.CreateProjectile(1, Vector2(300, 0), "PeaTrack", camp, Vector2.ZERO)
+            projectile2 = fireComponent.CreateProjectile(1, Vector2(300, 0), "PeaTrack", -1, camp, Vector2.ZERO)
             projectile2.gridPos = gridPos
 
         "fire_end":
@@ -72,7 +72,7 @@ func AnimeEvent(command: String, argument: Variant) -> void :
                 sprite.SetAnimation("Fire", true, 0.1)
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "Fire":
             if currentFireNum == 0:

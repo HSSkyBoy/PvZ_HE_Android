@@ -20,10 +20,7 @@ size = Vector2(100, 76)
 
 [node name="TowerDefenseZombiePolevaulter" node_paths=PackedStringArray("sprite", "headSlot") instance=ExtResource("1")]
 script = ExtResource("2")
-inSwimAnimeClip = ""
 swimAnimeClip = "SwimWalk"
-outSwimAnimeClip = ""
-attackWaterAnimeClip = ""
 dieWaterAnimeClip = "SwimDeath"
 waterHeightPersontage = 0.625
 waterHeight = 40.0
@@ -62,14 +59,12 @@ trueFrameRate = 30.0
 layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, null, NodePath("ArmSlot"), null, null, null, null, null, null]
 
 [node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombiePolevaulter" index="0"]
-position = Vector2(-7.702, -49.4884)
-rotation = -0.0434902
-scale = Vector2(0.799832, 0.799832)
+position = Vector2(-6.5334, -52.0262)
+rotation = -0.0133938
+scale = Vector2(0.799912, 0.799912)
 
 [node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombiePolevaulter" index="1"]
-position = Vector2(10.7367, -0.641001)
-rotation = -0.183259
-scale = Vector2(0.799989, 0.799989)
+position = Vector2(8.83187, -3.57271)
 
 [node name="GroundSlot" parent="SpriteGroup/TransformPoint/ZombiePolevaulter" index="2"]
 position = Vector2(-78, -18)
@@ -86,6 +81,8 @@ position = Vector2(4, -2)
 [node name="AttackComponent2" parent="." index="6" node_paths=PackedStringArray("checkArea") instance=ExtResource("12")]
 unique_name_in_owner = true
 checkArea = NodePath("CheckJumpArea")
+checkIntreval = 0
+checkLine = true
 checkTall = true
 
 [node name="CheckJumpArea" type="Area2D" parent="AttackComponent2" index="0"]

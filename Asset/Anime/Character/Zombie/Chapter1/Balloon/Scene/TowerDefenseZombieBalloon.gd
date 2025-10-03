@@ -56,11 +56,11 @@ func FlyAttackExited() -> void :
     pass
 
 func AttackProcessing(delta: float) -> void :
-    super.AttackProcessing(delta)
+    super .AttackProcessing(delta)
     sprite.timeScale = timeScale * 2.0
 
 func DieProcessing(delta: float) -> void :
-    super.DieProcessing(delta)
+    super .DieProcessing(delta)
     sprite.timeScale = timeScale * 2.0
 
 func Walk() -> void :
@@ -78,13 +78,13 @@ func Blow() -> void :
         Destroy()
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "Pop":
             Walk()
 
 func ArmorHitpointsEmpty(armorName: String) -> void :
-    super.ArmorHitpointsEmpty(armorName)
+    super .ArmorHitpointsEmpty(armorName)
     match armorName:
         "Balloon":
             pop = true
@@ -95,7 +95,7 @@ func ArmorHitpointsEmpty(armorName: String) -> void :
             state.send_event("ToPop")
 
 func DamagePointReach(damangePointName: String) -> void :
-    super.DamagePointReach(damangePointName)
+    super .DamagePointReach(damangePointName)
     match damangePointName:
         "Head":
             sprite.head = false

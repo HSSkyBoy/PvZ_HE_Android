@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://2vh1csqbvbqx"]
+[gd_scene load_steps=10 format=4 uid="uid://2vh1csqbvbqx"]
 
 [ext_resource type="Script" uid="uid://c7l6nq6ebxlum" path="res://Prefab/TowerDefense/GUI/InGame/SeedBank/TowerDefenseInGameSeedBank.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://b04firw4ertti" path="res://Prefab/TowerDefense/GUI/InGame/ConveyorBelt/TowerDefenseConveyorBelt.tscn" id="2"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://3p5tg4mgg3df" path="res://Asset/Texture/GUI/General/ShovelBank/ShovelBank.png" id="6"]
 [ext_resource type="Texture2D" uid="uid://fbnfrolt1kma" path="res://Asset/Texture/TowerDefense/Shovel/Shovel.png" id="7"]
 [ext_resource type="PackedScene" uid="uid://cpgpfiekj6ien" path="res://Prefab/TowerDefense/GUI/InGame/PlantfoodBank/TowerDefensePlantfoodBank.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://ctq7ujuvitimj" path="res://Prefab/TowerDefense/GUI/InGame/RainModeControl/TowerDefenseRainModeControl.tscn" id="9"]
 
 [node name="TowerDefenseInGameSeedBank" type="Control"]
 light_mask = 0
@@ -189,7 +190,6 @@ theme_override_constants/v_separation = 62
 [node name="ShovelNode" type="Control" parent="Packet"]
 unique_name_in_owner = true
 light_mask = 0
-layout_mode = 2
 anchors_preset = 0
 offset_left = 875.0
 offset_right = 875.0
@@ -197,7 +197,7 @@ offset_right = 875.0
 [node name="ShovelButton" type="TextureButton" parent="Packet/ShovelNode"]
 unique_name_in_owner = true
 light_mask = 0
-layout_mode = 2
+layout_mode = 0
 offset_right = 70.0
 offset_bottom = 72.0
 mouse_default_cursor_shape = 2
@@ -211,10 +211,15 @@ texture = ExtResource("7")
 
 [node name="PlantfoodBank" parent="." instance=ExtResource("8")]
 visible = false
+layout_mode = 0
 offset_left = 19.0
 offset_top = 934.0
 offset_right = 19.0
 offset_bottom = 934.0
+
+[node name="RainModeControl" parent="." instance=ExtResource("9")]
+unique_name_in_owner = true
+layout_mode = 0
 
 [connection signal="pressed" from="Packet/ShovelNode/ShovelButton" to="." method="ShovelButtonPressed"]
 [connection signal="pick" from="PlantfoodBank" to="." method="PlantfoodPick"]

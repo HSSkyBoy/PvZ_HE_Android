@@ -133,7 +133,11 @@ func Load() -> void :
                 config = GameSaveConfig.new()
                 Save()
             else:
-                config = ResourceLoader.load(PATH)
+                var resLoad = ResourceLoader.load(PATH)
+                if resLoad is GameSaveConfig:
+                    config = resLoad
+                else:
+                    config = GameSaveConfig.new()
                 if config.userCurrent != "":
                     TowerDefenseManager.coinBank.num = GameSaveManager.GetKeyValue("CoinNum")
     if GetUserCurrent() != "":

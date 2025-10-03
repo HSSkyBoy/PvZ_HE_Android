@@ -41,7 +41,7 @@ var currentPage: int = 0:
 var talkTimer: float = 0.0
 var talkInterval: float = 20.0
 func _ready() -> void :
-    super._ready()
+    super ._ready()
     TowerDefenseManager.coinBank.Show(Vector2(900, 557), true)
     config = ResourceManager.SHOPS["WWMShop"]
     config.Init()

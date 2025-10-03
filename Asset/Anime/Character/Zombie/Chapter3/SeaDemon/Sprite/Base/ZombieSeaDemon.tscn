@@ -1,0 +1,88 @@
+[gd_scene load_steps=4 format=4 uid="uid://sftmgg4oomkw"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://cry6nli1n3tpw" path="res://Asset/Anime/Character/Zombie/Chapter3/SeaDemon/ZombieSeaDemon.tres" id="2"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="3"]
+
+[node name="ZombieSeaDemon" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-50, -80)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/AnimeEvents = false
+Animation/LayerVisible/Zombie_outerarm_hand = true
+Animation/LayerVisible/Zombie_outerarm_lower = true
+Animation/LayerVisible/Zombie_outerarm_upper = true
+Animation/LayerVisible/Zombie_whitewater = true
+Animation/LayerVisible/Zombie_whitewater2 = true
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/anim_hair = true
+Animation/LayerVisible/anim_head1 = true
+"Animation/LayerVisible/三叉戟" = true
+"Animation/LayerVisible/上身" = true
+"Animation/LayerVisible/下身" = true
+"Animation/LayerVisible/图层_3" = true
+"Animation/LayerVisible/尾巴" = true
+"Animation/LayerVisible/手" = true
+"Animation/LayerVisible/手臂上" = true
+"Animation/LayerVisible/手臂下" = true
+"Animation/LayerVisible/脚" = true
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/TXJZ_01.png = null
+Animation/MediaReplace/TXJZ_02.png = null
+Animation/MediaReplace/TXJZ_03.png = null
+Animation/MediaReplace/TXJZ_04.png = null
+Animation/MediaReplace/TXJZ_05.png = null
+Animation/MediaReplace/TXJZ_06.png = null
+Animation/MediaReplace/TXJZ_07.png = null
+Animation/MediaReplace/TXJZ_08.png = null
+Animation/MediaReplace/TXJZ_09.png = null
+Animation/MediaReplace/TXJZ_10.png = null
+Animation/MediaReplace/TXJZ_11.png = null
+Animation/MediaReplace/TXJZ_12.png = null
+Animation/MediaReplace/Zombie_SeaDemon_0000_13.png = null
+Animation/MediaReplace/Zombie_SeaDemon_0001_12.png = null
+Animation/MediaReplace/Zombie_SeaDemon_0002_11.png = null
+Animation/MediaReplace/Zombie_SeaDemon_0003_10.png = null
+Animation/MediaReplace/Zombie_SeaDemon_0004_9.png = null
+Animation/MediaReplace/Zombie_SeaDemon_0005_8.png = null
+Animation/MediaReplace/Zombie_SeaDemon_0006_7.png = null
+Animation/MediaReplace/Zombie_SeaDemon_0007_6.png = null
+Animation/MediaReplace/Zombie_SeaDemon_0008_5.png = null
+Animation/MediaReplace/Zombie_SeaDemon_0009_4.png = null
+Animation/MediaReplace/Zombie_SeaDemon_0010_3.png = null
+Animation/MediaReplace/Zombie_SeaDemon_0011_2.png = null
+Animation/MediaReplace/Zombie_SeaDemon_0012_1.png = null
+Animation/MediaReplace/Zombie_snorkle_whitewater1.png = null
+Animation/MediaReplace/Zombie_snorkle_whitewater2.png = null
+Animation/MediaReplace/Zombie_snorkle_whitewater3.png = null
+Animation/MediaReplace/Zombie_whitewater1.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="HeadSlot" type="Node2D" parent="."]
+position = Vector2(-19.6475, -59.7935)
+rotation = -0.0328514
+scale = Vector2(0.799904, 0.799904)
+script = ExtResource("3")
+followSlotId = 10
+offset = Vector2(40, 48)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ArmSlot" type="Node2D" parent="."]
+position = Vector2(-0.0282183, -2.48321)
+rotation = -0.0296468
+scale = Vector2(0.79985, 0.79985)
+script = ExtResource("3")
+followSlotId = 13
+offset = Vector2(10, 20)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="GroundSlot" type="Node2D" parent="."]
+position = Vector2(-42.8958, -40)
+script = ExtResource("3")
+followSlotId = 1
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

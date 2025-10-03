@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=4 uid="uid://6cmkkxsgd6h8"]
+
+[ext_resource type="PackedScene" uid="uid://udsya47xq3qh" path="res://Prefab/TowerDefense/Character/TowerDefenseVase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://rcjdy7d1gjbx" path="res://Asset/Anime/Character/Vase/Normal/Scene/TowerDefenseVaseNormal.gd" id="2"]
+[ext_resource type="Resource" uid="uid://bxacyge6jhjll" path="res://Asset/Anime/Character/Vase/Normal/Config/TowerDefenseVaseNormal.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://nrqdcacrnc4n" path="res://Asset/Anime/Character/Vase/Normal/VaseNormal.tscn" id="4"]
+
+[node name="TowerDefenseVaseNormal" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/VaseNormal")
+
+[node name="VaseNormal" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+position = Vector2(0, -36)
+
+[node name="ShadowSprite" parent="." index="4"]
+scale = Vector2(1.1395348, 1.1111112)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 1.25)

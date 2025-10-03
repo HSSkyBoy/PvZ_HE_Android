@@ -10,7 +10,6 @@ size_override = Vector2(242, 393)
 script = ExtResource("1")
 animeFile = "res://Asset/Anime/Character/Zombie/Ash/General/ZombieGeneralAsh.dat"
 frameRate = 15.0
-frameScale = 1
 frameMax = 43
 imageAtlas = SubResource("PortableCompressedTexture2D_1yq50")
 mediaList = [Rect2(64, 46, 64, 108), Rect2(121, 299, 40, 94), Rect2(164, 0, 66, 106), Rect2(0, 57, 52, 104), Rect2(190, 106, 52, 99), Rect2(52, 154, 49, 99), Rect2(101, 162, 49, 94), Rect2(150, 205, 45, 94), Rect2(41, 253, 40, 94), Rect2(81, 256, 40, 94), Rect2(195, 205, 41, 19), Rect2(0, 161, 41, 19), Rect2(128, 106, 62, 56), Rect2(0, 0, 91, 26), Rect2(91, 0, 73, 46), Rect2(161, 299, 40, 94), Rect2(0, 26, 64, 31)]

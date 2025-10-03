@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="CharacterDamagePointData" load_steps=5 format=4 uid="uid://3glhslartrpt"]
+
+[ext_resource type="Resource" uid="uid://btmofnbks0kvp" path="res://Asset/Anime/Character/Plant/Gold/IceTallnut/DamagePoint/Config/IceTallnutDamagePointDamage0.tres" id="1"]
+[ext_resource type="Resource" uid="uid://bvpi01cyeyum6" path="res://Asset/Anime/Character/Plant/Gold/IceTallnut/DamagePoint/Config/IceTallnutDamagePointDamage1.tres" id="2"]
+[ext_resource type="Resource" uid="uid://icwxrnkqwo66" path="res://Asset/Anime/Character/Plant/Gold/IceTallnut/DamagePoint/Config/IceTallnutDamagePointDamage2.tres" id="3"]
+[ext_resource type="Script" uid="uid://c3lvn8julbk1s" path="res://Resource/General/Character/DamagePoint/CharacterDamagePointData.gd" id="4"]
+
+[resource]
+script = ExtResource("4")
+damagePointList = [ExtResource("1"), ExtResource("2"), ExtResource("3")]
+damagePointDictionary = {
+"Damage0": {
+"Close": [],
+"Config": ExtResource("1"),
+"Open": []
+},
+"Damage1": {
+"Close": [],
+"Config": ExtResource("2"),
+"Open": []
+},
+"Damage2": {
+"Close": [],
+"Config": ExtResource("3"),
+"Open": []
+}
+}
+fliterOpenAll = []
+fliterCloseAll = []
+metadata/_custom_type_script = "uid://c3lvn8julbk1s"

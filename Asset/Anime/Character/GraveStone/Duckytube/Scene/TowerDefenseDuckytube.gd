@@ -4,8 +4,7 @@ extends TowerDefenseGravestone
 func _ready() -> void :
     if Engine.is_editor_hint():
         return
-    super._ready()
-    var cell: TowerDefenseCellInstance = TowerDefenseManager.GetMapCell(gridPos)
+    super ._ready()
     if is_instance_valid(cell) && cell.IsWater():
         sprite.SetFliters(["Zombie_whitewater", "Zombie_whitewater_复制"], true)
         shadowSprite.visible = false
@@ -20,5 +19,5 @@ func IdleProcessing(delta: float) -> void :
     sprite.timeScale = timeScale * 0.5
 
 func HitpointsEmpty():
-    super.HitpointsEmpty()
+    super .HitpointsEmpty()
     AudioManager.AudioPlay("BalloonPop", AudioManagerEnum.TYPE.SFX)

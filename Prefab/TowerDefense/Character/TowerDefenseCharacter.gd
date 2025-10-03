@@ -6,6 +6,7 @@ const FIRE = preload("res://Asset/Anime/Effect/Fire/Base/Fire.tscn")
 
 @onready var backEffectNode: Node2D = %BackEffectNode
 @onready var frontEffectNode: Node2D = %FrontEffectNode
+@onready var spriteMask: ColorRect = %SpriteMask
 
 @onready var spriteGroup: CanvasGroup = %SpriteGroup
 @onready var transformPoint: Marker2D = $SpriteGroup / TransformPoint
@@ -89,6 +90,9 @@ var cost: float = 0.0
 var nearDie: bool = false
 var die: bool = false
 
+var canMowerMove: bool = false
+
+var baseSpriteScale: Vector2
 var saveShadowScale: Vector2
 var saveShadowPosition: Vector2
 
@@ -97,23 +101,27 @@ var shadowFollowHeight: bool = false:
         shadowFollowHeight = _shadowFollowHeight
         if !shadowFollowHeight:
             shadowSprite.global_position.y = saveShadowPosition.y
+var showHealthComponentPosYSave: float = 0.0
 
 var isRise: bool = false
 var isSmash: bool = false
 var isExplode: bool = false
+var isChomp: bool = false
 
 var inWater: bool = false:
     set(_inWater):
         if inWater != _inWater:
             inWater = _inWater
-            if _inWater:
-                InWater()
-            else:
-                OutWater()
+            if inGame:
+                if _inWater:
+                    InWater()
+                else:
+                    OutWater()
+
+var outFromWater: bool = false
 
 var blowBack: bool = false
 var blowBackNum: float = 0.0
-
 
 var isDestroy: bool = false
 
@@ -137,7 +145,7 @@ func _get_property_list() -> Array[Dictionary]:
                     "hint": PROPERTY_HINT_RANGE, 
                     "hint_string": "0.0,1.0,0.01", 
                 }
-        )
+            )
         if config.armorData:
             properties.append(
                 {
@@ -146,7 +154,7 @@ func _get_property_list() -> Array[Dictionary]:
                     "hint": PROPERTY_HINT_ENUM, 
                     "hint_string": "%d/%d:%s" % [TYPE_STRING, PROPERTY_HINT_ENUM, ",".join(config.armorData.armorDictionary.keys())], 
                 }
-        )
+            )
         if config.customData:
             properties.append(
                 {
@@ -224,7 +232,7 @@ func _property_get_revert(property: StringName) -> Variant:
 func _ready() -> void :
     if Engine.is_editor_hint():
         return
-    super._ready()
+    super ._ready()
     if inGame:
         state.process_mode = Node.PROCESS_MODE_INHERIT
 
@@ -255,22 +263,32 @@ func _ready() -> void :
     if CanSleep():
         Sleep()
 
+    await get_tree().physics_frame
+    showHealthComponentPosYSave = showHealthComponent.position.y
+
 @warning_ignore("unused_parameter")
 func _physics_process(delta: float) -> void :
     if Engine.is_editor_hint():
         return
-    super._physics_process(delta)
+    super ._physics_process(delta)
     if blowBack:
         global_position.x += blowBackNum * delta
 
     gridPos = TowerDefenseManager.GetMapGridPos(global_position)
+    if !self is TowerDefenseZombie && !self is TowerDefenseVase:
+        if is_instance_valid(cell):
+            groundHeight = lerpf(groundHeight, cell.GetGroundHeight(cellPercentage), 3.0 * delta)
     shadowSprite.scale = saveShadowScale * (1.0 - z / 900.0)
     if shadowFollowHeight:
         shadowSprite.global_position.y = transformPoint.global_position.y
 
     timeScale = timeScaleInit
     spriteGroup.position.y = - z
-
+    if inWater:
+        showHealthComponent.position.y = showHealthComponentPosYSave
+    else:
+        showHealthComponent.position.y = spriteGroup.position.y + showHealthComponentPosYSave
+    shadowSprite.global_position.y = saveShadowPosition.y - groundHeight * transformPoint.global_scale.y
     if !IsDie():
         if nearDie:
             instance.DealHurt(config.hitpointsNearDeath * delta / 3.0, false)
@@ -434,7 +452,7 @@ func GetTotalHitPoint() -> float:
 func Destroy(freeInsance: bool = true) -> void :
     if isDestroy:
         return
-
+    remove_from_group("Character")
     if Global.isEditor && SceneManager.currentScene == "LevelEditorStage":
         queue_free()
         return
@@ -506,8 +524,8 @@ func DamagePartCreate(damagePointName: StringName, node: Node2D, velocity: Vecto
         if node.get_parent():
             node.get_parent().remove_child(node)
             damagePartInstance.scale = slot.scale
-    damagePartInstance.Init(node, GetGroundHeight(slot.global_position.y) - 15, velocity)
-    damagePartInstance.scale *= scale * transformPoint.scale
+    damagePartInstance.Init(node, GetGroundHeight(slot.global_position.y) + shadowSprite.position.y - 16, velocity)
+    damagePartInstance.scale *= scale * transformPoint.scale * sprite.scale
     damagePartInstance.global_position = slot.global_position
     damagePartInstance.gridPos = gridPos
 
@@ -567,7 +585,7 @@ func CheckSameLine(line: int) -> bool:
     return line == gridPos.y
 
 func GetGroundHeight(posHieght: float) -> float:
-    return saveShadowPosition.y - posHieght
+    return global_position.y - posHieght + groundHeight
 
 @warning_ignore("unused_parameter")
 func Cover(character: TowerDefenseCharacter) -> void :
@@ -617,13 +635,13 @@ func BuffDelete(key: String) -> void :
     buff.BuffDelete(key)
 
 func SunCreate(pos: Vector2, sunNum: int, movingMethod: TowerDefenseEnum.SUN_MOVING_METHOD = TowerDefenseEnum.SUN_MOVING_METHOD.GRAVITY, _velocity: Vector2 = Vector2.ZERO, _gravity: float = 0.0, _moveStopTime: float = -1) -> TowerDefenseSun:
-    return TowerDefenseManager.SunCreate(pos, sunNum, movingMethod, GetGroundHeight(pos.y), _velocity, _gravity, _moveStopTime)
+    return TowerDefenseManager.SunCreate(pos, sunNum, movingMethod, GetGroundHeight(pos.y) - groundHeight * 2, _velocity, _gravity, _moveStopTime)
 
 func BrainSunCreate(pos: Vector2, sunNum: int, movingMethod: TowerDefenseEnum.SUN_MOVING_METHOD = TowerDefenseEnum.SUN_MOVING_METHOD.GRAVITY, _velocity: Vector2 = Vector2.ZERO, _gravity: float = 0.0, _moveStopTime: float = -1) -> TowerDefenseBrainSun:
-    return TowerDefenseManager.BrainSunCreate(pos, sunNum, movingMethod, GetGroundHeight(pos.y), _velocity, _gravity, _moveStopTime)
+    return TowerDefenseManager.BrainSunCreate(pos, sunNum, movingMethod, GetGroundHeight(pos.y) - groundHeight * 2, _velocity, _gravity, _moveStopTime)
 
 func JalapenoSunCreate(pos: Vector2, sunNum: int, movingMethod: TowerDefenseEnum.SUN_MOVING_METHOD = TowerDefenseEnum.SUN_MOVING_METHOD.GRAVITY, _velocity: Vector2 = Vector2.ZERO, _gravity: float = 0.0, _moveStopTime: float = -1) -> TowerDefenseSunJalapeno:
-    var jalapenoSun: TowerDefenseSunJalapeno = TowerDefenseManager.JalapenoSunCreate(pos, sunNum, movingMethod, GetGroundHeight(pos.y), _velocity, _gravity, _moveStopTime) as TowerDefenseSunJalapeno
+    var jalapenoSun: TowerDefenseSunJalapeno = TowerDefenseManager.JalapenoSunCreate(pos, sunNum, movingMethod, GetGroundHeight(pos.y) - groundHeight * 2, _velocity, _gravity, _moveStopTime) as TowerDefenseSunJalapeno
     jalapenoSun.gridPos = gridPos
     return jalapenoSun
 
@@ -633,11 +651,10 @@ func ExplodeSunCreate(pos: Vector2, sunNum: int, sunOnce: int, movingMethod: Tow
         sunNum -= sunOnce
 
 func CraterCreate(nolimit: bool = false) -> void :
-    var cell: TowerDefenseCellInstance = TowerDefenseManager.GetMapCell(gridPos)
     if is_instance_valid(cell):
         if nolimit || cell.CanCraterCreate():
             var craterPacket: TowerDefensePacketConfig = TowerDefenseManager.GetPacketConfig("CraterDayGround")
-            craterPacket.Plant(gridPos, false)
+            craterPacket.Plant(gridPos, false, true)
 
 func BlowBack(num: float, time: float = 1.0) -> void :
     if instance.collisionFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.UNDER_GROUND:
@@ -666,6 +683,7 @@ func InWater() -> void :
 
 func OutWater() -> void :
     shadowSprite.visible = true
+    outFromWater = true
 
 func Rise(duration: float = randf_range(0.75, 1.25), delay: float = 0.0, createDirt: bool = true, changeState: bool = true, from: float = 0.0) -> void :
     isRise = true
@@ -679,8 +697,11 @@ func Rise(duration: float = randf_range(0.75, 1.25), delay: float = 0.0, createD
     var riseTween = create_tween()
     riseTween.tween_property(spriteGroup.material, "shader_parameter/surfacePos", 1.0, duration).from(from)
     await get_tree().create_timer(0.1, false).timeout
-    if createDirt && !inWater:
-        CreateDirt()
+    if createDirt:
+        if !inWater:
+            CreateDirt()
+        else:
+            CreateSplash()
     await riseTween.finished
     isRise = false
     if changeState && self is TowerDefenseZombie:
@@ -701,20 +722,29 @@ static func CreateJalapenoFire(_gridPos: Vector2i) -> void :
     for i in TowerDefenseManager.GetMapGridNum().x:
         var flag: bool = true
         if i == 0:
+            var getCell: TowerDefenseCellInstance = TowerDefenseManager.GetMapCell(_gridPos)
             var effect = TowerDefenseManager.CreateEffectSpriteOnce(FIRE, _gridPos, "Flame|Done")
             effect.global_position = TowerDefenseManager.GetMapCellPlantPos(_gridPos) + Vector2(0, 30)
+            if is_instance_valid(getCell):
+                effect.global_position.y -= getCell.GetGroundHeight(0.5)
             characterNode.add_child(effect)
             flag = false
         else:
             if _gridPos.x - i > 0:
+                var getCell: TowerDefenseCellInstance = TowerDefenseManager.GetMapCell(_gridPos - Vector2i(i, 0))
                 var effectLeft = TowerDefenseManager.CreateEffectSpriteOnce(FIRE, _gridPos - Vector2i(i, 0), "Flame|Done")
                 effectLeft.global_position = TowerDefenseManager.GetMapCellPlantPos(_gridPos - Vector2i(i, 0)) + Vector2(0, 30)
+                if is_instance_valid(getCell):
+                    effectLeft.global_position.y -= getCell.GetGroundHeight(0.5)
                 characterNode.add_child(effectLeft)
                 flag = false
 
             if _gridPos.x + i <= TowerDefenseManager.GetMapGridNum().x:
+                var getCell: TowerDefenseCellInstance = TowerDefenseManager.GetMapCell(_gridPos + Vector2i(i, 0))
                 var effectRight = TowerDefenseManager.CreateEffectSpriteOnce(FIRE, _gridPos + Vector2i(i, 0), "Flame|Done")
                 effectRight.global_position = TowerDefenseManager.GetMapCellPlantPos(_gridPos + Vector2i(i, 0)) + Vector2(0, 30)
+                if is_instance_valid(getCell):
+                    effectRight.global_position.y -= getCell.GetGroundHeight(0.5)
                 characterNode.add_child(effectRight)
                 flag = false
         if flag:
@@ -732,14 +762,14 @@ func CreateSplash() -> TowerDefenseEffectSpriteOnce:
     var characterNode: Node2D = TowerDefenseManager.GetCharacterNode()
     var effect: TowerDefenseEffectSpriteOnce = ObjectManager.PoolPop(ObjectManagerConfig.OBJECT.PARTICLES_SPLASH, characterNode)
     effect.gridPos = gridPos
-    effect.global_position = global_position
+    effect.global_position = Vector2(shadowSprite.global_position.x, saveShadowPosition.y)
     return effect
 
 func CreateIceTrap() -> TowerDefenseEffectParticlesOnce:
     var characterNode: Node2D = TowerDefenseManager.GetCharacterNode()
     var effect: TowerDefenseEffectParticlesOnce = ObjectManager.PoolPop(ObjectManagerConfig.OBJECT.PARTICLES_ICE_TRAP, characterNode)
     effect.gridPos = gridPos
-    effect.global_position = global_position
+    effect.global_position = Vector2(shadowSprite.global_position.x, saveShadowPosition.y)
     return effect
 
 func CanSleep() -> bool:
@@ -757,7 +787,6 @@ func CanSleep() -> bool:
             if !TowerDefenseManager.GetMapIsNight():
                 sleepFlag = false
     if is_instance_valid(TowerDefenseMapControl.instance):
-        var cell: TowerDefenseCellInstance = TowerDefenseManager.GetMapCell(gridPos)
         if cell:
             if cell.elementFlags & instance.elementFlags:
                 sleepFlag = false
@@ -771,3 +800,8 @@ func IsSleep() -> bool:
 func SetSpriteGroupShaderParameter(property: String, value: Variant) -> void :
     var _material: ShaderMaterial = spriteGroup.material as ShaderMaterial
     _material.set_shader_parameter(property, value)
+
+func SetZ() -> void :
+    super .SetZ()
+    if is_instance_valid(spriteGroup):
+        spriteGroup.position.y = - z

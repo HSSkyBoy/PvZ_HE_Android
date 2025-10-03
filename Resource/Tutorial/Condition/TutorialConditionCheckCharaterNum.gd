@@ -5,7 +5,7 @@ class_name TutorialConditionCheckCharaterNum extends TutorialConditionConfig
 @export var num: int = 1
 
 func Init(data: Dictionary) -> void :
-    super.Init(data)
+    super .Init(data)
     characterName = data.get("CharacterName", "")
     method = data.get("Method", ">")
     num = data.get("Num", 1)

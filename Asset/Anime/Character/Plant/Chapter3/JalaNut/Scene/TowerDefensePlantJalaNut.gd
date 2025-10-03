@@ -13,6 +13,7 @@ func DestroySet() -> void :
     Explode()
 
 func Explode() -> void :
+    await get_tree().physics_frame
     TowerDefenseExplode.CreateExplodeLine(gridPos.y, eventList, [], camp, -1)
     TowerDefenseExplode.CreateExplodeLine(gridPos.y, allEventList, [], TowerDefenseEnum.CHARACTER_CAMP.ALL, -1)
     visible = false

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=4 uid="uid://nrqdcacrnc4n"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://b2t34jd03d2vi" path="res://Asset/Anime/Character/Vase/Normal/VaseNormal.tres" id="2"]
+
+[node name="VaseNormal" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -50)
+useTween = false
+layerSlot = [null, null]
+layerSprite = [null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/Pot = true
+Animation/MediaReplace/Scary_Pot1.png = null
+Animation/MediaReplace/Scary_Pot4.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

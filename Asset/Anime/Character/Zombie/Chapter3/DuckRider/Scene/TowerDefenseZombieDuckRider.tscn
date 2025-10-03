@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=4 uid="uid://b4uot0y2pw1s5"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://y3fwkw3u1r5m" path="res://Asset/Anime/Character/Zombie/Chapter3/DuckRider/Scene/TowerDefenseZombieDuckRider.gd" id="2"]
+[ext_resource type="Resource" uid="uid://c8ng3cmnilypr" path="res://Asset/Anime/Character/Zombie/Chapter3/DuckRider/Config/TowerDefenseZombieDuckRider.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://pr7iwjuuhqgv" path="res://Asset/Anime/Character/Zombie/Chapter3/DuckRider/ZombieDuckRider.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://ei6hm4lbvte4" path="res://Asset/Anime/Character/Zombie/Chapter3/DuckRider/DamagePoint/Zombie_DuckRider_duckBody.png" id="5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dl7sh"]
+size = Vector2(64, 33)
+
+[node name="TowerDefenseZombieDuckRider" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+walkSpeedScale = 1.5
+inSwimAnimeClip = "Jump"
+swimAnimeClip = "Swim"
+outSwimAnimeClip = "OutWater"
+attackAnimeClip = ""
+dieWaterAnimeClip = "WaterDeath"
+waterHeightPersontage = 0.6
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieDuckRider")
+PreviewDamagePointPersontage = 1.0
+
+[node name="SpriteMask" parent="SpriteGroup" index="0"]
+offset_top = -128.0
+offset_bottom = 107.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(12, 33)
+
+[node name="ZombieDuckRider" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+position = Vector2(-12, -33)
+Animation/MediaReplace/Zombie_DuckRider_duckBody.png = ExtResource("5")
+
+[node name="GroundSlot" parent="SpriteGroup/TransformPoint/ZombieDuckRider" index="0"]
+position = Vector2(-44.1338, -40)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+shape = SubResource("RectangleShape2D_dl7sh")
+
+[node name="GroundMoveComponent" parent="." index="8" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieDuckRider/GroundSlot")
+
+[connection signal="area_entered" from="HitBox" to="." method="HitBoxEntered"]
+
+[editable path="SpriteGroup/TransformPoint/ZombieDuckRider"]

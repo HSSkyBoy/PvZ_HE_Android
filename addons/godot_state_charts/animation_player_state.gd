@@ -30,14 +30,14 @@ func _ready():
     if Engine.is_editor_hint():
         return
 
-    super._ready()
+    super ._ready()
     _animation_player = get_node_or_null(animation_player)
 
     if not is_instance_valid(_animation_player):
         push_error("The animation player is invalid. This node will not work.")
 
 func _state_enter(transition_target: StateChartState):
-    super._state_enter(transition_target)
+    super ._state_enter(transition_target)
 
     if not is_instance_valid(_animation_player):
         return
@@ -52,7 +52,7 @@ func _state_enter(transition_target: StateChartState):
     _animation_player.play(target_animation, custom_blend, custom_speed, from_end)
 
 func _get_configuration_warnings():
-    var warnings = super._get_configuration_warnings()
+    var warnings = super ._get_configuration_warnings()
     warnings.append("This node is deprecated and will be removed in a future version.")
 
     if animation_player.is_empty():

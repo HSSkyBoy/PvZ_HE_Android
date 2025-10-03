@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=4 uid="uid://belx3kh3vioeu"]
+
+[ext_resource type="PackedScene" uid="uid://b1dgft6pefocm" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Scene/Base/TowerDefenseZombieNormal.tscn" id="1"]
+[ext_resource type="Script" uid="uid://btxqvklejvcre" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Scene/Flag/TowerDefenseZombieFlag.gd" id="2"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://ccim4e8sk714b" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Flagpole/ZombieFlagpole.tscn" id="4"]
+
+[node name="TowerDefenseZombieFlag" instance=ExtResource("1")]
+script = ExtResource("2")
+
+[node name="ZombieNormal" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot")]
+layerSlot = [NodePath("GroundSlot"), null, null, null, NodePath("FlagSlot"), null, null, NodePath("HeadSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ConeSlot"), NodePath("BucketSlot"), null, NodePath("ScreendoorSlot"), null, null, NodePath("ArmSlot"), null, null, null, null, null]
+Animation/LayerVisible/Zombie_flaghand = true
+Animation/LayerVisible/Zombie_innerarm_screendoor = true
+Animation/LayerVisible/anim_innerarm1 = false
+Animation/LayerVisible/anim_innerarm2 = false
+Animation/LayerVisible/anim_innerarm3 = false
+Animation/LayerVisible/anim_tongue = true
+
+[node name="FlagSlot" type="Node2D" parent="SpriteGroup/TransformPoint/ZombieNormal" index="0"]
+show_behind_parent = true
+position = Vector2(-31.9255, -35.4894)
+rotation = -0.477641
+script = ExtResource("3")
+followSlotId = 5
+offset = Vector2(16.065, 4.875)
+useScale = false
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ZombieFlagpole" parent="SpriteGroup/TransformPoint/ZombieNormal/FlagSlot" index="0" node_paths=PackedStringArray("layerSprite") instance=ExtResource("4")]
+unique_name_in_owner = true
+position = Vector2(21.019, -44.9259)
+rotation = 0.523599
+trueFrameRate = 30.0
+layerSprite = [null, null, null]
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieNormal" index="1"]
+position = Vector2(-3.65003, -50.1066)
+rotation = 0.109953
+scale = Vector2(0.798886, 0.798886)
+
+[node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieNormal" index="2"]
+position = Vector2(1.75505, 15.2521)
+rotation = 0.200502
+scale = Vector2(0.798038, 0.798038)
+
+[node name="ConeSlot" parent="SpriteGroup/TransformPoint/ZombieNormal" index="3"]
+position = Vector2(6.46356, -75.0345)
+rotation = 0.140289
+scale = Vector2(0.799618, 0.799618)
+
+[node name="BucketSlot" parent="SpriteGroup/TransformPoint/ZombieNormal" index="4"]
+position = Vector2(-0.0796661, -65.8127)
+rotation = 0.0779419
+scale = Vector2(0.799774, 0.799774)
+
+[node name="ScreendoorSlot" parent="SpriteGroup/TransformPoint/ZombieNormal" index="5"]
+position = Vector2(-15.1375, -2.79002)
+rotation = 0.0209403
+scale = Vector2(0.799336, 0.799336)
+
+[editable path="SpriteGroup/TransformPoint/ZombieNormal"]

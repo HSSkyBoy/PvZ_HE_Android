@@ -7,27 +7,24 @@
 [ext_resource type="Texture2D" uid="uid://deakfnllnylp3" path="res://Asset/Anime/Character/Plant/Chapter1/Firenut/DamagePoint/WallnutBody.png" id="5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f7r4n"]
-size = Vector2(40.5, 90)
+size = Vector2(40.5, 64)
 
 [node name="TowerDefensePlantWallnut" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
 script = ExtResource("2")
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/Wallnut")
 PreviewDamagePointPersontage = 1.0
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
 
 [node name="Wallnut" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
 position = Vector2(0, -30)
+trueFrameRate = 30.0
 Animation/MediaReplace/Wallnut_body.png = ExtResource("5")
 
 [node name="ShadowSprite" parent="." index="3"]
 position = Vector2(0, 30)
-
-[node name="HitBox" parent="." index="5"]
-visible = true
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(0, 0)

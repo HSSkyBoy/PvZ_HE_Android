@@ -9,8 +9,6 @@ size_override = Vector2(86, 185)
 [resource]
 script = ExtResource("1")
 animeFile = "res://Asset/Anime/Character/GraveStone/TargetBomb/GraveStoneTargetBomb.dat"
-frameRate = 30.0
-frameScale = 1
 frameMax = 1
 imageAtlas = SubResource("PortableCompressedTexture2D_ry3se")
 mediaList = [Rect2(0, 91, 83, 94), Rect2(0, 0, 86, 91)]

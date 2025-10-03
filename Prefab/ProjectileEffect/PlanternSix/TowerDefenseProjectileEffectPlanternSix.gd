@@ -61,7 +61,7 @@ func AttackCreate() -> void :
                 5:
                     dir = 240
                     projectileName = "SnowPea"
-            var projectile = FireComponent.CreateProjectilePosition(null, null, 30.0, global_position, Vector2.ZERO, projectileName, camp)
+            var projectile = FireComponent.CreateProjectilePosition(null, null, 30.0, global_position, Vector2.ZERO, projectileName, -1, camp)
             projectile.checkAll = true
             projectile.gridPos = gridPos
             projectile.tree_exited.connect(

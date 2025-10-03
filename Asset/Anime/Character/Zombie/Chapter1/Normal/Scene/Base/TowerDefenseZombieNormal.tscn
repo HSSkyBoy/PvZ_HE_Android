@@ -1,0 +1,91 @@
+[gd_scene load_steps=13 format=4 uid="uid://b1dgft6pefocm"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://c556ocg5j1c6t" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Scene/Base/TowerDefenseZombieNormal.gd" id="2"]
+[ext_resource type="Resource" uid="uid://byvbqxnwmcpdn" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Config/TowerDefenseZombieNormal.tres" id="3"]
+[ext_resource type="Resource" uid="uid://chvyxpm81irbp" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/DamagePoint/Config/ZombieNormalDamagePointArm.tres" id="4"]
+[ext_resource type="Resource" uid="uid://h53x5op8qtq" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/DamagePoint/Config/ZombieNormalDamagePointHead.tres" id="5"]
+[ext_resource type="Resource" uid="uid://cfim36uopws7u" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorCone.tres" id="6"]
+[ext_resource type="Resource" uid="uid://d4b68a6hw3c2d" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorBucket.tres" id="7"]
+[ext_resource type="Resource" uid="uid://dmgd4ygng30xn" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorScreendoor.tres" id="8"]
+[ext_resource type="Resource" uid="uid://byth0yfgejk1l" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorHelmet.tres" id="9"]
+[ext_resource type="Resource" uid="uid://clvqblkq2jo2l" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorBlackHelmet.tres" id="10"]
+[ext_resource type="Resource" uid="uid://cryuyu1d8jqbt" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorSpecialHelmet.tres" id="11"]
+[ext_resource type="PackedScene" uid="uid://vp5mpqwb0n8b" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Sprite/Normal/ZombieNormal.tscn" id="12"]
+
+[node name="TowerDefenseZombieNormal" node_paths=PackedStringArray("sprite", "headSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+walkAnimeClip = "Walk1&Walk2"
+swimAnimeClip = "Swim"
+dieAnimeClip = "Death1&Death2"
+dieWaterAnimeClip = "Waterdeath"
+idleAnimeClip = "Idle1&Idle2"
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieNormal")
+headSlot = NodePath("SpriteGroup/TransformPoint/ZombieNormal/HeadSlot")
+damagePart = {
+"Arm": ExtResource("4"),
+"BlackHelmet": ExtResource("10"),
+"Bucket": ExtResource("7"),
+"Cone": ExtResource("6"),
+"Head": ExtResource("5"),
+"Helmet": ExtResource("9"),
+"Screendoor": ExtResource("8"),
+"SpecialHelmet": ExtResource("11")
+}
+PreviewDamagePointPersontage = 1.0
+Armor = []
+DamagePartSlot/Arm = NodePath("SpriteGroup/TransformPoint/ZombieNormal/ArmSlot")
+DamagePartSlot/Head = NodePath("SpriteGroup/TransformPoint/ZombieNormal/HeadSlot")
+DamagePartSlot/Cone = NodePath("SpriteGroup/TransformPoint/ZombieNormal/ConeSlot")
+DamagePartSlot/Bucket = NodePath("SpriteGroup/TransformPoint/ZombieNormal/BucketSlot")
+DamagePartSlot/Screendoor = NodePath("SpriteGroup/TransformPoint/ZombieNormal/ScreendoorSlot")
+DamagePartSlot/Helmet = NodePath("SpriteGroup/TransformPoint/ZombieNormal/HeadSlot")
+DamagePartSlot/BlackHelmet = NodePath("SpriteGroup/TransformPoint/ZombieNormal/HeadSlot")
+DamagePartSlot/SpecialHelmet = NodePath("SpriteGroup/TransformPoint/ZombieNormal/HeadSlot")
+
+[node name="SpriteMask" parent="SpriteGroup" index="0"]
+offset_left = -36.0
+offset_right = 41.0
+offset_bottom = 50.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(12, 33)
+
+[node name="ZombieNormal" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("12")]
+position = Vector2(-12, -33)
+trueFrameRate = 30.0
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieNormal" index="0"]
+position = Vector2(-14.7787, -44.2253)
+rotation = -0.12471
+scale = Vector2(0.79958, 0.79958)
+
+[node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieNormal" index="1"]
+position = Vector2(6.02672, 19.9535)
+rotation = -0.144006
+scale = Vector2(0.799482, 0.799482)
+
+[node name="ConeSlot" parent="SpriteGroup/TransformPoint/ZombieNormal" index="2"]
+position = Vector2(-10.9161, -70.3434)
+rotation = -0.142581
+scale = Vector2(0.795693, 0.795693)
+
+[node name="BucketSlot" parent="SpriteGroup/TransformPoint/ZombieNormal" index="3"]
+position = Vector2(-14.9907, -59.5953)
+rotation = -0.162197
+scale = Vector2(0.798077, 0.798077)
+
+[node name="ScreendoorSlot" parent="SpriteGroup/TransformPoint/ZombieNormal" index="4"]
+position = Vector2(-15.8312, 2.20089)
+rotation = -0.104799
+scale = Vector2(0.798274, 0.798274)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(4, -2)
+
+[node name="GroundMoveComponent" parent="." index="8" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieNormal/GroundSlot")
+
+[editable path="SpriteGroup/TransformPoint/ZombieNormal"]

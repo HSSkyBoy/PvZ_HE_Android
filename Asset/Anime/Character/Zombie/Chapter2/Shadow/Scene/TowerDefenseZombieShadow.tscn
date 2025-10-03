@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://cpmd7kfms67yv"]
+[gd_scene load_steps=13 format=4 uid="uid://cpmd7kfms67yv"]
 
 [ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
 [ext_resource type="Script" uid="uid://bk048oef7dth1" path="res://Asset/Anime/Character/Zombie/Chapter2/Shadow/Scene/TowerDefenseZombieShadow.gd" id="2"]
@@ -11,9 +11,12 @@
 [ext_resource type="Resource" uid="uid://d45m6j8pimxa" path="res://Asset/Anime/Character/Zombie/Chapter2/Shadow/Armor/Config/ZombieShadowArmorBlackHelmet.tres" id="9"]
 [ext_resource type="Resource" uid="uid://qy2pul4n7dsy" path="res://Asset/Anime/Character/Zombie/Chapter2/Shadow/Armor/Config/ZombieShadowArmorSpecialHelmet.tres" id="10"]
 [ext_resource type="PackedScene" uid="uid://balyn7bceplb6" path="res://Asset/Anime/Character/Zombie/Chapter2/Shadow/ZombieShadow.tscn" id="11"]
+[ext_resource type="PackedScene" uid="uid://bjm31m10ujp84" path="res://Asset/Anime/Character/Zombie/WaterLine/ZombieWaterLine.tscn" id="12"]
 
-[node name="TowerDefenseZombieShadow" node_paths=PackedStringArray("sprite", "headSlot") instance=ExtResource("1")]
+[node name="TowerDefenseZombieShadow" node_paths=PackedStringArray("duckytobeSprite", "waterLineSprite", "sprite", "headSlot") instance=ExtResource("1")]
 script = ExtResource("2")
+duckytobeSprite = NodePath("SpriteGroup/TransformPoint/ZombieShadow/ZombieDuckytube")
+waterLineSprite = NodePath("SpriteGroup/TransformPoint/ZombieWaterLine")
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/ZombieShadow")
 headSlot = NodePath("SpriteGroup/TransformPoint/ZombieShadow/HeadSlot")
@@ -41,19 +44,28 @@ position = Vector2(12, 33)
 
 [node name="ZombieShadow" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("11")]
 position = Vector2(-12, -33)
-layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, NodePath("HeadSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ArmSlot"), null]
-layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ZombieDuckytube"), null, null, null, null, null, null]
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="ZombieDuckytube" parent="SpriteGroup/TransformPoint/ZombieShadow" index="0"]
+position = Vector2(8.9657, -23.6029)
+rotation = -0.0575811
 
 [node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieShadow" index="1"]
-position = Vector2(-15.6059, -43.8082)
-scale = Vector2(0.799767, 0.799767)
+position = Vector2(-15.3217, -45.229)
 
 [node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieShadow" index="2"]
-position = Vector2(3.78979, 2.14895)
-scale = Vector2(0.799751, 0.799751)
+position = Vector2(3.73105, 2.17617)
+rotation = -0.0526516
+scale = Vector2(0.799746, 0.799746)
 
 [node name="GroundSlot" parent="SpriteGroup/TransformPoint/ZombieShadow" index="3"]
 position = Vector2(-38.9813, -40)
+
+[node name="ZombieWaterLine" parent="SpriteGroup/TransformPoint" index="1" instance=ExtResource("12")]
+visible = false
+position = Vector2(-2, -37)
+useTween = true
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(4, -2)

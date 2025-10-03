@@ -16,7 +16,7 @@ func _handle_transition(transition: Transition, source: StateChartState):
 
 
 func _get_configuration_warnings() -> PackedStringArray:
-    var warnings = super._get_configuration_warnings()
+    var warnings = super ._get_configuration_warnings()
 
     for child in get_children():
         if child is StateChartState:

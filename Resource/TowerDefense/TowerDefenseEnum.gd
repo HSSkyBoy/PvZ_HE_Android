@@ -32,6 +32,7 @@ enum SUN_MOVING_METHOD{
 
 
 enum PACKET_TYPE{
+    NOONE = -1, 
     WHITE = 0, 
     GOLD = 1, 
     DIAMOND = 2, 
@@ -83,6 +84,8 @@ enum CHARACTER_PHYSIQUE_TYPE{
     LILYPAD = 1 << 2, 
     COFFEE = 1 << 3, 
     SPIKE = 1 << 4, 
+    VASE = 1 << 5, 
+    LIGHT = 1 << 6
 }
 
 
@@ -93,6 +96,7 @@ enum ZOMBIE_PHYSIQUE{
     MID = 3, 
     HUGE = 4, 
     CAR = 5, 
+    BOSS = 6, 
 }
 
 
@@ -163,6 +167,11 @@ enum TARGET_NEAR_METHOD{
 }
 
 
+enum LEVEL_FINISH_METHOD{
+    WAVE, 
+    VASE
+}
+
 enum LEVEL_REWARDTYPE{
     NOONE, 
     PACKET, 
@@ -174,5 +183,12 @@ enum LEVEL_SEEDBANK_METHOD{
     NOONE = 0, 
     CHOOSE = 1, 
     PRESET = 2, 
-    CONVEYOR = 3
+    CONVEYOR = 3, 
+    RAIN = 4, 
+}
+
+enum VASE_TYPE{
+    NORMAL = 0, 
+    PLANT = 1, 
+    ZOMBIE = 2
 }

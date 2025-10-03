@@ -1,0 +1,130 @@
+[gd_scene load_steps=13 format=4 uid="uid://d1sb8423yg5ph"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://dtos6y2ldlu2g" path="res://Asset/Anime/Character/Zombie/Challenge/Disco/Scene/TowerDefenseZombieDisco.gd" id="2"]
+[ext_resource type="Gradient" uid="uid://bw0gnyj66aqst" path="res://Asset/Texture/Character/Effect/LightGradient.tres" id="3"]
+[ext_resource type="Resource" uid="uid://bbuwb13msrg7x" path="res://Asset/Anime/Character/Zombie/Challenge/Disco/Config/TowerDefenseZombieDisco.tres" id="4"]
+[ext_resource type="Resource" uid="uid://dxin6g6g680v2" path="res://Asset/Anime/Character/Zombie/Challenge/Disco/DamagePoint/Config/ZombieDiscoDamagePointArm.tres" id="5"]
+[ext_resource type="Resource" uid="uid://gt8sm1rgrsem" path="res://Asset/Anime/Character/Zombie/Challenge/Disco/DamagePoint/Config/ZombieDiscoDamagePointHead.tres" id="6"]
+[ext_resource type="Texture2D" uid="uid://dw20amg6idui7" path="res://Asset/Texture/Character/Effect/Spotlight2.png" id="7"]
+[ext_resource type="PackedScene" uid="uid://d3476p1mamwcw" path="res://Asset/Anime/Character/Zombie/Challenge/Disco/ZombieDisco.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://bjm31m10ujp84" path="res://Asset/Anime/Character/Zombie/WaterLine/ZombieWaterLine.tscn" id="9"]
+[ext_resource type="Texture2D" uid="uid://deadkw1wbm3aw" path="res://Asset/Texture/Character/Effect/Spotlight.png" id="10"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="11"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="12"]
+
+[node name="TowerDefenseZombieDisco" node_paths=PackedStringArray("duckytobeSprite", "waterLineSprite", "sprite", "headSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+spotlightGrandient = ExtResource("3")
+duckytobeSprite = NodePath("SpriteGroup/TransformPoint/ZombieDisco/ZombieDuckytube")
+waterLineSprite = NodePath("SpriteGroup/TransformPoint/ZombieWaterLine")
+garlicReplace = "Zombie_jackson_head.png"
+waterHeightPersontage = 0.61
+waterHeight = 50.0
+idleAnimeClip = "MoonWalk"
+sleepAnimeClip = "MoonWalk"
+config = ExtResource("4")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieDisco")
+headSlot = NodePath("SpriteGroup/TransformPoint/ZombieDisco/HeadSlot")
+damagePart = {
+"Arm": ExtResource("5"),
+"Head": ExtResource("6")
+}
+PreviewDamagePointPersontage = 1.0
+DamagePartSlot/Arm = NodePath("SpriteGroup/TransformPoint/ZombieDisco/ArmSlot")
+DamagePartSlot/Head = NodePath("SpriteGroup/TransformPoint/ZombieDisco/HeadSlot")
+
+[node name="Spotlight2" type="Sprite2D" parent="BackEffectNode" index="0"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(14, 33)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("7")
+
+[node name="SpriteMask" parent="SpriteGroup" index="0"]
+offset_top = -132.0
+offset_bottom = 79.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(12, 33)
+
+[node name="ZombieDisco" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("8")]
+position = Vector2(-12, -33)
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, null, null, null, NodePath("ArmSlot"), null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ZombieDuckytube"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Walk"
+
+[node name="ZombieDuckytube" parent="SpriteGroup/TransformPoint/ZombieDisco" index="0"]
+position = Vector2(-0.7994995, -90.5829)
+rotation = 0.41489464
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieDisco" index="1"]
+position = Vector2(10.679446, -85.783966)
+rotation = 0.3548601
+scale = Vector2(0.9988972, 0.9988972)
+
+[node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieDisco" index="2"]
+position = Vector2(16.115189, -44.99522)
+rotation = 1.2203302
+scale = Vector2(0.7991395, 0.7991395)
+skew = 0.0
+
+[node name="GroundSlot" parent="SpriteGroup/TransformPoint/ZombieDisco" index="3"]
+position = Vector2(-50, -40)
+
+[node name="ZombieWaterLine" parent="SpriteGroup/TransformPoint" index="1" instance=ExtResource("9")]
+visible = false
+position = Vector2(-3, -56)
+useTween = true
+
+[node name="Spotlight" type="Sprite2D" parent="FrontEffectNode" index="0"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(17, -200)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("10")
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(4, -2)
+
+[node name="GroundMoveComponent" parent="." index="8" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieDisco/GroundSlot")
+
+[node name="MoonWalk" type="Node" parent="StateChart/CompoundState" index="6"]
+script = ExtResource("11")
+
+[node name="Dance" type="Node" parent="StateChart/CompoundState" index="7"]
+script = ExtResource("11")
+
+[node name="Point" type="Node" parent="StateChart/CompoundState" index="8"]
+script = ExtResource("11")
+
+[node name="ToDance" type="Node" parent="StateChart/CompoundState" index="15"]
+script = ExtResource("12")
+to = NodePath("../Dance")
+event = &"ToDance"
+delay_in_seconds = "0.0"
+
+[node name="ToPoint" type="Node" parent="StateChart/CompoundState" index="16"]
+script = ExtResource("12")
+to = NodePath("../Point")
+event = &"ToPoint"
+delay_in_seconds = "0.0"
+
+[node name="ToMoonWalk" type="Node" parent="StateChart/CompoundState" index="17"]
+script = ExtResource("12")
+to = NodePath("../MoonWalk")
+event = &"ToMoonWalk"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="StateChart/CompoundState/MoonWalk" to="." method="MoonWalkEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/MoonWalk" to="." method="MoonWalkExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/MoonWalk" to="." method="MoonWalkProcessing"]
+[connection signal="state_entered" from="StateChart/CompoundState/Dance" to="." method="DanceEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Dance" to="." method="DanceExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Dance" to="." method="DanceProcessing"]
+[connection signal="state_entered" from="StateChart/CompoundState/Point" to="." method="PointEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Point" to="." method="PointExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Point" to="." method="PointProcessing"]
+
+[editable path="SpriteGroup/TransformPoint/ZombieDisco"]

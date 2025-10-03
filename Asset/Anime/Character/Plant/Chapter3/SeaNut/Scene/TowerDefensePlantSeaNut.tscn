@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0u758"]
-size = Vector2(40.5, 90)
+size = Vector2(52, 50)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_mig1w"]
 b = Vector2(2000, 0)
@@ -22,19 +22,20 @@ fireNum = 1
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/SeaNut")
 PreviewDamagePointPersontage = 1.0
-gravity = 245.0
+Custom = []
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
 
-[node name="SeaNut" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+[node name="SeaNut" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("4")]
 position = Vector2(0, -30)
+layerSlot = [null, null, null, null, null, null, null, NodePath("AdobeAnimateSlot"), null, null, null, null, null, null]
 
 [node name="AdobeAnimateSlot" type="Node2D" parent="SpriteGroup/TransformPoint/SeaNut" index="0"]
-position = Vector2(10.1157, -44.4963)
-rotation = -0.0504023
+position = Vector2(10.3027, -43.5357)
+rotation = -0.0235211
 script = ExtResource("5")
-followSlotId = 5
+followSlotId = 8
 useScale = false
 useSkew = false
 metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
@@ -45,11 +46,8 @@ position = Vector2(27.1741, 8.75326)
 [node name="ShadowSprite" parent="." index="3"]
 position = Vector2(0, 30)
 
-[node name="HitBox" parent="." index="5"]
-visible = true
-
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2(0, -5)
+position = Vector2(0, 0)
 shape = SubResource("RectangleShape2D_0u758")
 
 [node name="FireComponent" parent="." index="7" node_paths=PackedStringArray("firePosMarker", "checkArea") instance=ExtResource("6")]

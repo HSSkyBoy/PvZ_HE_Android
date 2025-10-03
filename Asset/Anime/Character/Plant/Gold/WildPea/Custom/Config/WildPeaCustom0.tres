@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CharacterCustomConfig" load_steps=2 format=4 uid="uid://cl4ptpb7jmyd5"]
+
+[ext_resource type="Script" uid="uid://dypv31guyoibc" path="res://Resource/General/Character/Costom/CharacterCustomConfig.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+openKey = "WildPeaCustom0"
+customName = "Custom0"
+customHandbookName = "TOWERDEFENSE_PLANT_WILDPEA_CUSTOM_1_NAME"
+customHandbookAccess = "TOWERDEFENSE_PLANT_WILDPEA_CUSTOM_1_ACCESS"
+customHandbookStory = "TOWERDEFENSE_PLANT_WILDPEA_CUSTOM_1_STORY"
+animeFliterOpen = "skin1_1&skin1_2&skin1_3&skin1_4&skin1_5&skin1_6&skin2_1&skin2_2&skin2_3&skin2_4&skin2_5&skin3"
+animeFliterClose = "GatlingPea_helmet&GatlingPea_barrel1&GatlingPea_barrel2&GatlingPea_barrel3&GatlingPea_barrel4&GatlingPea_barrel3 复制&GatlingPea_mouth&cloak1"
+damagePointChangeMediaName = ""
+damagePointChangeMediaTexture = []
+metadata/_custom_type_script = "uid://dypv31guyoibc"

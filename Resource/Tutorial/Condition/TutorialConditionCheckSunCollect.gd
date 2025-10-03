@@ -5,11 +5,11 @@ class_name TutorialConditionCheckSunCollect extends TutorialConditionConfig
 var currentNum: int = 0
 
 func Init(data: Dictionary) -> void :
-    super.Init(data)
+    super .Init(data)
     num = data.get("Num", 1)
 
 func Enter() -> void :
-    super.Enter()
+    super .Enter()
     TowerDefenseManager.GetSeedBank().sunCollect.connect(SunCollect)
 
 func Step() -> bool:

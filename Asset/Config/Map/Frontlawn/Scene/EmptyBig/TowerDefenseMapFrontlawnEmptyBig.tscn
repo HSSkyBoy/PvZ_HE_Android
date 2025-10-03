@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://e3nyu5l7qwuu" path="res://Asset/Config/Map/Frontlawn/Scene/EmptyBig/TowerDefenseMapFrontlawnEmptyBig.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://bqqt6bs8rk6hd" path="res://Asset/Config/Map/Frontlawn/Scene/EmptyBig/TowerDefenseMapFrontlawnEmptyBigGradient.tres" id="2"]
-[ext_resource type="Texture2D" uid="uid://ce2hfid38dj6f" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/FrontlawnEmpty.jpg" id="3"]
+[ext_resource type="Texture2D" uid="uid://rlcnjaeibj0a" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/FrontlawnEmptyBig.jpg" id="3"]
 [ext_resource type="Texture2D" uid="uid://bj2hxggoxhee3" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/FrontlawnSod1Row.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://dysjiqip00522" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/FrontlawnSod3Row.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://dwwg5awviq8g2" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/Frontlawn.jpg" id="6"]
@@ -54,7 +54,7 @@ region_rect = Rect2(460, 101, 1555, 1070)
 
 [node name="Stripe" type="Sprite2D" parent="CanvasGroup"]
 visible = false
-position = Vector2(494, 70)
+position = Vector2(490, 57)
 scale = Vector2(1, 1.0757)
 texture = ExtResource("7")
 centered = false
@@ -67,6 +67,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("8")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
 follow_viewport_enabled = true
 
 [node name="FrontlawnDoor" type="Sprite2D" parent="CanvasLayer"]

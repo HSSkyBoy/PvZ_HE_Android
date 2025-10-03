@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharacterDamagePointConfig" load_steps=3 format=4 uid="uid://dxin6g6g680v2"]
+
+[ext_resource type="Texture2D" uid="uid://lw8ecqugh6rb" path="res://Asset/Anime/Character/Zombie/Challenge/Disco/DamagePoint/Zombie_disco_outerarm_upper_bone.png" id="1"]
+[ext_resource type="Script" uid="uid://8vg1ajd1i4ps" path="res://Resource/General/Character/DamagePoint/CharacterDamagePointConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+damagePointName = "Arm"
+damagePersontage = 0.5
+animeEffect = null
+animeEffectOffset = Vector2(0, 0)
+isDrop = true
+animeFliterOpen = ""
+animeFliterClose = "Zombie_disco_outerhand&Zombie_disco_outerarm_lower&Zombie_disco_outerarm_hand1&Zombie_disco_outerhand_point"
+replaceMediaName = &"Zombie_disco_outerarm_upper.png"
+replaceMediaTexture = ExtResource("1")
+damageAudio = "LimbsPop"
+metadata/_custom_type_script = "uid://8vg1ajd1i4ps"

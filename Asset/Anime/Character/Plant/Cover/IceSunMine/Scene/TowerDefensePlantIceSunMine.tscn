@@ -55,6 +55,7 @@ shader_parameter/iceSpeedDown = false
 shader_parameter/cover = false
 shader_parameter/hypnoses = false
 shader_parameter/imitater = false
+shader_parameter/redHeat = false
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xotnw"]
 size = Vector2(70, 70.5)
@@ -69,7 +70,6 @@ explodeEventList = [SubResource("Resource_e6x78")]
 eventList = [SubResource("Resource_5x30h"), SubResource("Resource_e3f5w"), SubResource("Resource_ja2xc")]
 config = ExtResource("7")
 sprite = NodePath("SpriteGroup/TransformPoint/IceSunMine")
-gravity = 245.0
 
 [node name="SpriteGroup" parent="." index="1"]
 material = SubResource("ShaderMaterial_vy3vg")

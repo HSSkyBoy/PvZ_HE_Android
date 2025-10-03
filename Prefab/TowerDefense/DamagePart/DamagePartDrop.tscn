@@ -17,6 +17,7 @@ shader_parameter/iceSpeedDown = false
 shader_parameter/cover = false
 shader_parameter/hypnoses = false
 shader_parameter/imitater = false
+shader_parameter/redHeat = false
 
 [node name="BreakPartDrop" type="Node2D" groups=["Effect"]]
 physics_interpolation_mode = 1

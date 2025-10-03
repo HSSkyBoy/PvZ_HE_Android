@@ -3,7 +3,7 @@ class_name AdobeAnimateSpriteBase extends AdobeAnimateSprite
 
 func _ready() -> void :
     trueFrameRate = Global.trueAnimeFrameRate
-    super._ready()
+    super ._ready()
     Global.animeFrameRateChange.connect(ChangeFrameRate)
 
 func ChangeFrameRate() -> void :

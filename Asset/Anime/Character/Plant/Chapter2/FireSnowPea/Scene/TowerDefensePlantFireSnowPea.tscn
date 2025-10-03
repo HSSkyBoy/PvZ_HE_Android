@@ -21,16 +21,16 @@ fireNum = 2
 idleAnimeClip = "BodyIdle"
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/FireSnowPea")
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
 
-[node name="FireSnowPea" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+[node name="FireSnowPea" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSprite") instance=ExtResource("4")]
 position = Vector2(0, -30)
+layerSprite = [null, null, null, null, null, null, null, null, NodePath("HeadRight"), NodePath("HeadLeft"), null, null, null, null, null, null, null, null, null, null, null, null]
 
 [node name="HeadRight" parent="SpriteGroup/TransformPoint/FireSnowPea" index="0" node_paths=PackedStringArray("layerSprite")]
-position = Vector2(5, 3.43333)
+position = Vector2(-1.696701, 1.3100014)
 layerSprite = [null, null, null, null, null, null, null, null, NodePath("../HeadLeft"), null, null, null, null, null, null, null, null, null, null, null, null, null]
 
 [node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/FireSnowPea/HeadRight" index="0"]
@@ -38,7 +38,7 @@ position = Vector2(30, -17.629)
 scale = Vector2(0.5, 0.536442)
 
 [node name="HeadLeft" parent="SpriteGroup/TransformPoint/FireSnowPea" index="1"]
-position = Vector2(5, 3.43333)
+position = Vector2(-1.696701, 1.3100014)
 
 [node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/FireSnowPea/HeadLeft" index="0"]
 position = Vector2(-43.5499, -18.4622)

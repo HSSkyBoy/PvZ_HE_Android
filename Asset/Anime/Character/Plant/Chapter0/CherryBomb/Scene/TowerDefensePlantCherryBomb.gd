@@ -8,7 +8,7 @@ const CHERRY_BOMB_EXPLOSION = preload("uid://cibtjjjomdxnh")
 var over: bool = false
 
 func IdleEntered() -> void :
-    super.IdleEntered()
+    super .IdleEntered()
     if !is_instance_valid(TowerDefenseManager.currentControl) || !TowerDefenseManager.currentControl.isGameRunning:
         return
     if !inGame:
@@ -19,14 +19,14 @@ func IdleEntered() -> void :
 
 @warning_ignore("unused_parameter")
 func IdleProcessing(delta: float) -> void :
-    super.IdleProcessing(delta)
+    super .IdleProcessing(delta)
     sprite.timeScale = timeScale * 0.4
 
 func IdleExited() -> void :
-    super.IdleExited()
+    super .IdleExited()
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "Explode":
             Destroy()
@@ -40,7 +40,8 @@ func DestroySet() -> void :
     ViewManager.CameraShake(Vector2(randf_range(-1, 1), randf_range(-1, 1)), 5.0, 0.05, 4)
     var effect: TowerDefenseEffectParticlesOnce = TowerDefenseManager.CreateEffectParticlesOnce(CHERRY_BOMB_EXPLOSION, gridPos)
     var characterNode: Node2D = TowerDefenseManager.GetCharacterNode()
-    effect.global_position = global_position
+    effect.global_position = transformPoint.global_position - Vector2(0, 30)
     characterNode.add_child(effect)
+    await get_tree().physics_frame
     TowerDefenseExplode.CreateExplode(global_position, Vector2(1.5, 1.5), eventList, [], camp, -1)
     AudioManager.AudioPlay("ExplodeCherrybomb", AudioManagerEnum.TYPE.SFX)

@@ -16,5 +16,6 @@ func DestroySet() -> void :
     var characterNode: Node2D = TowerDefenseManager.GetCharacterNode()
     effect.global_position = global_position
     characterNode.add_child(effect)
+    await get_tree().physics_frame
     TowerDefenseExplode.CreateExplode(global_position, Vector2(1.5, 1.5), eventList, [], TowerDefenseEnum.CHARACTER_CAMP.NOONE, -1)
     AudioManager.AudioPlay("ExplodeCherrybomb", AudioManagerEnum.TYPE.SFX)

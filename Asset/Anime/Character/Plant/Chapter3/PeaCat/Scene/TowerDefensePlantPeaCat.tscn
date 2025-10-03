@@ -15,16 +15,16 @@ fireInterval = 1.5
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/PeaCat")
 Custom = []
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
 
-[node name="PeaCat" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+[node name="PeaCat" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("4")]
 position = Vector2(0, -30)
+layerSlot = [null, null, null, null, NodePath("AdobeAnimateSlot"), null, null, null, null, null, NodePath("AdobeAnimateSlot2"), null, null, null, null, null, null, null, null, null, null, null, null]
 
 [node name="AdobeAnimateSlot" type="Node2D" parent="SpriteGroup/TransformPoint/PeaCat" index="0"]
-position = Vector2(-60.0567, -45.1233)
+position = Vector2(-24.8167, -45.2167)
 script = ExtResource("5")
 followSlotId = 5
 metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
@@ -33,8 +33,8 @@ metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
 position = Vector2(14.1167, 12.9167)
 
 [node name="AdobeAnimateSlot2" type="Node2D" parent="SpriteGroup/TransformPoint/PeaCat" index="1"]
-position = Vector2(21.6133, -16.7467)
-scale = Vector2(0.666473, 0.699059)
+position = Vector2(21.5333, -16.2833)
+scale = Vector2(0.666473, 0.694722)
 script = ExtResource("5")
 followSlotId = 11
 metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
@@ -46,6 +46,7 @@ position = Vector2(21.7022, 25.32)
 visible = false
 position = Vector2(0, 47)
 scale = Vector2(0.821918, 0.77551)
+texture = null
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(0, 0)

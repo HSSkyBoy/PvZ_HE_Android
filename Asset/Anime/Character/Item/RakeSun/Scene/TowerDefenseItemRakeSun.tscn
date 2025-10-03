@@ -21,6 +21,7 @@ position = Vector2(0, 37)
 
 [node name="RakeSun" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
 position = Vector2(0, -37)
+trueFrameRate = 30.0
 
 [node name="ShadowSprite" parent="." index="3"]
 visible = false

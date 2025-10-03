@@ -3,7 +3,7 @@ class_name TowerDefenseConveyorEventAddPacket extends TowerDefenseConveyorEventB
 @export var packet: TowerDefenseConveyorPacketConfig
 
 func Init(data: Dictionary) -> void :
-    super.Init(data)
+    super .Init(data)
     packet = TowerDefenseConveyorPacketConfig.new()
     packet.Init(data)
 

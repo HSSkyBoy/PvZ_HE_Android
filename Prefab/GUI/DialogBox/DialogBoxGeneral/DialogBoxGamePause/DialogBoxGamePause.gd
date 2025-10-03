@@ -6,8 +6,7 @@ var sprite: AdobeAnimateSprite
 
 
 func _ready() -> void :
-    super._ready()
-
+    super ._ready()
     var spriteScene: PackedScene = ResourceManager.CHARCTAER_SPRITE.values().pick_random() as PackedScene
     sprite = spriteScene.instantiate()
     sprite.light_mask = 0

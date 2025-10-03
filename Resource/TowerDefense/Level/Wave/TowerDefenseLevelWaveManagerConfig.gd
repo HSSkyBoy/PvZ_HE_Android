@@ -1,13 +1,14 @@
 @tool
 class_name TowerDefenseLevelWaveManagerConfig extends Resource
 
-@export var flagZombie: String = ""
+@export var flagZombie: String = "ZombieFlag"
 @export var flagWaveInterval: int = 10
 @export var maxNextWaveHealthPercentage: float = 0.15
 @export var minNextWaveHealthPercentage: float = 0.2
 @export var beginCol: float = 20.0
 @export var spawnColEnd: float = 20.0
 @export var spawnColStart: float = 5.0
+@export var spawnOverride: TowerDefenseCharacterOverride
 @export_category("Dynamic")
 @export var dynamic: Array[TowerDefenseLevelDynamicConfig] = [null, null, null, null, null, null, null]:
     set(_dynamic):
@@ -20,13 +21,16 @@ class_name TowerDefenseLevelWaveManagerConfig extends Resource
         WaveDynamicPlantfoodFill()
 
 func Init(waveManagerData: Dictionary) -> void :
-    flagZombie = waveManagerData.get("FlagZombie", "")
+    flagZombie = waveManagerData.get("FlagZombie", "ZombieFlag")
     flagWaveInterval = waveManagerData.get("FlagWaveInterval", 5.0)
     maxNextWaveHealthPercentage = waveManagerData.get("MaxNextWaveHealthPercentage", 0.15)
     minNextWaveHealthPercentage = waveManagerData.get("MinNextWaveHealthPercentage", 0.2)
     beginCol = waveManagerData.get("BeginCol", 20.0)
     spawnColEnd = waveManagerData.get("SpawnColEnd", 20.0)
     spawnColStart = waveManagerData.get("SpawnColStart", 5.0)
+    if waveManagerData.has("SpawnOverride"):
+        spawnOverride = TowerDefenseCharacterOverride.new()
+        spawnOverride.Init(waveManagerData.get("SpawnOverride", {}))
     var dynamicList: Array = waveManagerData.get("Dynamic", {}) as Array
     for dynamicDictionary: Dictionary in dynamicList:
         var dynamicConfig: TowerDefenseLevelDynamicConfig = TowerDefenseLevelDynamicConfig.new()
@@ -51,6 +55,8 @@ func Export() -> Dictionary:
         "Dynamic": [], 
         "Wave": []
     }
+    if is_instance_valid(spawnOverride):
+        data["SpawnOverride"] = spawnOverride.Export()
     for dynamicGet: TowerDefenseLevelDynamicConfig in dynamic:
         if is_instance_valid(dynamicGet):
             data["Dynamic"] = dynamicGet.Export()

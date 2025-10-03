@@ -12,13 +12,13 @@ var timer: float = 0.0
 func _ready() -> void :
     if Engine.is_editor_hint():
         return
-    super._ready()
+    super ._ready()
     fireComponent.fireInterval = fireInterval
 
 func _physics_process(delta: float) -> void :
     if Engine.is_editor_hint():
         return
-    super._physics_process(delta)
+    super ._physics_process(delta)
     if !inGame:
         return
     fireComponent.fireInterval = fireInterval
@@ -31,40 +31,40 @@ func _physics_process(delta: float) -> void :
 func IdleEntered() -> void :
     if Engine.is_editor_hint():
         return
-    super.IdleEntered()
+    super .IdleEntered()
     fireComponent.alive = true
 
 @warning_ignore("unused_parameter")
 func IdleProcessing(delta: float) -> void :
-    super.IdleProcessing(delta)
+    super .IdleProcessing(delta)
 
     if fireComponent.timer <= 0 && attackComponent.CanAttack(true):
         state.send_event("ToAttack")
         return
 
 func IdleExited() -> void :
-    super.IdleExited()
+    super .IdleExited()
 
 func AttackEntered() -> void :
     fireComponent.Refresh()
-    sprite.SetAnimation("Attack", true, 0.2)
+    sprite.SetAnimation("Attack", true, 0.2 * (fireInterval + 3.0) / 6.0)
 
 @warning_ignore("unused_parameter")
 func AttackProcessing(delta: float) -> void :
-    sprite.timeScale = timeScale * 2.0
+    sprite.timeScale = timeScale * 2.0 * (4.5 / (fireInterval + 1.5))
 
 func AttackExited() -> void :
     pass
 
 @warning_ignore("unused_parameter")
 func AnimeEvent(command: String, argument: Variant) -> void :
-    super.AnimeEvent(command, argument)
+    super .AnimeEvent(command, argument)
     match command:
         "attack":
             attackComponent.AttackAll(attack)
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "Attack":
             Idle()

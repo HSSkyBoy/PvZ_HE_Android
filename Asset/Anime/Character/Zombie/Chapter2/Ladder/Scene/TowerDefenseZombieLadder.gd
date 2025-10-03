@@ -25,11 +25,11 @@ func AttackProcessing(delta: float) -> void :
     if !ladderOver:
         if !sprite.pause && attackComponent.CanAttack():
             if is_instance_valid(attackComponent.target):
-                var cell: TowerDefenseCellInstance = TowerDefenseManager.GetMapCell(attackComponent.target.gridPos)
-                if is_instance_valid(cell) && cell.HasWallnut():
+                var targetCell: TowerDefenseCellInstance = TowerDefenseManager.GetMapCell(attackComponent.target.gridPos)
+                if is_instance_valid(targetCell) && targetCell.HasWallnut():
                     state.send_event("ToLadder")
                     return
-    super.AttackProcessing(delta)
+    super .AttackProcessing(delta)
     if !ladderOver:
         sprite.timeScale = timeScale * 4.0
 
@@ -37,29 +37,29 @@ func WalkProcessing(delta: float) -> void :
     if !ladderOver:
         if !sprite.pause && attackComponent.CanAttack():
             if is_instance_valid(attackComponent.target):
-                var cell: TowerDefenseCellInstance = TowerDefenseManager.GetMapCell(attackComponent.target.gridPos)
-                if is_instance_valid(cell) && cell.HasWallnut():
+                var targetCell: TowerDefenseCellInstance = TowerDefenseManager.GetMapCell(attackComponent.target.gridPos)
+                if is_instance_valid(targetCell) && targetCell.HasWallnut():
                     state.send_event("ToLadder")
                     return
-    super.WalkProcessing(delta)
+    super .WalkProcessing(delta)
     if !ladderOver:
         sprite.timeScale = timeScale * 2.0
 
 func ArmorHitpointsEmpty(armorName: String) -> void :
-    super.ArmorHitpointsEmpty(armorName)
+    super .ArmorHitpointsEmpty(armorName)
     match armorName:
         "Ladder":
             ladderOver = true
             Walk()
 
 func AnimeEvent(command: String, argument: Variant) -> void :
-    super.AnimeEvent(command, argument)
+    super .AnimeEvent(command, argument)
     match command:
         "place_ladder":
             LadderPlace()
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "Ladder":
             Walk()
@@ -67,8 +67,8 @@ func AnimeCompleted(clip: String) -> void :
 func LadderPlace() -> void :
     var ladderConfig: TowerDefensePacketConfig = TowerDefenseManager.GetPacketConfig("ItemLadder")
     if is_instance_valid(attackComponent.target):
-        var cell: TowerDefenseCellInstance = TowerDefenseManager.GetMapCell(attackComponent.target.gridPos)
-        if is_instance_valid(cell) && cell.HasWallnut() && cell.CanPacketPlant(ladderConfig):
+        var targetCell: TowerDefenseCellInstance = TowerDefenseManager.GetMapCell(attackComponent.target.gridPos)
+        if is_instance_valid(targetCell) && targetCell.HasWallnut() && targetCell.CanPacketPlant(ladderConfig):
             ladderConfig.Plant(attackComponent.target.gridPos)
             ladderOver = true
             instance.ArmorDelete("Ladder", false)

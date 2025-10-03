@@ -1,21 +1,21 @@
 [gd_scene load_steps=32 format=4 uid="uid://cttxxkxrktmki"]
 
 [ext_resource type="Script" uid="uid://bj5gh3rfqu50" path="res://Scene/TowerDefense/TowerDefenseControl.gd" id="1"]
-[ext_resource type="Resource" uid="uid://bfl6f5wb3lu7m" path="res://Asset/Config/Level/TowerDefense/Test/LevelTest.tres" id="2"]
-[ext_resource type="Script" uid="uid://xhefwpju6rka" path="res://Script/Camera/CameraMovingControl.gd" id="3"]
-[ext_resource type="PackedScene" uid="uid://cjc8tc43kdv47" path="res://Prefab/GUI/NpcTalk/NpcTalkControl.tscn" id="4"]
-[ext_resource type="PackedScene" uid="uid://q2eo6wgcbefw" path="res://Prefab/TowerDefense/Map/TowerDefenseMapControl.tscn" id="5"]
-[ext_resource type="PackedScene" uid="uid://iydc3rp06xgs" path="res://Prefab/TowerDefense/GUI/InGame/PacketBank/TowerDefenseInGamePacketBank.tscn" id="6"]
-[ext_resource type="PackedScene" uid="uid://chrvpojeedrwe" path="res://Prefab/TowerDefense/GUI/InGame/ZombieWon/TowerDefenseZombieWon.tscn" id="7"]
-[ext_resource type="PackedScene" uid="uid://bgkuthysw0876" path="res://Prefab/GUI/Button/NinePatchButtonBase/NinePatchButtonBase.tscn" id="8"]
-[ext_resource type="Texture2D" uid="uid://da1nikmivd2n8" path="res://Asset/Texture/TowerDefense/PacketBank/PacketBankButton.png" id="9"]
-[ext_resource type="Texture2D" uid="uid://dphra8cjrdw34" path="res://Asset/Texture/TowerDefense/PacketBank/PacketBankButtonGlow.png" id="10"]
-[ext_resource type="FontFile" uid="uid://d0aylc13b87r0" path="res://Asset/Font/BrianneTod.ttf" id="11"]
-[ext_resource type="PackedScene" uid="uid://cdnyb8d1qw7g4" path="res://Prefab/GUI/Button/SpriteBrightButton/SpriteBrightButton.tscn" id="12"]
-[ext_resource type="Shader" uid="uid://bi8x813unwm5l" path="res://Asset/Shader/ShaderBright.gdshader" id="13"]
-[ext_resource type="Texture2D" uid="uid://dgviglko6y6sa" path="res://Asset/Texture/GUI/TowerDefense/Level/LevelChooseOption.png" id="14"]
-[ext_resource type="PackedScene" uid="uid://bml60wmq62jay" path="res://Prefab/GUI/Button/MainButton.tscn" id="15"]
-[ext_resource type="PackedScene" uid="uid://2vh1csqbvbqx" path="res://Prefab/TowerDefense/GUI/InGame/SeedBank/TowerDefenseInGameSeedBank.tscn" id="16"]
+[ext_resource type="Script" uid="uid://xhefwpju6rka" path="res://Script/Camera/CameraMovingControl.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://cjc8tc43kdv47" path="res://Prefab/GUI/NpcTalk/NpcTalkControl.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://q2eo6wgcbefw" path="res://Prefab/TowerDefense/Map/TowerDefenseMapControl.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://iydc3rp06xgs" path="res://Prefab/TowerDefense/GUI/InGame/PacketBank/TowerDefenseInGamePacketBank.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://chrvpojeedrwe" path="res://Prefab/TowerDefense/GUI/InGame/ZombieWon/TowerDefenseZombieWon.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://bgkuthysw0876" path="res://Prefab/GUI/Button/NinePatchButtonBase/NinePatchButtonBase.tscn" id="7"]
+[ext_resource type="Texture2D" uid="uid://da1nikmivd2n8" path="res://Asset/Texture/TowerDefense/PacketBank/PacketBankButton.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://dphra8cjrdw34" path="res://Asset/Texture/TowerDefense/PacketBank/PacketBankButtonGlow.png" id="9"]
+[ext_resource type="FontFile" uid="uid://d0aylc13b87r0" path="res://Asset/Font/BrianneTod.ttf" id="10"]
+[ext_resource type="PackedScene" uid="uid://cdnyb8d1qw7g4" path="res://Prefab/GUI/Button/SpriteBrightButton/SpriteBrightButton.tscn" id="11"]
+[ext_resource type="Shader" uid="uid://bi8x813unwm5l" path="res://Asset/Shader/ShaderBright.gdshader" id="12"]
+[ext_resource type="Texture2D" uid="uid://dgviglko6y6sa" path="res://Asset/Texture/GUI/TowerDefense/Level/LevelChooseOption.png" id="13"]
+[ext_resource type="PackedScene" uid="uid://bml60wmq62jay" path="res://Prefab/GUI/Button/MainButton.tscn" id="14"]
+[ext_resource type="PackedScene" uid="uid://2vh1csqbvbqx" path="res://Prefab/TowerDefense/GUI/InGame/SeedBank/TowerDefenseInGameSeedBank.tscn" id="15"]
+[ext_resource type="PackedScene" uid="uid://cn2idxrgpsjc5" path="res://Prefab/TowerDefense/GUI/InGame/ScreenEffectControl/ScreenEffectControl.tscn" id="16"]
 [ext_resource type="PackedScene" uid="uid://dqo2jc1bsf6gq" path="res://Prefab/TowerDefense/GUI/InGame/LevelControl/TowerDefenseInGameLevelControl.tscn" id="17"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pxr3p"]
@@ -290,7 +290,7 @@ _data = {
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fdhmt"]
-shader = ExtResource("13")
+shader = ExtResource("12")
 shader_parameter/brightStrength = 0.0
 
 [sub_resource type="InputEventKey" id="InputEventKey_pxr3p"]
@@ -393,10 +393,9 @@ _data = {
 [node name="TowerDefenseControl" type="Node"]
 process_mode = 1
 script = ExtResource("1")
-levelConfig = ExtResource("2")
 
 [node name="Camera" type="Node" parent="." node_paths=PackedStringArray("camera", "edgeMarkUL", "edgeMarkDR")]
-script = ExtResource("3")
+script = ExtResource("2")
 alive = false
 camera = NodePath("Camera")
 edgeMarkUL = NodePath("CameraBeginMarker")
@@ -421,16 +420,17 @@ anchor_mode = 0
 position = Vector2(1080, 600)
 
 [node name="TalkLayer" type="CanvasLayer" parent="."]
+layer = 2
 follow_viewport_enabled = true
 
-[node name="NpcTalkControl" parent="TalkLayer" instance=ExtResource("4")]
+[node name="NpcTalkControl" parent="TalkLayer" instance=ExtResource("3")]
 unique_name_in_owner = true
 
 [node name="MapLayer" type="CanvasLayer" parent="."]
 layer = 0
 follow_viewport_enabled = true
 
-[node name="TowerDefenseMapControl" parent="MapLayer" node_paths=PackedStringArray("canvasModulateCharacter", "seedBank") instance=ExtResource("5")]
+[node name="TowerDefenseMapControl" parent="MapLayer" node_paths=PackedStringArray("canvasModulateCharacter", "seedBank") instance=ExtResource("4")]
 unique_name_in_owner = true
 z_index = -100
 canvasModulateCharacter = NodePath("../../CharacterLayer/CanvasModulate")
@@ -446,7 +446,7 @@ shape = SubResource("RectangleShape2D_pxr3p")
 [node name="GUILayerFront" type="CanvasLayer" parent="."]
 layer = 3
 
-[node name="TowerDefenseInGamePacketBank" parent="GUILayerFront" node_paths=PackedStringArray("seedBank") instance=ExtResource("6")]
+[node name="TowerDefenseInGamePacketBank" parent="GUILayerFront" node_paths=PackedStringArray("seedBank") instance=ExtResource("5")]
 unique_name_in_owner = true
 anchors_preset = -1
 anchor_top = 1.0
@@ -460,10 +460,10 @@ libraries = {
 &"": SubResource("AnimationLibrary_a1v7b")
 }
 
-[node name="TowerDefenseZombieWon" parent="GUILayerFront" instance=ExtResource("7")]
+[node name="TowerDefenseZombieWon" parent="GUILayerFront" instance=ExtResource("6")]
 unique_name_in_owner = true
 
-[node name="ShopButton" parent="GUILayerFront" instance=ExtResource("8")]
+[node name="ShopButton" parent="GUILayerFront" instance=ExtResource("7")]
 visible = false
 anchors_preset = 3
 anchor_left = 1.0
@@ -477,19 +477,19 @@ offset_bottom = -3.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "商店"
-normalTexture = ExtResource("9")
-pressedTexture = ExtResource("10")
-hoverTexture = ExtResource("10")
+normalTexture = ExtResource("8")
+pressedTexture = ExtResource("9")
+hoverTexture = ExtResource("9")
 
 [node name="NinePatchTexture" parent="GUILayerFront/ShopButton" index="0"]
-texture = ExtResource("9")
+texture = ExtResource("8")
 
 [node name="LabelText" parent="GUILayerFront/ShopButton/CenterContainer" index="0"]
 theme_override_colors/font_color = Color(0.306155, 0.122686, 6.49765e-07, 1)
-theme_override_fonts/font = ExtResource("11")
+theme_override_fonts/font = ExtResource("10")
 text = "商店"
 
-[node name="AlmanacButton" parent="GUILayerFront" instance=ExtResource("8")]
+[node name="AlmanacButton" parent="GUILayerFront" instance=ExtResource("7")]
 visible = false
 anchors_preset = -1
 anchor_left = 1.0
@@ -501,19 +501,19 @@ offset_top = -35.2001
 offset_right = -22.0
 offset_bottom = -4.20007
 text = "查看图鉴"
-normalTexture = ExtResource("9")
-pressedTexture = ExtResource("10")
-hoverTexture = ExtResource("10")
+normalTexture = ExtResource("8")
+pressedTexture = ExtResource("9")
+hoverTexture = ExtResource("9")
 
 [node name="NinePatchTexture" parent="GUILayerFront/AlmanacButton" index="0"]
-texture = ExtResource("9")
+texture = ExtResource("8")
 
 [node name="LabelText" parent="GUILayerFront/AlmanacButton/CenterContainer" index="0"]
 theme_override_colors/font_color = Color(0.306155, 0.122686, 6.49765e-07, 1)
-theme_override_fonts/font = ExtResource("11")
+theme_override_fonts/font = ExtResource("10")
 text = "查看图鉴"
 
-[node name="OptionButton" parent="GUILayerFront" instance=ExtResource("12")]
+[node name="OptionButton" parent="GUILayerFront" instance=ExtResource("11")]
 unique_name_in_owner = true
 visible = false
 material = SubResource("ShaderMaterial_fdhmt")
@@ -526,14 +526,13 @@ offset_right = 139.0
 offset_bottom = 75.0
 grow_vertical = 0
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("14")
+texture = ExtResource("13")
 autoSize = true
 
 [node name="GUILayerBack" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
-layer = 0
 
-[node name="ButtonPause" parent="GUILayerBack" instance=ExtResource("15")]
+[node name="ButtonPause" parent="GUILayerBack" instance=ExtResource("14")]
 unique_name_in_owner = true
 anchors_preset = 1
 anchor_left = 1.0
@@ -564,7 +563,7 @@ theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 24
 text = "加速"
 
-[node name="TowerDefenseInGameSeedBank" parent="GUILayerBack" instance=ExtResource("16")]
+[node name="TowerDefenseInGameSeedBank" parent="GUILayerBack" instance=ExtResource("15")]
 unique_name_in_owner = true
 offset_left = -220.0
 offset_top = -88.0
@@ -578,7 +577,6 @@ libraries = {
 }
 
 [node name="CharacterLayer" type="CanvasLayer" parent="."]
-layer = 0
 follow_viewport_enabled = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="CharacterLayer"]
@@ -586,6 +584,12 @@ follow_viewport_enabled = true
 [node name="CharacterNode" type="Node2D" parent="CharacterLayer"]
 unique_name_in_owner = true
 y_sort_enabled = true
+
+[node name="EffectLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="ScreenEffectControl" parent="EffectLayer" instance=ExtResource("16")]
+unique_name_in_owner = true
 
 [node name="TowerDefenseInGameLevelControl" parent="." instance=ExtResource("17")]
 unique_name_in_owner = true

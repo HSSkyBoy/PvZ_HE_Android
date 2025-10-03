@@ -15,3 +15,6 @@ func ExecuteProject(projectile: TowerDefenseProjectile, target: TowerDefenseChar
 @warning_ignore("unused_parameter")
 func Init(valueDictionary: Dictionary) -> void :
     pass
+
+func Export() -> Dictionary:
+    return {}

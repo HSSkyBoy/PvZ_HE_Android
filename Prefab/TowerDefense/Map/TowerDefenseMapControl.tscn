@@ -41,6 +41,9 @@ position = Vector2(-71.05, -60.71)
 scale = Vector2(0.78, 0.78)
 texture = ExtResource("3")
 
+[node name="FireModeMowerNode" type="Node2D" parent="."]
+unique_name_in_owner = true
+
 [node name="MapIceCap" type="Node2D" parent="."]
 unique_name_in_owner = true
 
@@ -48,3 +51,8 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 
 [node name="TowerDefenseMapFrontlawn" parent="MapNode" instance=ExtResource("4")]
+
+[node name="ChangeMapLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+layer = 0
+follow_viewport_enabled = true

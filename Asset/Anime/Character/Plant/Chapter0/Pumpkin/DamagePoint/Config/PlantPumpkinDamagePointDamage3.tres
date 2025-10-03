@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharacterDamagePointConfig" load_steps=3 format=4 uid="uid://c2xga4kthl2pm"]
+
+[ext_resource type="Texture2D" uid="uid://dqjkd24k862a0" path="res://Asset/Anime/Character/Plant/Chapter0/Pumpkin/DamagePoint/Pumpkin_damage3.png" id="1"]
+[ext_resource type="Script" uid="uid://8vg1ajd1i4ps" path="res://Resource/General/Character/DamagePoint/CharacterDamagePointConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+damagePointName = "Damage3"
+damagePersontage = 0.25
+animeEffect = null
+animeEffectOffset = Vector2(0, 0)
+isDrop = false
+animeFliterOpen = ""
+animeFliterClose = ""
+replaceMediaName = &"Pumpkin_front.png"
+replaceMediaTexture = ExtResource("1")
+damageAudio = ""
+metadata/_custom_type_script = "uid://8vg1ajd1i4ps"

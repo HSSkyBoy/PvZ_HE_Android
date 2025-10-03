@@ -16,31 +16,31 @@ var mouseSavePos: Vector2 = Vector2.ZERO
 
 
 func _ready() -> void :
-	pass
+    pass
 
 @warning_ignore("unused_parameter")
 func _input(event: InputEvent) -> void :
-	if !alive:
-		return
-	if Input.is_action_just_released("RollUp"):
-		camera.zoom += Vector2.ONE * 0.05
+    if !alive:
+        return
+    if Input.is_action_just_released("RollUp"):
+        camera.zoom += Vector2.ONE * 0.05
 
-	if Input.is_action_just_released("RollDown"):
-		camera.zoom -= Vector2.ONE * 0.05
+    if Input.is_action_just_released("RollDown"):
+        camera.zoom -= Vector2.ONE * 0.05
 
-	if Input.is_action_just_pressed("Press"):
-		mousePress = true
-		mouseSavePos = get_viewport().get_mouse_position()
+    if Input.is_action_just_pressed("Press"):
+        mousePress = true
+        mouseSavePos = get_viewport().get_mouse_position()
 
-	if Input.is_action_just_released("Press"):
-		mousePress = false
+    if Input.is_action_just_released("Press"):
+        mousePress = false
 
-	if mousePress:
-		camera.global_position = camera.global_position + (mouseSavePos - get_viewport().get_mouse_position())
-		mouseSavePos = get_viewport().get_mouse_position()
+    if mousePress:
+        camera.global_position = camera.global_position + (mouseSavePos - get_viewport().get_mouse_position())
+        mouseSavePos = get_viewport().get_mouse_position()
 
-	camera.zoom.x = clamp(camera.zoom.x, cameraZoomMax.x, cameraZoomMin.x)
-	camera.zoom.y = clamp(camera.zoom.y, cameraZoomMax.y, cameraZoomMin.y)
+    camera.zoom.x = clamp(camera.zoom.x, cameraZoomMax.x, cameraZoomMin.x)
+    camera.zoom.y = clamp(camera.zoom.y, cameraZoomMax.y, cameraZoomMin.y)
 
-	camera.global_position.x = clamp(camera.global_position.x, edgeMarkUL.global_position.x, edgeMarkDR.global_position.x - WINDOW_WIDTH / camera.zoom.x)
-	camera.global_position.y = clamp(camera.global_position.y, edgeMarkUL.global_position.y, edgeMarkDR.global_position.y - WINDOW_HEIGHT / camera.zoom.y)
+    camera.global_position.x = clamp(camera.global_position.x, edgeMarkUL.global_position.x, edgeMarkDR.global_position.x - WINDOW_WIDTH / camera.zoom.x)
+    camera.global_position.y = clamp(camera.global_position.y, edgeMarkUL.global_position.y, edgeMarkDR.global_position.y - WINDOW_HEIGHT / camera.zoom.y)

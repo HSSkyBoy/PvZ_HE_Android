@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="TowerDefensePacketConfig" load_steps=3 format=4 uid="uid://c6dxepma55wge"]
+
+[ext_resource type="Resource" uid="uid://bkihj4ob3kyby" path="res://Asset/Anime/Character/Zombie/Chapter3/ZombieShieldArmor/Config/TowerDefenseZombieShieldArmor.tres" id="1"]
+[ext_resource type="Script" uid="uid://c6d3po5310ugw" path="res://Resource/TowerDefense/PacketBank/Packet/TowerDefensePacketConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+saveKey = "ZombieShieldArmor"
+unlockCheckList = []
+name = "TOWERDEFENSE_ZOMBIE_SHIELDARMOR_NAME"
+describe = "TOWERDEFENSE_ZOMBIE_SHIELDARMOR_EXPRESTION"
+plantfood = ""
+handbookDescribe = "TOWERDEFENSE_ZOMBIE_SHIELDARMOR_HANDBOOK_EXPRESTION"
+handbookStory = "TOWERDEFENSE_ZOMBIE_SHIELDARMOR_HANDBOOK_STORY"
+packetAnimeClip = "Idle1&Idle2"
+packetAnimeOffset = Vector2(35, 60)
+packetAnimeScale = Vector2(0.75, 0.75)
+characterConfig = ExtResource("1")
+type = 6
+spawnMethod = "Rise"
+eventPress = []
+eventPlant = []
+override = null
+overrideCostRise = -1
+overrideCost = -1
+overridePacketCooldown = -1.0
+overrideStartingCooldown = -1.0
+overrideWeight = -1
+overrideWavePointCost = 200
+initArmor = ["Shield", "HelmetEP"]
+plantUseCell = true
+Armor = ["Shield", "HelmetEP"]
+Cell/plantUseCell = true
+Override/overrideWeight = -1
+Override/overrideWavePointCost = 200
+metadata/_custom_type_script = "uid://c6d3po5310ugw"

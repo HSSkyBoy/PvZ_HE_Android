@@ -6,7 +6,7 @@ class_name TowerDefenseGravestone extends TowerDefenseCharacter
 func _ready() -> void :
     if Engine.is_editor_hint():
         return
-    super._ready()
+    super ._ready()
     instance.hitpointsEmpty.connect(Destroy)
     add_to_group("Gravestone", true)
     if rise:

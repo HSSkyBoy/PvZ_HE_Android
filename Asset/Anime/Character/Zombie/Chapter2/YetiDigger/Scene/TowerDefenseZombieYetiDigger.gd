@@ -28,7 +28,8 @@ func DigProcessing(delta: float) -> void :
     if global_position.x < TowerDefenseManager.GetMapGroundLeft() + TowerDefenseManager.GetMapGridSize().x * 1:
         state.send_event("ToDrill")
         instance.ArmorDelete("Pick")
-        scale.x = - scale.x
+        if !instance.hypnoses:
+            scale.x = - scale.x
 
 func DigExited() -> void :
     digOver = true
@@ -61,7 +62,7 @@ func LandExited() -> void :
     pass
 
 func WalkEntered() -> void :
-    super.WalkEntered()
+    super .WalkEntered()
 
 func Walk() -> void :
     if digOver:
@@ -70,7 +71,7 @@ func Walk() -> void :
         state.send_event("ToDig")
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "Drill":
             state.send_event("ToLand")
@@ -81,7 +82,7 @@ func AnimeCompleted(clip: String) -> void :
                 scale.x = - scale.x
 
 func ArmorHitpointsEmpty(armorName: String) -> void :
-    super.ArmorHitpointsEmpty(armorName)
+    super .ArmorHitpointsEmpty(armorName)
     match armorName:
         "Pick":
             state.send_event("ToDrill")
@@ -99,6 +100,7 @@ func DestroySet() -> void :
     else:
         var item = TowerDefenseManager.FallingObjectItemCreate(ObjectManagerConfig.OBJECT.COIN_SILVER, global_position - Vector2(0, 40), 120, Vector2(randf_range(-100.0, 100.0), -400.0), 980.0)
         item.gridPos = gridPos
+    await get_tree().physics_frame
 
 func CreateEffect() -> void :
     var effect: TowerDefenseEffectSpriteOnce = TowerDefenseManager.CreateEffectSpriteOnce(DIGGER_RISING_DIRT, gridPos)

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharacterCustomData" load_steps=3 format=4 uid="uid://buopcd0dmcmew"]
+
+[ext_resource type="Resource" uid="uid://cqtx7qubfh32b" path="res://Asset/Anime/Character/Plant/Gold/QueenSunFlower/Custom/Config/QueenSunFlowerCustom0.tres" id="1"]
+[ext_resource type="Script" uid="uid://onv5rieax7m5" path="res://Resource/General/Character/Costom/CharacterCustomData.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+customList = [ExtResource("1")]
+customDictionary = {
+"Custom0": {
+"Close": ["图层_1", "图层_67 复制", "blink", "anim_idle", "1", "cloak1 复制", "cloak1"],
+"Config": ExtResource("1"),
+"Open": ["skin1_1", "skin1_2", "skin1_3", "skin2_1", "skin2_2 ", "skin3_1", "skin3_2", "skin3_3", "skin3_4", "skin3_5", "skin4_1", "skin4_2", "skin4_3", "skin4_4", "skin4_5", "skin5_1", "skin5_2", "skin5_3", "skin5_4", "skin6_1", "skin6_2", "skin6_3", "skin7_1", "skin7_1_2", "skin7_2", "skin7_2_2"]
+}
+}
+fliterOpenAll = ["skin1_1", "skin1_2", "skin1_3", "skin2_1", "skin2_2 ", "skin3_1", "skin3_2", "skin3_3", "skin3_4", "skin3_5", "skin4_1", "skin4_2", "skin4_3", "skin4_4", "skin4_5", "skin5_1", "skin5_2", "skin5_3", "skin5_4", "skin6_1", "skin6_2", "skin6_3", "skin7_1", "skin7_1_2", "skin7_2", "skin7_2_2"]
+fliterCloseAll = ["图层_1", "图层_67 复制", "blink", "anim_idle", "1", "cloak1 复制", "cloak1"]
+metadata/_custom_type_script = "uid://onv5rieax7m5"

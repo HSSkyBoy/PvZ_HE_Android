@@ -10,7 +10,7 @@ static  var jackInTheBox: AudioStreamPlayerMember
 var hasJackBox: bool = true
 
 func _ready() -> void :
-    super._ready()
+    super ._ready()
     if Engine.is_editor_hint():
         return
     if !TowerDefenseManager.currentControl || !TowerDefenseManager.currentControl.isGameRunning:
@@ -26,7 +26,7 @@ func _ready() -> void :
     state.send_event("ToBomb")
 
 func HitpointsNearDie() -> void :
-    super.HitpointsNearDie()
+    super .HitpointsNearDie()
     if !is_instance_valid(jackInTheBox):
         jackInTheBox = AudioManager.MemberFind("JackInTheBox", AudioManagerEnum.TYPE.SFX)
     jackInTheBox.queue_free()
@@ -46,14 +46,14 @@ func BombExited() -> void :
     pass
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "Bomb":
             CreateEffect()
             Destroy()
 
 func ArmorHitpointsEmpty(armorName: String) -> void :
-    super.ArmorHitpointsEmpty(armorName)
+    super .ArmorHitpointsEmpty(armorName)
     match armorName:
         "Jackbox":
             hasJackBox = false

@@ -6,7 +6,7 @@ extends DialogPopup
 @onready var readyButtonNewUser = %ReadyButtonNewUser
 
 func _ready() -> void :
-    super._ready()
+    super ._ready()
     if GameSaveManager.GetUserCurrent() == "":
         readyButton.visible = false
         cancelButton.visible = false

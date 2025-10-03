@@ -1,12 +1,13 @@
 @tool
 extends Node
 
-var version: String = "0.5.0.0"
+var version: String = "0.7.0.0"
 var header: PackedStringArray = []
 var isMobile: bool = false
 signal animeFrameRateChange()
 
 @export_tool_button("Fresh AllAnimeData") var freshAnimeData: Callable = FreshAnimeData
+@export_tool_button("Fresh AllLevelData") var freshLevelData: Callable = FreshLevelData
 
 @export var debug: bool = false
 @export_group("Base")
@@ -58,9 +59,11 @@ var maxFps: int = 60
 var isEditor: bool = false
 
 func _ready() -> void :
-    header.append("X-PVZHE-Client-Version:0.5")
+    header.append("X-PVZHE-Client-Version:%s" % version)
     get_window().close_requested.connect(
         func():
+            if Engine.is_editor_hint():
+                return
             GameSaveManager.Save()
     )
     var osName: String = OS.get_name()
@@ -106,6 +109,30 @@ func FreshAnimeDataOpenDir(path: String) -> void :
                     if file is AdobeAnimateData:
                         file.Init()
                         ResourceSaver.save(file, path + "//" + file_name, ResourceSaver.FLAG_COMPRESS)
+            file_name = dir.get_next()
+    else:
+        print("尝试访问路径时出错。")
+
+func FreshLevelData() -> void :
+    var thread: Thread = Thread.new()
+    thread.start(FreshLevelDataOpenDir.bind("res://"))
+
+func FreshLevelDataOpenDir(path: String) -> void :
+    var dir = DirAccess.open(path)
+    if dir:
+        dir.list_dir_begin()
+        var file_name = dir.get_next()
+        while file_name != "":
+            if dir.current_is_dir():
+                print("发现文件夹" + path + "//" + file_name)
+                FreshLevelDataOpenDir(path + "//" + file_name)
+            else:
+                print("发现文件" + path + "//" + file_name)
+                if file_name.get_extension() == "tres":
+                    var file = load(path + "//" + file_name)
+                    if file is TowerDefenseLevelConfig:
+                        file.Clear()
+                        ResourceSaver.save(file)
             file_name = dir.get_next()
     else:
         print("尝试访问路径时出错。")

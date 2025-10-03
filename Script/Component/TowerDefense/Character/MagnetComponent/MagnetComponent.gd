@@ -47,7 +47,7 @@ func CanArmorDraw() -> bool:
     shape.size = TowerDefenseManager.GetMapGridSize() * 2.0 * checkRange
     params.transform = Transform2D(0, pos)
     await get_tree().physics_frame
-    var arr = get_world_2d().direct_space_state.intersect_shape(params)
+    var arr = get_world_2d().direct_space_state.intersect_shape(params, 10000)
     for infor: Dictionary in arr:
         if infor["collider"] is Area2D:
             var area: Area2D = infor["collider"]

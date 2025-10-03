@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=4 uid="uid://b3ubsxvwb2yr3"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://b3k2gtytgc423" path="res://Asset/Anime/Character/Plant/Chapter0/Tanglekelp/Tanglekelp.tres" id="2"]
+
+[node name="Tanglekelp" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -20)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+"Animation/LayerVisible/Layer 29" = true
+"Animation/LayerVisible/Layer 32" = true
+Animation/LayerVisible/Tanglekelp_arm1 = true
+Animation/LayerVisible/Tanglekelp_arm2 = true
+Animation/LayerVisible/Tanglekelp_arm3 = true
+Animation/LayerVisible/Tanglekelp_arm4 = true
+Animation/LayerVisible/Tanglekelp_arm5 = true
+Animation/LayerVisible/Tanglekelp_arm6 = true
+Animation/LayerVisible/Tanglekelp_arm7 = true
+Animation/LayerVisible/Tanglekelp_arm8 = true
+Animation/LayerVisible/anim_face = true
+Animation/LayerVisible/anim_waterline = true
+"Animation/MediaReplace/Tanglekelp_arm 8.png" = null
+Animation/MediaReplace/Tanglekelp_arm1.png = null
+Animation/MediaReplace/Tanglekelp_arm2.png = null
+Animation/MediaReplace/Tanglekelp_arm3.png = null
+Animation/MediaReplace/Tanglekelp_arm4.png = null
+Animation/MediaReplace/Tanglekelp_arm5.png = null
+Animation/MediaReplace/Tanglekelp_arm6.png = null
+Animation/MediaReplace/Tanglekelp_arm7.png = null
+Animation/MediaReplace/Tanglekelp_body.png = null
+Animation/MediaReplace/Tanglekelp_body_zengarden.png = null
+Animation/MediaReplace/Tanglekelp_grab_back1.png = null
+Animation/MediaReplace/Tanglekelp_grab_back2.png = null
+Animation/MediaReplace/Tanglekelp_grab_back3.png = null
+Animation/MediaReplace/Tanglekelp_grab_back4.png = null
+Animation/MediaReplace/Tanglekelp_grab_front1.png = null
+Animation/MediaReplace/Tanglekelp_grab_front2.png = null
+Animation/MediaReplace/Tanglekelp_grab_front3.png = null
+Animation/MediaReplace/Tanglekelp_grab_front4.png = null
+Animation/MediaReplace/Tanglekelp_grab_front5.png = null
+Animation/MediaReplace/Tanglekelp_whitewater1.png = null
+Animation/MediaReplace/Tanglekelp_whitewater2.png = null
+Animation/MediaReplace/Tanglekelp_whitewater3.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

@@ -28,7 +28,9 @@ var seedbankPacketMax: int = 7
 
 
 func IsGameRunning() -> bool:
-    return currentControl.isGameRunning
+    if is_instance_valid(currentControl):
+        return currentControl.isGameRunning
+    return false
 
 func GetCharacterNode() -> Node2D:
     if Global.isEditor && SceneManager.currentScene == "LevelEditorStage" && is_instance_valid(LevelEditorMapEditor.instance):
@@ -330,6 +332,23 @@ func GetMapGridBeginPos() -> Vector2:
     else:
         return Vector2(0, 0)
 
+func GetMapGridPosFromMouse(pos: Vector2) -> Vector2i:
+    var gridSize: Vector2 = GetMapGridSize()
+    var gridBeginPos: Vector2 = GetMapGridBeginPos()
+    var gridNum: Vector2i = GetMapGridNum()
+    var xPos: int = floor((pos.x - gridBeginPos.x) / gridSize.x)
+    var percentage: float = (pos.x - (gridBeginPos.x + xPos * gridSize.x)) / gridSize.x
+    for yPos in range(0, gridNum.y, 1):
+        var checkPos: Vector2i = Vector2i(xPos, yPos) + Vector2i.ONE
+        var cell = GetMapCell(checkPos)
+        if is_instance_valid(cell):
+            var groundHeight = 0
+            if is_instance_valid(cell.groundHeightCurve):
+                groundHeight = cell.groundHeightCurve.curve.sample(percentage)
+            if pos.y > (gridBeginPos.y + yPos * gridSize.y) - groundHeight && pos.y < (gridBeginPos.y + yPos * gridSize.y) - groundHeight + gridSize.y:
+                return checkPos
+    return Vector2(0, 0)
+
 func GetMapGridPos(pos: Vector2) -> Vector2i:
     var gridSize: Vector2 = GetMapGridSize()
     var gridBeginPos: Vector2 = GetMapGridBeginPos()
@@ -350,12 +369,18 @@ func GetMapCellPosCenter(gridPos: Vector2i) -> Vector2:
     var pos: Vector2 = gridBeginPos + Vector2(gridPos) * gridSize + GetMapGridSize() / 2.0
     return pos
 
+func GetMapPlantOffset() -> float:
+    var mapControl: TowerDefenseMapControl = GetMapControl()
+    if is_instance_valid(mapControl):
+        return mapControl.config.plantOffset
+    return 50
+
 func GetMapCellPlantPos(gridPos: Vector2i) -> Vector2:
     gridPos -= Vector2i.ONE
     var mapControl: TowerDefenseMapControl = GetMapControl()
     var gridSize: Vector2 = GetMapGridSize()
     var gridBeginPos: Vector2 = GetMapGridBeginPos()
-    var pos: Vector2 = gridBeginPos + Vector2(gridPos) * gridSize + Vector2(gridSize.x / 2, 50 * mapControl.global_scale.y)
+    var pos: Vector2 = gridBeginPos + Vector2(gridPos) * gridSize + Vector2(gridSize.x / 2, GetMapPlantOffset() * mapControl.global_scale.y)
     return pos
 
 func GetMapLineY(line: int) -> float:
@@ -363,7 +388,7 @@ func GetMapLineY(line: int) -> float:
     var mapControl: TowerDefenseMapControl = GetMapControl()
     var gridSize: Vector2 = GetMapGridSize()
     var gridBeginPos: Vector2 = GetMapGridBeginPos()
-    var y: float = gridBeginPos.y + line * gridSize.y + 50 * mapControl.global_scale.y
+    var y: float = gridBeginPos.y + line * gridSize.y + GetMapPlantOffset() * mapControl.global_scale.y
     return y
 
 func CheckMapGridPosIn(gridPos: Vector2i) -> bool:
@@ -374,10 +399,17 @@ func CheckMapGridPosIn(gridPos: Vector2i) -> bool:
 
 func GetMapCell(gridPos: Vector2i) -> TowerDefenseCellInstance:
     var mapControl: TowerDefenseMapControl = GetMapControl()
+    if !is_instance_valid(mapControl):
+        return null
     var gridNum: Vector2i = GetMapGridNum()
     if gridPos.x < 1 || gridPos.y < 1 || gridPos.x > gridNum.x || gridPos.y > gridNum.y:
         return null
+    if mapControl.plantGrid.size() <= gridPos.x:
+        return null
+    if mapControl.plantGrid[gridPos.x][gridPos.y] == null:
+        return null
     return mapControl.plantGrid[gridPos.x][gridPos.y]
+
 
 func GetMapGroundLeft() -> float:
     var gridBeginPos: Vector2 = GetMapGridBeginPos()
@@ -779,7 +811,7 @@ func GetCharacterTargetFromArray(character: TowerDefenseCharacter, array: Array,
     )
     return characterList
 
-func GetCharacterTargetFromArea(character: TowerDefenseCharacter, checkArea: Area2D, checkLine: bool = false, fliterGraveStone: bool = true) -> Array:
+func GetCharacterTargetFromArea(character: TowerDefenseCharacter, checkArea: Area2D, checkLine: bool = false, fliterGraveStone: bool = true, fliterVase: bool = true) -> Array:
     var characterList: Array = []
     var areas = checkArea.get_overlapping_areas()
     for area: Area2D in areas:
@@ -791,11 +823,14 @@ func GetCharacterTargetFromArea(character: TowerDefenseCharacter, checkArea: Are
                 if checkCharacter is TowerDefenseCrater:
                     continue
                 if checkCharacter is TowerDefenseItem:
-                    continue
+                    if fliterVase:
+                        continue
+                    elif !checkCharacter is TowerDefenseVase:
+
+                        continue
                 if fliterGraveStone:
                     if checkCharacter is TowerDefenseGravestone:
                         continue
-
                 if !checkLine || (checkLine && !character.CheckSameLine(checkCharacter.gridPos.y)):
                     characterList.append(checkCharacter)
     return characterList
@@ -806,7 +841,8 @@ func GetCharacterLine(line: int, fliterGraveStone: bool = true) -> Array:
             if checkCharacter is TowerDefenseCrater:
                 return false
             if checkCharacter is TowerDefenseItem:
-                return false
+                if checkCharacter.config.name != "ItemLadder":
+                    return false
             if fliterGraveStone:
                 if checkCharacter is TowerDefenseGravestone:
                     return false
@@ -951,7 +987,7 @@ func GetCharacterTargetNearFromArea(character: TowerDefenseCharacter, checkArea:
             )
     return characterList
 
-func GetProjectileTargetNear(projectile: TowerDefenseProjectile, method: TowerDefenseEnum.TARGET_NEAR_METHOD = TowerDefenseEnum.TARGET_NEAR_METHOD.DEFAULT, checkLine: bool = false, fliterGravestone: bool = false) -> Array:
+func GetProjectileTargetNear(projectile: TowerDefenseProjectile, collisionFlags: int = -1, method: TowerDefenseEnum.TARGET_NEAR_METHOD = TowerDefenseEnum.TARGET_NEAR_METHOD.DEFAULT, checkLine: bool = false, fliterGravestone: bool = false) -> Array:
     var mapControl: TowerDefenseMapControl = TowerDefenseManager.GetMapControl()
     var characterList = get_tree().get_nodes_in_group("Character").filter(
         func(checkCharacter: TowerDefenseCharacter):
@@ -963,8 +999,12 @@ func GetProjectileTargetNear(projectile: TowerDefenseProjectile, method: TowerDe
                 if fliterGravestone:
                     if checkCharacter is TowerDefenseGravestone:
                         return false
-                if !projectile.CanCollision(checkCharacter.instance.maskFlags):
-                    return false
+                if collisionFlags != -1:
+                    if !(collisionFlags & checkCharacter.instance.maskFlags):
+                        return false
+                else:
+                    if !projectile.CanCollision(checkCharacter.instance.maskFlags):
+                        return false
                 if checkLine && !projectile.CheckSameLine(checkCharacter.gridPos.y):
                     return false
                 if checkCharacter.global_position.x > mapControl.config.edge.z:
@@ -977,9 +1017,9 @@ func GetProjectileTargetNear(projectile: TowerDefenseProjectile, method: TowerDe
             characterList.sort_custom(
                 func(a: TowerDefenseCharacter, b: TowerDefenseCharacter):
                     if projectile.config.collisionFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE:
-                        if !(a.instance.collisionFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE) && (b.instance.collisionFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE):
+                        if !(a.instance.maskFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE) && (b.instance.maskFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE):
                             return false
-                        elif (a.instance.collisionFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE) && !(b.instance.collisionFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE):
+                        elif (a.instance.maskFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE) && !(b.instance.maskFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE):
                             return true
                     if fliterGravestone:
                         if a is TowerDefenseGravestone && b is not TowerDefenseGravestone:
@@ -994,9 +1034,72 @@ func GetProjectileTargetNear(projectile: TowerDefenseProjectile, method: TowerDe
                 func(a: TowerDefenseCharacter, b: TowerDefenseCharacter):
 
                     if projectile.config.collisionFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE:
-                        if !(a.instance.collisionFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE) && (b.instance.collisionFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE):
+                        if !(a.instance.maskFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE) && (b.instance.maskFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE):
                             return false
-                        elif (a.instance.collisionFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE) && !(b.instance.collisionFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE):
+                        elif (a.instance.maskFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE) && !(b.instance.maskFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE):
+                            return true
+                    if fliterGravestone:
+                        if a is TowerDefenseGravestone && b is not TowerDefenseGravestone:
+                            return true
+                        elif a is not TowerDefenseGravestone && b is TowerDefenseGravestone:
+                            return false
+
+                    return a.global_position.distance_to(projectile.global_position) < b.global_position.distance_to(projectile.global_position)
+            )
+    return characterList
+
+func GetProjectileTargetNearProjectile(projectile: TowerDefenseProjectile, collisionFlags: int = -1, method: TowerDefenseEnum.TARGET_NEAR_METHOD = TowerDefenseEnum.TARGET_NEAR_METHOD.DEFAULT, checkLine: bool = false, fliterGravestone: bool = true) -> Array:
+    var mapControl: TowerDefenseMapControl = TowerDefenseManager.GetMapControl()
+    var characterList = get_tree().get_nodes_in_group("Character").filter(
+        func(checkCharacter: TowerDefenseCharacter):
+            if projectile.CanTarget(checkCharacter):
+                if checkCharacter is TowerDefenseCrater:
+                    return false
+                if checkCharacter is TowerDefenseItem:
+                    return false
+                if fliterGravestone:
+                    if checkCharacter is TowerDefenseGravestone:
+                        return false
+                if is_instance_valid(checkCharacter.hitBox) && checkCharacter.hitBox.process_mode == ProcessMode.PROCESS_MODE_DISABLED:
+                    return false
+                if collisionFlags != -1:
+                    if !(collisionFlags & checkCharacter.instance.maskFlags):
+                        return false
+                else:
+                    if !projectile.CanCollision(checkCharacter.instance.maskFlags):
+                        return false
+                if checkLine && !projectile.CheckSameLine(checkCharacter.gridPos.y):
+                    return false
+                if checkCharacter.global_position.x > mapControl.config.edge.z:
+                    return false
+                return true
+            return false
+    )
+    match method:
+        TowerDefenseEnum.TARGET_NEAR_METHOD.DEFAULT:
+            characterList.sort_custom(
+                func(a: TowerDefenseCharacter, b: TowerDefenseCharacter):
+                    if projectile.config.collisionFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE:
+                        if !(a.instance.maskFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE) && (b.instance.maskFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE):
+                            return false
+                        elif (a.instance.maskFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE) && !(b.instance.maskFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE):
+                            return true
+                    if fliterGravestone:
+                        if a is TowerDefenseGravestone && b is not TowerDefenseGravestone:
+                            return true
+                        elif a is not TowerDefenseGravestone && b is TowerDefenseGravestone:
+                            return false
+
+                    return abs(a.global_position.x - projectile.global_position.x) < abs(b.global_position.x - projectile.global_position.x)
+            )
+        TowerDefenseEnum.TARGET_NEAR_METHOD.POSITION:
+            characterList.sort_custom(
+                func(a: TowerDefenseCharacter, b: TowerDefenseCharacter):
+
+                    if projectile.config.collisionFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE:
+                        if !(a.instance.maskFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE) && (b.instance.maskFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE):
+                            return false
+                        elif (a.instance.maskFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE) && !(b.instance.maskFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE):
                             return true
                     if fliterGravestone:
                         if a is TowerDefenseGravestone && b is not TowerDefenseGravestone:

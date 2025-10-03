@@ -7,7 +7,7 @@ extends DialogBoxBase
 @onready var backgrounderCheckBox: CheckBox = %BackgrounderCheckBox
 
 func _ready() -> void :
-    super._ready()
+    super ._ready()
     plantHealthCheckBox.button_pressed = GameSaveManager.GetConfigValue("ShowPlantHealth")
     zombieHealthCheckBox.button_pressed = GameSaveManager.GetConfigValue("ShowZombieHealth")
     packetUIFrontCheckBox.button_pressed = GameSaveManager.GetConfigValue("PacketUIFront")

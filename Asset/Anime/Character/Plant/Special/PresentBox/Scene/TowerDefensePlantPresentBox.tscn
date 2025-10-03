@@ -12,7 +12,6 @@ packetBank = "Total"
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/PresentBox")
 itemLayer = 5
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)

@@ -118,8 +118,8 @@ func Init():
                     element.append(elementGetList[elementId][0])
                     if elementGetNextList.size() == elementGetList.size():
                         if elementGetNextList[elementId][0] != 65535:
-                            element.append(elementGetList[elementId][1].interpolate_with(elementGetNextList[elementId][1], weight))
-                            element.append(elementGetList[elementId][2].lerp(elementGetNextList[elementId][2], weight))
+                            element.append(Transform2D(elementGetList[elementId][1].x.lerp(elementGetNextList[elementId][1].x, weight), elementGetList[elementId][1].y.lerp(elementGetNextList[elementId][1].y, weight), elementGetList[elementId][1].origin.lerp(elementGetNextList[elementId][1].origin, weight)))
+                            element.append(lerp(elementGetList[elementId][2], elementGetNextList[elementId][2], weight))
                         else:
                             element.append(elementGetList[elementId][1])
                             element.append(elementGetList[elementId][2])

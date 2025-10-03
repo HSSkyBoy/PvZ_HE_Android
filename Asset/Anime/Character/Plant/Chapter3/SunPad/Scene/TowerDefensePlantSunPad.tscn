@@ -1,0 +1,107 @@
+[gd_scene load_steps=18 format=4 uid="uid://23uajo7uduh"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bi0ufkbflgt3l" path="res://Asset/Anime/Character/Plant/Chapter3/SunPad/Scene/TowerDefensePlantSunPad.gd" id="2"]
+[ext_resource type="Script" uid="uid://fix6uw08if5s" path="res://Resource/TowerDefense/Character/Buff/TowerDefenseCharacterBuffFireHit.gd" id="3"]
+[ext_resource type="Script" uid="uid://dtvfjfgy00epu" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventAddBuff.gd" id="4"]
+[ext_resource type="Resource" uid="uid://behwvr0ykkyko" path="res://Asset/Anime/Character/Plant/Chapter3/SunPad/Config/TowerDefensePlantSunPad.tres" id="5"]
+[ext_resource type="PackedScene" uid="uid://brri0hbooo2oy" path="res://Asset/Anime/Character/Plant/Chapter3/SunPad/SunPad.tscn" id="6"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="7"]
+[ext_resource type="PackedScene" uid="uid://d1l3f28mblu32" path="res://Script/Component/TowerDefense/Character/SlotComponent/SlotComponent.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://c5d74tbefbann" path="res://Script/Component/TowerDefense/Character/ProduceComponent/ProduceComponent.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://8fpowsb3exlb" path="res://Script/Component/TowerDefense/Character/ReverseInjuryComponent/ReverseInjuryComponent.tscn" id="10"]
+[ext_resource type="Script" uid="uid://cmqmtitj4tcd8" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventHurt.gd" id="11"]
+[ext_resource type="PackedScene" uid="uid://bv4juwge7ravc" path="res://Prefab/Particles/Splats/FireSplats/FireSplats.tscn" id="12"]
+
+[sub_resource type="Resource" id="Resource_nwny8"]
+script = ExtResource("3")
+refresh = true
+metadata/_custom_type_script = "uid://fix6uw08if5s"
+
+[sub_resource type="Resource" id="Resource_cko82"]
+script = ExtResource("4")
+buffList = [SubResource("Resource_nwny8")]
+metadata/_custom_type_script = "uid://dtvfjfgy00epu"
+
+[sub_resource type="Resource" id="Resource_tr5a7"]
+script = ExtResource("11")
+num = 40.0
+playSplatAudio = true
+damageFlags = 6
+collisionFlags = 9
+Flag/Damage = 6
+Flag/Collision = 9
+metadata/_custom_type_script = "uid://cmqmtitj4tcd8"
+
+[sub_resource type="Gradient" id="Gradient_7kd5i"]
+offsets = PackedFloat32Array(0, 0.346154, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.952991, 0.952991, 0.952991, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wisqu"]
+gradient = SubResource("Gradient_7kd5i")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.8)
+
+[node name="TowerDefensePlantSunPad" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+z_index = -13
+script = ExtResource("2")
+allEventList = [SubResource("Resource_cko82")]
+config = ExtResource("5")
+sprite = NodePath("SpriteGroup/TransformPoint/SunPad")
+Custom = []
+itemLayer = 2
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="SunPad" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("6")]
+position = Vector2(0, -30)
+offset = Vector2(-40, -17.5529)
+
+[node name="PotSlot" type="Node2D" parent="SpriteGroup/TransformPoint/SunPad" index="0"]
+position = Vector2(-40.35, -12.0529)
+script = ExtResource("7")
+followSlotId = 3
+useScale = false
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/SunPad/PotSlot" index="0"]
+position = Vector2(41.35, 10.1448)
+
+[node name="ShadowSprite" parent="." index="3"]
+z_index = -10
+position = Vector2(0, 24)
+scale = Vector2(0.821918, 0.77551)
+texture = null
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+
+[node name="SlotComponent" parent="." index="7" node_paths=PackedStringArray("posMark") instance=ExtResource("8")]
+posMark = NodePath("../SpriteGroup/TransformPoint/SunPad/PotSlot/Marker2D")
+heightFollow = true
+hideShadow = false
+
+[node name="ProduceComponent" parent="." index="8" node_paths=PackedStringArray("marker") instance=ExtResource("9")]
+unique_name_in_owner = true
+marker = [NodePath("../SpriteGroup/TransformPoint/SunPad/PotSlot/Marker2D")]
+
+[node name="ReverseInjuryComponent" parent="." index="9" instance=ExtResource("10")]
+unique_name_in_owner = true
+eventList = [SubResource("Resource_tr5a7")]
+staticTime = 1.5
+targetEffectType = "Sprite"
+targetEffectScene = ExtResource("12")
+
+[node name="ShowHealthComponent" parent="." index="10"]
+position = Vector2(0, 30)
+
+[node name="Light" type="PointLight2D" parent="." index="11"]
+unique_name_in_owner = true
+visible = false
+scale = Vector2(0.5625, 0.515625)
+energy = 0.35
+texture = SubResource("GradientTexture2D_wisqu")

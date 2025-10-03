@@ -10,7 +10,7 @@ var savePos: Vector2
 var over: bool = false
 
 func _ready() -> void :
-    super._ready()
+    super ._ready()
     if Engine.is_editor_hint():
         return
     instance.invincible = true
@@ -19,7 +19,7 @@ func _ready() -> void :
 
 @warning_ignore("unused_parameter")
 func IdleProcessing(delta: float) -> void :
-    super.IdleProcessing(delta)
+    super .IdleProcessing(delta)
     sprite.timeScale = timeScale
     if attackComponent.CanAttack():
         state.send_event("ToReady")
@@ -64,7 +64,7 @@ func JumpExited() -> void :
     pass
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "JumpUp":
             await get_tree().create_timer(0.4, false).timeout
@@ -80,7 +80,6 @@ func AnimeCompleted(clip: String) -> void :
             AudioManager.AudioPlay("GargantuarThump", AudioManagerEnum.TYPE.SFX)
             ViewManager.CameraShake(Vector2(randf_range(-1, 1), randf_range(-1, 1)), 5.0, 0.05, 4)
             TowerDefenseExplode.CreateExplode(global_position, Vector2(0.625, 0.2), eventList, [], camp, instance.collisionFlags)
-            var cell: TowerDefenseCellInstance = TowerDefenseManager.GetMapCell(gridPos)
             if is_instance_valid(cell):
                 if cell.IsWater():
                     CreateSplash()

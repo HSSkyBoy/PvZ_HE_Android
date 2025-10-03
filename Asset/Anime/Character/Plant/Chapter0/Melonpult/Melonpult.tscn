@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=4 uid="uid://c5mb6rmuroebe"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://bpasnnj5jsun3" path="res://Asset/Anime/Character/Plant/Chapter0/Melonpult/Melonpult.tres" id="2"]
+
+[node name="Melonpult" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/AnimeEvents = false
+Animation/LayerVisible/Cabbagepult_basket = true
+Animation/LayerVisible/Cabbagepult_basket_overlay = true
+Animation/LayerVisible/Melonpult_blink = true
+Animation/LayerVisible/Melonpult_eyebrow1 = true
+Animation/LayerVisible/Melonpult_eyebrow2 = true
+Animation/LayerVisible/Melonpult_mellon = true
+Animation/LayerVisible/Melonpult_stalk = true
+Animation/LayerVisible/anim_face = true
+Animation/LayerVisible/frontleaf = true
+Animation/LayerVisible/frontleaf_right_tip = true
+Animation/LayerVisible/frontleaf_right_tip1 = true
+Animation/LayerVisible/frontleaf_tip_left = true
+Animation/LayerVisible/frontleaf_tip_left1 = true
+Animation/MediaReplace/Cabbagepult_basket.png = null
+Animation/MediaReplace/Cabbagepult_basket_overlay.png = null
+Animation/MediaReplace/Melonpult_blink1.png = null
+Animation/MediaReplace/Melonpult_blink2.png = null
+Animation/MediaReplace/Melonpult_body.png = null
+Animation/MediaReplace/Melonpult_eyebrow.png = null
+Animation/MediaReplace/Melonpult_melon.png = null
+Animation/MediaReplace/Melonpult_stalk.png = null
+Animation/MediaReplace/PeaShooter_backleaf.png = null
+Animation/MediaReplace/PeaShooter_backleaf_lefttip.png = null
+Animation/MediaReplace/PeaShooter_backleaf_righttip.png = null
+Animation/MediaReplace/PeaShooter_frontleaf.png = null
+Animation/MediaReplace/PeaShooter_frontleaf_lefttip.png = null
+Animation/MediaReplace/PeaShooter_frontleaf_righttip.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

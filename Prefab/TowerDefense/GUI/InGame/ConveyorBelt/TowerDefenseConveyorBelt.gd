@@ -13,6 +13,7 @@ const num: int = 16
 @onready var mobileBelt2: Sprite2D = %MobileBelt2
 @onready var mobilePacketContainer2: Control = %MobilePacketContainer2
 
+var packetPrioritySpawnList: Array[TowerDefenseLevelPacketConfig] = []
 var packetList: Array[TowerDefenseConveyorPacketConfig] = []
 var config: TowerDefenseConveyorConfig
 
@@ -29,6 +30,7 @@ func MobilePreset() -> void :
 
 func Init(_config: TowerDefenseConveyorConfig) -> void :
     config = _config
+    packetPrioritySpawnList = config.packetPrioritySpawnList.duplicate(true)
     packetList = config.packetList.duplicate(true)
 
 func _ready() -> void :
@@ -91,41 +93,47 @@ func WaveEventExecute(bigWaveId: int) -> void :
         event.Execute()
 
 func Spawn() -> TowerDefenseInGamePacketShow:
-    var weightPickItemList: Array[WeightPickItemBase] = []
-    for packetConfig: TowerDefenseConveyorPacketConfig in packetList:
-        var weight: float = packetConfig.weight
-        var charcaterNum: int = TowerDefenseManager.GetCharacterNum(packetConfig.name, true)
-        if packetConfig.maxNum != -1:
-            if charcaterNum >= packetConfig.maxNum:
-                weight *= packetConfig.maxMagnification
-        if packetConfig.minNum != -1:
-            if charcaterNum < packetConfig.minNum:
-                weight *= packetConfig.minMagnification
-        weightPickItemList.append(WeightPickItemBase.new(packetConfig, int(weight)))
-    var pickPacketConfig: WeightPickItemBase = WeightPickMathine.Pick(weightPickItemList)
-    var packetConfigGet = TowerDefenseManager.GetPacketConfig(pickPacketConfig.item.name)
-    var packet: TowerDefenseInGamePacketShow = TowerDefenseManager.CreatePacketShow()
-
-    if isMobileUI:
-        packet.position = Vector2(0.0, 680.0)
-        if mobilePacketContainer1.get_child_count() <= mobilePacketContainer2.get_child_count():
-            mobilePacketContainer1.add_child(packet)
-        else:
-            mobilePacketContainer2.add_child(packet)
+    var packetConfigGet
+    if packetPrioritySpawnList.size() <= 0:
+        var weightPickItemList: Array[WeightPickItemBase] = []
+        for packetConfig: TowerDefenseConveyorPacketConfig in packetList:
+            var weight: float = packetConfig.weight
+            var charcaterNum: int = TowerDefenseManager.GetCharacterNum(packetConfig.name, true)
+            if packetConfig.maxNum != -1:
+                if charcaterNum >= packetConfig.maxNum:
+                    weight *= packetConfig.maxMagnification
+            if packetConfig.minNum != -1:
+                if charcaterNum < packetConfig.minNum:
+                    weight *= packetConfig.minMagnification
+            weightPickItemList.append(WeightPickItemBase.new(packetConfig, int(weight)))
+        var pickPacketConfig: WeightPickItemBase = WeightPickMathine.Pick(weightPickItemList)
+        if is_instance_valid(pickPacketConfig):
+            packetConfigGet = pickPacketConfig.item.GetPacket()
     else:
-        packet.position = Vector2(868.0, 0.0)
-        packetContainer.add_child(packet)
-    packet.Init(packetConfigGet)
-    packet.onlyDraw = false
-    packet.showCost = false
-    packet.plantOnce = true
-    packet.StartInit()
-    packet.alive = true
+        packetConfigGet = packetPrioritySpawnList.pop_front().GetPacket()
+    if is_instance_valid(packetConfigGet):
+        var packet: TowerDefenseInGamePacketShow = TowerDefenseManager.CreatePacketShow()
+        if isMobileUI:
+            packet.position = Vector2(0.0, 680.0)
+            if mobilePacketContainer1.get_child_count() <= mobilePacketContainer2.get_child_count():
+                mobilePacketContainer1.add_child(packet)
+            else:
+                mobilePacketContainer2.add_child(packet)
+        else:
+            packet.position = Vector2(868.0, 0.0)
+            packetContainer.add_child(packet)
+        packet.Init(packetConfigGet)
+        packet.onlyDraw = false
+        packet.showCost = false
+        packet.plantOnce = true
+        packet.StartInit()
+        packet.alive = true
 
-    var seedBank: TowerDefenseInGameSeedBank = TowerDefenseManager.GetSeedBank()
-    packet.pressed.connect(seedBank.PickPacket)
+        var seedBank: TowerDefenseInGameSeedBank = TowerDefenseManager.GetSeedBank()
+        packet.pressed.connect(seedBank.PickPacket)
 
-    return packet
+        return packet
+    return null
 
 func GetPacketPos(id: int) -> Vector2:
     return packetContainer.position + Vector2(53.0 * id, 0)

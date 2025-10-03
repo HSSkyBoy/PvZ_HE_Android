@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=4 uid="uid://du7kby6nyekqt"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://c3mcnotgr3cjd" path="res://Asset/Anime/Projectile/FireNote/FireNote.tres" id="2"]
+
+[node name="FireNote" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+useTween = false
+layerSlot = [null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/FirePea = true
+Animation/LayerVisible/FirePea_flames = true
+Animation/LayerVisible/FirePea_spark1 = true
+Animation/LayerVisible/FirePea_spark2 = true
+Animation/LayerVisible/FirePea_spark3 = true
+Animation/MediaReplace/FireNote.png = null
+Animation/MediaReplace/FireNote_flame.png = null
+Animation/MediaReplace/FireNote_spark.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

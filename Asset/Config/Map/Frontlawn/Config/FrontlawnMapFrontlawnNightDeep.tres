@@ -8,6 +8,7 @@
 [sub_resource type="Resource" id="Resource_nwiwn"]
 script = ExtResource("1")
 pos = Vector4i(1, 1, 9, 5)
+groundHeightCurve = null
 gridType = [2, 4]
 elementFlags = 0
 Flag/Elemet = 0

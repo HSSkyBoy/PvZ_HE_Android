@@ -29,7 +29,7 @@ layerSprite = [null, null, null, null, null, null, null, null, null, null, null,
 Animation/MediaReplace/Zombie_sleep_1.png = ExtResource("5")
 
 [node name="GroundSlot" parent="SpriteGroup/TransformPoint/ZombieBed" index="0"]
-position = Vector2(-56.6706, -9.2)
+position = Vector2(-57.4482, -9.2)
 
 [node name="ShadowSprite" parent="." index="3"]
 position = Vector2(59.5, 37.2)

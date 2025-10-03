@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=4 uid="uid://byu56nyhyvc8x"]
+
+[ext_resource type="Script" uid="uid://dki8iej0p7f6a" path="res://Prefab/TowerDefense/GUI/InGame/VaseManager/TowerDefenseInGameVaseManager.gd" id="1"]
+
+[node name="TowerDefenseInGameVaseManager" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1")

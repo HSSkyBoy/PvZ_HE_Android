@@ -28,7 +28,8 @@ func DigProcessing(delta: float) -> void :
     if global_position.x < TowerDefenseManager.GetMapGroundLeft() + 30:
         state.send_event("ToDrill")
         instance.ArmorDelete("Pick")
-        scale.x = - scale.x
+        if !instance.hypnoses:
+            scale.x = - scale.x
 
 func DigExited() -> void :
     digOver = true
@@ -67,7 +68,7 @@ func Walk() -> void :
         state.send_event("ToDig")
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "Drill":
             state.send_event("ToLand")
@@ -75,7 +76,7 @@ func AnimeCompleted(clip: String) -> void :
             Walk()
 
 func ArmorHitpointsEmpty(armorName: String) -> void :
-    super.ArmorHitpointsEmpty(armorName)
+    super .ArmorHitpointsEmpty(armorName)
     match armorName:
         "Pick":
             state.send_event("ToDrill")

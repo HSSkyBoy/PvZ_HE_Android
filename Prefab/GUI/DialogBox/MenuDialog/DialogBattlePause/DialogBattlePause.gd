@@ -7,7 +7,7 @@ extends MenuDialogBase
 @onready var levelEditorButton: MainButton = %LevelEditorButton
 
 func _ready() -> void :
-    super._ready()
+    super ._ready()
     if Global.isEditor:
         levelEditorButton.visible = true
         handbookButton.visible = false

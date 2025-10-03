@@ -11,7 +11,7 @@ var currentFireNum: int = 0
 func _ready() -> void :
     if Engine.is_editor_hint():
         return
-    super._ready()
+    super ._ready()
     fireComponent.fireInterval = fireInterval
 
     sprite.headRight.animeCompleted.connect(HeadAnimeCompleted)
@@ -22,17 +22,17 @@ func _ready() -> void :
 func _physics_process(delta: float) -> void :
     if Engine.is_editor_hint():
         return
-    super._physics_process(delta)
+    super ._physics_process(delta)
     fireComponent.fireInterval = fireInterval
 
 func IdleEntered() -> void :
     sprite.headRight.SetAnimation("FlameHeadIdle", true, 0.2)
-    sprite.headLeft.SetAnimation("ColdHeadIdle", true, 0.0)
+    sprite.headLeft.SetAnimation("ColdHeadIdle", true, 0.2)
     fireComponent.alive = true
 
 @warning_ignore("unused_parameter")
 func IdleProcessing(delta: float) -> void :
-    super.IdleProcessing(delta)
+    super .IdleProcessing(delta)
     sprite.headRight.timeScale = timeScale
     sprite.headLeft.timeScale = timeScale
     if fireComponent.CanFire("PeaDefault"):
@@ -40,39 +40,46 @@ func IdleProcessing(delta: float) -> void :
         return
 
 func IdleExited() -> void :
-    super.IdleExited()
+    super .IdleExited()
 
 func AttackEntered() -> void :
     fireComponent.Refresh()
-    sprite.headRight.SetAnimation("FlameHeadFire", true, 0.2)
-    sprite.headLeft.SetAnimation("ColdHeadFire", true, 0.2)
+    sprite.headRight.SetAnimation("FlameHeadFire", true, 0.2 * (fireInterval + 4.5) / 6.0)
+    sprite.headLeft.SetAnimation("ColdHeadFire", true, 0.2 * (fireInterval + 4.5) / 6.0)
 
 @warning_ignore("unused_parameter")
 func AttackProcessing(delta: float) -> void :
-    sprite.headRight.timeScale = timeScale * 3.0
-    sprite.headLeft.timeScale = timeScale * 3.0
+    sprite.headRight.timeScale = timeScale * 3.0 * (1.75 / (fireInterval + 0.25))
+    sprite.headLeft.timeScale = timeScale * 3.0 * (1.75 / (fireInterval + 0.25))
 
 func AttackExited() -> void :
     pass
 
 @warning_ignore("unused_parameter")
 func AnimeEvent(command: String, argument: Variant) -> void :
-    super.AnimeEvent(command, argument)
+    super .AnimeEvent(command, argument)
     match command:
         "flame_fire":
             AudioManager.AudioPlay("ProjectileThrow", AudioManagerEnum.TYPE.SFX)
-            var flameProjectile: TowerDefenseProjectile = fireComponent.CreateProjectile(0, Vector2(300, 0), "FirePea", camp, Vector2.ZERO)
+            var flameProjectile: TowerDefenseProjectile = fireComponent.CreateProjectile(0, Vector2(300, 0), "FirePea", -1, camp, Vector2.ZERO)
             flameProjectile.gridPos = gridPos
-            flameProjectile.scale.x = scale.x
-            var coldProjectile: TowerDefenseProjectile = fireComponent.CreateProjectile(1, Vector2(-300, 0), "SnowPea", camp, Vector2.ZERO)
+            flameProjectile.projectileBodyNode.scale.x = scale.x
+            var coldProjectile: TowerDefenseProjectile = fireComponent.CreateProjectile(1, Vector2(-300, 0), "SnowPea", -1, camp, Vector2.ZERO)
             coldProjectile.gridPos = gridPos
-            coldProjectile.scale.x = - scale.x
+            coldProjectile.projectileBodyNode.scale.x = - scale.x
+
+            if fireComponent.CanFire("PeaDefault"):
+                currentFireNum = 0
+                sprite.headRight.SetAnimation("FlameHeadFire", false, 0.1 * (fireInterval + 4.5) / 6.0)
+                sprite.headLeft.SetAnimation("ColdHeadFire", false, 0.1 * (fireInterval + 4.5) / 6.0)
+                return
+
             currentFireNum += 1
             if currentFireNum == fireNum:
                 currentFireNum = 0
             else:
-                sprite.headRight.SetAnimation("FlameHeadFire", false, 0.1)
-                sprite.headLeft.SetAnimation("ColdHeadFire", false, 0.1)
+                sprite.headRight.SetAnimation("FlameHeadFire", false, 0.1 * (fireInterval + 4.5) / 6.0)
+                sprite.headLeft.SetAnimation("ColdHeadFire", false, 0.1 * (fireInterval + 4.5) / 6.0)
 
 func HeadAnimeCompleted(clip: String) -> void :
     match clip:
@@ -80,8 +87,7 @@ func HeadAnimeCompleted(clip: String) -> void :
             if currentFireNum == 0:
                 Idle()
         "ColdHeadFire":
-            if currentFireNum == 0:
-                sprite.headLeft.SetAnimation("ColdHeadIdle", false, 0.1)
+            sprite.headLeft.SetAnimation("ColdHeadIdle", false, 0.1)
 
 func Flip() -> void :
     scale.x = - scale.x

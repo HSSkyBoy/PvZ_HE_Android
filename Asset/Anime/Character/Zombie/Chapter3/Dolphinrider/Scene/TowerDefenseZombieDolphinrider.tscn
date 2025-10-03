@@ -8,21 +8,21 @@
 [ext_resource type="Resource" uid="uid://hpapb5s2884t" path="res://Asset/Anime/Character/Zombie/Chapter3/Dolphinrider/Armor/Config/ZombieDolphinriderArmorHelmet.tres" id="6"]
 [ext_resource type="Resource" uid="uid://ryoresff6mb5" path="res://Asset/Anime/Character/Zombie/Chapter3/Dolphinrider/Armor/Config/ZombieDolphinriderArmorBlackHelmet.tres" id="7"]
 [ext_resource type="Resource" uid="uid://c1ghmtt3o6mxh" path="res://Asset/Anime/Character/Zombie/Chapter3/Dolphinrider/Armor/Config/ZombieDolphinriderArmorSpecialHelmet.tres" id="8"]
-[ext_resource type="PackedScene" uid="uid://b3qti1abse28p" path="res://Asset/Anime/Character/Zombie/Chapter3/Dolphinrider/ZombieDolphinrider.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://b3qti1abse28p" path="res://Asset/Anime/Character/Zombie/Chapter3/Dolphinrider/Sprite/Base/ZombieDolphinrider.tscn" id="9"]
 [ext_resource type="PackedScene" uid="uid://dir0f8lu1l3b3" path="res://Script/Component/TowerDefense/Character/AttackComponent/AttackComponent.tscn" id="10"]
 [ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="11"]
 [ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="12"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s12qd"]
-size = Vector2(100, 76)
+size = Vector2(85, 76)
 
-[node name="TowerDefenseZombieDolphinrider" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+[node name="TowerDefenseZombieDolphinrider" node_paths=PackedStringArray("sprite", "headSlot") instance=ExtResource("1")]
 script = ExtResource("2")
+walkSpeedScale = 1.5
 useAttackDps = false
 walkAnimeClip = "DolphinWalk"
 inSwimAnimeClip = "JumpInWater"
 swimAnimeClip = "SwimWalk"
-outSwimAnimeClip = ""
 attackAnimeClip = "DolphinAttack"
 attackWaterAnimeClip = "SwimEat"
 dieAnimeClip = "DolphinDeath"
@@ -31,6 +31,7 @@ waterHeightPersontage = 1.0
 waterHeight = 0.0
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/ZombieDolphinrider")
+headSlot = NodePath("SpriteGroup/TransformPoint/ZombieDolphinrider/HeadSlot")
 damagePart = {
 "Arm": ExtResource("4"),
 "BlackHelmet": ExtResource("7"),
@@ -47,10 +48,10 @@ DamagePartSlot/BlackHelmet = NodePath("SpriteGroup/TransformPoint/ZombieDolphinr
 DamagePartSlot/SpecialHelmet = NodePath("SpriteGroup/TransformPoint/ZombieDolphinrider/HeadSlot")
 
 [node name="SpriteMask" parent="SpriteGroup" index="0"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 89.0
-offset_bottom = 191.0
+offset_left = -43.0
+offset_top = -141.0
+offset_right = 46.0
+offset_bottom = 50.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(12, 33)
@@ -60,14 +61,14 @@ position = Vector2(-12, -33)
 layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, null, null, null, NodePath("ArmSlot"), null, null, null]
 
 [node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieDolphinrider" index="0"]
-position = Vector2(-21.6781, -46.6478)
-rotation = 0.015458
-scale = Vector2(0.799831, 0.799831)
+position = Vector2(-25.9751, -40.5076)
+rotation = -0.104717
+scale = Vector2(0.799648, 0.799648)
 
 [node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieDolphinrider" index="1"]
-position = Vector2(21.6888, -11.9319)
-rotation = -0.0134166
-scale = Vector2(0.799912, 0.799912)
+position = Vector2(18.6654, -9.10933)
+rotation = -0.0994199
+scale = Vector2(0.799572, 0.799572)
 
 [node name="GroundSlot" parent="SpriteGroup/TransformPoint/ZombieDolphinrider" index="2"]
 position = Vector2(-99.6, 18)
@@ -81,13 +82,15 @@ groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieDolphinrider/GroundSl
 [node name="AttackComponent2" parent="." index="10" node_paths=PackedStringArray("checkArea") instance=ExtResource("10")]
 unique_name_in_owner = true
 checkArea = NodePath("CheckJumpArea")
+checkIntreval = 0
+checkLine = true
 checkTall = true
 
 [node name="CheckJumpArea" type="Area2D" parent="AttackComponent2" index="0"]
 unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent2/CheckJumpArea" index="0"]
-position = Vector2(-26, -1)
+position = Vector2(-18.5, -1)
 shape = SubResource("RectangleShape2D_s12qd")
 
 [node name="Jump" type="Node" parent="StateChart/CompoundState" index="6"]

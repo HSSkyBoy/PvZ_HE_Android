@@ -17,7 +17,7 @@ var dancerPacketName: String = "ZombieDancer"
 var firstSpawn: bool = false
 
 func _ready() -> void :
-    super._ready()
+    super ._ready()
     if Engine.is_editor_hint():
         return
     dancerList.resize(4)
@@ -71,6 +71,7 @@ func DanceExited() -> void :
     sprite.scale.x = 1.0
 
 func PointEntered() -> void :
+    moonWalkOver = true
     sprite.SetAnimation("PointUp", false, 0.2)
     sprite.AddAnimation("PointDown", 0.75, false, 0.2)
 
@@ -82,7 +83,7 @@ func PointExited() -> void :
     pass
 
 func WalkEntered() -> void :
-    super.WalkEntered()
+    super .WalkEntered()
     sprite.scale.x = 1.0
     for dancer in dancerList:
         if is_instance_valid(dancer):
@@ -92,7 +93,7 @@ func WalkEntered() -> void :
 
 func WalkProcessing(delta: float) -> void :
     groundMoveComponent.alive = CanWalk()
-    super.WalkProcessing(delta)
+    super .WalkProcessing(delta)
 
 
 func WalkExited() -> void :
@@ -106,11 +107,11 @@ func Walk() -> void :
     state.send_event("ToWalk")
 
 func DieProcessing(delta: float) -> void :
-    super.DieProcessing(delta)
+    super .DieProcessing(delta)
     sprite.timeScale = timeScale * 2.0
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "PointDown":
             for dancer in dancerList:
@@ -155,7 +156,7 @@ func AnimeCompleted(clip: String) -> void :
                 Die()
 
 func AnimeEvent(command: String, argument: Variant) -> void :
-    super.AnimeEvent(command, argument)
+    super .AnimeEvent(command, argument)
     match command:
         "spawn":
             if !die && !nearDie:
@@ -205,6 +206,8 @@ func SpawnDancer() -> void :
             var dancer = packetConfig.Create(Vector2(global_position.x, TowerDefenseManager.GetMapLineY(gridPos.y - 1)), gridPos - Vector2i(0, 1), 0)
             var characterNode: Node2D = TowerDefenseManager.GetCharacterNode()
             characterNode.add_child.call_deferred(dancer)
+            dancer.set_deferred("instance:hitpointScale", instance.hitpointScale)
+            dancer.set_deferred("scale", scale)
             dancer.Rise.call_deferred(1.5)
             dancer.jackson = self
             if instance.hypnoses:
@@ -215,6 +218,8 @@ func SpawnDancer() -> void :
             var dancer = packetConfig.Create(Vector2(global_position.x, TowerDefenseManager.GetMapLineY(gridPos.y + 1)), gridPos + Vector2i(0, 1), 0)
             var characterNode: Node2D = TowerDefenseManager.GetCharacterNode()
             characterNode.add_child.call_deferred(dancer)
+            dancer.set_deferred("instance:hitpointScale", instance.hitpointScale)
+            dancer.set_deferred("scale", scale)
             dancer.Rise.call_deferred(1.5)
             dancer.jackson = self
             if instance.hypnoses:
@@ -224,6 +229,8 @@ func SpawnDancer() -> void :
         var dancer = packetConfig.Create(global_position - Vector2(gridSize.x * 1.25, 0), gridPos - Vector2i(1, 0), 0)
         var characterNode: Node2D = TowerDefenseManager.GetCharacterNode()
         characterNode.add_child.call_deferred(dancer)
+        dancer.set_deferred("instance:hitpointScale", instance.hitpointScale)
+        dancer.set_deferred("scale", scale)
         dancer.Rise.call_deferred(1.5)
         dancer.jackson = self
         if instance.hypnoses:
@@ -233,6 +240,8 @@ func SpawnDancer() -> void :
         var dancer = packetConfig.Create(global_position + Vector2(gridSize.x * 1.25, 0), gridPos + Vector2i(1, 0), 0)
         var characterNode: Node2D = TowerDefenseManager.GetCharacterNode()
         characterNode.add_child.call_deferred(dancer)
+        dancer.set_deferred("instance:hitpointScale", instance.hitpointScale)
+        dancer.set_deferred("scale", scale)
         dancer.Rise.call_deferred(1.5)
         dancer.jackson = self
         if instance.hypnoses:
@@ -246,7 +255,7 @@ func ChangeSpotlightColor() -> void :
     get_tree().create_timer(3.0, false).timeout.connect(ChangeSpotlightColor)
 
 func Hypnoses(time: float = -1) -> void :
-    super.Hypnoses(time)
+    super .Hypnoses(time)
     for dancer in dancerList:
         if is_instance_valid(dancer):
             dancer.jackson = null

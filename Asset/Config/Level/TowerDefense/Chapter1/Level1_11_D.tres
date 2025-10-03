@@ -1,708 +1,677 @@
-[gd_resource type="Resource" script_class="TowerDefenseLevelConfig" load_steps=98 format=4 uid="uid://c81ksklj8yse7"]
+[gd_resource type="Resource" script_class="TowerDefenseLevelConfig" load_steps=128 format=4 uid="uid://c81ksklj8yse7"]
 
-[ext_resource type="Script" uid="uid://b2mbg8q37sg2h" path="res://Resource/TowerDefense/Conveyor/TowerDefenseConveyorConfig.gd" id="1"]
-[ext_resource type="JSON" path="res://Asset/Config/Level/TowerDefense/Chapter1/Level1_11_D.json" id="2"]
-[ext_resource type="Script" uid="uid://b5cuv3omtbssc" path="res://Resource/TowerDefense/Level/Event/Map/TowerDefenseLevelEventCurrentMapFunctionExecute.gd" id="3"]
+[ext_resource type="JSON" path="res://Asset/Config/Level/TowerDefense/Chapter1/Level1_11_D.json" id="1"]
+[ext_resource type="Script" uid="uid://b5cuv3omtbssc" path="res://Resource/TowerDefense/Level/Event/Map/TowerDefenseLevelEventCurrentMapFunctionExecute.gd" id="2"]
+[ext_resource type="Script" uid="uid://dh6dw4svladxc" path="res://Resource/TowerDefense/Level/Packet/TowerDefenseLevelPacketConfig.gd" id="3"]
 [ext_resource type="Script" uid="uid://dh34mi8luyigq" path="res://Resource/TowerDefense/Level/PreSpawn/TowerDefenseLevelPreSpawnConfig.gd" id="4"]
 [ext_resource type="Script" uid="uid://ccfqe6y4qcaji" path="res://Resource/TowerDefense/Level/TowerDefenseLevelConfig.gd" id="5"]
 [ext_resource type="Script" uid="uid://drd8ys8knej3u" path="res://Resource/TowerDefense/Level/Sun/TowerDefenseLevelSunManagerConfig.gd" id="6"]
 [ext_resource type="Script" uid="uid://defiqin5g0ir7" path="res://Resource/TowerDefense/Level/Dynamic/TowerDefenseLevelDynamicConfig.gd" id="7"]
 [ext_resource type="Script" uid="uid://dhtx7l3tlrgcs" path="res://Resource/TowerDefense/Level/Wave/TowerDefenseLevelWaveManagerConfig.gd" id="8"]
-[ext_resource type="Script" uid="uid://dtgcukbvfw5hk" path="res://Resource/TowerDefense/Level/Wave/TowerDefenseLevelWaveConfig.gd" id="9"]
-[ext_resource type="Script" uid="uid://b2wtvsnyc4qk5" path="res://Resource/TowerDefense/Level/Spawn/TowerDefenseLevelSpawnConfig.gd" id="10"]
+[ext_resource type="Script" uid="uid://dwrgy38cscgbk" path="res://Resource/TowerDefense/Level/Spawn/TowerDefenseLevelSpawnDynamicConfig.gd" id="9"]
+[ext_resource type="Script" uid="uid://dtgcukbvfw5hk" path="res://Resource/TowerDefense/Level/Wave/TowerDefenseLevelWaveConfig.gd" id="10"]
+[ext_resource type="Script" uid="uid://b2wtvsnyc4qk5" path="res://Resource/TowerDefense/Level/Spawn/TowerDefenseLevelSpawnConfig.gd" id="11"]
 
 [sub_resource type="Resource" id="Resource_1je8b"]
-script = ExtResource("1")
-interval = 3.0
-intervalIncreaseEvery = 1000000
-intervalMagnification = 0.5
-packetList = []
-waveEvent = [[], [], [], [], [], [], [], [], [], [], []]
-
-[sub_resource type="Resource" id="Resource_12e18"]
-script = ExtResource("3")
+script = ExtResource("2")
 functionName = "LineUseSet"
 value = [1.0, true]
 
-[sub_resource type="Resource" id="Resource_cb5fv"]
-script = ExtResource("3")
+[sub_resource type="Resource" id="Resource_mtv0u"]
+script = ExtResource("2")
 functionName = "LineUseSet"
 value = [2.0, true]
 
-[sub_resource type="Resource" id="Resource_0t2o8"]
-script = ExtResource("3")
+[sub_resource type="Resource" id="Resource_cj6p6"]
+script = ExtResource("2")
 functionName = "LineUseSet"
 value = [3.0, true]
 
-[sub_resource type="Resource" id="Resource_w01uo"]
-script = ExtResource("3")
+[sub_resource type="Resource" id="Resource_waca7"]
+script = ExtResource("2")
 functionName = "LineUseSet"
 value = [4.0, true]
 
-[sub_resource type="Resource" id="Resource_vkd54"]
-script = ExtResource("3")
+[sub_resource type="Resource" id="Resource_m3b73"]
+script = ExtResource("2")
 functionName = "LineUseSet"
 value = [5.0, true]
+
+[sub_resource type="Resource" id="Resource_omwly"]
+script = ExtResource("3")
+packetName = "PlantPeaPot"
+override = null
 
 [sub_resource type="Resource" id="Resource_cxsbl"]
 script = ExtResource("4")
 packetName = "PlantPot"
 gridPos = Vector2i(1, 1)
+characterOverride = null
 
 [sub_resource type="Resource" id="Resource_83fm1"]
 script = ExtResource("4")
 packetName = "PlantPot"
 gridPos = Vector2i(1, 2)
+characterOverride = null
 
 [sub_resource type="Resource" id="Resource_t2vxb"]
 script = ExtResource("4")
 packetName = "PlantPot"
 gridPos = Vector2i(1, 3)
+characterOverride = null
 
 [sub_resource type="Resource" id="Resource_bhkc2"]
 script = ExtResource("4")
 packetName = "PlantPot"
 gridPos = Vector2i(1, 4)
+characterOverride = null
 
 [sub_resource type="Resource" id="Resource_sdkuy"]
 script = ExtResource("4")
 packetName = "PlantPot"
 gridPos = Vector2i(1, 5)
+characterOverride = null
 
 [sub_resource type="Resource" id="Resource_t76es"]
 script = ExtResource("4")
 packetName = "PlantPot"
 gridPos = Vector2i(2, 1)
+characterOverride = null
 
 [sub_resource type="Resource" id="Resource_nicb7"]
 script = ExtResource("4")
 packetName = "PlantPot"
 gridPos = Vector2i(2, 2)
+characterOverride = null
 
 [sub_resource type="Resource" id="Resource_teoxn"]
 script = ExtResource("4")
 packetName = "PlantPot"
 gridPos = Vector2i(2, 3)
+characterOverride = null
 
 [sub_resource type="Resource" id="Resource_jihwt"]
 script = ExtResource("4")
 packetName = "PlantPot"
 gridPos = Vector2i(2, 4)
+characterOverride = null
 
 [sub_resource type="Resource" id="Resource_jxscj"]
 script = ExtResource("4")
 packetName = "PlantPot"
 gridPos = Vector2i(2, 5)
+characterOverride = null
 
 [sub_resource type="Resource" id="Resource_oba8k"]
 script = ExtResource("4")
 packetName = "PlantPot"
 gridPos = Vector2i(3, 1)
+characterOverride = null
 
 [sub_resource type="Resource" id="Resource_xjdn2"]
 script = ExtResource("4")
 packetName = "PlantPot"
 gridPos = Vector2i(3, 2)
+characterOverride = null
 
 [sub_resource type="Resource" id="Resource_dx1kt"]
 script = ExtResource("4")
 packetName = "PlantPot"
 gridPos = Vector2i(3, 3)
+characterOverride = null
 
 [sub_resource type="Resource" id="Resource_klbt8"]
 script = ExtResource("4")
 packetName = "PlantPot"
 gridPos = Vector2i(3, 4)
+characterOverride = null
 
 [sub_resource type="Resource" id="Resource_mvmfy"]
 script = ExtResource("4")
 packetName = "PlantPot"
 gridPos = Vector2i(3, 5)
+characterOverride = null
 
-[sub_resource type="Resource" id="Resource_ua4x1"]
+[sub_resource type="Resource" id="Resource_4gmxf"]
 script = ExtResource("6")
-open = true
-begin = 300
-spawnInterval = 12.0
-spawnNum = 25
-movingMethod = 0
 
-[sub_resource type="Resource" id="Resource_vilae"]
+[sub_resource type="Resource" id="Resource_a22f6"]
 script = ExtResource("7")
 pointIncrementPerWave = -10
 startingPoints = -50
 startingWave = 3
 zombiePool = ["ZombieNormal"]
 
-[sub_resource type="Resource" id="Resource_1uuou"]
+[sub_resource type="Resource" id="Resource_p0oov"]
 script = ExtResource("7")
 pointIncrementPerWave = -10
 startingPoints = -50
 startingWave = 4
 zombiePool = ["ZombieNormal"]
 
-[sub_resource type="Resource" id="Resource_ay77o"]
+[sub_resource type="Resource" id="Resource_640yb"]
 script = ExtResource("7")
 pointIncrementPerWave = -5
 startingPoints = -100
 startingWave = 5
 zombiePool = ["ZombieNormal"]
 
-[sub_resource type="Resource" id="Resource_v0hmf"]
+[sub_resource type="Resource" id="Resource_6v5d1"]
 script = ExtResource("7")
-pointIncrementPerWave = 0
-startingPoints = 0
-startingWave = 0
-zombiePool = []
 
-[sub_resource type="Resource" id="Resource_oxj0t"]
+[sub_resource type="Resource" id="Resource_2bdgq"]
 script = ExtResource("7")
 pointIncrementPerWave = 20
 startingPoints = 20
 startingWave = 5
 zombiePool = ["ZombieNormal"]
 
-[sub_resource type="Resource" id="Resource_i7bla"]
+[sub_resource type="Resource" id="Resource_yb2ov"]
 script = ExtResource("7")
 pointIncrementPerWave = 40
 startingPoints = 40
 startingWave = 4
 zombiePool = ["ZombieNormal"]
 
-[sub_resource type="Resource" id="Resource_7cpu3"]
+[sub_resource type="Resource" id="Resource_xbyx8"]
 script = ExtResource("7")
 pointIncrementPerWave = 60
 startingPoints = 60
 startingWave = 3
 zombiePool = ["ZombieNormal"]
 
-[sub_resource type="Resource" id="Resource_ud4kl"]
-script = ExtResource("10")
-zombie = "ZombieNormal"
-line = -1
-num = 1
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_5cnoh"]
+[sub_resource type="Resource" id="Resource_ifbxa"]
 script = ExtResource("9")
-dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
-spawn = [SubResource("Resource_ud4kl")]
-dynamic = null
-event = []
+points = 400
+zombiePool = ["ZombieNormalCone", "ZombieNormalBucket", "ZombieFootball"]
 
-[sub_resource type="Resource" id="Resource_o0vmw"]
+[sub_resource type="Resource" id="Resource_nnsk1"]
 script = ExtResource("10")
-zombie = "ZombieNormal"
-line = -1
-num = 1
-override = null
-spawnEvent = []
-dieEvent = []
+dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
+dynamic = SubResource("Resource_ifbxa")
 
-[sub_resource type="Resource" id="Resource_30sdi"]
+[sub_resource type="Resource" id="Resource_2hhhr"]
 script = ExtResource("9")
+points = 400
+zombiePool = ["ZombieNormalCone", "ZombieNormalBucket", "ZombieFootball"]
+
+[sub_resource type="Resource" id="Resource_rrq7v"]
+script = ExtResource("10")
 dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
-spawn = [SubResource("Resource_o0vmw")]
-dynamic = null
-event = []
+dynamic = SubResource("Resource_2hhhr")
 
-[sub_resource type="Resource" id="Resource_oa0wd"]
-script = ExtResource("10")
-zombie = "ZombieNormal"
-line = -1
-num = 1
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_gpf6p"]
-script = ExtResource("10")
-zombie = "ZombieNormalCone"
-line = -1
-num = 1
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_v8avh"]
+[sub_resource type="Resource" id="Resource_7dpix"]
 script = ExtResource("9")
-dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
-spawn = [SubResource("Resource_oa0wd"), SubResource("Resource_gpf6p")]
-dynamic = null
-event = []
 
-[sub_resource type="Resource" id="Resource_dh5my"]
-script = ExtResource("10")
+[sub_resource type="Resource" id="Resource_4bo83"]
+script = ExtResource("11")
 zombie = "ZombieNormal"
-line = -1
-num = 2
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_3u3gc"]
-script = ExtResource("10")
-zombie = "ZombieNormalCone"
-line = -1
-num = 1
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_g20iw"]
-script = ExtResource("9")
-dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
-spawn = [SubResource("Resource_dh5my"), SubResource("Resource_3u3gc")]
-dynamic = null
-event = []
-
-[sub_resource type="Resource" id="Resource_vk3q4"]
-script = ExtResource("10")
-zombie = "ZombieNormal"
-line = -1
-num = 2
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_nl7hc"]
-script = ExtResource("10")
-zombie = "ZombieNormalCone"
-line = -1
-num = 1
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_v6ivy"]
-script = ExtResource("9")
-dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
-spawn = [SubResource("Resource_vk3q4"), SubResource("Resource_nl7hc")]
-dynamic = null
-event = []
-
-[sub_resource type="Resource" id="Resource_8d8ru"]
-script = ExtResource("10")
-zombie = "ZombieNormal"
-line = -1
-num = 2
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_5qunl"]
-script = ExtResource("10")
-zombie = "ZombieNormalCone"
-line = -1
-num = 1
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_mepng"]
-script = ExtResource("9")
-dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
-spawn = [SubResource("Resource_8d8ru"), SubResource("Resource_5qunl")]
-dynamic = null
-event = []
-
-[sub_resource type="Resource" id="Resource_sgxdp"]
-script = ExtResource("10")
-zombie = "ZombieNormal"
-line = -1
 num = 3
 override = null
-spawnEvent = []
-dieEvent = []
 
-[sub_resource type="Resource" id="Resource_u6psl"]
-script = ExtResource("10")
+[sub_resource type="Resource" id="Resource_lkh7e"]
+script = ExtResource("11")
 zombie = "ZombieNormalCone"
-line = -1
-num = 1
 override = null
-spawnEvent = []
-dieEvent = []
 
-[sub_resource type="Resource" id="Resource_4nhql"]
+[sub_resource type="Resource" id="Resource_sggry"]
+script = ExtResource("11")
+zombie = "ZombieNormalBucket"
+override = null
+
+[sub_resource type="Resource" id="Resource_ge5d1"]
 script = ExtResource("10")
-zombie = "ZombieSleeper"
-line = -1
-num = 1
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_26x47"]
-script = ExtResource("9")
 dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
-spawn = [SubResource("Resource_sgxdp"), SubResource("Resource_u6psl"), SubResource("Resource_4nhql")]
-dynamic = null
-event = []
+spawn = [SubResource("Resource_4bo83"), SubResource("Resource_lkh7e"), SubResource("Resource_sggry")]
+dynamic = SubResource("Resource_7dpix")
 
-[sub_resource type="Resource" id="Resource_stsh6"]
-script = ExtResource("10")
-zombie = "ZombieNormal"
-line = -1
-num = 2
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_rwtjg"]
-script = ExtResource("10")
-zombie = "ZombieNormalCone"
-line = -1
-num = 1
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_u2acm"]
-script = ExtResource("10")
-zombie = "ZombieNormalPeaShooterSingle"
-line = -1
-num = 1
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_e24ux"]
-script = ExtResource("10")
-zombie = "ZombieFootball"
-line = -1
-num = 1
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_b3qto"]
+[sub_resource type="Resource" id="Resource_7gp64"]
 script = ExtResource("9")
-dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
-spawn = [SubResource("Resource_stsh6"), SubResource("Resource_rwtjg"), SubResource("Resource_u2acm"), SubResource("Resource_e24ux")]
-dynamic = null
-event = []
 
-[sub_resource type="Resource" id="Resource_0ag6y"]
-script = ExtResource("10")
+[sub_resource type="Resource" id="Resource_lnrj4"]
+script = ExtResource("11")
 zombie = "ZombieNormal"
-line = -1
-num = 2
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_yfy5t"]
-script = ExtResource("10")
-zombie = "ZombieNormalCone"
-line = -1
-num = 1
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_y4v5l"]
-script = ExtResource("10")
-zombie = "ZombieSleeper"
-line = -1
-num = 1
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_g8rbb"]
-script = ExtResource("10")
-zombie = "ZombieNormalPeaShooterSingle"
-line = -1
-num = 2
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_fta6k"]
-script = ExtResource("9")
-dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
-spawn = [SubResource("Resource_0ag6y"), SubResource("Resource_yfy5t"), SubResource("Resource_y4v5l"), SubResource("Resource_g8rbb")]
-dynamic = null
-event = []
-
-[sub_resource type="Resource" id="Resource_4jsbv"]
-script = ExtResource("10")
-zombie = "ZombieNormal"
-line = -1
-num = 2
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_jutn4"]
-script = ExtResource("10")
-zombie = "ZombieNormalCone"
-line = -1
-num = 2
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_ojmv0"]
-script = ExtResource("10")
-zombie = "ZombieNormalPeaShooterSingle"
-line = -1
-num = 1
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_f6ay2"]
-script = ExtResource("10")
-zombie = "ZombieFootball"
-line = -1
-num = 1
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_eqh4y"]
-script = ExtResource("9")
-dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
-spawn = [SubResource("Resource_4jsbv"), SubResource("Resource_jutn4"), SubResource("Resource_ojmv0"), SubResource("Resource_f6ay2")]
-dynamic = null
-event = []
-
-[sub_resource type="Resource" id="Resource_b03my"]
-script = ExtResource("10")
-zombie = "ZombieNormal"
-line = -1
-num = 2
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_ov6aj"]
-script = ExtResource("10")
-zombie = "ZombieNormalCone"
-line = -1
-num = 2
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_y32jn"]
-script = ExtResource("10")
-zombie = "ZombieSleeper"
-line = -1
-num = 1
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_1lruv"]
-script = ExtResource("10")
-zombie = "ZombieNormalPeaShooterSingle"
-line = -1
-num = 2
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_j0ll5"]
-script = ExtResource("9")
-dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
-spawn = [SubResource("Resource_b03my"), SubResource("Resource_ov6aj"), SubResource("Resource_y32jn"), SubResource("Resource_1lruv")]
-dynamic = null
-event = []
-
-[sub_resource type="Resource" id="Resource_nxg3s"]
-script = ExtResource("10")
-zombie = "ZombieNormal"
-line = -1
-num = 2
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_3eevu"]
-script = ExtResource("10")
-zombie = "ZombieNormalCone"
-line = -1
-num = 2
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_yym4x"]
-script = ExtResource("10")
-zombie = "ZombieSleeper"
-line = -1
-num = 1
-override = null
-spawnEvent = []
-dieEvent = []
-
-[sub_resource type="Resource" id="Resource_tp2c8"]
-script = ExtResource("10")
-zombie = "ZombieNormalPeaShooterSingle"
-line = -1
 num = 3
 override = null
-spawnEvent = []
-dieEvent = []
 
-[sub_resource type="Resource" id="Resource_gr4qx"]
-script = ExtResource("9")
-dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
-spawn = [SubResource("Resource_nxg3s"), SubResource("Resource_3eevu"), SubResource("Resource_yym4x"), SubResource("Resource_tp2c8")]
-dynamic = null
-event = []
+[sub_resource type="Resource" id="Resource_hmepg"]
+script = ExtResource("11")
+zombie = "ZombieNormalCone"
+override = null
 
-[sub_resource type="Resource" id="Resource_6t2a3"]
+[sub_resource type="Resource" id="Resource_w8inf"]
 script = ExtResource("10")
+dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
+spawn = [SubResource("Resource_lnrj4"), SubResource("Resource_hmepg")]
+dynamic = SubResource("Resource_7gp64")
+
+[sub_resource type="Resource" id="Resource_gaf1d"]
+script = ExtResource("9")
+
+[sub_resource type="Resource" id="Resource_txy7h"]
+script = ExtResource("11")
 zombie = "ZombieNormal"
-line = -1
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_c6hrj"]
+script = ExtResource("11")
+zombie = "ZombieNormalCone"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_o1jma"]
+script = ExtResource("11")
+zombie = "ZombieNormalBucket"
+override = null
+
+[sub_resource type="Resource" id="Resource_1t2yo"]
+script = ExtResource("10")
+dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
+spawn = [SubResource("Resource_txy7h"), SubResource("Resource_c6hrj"), SubResource("Resource_o1jma")]
+dynamic = SubResource("Resource_gaf1d")
+
+[sub_resource type="Resource" id="Resource_k7gpm"]
+script = ExtResource("9")
+
+[sub_resource type="Resource" id="Resource_mvjfm"]
+script = ExtResource("11")
+zombie = "ZombieNormal"
+override = null
+
+[sub_resource type="Resource" id="Resource_c2k5j"]
+script = ExtResource("11")
+zombie = "ZombieNormalGatlingPea"
+override = null
+
+[sub_resource type="Resource" id="Resource_whwgg"]
+script = ExtResource("11")
+zombie = "ZombieNormalCone"
+override = null
+
+[sub_resource type="Resource" id="Resource_b6tt8"]
+script = ExtResource("10")
+dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
+spawn = [SubResource("Resource_mvjfm"), SubResource("Resource_c2k5j"), SubResource("Resource_whwgg")]
+dynamic = SubResource("Resource_k7gpm")
+
+[sub_resource type="Resource" id="Resource_jvhva"]
+script = ExtResource("9")
+
+[sub_resource type="Resource" id="Resource_r544i"]
+script = ExtResource("11")
+zombie = "ZombieNormal"
+num = 3
+override = null
+
+[sub_resource type="Resource" id="Resource_kp0xr"]
+script = ExtResource("11")
+zombie = "ZombieNormalCone"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_bw1h0"]
+script = ExtResource("11")
+zombie = "ZombieSleeper"
+override = null
+
+[sub_resource type="Resource" id="Resource_ohpnw"]
+script = ExtResource("11")
+zombie = "ZombieNormalBucket"
+override = null
+
+[sub_resource type="Resource" id="Resource_tkak0"]
+script = ExtResource("10")
+dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
+spawn = [SubResource("Resource_r544i"), SubResource("Resource_kp0xr"), SubResource("Resource_bw1h0"), SubResource("Resource_ohpnw")]
+dynamic = SubResource("Resource_jvhva")
+
+[sub_resource type="Resource" id="Resource_h856o"]
+script = ExtResource("9")
+
+[sub_resource type="Resource" id="Resource_6v1re"]
+script = ExtResource("11")
+zombie = "ZombieNormal"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_m5q7e"]
+script = ExtResource("11")
+zombie = "ZombieNormalCone"
+override = null
+
+[sub_resource type="Resource" id="Resource_yvuxa"]
+script = ExtResource("11")
+zombie = "ZombieNormalBucket"
+override = null
+
+[sub_resource type="Resource" id="Resource_hxtdj"]
+script = ExtResource("11")
+zombie = "ZombieNormalGatlingPea"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_n8kks"]
+script = ExtResource("11")
+zombie = "ZombieNormalPeaShooterSingle"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_ghm2m"]
+script = ExtResource("11")
+zombie = "ZombieFootball"
+override = null
+
+[sub_resource type="Resource" id="Resource_u5k12"]
+script = ExtResource("10")
+dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
+spawn = [SubResource("Resource_6v1re"), SubResource("Resource_m5q7e"), SubResource("Resource_yvuxa"), SubResource("Resource_hxtdj"), SubResource("Resource_n8kks"), SubResource("Resource_ghm2m")]
+dynamic = SubResource("Resource_h856o")
+
+[sub_resource type="Resource" id="Resource_eshgi"]
+script = ExtResource("9")
+
+[sub_resource type="Resource" id="Resource_4ec1f"]
+script = ExtResource("11")
+zombie = "ZombieNormal"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_vbdu6"]
+script = ExtResource("11")
+zombie = "ZombieNormalCone"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_b5pyw"]
+script = ExtResource("11")
+zombie = "ZombieNormalBucket"
+override = null
+
+[sub_resource type="Resource" id="Resource_x6a4i"]
+script = ExtResource("11")
+zombie = "ZombieSleeper"
+override = null
+
+[sub_resource type="Resource" id="Resource_kbjva"]
+script = ExtResource("11")
+zombie = "ZombieNormalGatlingPea"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_rao1k"]
+script = ExtResource("11")
+zombie = "ZombieNormalPeaShooterSingle"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_r4jei"]
+script = ExtResource("10")
+dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
+spawn = [SubResource("Resource_4ec1f"), SubResource("Resource_vbdu6"), SubResource("Resource_b5pyw"), SubResource("Resource_x6a4i"), SubResource("Resource_kbjva"), SubResource("Resource_rao1k")]
+dynamic = SubResource("Resource_eshgi")
+
+[sub_resource type="Resource" id="Resource_h5red"]
+script = ExtResource("9")
+
+[sub_resource type="Resource" id="Resource_f3hyu"]
+script = ExtResource("11")
+zombie = "ZombieNormal"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_vp22m"]
+script = ExtResource("11")
+zombie = "ZombieNormalCone"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_rmapd"]
+script = ExtResource("11")
+zombie = "ZombieNormalPeaShooterSingle"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_p6j5a"]
+script = ExtResource("11")
+zombie = "ZombieNormalGatlingPea"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_xumdk"]
+script = ExtResource("11")
+zombie = "ZombieFootball"
+override = null
+
+[sub_resource type="Resource" id="Resource_ij43t"]
+script = ExtResource("10")
+dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
+spawn = [SubResource("Resource_f3hyu"), SubResource("Resource_vp22m"), SubResource("Resource_rmapd"), SubResource("Resource_p6j5a"), SubResource("Resource_xumdk")]
+dynamic = SubResource("Resource_h5red")
+
+[sub_resource type="Resource" id="Resource_rdngl"]
+script = ExtResource("9")
+
+[sub_resource type="Resource" id="Resource_v6svs"]
+script = ExtResource("11")
+zombie = "ZombieNormal"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_tkvpc"]
+script = ExtResource("11")
+zombie = "ZombieNormalCone"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_n534m"]
+script = ExtResource("11")
+zombie = "ZombieNormalBucket"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_v30xr"]
+script = ExtResource("11")
+zombie = "ZombieSleeper"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_4aoxh"]
+script = ExtResource("11")
+zombie = "ZombieNormalGatlingPea"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_6nunu"]
+script = ExtResource("11")
+zombie = "ZombieNormalPeaShooterSingle"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_0ue50"]
+script = ExtResource("10")
+dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
+spawn = [SubResource("Resource_v6svs"), SubResource("Resource_tkvpc"), SubResource("Resource_n534m"), SubResource("Resource_v30xr"), SubResource("Resource_4aoxh"), SubResource("Resource_6nunu")]
+dynamic = SubResource("Resource_rdngl")
+
+[sub_resource type="Resource" id="Resource_l5alu"]
+script = ExtResource("9")
+
+[sub_resource type="Resource" id="Resource_w20ln"]
+script = ExtResource("11")
+zombie = "ZombieNormal"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_vcxki"]
+script = ExtResource("11")
+zombie = "ZombieNormalBucket"
+num = 3
+override = null
+
+[sub_resource type="Resource" id="Resource_i3d1k"]
+script = ExtResource("11")
+zombie = "ZombieNormalCone"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_sa5mk"]
+script = ExtResource("11")
+zombie = "ZombieSleeper"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_jmgc6"]
+script = ExtResource("11")
+zombie = "ZombieNormalPeaShooterSingle"
+num = 3
+override = null
+
+[sub_resource type="Resource" id="Resource_nm8nl"]
+script = ExtResource("11")
+zombie = "ZombieNormalGatlingPea"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_m2eaf"]
+script = ExtResource("10")
+dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
+spawn = [SubResource("Resource_w20ln"), SubResource("Resource_vcxki"), SubResource("Resource_i3d1k"), SubResource("Resource_sa5mk"), SubResource("Resource_jmgc6"), SubResource("Resource_nm8nl")]
+dynamic = SubResource("Resource_l5alu")
+
+[sub_resource type="Resource" id="Resource_lr1qu"]
+script = ExtResource("9")
+
+[sub_resource type="Resource" id="Resource_t4pmc"]
+script = ExtResource("11")
+zombie = "ZombieNormal"
 num = 4
 override = null
-spawnEvent = []
-dieEvent = []
 
-[sub_resource type="Resource" id="Resource_2t8cm"]
-script = ExtResource("10")
-zombie = "ZombieNormalCone"
-line = -1
+[sub_resource type="Resource" id="Resource_i55l6"]
+script = ExtResource("11")
+zombie = "ZombieNormalBucket"
 num = 2
 override = null
-spawnEvent = []
-dieEvent = []
 
-[sub_resource type="Resource" id="Resource_m5x2b"]
-script = ExtResource("10")
+[sub_resource type="Resource" id="Resource_h7pjs"]
+script = ExtResource("11")
+zombie = "ZombieNormalCone"
+num = 2
+override = null
+
+[sub_resource type="Resource" id="Resource_wmtaq"]
+script = ExtResource("11")
 zombie = "ZombieSleeper"
-line = -1
-num = 1
 override = null
-spawnEvent = []
-dieEvent = []
 
-[sub_resource type="Resource" id="Resource_uoso8"]
-script = ExtResource("10")
+[sub_resource type="Resource" id="Resource_b6kd3"]
+script = ExtResource("11")
 zombie = "ZombieNormalPeaShooterSingle"
-line = -1
-num = 1
+num = 2
 override = null
-spawnEvent = []
-dieEvent = []
 
-[sub_resource type="Resource" id="Resource_1c4pk"]
-script = ExtResource("10")
+[sub_resource type="Resource" id="Resource_oux0o"]
+script = ExtResource("11")
+zombie = "ZombieNormalGatlingPea"
+num = 3
+override = null
+
+[sub_resource type="Resource" id="Resource_edcl4"]
+script = ExtResource("11")
 zombie = "ZombieFootball"
-line = -1
-num = 1
+num = 2
 override = null
-spawnEvent = []
-dieEvent = []
 
-[sub_resource type="Resource" id="Resource_gyapn"]
-script = ExtResource("9")
-dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
-spawn = [SubResource("Resource_6t2a3"), SubResource("Resource_2t8cm"), SubResource("Resource_m5x2b"), SubResource("Resource_uoso8"), SubResource("Resource_1c4pk")]
-dynamic = null
-event = []
-
-[sub_resource type="Resource" id="Resource_jvj65"]
+[sub_resource type="Resource" id="Resource_timhn"]
 script = ExtResource("10")
+dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
+spawn = [SubResource("Resource_t4pmc"), SubResource("Resource_i55l6"), SubResource("Resource_h7pjs"), SubResource("Resource_wmtaq"), SubResource("Resource_b6kd3"), SubResource("Resource_oux0o"), SubResource("Resource_edcl4")]
+dynamic = SubResource("Resource_lr1qu")
+
+[sub_resource type="Resource" id="Resource_gqlvl"]
+script = ExtResource("9")
+
+[sub_resource type="Resource" id="Resource_jwc31"]
+script = ExtResource("11")
 zombie = "ZombieNormal"
-line = -1
 num = 4
 override = null
-spawnEvent = []
-dieEvent = []
 
-[sub_resource type="Resource" id="Resource_fy7dr"]
-script = ExtResource("10")
+[sub_resource type="Resource" id="Resource_l85q3"]
+script = ExtResource("11")
 zombie = "ZombieNormalCone"
-line = -1
 num = 2
 override = null
-spawnEvent = []
-dieEvent = []
 
-[sub_resource type="Resource" id="Resource_qf1hh"]
-script = ExtResource("10")
+[sub_resource type="Resource" id="Resource_r0k6a"]
+script = ExtResource("11")
+zombie = "ZombieNormalBucket"
+num = 4
+override = null
+
+[sub_resource type="Resource" id="Resource_33ts1"]
+script = ExtResource("11")
 zombie = "ZombieSleeper"
-line = -1
 num = 2
 override = null
-spawnEvent = []
-dieEvent = []
 
-[sub_resource type="Resource" id="Resource_pwdjd"]
-script = ExtResource("10")
+[sub_resource type="Resource" id="Resource_yk2vl"]
+script = ExtResource("11")
 zombie = "ZombieNormalPeaShooterSingle"
-line = -1
 num = 2
 override = null
-spawnEvent = []
-dieEvent = []
 
-[sub_resource type="Resource" id="Resource_rvih0"]
-script = ExtResource("10")
+[sub_resource type="Resource" id="Resource_7j53f"]
+script = ExtResource("11")
+zombie = "ZombieNormalGatlingPea"
+num = 5
+override = null
+
+[sub_resource type="Resource" id="Resource_cgaty"]
+script = ExtResource("11")
 zombie = "ZombieFootball"
-line = -1
-num = 2
+num = 3
 override = null
-spawnEvent = []
-dieEvent = []
 
-[sub_resource type="Resource" id="Resource_t2qpm"]
-script = ExtResource("9")
+[sub_resource type="Resource" id="Resource_fp8gu"]
+script = ExtResource("10")
 dynamicPlantfood = [0, 0, 0, 0, 0, 0, 0]
-spawn = [SubResource("Resource_jvj65"), SubResource("Resource_fy7dr"), SubResource("Resource_qf1hh"), SubResource("Resource_pwdjd"), SubResource("Resource_rvih0")]
-dynamic = null
-event = []
+spawn = [SubResource("Resource_jwc31"), SubResource("Resource_l85q3"), SubResource("Resource_r0k6a"), SubResource("Resource_33ts1"), SubResource("Resource_yk2vl"), SubResource("Resource_7j53f"), SubResource("Resource_cgaty")]
+dynamic = SubResource("Resource_gqlvl")
 
-[sub_resource type="Resource" id="Resource_fsys6"]
+[sub_resource type="Resource" id="Resource_ar83q"]
 script = ExtResource("8")
 flagZombie = "ZombieFlagCone"
 flagWaveInterval = 7
 maxNextWaveHealthPercentage = 0.25
 minNextWaveHealthPercentage = 0.3
-beginCol = 20.0
-spawnColEnd = 20.0
 spawnColStart = 10.0
-dynamic = [SubResource("Resource_vilae"), SubResource("Resource_1uuou"), SubResource("Resource_ay77o"), SubResource("Resource_v0hmf"), SubResource("Resource_oxj0t"), SubResource("Resource_i7bla"), SubResource("Resource_7cpu3")]
-wave = [SubResource("Resource_5cnoh"), SubResource("Resource_30sdi"), SubResource("Resource_v8avh"), SubResource("Resource_g20iw"), SubResource("Resource_v6ivy"), SubResource("Resource_mepng"), SubResource("Resource_26x47"), SubResource("Resource_b3qto"), SubResource("Resource_fta6k"), SubResource("Resource_eqh4y"), SubResource("Resource_j0ll5"), SubResource("Resource_gr4qx"), SubResource("Resource_gyapn"), SubResource("Resource_t2qpm")]
+spawnOverride = null
+dynamic = [null, null, null, null, null, null, null, SubResource("Resource_a22f6"), SubResource("Resource_p0oov"), SubResource("Resource_640yb"), SubResource("Resource_6v5d1"), SubResource("Resource_2bdgq"), SubResource("Resource_yb2ov"), SubResource("Resource_xbyx8")]
+wave = [SubResource("Resource_nnsk1"), SubResource("Resource_rrq7v"), SubResource("Resource_ge5d1"), SubResource("Resource_w8inf"), SubResource("Resource_1t2yo"), SubResource("Resource_b6tt8"), SubResource("Resource_tkak0"), SubResource("Resource_u5k12"), SubResource("Resource_r4jei"), SubResource("Resource_ij43t"), SubResource("Resource_0ue50"), SubResource("Resource_m2eaf"), SubResource("Resource_timhn"), SubResource("Resource_fp8gu")]
 
 [resource]
 script = ExtResource("5")
-data = ExtResource("2")
+data = ExtResource("1")
 name = "Level1_11"
 description = "PLAYERS_TRIP_TO_MODERN"
 levelName = "PLAYERS_MORDEN_LEVEL_NAME"
 levelNumber = 11
-nextLevel = ""
-homeWorld = 2
+homeWorld = 1
 talk = "Level1_11Talk"
-tutorial = ""
 map = "FrontlawnEmpty"
-backgroundMusic = "Frontlawn"
 firstRewardType = 1
 firstRewardValue = "PlantPeaPot"
-eventInit = [SubResource("Resource_12e18"), SubResource("Resource_cb5fv"), SubResource("Resource_0t2o8"), SubResource("Resource_w01uo"), SubResource("Resource_vkd54")]
-eventReady = []
-eventStart = []
+eventInit = [SubResource("Resource_1je8b"), SubResource("Resource_mtv0u"), SubResource("Resource_cj6p6"), SubResource("Resource_waca7"), SubResource("Resource_m3b73")]
 preSpawnList = [SubResource("Resource_cxsbl"), SubResource("Resource_83fm1"), SubResource("Resource_t2vxb"), SubResource("Resource_bhkc2"), SubResource("Resource_sdkuy"), SubResource("Resource_t76es"), SubResource("Resource_nicb7"), SubResource("Resource_teoxn"), SubResource("Resource_jihwt"), SubResource("Resource_jxscj"), SubResource("Resource_oba8k"), SubResource("Resource_xjdn2"), SubResource("Resource_dx1kt"), SubResource("Resource_klbt8"), SubResource("Resource_mvmfy")]
-packetColdDownStart = true
-packetBankMethod = 1
-sunManager = SubResource("Resource_ua4x1")
-waveManager = SubResource("Resource_fsys6")
-isCustomTalk = false
-isCustomTutorial = false
+sunManager = SubResource("Resource_4gmxf")
+waveManager = SubResource("Resource_ar83q")
+vaseManager = null
 customTalk = null
 customTutorial = null
-packetBank = "GeneralPlant"
-packetBankList = ["PlantPeaPot"]
-conveyorData = SubResource("Resource_1je8b")
+packetBankList = [SubResource("Resource_omwly")]
+conveyorData = null
+rainData = null
 PacketBank/Name = "GeneralPlant"
-PacketBank/PacketName = ["PlantPeaPot"]
 metadata/_custom_type_script = "uid://ccfqe6y4qcaji"

@@ -16,11 +16,17 @@ func GetCategory(_category: String) -> Array:
         return category[_category]
     return []
 
+func GetPacketList() -> Array:
+    var packetList: Array = []
+    for categoryName: String in category.keys():
+        packetList.append_array(category[categoryName])
+    return packetList
+
 func GetPlantList() -> Array:
     var plantList: Array = []
     for categoryName: String in category.keys():
         match categoryName:
-            "White", "Gold", "Diamond", "Colour", "Star":
+            "White", "Gold", "Diamond", "Colour", "Star", "Original":
                 plantList.append_array(category[categoryName])
     plantList.erase("PlantPresentBox")
     return plantList

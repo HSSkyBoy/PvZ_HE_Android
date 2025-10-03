@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="TowerDefenseVaseConfig" load_steps=2 format=4 uid="uid://bxacyge6jhjll"]
+
+[ext_resource type="Script" uid="uid://ck1r2ooq53lpk" path="res://Resource/TowerDefense/Character/Config/TowerDefenseVaseConfig.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+name = "VaseNormal"
+damagePointData = null
+armorData = null
+customData = null
+ashScene = null
+homeWorld = 1
+cost = 50
+packetCooldown = 30.0
+startingCooldown = 15.0
+plantGridType = [2, 3, 10, 1, 5, 6]
+maskFlags = 9
+unUseBuffFlags = 4294967295
+physiqueTypeFlags = 32
+Flag/Collision = 1
+Flag/Mask = 9
+Flag/UnUseBuff = 4294967295
+Flag/PhysiqueType = 32
+Flag/Elemet = 0

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dp1kf3rnhfgdn" path="res://Asset/Config/Map/Frontlawn/Scene/NightEmptyBig/TowerDefenseMapFrontlawnNightEmptyBig.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://da0axwyje0g3h" path="res://Asset/Config/Map/Frontlawn/Scene/NightEmptyBig/TowerDefenseMapFrontlawnNightEmptyBigGradient.tres" id="2"]
-[ext_resource type="Texture2D" uid="uid://bttx4vbefwa58" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/FrontlawnNightEmpty.jpg" id="3"]
+[ext_resource type="Texture2D" uid="uid://gqpocubvdfey" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/FrontlawnNightEmptyBig.jpg" id="3"]
 [ext_resource type="Script" uid="uid://cv5jare6apwcu" path="res://Extends/PointLight2D/PointLight2DFollowMudulate.gd" id="4"]
 [ext_resource type="Texture2D" uid="uid://bbbiwhq1ib7vi" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Stripe.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://j3ifp3elg8ak" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/FrontlawnFloor.png" id="6"]
@@ -93,8 +93,8 @@ saveEnergy = 1.0
 
 [node name="Stripe" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(496, 64)
-scale = Vector2(1, 1.01992)
+position = Vector2(496, 56)
+scale = Vector2(1, 1.0836654)
 texture = ExtResource("5")
 centered = false
 

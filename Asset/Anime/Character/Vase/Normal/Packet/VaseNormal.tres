@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="TowerDefensePacketConfig" load_steps=3 format=4 uid="uid://djxhwh4scn367"]
+
+[ext_resource type="Resource" uid="uid://bxacyge6jhjll" path="res://Asset/Anime/Character/Vase/Normal/Config/TowerDefenseVaseNormal.tres" id="1"]
+[ext_resource type="Script" uid="uid://c6d3po5310ugw" path="res://Resource/TowerDefense/PacketBank/Packet/TowerDefensePacketConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+saveKey = "VaseNormal"
+packetAnimeOffset = Vector2(21, 25)
+packetAnimeScale = Vector2(0.4, 0.4)
+characterConfig = ExtResource("1")
+override = null
+Cell/plantUseCell = true
+metadata/_custom_type_script = "uid://c6d3po5310ugw"

@@ -50,7 +50,7 @@ func _init() -> void :
 
 
 func _state_init():
-    super._state_init()
+    super ._state_init()
 
 
     for child in get_children():
@@ -69,7 +69,7 @@ func _state_init():
             child_as_state.state_exited.connect( func(): child_state_exited.emit())
 
 func _state_enter(transition_target: StateChartState):
-    super._state_enter(transition_target)
+    super ._state_enter(transition_target)
 
 
 
@@ -89,12 +89,12 @@ func _state_enter(transition_target: StateChartState):
             push_error("No initial state set for state \'" + name + "\'.")
 
 func _state_step():
-    super._state_step()
+    super ._state_step()
     if _active_state != null:
         _active_state._state_step()
 
 func _state_save(saved_state: SavedState, child_levels: int = -1):
-    super._state_save(saved_state, child_levels)
+    super ._state_save(saved_state, child_levels)
 
 
     var parent = saved_state.get_substate_or_null(self)
@@ -106,7 +106,7 @@ func _state_save(saved_state: SavedState, child_levels: int = -1):
         history_state._state_save(parent, child_levels)
 
 func _state_restore(saved_state: SavedState, child_levels: int = -1):
-    super._state_restore(saved_state, child_levels)
+    super ._state_restore(saved_state, child_levels)
 
 
     if active:
@@ -136,7 +136,7 @@ func _state_exit():
     if _active_state != null:
         _active_state._state_exit()
         _active_state = null
-    super._state_exit()
+    super ._state_exit()
 
 
 func _process_transitions(trigger_type: StateChart.TriggerType, event: StringName = "") -> bool:
@@ -153,7 +153,7 @@ func _process_transitions(trigger_type: StateChart.TriggerType, event: StringNam
 
 
 
-    return super._process_transitions(trigger_type, event)
+    return super ._process_transitions(trigger_type, event)
 
 
 func _handle_transition(transition: Transition, source: StateChartState):
@@ -244,7 +244,7 @@ func _restore_history_state(target: HistoryState):
 
 
 func _get_configuration_warnings() -> PackedStringArray:
-    var warnings = super._get_configuration_warnings()
+    var warnings = super ._get_configuration_warnings()
 
 
     var child_count = 0

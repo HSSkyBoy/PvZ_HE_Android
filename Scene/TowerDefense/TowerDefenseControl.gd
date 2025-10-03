@@ -1,6 +1,6 @@
 class_name TowerDefenseControl extends Node
 
-const TOWER_DEFENSE_HAMMER_MODE = preload("res://Prefab/TowerDefense/GameMode/TowerDefenseHammerMode.tscn")
+const TOWER_DEFENSE_HAMMER_MODE = preload("uid://bg3jr7ygc5lkf")
 
 @onready var npcTalkControl: NpcTalkControl = %NpcTalkControl
 
@@ -8,6 +8,7 @@ const TOWER_DEFENSE_HAMMER_MODE = preload("res://Prefab/TowerDefense/GameMode/To
 @onready var seedBank: TowerDefenseInGameSeedBank = %TowerDefenseInGameSeedBank
 @onready var packetBank: TowerDefenseInGamePacketBank = %TowerDefenseInGamePacketBank
 @onready var levelControl: TowerDefenseInGameLevelControl = %TowerDefenseInGameLevelControl
+@onready var screenEffectControl: ScreenEffectControl = %ScreenEffectControl
 
 @onready var characterNode: Node2D = %CharacterNode
 
@@ -60,6 +61,10 @@ func Init(_levelConfig: TowerDefenseLevelConfig):
     levelConfig = _levelConfig
     levelConfig.Init()
 
+    match levelConfig.packetBankMethod:
+        TowerDefenseEnum.LEVEL_SEEDBANK_METHOD.RAIN:
+            screenEffectControl.AddScreenEffect("Rain")
+
     var mapConfig: TowerDefenseMapConfig = TowerDefenseManager.GetMapConfig(levelConfig.map)
     mapControl.Init(mapConfig)
 
@@ -68,10 +73,17 @@ func Init(_levelConfig: TowerDefenseLevelConfig):
 
     var recheckList: Array = []
     for preSpawn: TowerDefenseLevelPreSpawnConfig in levelConfig.preSpawnList:
-        if !is_instance_valid(preSpawn.Spawn()):
+        var characterSpawn = preSpawn.SpawnCharacter()
+        if !is_instance_valid(characterSpawn):
             recheckList.append(preSpawn)
+        else:
+            if is_instance_valid(preSpawn.characterOverride):
+                preSpawn.characterOverride.ExecuteCharacter(characterSpawn)
     for preSpawn: TowerDefenseLevelPreSpawnConfig in recheckList:
-        preSpawn.Spawn()
+        var characterSpawn = preSpawn.SpawnCharacter()
+        if is_instance_valid(characterSpawn):
+            if is_instance_valid(preSpawn.characterOverride):
+                preSpawn.characterOverride.ExecuteCharacter(characterSpawn)
     TowerDefenseManager.ExecuteLevelEvent(levelConfig.eventInit)
 
     levelControl.Init(levelConfig)
@@ -101,9 +113,11 @@ func Init(_levelConfig: TowerDefenseLevelConfig):
     else:
         seedBank.conveyorBeltContainer.visible = false
         seedBank.seedContanin.visible = false
+    seedBank.rainModeControl.visible = false
     match levelConfig.packetBankMethod:
         TowerDefenseEnum.LEVEL_SEEDBANK_METHOD.NOONE:
             skipPacketChoose = true
+
         TowerDefenseEnum.LEVEL_SEEDBANK_METHOD.CHOOSE:
             if GameSaveManager.GetConfigValue("MobilePreset"):
                 seedBank.mobileSeedContanin.visible = true
@@ -119,8 +133,13 @@ func Init(_levelConfig: TowerDefenseLevelConfig):
             var unlockPacket: Array[String] = packetBankData.GetUnlockPacket()
             skipPacketChoose = unlockPacket.size() <= TowerDefenseManager.seedbankPacketMax
 
-            for packetName: String in levelConfig.packetBankList:
-                packetBank.PacketChooseFromName(packetName, true)
+            for levelPacketConfig: TowerDefenseLevelPacketConfig in levelConfig.packetBankList:
+                if !is_instance_valid(levelPacketConfig.override):
+                    packetBank.PacketChooseFromName(levelPacketConfig.packetName, true)
+                else:
+                    var packetConfig: TowerDefensePacketConfig = levelPacketConfig.GetPacket()
+                    var packet = seedBank.AddPacket(packetConfig)
+                    packet.lock = true
 
             if !Global.debugPacketSelect:
                 if skipPacketChoose:
@@ -128,8 +147,6 @@ func Init(_levelConfig: TowerDefenseLevelConfig):
                         var packetConfig: TowerDefensePacketConfig = TowerDefenseManager.GetPacketConfig(packetName)
                         seedBank.AddPacket(packetConfig)
                     seedBank.Ready()
-
-
 
             if Global.debugPacketSelect:
                 skipPacketChoose = false
@@ -140,8 +157,8 @@ func Init(_levelConfig: TowerDefenseLevelConfig):
             else:
                 seedBank.seedContanin.visible = true
             skipPacketChoose = true
-            for packetName: String in levelConfig.packetBankList:
-                var packetConfig: TowerDefensePacketConfig = TowerDefenseManager.GetPacketConfig(packetName)
+            for levelPacketConfig: TowerDefenseLevelPacketConfig in levelConfig.packetBankList:
+                var packetConfig: TowerDefensePacketConfig = levelPacketConfig.GetPacket()
                 seedBank.AddPacket(packetConfig)
             seedBank.Ready()
 
@@ -156,6 +173,11 @@ func Init(_levelConfig: TowerDefenseLevelConfig):
             else:
                 seedBank.conveyorBeltContainer.visible = true
                 seedBank.conveyorBelt.Init(levelConfig.conveyorData)
+
+        TowerDefenseEnum.LEVEL_SEEDBANK_METHOD.RAIN:
+            skipPacketChoose = true
+            seedBank.rainModeControl.visible = true
+            seedBank.rainModeControl.Init(levelConfig.rainData)
 
     GameEntry()
 
@@ -172,7 +194,7 @@ func _physics_process(delta: float) -> void :
     if GameSaveManager.GetConfigValue("PacketUIFront") || GameSaveManager.GetConfigValue("MobilePreset"):
         gUILayerBack.layer = 2
     else:
-        gUILayerBack.layer = 0
+        gUILayerBack.layer = 1
     if !waitPause:
         if isGameRunning && (Input.is_action_just_pressed("Pause") || ( !GameSaveManager.GetConfigValue("Backgrounder") && !DisplayServer.window_is_focused())):
             AudioManager.AudioPlay("Pause", AudioManagerEnum.TYPE.SFX, 0.0, true, true)
@@ -201,64 +223,97 @@ func _input(event: InputEvent) -> void :
 func GameEntry() -> void :
     var tween: Tween
     await get_tree().create_timer(0.5, false).timeout
-    levelControl.waveManager.ShowCharacter()
-    levelControl.worldEntryLabel.visible = true
-    get_tree().create_timer(2.0, false).timeout.connect(
-        func():
-            levelControl.worldEntryLabel.visible = false
-    )
-    tween = camera.create_tween()
-    tween.set_ease(Tween.EASE_IN_OUT)
-    tween.set_trans(Tween.TRANS_QUAD)
-    tween.tween_property(camera, "global_position:x", cameraRightViewMarker.global_position.x, 1.5)
-    await tween.finished
-    if !skipPacketChoose:
-        tween = camera.create_tween()
-        tween.set_ease(Tween.EASE_IN_OUT)
-        tween.set_trans(Tween.TRANS_QUART)
-        tween.tween_property(camera, "global_position:x", cameraPreViewMarker.global_position.x, 1.5)
-        await tween.finished
-        buttonPause.visible = true
-        seedBank.packetSlotContainer.visible = true
-        if GameSaveManager.GetConfigValue("MobilePreset"):
-            packetBankAnimationPlayer.play("MobileEnter")
-            seedBankAnimationPlayer.play("MobileEnter")
-        else:
-            packetBankAnimationPlayer.play("Enter")
-            seedBankAnimationPlayer.play("Enter")
-        await packetBank.chooseOver
-        if GameSaveManager.GetConfigValue("MobilePreset"):
-            packetBankAnimationPlayer.play("MobileExit")
-        else:
-            packetBankAnimationPlayer.play("Exit")
-        await get_tree().create_timer(0.5, false).timeout
-        seedBank.Ready()
-    else:
-        await get_tree().create_timer(0.5, false).timeout
-    tween = camera.create_tween()
-    tween.set_ease(Tween.EASE_IN_OUT)
-    tween.set_trans(Tween.TRANS_SINE)
-    tween.tween_property(camera, "global_position:x", cameraBeginMarker.global_position.x, 1.5)
-    await tween.finished
-    seedBank.packetSlotContainer.visible = true
-    if skipPacketChoose:
-        if GameSaveManager.GetConfigValue("MobilePreset"):
-            seedBankAnimationPlayer.play("MobileEnter")
-        else:
-            seedBankAnimationPlayer.play("Enter")
-    GameReady()
-    await levelControl.ReadySetPlantPlay()
-    GameStart()
+    match levelConfig.finishMethod:
+        TowerDefenseEnum.LEVEL_FINISH_METHOD.WAVE:
+            levelControl.waveManager.ShowCharacter()
+            levelControl.worldEntryLabel.visible = true
+            get_tree().create_timer(2.0, false).timeout.connect(
+                func():
+                    levelControl.worldEntryLabel.visible = false
+            )
+            tween = camera.create_tween()
+            tween.set_ease(Tween.EASE_IN_OUT)
+            tween.set_trans(Tween.TRANS_QUAD)
+            tween.tween_property(camera, "global_position:x", cameraRightViewMarker.global_position.x, 1.5)
+            await tween.finished
+            if !skipPacketChoose:
+                tween = camera.create_tween()
+                tween.set_ease(Tween.EASE_IN_OUT)
+                tween.set_trans(Tween.TRANS_QUART)
+                tween.tween_property(camera, "global_position:x", cameraPreViewMarker.global_position.x, 1.5)
+                await tween.finished
+                buttonPause.visible = true
+                seedBank.packetSlotContainer.visible = true
+                if GameSaveManager.GetConfigValue("MobilePreset"):
+                    packetBankAnimationPlayer.play("MobileEnter")
+                    seedBankAnimationPlayer.play("MobileEnter")
+                else:
+                    packetBankAnimationPlayer.play("Enter")
+                    seedBankAnimationPlayer.play("Enter")
+                await packetBank.chooseOver
+                if GameSaveManager.GetConfigValue("MobilePreset"):
+                    packetBankAnimationPlayer.play("MobileExit")
+                else:
+                    packetBankAnimationPlayer.play("Exit")
+                await get_tree().create_timer(0.5, false).timeout
+                seedBank.Ready()
+            else:
+                await get_tree().create_timer(0.5, false).timeout
+            tween = camera.create_tween()
+            tween.set_ease(Tween.EASE_IN_OUT)
+            tween.set_trans(Tween.TRANS_SINE)
+            tween.tween_property(camera, "global_position:x", cameraBeginMarker.global_position.x, 1.5)
+            await tween.finished
+            seedBank.packetSlotContainer.visible = true
+            if skipPacketChoose:
+                if GameSaveManager.GetConfigValue("MobilePreset"):
+                    seedBankAnimationPlayer.play("MobileEnter")
+                else:
+                    seedBankAnimationPlayer.play("Enter")
+            GameReady()
+            await levelControl.ReadySetPlantPlay()
+            GameStart()
+        TowerDefenseEnum.LEVEL_FINISH_METHOD.VASE:
+            match levelConfig.packetBankMethod:
+                TowerDefenseEnum.LEVEL_SEEDBANK_METHOD.NOONE:
+                    seedBank.shovelNode.global_position.y = 0
+                    seedBank.shovelShow = true
+                TowerDefenseEnum.LEVEL_SEEDBANK_METHOD.CHOOSE, TowerDefenseEnum.LEVEL_SEEDBANK_METHOD.PRESET, TowerDefenseEnum.LEVEL_SEEDBANK_METHOD.CONVEYOR:
+                    if !skipPacketChoose:
+                        if GameSaveManager.GetConfigValue("MobilePreset"):
+                            packetBankAnimationPlayer.play("MobileEnter")
+                            seedBankAnimationPlayer.play("MobileEnter")
+                        else:
+                            packetBankAnimationPlayer.play("Enter")
+                            seedBankAnimationPlayer.play("Enter")
+                        buttonPause.visible = true
+                        seedBank.packetSlotContainer.visible = true
+                        await packetBank.chooseOver
+                        if GameSaveManager.GetConfigValue("MobilePreset"):
+                            packetBankAnimationPlayer.play("MobileExit")
+                        else:
+                            packetBankAnimationPlayer.play("Exit")
+                        await get_tree().create_timer(0.5, false).timeout
+                        seedBank.Ready()
+                    else:
+                        if GameSaveManager.GetConfigValue("MobilePreset"):
+                            seedBankAnimationPlayer.play("MobileEnter")
+                        else:
+                            seedBankAnimationPlayer.play("Enter")
+            GameReady()
+            GameStart()
 
 func GameReady() -> void :
-    levelControl.waveManager.ClearShowCharacter()
+    match levelConfig.finishMethod:
+        TowerDefenseEnum.LEVEL_FINISH_METHOD.WAVE:
+            levelControl.waveManager.ClearShowCharacter()
+    levelControl.waveManager.levelNameLabel.visible = true
+    levelControl.waveManager.difficultLabel.visible = true
+    if Global.enterLevelMode == "DailyLevel" || Global.enterLevelMode == "OnlineLevel" || Global.enterLevelMode == "LevelTest":
+        levelControl.waveManager.difficultLabel.visible = false
     TowerDefenseManager.ExecuteLevelEvent(levelConfig.eventReady)
     if levelConfig.mowerUse:
         mapControl.MowerInit()
-    levelControl.waveManager.levelNameLabel.visible = true
-    levelControl.waveManager.difficultLabel.visible = true
-    if Global.enterLevelMode == "DailyLevel" || Global.enterLevelMode == "OnlineLevel" || Global.enterLevelMode == "LevelChoose":
-        levelControl.waveManager.difficultLabel.visible = false
 
 func GameStart() -> void :
     isGameRunning = true
@@ -285,7 +340,8 @@ func GameFail(enterCharacter: TowerDefenseCharacter) -> void :
     packetBank.visible = false
     seedBank.visible = false
     await mapControl.currentMap.EnterRoom(enterCharacter)
-    enterCharacter.process_mode = Node.PROCESS_MODE_DISABLED
+    if is_instance_valid(enterCharacter):
+        enterCharacter.process_mode = Node.PROCESS_MODE_DISABLED
     levelControl.LevelFail()
     towerDefenseZombieWon.LevelFail()
 
@@ -300,11 +356,11 @@ func ButtonPauseToggled(toggled: bool) -> void :
 
 func CheckBox2XToggled(toggled: bool) -> void :
     if toggled:
-        ViewManager.FullScreenColorBlink(Color8(121, 255, 197, 122))
+
         AudioManager.AudioPlay("2XSpeedOn", AudioManagerEnum.TYPE.SFX)
         Global.timeScale = 1.5
     else:
-        ViewManager.FullScreenColorBlink(Color8(121, 255, 197, 122), 0.3)
+
         AudioManager.AudioPlay("2XSpeedDown", AudioManagerEnum.TYPE.SFX)
         Global.timeScale = 1.0
 
@@ -316,32 +372,50 @@ func ZombieWonAreaEntered(area: Area2D) -> void :
         GameFail(character)
 
 func ViewMap() -> void :
-    if GameSaveManager.GetConfigValue("MobilePreset"):
-        packetBankAnimationPlayer.play("MobileExit")
-    else:
-        packetBankAnimationPlayer.play("Exit")
-    var tween: Tween
-    tween = camera.create_tween()
-    tween.set_ease(Tween.EASE_IN_OUT)
-    tween.set_trans(Tween.TRANS_SINE)
-    tween.tween_property(camera, "global_position:x", cameraBeginMarker.global_position.x, 1.5)
-    isView = true
-    await tween.finished
-    var broadCastConfig: BroadCastConfig = BroadCastConfig.new()
-    broadCastConfig.broadCastString = "INGAME_VIEW_BACK"
-    BroadCastManager.BroadCastAdd(broadCastConfig)
-    await viweBack
-    BroadCastManager.BraodCastClear()
-    isView = false
-    tween = camera.create_tween()
-    tween.set_ease(Tween.EASE_IN_OUT)
-    tween.set_trans(Tween.TRANS_SINE)
-    tween.tween_property(camera, "global_position:x", cameraPreViewMarker.global_position.x, 1.5)
-    await tween.finished
-    if GameSaveManager.GetConfigValue("MobilePreset"):
-        packetBankAnimationPlayer.play("MobileEnter")
-    else:
-        packetBankAnimationPlayer.play("Enter")
+    match levelConfig.finishMethod:
+        TowerDefenseEnum.LEVEL_FINISH_METHOD.WAVE:
+            if GameSaveManager.GetConfigValue("MobilePreset"):
+                packetBankAnimationPlayer.play("MobileExit")
+            else:
+                packetBankAnimationPlayer.play("Exit")
+            var tween: Tween
+            tween = camera.create_tween()
+            tween.set_ease(Tween.EASE_IN_OUT)
+            tween.set_trans(Tween.TRANS_SINE)
+            tween.tween_property(camera, "global_position:x", cameraBeginMarker.global_position.x, 1.5)
+            isView = true
+            await tween.finished
+            var broadCastConfig: BroadCastConfig = BroadCastConfig.new()
+            broadCastConfig.broadCastString = "INGAME_VIEW_BACK"
+            BroadCastManager.BroadCastAdd(broadCastConfig)
+            await viweBack
+            BroadCastManager.BraodCastClear()
+            isView = false
+            tween = camera.create_tween()
+            tween.set_ease(Tween.EASE_IN_OUT)
+            tween.set_trans(Tween.TRANS_SINE)
+            tween.tween_property(camera, "global_position:x", cameraPreViewMarker.global_position.x, 1.5)
+            await tween.finished
+            if GameSaveManager.GetConfigValue("MobilePreset"):
+                packetBankAnimationPlayer.play("MobileEnter")
+            else:
+                packetBankAnimationPlayer.play("Enter")
+        TowerDefenseEnum.LEVEL_FINISH_METHOD.VASE:
+            if GameSaveManager.GetConfigValue("MobilePreset"):
+                packetBankAnimationPlayer.play("MobileExit")
+            else:
+                packetBankAnimationPlayer.play("Exit")
+            isView = true
+            var broadCastConfig: BroadCastConfig = BroadCastConfig.new()
+            broadCastConfig.broadCastString = "INGAME_VIEW_BACK"
+            BroadCastManager.BroadCastAdd(broadCastConfig)
+            await viweBack
+            BroadCastManager.BraodCastClear()
+            isView = false
+            if GameSaveManager.GetConfigValue("MobilePreset"):
+                packetBankAnimationPlayer.play("MobileEnter")
+            else:
+                packetBankAnimationPlayer.play("Enter")
 
 func ShopButtonPressed() -> void :
     DialogManager.DialogCreate("Shop")

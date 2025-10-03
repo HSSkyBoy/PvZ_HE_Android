@@ -22,7 +22,7 @@ func Export() -> Dictionary:
     }
 
 func GetProperty() -> Dictionary:
-    var data = super.GetProperty()
+    var data = super .GetProperty()
     data["使用红线"] = {
         "列": {
             "Object": self, 

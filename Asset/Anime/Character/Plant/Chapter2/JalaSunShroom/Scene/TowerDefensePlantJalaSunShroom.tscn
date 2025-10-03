@@ -16,18 +16,18 @@ growUpTime = 60.0
 sleepAnimeClip = "Sleep"
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/JalaSunShroom")
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
 
-[node name="JalaSunShroom" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+[node name="JalaSunShroom" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("4")]
 position = Vector2(0, -30)
 trueFrameRate = 30.0
+layerSlot = [null, null, null, null, null, null, null, null, NodePath("AdobeAnimateSlot"), null, null]
 
 [node name="AdobeAnimateSlot" type="Node2D" parent="SpriteGroup/TransformPoint/JalaSunShroom" index="0"]
-position = Vector2(-11.2, -4.78)
-scale = Vector2(0.359992, 0.344477)
+position = Vector2(-11.2, -7.226)
+scale = Vector2(0.359992, 0.351717)
 script = ExtResource("5")
 followSlotId = 9
 metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

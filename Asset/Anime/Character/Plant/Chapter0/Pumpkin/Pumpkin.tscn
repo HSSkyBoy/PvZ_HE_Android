@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=4 uid="uid://cjnbqj3wah7l4"]
+
+[ext_resource type="Script" uid="uid://cbooytjnt535s" path="res://Asset/Anime/Character/Plant/Chapter0/Pumpkin/PumpkinSprite.gd" id="1"]
+[ext_resource type="Resource" uid="uid://cxrdr6glwkh4q" path="res://Asset/Anime/Character/Plant/Chapter0/Pumpkin/Pumpkin.tres" id="2"]
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="3"]
+
+[node name="PumpkinFire" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -25)
+useTween = false
+layerSlot = [null, null, null]
+layerSprite = [null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/Pumpkin_back = false
+Animation/LayerVisible/Pumpkin_front = true
+Animation/MediaReplace/Pumpkin_back.png = null
+Animation/MediaReplace/Pumpkin_front.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="Node2D" type="Node2D" parent="."]
+show_behind_parent = true
+
+[node name="Back" type="Node2D" parent="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+unique_name_in_owner = true
+show_behind_parent = true
+script = ExtResource("3")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -25)
+useTween = false
+layerSlot = [null, null, null]
+layerSprite = [null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/Pumpkin_back = true
+Animation/LayerVisible/Pumpkin_front = false
+Animation/MediaReplace/Pumpkin_back.png = null
+Animation/MediaReplace/Pumpkin_front.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

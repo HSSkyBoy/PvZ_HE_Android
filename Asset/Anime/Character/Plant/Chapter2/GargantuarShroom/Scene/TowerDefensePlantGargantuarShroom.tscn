@@ -10,7 +10,7 @@ script = ExtResource("2")
 sleepAnimeClip = "Sleep"
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/GargantuarShroom")
-gravity = 245.0
+Custom = []
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)

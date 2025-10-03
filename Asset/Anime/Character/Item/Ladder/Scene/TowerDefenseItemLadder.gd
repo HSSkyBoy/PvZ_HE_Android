@@ -2,7 +2,7 @@
 extends TowerDefenseItem
 
 func ArmorHitpointsEmpty(armorName: String) -> void :
-    super.ArmorHitpointsEmpty(armorName)
+    super .ArmorHitpointsEmpty(armorName)
     match armorName:
         "Ladder":
             Destroy()

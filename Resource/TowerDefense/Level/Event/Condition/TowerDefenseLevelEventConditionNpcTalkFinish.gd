@@ -32,5 +32,5 @@ func Init(valueDictionary: Dictionary) -> void :
             unfinishEventList.append(event)
 
 func GetProperty() -> Dictionary:
-    var data = super.GetProperty()
+    var data = super .GetProperty()
     return data

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=4 uid="uid://ctq7ujuvitimj"]
+
+[ext_resource type="Script" uid="uid://b8w4m4s8dgjpp" path="res://Prefab/TowerDefense/GUI/InGame/RainModeControl/TowerDefenseRainModeControl.gd" id="1"]
+
+[node name="TowerDefenseRainModeControl" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1")

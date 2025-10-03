@@ -2,7 +2,7 @@
 extends TowerDefensePlant
 
 func AttackDeal(character: TowerDefenseCharacter, type: String) -> void :
-    super.AttackDeal(character, type)
+    super .AttackDeal(character, type)
     if type == "Eat":
         Hurt(10)
         character.Garlic()

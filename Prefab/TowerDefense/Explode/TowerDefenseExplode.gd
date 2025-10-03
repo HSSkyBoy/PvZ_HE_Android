@@ -54,7 +54,7 @@ func InitExplode(size: Vector2, eventList: Array[TowerDefenseCharacterEventBase]
     params.collision_mask = 1
     params.transform = Transform2D(0, global_position)
     await get_tree().physics_frame
-    var arr = get_world_2d().direct_space_state.intersect_shape(params, 1000)
+    var arr = get_world_2d().direct_space_state.intersect_shape(params, 10000)
     for infor: Dictionary in arr:
         if infor["collider"] is Area2D:
             var area: Area2D = infor["collider"]
@@ -84,10 +84,15 @@ func InitExplodeLine(line: int, eventList: Array[TowerDefenseCharacterEventBase]
         if character is TowerDefenseCharacter:
             if character.camp == camp:
                 continue
+            if !is_instance_valid(character.hitBox):
+                continue
+            if !character.hitBox.monitorable:
+                continue
             if exclude.has(character):
                 continue
-            if !(collisionFlags & character.instance.maskFlags) && collisionFlags != -1:
-                continue
+            if character.config.name != "ItemLadder":
+                if !(collisionFlags & character.instance.maskFlags) && collisionFlags != -1:
+                    continue
             for event: TowerDefenseCharacterEventBase in eventList:
                 event.Execute(character.global_position + Vector2(randf_range(-25, 25), 0.0), character)
     queue_free.call_deferred()

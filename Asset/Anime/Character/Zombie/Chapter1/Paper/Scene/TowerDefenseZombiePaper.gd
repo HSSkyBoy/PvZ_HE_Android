@@ -6,11 +6,11 @@ const ZOMBIE_PAPER_MADHEAD = preload("uid://s4hnj2igecma")
 var angry: bool = false
 
 func AttackProcessing(delta: float) -> void :
-    super.AttackProcessing(delta)
+    super .AttackProcessing(delta)
     sprite.timeScale = timeScale * 2.0
 
 func DieProcessing(delta: float) -> void :
-    super.DieProcessing(delta)
+    super .DieProcessing(delta)
     sprite.timeScale = timeScale * 2.0
 
 func GaspEntered():
@@ -47,7 +47,7 @@ func ArmorHitpointsEmpty(armorName: String) -> void :
             AudioManager.AudioPlay("NewspaperRip", AudioManagerEnum.TYPE.SFX)
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "Gasp":
             AudioManager.AudioPlay("NewspaperRarrgh", AudioManagerEnum.TYPE.SFX)

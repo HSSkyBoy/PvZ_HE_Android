@@ -1,7 +1,6 @@
 @tool
 extends TowerDefensePlant
 
-var cell: TowerDefenseCellInstance
 var graveStone: TowerDefenseGravestone
 
 var tween: Tween
@@ -9,7 +8,7 @@ var tween: Tween
 func _ready() -> void :
     if Engine.is_editor_hint():
         return
-    super._ready()
+    super ._ready()
     if !inGame:
         return
     cell = TowerDefenseManager.GetMapCell(gridPos)
@@ -25,11 +24,11 @@ func IdleEntered() -> void :
 
 @warning_ignore("unused_parameter")
 func IdleProcessing(delta: float) -> void :
-    super.IdleProcessing(delta)
+    super .IdleProcessing(delta)
     sprite.timeScale = timeScale
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "Land":
             AudioManager.AudioPlay("GraveBusterChomp", AudioManagerEnum.TYPE.SFX)
@@ -59,4 +58,4 @@ func Destroy(freeInsance: bool = true) -> void :
         await get_tree().physics_frame
         if is_instance_valid(graveStone):
             graveStone.SetSpriteGroupShaderParameter("surfaceUpPos", 0.0)
-    super.Destroy(freeInsance)
+    super .Destroy(freeInsance)

@@ -17,12 +17,12 @@ var over: bool = false
 func _physics_process(delta: float) -> void :
     if Engine.is_editor_hint():
         return
-    super._physics_process(delta)
+    super ._physics_process(delta)
     light.visible = TowerDefenseManager.GetMapIsNight() && GameSaveManager.GetConfigValue("MapEffect")
 
 @warning_ignore("unused_parameter")
 func IdleProcessing(delta: float) -> void :
-    super.IdleProcessing(delta)
+    super .IdleProcessing(delta)
     sprite.timeScale = timeScale
 
     if coldCheckInterval > 0:
@@ -47,3 +47,4 @@ func DestroySet() -> void :
     projectileEffect.gridPos = gridPos
     projectileEffect.global_position = global_position
     characterNode.add_child(projectileEffect)
+    await get_tree().physics_frame

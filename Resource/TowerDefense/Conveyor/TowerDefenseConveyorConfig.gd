@@ -3,6 +3,7 @@ class_name TowerDefenseConveyorConfig extends Resource
 @export var interval: float = 3.0
 @export var intervalIncreaseEvery: int = 1000000
 @export var intervalMagnification: float = 0.5
+@export var packetPrioritySpawnList: Array[TowerDefenseLevelPacketConfig] = []
 @export var packetList: Array[TowerDefenseConveyorPacketConfig] = []
 @export var waveEvent: Array = [[], [], [], [], [], [], [], [], [], [], []]
 
@@ -11,6 +12,12 @@ func Init(waveData: Dictionary) -> void :
     interval = waveData.get("Interval", 3.0)
     intervalIncreaseEvery = waveData.get("IntervalIncreaseEvery", 2.0)
     intervalMagnification = waveData.get("IntervalMagnification", 0.5)
+
+    var packetPrioritySpawnListGet = waveData.get("PacketPrioritySpawnList", [])
+    for packetData in packetPrioritySpawnListGet:
+        var packet: TowerDefenseLevelPacketConfig = TowerDefenseLevelPacketConfig.new()
+        packet.Init(packetData)
+        packetPrioritySpawnList.append(packet)
 
     var packetListGet: Array = waveData.get("Packet", [])
     for packetData: Dictionary in packetListGet:

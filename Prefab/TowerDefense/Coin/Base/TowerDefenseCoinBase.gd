@@ -56,7 +56,7 @@ func Init(_height: float = 0.0, _velocity: Vector2 = Vector2.ZERO, _gravity: flo
 func _ready() -> void :
     if Engine.is_editor_hint():
         return
-    super._ready()
+    super ._ready()
     collect.connect(TowerDefenseManager.AddCoin)
     view = get_viewport()
     camera = view.get_camera_2d()

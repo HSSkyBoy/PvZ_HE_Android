@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="TowerDefenseProjectileConfig" load_steps=4 format=4 uid="uid://iivte5cm48y7"]
+
+[ext_resource type="PackedScene" uid="uid://oljar5hd2ra7" path="res://Asset/Texture/TowerDefense/Projectile/Melon/ProjectileMelon.tscn" id="1"]
+[ext_resource type="Script" uid="uid://b7ddnv74g0463" path="res://Resource/TowerDefense/Projectile/TowerDefenseProjectileConfig.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://diyc7ytfbpacl" path="res://Prefab/Particles/Splats/MelonpultSplats/MelonpultSplats.tscn" id="3"]
+
+[resource]
+script = ExtResource("2")
+name = "MelonDefault"
+size = Vector2(28, 28)
+baseDamage = 80.0
+projectileScene = ExtResource("1")
+projectileObject = 309
+splatSceneType = "Particles"
+splatAudio = "MelonImpact"
+splatScene = ExtResource("3")
+splatObject = 107
+hitEffect = null
+hitTargetEventList = []
+hitCharacterEventList = []
+hitGroundEventList = []
+rotateScale = 5.0
+hitBody = false
+fireLength = -1.0
+useRange = true
+rangeSize = Vector2(0.5, 1.25)
+hitPesontage = 0.25
+damageFlags = 2
+fireMethodFlags = 2
+collisionFlags = 43
+catapultHeight = 600.0
+penetrateNum = 3
+penetrateOverBack = true
+backOutGround = true
+backDuration = 1.0
+Flag/Damage = 2
+Flag/FireMethod = 2
+Flag/Collision = 43
+Catapult/Height = 600.0

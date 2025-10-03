@@ -5,13 +5,13 @@
 	"LevelNumber": 1.0,
 	"NextLevel": "",
 	"HomeWorld": "Morden",
-	"Talk": "",
+	"Talk": "Level3_1Talk",
 	"Tutorial": "",
 	"Map": "Backyard",
 	"BGM": "Backyard",
 	"Reward": {
-		"RewardType": "Noone",
-		"RewardFirst": ""
+		"RewardType": "Packet",
+		"RewardFirst": "PlantPeaCat"
 	},
 	"Event": {
 		"EventInit": [],
@@ -31,11 +31,11 @@
 		"MovingMethod": "Land"
 	},
 	"WaveManager": {
-		"FlagZombie": "ZombieFlagCone",
+		"FlagZombie": "ZombieFlag",
 		"FlagWaveInterval": 7.0,
 		"MaxNextWaveHealthPercentage": 0.25,
 		"MinNextWaveHealthPercentage": 0.3,
-		"BeginCol": 1.0,
+		"BeginCol": 20.0,
 		"SpawnColEnd": 20.0,
 		"SpawnColStart": 10.0,
 		"Dynamic": [
@@ -105,7 +105,7 @@
 				"Spawn": [
 					{
 						"Zombie": "ZombieNormal",
-						"Line": 3.0,
+						"Line": -1,
 						"Num": 1.0
 					}
 				],
@@ -123,8 +123,8 @@
 				],
 				"Spawn": [
 					{
-						"Zombie": "ZombieNormal",
-						"Line": 4.0,
+						"Zombie": "ZombieDuck",
+						"Line": -1.0,
 						"Num": 1.0
 					}
 				],
@@ -198,6 +198,11 @@
 						"Zombie": "ZombieNormalCone",
 						"Line": -1.0,
 						"Num": 1.0
+					},
+					{
+						"Zombie": "ZombieDuck",
+						"Line": -1.0,
+						"Num": 1.0
 					}
 				],
 				"Event": []
@@ -253,7 +258,7 @@
 						"Num": 1.0
 					},
 					{
-						"Zombie": "ZombieBalloon",
+						"Zombie": "ZombieDuck",
 						"Line": -1.0,
 						"Num": 1.0
 					}
@@ -285,6 +290,11 @@
 						"Zombie": "ZombiePolevaulter",
 						"Line": -1.0,
 						"Num": 1.0
+					},
+					{
+						"Zombie": "ZombieDuck",
+						"Line": -1.0,
+						"Num": 2.0
 					}
 				],
 				"Event": []
@@ -308,7 +318,7 @@
 					{
 						"Zombie": "ZombieNormalCone",
 						"Line": -1.0,
-						"Num": 1.0
+						"Num": 2.0
 					},
 					{
 						"Zombie": "ZombieNormalBucket",
@@ -316,7 +326,7 @@
 						"Num": 1.0
 					},
 					{
-						"Zombie": "ZombieBalloon",
+						"Zombie": "ZombieDuck",
 						"Line": -1.0,
 						"Num": 1.0
 					},
@@ -347,7 +357,7 @@
 					{
 						"Zombie": "ZombieNormalCone",
 						"Line": -1.0,
-						"Num": 1.0
+						"Num": 3.0
 					},
 					{
 						"Zombie": "ZombieNormalBucket",
@@ -356,6 +366,11 @@
 					},
 					{
 						"Zombie": "ZombiePolevaulter",
+						"Line": -1.0,
+						"Num": 1.0
+					},
+					{
+						"Zombie": "ZombieDuck",
 						"Line": -1.0,
 						"Num": 1.0
 					}
@@ -389,9 +404,9 @@
 						"Num": 1.0
 					},
 					{
-						"Zombie": "ZombieBalloon",
+						"Zombie": "ZombieDuck",
 						"Line": -1.0,
-						"Num": 1.0
+						"Num": 2.0
 					},
 					{
 						"Zombie": "ZombiePolevaulter",
@@ -428,14 +443,14 @@
 						"Num": 1.0
 					},
 					{
-						"Zombie": "ZombieBalloon",
+						"Zombie": "ZombieDuck",
 						"Line": -1.0,
-						"Num": 1.0
+						"Num": 2.0
 					},
 					{
 						"Zombie": "ZombiePolevaulter",
 						"Line": -1.0,
-						"Num": 1.0
+						"Num": 2.0
 					}
 				],
 				"Event": []
@@ -496,9 +511,9 @@
 						"Num": 4.0
 					},
 					{
-						"Zombie": "ZombieBalloon",
+						"Zombie": "ZombieDuck",
 						"Line": -1.0,
-						"Num": 2.0
+						"Num": 3.0
 					},
 					{
 						"Zombie": "ZombiePolevaulter",

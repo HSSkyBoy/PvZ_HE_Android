@@ -10,7 +10,6 @@ size_override = Vector2(564, 468)
 script = ExtResource("1")
 animeFile = "res://Asset/Anime/ZombieWon/ZombiesWon.dat"
 frameRate = 24.0
-frameScale = 1
 frameMax = 24
 imageAtlas = SubResource("PortableCompressedTexture2D_nrru3")
 mediaList = [Rect2(0, 0, 564, 468)]

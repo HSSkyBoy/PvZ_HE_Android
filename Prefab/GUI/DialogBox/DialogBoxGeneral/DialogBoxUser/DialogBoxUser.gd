@@ -14,7 +14,7 @@ const userButtonGroup = preload("uid://dge7tb6et4lw7")
 
 var editUser: String = ""
 func _ready() -> void :
-    super._ready()
+    super ._ready()
     RefreshUser()
 
 
@@ -28,6 +28,7 @@ func RefreshUser():
 
 @warning_ignore("unused_parameter")
 func _physics_process(delta: float) -> void :
+    super ._physics_process(delta)
     deleteButton.disabled = GameSaveManager.GetUserList().size() <= 1
 
 func UserItemCreate(user: String):

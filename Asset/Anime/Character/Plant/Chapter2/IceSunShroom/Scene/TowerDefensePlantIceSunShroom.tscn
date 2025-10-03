@@ -37,7 +37,6 @@ eventList = [SubResource("Resource_us7kg"), SubResource("Resource_ixw52"), SubRe
 sleepAnimeClip = "Sleep"
 config = ExtResource("6")
 sprite = NodePath("SpriteGroup/TransformPoint/IceSunShroom")
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)

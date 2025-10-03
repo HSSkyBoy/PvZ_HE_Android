@@ -24,6 +24,7 @@ shader_parameter/iceSpeedDown = false
 shader_parameter/cover = false
 shader_parameter/hypnoses = false
 shader_parameter/imitater = false
+shader_parameter/redHeat = false
 
 [node name="TowerDefenseCharacter" type="Node2D"]
 z_index = -15
@@ -40,6 +41,7 @@ fit_margin = 0.0
 clear_margin = 0.0
 
 [node name="SpriteMask" type="ColorRect" parent="SpriteGroup"]
+unique_name_in_owner = true
 offset_left = -30.0
 offset_top = -90.0
 offset_right = 31.0

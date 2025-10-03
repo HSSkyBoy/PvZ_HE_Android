@@ -18,12 +18,12 @@ var plantfoodLoopCountCurrent: int = 0
 func _ready() -> void :
     if Engine.is_editor_hint():
         return
-    super._ready()
+    super ._ready()
     add_to_group("Plant", true)
     instance.hitpointsEmpty.connect(Destroy)
 
 func _physics_process(delta: float) -> void :
-    super._physics_process(delta)
+    super ._physics_process(delta)
     if Engine.is_editor_hint():
         return
     showHealthComponent.alive = GameSaveManager.GetConfigValue("ShowPlantHealth")
@@ -57,10 +57,10 @@ func PlantExited() -> void :
     pass
 
 func AnimeEvent(command: String, argument: Variant) -> void :
-    super.AnimeEvent(command, argument)
+    super .AnimeEvent(command, argument)
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         plantAnimeClip:
             Idle()
@@ -79,17 +79,17 @@ func AnimeCompleted(clip: String) -> void :
 func Hurt(num: float, playSplatSound: bool = true, velocity: Vector2 = Vector2.ZERO, createDamagePart: bool = true) -> float:
     if plantfoodMode:
         return 0
-    return super.Hurt(num, playSplatSound, velocity, createDamagePart)
+    return super .Hurt(num, playSplatSound, velocity, createDamagePart)
 
 func SmashHurt(num: float, playSplatSound: bool = true, velocity: Vector2 = Vector2.ZERO) -> float:
     if plantfoodMode:
         return 0
-    return super.SmashHurt(num, playSplatSound, velocity)
+    return super .SmashHurt(num, playSplatSound, velocity)
 
 func ExplodeHurt(num: float, type: String = "Bomb", playSplatSound: bool = true, velocity: Vector2 = Vector2.ZERO) -> float:
     if plantfoodMode:
         return 0
-    return super.ExplodeHurt(num, type, playSplatSound, velocity)
+    return super .ExplodeHurt(num, type, playSplatSound, velocity)
 
 func Burnt() -> void :
     pass

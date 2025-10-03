@@ -22,7 +22,6 @@ fireInterval = 1.5
 sleepAnimeClip = "Sleep"
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/ScaredyShroom")
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)

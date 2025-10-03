@@ -281,12 +281,72 @@
 				{
 					"Stage" : [
 						{
+							"SaveKey" : "GargantuarShroomCustom0" ,
+							"Texture" : "uid://fo4oat55hmhv" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PLANT_GARGANTUARSHROOM_CUSTOM_0" ,
+							"Type" : "Coin" ,
+							"Cost" : 5000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						}
+					]
+				},
+				{
+					"Stage" : [
+						{
 							"SaveKey" : "PeaCatCustom0" ,
 							"Texture" : "uid://clafr70vlwdwm" ,
 							"Describe" : "" ,
 							"NpcTalk" : "SHOP_NPC_TALK_PLANT_PEACAT_CUSTOM_0" ,
 							"Type" : "Coin" ,
 							"Cost" : 5000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						}
+					]
+				},
+				{
+					"Stage" : [
+						{
+							"SaveKey" : "SunPadCustom0" ,
+							"Texture" : "uid://bqglgkqq58u3f" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PLANT_SUNPAD_CUSTOM_0" ,
+							"Type" : "Coin" ,
+							"Cost" : 5000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						}
+					]
+				},
+				{
+					"Stage" : [
+						{
+							"SaveKey" : "WildPeaCustom0" ,
+							"Texture" : "uid://ctwc2nv2kddyu" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PLANT_WILDPEA_CUSTOM_0" ,
+							"Type" : "Coin" ,
+							"Cost" : 15000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						}
+					]
+				},
+				{
+					"Stage" : [
+						{
+							"SaveKey" : "QueenSunFlowerCustom0" ,
+							"Texture" : "uid://bdsx8ive4x780" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PLANT_QUEENSUNFLOWER_CUSTOM_0" ,
+							"Type" : "Coin" ,
+							"Cost" : 15000 ,
 							"OpenMinNum" : 0 ,
 							"OpenMaxNum" : 1 ,
 							"AddNum" : 1
@@ -385,6 +445,22 @@
 							"Texture" : "" ,
 							"Describe" : "" ,
 							"NpcTalk" : "SHOP_NPC_TALK_PLANT_THREECATUS" ,
+							"Type" : "Coin" ,
+							"Cost" : 20000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						}
+					]
+				},
+				{
+					"Stage" : [
+						{
+							"SaveType" : "TowerDefensePacket" ,
+							"SaveKey" : "PlantPumpkinFireIce" ,
+							"Texture" : "" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PLANT_PUMPKINFIREICE" ,
 							"Type" : "Coin" ,
 							"Cost" : 20000 ,
 							"OpenMinNum" : 0 ,

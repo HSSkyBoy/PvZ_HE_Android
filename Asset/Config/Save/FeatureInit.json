@@ -14,6 +14,7 @@
 	
 	"Chapter1Paper" : false ,
 	"Chapter2Paper" : false ,
+	"Chapter3Paper" : false ,
 	
 	"Pitchfork" : 0.0 ,
 	"PitchforkSun" : 0.0 ,
@@ -39,10 +40,23 @@
 	"ReCactusCustom0": false ,
 	"SunShroomCustom1" : false ,
 	"PuffPotCustom0" : false ,
+	
 	"GraveMineCustom0" : false ,
 	"ScaredySunShroomCustom0" : false ,
 	"IcenutCustom0" : false ,
 	"SnowShroomCustom0" : false ,
 	"WinterMelonShroomCustom0" : false ,
+	"GargantuarShroomCustom0" : false ,
+	"PeaLilyPadCustom0" : false ,
+	
 	"PeaCatCustom0" : false ,
+	"SeaNutCustom0" : false ,
+	"SnowwoodCoustom0" : false ,
+	"MelonpultSpikeCustom0" : false ,
+	
+	"SunPadCustom0" : false ,
+	
+	"WildPeaCustom0" : false ,
+	"QueenSunFlowerCustom0" : false ,
+	
 }

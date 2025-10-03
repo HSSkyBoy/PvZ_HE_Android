@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=4 uid="uid://ixq038qhqvtw"]
+
+[ext_resource type="PackedScene" uid="uid://udsya47xq3qh" path="res://Prefab/TowerDefense/Character/TowerDefenseVase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://dye1m7hxwy0gj" path="res://Asset/Anime/Character/Vase/Zombie/Scene/TowerDefenseVaseZombie.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://djs8ytienucdy" path="res://Prefab/Particles/Vase/Zombie/VaseZombieChunks.tscn" id="3"]
+[ext_resource type="Resource" uid="uid://dh3p7dnk4ctot" path="res://Asset/Anime/Character/Vase/Zombie/Config/TowerDefenseVaseZombie.tres" id="4"]
+[ext_resource type="PackedScene" uid="uid://bkqfdwsi6mufm" path="res://Asset/Anime/Character/Vase/Zombie/VaseZombie.tscn" id="5"]
+
+[node name="TowerDefenseVaseZombie" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+chunkParticles = ExtResource("3")
+packetBank = "GeneralZombie"
+config = ExtResource("4")
+sprite = NodePath("SpriteGroup/TransformPoint/VaseZombie")
+
+[node name="VaseZombie" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("5")]
+position = Vector2(0, -36)
+
+[node name="ShadowSprite" parent="." index="4"]
+scale = Vector2(1.1395348, 1.1111112)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 1.25)

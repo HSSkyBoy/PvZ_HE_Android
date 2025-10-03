@@ -16,10 +16,7 @@ impFliters = ["Zombie_imp_jaw", "Zombie_imp_head", "Zombie_imp_body1", "Zombie_i
 impThrowDamagePointName = "ThrowImp"
 groan = "ZombieGargantuarGroans"
 useAttackDps = false
-inSwimAnimeClip = ""
-outSwimAnimeClip = ""
 attackAnimeClip = "Smash"
-attackWaterAnimeClip = ""
 
 [node name="ShadowSprite" parent="." index="3"]
 scale = Vector2(2.07273, 1.56522)

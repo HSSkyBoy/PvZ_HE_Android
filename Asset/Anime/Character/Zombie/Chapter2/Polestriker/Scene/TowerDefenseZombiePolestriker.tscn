@@ -41,28 +41,27 @@ position = Vector2(23, 44)
 
 [node name="ZombiePolestriker" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("7")]
 position = Vector2(-23, -44)
-layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("HeadSlot"), null, null, NodePath("HemetSlot"), null, null, NodePath("ArmSlot"), null, null, null]
-layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ZombieDuckytube"), null, null, null, null, null, null, null, null, null, null]
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 Animation/MediaReplace/Zombie_football_red_helmet.png = ExtResource("8")
 
 [node name="ZombieDuckytube" parent="SpriteGroup/TransformPoint/ZombiePolestriker" index="0"]
-position = Vector2(-11.2657, -46.6707)
-rotation = 0.113327
+position = Vector2(-11.8565, -45.1755)
+rotation = 0.0961803
 
 [node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombiePolestriker" index="1"]
-position = Vector2(-7.29958, -50.6763)
-rotation = -0.0328612
-scale = Vector2(0.799834, 0.799834)
+position = Vector2(-7.8603, -49.6485)
+rotation = -0.0640886
+scale = Vector2(0.799746, 0.799746)
 
 [node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombiePolestriker" index="2"]
-position = Vector2(9.92683, -1.88774)
-rotation = -0.122173
-scale = Vector2(0.799988, 0.799988)
+position = Vector2(10.9608, -0.294644)
+rotation = -0.200713
 
 [node name="HemetSlot" parent="SpriteGroup/TransformPoint/ZombiePolestriker" index="3"]
-position = Vector2(-10.5368, -52.4823)
-rotation = -0.0328612
-scale = Vector2(0.799834, 0.799834)
+position = Vector2(-10.8481, -50.3174)
+rotation = -0.0640886
+scale = Vector2(0.799746, 0.799746)
 
 [node name="ZombieWaterLine" parent="SpriteGroup/TransformPoint" index="1" instance=ExtResource("9")]
 visible = false
@@ -82,6 +81,7 @@ position = Vector2(4, -2)
 unique_name_in_owner = true
 checkArea = NodePath("CheckJumpArea")
 checkIntreval = 0
+checkLine = true
 checkTall = true
 
 [node name="CheckJumpArea" type="Area2D" parent="AttackComponent2" index="0"]

@@ -60,7 +60,7 @@ func DealHurt(num: float, playSplatAudio: bool = true, velocity: Vector2 = Vecto
         AudioManager.AudioPlay(impactAudio, AudioManagerEnum.TYPE.SFX)
     if hitPoints > 0:
         if armorMethodFlags & TowerDefenseEnum.ARMOR_METHOD_FLAGS.DAMAGEABLE:
-            var persontage: float = hitPoints / config.damagePoint
+            var persontage: float = hitPoints / (config.damagePoint * hitpointScale)
             if stageIndex < stagePersontage.size():
                 while persontage <= stagePersontage[stageIndex]:
                     stageIndex += 1

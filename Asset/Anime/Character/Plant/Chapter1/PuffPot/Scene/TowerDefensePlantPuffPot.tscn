@@ -18,12 +18,12 @@ b = Vector2(100, 0)
 z_index = -13
 script = ExtResource("2")
 fireInterval = 1.5
+fireNum = 1
 sleepAnimeClip = "Sleep"
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/PuffPot")
 Custom = []
 itemLayer = 2
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
@@ -33,7 +33,7 @@ position = Vector2(0, -32)
 layerSlot = [null, null, null, NodePath("TipSlot"), null, null, null, null, NodePath("PotSlot"), null, null, null, null, null, null, null]
 
 [node name="PotSlot" type="Node2D" parent="SpriteGroup/TransformPoint/PuffPot" index="0"]
-position = Vector2(-31.95, -10.365)
+position = Vector2(-31.95, -10.2037)
 script = ExtResource("5")
 followSlotId = 9
 useScale = false
@@ -43,7 +43,7 @@ metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
 position = Vector2(32, 0)
 
 [node name="TipSlot" type="Node2D" parent="SpriteGroup/TransformPoint/PuffPot" index="1"]
-position = Vector2(12.65, 36.1433)
+position = Vector2(12.65, 36.3733)
 scale = Vector2(0.562496, 0.562496)
 script = ExtResource("5")
 followSlotId = 4

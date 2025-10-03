@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="TowerDefenseZombieConfig" load_steps=5 format=4 uid="uid://dl4xu43gud4kw"]
+
+[ext_resource type="Resource" uid="uid://bx02qwdlntj12" path="res://Asset/Anime/Character/Zombie/Chapter3/Cat/Armor/ZombieCatArmorData.tres" id="1"]
+[ext_resource type="PackedScene" uid="uid://bpf07yxaoaqj0" path="res://Asset/Anime/Character/Zombie/Ash/General/ZombieGeneralAsh.tscn" id="2"]
+[ext_resource type="Resource" uid="uid://c0x4w57xigs25" path="res://Asset/Anime/Character/Zombie/Chapter3/Cat/DamagePoint/ZombieCatDamagePointData.tres" id="3"]
+[ext_resource type="Script" uid="uid://fq0affmtew5n" path="res://Resource/TowerDefense/Character/Config/TowerDefenseZombieConfig.gd" id="4"]
+
+[resource]
+script = ExtResource("4")
+physique = 2
+attack = 200.0
+smashAttack = 0.0
+impactAudio = ""
+weight = 4000
+wavePointCost = 400
+canSpawnPlantfood = true
+excludeLineGridType = []
+spawnLineNeed = []
+name = "ZombieCat"
+hitpointsNearDeath = 70.0
+hitpoints = 200.0
+explosionHurt = -1.0
+smashHurt = -1.0
+spikeHurt = -1.0
+canDragIntoWater = true
+sleepTime = "Never"
+height = 2
+damagePointData = ExtResource("3")
+armorData = ExtResource("1")
+customData = null
+ashScene = ExtResource("2")
+homeWorld = 1
+costRise = -1
+cost = 175
+packetCooldown = 5.0
+startingCooldown = 0.0
+plantCoverAll = false
+plantCover = []
+plantCoverRecycle = []
+plantGridType = [-1]
+plantGridOverrideType = 0
+collisionFlags = 1
+maskFlags = 9
+unUseBuffFlags = 0
+physiqueTypeFlags = 0
+elementFlags = 0
+Flag/Collision = 1
+Flag/Mask = 9
+Flag/UnUseBuff = 0
+Flag/PhysiqueType = 0
+Flag/Elemet = 0

@@ -23,7 +23,7 @@ func Export() -> Dictionary:
     }
 
 func GetProperty() -> Dictionary:
-    var data = super.GetProperty()
+    var data = super .GetProperty()
     data["播放警告"] = {
         "文本": {
             "Object": self, 

@@ -13,11 +13,9 @@ size = Vector2(154, 33)
 
 [node name="TowerDefenseZombieZamboni" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
 script = ExtResource("2")
-walkAnimeClip = "Idle"
-inSwimAnimeClip = ""
-swimAnimeClip = "Idle"
-outSwimAnimeClip = ""
-attackAnimeClip = "Idle"
+walkAnimeClip = "Drive"
+swimAnimeClip = "Drive"
+attackAnimeClip = "Drive"
 dieAnimeClip = "Wheelie&Wheelie2"
 dieWaterAnimeClip = "Wheelie&Wheelie2"
 config = ExtResource("3")

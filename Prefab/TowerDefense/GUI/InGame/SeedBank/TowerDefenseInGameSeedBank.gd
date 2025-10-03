@@ -20,6 +20,8 @@ signal sunChange(num: int)
 @onready var conveyorBeltContainer: HBoxContainer = %ConveyorBeltContainer
 @onready var conveyorBelt: TowerDefenseConveyorBelt = %ConveyorBelt
 
+@onready var rainModeControl: TowerDefenseRainModeControl = %RainModeControl
+
 @onready var shovelNode: Control = %ShovelNode
 @onready var shovelButton: TextureButton = %ShovelButton
 @onready var shovelSprite: Sprite2D = %ShovelSprite
@@ -173,6 +175,8 @@ func Start() -> void :
     else:
         if conveyorBeltContainer.visible:
             conveyorBelt.running = true
+    if rainModeControl.visible:
+        rainModeControl.running = true
     for packet: Node in packetContainer.get_children():
         if packet is TowerDefenseInGamePacketShow:
             packet.alive = true
@@ -187,97 +191,13 @@ func Start() -> void :
 func PickPacket(_packet: TowerDefenseInGamePacketShow) -> void :
     if !mapControl:
         return
-    mapControl.shovelPick = false
-    mapControl.shovelSprite.visible = false
-    if is_instance_valid(mapControl.packetPick):
-        if _packet != mapControl.packetPick:
-            mapControl.packetPick.Reset()
-            if !mapControl.packetPick.config.characterConfig.plantCover.is_empty():
-                for character: TowerDefenseCharacter in TowerDefenseManager.GetCharacter():
-                    if mapControl.packetPick.config.characterConfig.plantCover.has(character.config.name):
-                        character.SetSpriteGroupShaderParameter("cover", false)
-    if _packet.select:
-        mapControl.packetPick = _packet
-        if !mapControl.packetPick.config.characterConfig.plantCover.is_empty():
-            for character: TowerDefenseCharacter in TowerDefenseManager.GetCharacter():
-                if mapControl.packetPick.config.characterConfig.plantCover.has(character.config.name):
-                    character.SetSpriteGroupShaderParameter("cover", true)
-
-
-        if mapControl.followSprite:
-            mapControl.followSprite.queue_free()
-        if mapControl.plantSprite:
-            mapControl.plantSprite.queue_free()
-        var characterConfig: TowerDefenseCharacterConfig = _packet.config.characterConfig
-        mapControl.followSprite = TowerDefenseManager.GetCharacterSprite(characterConfig.name)
-        mapControl.followSprite.light_mask = 0
-        mapControl.followSprite.z_index = 1000
-        mapControl.followSprite.position = Vector2(-100, -100)
-
-        mapControl.plantSprite = TowerDefenseManager.GetCharacterSprite(characterConfig.name)
-        mapControl.plantSprite.light_mask = 0
-        mapControl.plantSprite.modulate.a = 0.5
-        mapControl.plantSprite.z_index = 900
-        mapControl.plantSprite.position = Vector2(-100, -100)
-
-        if characterConfig.armorData:
-            if _packet.config.initArmor.size() > 0:
-                for armorName: String in _packet.config.initArmor:
-                    var armor: CharacterArmorConfig = characterConfig.armorData.armorDictionary[armorName]
-                    match armor.replaceMethod:
-                        "Media":
-                            characterConfig.armorData.OpenArmorFliters(mapControl.followSprite, armorName)
-                            characterConfig.armorData.SetArmorReplace(mapControl.followSprite, armorName, 0)
-                            characterConfig.armorData.OpenArmorFliters(mapControl.plantSprite, armorName)
-                            characterConfig.armorData.SetArmorReplace(mapControl.plantSprite, armorName, 0)
-                        "Sprite":
-                            var followSlotNode: AdobeAnimateSlot = mapControl.followSprite.get_node(armor.replaceSpriteSlotPath)
-                            var _follosprite: Sprite2D = Sprite2D.new()
-                            _follosprite.texture = armor.stageAnimeTexture[0]
-                            _follosprite.position = armor.replaceSpriteOffset
-                            _follosprite.rotation = armor.replaceSpriteRotation
-                            _follosprite.scale = armor.replaceSpriteScale
-                            followSlotNode.add_child(_follosprite)
-                            var plantSlotNode: AdobeAnimateSlot = mapControl.plantSprite.get_node(armor.replaceSpriteSlotPath)
-                            var _plantsprite: Sprite2D = Sprite2D.new()
-                            _plantsprite.texture = armor.stageAnimeTexture[0]
-                            _plantsprite.position = armor.replaceSpriteOffset
-                            _plantsprite.rotation = armor.replaceSpriteRotation
-                            _plantsprite.scale = armor.replaceSpriteScale
-                            plantSlotNode.add_child(_plantsprite)
-        if characterConfig.customData:
-            var packetValue: Dictionary = GameSaveManager.GetTowerDefensePacketValue(_packet.config.saveKey)
-            if packetValue.get_or_add("Key", {}).get_or_add("Custom", "") != "":
-                characterConfig.customData.SetCustomFliters(mapControl.followSprite, packetValue["Key"]["Custom"])
-                characterConfig.customData.SetCustomFliters(mapControl.plantSprite, packetValue["Key"]["Custom"])
-        mapControl.spriteNode.add_child(mapControl.followSprite)
-        mapControl.spriteNode.add_child(mapControl.plantSprite)
-    else:
-        Release()
+    mapControl.PickPacket(_packet)
 
 func Release() -> void :
+    shovelButton.button_pressed = false
     if !mapControl:
         return
-    if mapControl.shovelPick:
-        AudioManager.AudioPlay("ShovelDeny", AudioManagerEnum.TYPE.SFX)
-    if is_instance_valid(mapControl.packetPick):
-        if !mapControl.packetPick.config.characterConfig.plantCover.is_empty():
-            for character: TowerDefenseCharacter in TowerDefenseManager.GetCharacter():
-                if mapControl.packetPick.config.characterConfig.plantCover.has(character.config.name):
-                    character.SetSpriteGroupShaderParameter("cover", false)
-        mapControl.packetPick.Reset()
-        mapControl.packetPick = null
-    mapControl.shovelPick = false
-    mapControl.shovelSprite.visible = false
-    mapControl.plantfoodPick = false
-    mapControl.plantfoodSprite.visible = false
-    shovelButton.button_pressed = false
-    if mapControl.followSprite:
-        mapControl.followSprite.queue_free()
-        mapControl.followSprite = null
-    if mapControl.plantSprite:
-        mapControl.plantSprite.queue_free()
-        mapControl.plantSprite = null
+    mapControl.Release()
 
 func ShovelButtonPressed() -> void :
     if !shovelShow && !TowerDefenseManager.currentControl.isGameRunning:
@@ -285,24 +205,7 @@ func ShovelButtonPressed() -> void :
         return
     if !mapControl:
         return
-    if is_instance_valid(mapControl.packetPick):
-        mapControl.packetPick.Reset()
-        mapControl.packetPick = null
-        if mapControl.followSprite:
-            mapControl.followSprite.queue_free()
-            mapControl.followSprite = null
-        if mapControl.plantSprite:
-            mapControl.plantSprite.queue_free()
-            mapControl.plantSprite = null
-    if shovelButton.button_pressed:
-        AudioManager.AudioPlay("Shovel", AudioManagerEnum.TYPE.SFX)
-        mapControl.shovelPick = true
-        mapControl.shovelSprite.position = Vector2(-100, -100)
-        mapControl.shovelSprite.visible = true
-    else:
-        AudioManager.AudioPlay("ShovelDeny", AudioManagerEnum.TYPE.SFX)
-        mapControl.shovelPick = false
-        mapControl.shovelSprite.visible = false
+    mapControl.PickShovel(shovelButton.button_pressed)
 
 func PlantfoodPick() -> void :
     if !mapControl:

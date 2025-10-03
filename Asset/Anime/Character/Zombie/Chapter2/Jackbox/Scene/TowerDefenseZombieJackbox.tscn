@@ -28,11 +28,9 @@ metadata/_custom_type_script = "uid://c3wiwula8chdo"
 script = ExtResource("2")
 eventList = [SubResource("Resource_p8fol")]
 walkSpeedScale = 1.5
-inSwimAnimeClip = ""
-outSwimAnimeClip = ""
 duckytobeSprite = NodePath("SpriteGroup/TransformPoint/ZombieJackbox/ZombieDuckytube")
 waterLineSprite = NodePath("SpriteGroup/TransformPoint/ZombieWaterLine")
-waterHeightPersontage = 0.73
+waterHeightPersontage = 0.705
 config = ExtResource("4")
 sprite = NodePath("SpriteGroup/TransformPoint/ZombieJackbox")
 headSlot = NodePath("SpriteGroup/TransformPoint/ZombieJackbox/HeadSlot")
@@ -62,27 +60,27 @@ position = Vector2(23, 44)
 
 [node name="ZombieJackbox" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("13")]
 position = Vector2(-23, -44)
-layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, NodePath("JackboxSlot"), null, null, null, null, null, null, NodePath("ArmSlot"), null]
-layerSprite = [null, null, null, null, null, null, null, null, null, null, NodePath("ZombieDuckytube"), null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 
 [node name="ZombieDuckytube" parent="SpriteGroup/TransformPoint/ZombieJackbox" index="0"]
-position = Vector2(-13.97, -51.96)
-rotation = -0.0197321
+position = Vector2(-15.83, -50.61)
+rotation = -0.0571374
 
 [node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieJackbox" index="1"]
-position = Vector2(-20.3743, -57.0153)
-rotation = 0.000449098
-scale = Vector2(0.799858, 0.799858)
+position = Vector2(-22.6516, -54.5816)
+rotation = -0.0453559
+scale = Vector2(0.799649, 0.799649)
 
 [node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieJackbox" index="2"]
-position = Vector2(4.88438, -8.73056)
-rotation = -0.0994868
-scale = Vector2(0.746948, 0.746948)
+position = Vector2(4.72103, -7.69896)
+rotation = -0.160736
+scale = Vector2(0.746579, 0.746579)
 
 [node name="JackboxSlot" parent="SpriteGroup/TransformPoint/ZombieJackbox" index="3"]
-position = Vector2(-9.00938, -18.727)
-rotation = -0.121785
-scale = Vector2(0.670339, 0.670339)
+position = Vector2(-9.67002, -16.7165)
+rotation = -0.159178
+scale = Vector2(0.670125, 0.670125)
 
 [node name="ZombieWaterLine" parent="SpriteGroup/TransformPoint" index="1" instance=ExtResource("14")]
 visible = false

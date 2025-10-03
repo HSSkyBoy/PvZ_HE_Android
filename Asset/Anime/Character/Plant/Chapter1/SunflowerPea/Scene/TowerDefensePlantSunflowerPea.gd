@@ -15,7 +15,7 @@ var currentFireNum: int = 0
 func _ready() -> void :
     if Engine.is_editor_hint():
         return
-    super._ready()
+    super ._ready()
     timeScaleInit = 1.25
     fireComponent.fireInterval = fireInterval
 
@@ -27,7 +27,7 @@ func _ready() -> void :
 func _physics_process(delta: float) -> void :
     if Engine.is_editor_hint():
         return
-    super._physics_process(delta)
+    super ._physics_process(delta)
     fireComponent.fireInterval = fireInterval
 
 func IdleEntered() -> void :
@@ -36,7 +36,7 @@ func IdleEntered() -> void :
 
 @warning_ignore("unused_parameter")
 func IdleProcessing(delta: float) -> void :
-    super.IdleProcessing(delta)
+    super .IdleProcessing(delta)
     sprite.head.timeScale = timeScale
 
     if fireComponent.CanFire("PeaDefault"):
@@ -44,33 +44,38 @@ func IdleProcessing(delta: float) -> void :
         return
 
 func IdleExited() -> void :
-    super.IdleExited()
+    super .IdleExited()
 
 func AttackEntered() -> void :
     fireComponent.Refresh()
-    sprite.head.SetAnimation("HeadFire", true, 0.2)
+    sprite.head.SetAnimation("HeadFire", true, 0.2 * (fireInterval + 4.5) / 6.0)
 
 @warning_ignore("unused_parameter")
 func AttackProcessing(delta: float) -> void :
-    sprite.head.timeScale = timeScale * 2.0
+    sprite.head.timeScale = timeScale * 2.0 * (1.75 / (fireInterval + 0.25))
 
 func AttackExited() -> void :
     pass
 
 @warning_ignore("unused_parameter")
 func AnimeEvent(command: String, argument: Variant) -> void :
-    super.AnimeEvent(command, argument)
+    super .AnimeEvent(command, argument)
     match command:
         "fire":
             AudioManager.AudioPlay("ProjectileThrow", AudioManagerEnum.TYPE.SFX)
-            var projectile: TowerDefenseProjectile = fireComponent.CreateProjectile(0, Vector2(300, 0), "PeaDefault", camp, Vector2.ZERO)
+            var projectile: TowerDefenseProjectile = fireComponent.CreateProjectile(0, Vector2(300, 0), "PeaDefault", -1, camp, Vector2.ZERO)
             projectile.gridPos = gridPos
+
+            if fireComponent.CanFire("PeaDefault"):
+                currentFireNum = 0
+                sprite.head.SetAnimation("HeadFire", true, 0.1 * (fireInterval + 4.5) / 6.0)
+                return
 
             currentFireNum += 1
             if currentFireNum == fireNum:
                 currentFireNum = 0
             else:
-                sprite.head.SetAnimation("HeadFire", true, 0.1)
+                sprite.head.SetAnimation("HeadFire", true, 0.1 * (fireInterval + 4.5) / 6.0)
 
 func HeadAnimeCompleted(clip: String) -> void :
     match clip:

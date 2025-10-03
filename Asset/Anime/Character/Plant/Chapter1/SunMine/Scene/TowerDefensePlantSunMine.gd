@@ -30,14 +30,14 @@ func ReadyExited() -> void :
     pass
 
 func IdleEntered() -> void :
-    super.IdleEntered()
+    super .IdleEntered()
     instance.invincible = true
     sprite.SetAnimation("Rise", false, 0.2)
     sprite.AddAnimation("Idle", 0.0, true, 0.2)
 
 @warning_ignore("unused_parameter")
 func IdleProcessing(delta: float) -> void :
-    super.IdleProcessing(delta)
+    super .IdleProcessing(delta)
     if sprite.clip == "Idle":
         instance.invincible = false
         if attackComponent.CanAttack():
@@ -47,7 +47,7 @@ func IdleProcessing(delta: float) -> void :
             sprite.timeScale = timeScale * 2.0
 
 func IdleExited() -> void :
-    super.IdleExited()
+    super .IdleExited()
 
 func ReadyRise() -> void :
     if rise:

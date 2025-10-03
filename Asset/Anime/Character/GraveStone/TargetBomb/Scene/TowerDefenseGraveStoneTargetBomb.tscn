@@ -9,9 +9,6 @@
 
 [sub_resource type="Resource" id="Resource_m8rxe"]
 script = ExtResource("3")
-type = "Bomb"
-num = 1800.0
-burns = true
 metadata/_custom_type_script = "uid://c3wiwula8chdo"
 
 [node name="TowerDefenseGraveStoneTargetBomb" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
@@ -23,6 +20,7 @@ PreviewDamagePointPersontage = 1.0
 
 [node name="GraveStoneTargetBomb" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("5")]
 position = Vector2(0, -18)
+trueFrameRate = 30.0
 Animation/MediaReplace/TargetStones3_1.png = ExtResource("6")
 
 [node name="ShadowSprite" parent="." index="3"]

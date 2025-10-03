@@ -17,7 +17,7 @@ walkSpeedScale = 2.0
 swimAnimeClip = "Swim"
 dieWaterAnimeClip = "SwimDeath"
 garlicReplace = "Zombie_football_head.png"
-waterHeightPersontage = 0.683
+waterHeightPersontage = 0.67
 waterHeight = 40.0
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/ZombieFootball")
@@ -42,23 +42,24 @@ position = Vector2(12, 33)
 
 [node name="ZombieFootball" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("9")]
 position = Vector2(-12, -33)
-layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+trueFrameRate = 30.0
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, NodePath("ArmSlot"), null, null, null, null, NodePath("HeadSlot"), null, null, null, null, NodePath("HelmentSlot"), null, null, null, null]
 Animation/MediaReplace/Zombie_football_helmet.png = ExtResource("10")
 
 [node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieFootball" index="0"]
-position = Vector2(-1.34621, 41.3752)
-rotation = -1.57447
-scale = Vector2(0.793743, 0.793743)
+position = Vector2(-12.334, -58.3878)
+rotation = -0.00641928
+scale = Vector2(0.799912, 0.799912)
 
 [node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieFootball" index="1"]
-position = Vector2(-35.9032, -67.4332)
-rotation = -0.00855905
-scale = Vector2(0.799888, 0.799888)
+position = Vector2(-34.4548, -21.5866)
+rotation = -0.022028
+scale = Vector2(0.799711, 0.799711)
 
 [node name="HelmentSlot" parent="SpriteGroup/TransformPoint/ZombieFootball" index="2"]
-position = Vector2(29.2167, 2.06902)
-rotation = -0.0307566
-scale = Vector2(0.799774, 0.799774)
+position = Vector2(-8.02831, -62.8419)
+rotation = -0.0116709
+scale = Vector2(0.799886, 0.799886)
 
 [node name="ShadowSprite" parent="." index="3"]
 position = Vector2(9, 37)

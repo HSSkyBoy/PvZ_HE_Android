@@ -24,6 +24,7 @@ swimAnimeClip = "LadderWalk"
 attackAnimeClip = "LadderEat"
 duckytobeSprite = NodePath("SpriteGroup/TransformPoint/ZombieLadder/ZombieDuckytube")
 waterLineSprite = NodePath("SpriteGroup/TransformPoint/ZombieWaterLine")
+waterHeightPersontage = 0.695
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/ZombieLadder")
 headSlot = NodePath("SpriteGroup/TransformPoint/ZombieLadder/HeadSlot")
@@ -48,6 +49,9 @@ DamagePartSlot/Helmet = NodePath("SpriteGroup/TransformPoint/ZombieLadder/HeadSl
 DamagePartSlot/SpecialHelmet = NodePath("SpriteGroup/TransformPoint/ZombieLadder/HeadSlot")
 DamagePartSlot/BlackHelmet = NodePath("SpriteGroup/TransformPoint/ZombieLadder/HeadSlot")
 
+[node name="SpriteMask" parent="SpriteGroup" index="0"]
+offset_bottom = 66.0
+
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(23, 44)
 
@@ -58,22 +62,22 @@ layerSprite = [null, null, null, null, null, null, null, null, null, null, null,
 Animation/MediaReplace/Zombie_ladder_1.png = ExtResource("13")
 
 [node name="ZombieDuckytube" parent="SpriteGroup/TransformPoint/ZombieLadder" index="0"]
-position = Vector2(-11.4151, -46.8576)
-rotation = -0.0160583
+position = Vector2(-10.9826, -47.4038)
+rotation = -0.00802914
 
 [node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieLadder" index="1"]
-position = Vector2(-12.8982, -49.7809)
-rotation = -0.0469001
-scale = Vector2(0.849727, 0.849727)
+position = Vector2(-12.2943, -50.4605)
+rotation = -0.02345
+scale = Vector2(0.849859, 0.849859)
 
 [node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieLadder" index="2"]
-position = Vector2(-2.2545, -7.76933)
-rotation = 1.09283
-scale = Vector2(0.847668, 1.0839)
-skew = 0.0113022
+position = Vector2(-1.65895, -8.53049)
+rotation = 1.08817
+scale = Vector2(0.845038, 1.12365)
+skew = 0.0196222
 
 [node name="LadderSlot" parent="SpriteGroup/TransformPoint/ZombieLadder" index="3"]
-position = Vector2(-21.1336, 7.01607)
+position = Vector2(-20.592, 6.30767)
 
 [node name="GroundSlot" parent="SpriteGroup/TransformPoint/ZombieLadder" index="4"]
 position = Vector2(-76.65, -9.2)

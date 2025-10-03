@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=4 uid="uid://brduo5wtglu0"]
+
+[ext_resource type="Shader" uid="uid://canrsd2kicfrn" path="res://Prefab/ScreenEffect/Rain/ScreenEffectRain.gdshader" id="1"]
+[ext_resource type="Texture2D" uid="uid://dt4iaruqrcp5m" path="res://Asset/Texture/ScreenEffect/Rain/Rain.png" id="2"]
+[ext_resource type="Script" uid="uid://5of5bekerpot" path="res://Prefab/ScreenEffect/Rain/ScreenEffectRain.gd" id="3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wemg8"]
+shader = ExtResource("1")
+shader_parameter/rainTexture = ExtResource("2")
+shader_parameter/effectSize = Vector2(1080, 600)
+shader_parameter/timer = 3.66667
+
+[node name="ScreenEffectRain" type="ColorRect"]
+material = SubResource("ShaderMaterial_wemg8")
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3")

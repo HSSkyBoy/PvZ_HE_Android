@@ -42,14 +42,16 @@ signal loveChange(packet: TowerDefenseInGamePacketShow)
 @export var showLove: bool = false:
     set(_showLove):
         showLove = _showLove
-        loveButton.visible = showLove
-        var packetData: Dictionary = GameSaveManager.GetTowerDefensePacketValue(config.saveKey)
-        loveButton.button_pressed = packetData.get_or_add("Love", false)
+        if is_node_ready():
+            loveButton.visible = showLove
+            var packetData: Dictionary = GameSaveManager.GetTowerDefensePacketValue(config.saveKey)
+            loveButton.button_pressed = packetData.get_or_add("Love", false)
 
 @export var showCost: bool = true:
     set(_showCost):
         showCost = _showCost
-        itemCostLabel.visible = showCost
+        if is_node_ready():
+            itemCostLabel.visible = showCost
 
 @export var onlyDraw: bool = false
 
@@ -70,6 +72,8 @@ signal loveChange(packet: TowerDefenseInGamePacketShow)
             layout.modulate = Color.DIM_GRAY
 
 @export var plantOnce: bool = false
+
+@export var useCost: bool = true
 
 var sprite: AdobeAnimateSprite
 
@@ -103,6 +107,11 @@ var coldDown: float = 0.0
 var setMobileLayout: bool = false
 var setPcLayout: bool = false
 
+var aliveTime: float = -1
+var aliveTimer: float = 0.0
+var blinkTimer: float = 0.0
+var blink: bool = false
+
 func MobilePreset() -> void :
     backgroundTexture.size = Vector2(96.0, 60.0)
     backgroundTexture.position = - backgroundTexture.size / 2.0
@@ -125,10 +134,20 @@ func MobilePreset() -> void :
     loveButton.position = Vector2(26.0, -34.0)
     spriteNode.position = Vector2(10.0, 0.0)
 
-func Init(_config: TowerDefensePacketConfig):
+func Clear() -> void :
+    config = null
+    backgroundTexture.texture = PACKET_NORMAL
+    if is_instance_valid(sprite):
+        sprite.queue_free()
+    baseItemCost = 0
+    itemCost = 0
+    riseCost = 0
+    coldDown = 0
+
+func Init(_config: TowerDefensePacketConfig) -> void :
     config = _config
     if setMobileLayout || ( !setPcLayout && GameSaveManager.GetConfigValue("MobilePreset") && SceneManager.currentScene != "LevelEditorStage"):
-        match config.type:
+        match config.GetType():
             TowerDefenseEnum.PACKET_TYPE.WHITE:
                 backgroundTexture.texture = PACKET_NORMAL_MOBILE
             TowerDefenseEnum.PACKET_TYPE.GOLD:
@@ -146,7 +165,7 @@ func Init(_config: TowerDefensePacketConfig):
             TowerDefenseEnum.PACKET_TYPE.GRAY:
                 backgroundTexture.texture = PACKET_GRAY
     else:
-        match config.type:
+        match config.GetType():
             TowerDefenseEnum.PACKET_TYPE.WHITE:
                 backgroundTexture.texture = PACKET_NORMAL
             TowerDefenseEnum.PACKET_TYPE.GOLD:
@@ -165,17 +184,15 @@ func Init(_config: TowerDefensePacketConfig):
                 backgroundTexture.texture = PACKET_GRAY
 
     var characterConfig: TowerDefenseCharacterConfig = config.characterConfig
-    baseItemCost = characterConfig.cost
-    if config.overrideCost != -1:
-        baseItemCost = config.overrideCost
+    baseItemCost = config.GetCost()
     itemCost = baseItemCost
 
-    riseCost = config.characterConfig.costRise
-    if config.overrideCostRise != -1:
-        riseCost = config.overrideCostRise
-
+    riseCost = config.GetCostRise()
+    if is_instance_valid(sprite):
+        sprite.queue_free()
     sprite = TowerDefenseManager.GetCharacterSprite(characterConfig.name)
     sprite.SetAnimation(config.packetAnimeClip, true)
+    sprite.pause = true
     sprite.light_mask = 0
     spriteNode.add_child(sprite)
     if setMobileLayout || ( !setPcLayout && GameSaveManager.GetConfigValue("MobilePreset") && SceneManager.currentScene != "LevelEditorStage"):
@@ -210,10 +227,7 @@ func Init(_config: TowerDefensePacketConfig):
         if packetValue.get_or_add("Key", {}).get_or_add("Custom", "") != "":
             characterConfig.customData.SetCustomFliters(sprite, packetValue["Key"]["Custom"])
 
-    if config.overridPacketCooldown == -1:
-        coldDown = config.characterConfig.packetCooldown
-    else:
-        coldDown = config.overridPacketCooldown
+    coldDown = config.GetPacketCooldown()
     coldDownProgressBar.max_value = coldDown
     coldDownProgressBar.value = coldDownProgressBar.max_value
     Reset()
@@ -230,6 +244,25 @@ func _physics_process(delta: float) -> void :
     if onlyDraw:
         return
     button.visible = config != null
+
+    if aliveTime != -1:
+        if aliveTimer < aliveTime:
+            aliveTimer += delta
+            if aliveTimer > aliveTime - 5:
+                if blinkTimer < 0.25:
+                    blinkTimer += delta
+                else:
+                    if !select:
+                        blink = !blink
+                        if blink:
+                            layout.modulate = Color.DIM_GRAY
+                        else:
+                            layout.modulate = Color.WHITE
+                    blinkTimer = 0
+        else:
+            if !select:
+                queue_free()
+            return
 
     if riseCost != -1:
         var num: int = TowerDefenseManager.GetCharacterNum(config.saveKey)
@@ -248,14 +281,15 @@ func _physics_process(delta: float) -> void :
             aliveFlag = false
 
         if aliveFlag:
-            if config.type == TowerDefenseEnum.PACKET_TYPE.COVER:
+            if config.GetPlantCover().size() > 0:
                 var coverFlag: bool = false
-                for coverCheckName in config.characterConfig.plantCover:
+                for coverCheckName in config.GetPlantCover():
                     if TowerDefenseManager.GetCharacterNum(coverCheckName) > 0:
                         coverFlag = true
                         break
+                if config.GetCoverCanDirectPlant():
+                    coverFlag = true
                 aliveFlag = coverFlag
-
         alive = aliveFlag
 
 func Pressed() -> void :
@@ -269,6 +303,8 @@ func Pressed() -> void :
         return
     AudioManager.AudioPlay("PacketPick", AudioManagerEnum.TYPE.SFX)
     select = !select
+    if select:
+        config.ExecuteEventPress(self)
     pressed.emit(self)
 
 func MouseEntered() -> void :
@@ -309,16 +345,15 @@ func Reset() -> void :
 func StartInit() -> void :
     alive = false
     if !plantOnce && !Global.debugPacketColdDown && TowerDefenseManager.currentControl.levelConfig.packetColdDownStart:
-        if config.overridPacketCooldown == -1:
-            if config.characterConfig.startingCooldown != 0:
-                coldDownTimer.start(coldDown - config.characterConfig.startingCooldown)
-        else:
-            if config.overridPacketCooldown != 0:
-                coldDownTimer.start(coldDown - config.overridPacketCooldown)
+        var startingCooldown: float = config.GetStartingCooldown()
+        if startingCooldown > 0.0:
+            coldDownTimer.start(startingCooldown)
 
-func Plant(gridPos: Vector2i) -> TowerDefenseCharacter:
-    TowerDefenseManager.UseSun(itemCost)
+func Plant(gridPos: Vector2i, useSun: bool = true) -> TowerDefenseCharacter:
+    if useCost && useSun:
+        TowerDefenseManager.UseSun(itemCost)
     var character = config.Plant(gridPos)
+    config.ExecuteEventPlant(self)
     if Global.isEditor && SceneManager.currentScene == "LevelEditorStage":
         return character
     if plantOnce:

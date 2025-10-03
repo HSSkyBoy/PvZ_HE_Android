@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=4 uid="uid://udsya47xq3qh"]
+
+[ext_resource type="PackedScene" uid="uid://uawo0nxcj2ji" path="res://Prefab/TowerDefense/Character/TowerDefenseItem.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bxkpml5pqntyc" path="res://Prefab/TowerDefense/Character/TowerDefenseVase.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://y3tmsmwujsmd" path="res://Prefab/Particles/Vase/Normal/VaseNormalChunks.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://bjm31m10ujp84" path="res://Asset/Anime/Character/Zombie/WaterLine/ZombieWaterLine.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://bhqecss20rwpb" path="res://Prefab/TowerDefense/GUI/InGame/Packet/TowerDefenseInGamePacketShow.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://4okp7722qggt" path="res://Asset/Anime/Effect/Hammer/Hammer.tscn" id="6"]
+
+[node name="TowerDefenseVase" node_paths=PackedStringArray("waterLineSprite") instance=ExtResource("1")]
+z_index = -14
+script = ExtResource("2")
+waterLineSprite = NodePath("SpriteGroup/ZombieWaterLine")
+chunkParticles = ExtResource("3")
+packetBank = "Total"
+packetName = ""
+packetConfig = null
+waterHeightPersontage = 0.73
+waterHeight = 20.0
+itemLayer = 1
+
+[node name="SpriteMask" parent="SpriteGroup" index="0"]
+offset_top = -54.0
+offset_bottom = 61.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 36)
+
+[node name="ZombieWaterLine" parent="SpriteGroup" index="2" instance=ExtResource("4")]
+visible = false
+position = Vector2(0, 10)
+scale = Vector2(1.5, 1)
+useTween = true
+
+[node name="PacketShow" parent="FrontEffectNode" index="0" instance=ExtResource("5")]
+unique_name_in_owner = true
+visible = false
+scale = Vector2(0.75, 0.75)
+mouse_filter = 2
+showCost = true
+onlyDraw = true
+
+[node name="MouseMask" type="ColorRect" parent="FrontEffectNode" index="1"]
+unique_name_in_owner = true
+offset_left = -30.0
+offset_top = -54.0
+offset_right = 31.0
+offset_bottom = 61.0
+mouse_default_cursor_shape = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Hammer" parent="." index="3" instance=ExtResource("6")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(25, -37)
+timeScale = 5.0
+trueFrameRate = 30.0
+Animation/Clip = "OpenPot"
+
+[node name="ShadowSprite" parent="." index="4"]
+position = Vector2(0, 39)
+
+[connection signal="mouse_entered" from="FrontEffectNode/MouseMask" to="." method="MouseEntered"]
+[connection signal="mouse_exited" from="FrontEffectNode/MouseMask" to="." method="MouseExited"]
+[connection signal="animeCompleted" from="Hammer" to="." method="HammerAnimeCompleted"]

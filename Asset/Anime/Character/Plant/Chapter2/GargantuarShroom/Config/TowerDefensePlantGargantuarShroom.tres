@@ -1,26 +1,29 @@
-[gd_resource type="Resource" script_class="TowerDefensePlantConfig" load_steps=2 format=4 uid="uid://bhust4s8egwr2"]
+[gd_resource type="Resource" script_class="TowerDefensePlantConfig" load_steps=3 format=4 uid="uid://bhust4s8egwr2"]
 
-[ext_resource type="Script" uid="uid://bqd2rkadn8h4e" path="res://Resource/TowerDefense/Character/Config/TowerDefensePlantConfig.gd" id="1"]
+[ext_resource type="Resource" uid="uid://yqcm242vq82i" path="res://Asset/Anime/Character/Plant/Chapter2/GargantuarShroom/Custom/GargantuarShroomCoustomData.tres" id="1"]
+[ext_resource type="Script" uid="uid://bqd2rkadn8h4e" path="res://Resource/TowerDefense/Character/Config/TowerDefensePlantConfig.gd" id="2"]
 
 [resource]
-script = ExtResource("1")
+script = ExtResource("2")
 canUsePlantfood = true
 name = "PlantGargantuarShroom"
 hitpointsNearDeath = 0.0
 hitpoints = 150.0
+explosionHurt = -1.0
 smashHurt = -1.0
 spikeHurt = -1.0
+canDragIntoWater = true
 sleepTime = "Day"
-height = 0
+height = 2
 damagePointData = null
 armorData = null
-customData = null
+customData = ExtResource("1")
 ashScene = null
 homeWorld = 1
 costRise = -1
 cost = 125
 packetCooldown = 50.0
-startingCooldown = 0.0
+startingCooldown = 50.0
 plantCover = []
 plantCoverRecycle = []
 plantGridType = [2, 6, 5]

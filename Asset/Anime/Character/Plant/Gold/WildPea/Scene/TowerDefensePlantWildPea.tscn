@@ -30,17 +30,25 @@ fireNum = 1
 idleAnimeClip = "BodyIdle"
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/WildPea")
-gravity = 245.0
+Custom = []
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
 
 [node name="WildPea" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSprite") instance=ExtResource("4")]
 position = Vector2(0, -30)
-layerSprite = [null, null, null, null, null, null, null, null, NodePath("Head"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/LayerVisible/GatlingPea_barrel1 = true
+Animation/LayerVisible/GatlingPea_barrel2 = true
+Animation/LayerVisible/GatlingPea_barrel3 = true
+"Animation/LayerVisible/GatlingPea_barrel3 复制" = true
+Animation/LayerVisible/GatlingPea_barrel4 = true
+Animation/LayerVisible/GatlingPea_helmet = true
+Animation/LayerVisible/GatlingPea_mouth = true
 
 [node name="Head" parent="SpriteGroup/TransformPoint/WildPea" index="0"]
-position = Vector2(-1.4167, 2.1)
+position = Vector2(-2.56, 3.78)
+Animation/LayerVisible/cloak1 = true
 
 [node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/WildPea/Head" index="0"]
 position = Vector2(31.4706, -16.7422)

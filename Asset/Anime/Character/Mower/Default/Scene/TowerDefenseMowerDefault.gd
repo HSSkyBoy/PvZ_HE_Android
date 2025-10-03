@@ -2,6 +2,6 @@
 extends TowerDefenseMower
 
 func InWater() -> void :
-    super.InWater()
+    super .InWater()
     CreateSplash()
     Destroy()

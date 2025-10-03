@@ -9,7 +9,7 @@ extends StateChartState
 var _sub_states: Array[StateChartState] = []
 
 func _state_init():
-    super._state_init()
+    super ._state_init()
 
     for child in get_children():
         if child is StateChartState:
@@ -62,7 +62,7 @@ func _handle_transition(transition: Transition, source: StateChartState):
     get_parent()._handle_transition(transition, source)
 
 func _state_enter(transition_target: StateChartState):
-    super._state_enter(transition_target)
+    super ._state_enter(transition_target)
 
     for child in _sub_states:
         child._state_enter(transition_target)
@@ -72,10 +72,10 @@ func _state_exit():
     for child in _sub_states:
         child._state_exit()
 
-    super._state_exit()
+    super ._state_exit()
 
 func _state_step():
-    super._state_step()
+    super ._state_step()
     for child in _sub_states:
         child._state_step()
 
@@ -99,10 +99,10 @@ func _process_transitions(trigger_type: StateChart.TriggerType, event: StringNam
 
 
 
-    return super._process_transitions(trigger_type, event)
+    return super ._process_transitions(trigger_type, event)
 
 func _get_configuration_warnings() -> PackedStringArray:
-    var warnings = super._get_configuration_warnings()
+    var warnings = super ._get_configuration_warnings()
 
     var child_count = 0
     for child in get_children():

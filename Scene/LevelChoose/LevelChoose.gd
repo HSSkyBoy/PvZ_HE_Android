@@ -92,10 +92,10 @@ func InitLevel(chapterId: int) -> void :
     for levelListId in range(levelList.size()):
         var level: Dictionary = levelList[levelListId]
         if level["OpenKey"] == "Lock":
-            break
+            continue
         var levelData: Dictionary = GameSaveManager.GetLevelValue(level["OpenKey"])
         if !Global.debugOpenAllLevel && !(level["OpenKey"] == "" || levelData.get_or_add("Key", {}).get_or_add("Finish", 0) > 0):
-            break
+            continue
         var item = DRAG_MENU_SELECT_ITEMLEVEL.instantiate()
         item.index = levelListId
         item.select.connect(Select)

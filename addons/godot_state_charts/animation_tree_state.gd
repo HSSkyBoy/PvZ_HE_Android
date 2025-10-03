@@ -22,7 +22,7 @@ func _ready():
     if Engine.is_editor_hint():
         return
 
-    super._ready()
+    super ._ready()
 
     _animation_tree_state_machine = null
     var the_tree = get_node_or_null(animation_tree)
@@ -38,7 +38,7 @@ func _ready():
 
 
 func _state_enter(transition_target: StateChartState):
-    super._state_enter(transition_target)
+    super ._state_enter(transition_target)
 
     if not is_instance_valid(_animation_tree_state_machine):
         return
@@ -52,7 +52,7 @@ func _state_enter(transition_target: StateChartState):
 
 
 func _get_configuration_warnings():
-    var warnings = super._get_configuration_warnings()
+    var warnings = super ._get_configuration_warnings()
     warnings.append("This node is deprecated and will be removed in a future version.")
 
     if animation_tree.is_empty():

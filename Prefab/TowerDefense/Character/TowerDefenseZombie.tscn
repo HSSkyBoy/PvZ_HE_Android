@@ -14,8 +14,11 @@ groan = "ZombieMordenGroans"
 walkSpeedScale = 1.0
 useAttackDps = true
 walkAnimeClip = "Walk"
+inSwimAnimeClip = ""
 swimAnimeClip = "Walk"
+outSwimAnimeClip = ""
 attackAnimeClip = "Eat"
+attackWaterAnimeClip = ""
 dieAnimeClip = "Death"
 dieWaterAnimeClip = "Death"
 waterAnimeFliter = ""
@@ -28,10 +31,10 @@ itemLayer = 7
 gravity = 245.0
 
 [node name="SpriteMask" parent="SpriteGroup" index="0"]
-offset_left = -45.0
-offset_top = -129.0
-offset_right = 44.0
-offset_bottom = 62.0
+offset_left = -44.0
+offset_top = -109.0
+offset_right = 45.0
+offset_bottom = 56.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(12, 36)
@@ -46,6 +49,7 @@ position = Vector2(13, 35)
 [node name="AttackComponent" parent="." index="7" node_paths=PackedStringArray("checkArea") instance=ExtResource("3")]
 unique_name_in_owner = true
 checkArea = NodePath("../HitBox")
+checkLine = true
 
 [node name="GroundMoveComponent" parent="." index="8" instance=ExtResource("4")]
 unique_name_in_owner = true

@@ -17,6 +17,8 @@ var damagePointData: CharacterDamagePointData
 var damagePoints: Array[Dictionary] = []
 var damagePointIndex = 0
 
+var canCollection: bool = true
+
 var die: bool = false
 var nearDie: bool = false
 var invincible: bool = false
@@ -153,16 +155,22 @@ func FlagHurt(num: float, damageFlags: int, playSplatAudio: bool = true, velocit
 func ExplodeHurt(num: float, type: String = "Bomb", playSplatAudio: bool = true, velocity: Vector2 = Vector2.ZERO) -> float:
     if invincible:
         return 0
+    if config.explosionHurt != -1:
+        num = min(config.explosionHurt, num)
     character.isExplode = true
     character.buff.BuffAdd(TowerDefenseCharacterBuffFireHit.new())
     if character.buff.BuffHas("RedHeat"):
         num *= 2
     for armor: TowerDefenseArmorInstance in armorShield:
-        armor.DealHurt(num, playSplatAudio, velocity)
+        armor.DealHurt(num * armor.config.explodePersontage, playSplatAudio, velocity)
+        if armor.config.explodePersontage == 0.0:
+            num = 0.0
         if num > 0:
             break
     for armor: TowerDefenseArmorInstance in armorHelm:
-        num = armor.DealHurt(num, playSplatAudio, velocity)
+        num = armor.DealHurt(num * armor.config.explodePersontage, playSplatAudio, velocity)
+        if armor.config.explodePersontage == 0.0:
+            num = 0.0
         if num > 0:
             break
     for armor: TowerDefenseArmorInstance in armorBody:
@@ -185,7 +193,8 @@ func ExplodeHurt(num: float, type: String = "Bomb", playSplatAudio: bool = true,
                     if config.ashScene:
                         var effect = TowerDefenseManager.CreateEffectSpriteOnce(config.ashScene, character.gridPos, "Idle")
                         var charaterNode: Node2D = TowerDefenseManager.GetCharacterNode()
-                        effect.global_position = character.global_position
+                        effect.global_position = character.sprite.global_position
+                        effect.scale = character.scale * character.transformPoint.scale
                         charaterNode.add_child(effect)
                         effect.z_index -= 6
                 character.Destroy()

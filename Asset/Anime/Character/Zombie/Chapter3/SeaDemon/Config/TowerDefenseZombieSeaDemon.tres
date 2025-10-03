@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="TowerDefenseZombieConfig" load_steps=5 format=4 uid="uid://ov0p8peemmbu"]
+
+[ext_resource type="Resource" uid="uid://c1so5y7wlfubf" path="res://Asset/Anime/Character/Zombie/Chapter3/SeaDemon/Armor/ZombieSeaDemonArmorData.tres" id="1"]
+[ext_resource type="PackedScene" uid="uid://bpf07yxaoaqj0" path="res://Asset/Anime/Character/Zombie/Ash/General/ZombieGeneralAsh.tscn" id="2"]
+[ext_resource type="Resource" uid="uid://bgxqetd606vk2" path="res://Asset/Anime/Character/Zombie/Chapter3/SeaDemon/DamagePoint/ZombieSeaDemonDamagePointData.tres" id="3"]
+[ext_resource type="Script" uid="uid://fq0affmtew5n" path="res://Resource/TowerDefense/Character/Config/TowerDefenseZombieConfig.gd" id="4"]
+
+[resource]
+script = ExtResource("4")
+physique = 4
+attack = 300.0
+smashAttack = 150.0
+impactAudio = ""
+weight = 3000
+wavePointCost = 200
+canSpawnPlantfood = true
+excludeLineGridType = []
+spawnLineNeed = [3]
+name = "ZombieSeaDemon"
+hitpointsNearDeath = 0.0
+hitpoints = 4000.0
+explosionHurt = -1.0
+smashHurt = -1.0
+spikeHurt = -1.0
+canDragIntoWater = false
+sleepTime = "Never"
+height = 2
+damagePointData = ExtResource("3")
+armorData = ExtResource("1")
+customData = null
+ashScene = ExtResource("2")
+homeWorld = 1
+costRise = -1
+cost = 100
+packetCooldown = 5.0
+startingCooldown = 0.0
+plantCover = []
+plantCoverRecycle = []
+plantGridType = [-1]
+plantGridOverrideType = 0
+collisionFlags = 1
+maskFlags = 9
+unUseBuffFlags = 4294967295
+physiqueTypeFlags = 0
+elementFlags = 0
+Flag/Collision = 1
+Flag/Mask = 9
+Flag/UnUseBuff = 4294967295
+Flag/PhysiqueType = 0
+Flag/Elemet = 0

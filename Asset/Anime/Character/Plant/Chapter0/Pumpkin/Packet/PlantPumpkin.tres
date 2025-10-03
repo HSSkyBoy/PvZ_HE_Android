@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="TowerDefensePacketConfig" load_steps=6 format=4 uid="uid://ci0133dvlhu6b"]
+
+[ext_resource type="Resource" uid="uid://dg4a4bap1kkts" path="res://Asset/Anime/Character/Plant/Chapter0/Pumpkin/Config/TowerDefensePlantPumpkin.tres" id="1"]
+[ext_resource type="Script" uid="uid://c6d3po5310ugw" path="res://Resource/TowerDefense/PacketBank/Packet/TowerDefensePacketConfig.gd" id="2"]
+[ext_resource type="Script" uid="uid://cir5t3dnv7364" path="res://Resource/UnlockCondition/UnlockConditionPacketUnlockConfig.gd" id="3"]
+
+[sub_resource type="Resource" id="Resource_k4e3o"]
+script = ExtResource("3")
+packetName = "PlantPumpkinFire"
+metadata/_custom_type_script = "uid://cir5t3dnv7364"
+
+[sub_resource type="Resource" id="Resource_1k44p"]
+script = ExtResource("3")
+packetName = "PlantPumpkinFireIce"
+metadata/_custom_type_script = "uid://cir5t3dnv7364"
+
+[resource]
+script = ExtResource("2")
+saveKey = "PlantPumpkin"
+unlockCheckList = [SubResource("Resource_k4e3o"), SubResource("Resource_1k44p")]
+name = "TOWERDEFENSE_PLANT_PUMPKIN_NAME"
+describe = "TOWERDEFENSE_PLANT_PUMPKIN_EXPRESTION"
+handbookDescribe = "TOWERDEFENSE_PLANT_PUMPKIN_HANDBOOK_EXPRESTION"
+handbookStory = "TOWERDEFENSE_PLANT_PUMPKIN_HANDBOOK_STORY"
+packetAnimeOffset = Vector2(22, 20)
+packetAnimeScale = Vector2(0.4, 0.4)
+characterConfig = ExtResource("1")
+override = null
+Cell/plantUseCell = true
+metadata/_custom_type_script = "uid://c6d3po5310ugw"

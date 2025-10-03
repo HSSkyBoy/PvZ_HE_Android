@@ -52,7 +52,6 @@ func Init(_sunNum: int, _movingMethod: TowerDefenseEnum.SUN_MOVING_METHOD, _heig
     sunNum = _sunNum
     movingMethod = _movingMethod
     height = _height
-
     match movingMethod:
         TowerDefenseEnum.SUN_MOVING_METHOD.LAND:
             moveComponent.SetVelocity(velocity)
@@ -74,7 +73,6 @@ func _ready() -> void :
     camera = view.get_camera_2d()
     viewSize = view.get_visible_rect().size
     sprite.SetAnimation("Idle", true)
-
 
 @warning_ignore("unused_parameter")
 func _input(event: InputEvent) -> void :

@@ -4,13 +4,15 @@
 
 [resource]
 script = ExtResource("1")
-dieDownTime = 60.0
+dieDownTime = 200.0
 dieDownFliters = ["CraterWhole", "CraterHalf"]
 name = "CraterDayGround"
 hitpointsNearDeath = 0.0
 hitpoints = 300.0
+explosionHurt = -1.0
 smashHurt = -1.0
 spikeHurt = -1.0
+canDragIntoWater = true
 sleepTime = "Never"
 height = 0
 damagePointData = null

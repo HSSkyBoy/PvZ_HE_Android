@@ -5,14 +5,14 @@
 [ext_resource type="Texture2D" uid="uid://bn6x5r8edch6c" path="res://Asset/Texture/GUI/General/DialogBox/DialogBoxLarge.png" id="3"]
 [ext_resource type="PackedScene" uid="uid://bml60wmq62jay" path="res://Prefab/GUI/Button/MainButton.tscn" id="4"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m03at"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ogr48"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4fqh5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_56xew"]
 bg_color = Color(0, 0.745098, 0, 1)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4fqh5"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ogr48"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m03at"]
 
 [node name="DialogBoxUser" instance=ExtResource("1")]
 script = ExtResource("2")
@@ -28,6 +28,14 @@ offset_bottom = 244.0
 [node name="NinePatchRect" parent="Layer/Control/MarginContainer2" index="0"]
 texture = ExtResource("3")
 patch_margin_bottom = 146
+
+[node name="HeadTextureRect" parent="Layer/Control/MarginContainer2/NinePatchRect" index="0"]
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 187.0
+offset_bottom = 64.0
 
 [node name="ButtonContainer" parent="Layer/Control" index="1"]
 offset_left = -180.0
@@ -124,10 +132,10 @@ layout_mode = 2
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0.901961, 0.858824, 0.74902, 1)
 theme_override_font_sizes/font_size = 16
-theme_override_styles/focus = SubResource("StyleBoxEmpty_m03at")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_ogr48")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_56xew")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4fqh5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_56xew")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ogr48")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m03at")
 text = "(建立一位新用户)"
 
 [node name="LogOutButton" parent="Layer/Control" index="4" instance=ExtResource("4")]

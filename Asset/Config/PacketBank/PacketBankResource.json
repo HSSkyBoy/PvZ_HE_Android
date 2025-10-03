@@ -34,15 +34,20 @@
 				"PlantSnowwood",
 				"PlantSeaNut",
 				"PlantMelonpultSpike",
+				"PlantTanglekelpH",
 				"PlantJalaNut",
 				"PlantJalaCherryBomb",
 				"PlantPlanternSix",
+				"PlantSunPad",
 				"PlantPeaWell",
-				"PlantPumpkinFire"
+				"PlantPumpkinFire",
+				"PlantChomperBlow",
+				"PlantDoomTanglekelp"
 			],
 			"Gold": [
 				"PlantQueenSunFlower",
-				"PlantWildPea"
+				"PlantWildPea",
+				"PlantIceTallnut"
 			],
 			"Diamond": [],
 			"Colour": [],
@@ -56,15 +61,22 @@
 				"PlantHypnoShroom",
 				"PlantScaredyShroom",
 				"PlantSquash",
+				"PlantTanglekelp",
+				"PlantThreePeater",
 				"PlantJalapeno",
+				"PlantMelonpult" ,
+				"PlantPumpkin",
 				"PlantPot",
+				
 				"PlantGatlingPea",
 				"PlantFireTallnut",
 				"PlantIceSunMine",
 				"PlantIceSpearPea",
 				"PlantTwinSunShroom",
 				"PlantGatlingCat",
-				"PlantThreeCactus"
+				"PlantThreeCactus",
+				"PlantPumpkinFireIce",
+				"PlantGatlingPot"
 			]
 		}
 	},
@@ -95,7 +107,9 @@
 				"ZombieFootball",
 				"ZombieFootballBlack",
 				"ZombieImp",
+				"ZombieImpPresentBox",
 				"ZombieGargantuar",
+				"ZombieGargantuarPresentBox" ,
 				"ZombieGargantuarRedEyes",
 				"ZombieGargantuarArmed",
 				"ZombiePolestriker",
@@ -109,7 +123,20 @@
 				"ZombieJackbox",
 				"ZombieDuck",
 				"ZombieSnorkle",
-				"ZombieDolphinrider"
+				"ZombieSnorkleTanglekelp",
+				"ZombieDolphinrider",
+				"ZombieDolphinriderGatlingPea",
+				"ZombieDolphiSN",
+				"ZombieDuckRider",
+				"ZombieShieldArmor",
+				"ZombieCat" ,
+				"ZombieSeaDemon",
+				"ZombieGargantuarZamboni",
+				"ZombieDiscoFire",
+				"ZombieDancerFire",
+				"ZombieJacksonX",
+				"ZombieBackup",
+				"ZombieDisco"
 			]
 		}
 	},
@@ -175,6 +202,7 @@
 				"ZombieImpHelmet",
 				"ZombieImpBlackHelmet",
 				"ZombieImpSpecialHelmet",
+				"ZombieImpPresentBox",
 				"ZombieGargantuar",
 				"ZombieGargantuarBucket",
 				"ZombieGargantuarScreendoor",
@@ -182,6 +210,7 @@
 				"ZombieGargantuarHelmet",
 				"ZombieGargantuarBlackHelmet",
 				"ZombieGargantuarSpecialHelmet",
+				"ZombieGargantuarPresentBox" ,
 				"ZombieGargantuarArmed",
 				"ZombieGargantuarRedEyes",
 				"ZombieGargantuarRedEyesBucket",
@@ -240,10 +269,29 @@
 				"ZombieSnorkleHelmet",
 				"ZombieSnorkleBlackHelmet",
 				"ZombieSnorkleSpecialHelmet",
+				"ZombieSnorkleTanglekelp",
 				"ZombieDolphinrider",
 				"ZombieDolphinriderHelmet",
 				"ZombieDolphinriderBlackHelmet",
-				"ZombieDolphinriderSpecialHelmet"
+				"ZombieDolphinriderSpecialHelmet",
+				"ZombieDolphinriderGatlingPea",
+				"ZombieDolphiSN",
+				"ZombieDolphiSNHelmet",
+				"ZombieDolphiSNBlackHelmet",
+				"ZombieDolphiSNSpecialHelmet",
+				"ZombieDuckRider",
+				"ZombieShieldArmor",
+				"ZombieCat",
+				"ZombieSeaDemon",
+				"ZombieSeaDemonHelmet",
+				"ZombieSeaDemonBlackHelmet",
+				"ZombieSeaDemonSpecialHelmet",
+				"ZombieGargantuarZamboni",
+				"ZombieDiscoFire",
+				"ZombieDancerFire",
+				"ZombieJacksonX",
+				"ZombieBackup",
+				"ZombieDisco"
 			]
 		}
 	},
@@ -285,7 +333,74 @@
 				"ItemLadder",
 				"MowerDefault",
 				"MowerPoolCleaner",
-				"MowerSun"
+				"MowerSun",
+				"VaseNormal",
+				"VasePlant",
+				"VaseZombie"
+			]
+		}
+	},
+
+	"ZombieImpPresentBox": {
+		"Include": [],
+		"Category": {
+			"Zombie": [
+				"ZombieNormal",
+				"ZombieNormalCone",
+				"ZombieNormalBucket",
+				"ZombieNormalScreendoor",
+				"ZombieFlag",
+				"ZombieSleeper",
+				"ZombiePaper",
+				"ZombiePolevaulter",
+				"ZombieFootball",
+				"ZombieFootballBlack",
+				"ZombiePolestriker",
+				"ZombieShadow",
+				"ZombieJackson",
+				"ZombieDancer",
+				"ZombieDigger",
+				"ZombieYetiDigger",
+				"ZombieLadder",
+				"ZombieJackbox",
+				"ZombieSnorkle",
+				"ZombieDolphinrider",
+				"ZombieDolphiSN",
+				"ZombieDuckRider",
+				"ZombieShieldArmor"
+			]
+		}
+	},
+	"ZombieGargantuarPresentBox": {
+		"Include": [],
+		"Category": {
+			"Zombie": [
+				"ZombieNormal",
+				"ZombieNormalCone",
+				"ZombieNormalBucket",
+				"ZombieNormalScreendoor",
+				"ZombieFlag",
+				"ZombieSleeper",
+				"ZombieBed",
+				"ZombiePaper",
+				"ZombiePolevaulter",
+				"ZombieFootball",
+				"ZombieFootballBlack",
+				"ZombiePolestriker",
+				"ZombieShadow",
+				"ZombieJackson",
+				"ZombieDancer",
+				"ZombieZamboni",
+				"ZombieDigger",
+				"ZombieYetiDigger",
+				"ZombieLadder",
+				"ZombieJackbox",
+				"ZombieDuck",
+				"ZombieSnorkle",
+				"ZombieDolphinrider",
+				"ZombieDolphiSN",
+				"ZombieDuckRider",
+				"ZombieShieldArmor"
 			]
 		}
 	}

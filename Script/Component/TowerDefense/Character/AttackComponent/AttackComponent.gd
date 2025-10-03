@@ -1,8 +1,9 @@
 class_name AttackComponent extends ComponentBase
 
-@export_enum("Default", "Eat", "Smash") var attackType: String = "Eat"
+@export_enum("Default", "Eat", "Smash", "Chomp") var attackType: String = "Eat"
 @export var checkArea: Area2D
 @export var checkIntreval: int = 5
+@export var checkLine: bool = false
 @export var checkTall: bool = false
 
 var parent: TowerDefenseCharacter
@@ -22,6 +23,8 @@ func CanAttack(fliterBowling: bool = true, checkAll: bool = false, checkGravesto
         return false
     if !checkArea:
         return false
+    if !parent.instance.canCollection:
+        return false
     if checkTall:
         target = GetTargetTall(fliterBowling, checkGravestone)
         if is_instance_valid(target):
@@ -33,7 +36,7 @@ func CanAttack(fliterBowling: bool = true, checkAll: bool = false, checkGravesto
                 if is_instance_valid(cell.characterLadder) && parent.config.physique < TowerDefenseEnum.ZOMBIE_PHYSIQUE.HUGE && parent.scale.x > 0.0:
                     target = null
                     return false
-        if parent.isGarlic:
+        if parent.isGarlic || parent.isChangeLine:
             return false
 
     if is_instance_valid(target):
@@ -43,7 +46,7 @@ func CanAttack(fliterBowling: bool = true, checkAll: bool = false, checkGravesto
         if !parent.CanCollision(target.instance.maskFlags):
             target = null
             return false
-        if target is TowerDefensePlant:
+        if target is TowerDefensePlant && !target is TowerDefensePlantBowlingBase:
             var cell: TowerDefenseCellInstance = TowerDefenseManager.GetMapCell(target.gridPos)
             target = cell.GetTarget(parent.instance.maskFlags)
         return is_instance_valid(target)
@@ -62,6 +65,10 @@ func CanAttack(fliterBowling: bool = true, checkAll: bool = false, checkGravesto
                     if is_instance_valid(cell.characterLadder) && parent.config.physique < TowerDefenseEnum.ZOMBIE_PHYSIQUE.HUGE && parent.scale.x > 0.0:
                         target = null
                         return false
+            if target is TowerDefensePlant && !target is TowerDefensePlantBowlingBase:
+                var cell: TowerDefenseCellInstance = TowerDefenseManager.GetMapCell(target.gridPos)
+                if is_instance_valid(cell):
+                    target = cell.GetTarget(parent.instance.maskFlags)
         return is_instance_valid(target)
     else:
         var characterList = TowerDefenseManager.GetCharacterTargetFromArea(parent, checkArea, false, false)
@@ -98,7 +105,7 @@ func GetTarget(fliterBowling: bool = true, checkGravestone: bool = true) -> Towe
 func GetTargetList(fliterBowling: bool = true, checkGravestone: bool = true) -> Array:
     var characterList: Array = []
     if !checkTall:
-        characterList = TowerDefenseManager.GetCharacterTargetFromArea(parent, checkArea, false, false)
+        characterList = TowerDefenseManager.GetCharacterTargetFromArea(parent, checkArea, false, false, attackType != "Smash")
     else:
         var areas = checkArea.get_overlapping_areas()
         for area: Area2D in areas:
@@ -106,20 +113,24 @@ func GetTargetList(fliterBowling: bool = true, checkGravestone: bool = true) -> 
             if checkCharacter is TowerDefenseCharacter:
                 if checkCharacter.die || checkCharacter.nearDie:
                     continue
-                if parent.CanTarget(checkCharacter):
-                    if checkCharacter.config.height >= TowerDefenseEnum.CHARACTER_HEIGHT.TALL:
-                        characterList.append(checkCharacter)
-                        continue
-                    if !parent.CanCollision(checkCharacter.instance.maskFlags):
-                        continue
-                    if checkCharacter is TowerDefenseCrater:
-                        continue
-                    if checkCharacter is TowerDefenseItem:
-                        continue
-                    if checkGravestone:
-                        if checkCharacter is TowerDefenseGravestone:
-                            continue
+                if !parent.CanTarget(checkCharacter):
+                    continue
+                if checkCharacter.config.height >= TowerDefenseEnum.CHARACTER_HEIGHT.TALL:
                     characterList.append(checkCharacter)
+                    continue
+                if !parent.CanCollision(checkCharacter.instance.maskFlags):
+                    continue
+                if checkCharacter is TowerDefenseCrater:
+                    continue
+                if checkCharacter is TowerDefenseItem:
+                    if attackType != "Smash":
+                        continue
+                    elif !checkCharacter is TowerDefenseVase:
+                        continue
+                if checkGravestone:
+                    if checkCharacter is TowerDefenseGravestone:
+                        continue
+                characterList.append(checkCharacter)
     if fliterBowling:
         characterList = characterList.filter(
             func(checkCharacter: TowerDefenseCharacter):
@@ -129,6 +140,11 @@ func GetTargetList(fliterBowling: bool = true, checkGravestone: bool = true) -> 
         characterList = characterList.filter(
             func(checkCharacter: TowerDefenseCharacter):
                 return !(checkCharacter is TowerDefenseGravestone)
+        )
+    if checkLine:
+        characterList = characterList.filter(
+            func(checkCharacter: TowerDefenseCharacter):
+                return checkCharacter.gridPos.y == parent.gridPos.y
         )
     return characterList
 
@@ -169,7 +185,9 @@ func SmashAttack(num: float) -> float:
     return character.SmashHurt(num, true, Vector2.ZERO)
 
 func SmashAttackCell(num: float) -> void :
-    if target is TowerDefenseZombie:
+    if !is_instance_valid(target):
+        return
+    if target is TowerDefenseZombie || target is TowerDefenseGravestone || target is TowerDefenseVase:
         target.SmashHurt(num, true, Vector2.ZERO)
     elif target is TowerDefensePlant:
         target = GetTarget()
@@ -178,7 +196,11 @@ func SmashAttackCell(num: float) -> void :
             for cellCharacter: TowerDefenseCharacter in cell.characterList.duplicate():
                 if !is_instance_valid(cellCharacter):
                     continue
-                if cellCharacter.CanCollision(parent.instance.collisionFlags):
+                if cellCharacter is TowerDefenseGravestone:
+                    continue
+                if cellCharacter is TowerDefenseCrater:
+                    continue
+                if cellCharacter.CanTarget(parent) && cellCharacter.CanCollision(parent.instance.collisionFlags):
                     cellCharacter.SmashHurt(num, true, Vector2.ZERO)
 
 func ExitCheck(area: Area2D) -> void :

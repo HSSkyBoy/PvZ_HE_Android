@@ -6,7 +6,7 @@ extends TowerDefenseItem
 var over: bool = false
 
 func _ready() -> void :
-    super._ready()
+    super ._ready()
     HitBoxDestroy()
 
 func IdleEntered() -> void :
@@ -23,7 +23,7 @@ func IdleProcessing(delta: float) -> void :
             over = true
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "Idle":
             attackComponent.Attack(10000)

@@ -15,3 +15,4 @@ func DestroySet() -> void :
     else:
         var item = TowerDefenseManager.FallingObjectItemCreate(ObjectManagerConfig.OBJECT.COIN_DIAMOND, global_position, GetGroundHeight(global_position.y), Vector2(randf_range(-50.0, 50.0), -400.0), 980.0)
         item.gridPos = gridPos
+    await get_tree().physics_frame

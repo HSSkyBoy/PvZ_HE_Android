@@ -18,7 +18,6 @@ fireNum = 1
 idleAnimeClip = "BodyIdle"
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/GatlingPea")
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
@@ -26,10 +25,10 @@ position = Vector2(0, 30)
 [node name="GatlingPea" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSprite") instance=ExtResource("4")]
 position = Vector2(0, -30)
 trueFrameRate = 30.0
-layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, NodePath("Head"), null, null, null, null, null, null, null, null, null, null, null, null, null]
 
 [node name="Head" parent="SpriteGroup/TransformPoint/GatlingPea" index="0" node_paths=PackedStringArray("layerSprite")]
-position = Vector2(1.07989, 2.42663)
+position = Vector2(-3.3300018, 7.3732986)
 trueFrameRate = 30.0
 layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 

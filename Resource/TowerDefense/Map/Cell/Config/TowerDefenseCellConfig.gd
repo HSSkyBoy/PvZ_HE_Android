@@ -2,6 +2,7 @@
 class_name TowerDefenseCellConfig extends Resource
 
 @export var pos: Vector4i = Vector4i.ZERO
+@export var groundHeightCurve: CurveTexture
 @export_category("Setting")
 @export var gridType: Array[TowerDefenseEnum.PLANTGRIDTYPE] = [TowerDefenseEnum.PLANTGRIDTYPE.GROUND, TowerDefenseEnum.PLANTGRIDTYPE.AIR]
 @export_storage var elementFlags: int = 0

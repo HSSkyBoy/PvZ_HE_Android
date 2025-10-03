@@ -15,18 +15,18 @@ config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/Pot")
 PreviewDamagePointPersontage = 1.0
 itemLayer = 2
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
 
 [node name="Pot" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("4")]
 position = Vector2(0, -26)
-layerSlot = [NodePath("../../../ShadowSprite/AdobeAnimateSlot"), null, null, null, null, NodePath("AdobeAnimateSlot"), null]
+trueFrameRate = 30.0
+layerSlot = [NodePath("../../../ShadowSprite/AdobeAnimateSlot"), null, null, null, null, null, null]
 layerSprite = [null, null, null, null, null, null, null]
 
 [node name="AdobeAnimateSlot" type="Node2D" parent="SpriteGroup/TransformPoint/Pot" index="0"]
-position = Vector2(-32.85, -5.9967)
+position = Vector2(-32.85, -6.8033)
 scale = Vector2(0.799988, 0.799988)
 script = ExtResource("5")
 followSlotId = 6
@@ -41,8 +41,8 @@ scale = Vector2(0.821918, 0.77551)
 texture = null
 
 [node name="AdobeAnimateSlot" type="Node2D" parent="ShadowSprite" index="0"]
-position = Vector2(-27.1317, 22.25)
-scale = Vector2(0.766612, 0.799988)
+position = Vector2(-26.3433, 22.25)
+scale = Vector2(0.745016, 0.799988)
 script = ExtResource("5")
 metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
 

@@ -12,15 +12,13 @@
 [ext_resource type="Resource" uid="uid://b3nojrbfbp2yd" path="res://Asset/Anime/Character/Zombie/Chapter3/Duck/Armor/Config/ZombieDuckArmorSpecialHelmet.tres" id="10"]
 [ext_resource type="PackedScene" uid="uid://cdx8flivkmr4f" path="res://Asset/Anime/Character/Zombie/Chapter3/Duck/ZombieDuck.tscn" id="11"]
 
-[node name="TowerDefenseZombieDuck" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+[node name="TowerDefenseZombieDuck" node_paths=PackedStringArray("sprite", "headSlot") instance=ExtResource("1")]
 script = ExtResource("2")
-inSwimAnimeClip = ""
 swimAnimeClip = "Swim"
-outSwimAnimeClip = ""
-attackWaterAnimeClip = ""
 dieWaterAnimeClip = "SwimDeath"
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/ZombieDuck")
+headSlot = NodePath("SpriteGroup/TransformPoint/ZombieDuck/HeadSlot")
 damagePart = {
 "Arm": ExtResource("4"),
 "BlackHelmet": ExtResource("9"),
@@ -45,27 +43,27 @@ position = Vector2(12, 33)
 
 [node name="ZombieDuck" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("11")]
 position = Vector2(-12, -33)
-layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, NodePath("HeadSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ArmSlot"), null, null, null, NodePath("ConeSlot"), NodePath("BucketSlot"), null]
 
 [node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieDuck" index="0"]
-position = Vector2(-12.9406, -45.857)
-rotation = -0.0780458
-scale = Vector2(0.799477, 0.799477)
+position = Vector2(-7.97697, -51.4063)
+rotation = 0.0335792
+scale = Vector2(0.799377, 0.799377)
 
 [node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieDuck" index="1"]
-position = Vector2(8.36624, 1.72308)
-rotation = -0.136812
-scale = Vector2(0.799115, 0.799115)
+position = Vector2(6.1008, -1.59287)
+rotation = 0.122015
+scale = Vector2(0.798689, 0.798689)
 
 [node name="ConeSlot" parent="SpriteGroup/TransformPoint/ZombieDuck" index="2"]
-position = Vector2(-8.12852, -71.7048)
-rotation = -0.100703
-scale = Vector2(0.796256, 0.796256)
+position = Vector2(0.60438, -77.1669)
+rotation = 0.0986572
+scale = Vector2(0.799722, 0.799722)
 
 [node name="BucketSlot" parent="SpriteGroup/TransformPoint/ZombieDuck" index="3"]
-position = Vector2(-12.094, -61.0039)
-rotation = -0.0879202
-scale = Vector2(0.798269, 0.798269)
+position = Vector2(-5.77541, -67.4379)
+rotation = 0.0
+scale = Vector2(0.799988, 0.799988)
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(4, -2)

@@ -24,11 +24,11 @@ fireInterval = 1.5
 produceInterval = 25.0
 sunNum = 15
 growUpTime = 60.0
+fireNum = 1
 sleepAnimeClip = "Sleep"
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/ScaredySunShroom")
 Custom = []
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
@@ -38,9 +38,10 @@ position = Vector2(0, -30)
 layerSlot = [null, null, null, null, null, null, null, NodePath("AdobeAnimateSlot2"), null, null, NodePath("AdobeAnimateSlot"), null, null, null, null, null, null]
 
 [node name="AdobeAnimateSlot" type="Node2D" parent="SpriteGroup/TransformPoint/ScaredySunShroom" index="0"]
-position = Vector2(-34.921, -25.9535)
-rotation = -0.267614
-scale = Vector2(0.556913, 0.508886)
+position = Vector2(-34.7612, -28.7648)
+rotation = -0.267615
+scale = Vector2(0.54151, 0.535862)
+skew = -1.09673e-05
 script = ExtResource("5")
 followSlotId = 11
 metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
@@ -49,9 +50,9 @@ metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
 position = Vector2(47.711, 28.7919)
 
 [node name="AdobeAnimateSlot2" type="Node2D" parent="SpriteGroup/TransformPoint/ScaredySunShroom" index="1"]
-position = Vector2(7.032, 0.132)
-rotation = -0.0537544
-scale = Vector2(0.799834, 0.758058)
+position = Vector2(7.37, -0.439999)
+rotation = -0.0149318
+scale = Vector2(0.799945, 0.788341)
 script = ExtResource("5")
 followSlotId = 8
 metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

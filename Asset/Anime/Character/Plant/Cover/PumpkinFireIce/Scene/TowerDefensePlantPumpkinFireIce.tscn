@@ -1,0 +1,113 @@
+[gd_scene load_steps=19 format=4 uid="uid://cxeg1d6b5eg0a"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://y5307xxi8jfy" path="res://Asset/Anime/Character/Plant/Cover/PumpkinFireIce/Scene/TowerDefensePlantPumpkinFireIce.gd" id="2"]
+[ext_resource type="Resource" uid="uid://by81bw64p2akv" path="res://Asset/Anime/Character/Plant/Cover/PumpkinFireIce/Config/TowerDefensePlantPumpkinFireIce.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://dwry67v3r3nod" path="res://Asset/Anime/Character/Plant/Cover/PumpkinFireIce/PumpkinFireIce.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://b6w5f0q85ngb7" path="res://Script/Component/TowerDefense/Character/ChangeProjectile/ChangeProjectileComponent.tscn" id="5"]
+[ext_resource type="Resource" uid="uid://5pj8jwcvds2s" path="res://Asset/Config/Projectile/Change/IceFire.tres" id="6"]
+[ext_resource type="PackedScene" uid="uid://8fpowsb3exlb" path="res://Script/Component/TowerDefense/Character/ReverseInjuryComponent/ReverseInjuryComponent.tscn" id="7"]
+[ext_resource type="Script" uid="uid://cmqmtitj4tcd8" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventHurt.gd" id="8"]
+[ext_resource type="Script" uid="uid://xug53xwvy4my" path="res://Resource/TowerDefense/Character/Buff/TowerDefenseCharacterBuffIceSpeedDown.gd" id="9"]
+[ext_resource type="Script" uid="uid://dtvfjfgy00epu" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventAddBuff.gd" id="10"]
+[ext_resource type="PackedScene" uid="uid://dxdsva0xl5qtd" path="res://Prefab/Particles/Splats/IceFireSplats/IceFireSplats.tscn" id="11"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vpdpe"]
+size = Vector2(64, 33)
+
+[sub_resource type="Gradient" id="Gradient_vpdpe"]
+offsets = PackedFloat32Array(0, 0.346154, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.952991, 0.952991, 0.952991, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7kd5i"]
+gradient = SubResource("Gradient_vpdpe")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q77ah"]
+size = Vector2(98, 80)
+
+[sub_resource type="Resource" id="Resource_1nd3y"]
+script = ExtResource("8")
+num = 40.0
+playSplatAudio = true
+damageFlags = 6
+collisionFlags = 9
+Flag/Damage = 6
+Flag/Collision = 9
+metadata/_custom_type_script = "uid://cmqmtitj4tcd8"
+
+[sub_resource type="Resource" id="Resource_5rbt1"]
+script = ExtResource("9")
+time = 15.0
+refresh = true
+metadata/_custom_type_script = "uid://xug53xwvy4my"
+
+[sub_resource type="Resource" id="Resource_lmtrx"]
+script = ExtResource("10")
+buffList = [SubResource("Resource_5rbt1")]
+metadata/_custom_type_script = "uid://dtvfjfgy00epu"
+
+[node name="TowerDefensePlantPumpkinFireIce" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+z_index = -10
+script = ExtResource("2")
+allEventList = []
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/PumpkinFireIce")
+PreviewDamagePointPersontage = 1.0
+itemLayer = 5
+
+[node name="SpriteMask" parent="SpriteGroup" index="0"]
+modulate = Color(1, 1, 1, 0)
+offset_top = -49.0
+offset_bottom = 54.0
+color = Color(1, 1, 1, 1)
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="PumpkinFireIce" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+position = Vector2(0, -30)
+
+[node name="Back" parent="SpriteGroup/TransformPoint/PumpkinFireIce/Node2D" index="0"]
+z_index = -2
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 30)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+shape = SubResource("RectangleShape2D_vpdpe")
+
+[node name="Light" type="PointLight2D" parent="." index="7"]
+unique_name_in_owner = true
+visible = false
+color = Color(0.529412, 1, 1, 1)
+energy = 0.35
+texture = SubResource("GradientTexture2D_7kd5i")
+
+[node name="ChangeProjectileComponent" parent="." index="8" node_paths=PackedStringArray("checkArea") instance=ExtResource("5")]
+projectileConfig = ExtResource("6")
+checkArea = NodePath("Area2D")
+
+[node name="Area2D" type="Area2D" parent="ChangeProjectileComponent" index="0"]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeProjectileComponent/Area2D" index="0"]
+shape = SubResource("RectangleShape2D_q77ah")
+
+[node name="ReverseInjuryComponent" parent="." index="9" instance=ExtResource("7")]
+eventList = [SubResource("Resource_1nd3y"), SubResource("Resource_lmtrx")]
+staticTime = 1.5
+targetEffectType = "Sprite"
+targetEffectScene = ExtResource("11")
+
+[node name="ShowHealthComponent" parent="." index="10"]
+position = Vector2(0, 16)
+
+[editable path="SpriteGroup/TransformPoint/PumpkinFireIce"]

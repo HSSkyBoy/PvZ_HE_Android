@@ -49,8 +49,10 @@ func DragInput(event: InputEvent) -> void :
         if Input.is_action_just_released("Press"):
             dragStart = false
 
-        if dragStart:
-            dragControl.global_position = savePos + (get_global_mouse_position() - saveMousePos)
+@warning_ignore("unused_parameter")
+func _physics_process(delta: float) -> void :
+    if dragStart:
+        dragControl.global_position = savePos + (get_global_mouse_position() - saveMousePos)
 
 func ChildClose() -> void :
     process_mode = aliveProcessMode

@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="9"]
 [ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="10"]
 
-[node name="TowerDefensePlantPeaPot" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+[node name="TowerDefensePlantCatPot" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
 z_index = -13
 script = ExtResource("2")
 fireInterval = 1.5
@@ -19,18 +19,18 @@ fireNum = 2
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/CatPot")
 itemLayer = 2
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
 
 [node name="CatPot" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("4")]
 position = Vector2(0, -29)
+trueFrameRate = 30.0
 layerSlot = [NodePath("../../../ShadowSprite/AdobeAnimateSlot"), null, null, NodePath("MouseSlot"), null, NodePath("PotSlot"), null, null]
 layerSprite = [null, null, null, null, null, null, null, null]
 
 [node name="PotSlot" type="Node2D" parent="SpriteGroup/TransformPoint/CatPot" index="0"]
-position = Vector2(-40.2341, -8.54987)
+position = Vector2(-39.6732, -9.20901)
 script = ExtResource("5")
 followSlotId = 6
 useScale = false
@@ -40,9 +40,9 @@ metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
 position = Vector2(40, 0)
 
 [node name="MouseSlot" type="Node2D" parent="SpriteGroup/TransformPoint/CatPot" index="1"]
-position = Vector2(-30.5708, -11.6458)
-rotation = 0.00313829
-scale = Vector2(0.79623, 0.803701)
+position = Vector2(-44.275, -9.7)
+rotation = -0.315586
+scale = Vector2(0.80098, 0.798509)
 script = ExtResource("5")
 followSlotId = 4
 useSkew = false
@@ -56,8 +56,8 @@ position = Vector2(1, 47)
 scale = Vector2(0.821918, 0.77551)
 
 [node name="AdobeAnimateSlot" type="Node2D" parent="ShadowSprite" index="0"]
-position = Vector2(-26.8719, 22.25)
-scale = Vector2(0.759495, 0.799988)
+position = Vector2(-27.705, 22.25)
+scale = Vector2(0.782318, 0.799988)
 script = ExtResource("5")
 metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
 

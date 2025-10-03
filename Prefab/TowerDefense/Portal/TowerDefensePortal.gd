@@ -41,7 +41,7 @@ func Init(shape: String, _posRange: Vector4i, _changeTime: float = 0.0) -> void 
     ChangePos(true)
 
 func _ready() -> void :
-    super._ready()
+    super ._ready()
     if Engine.is_editor_hint():
         return
     add_to_group("Portal")
@@ -103,7 +103,7 @@ func AreaEntered1(area: Area2D) -> void :
         if character is TowerDefenseGravestone:
             return
         if character is TowerDefenseCharacter:
-            character.saveShadowPosition.y += gridSize.y * (gridPos2.y - character.gridPos.y)
+            character.saveShadowPosition.y += protalNode2.global_position.y - character.global_position.y
             character.global_position = protalNode2.global_position
         elif character is TowerDefenseProjectile:
             character.global_position.x = protalNode2.global_position.x
@@ -130,8 +130,8 @@ func AreaEntered2(area: Area2D) -> void :
         if character is TowerDefenseGravestone:
             return
         if character is TowerDefenseCharacter:
-            character.saveShadowPosition.y += gridSize.y * (gridPos1.y - character.gridPos.y)
-            character.global_position = protalNode1.global_position
+            character.saveShadowPosition.y += protalNode2.global_position.y - character.global_position.y
+            character.global_position = protalNode2.global_position
         elif character is TowerDefenseProjectile:
             character.global_position.x = protalNode1.global_position.x
             character.global_position.y += gridSize.y * (gridPos1.y - character.gridPos.y)

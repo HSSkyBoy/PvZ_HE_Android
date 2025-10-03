@@ -45,7 +45,7 @@ func _enter_tree() -> void :
     isPlaying = audio.playing
 
 func _ready() -> void :
-    super._ready()
+    super ._ready()
     if GameSaveManager.GetConfigValue("MobilePreset"):
         MobilePreset()
     plantPacketBank = TowerDefenseManager.GetPacketBankData("GeneralPlant")

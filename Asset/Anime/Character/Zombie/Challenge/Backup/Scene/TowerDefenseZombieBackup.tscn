@@ -1,0 +1,90 @@
+[gd_scene load_steps=10 format=4 uid="uid://rbggquw37sqv"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cdvk0ikqhmcmk" path="res://Asset/Anime/Character/Zombie/Challenge/Backup/Scene/TowerDefenseZombieBackup.gd" id="2"]
+[ext_resource type="Resource" uid="uid://cmcfgco0qeqss" path="res://Asset/Anime/Character/Zombie/Challenge/Backup/Config/TowerDefenseZombieBackup.tres" id="3"]
+[ext_resource type="Resource" uid="uid://dew34ptidauyc" path="res://Asset/Anime/Character/Zombie/Challenge/Backup/DamagePoint/Config/ZombieBackupDamagePointArm.tres" id="4"]
+[ext_resource type="Resource" uid="uid://bjk2obnjs1euv" path="res://Asset/Anime/Character/Zombie/Challenge/Backup/DamagePoint/Config/ZombieBackupDamagePointHead.tres" id="5"]
+[ext_resource type="PackedScene" uid="uid://bm6rprgfpv8bl" path="res://Asset/Anime/Character/Zombie/Challenge/Backup/ZombieBackup.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://bjm31m10ujp84" path="res://Asset/Anime/Character/Zombie/WaterLine/ZombieWaterLine.tscn" id="7"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="8"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="9"]
+
+[node name="TowerDefenseZombieDancerFire" node_paths=PackedStringArray("duckytobeSprite", "waterLineSprite", "sprite", "headSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+duckytobeSprite = NodePath("SpriteGroup/TransformPoint/ZombieBackup/ZombieDuckytube")
+waterLineSprite = NodePath("SpriteGroup/TransformPoint/ZombieWaterLine")
+garlicReplace = "Zombie_dancer__head.png"
+waterHeightPersontage = 0.66
+waterHeight = 62.0
+idleAnimeClip = "Walk"
+sleepAnimeClip = "Walk"
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieBackup")
+headSlot = NodePath("SpriteGroup/TransformPoint/ZombieBackup/HeadSlot")
+damagePart = {
+"Arm": ExtResource("4"),
+"Head": ExtResource("5")
+}
+PreviewDamagePointPersontage = 1.0
+DamagePartSlot/Arm = NodePath("SpriteGroup/TransformPoint/ZombieBackup/ArmSlot")
+DamagePartSlot/Head = NodePath("SpriteGroup/TransformPoint/ZombieBackup/HeadSlot")
+
+[node name="SpriteMask" parent="SpriteGroup" index="0"]
+offset_top = -172.0
+offset_right = 56.0
+offset_bottom = 76.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(12, 33)
+
+[node name="ZombieBackup" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("6")]
+position = Vector2(-13, -26)
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, null, NodePath("ArmSlot"), null, NodePath("ArmSlot"), null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ZombieDuckytube"), null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="ZombieDuckytube" parent="SpriteGroup/TransformPoint/ZombieBackup" index="0"]
+position = Vector2(-0.7997017, -91.0269)
+rotation = -0.00013859749
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieBackup" index="1"]
+position = Vector2(8.745444, -87.96657)
+
+[node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieBackup" index="2"]
+position = Vector2(37.40831, -40.22708)
+rotation = -0.14913686
+scale = Vector2(0.7960312, 0.7960312)
+
+[node name="GroundSlot" parent="SpriteGroup/TransformPoint/ZombieBackup" index="3"]
+position = Vector2(-40.833332, -40)
+
+[node name="ZombieWaterLine" parent="SpriteGroup/TransformPoint" index="1" instance=ExtResource("7")]
+visible = false
+position = Vector2(0.499999, -61.75)
+useTween = true
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(4, -2)
+
+[node name="GroundMoveComponent" parent="." index="8" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieBackup/GroundSlot")
+
+[node name="Dance" type="Node" parent="StateChart/CompoundState" index="6"]
+script = ExtResource("8")
+
+[node name="ToDance" type="Node" parent="StateChart/CompoundState" index="13"]
+script = ExtResource("9")
+to = NodePath("../Dance")
+event = &"ToDance"
+delay_in_seconds = "0.0"
+
+[node name="ToPoint" type="Node" parent="StateChart/CompoundState" index="14"]
+script = ExtResource("9")
+event = &"ToPoint"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="StateChart/CompoundState/Dance" to="." method="DanceEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Dance" to="." method="DanceExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Dance" to="." method="DanceProcessing"]
+
+[editable path="SpriteGroup/TransformPoint/ZombieBackup"]

@@ -30,7 +30,7 @@ buffList = [SubResource("Resource_06bjq")]
 metadata/_custom_type_script = "uid://dtvfjfgy00epu"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p412e"]
-size = Vector2(40.5, 90)
+size = Vector2(40.5, 80)
 
 [sub_resource type="Resource" id="Resource_8eyjb"]
 script = ExtResource("9")
@@ -44,7 +44,7 @@ metadata/_custom_type_script = "uid://cmqmtitj4tcd8"
 
 [sub_resource type="Resource" id="Resource_leatl"]
 script = ExtResource("11")
-time = 0.5
+time = 1.0
 refresh = true
 metadata/_custom_type_script = "uid://ds0l5hmdyo5a8"
 
@@ -69,9 +69,6 @@ position = Vector2(0, -30)
 
 [node name="ShadowSprite" parent="." index="3"]
 position = Vector2(0, 30)
-
-[node name="HitBox" parent="." index="5"]
-visible = true
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(0, 0)

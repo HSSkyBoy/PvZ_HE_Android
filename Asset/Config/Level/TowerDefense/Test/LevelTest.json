@@ -9,6 +9,7 @@
 	"Tutorial": "",
 	"Map": "FrontlawnNightThreePart",
 	"BGM": "Backyard",
+	"FinishMethod" : "Vase",
 	"Reward": {
 		"RewardType": "Noone",
 		"RewardFirst": ""
@@ -19,7 +20,8 @@
 		"EventStart": []
 	},
 	"PacketBank": {
-		"ColdDownStart" : false ,
+		"PlantColumn": false,
+		"ColdDownStart": false,
 		"Method": "Choose",
 		"Type": "GeneralPlant",
 		"Value": []
@@ -39,6 +41,16 @@
 		"BeginCol": 1.0,
 		"SpawnColEnd": 20.0,
 		"SpawnColStart": 10.0,
+		"SpawnOverride": {
+			"DieEvent": [
+				{
+					"EventName": "SunCreate",
+					"Value": {
+						"Num": 25.0
+					}
+				}
+			]
+		},
 		"Dynamic": [
 			{
 				"PointIncrementPerWave": -10.0,
@@ -514,6 +526,57 @@
 					}
 				],
 				"Event": []
+			}
+		]
+	},
+	"VaseManager":{
+		"Shuffle" : true ,
+		"Vase": [
+			{
+				"PacketName" : "PlantPeaShooterSingle" ,
+				"Type" : "Plant" ,
+				"GridPos" : [
+					8.0,
+					1.0
+				]
+			},
+			{
+				"PacketName" : "PlantPeaShooter" ,
+				"Type" : "Normal" ,
+				"GridPos" : [
+					8.0,
+					2.0
+				]
+			},
+			{
+				"Type" : "Normal" ,
+				"GridPos" : [
+					8.0,
+					3.0
+				]
+			},
+			{
+				"PacketName" : "PlantPlanternSix" ,
+				"Type" : "Plant" ,
+				"GridPos" : [
+					8.0,
+					4.0
+				]
+			},
+			{
+				"Type" : "Normal" ,
+				"GridPos" : [
+					8.0,
+					5.0
+				]
+			}
+		],
+		"VaseFill" : [
+			{
+				"PacketName": "PlantMagnetnut"
+			},
+			{
+				"PacketName": "ZombieNormal"
 			}
 		]
 	}

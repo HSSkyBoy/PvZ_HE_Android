@@ -36,11 +36,11 @@ func VersionHTTPRequestCompleted(result: int, response_code: int, headers: Packe
             print("checkString:", checkString)
             if checkString == newVersion + Global.uri:
                 Global.newVersion = newVersion
-                var flag: bool = false
+                var flag: bool = true
                 var vesionSplit = Global.version.split(".")
                 for ind in getVersion.size():
-                    if vesionSplit[ind].to_int() < int(getVersion[ind]):
-                        flag = true
+                    if vesionSplit[ind].to_int() > int(getVersion[ind]):
+                        flag = false
                         break
                 Global.hasNewVersion = flag
                 if !Global.hasNewVersion:
@@ -55,8 +55,8 @@ func DailyLevelHTTPRequestCompleted(result: int, response_code: int, headers: Pa
     var json = JSON.new()
     json.parse(body.get_string_from_utf8())
     if json.data:
-        dailyLevelGetOver = true
         ResourceManager.DAILY_LEVEL_DATA = json.get_data()
+        dailyLevelGetOver = true
 
 
 func GetOnlineLevelPage(pageIndex: int = 1, suffix: String = "") -> void :

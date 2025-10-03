@@ -10,4 +10,5 @@ func DestroySet() -> void :
         return
     boom = true
     ViewManager.FullScreenColorBlink(Color(0.117647, 0.564706, 1, 0.5), 0.1)
+    await get_tree().physics_frame
     TowerDefenseExplode.CreateExplode(global_position, Vector2(1.5, 1.5), eventList, [], TowerDefenseEnum.CHARACTER_CAMP.NOONE, -1)

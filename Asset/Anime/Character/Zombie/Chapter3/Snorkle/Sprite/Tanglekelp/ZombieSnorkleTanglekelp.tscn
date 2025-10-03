@@ -1,0 +1,141 @@
+[gd_scene load_steps=6 format=4 uid="uid://cr570ka6ktqxh"]
+
+[ext_resource type="Script" uid="uid://dmqbwrajyqaq2" path="res://Asset/Anime/Character/Zombie/Chapter3/Snorkle/Sprite/Tanglekelp/ZombieSnorkleTanglekelpSprite.gd" id="1"]
+[ext_resource type="Resource" uid="uid://dhk1nbbhkr6u0" path="res://Asset/Anime/Character/Zombie/Chapter3/Snorkle/ZombieSnorkle.tres" id="2"]
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="3"]
+[ext_resource type="Resource" uid="uid://b3k2gtytgc423" path="res://Asset/Anime/Character/Plant/Chapter0/Tanglekelp/Tanglekelp.tres" id="4"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="5"]
+
+[node name="ZombieSnorkleTanglekelp" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-50, -80)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/Zombie_outerarm_hand = true
+Animation/LayerVisible/Zombie_outerarm_lower = true
+Animation/LayerVisible/Zombie_snorkle_body1 = true
+Animation/LayerVisible/Zombie_snorkle_body2 = true
+Animation/LayerVisible/Zombie_snorkle_innerarm_hand = true
+Animation/LayerVisible/Zombie_snorkle_innerarm_lower = true
+Animation/LayerVisible/Zombie_snorkle_innerarm_upper = true
+Animation/LayerVisible/Zombie_snorkle_innerleg_foot = true
+Animation/LayerVisible/Zombie_snorkle_innerleg_lower = true
+Animation/LayerVisible/Zombie_snorkle_innerleg_upper = true
+Animation/LayerVisible/Zombie_snorkle_outerarm_upper = true
+Animation/LayerVisible/Zombie_snorkle_outerleg_lower = true
+Animation/LayerVisible/Zombie_snorkle_outerleg_toe = true
+Animation/LayerVisible/Zombie_snorkle_outerleg_upper = true
+Animation/LayerVisible/Zombie_snorkle_whitewater = true
+Animation/LayerVisible/Zombie_snorkle_whitewater2 = true
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/anim_head1 = false
+Animation/LayerVisible/anim_head_jaw = false
+Animation/LayerVisible/anim_head_lips = false
+Animation/LayerVisible/anim_head_snorkle = false
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/Zombie_outerarm_hand.png = null
+Animation/MediaReplace/Zombie_snorkle_body1.png = null
+Animation/MediaReplace/Zombie_snorkle_body2.png = null
+Animation/MediaReplace/Zombie_snorkle_head.png = null
+Animation/MediaReplace/Zombie_snorkle_head3.png = null
+Animation/MediaReplace/Zombie_snorkle_head4.png = null
+Animation/MediaReplace/Zombie_snorkle_head_jaw.png = null
+Animation/MediaReplace/Zombie_snorkle_headlips.png = null
+Animation/MediaReplace/Zombie_snorkle_headwater.png = null
+Animation/MediaReplace/Zombie_snorkle_innerarm_hand.png = null
+Animation/MediaReplace/Zombie_snorkle_innerarm_lower.png = null
+Animation/MediaReplace/Zombie_snorkle_innerarm_upper.png = null
+Animation/MediaReplace/Zombie_snorkle_innerleg_foot.png = null
+Animation/MediaReplace/Zombie_snorkle_innerleg_lower.png = null
+Animation/MediaReplace/Zombie_snorkle_innerleg_upper.png = null
+Animation/MediaReplace/Zombie_snorkle_outerarm_lower.png = null
+Animation/MediaReplace/Zombie_snorkle_outerarm_upper.png = null
+Animation/MediaReplace/Zombie_snorkle_outerarm_upper2.png = null
+Animation/MediaReplace/Zombie_snorkle_outerleg_foot.png = null
+Animation/MediaReplace/Zombie_snorkle_outerleg_lower.png = null
+Animation/MediaReplace/Zombie_snorkle_outerleg_upper.png = null
+Animation/MediaReplace/Zombie_snorkle_snorkle.png = null
+Animation/MediaReplace/Zombie_snorkle_whitewater1.png = null
+Animation/MediaReplace/Zombie_snorkle_whitewater2.png = null
+Animation/MediaReplace/Zombie_snorkle_whitewater3.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="Head" type="Node2D" parent="." node_paths=PackedStringArray("layerSlot", "layerSprite", "parentSprite")]
+unique_name_in_owner = true
+position = Vector2(-29.1653, -80.6786)
+rotation = 0.0597514
+scale = Vector2(-0.75, 0.75)
+script = ExtResource("3")
+flashAnimeData = ExtResource("4")
+offset = Vector2(-80, -10)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null]
+parentSprite = NodePath("..")
+Animation/Clip = "IdleNoWater"
+Animation/LayerVisible/AnimeClips = false
+"Animation/LayerVisible/Layer 29" = true
+"Animation/LayerVisible/Layer 32" = true
+Animation/LayerVisible/Tanglekelp_arm1 = true
+Animation/LayerVisible/Tanglekelp_arm2 = true
+Animation/LayerVisible/Tanglekelp_arm3 = true
+Animation/LayerVisible/Tanglekelp_arm4 = true
+Animation/LayerVisible/Tanglekelp_arm5 = true
+Animation/LayerVisible/Tanglekelp_arm6 = true
+Animation/LayerVisible/Tanglekelp_arm7 = true
+Animation/LayerVisible/Tanglekelp_arm8 = true
+Animation/LayerVisible/anim_face = true
+Animation/LayerVisible/anim_waterline = true
+"Animation/MediaReplace/Tanglekelp_arm 8.png" = null
+Animation/MediaReplace/Tanglekelp_arm1.png = null
+Animation/MediaReplace/Tanglekelp_arm2.png = null
+Animation/MediaReplace/Tanglekelp_arm3.png = null
+Animation/MediaReplace/Tanglekelp_arm4.png = null
+Animation/MediaReplace/Tanglekelp_arm5.png = null
+Animation/MediaReplace/Tanglekelp_arm6.png = null
+Animation/MediaReplace/Tanglekelp_arm7.png = null
+Animation/MediaReplace/Tanglekelp_body.png = null
+Animation/MediaReplace/Tanglekelp_body_zengarden.png = null
+Animation/MediaReplace/Tanglekelp_grab_back1.png = null
+Animation/MediaReplace/Tanglekelp_grab_back2.png = null
+Animation/MediaReplace/Tanglekelp_grab_back3.png = null
+Animation/MediaReplace/Tanglekelp_grab_back4.png = null
+Animation/MediaReplace/Tanglekelp_grab_front1.png = null
+Animation/MediaReplace/Tanglekelp_grab_front2.png = null
+Animation/MediaReplace/Tanglekelp_grab_front3.png = null
+Animation/MediaReplace/Tanglekelp_grab_front4.png = null
+Animation/MediaReplace/Tanglekelp_grab_front5.png = null
+Animation/MediaReplace/Tanglekelp_whitewater1.png = null
+Animation/MediaReplace/Tanglekelp_whitewater2.png = null
+Animation/MediaReplace/Tanglekelp_whitewater3.png = null
+Layer = 12
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="HeadSlot" type="Node2D" parent="."]
+position = Vector2(-10.6467, -55.5364)
+rotation = 0.0597514
+scale = Vector2(0.799639, 0.799713)
+skew = 0.000167608
+script = ExtResource("5")
+followSlotId = 13
+offset = Vector2(25, 30)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ArmSlot" type="Node2D" parent="."]
+position = Vector2(19.0278, -2.6568)
+rotation = -0.393247
+scale = Vector2(0.798231, 0.798231)
+script = ExtResource("5")
+followSlotId = 19
+offset = Vector2(10, 20)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="GroundSlot" type="Node2D" parent="."]
+position = Vector2(-42.8958, -40)
+script = ExtResource("5")
+followSlotId = 1
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

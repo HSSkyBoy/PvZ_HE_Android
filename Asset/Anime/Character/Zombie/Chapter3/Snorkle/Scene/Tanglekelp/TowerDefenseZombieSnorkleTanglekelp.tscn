@@ -1,0 +1,77 @@
+[gd_scene load_steps=11 format=4 uid="uid://dleaie050fgsu"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cyq5rkqxlqiw1" path="res://Asset/Anime/Character/Zombie/Chapter3/Snorkle/Scene/Tanglekelp/TowerDefenseZombieSnorkleTanglekelp.gd" id="2"]
+[ext_resource type="Resource" uid="uid://dttcrdemlbbs4" path="res://Asset/Anime/Character/Zombie/Chapter3/Snorkle/Config/TowerDefenseZombieSnorkleTanglekelp.tres" id="3"]
+[ext_resource type="Resource" uid="uid://co537d8wk2trx" path="res://Asset/Anime/Character/Zombie/Chapter3/Snorkle/DamagePoint/Config/ZombieSnorkleDamagePointArm.tres" id="4"]
+[ext_resource type="Resource" uid="uid://csk4e2hffpd8y" path="res://Asset/Anime/Character/Zombie/Chapter3/Snorkle/DamagePoint/Config/ZombieSnorkleDamagePointHead.tres" id="5"]
+[ext_resource type="Resource" uid="uid://dat20ya1dcy8c" path="res://Asset/Anime/Character/Zombie/Chapter3/Snorkle/Armor/Config/ZombieSnorkleArmorHelmet.tres" id="6"]
+[ext_resource type="Resource" uid="uid://dswwhb2lomp7n" path="res://Asset/Anime/Character/Zombie/Chapter3/Snorkle/Armor/Config/ZombieSnorkleArmorBlackHelmet.tres" id="7"]
+[ext_resource type="Resource" uid="uid://d2ou8b5l3dpji" path="res://Asset/Anime/Character/Zombie/Chapter3/Snorkle/Armor/Config/ZombieSnorkleArmorSpecialHelmet.tres" id="8"]
+[ext_resource type="PackedScene" uid="uid://cr570ka6ktqxh" path="res://Asset/Anime/Character/Zombie/Chapter3/Snorkle/Sprite/Tanglekelp/ZombieSnorkleTanglekelp.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://dy8ohvmyh2j1k" path="res://Asset/Anime/Character/Plant/Chapter0/Tanglekelp/TanglekelpGrab.tscn" id="10"]
+
+[node name="TowerDefenseZombieSnorkleTanglekelp" node_paths=PackedStringArray("grab", "sprite", "headSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+grab = NodePath("SpriteGroup/TanglekelpGrab")
+walkSpeedScale = 1.5
+inSwimAnimeClip = "Jump"
+swimAnimeClip = "Swim"
+attackWaterAnimeClip = "SwimEat"
+dieWaterAnimeClip = "SwimDeath"
+waterHeightPersontage = 0.87
+waterHeight = 0.0
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieSnorkleTanglekelp")
+headSlot = NodePath("SpriteGroup/TransformPoint/ZombieSnorkleTanglekelp/HeadSlot")
+damagePart = {
+"Arm": ExtResource("4"),
+"BlackHelmet": ExtResource("7"),
+"Head": ExtResource("5"),
+"Helmet": ExtResource("6"),
+"SpecialHelmet": ExtResource("8")
+}
+PreviewDamagePointPersontage = 1.0
+Armor = []
+DamagePartSlot/Arm = NodePath("SpriteGroup/TransformPoint/ZombieSnorkleTanglekelp/ArmSlot")
+DamagePartSlot/Head = NodePath("SpriteGroup/TransformPoint/ZombieSnorkleTanglekelp/HeadSlot")
+DamagePartSlot/Helmet = NodePath("SpriteGroup/TransformPoint/ZombieSnorkleTanglekelp/HeadSlot")
+DamagePartSlot/BlackHelmet = NodePath("SpriteGroup/TransformPoint/ZombieSnorkleTanglekelp/HeadSlot")
+DamagePartSlot/SpecialHelmet = NodePath("SpriteGroup/TransformPoint/ZombieSnorkleTanglekelp/HeadSlot")
+
+[node name="SpriteMask" parent="SpriteGroup" index="0"]
+offset_top = -128.0
+offset_bottom = 63.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(12, 33)
+
+[node name="ZombieSnorkleTanglekelp" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("9")]
+position = Vector2(-12, -33)
+
+[node name="Head" parent="SpriteGroup/TransformPoint/ZombieSnorkleTanglekelp" index="0"]
+position = Vector2(-37.5154, -71.4053)
+rotation = -0.101101
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieSnorkleTanglekelp" index="1"]
+position = Vector2(-15.2819, -49.576)
+rotation = -0.101101
+scale = Vector2(0.796981, 0.798726)
+skew = 0.000325441
+
+[node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieSnorkleTanglekelp" index="2"]
+position = Vector2(16.9612, -0.53405)
+rotation = -0.36848
+scale = Vector2(0.797948, 0.797948)
+
+[node name="TanglekelpGrab" parent="SpriteGroup" index="2" instance=ExtResource("10")]
+visible = false
+position = Vector2(12, 33)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(4, -2)
+
+[node name="GroundMoveComponent" parent="." index="8" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieSnorkleTanglekelp/GroundSlot")
+
+[editable path="SpriteGroup/TransformPoint/ZombieSnorkleTanglekelp"]

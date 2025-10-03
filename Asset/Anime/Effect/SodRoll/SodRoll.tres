@@ -10,7 +10,6 @@ size_override = Vector2(141, 141)
 script = ExtResource("1")
 animeFile = "res://Asset/Anime/Effect/SodRoll/SodRoll.dat"
 frameRate = 24.0
-frameScale = 1
 frameMax = 48
 imageAtlas = SubResource("PortableCompressedTexture2D_87l2p")
 mediaList = [Rect2(73, 0, 68, 141), Rect2(0, 0, 73, 71)]

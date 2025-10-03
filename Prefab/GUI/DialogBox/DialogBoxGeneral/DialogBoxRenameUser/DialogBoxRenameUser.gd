@@ -10,7 +10,7 @@ var changeUser: String = "":
         nameLineEdit.text = changeUser
 
 func _ready() -> void :
-    super._ready()
+    super ._ready()
 
 func ReadyButtonPressed() -> void :
     var user: String = nameLineEdit.text

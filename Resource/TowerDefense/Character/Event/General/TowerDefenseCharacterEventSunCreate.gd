@@ -15,6 +15,20 @@ func ExecuteDps(pos: Vector2, target: TowerDefenseCharacter, delta: float) -> vo
 func ExecuteProject(projectile: TowerDefenseProjectile, target: TowerDefenseCharacter) -> void :
     Run(target, num, dieCreate)
 
+@warning_ignore("unused_parameter")
+func Init(valueDictionary: Dictionary) -> void :
+    num = valueDictionary.get("Num", 50.0)
+    dieCreate = valueDictionary.get("DieCreate", false)
+
+func Export() -> Dictionary:
+    return {
+        "EventName": "CraterCreate", 
+        "Value": {
+            "Num": num, 
+            "DieCreate": dieCreate
+        }
+    }
+
 static func Run(target: TowerDefenseCharacter, _num = 25.0, _dieCreate: bool = false) -> void :
     if _dieCreate:
         if !target.IsDie():

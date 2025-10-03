@@ -1,0 +1,80 @@
+[gd_scene load_steps=4 format=4 uid="uid://c1x4142vyxf6q"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://dadbmcdufdv1g" path="res://Asset/Anime/Character/Zombie/Chapter1/Imp/ZombieImp.tres" id="2"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="3"]
+
+[node name="ZombieImp" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -80)
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, null, NodePath("HeadSlot"), null, null, NodePath("ArmSlot"), null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Walk"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/Zombie_duckytube = false
+Animation/LayerVisible/Zombie_imp_body1 = true
+Animation/LayerVisible/Zombie_imp_body2 = true
+Animation/LayerVisible/Zombie_imp_innerarm_lower = true
+Animation/LayerVisible/Zombie_imp_innerarm_upper = true
+Animation/LayerVisible/Zombie_imp_innerleg_foot = true
+Animation/LayerVisible/Zombie_imp_innerleg_lower = true
+Animation/LayerVisible/Zombie_imp_innerleg_upper = true
+Animation/LayerVisible/Zombie_imp_outerarm_upper = true
+Animation/LayerVisible/Zombie_imp_outerleg_foot = true
+Animation/LayerVisible/Zombie_imp_outerleg_lower = true
+Animation/LayerVisible/Zombie_imp_outerleg_upper = true
+Animation/LayerVisible/Zombie_outerarm_lower = true
+Animation/LayerVisible/Zombie_whitewater = false
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/anim_head1 = true
+Animation/LayerVisible/anim_head2 = true
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/Zombie_duckytube.png = null
+Animation/MediaReplace/Zombie_duckytube_inwaterlittle.png = null
+Animation/MediaReplace/Zombie_duckytube_whole2.png = null
+Animation/MediaReplace/Zombie_imp_arm1.png = null
+Animation/MediaReplace/Zombie_imp_arm1_bone.png = null
+Animation/MediaReplace/Zombie_imp_arm1_out.png = null
+Animation/MediaReplace/Zombie_imp_arm2.png = null
+Animation/MediaReplace/Zombie_imp_body1.png = null
+Animation/MediaReplace/Zombie_imp_body2.png = null
+Animation/MediaReplace/Zombie_imp_head.png = null
+Animation/MediaReplace/Zombie_imp_innerleg_foot.png = null
+Animation/MediaReplace/Zombie_imp_innerleg_lower.png = null
+Animation/MediaReplace/Zombie_imp_innerleg_upper.png = null
+Animation/MediaReplace/Zombie_imp_jaw.png = null
+Animation/MediaReplace/Zombie_imp_outerleg_foot.png = null
+Animation/MediaReplace/Zombie_imp_outerleg_lower.png = null
+Animation/MediaReplace/Zombie_imp_outerleg_upper.png = null
+Animation/MediaReplace/Zombie_whitewater1.png = null
+Animation/MediaReplace/Zombie_whitewater2.png = null
+Animation/MediaReplace/Zombie_whitewater3.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="HeadSlot" type="Node2D" parent="."]
+position = Vector2(0.61224, -7.89305)
+rotation = 0.0505765
+scale = Vector2(0.998371, 0.998371)
+script = ExtResource("3")
+followSlotId = 13
+offset = Vector2(15, 23)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ArmSlot" type="Node2D" parent="."]
+position = Vector2(10.0858, 21.9559)
+rotation = -0.585894
+scale = Vector2(1.05479, 1.01879)
+skew = 0.0481768
+script = ExtResource("3")
+followSlotId = 16
+offset = Vector2(10.06, 3.95)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="GroundSlot" type="Node2D" parent="."]
+position = Vector2(-68.85, 10)
+script = ExtResource("3")
+followSlotId = 1
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

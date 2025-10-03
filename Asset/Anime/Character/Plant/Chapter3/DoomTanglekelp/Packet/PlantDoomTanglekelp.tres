@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="TowerDefensePacketConfig" load_steps=5 format=4 uid="uid://c4btt3mqf5fao"]
+
+[ext_resource type="Resource" uid="uid://d0vvt06u4ds4b" path="res://Asset/Anime/Character/Plant/Chapter3/DoomTanglekelp/Config/TowerDefensePlantDoomTanglekelp.tres" id="1"]
+[ext_resource type="Script" uid="uid://c6d3po5310ugw" path="res://Resource/TowerDefense/PacketBank/Packet/TowerDefensePacketConfig.gd" id="2"]
+[ext_resource type="Script" uid="uid://p7yhpfahgp8d" path="res://Resource/UnlockCondition/UnlockConditionLevelFinishConfig.gd" id="3"]
+
+[sub_resource type="Resource" id="Resource_p87ip"]
+script = ExtResource("3")
+levelSaveKey = "Level3_15"
+metadata/_custom_type_script = "uid://p7yhpfahgp8d"
+
+[resource]
+script = ExtResource("2")
+saveKey = "PlantDoomTanglekelp"
+unlockCheckList = [SubResource("Resource_p87ip")]
+name = "TOWERDEFENSE_PLANT_DOOMTANGLEKELP_NAME"
+describe = "TOWERDEFENSE_PLANT_DOOMTANGLEKELP_EXPRESTION"
+plantfood = ""
+handbookDescribe = "TOWERDEFENSE_PLANT_DOOMTANGLEKELP_HANDBOOK_EXPRESTION"
+handbookStory = "TOWERDEFENSE_PLANT_DOOMTANGLEKELP_HANDBOOK_STORY"
+packetAnimeClip = "Idle"
+packetAnimeOffset = Vector2(21, 20)
+packetAnimeScale = Vector2(0.5, 0.5)
+characterConfig = ExtResource("1")
+type = 0
+spawnMethod = "Rise"
+eventPress = []
+eventPlant = []
+override = null
+overrideCostRise = -1
+overrideCost = -1
+overridePacketCooldown = -1.0
+overrideStartingCooldown = -1.0
+overrideWeight = -1
+overrideWavePointCost = -1
+initArmor = []
+plantUseCell = true
+Cell/plantUseCell = true
+metadata/_custom_type_script = "uid://c6d3po5310ugw"

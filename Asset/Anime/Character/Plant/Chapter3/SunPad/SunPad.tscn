@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=4 uid="uid://brri0hbooo2oy"]
+
+[ext_resource type="Script" uid="uid://ceiry1i21tr42" path="res://Asset/Anime/Character/Plant/Chapter3/SunPad/SunPadSprite.gd" id="1"]
+[ext_resource type="Resource" uid="uid://ckg8ti5qxwy6k" path="res://Asset/Anime/Character/Plant/Chapter3/SunPad/SunPad.tres" id="2"]
+
+[node name="SunPad" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -18.5791)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/anim_idle = true
+Animation/LayerVisible/fire1 = true
+Animation/LayerVisible/fire2 = true
+Animation/LayerVisible/piece1 = true
+Animation/LayerVisible/piece2 = true
+Animation/LayerVisible/skin1_1 = false
+Animation/LayerVisible/skin1_2 = false
+Animation/MediaReplace/SunPad_blink1.png = null
+Animation/MediaReplace/SunPad_blink2.png = null
+Animation/MediaReplace/SunPad_body.png = null
+Animation/MediaReplace/SunPad_fire1_1.png = null
+Animation/MediaReplace/SunPad_fire1_2.png = null
+Animation/MediaReplace/SunPad_fire1_3.png = null
+Animation/MediaReplace/SunPad_fire2_1.png = null
+Animation/MediaReplace/SunPad_fire2_2.png = null
+Animation/MediaReplace/SunPad_fire2_3.png = null
+Animation/MediaReplace/SunPad_piece1.png = null
+Animation/MediaReplace/SunPad_piece2.png = null
+Animation/MediaReplace/SunPad_skin1_1.png = null
+Animation/MediaReplace/SunPad_skin1_2.png = null
+Animation/MediaReplace/SunPad_skin2_1.png = null
+Animation/MediaReplace/SunPad_skin2_2.png = null
+"Animation/MediaReplace/骄阳睡莲-参考用.png" = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

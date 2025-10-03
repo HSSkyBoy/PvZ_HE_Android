@@ -49,7 +49,7 @@ func Init(_sprite: Node2D, _height: float, _initVelocity = Vector2.ZERO):
     moveComponent.SetGravity(980.0 * 2.0)
     moveComponent.SetVelocity(initVelocity)
 
-    shadowSprite.position.y = _height + 10
+    shadowSprite.position.y = height + 10
 
 func _physics_process(delta):
     if over:
@@ -57,7 +57,6 @@ func _physics_process(delta):
     shadowSprite.position.x = spriteNode.position.x
     if spriteNode.position.y > height:
         gridPos = TowerDefenseManager.GetMapGridPos(shadowSprite.global_position - Vector2(0, 20))
-        var cell: TowerDefenseCellInstance = TowerDefenseManager.GetMapCell(gridPos)
         if is_instance_valid(cell):
             if cell.IsWater():
                 CreateSplash()
@@ -86,5 +85,5 @@ func CreateSplash() -> TowerDefenseEffectSpriteOnce:
     var characterNode: Node2D = TowerDefenseManager.GetCharacterNode()
     var effect: TowerDefenseEffectSpriteOnce = ObjectManager.PoolPop(ObjectManagerConfig.OBJECT.PARTICLES_SPLASH, characterNode)
     effect.gridPos = gridPos
-    effect.global_position = shadowSprite.global_position
+    effect.global_position = shadowSprite.global_position - Vector2(0, 20)
     return effect

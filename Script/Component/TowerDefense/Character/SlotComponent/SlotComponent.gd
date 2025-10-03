@@ -25,7 +25,7 @@ func _physics_process(delta: float) -> void :
     var getSlot: TowerDefenseCharacter = cell.GetSlot(parent)
     if is_instance_valid(slotCharacter) && slotCharacter == getSlot:
         slotCharacter.shadowFollowHeight = heightFollow
-        slotCharacter.groundHeight = parent.global_position.y - posMark.global_position.y
+        slotCharacter.groundHeight = (parent.global_position.y - posMark.global_position.y) / parent.transformPoint.global_scale.y
         slotCharacter.shadowSprite.visible = !hideShadow
     else:
         if is_instance_valid(slotCharacter):
@@ -36,7 +36,7 @@ func _physics_process(delta: float) -> void :
     var getSurround: TowerDefenseCharacter = cell.GetSurround()
     if is_instance_valid(surroundCharacter) && surroundCharacter == getSurround:
         surroundCharacter.shadowFollowHeight = heightFollow
-        surroundCharacter.groundHeight = parent.global_position.y - posMark.global_position.y
+        surroundCharacter.groundHeight = (parent.global_position.y - posMark.global_position.y) / parent.transformPoint.global_scale.y
         surroundCharacter.shadowSprite.visible = !hideShadow
     else:
         if is_instance_valid(surroundCharacter):

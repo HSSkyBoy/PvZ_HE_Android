@@ -49,7 +49,6 @@ offset_right = -408.904
 [node name="ShovelNode" type="Control" parent="TransformNode"]
 unique_name_in_owner = true
 light_mask = 0
-layout_mode = 3
 anchors_preset = 0
 offset_left = 790.588
 offset_right = 790.588
@@ -57,7 +56,7 @@ offset_right = 790.588
 [node name="ShovelButton" type="TextureButton" parent="TransformNode/ShovelNode"]
 unique_name_in_owner = true
 light_mask = 0
-layout_mode = 2
+layout_mode = 0
 offset_right = 70.0
 offset_bottom = 72.0
 mouse_default_cursor_shape = 2

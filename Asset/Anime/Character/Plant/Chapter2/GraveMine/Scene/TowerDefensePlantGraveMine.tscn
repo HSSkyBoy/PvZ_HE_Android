@@ -10,7 +10,6 @@ script = ExtResource("2")
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/GraveMine")
 Custom = []
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)

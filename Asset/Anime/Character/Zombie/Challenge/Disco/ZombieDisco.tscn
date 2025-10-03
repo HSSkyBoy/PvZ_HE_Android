@@ -1,0 +1,110 @@
+[gd_scene load_steps=5 format=4 uid="uid://d3476p1mamwcw"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://b5ropan6yqovd" path="res://Asset/Anime/Character/Zombie/Challenge/Disco/ZombieDisco.tres" id="2"]
+[ext_resource type="PackedScene" uid="uid://cfgdfuopusvnr" path="res://Asset/Anime/Character/Zombie/Duckytube/ZombieDuckytube.tscn" id="3"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="4"]
+
+[node name="ZombieDisco" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -80)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "MoonWalk"
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/Zombie_disco_innerarm_lowercuff = true
+Animation/LayerVisible/Zombie_disco_innerhand = true
+Animation/LayerVisible/Zombie_disco_innerarm_upper = true
+Animation/LayerVisible/Zombie_disco_innerarm_lower = true
+Animation/LayerVisible/Zombie_disco_innerfoot = true
+Animation/LayerVisible/Zombie_disco_innerleg_lower = true
+Animation/LayerVisible/Zombie_disco_innerleg_upper = true
+Animation/LayerVisible/Zombie_disco_lowerbody = true
+Animation/LayerVisible/Zombie_disco_outerfoot_lower = true
+Animation/LayerVisible/Zombie_disco_fish = true
+Animation/LayerVisible/Zombie_disco_outerfoot_lower_overlay = true
+Animation/LayerVisible/Zombie_disco_outerfoot_upper = true
+Animation/LayerVisible/Zombie_disco_outerleg_lower = true
+Animation/LayerVisible/Zombie_disco_outerleg_upper = true
+Animation/LayerVisible/Zombie_disco_upperbody = true
+Animation/LayerVisible/Zombie_disco_chops1 = true
+Animation/LayerVisible/Zombie_disco_medalion = true
+Animation/LayerVisible/anim_head1 = true
+Animation/LayerVisible/anim_head2 = true
+Animation/LayerVisible/anim_hair = true
+Animation/LayerVisible/Zombie_disco_outerhand = true
+Animation/LayerVisible/Zombie_disco_outerhand_point = true
+Animation/LayerVisible/Zombie_disco_outerarm_upper = true
+Animation/LayerVisible/Zombie_disco_outerarm_upper_bone = true
+Animation/LayerVisible/Zombie_disco_outerarm_lower = true
+Animation/LayerVisible/Zombie_disco_collar_overlay = true
+Animation/LayerVisible/Zombie_disco_chops = true
+Animation/LayerVisible/Zombie_disco_glasses = true
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/AnimeEvents = false
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/Zombie_dancer__head.png = null
+Animation/MediaReplace/Zombie_disco_chops.png = null
+Animation/MediaReplace/Zombie_disco_collar_overlay.png = null
+Animation/MediaReplace/Zombie_disco_fish.png = null
+Animation/MediaReplace/Zombie_disco_glasses.png = null
+Animation/MediaReplace/Zombie_disco_hair.png = null
+Animation/MediaReplace/Zombie_disco_innerarm_lower.png = null
+Animation/MediaReplace/Zombie_disco_innerarm_lowercuff.png = null
+Animation/MediaReplace/Zombie_disco_innerarm_upper.png = null
+Animation/MediaReplace/Zombie_disco_innerfoot.png = null
+Animation/MediaReplace/Zombie_disco_innerhand.png = null
+Animation/MediaReplace/Zombie_disco_innerhand_point.png = null
+Animation/MediaReplace/Zombie_disco_innerleg_lower.png = null
+Animation/MediaReplace/Zombie_disco_innerleg_upper.png = null
+Animation/MediaReplace/Zombie_disco_lowerbody.png = null
+Animation/MediaReplace/Zombie_disco_medalion.png = null
+Animation/MediaReplace/Zombie_disco_outerarm_lower.png = null
+Animation/MediaReplace/Zombie_disco_outerarm_upper.png = null
+Animation/MediaReplace/Zombie_disco_outerarm_upper_bone.png = null
+Animation/MediaReplace/Zombie_disco_outerfoot_lower.png = null
+Animation/MediaReplace/Zombie_disco_outerfoot_lower_overlay.png = null
+Animation/MediaReplace/Zombie_disco_outerfoot_upper.png = null
+Animation/MediaReplace/Zombie_disco_outerhand.png = null
+Animation/MediaReplace/Zombie_disco_outerhand_point.png = null
+Animation/MediaReplace/Zombie_disco_outerleg_lower.png = null
+Animation/MediaReplace/Zombie_disco_outerleg_upper.png = null
+Animation/MediaReplace/Zombie_disco_upperbody.png = null
+Animation/MediaReplace/Zombie_jaw.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="ZombieDuckytube" parent="." node_paths=PackedStringArray("parentSprite") instance=ExtResource("3")]
+visible = false
+position = Vector2(-17.4716, -80.9969)
+rotation = 0.0829804
+scale = Vector2(1.25, 1.25)
+offset = Vector2(0, 50)
+offsetRotate = -0.04
+parentSprite = NodePath("..")
+Layer = 15
+
+[node name="HeadSlot" type="Node2D" parent="."]
+position = Vector2(-8.3, -75.1)
+script = ExtResource("4")
+followSlotId = 19
+offset = Vector2(25, 30)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ArmSlot" type="Node2D" parent="."]
+position = Vector2(0.830642, -38.7383)
+rotation = 0.814033
+scale = Vector2(0.80283, 0.798729)
+skew = 0.101051
+script = ExtResource("4")
+followSlotId = 26
+offset = Vector2(10, 20)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="GroundSlot" type="Node2D" parent="."]
+position = Vector2(-105.025, -40)
+script = ExtResource("4")
+followSlotId = 1
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

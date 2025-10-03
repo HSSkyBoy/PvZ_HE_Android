@@ -22,19 +22,19 @@ fireInterval = 3.0
 sleepAnimeClip = "Sleep"
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/Gloompult")
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
 
-[node name="Gloompult" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+[node name="Gloompult" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("4")]
 position = Vector2(0, -30)
+trueFrameRate = 30.0
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("AdobeAnimateSlot"), null, null, null]
 
 [node name="AdobeAnimateSlot" type="Node2D" parent="SpriteGroup/TransformPoint/Gloompult" index="0"]
-position = Vector2(-80.4309, -14.4984)
-rotation = -0.20771
-scale = Vector2(0.975458, 1.02342)
-skew = 1.29938e-05
+position = Vector2(-84.3708, -26.7437)
+rotation = 0.00115411
+scale = Vector2(0.999173, 0.999173)
 script = ExtResource("5")
 followSlotId = 20
 metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

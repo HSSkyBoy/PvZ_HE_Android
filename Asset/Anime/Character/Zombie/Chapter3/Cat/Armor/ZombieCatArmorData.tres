@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CharacterArmorData" load_steps=3 format=4 uid="uid://bx02qwdlntj12"]
+
+[ext_resource type="Resource" uid="uid://dgg872pfvmu24" path="res://Asset/Anime/Character/Zombie/Chapter3/Cat/Armor/Config/ZombieCatArmorCatHelmet.tres" id="1"]
+[ext_resource type="Script" uid="uid://ci4c6gpjugqpl" path="res://Resource/General/Character/Armor/CharacterArmorData.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+armorList = [ExtResource("1")]
+armorDictionary = {
+"CatHelmet": ExtResource("1")
+}
+fliterAllDictionary = {
+"CatHelmet": ["zombie_football_helmet"]
+}
+fliterOpenDictionary = {
+"CatHelmet": []
+}
+fliterCloseDictionary = {
+"CatHelmet": []
+}

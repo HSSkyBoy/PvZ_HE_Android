@@ -1,0 +1,115 @@
+[gd_scene load_steps=16 format=4 uid="uid://05lhx7kv8tg"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bj8vqheo27y7x" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Scene/Squash/TowerDefenseZombieNormalSquash.gd" id="2"]
+[ext_resource type="Script" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventSmashHurt.gd" id="3"]
+[ext_resource type="Resource" uid="uid://dpwbcjybux8oc" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Config/TowerDefenseZombieNormalSquash.tres" id="4"]
+[ext_resource type="Resource" uid="uid://chvyxpm81irbp" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/DamagePoint/Config/ZombieNormalDamagePointArm.tres" id="5"]
+[ext_resource type="Resource" uid="uid://cfim36uopws7u" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorCone.tres" id="6"]
+[ext_resource type="Resource" uid="uid://d4b68a6hw3c2d" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorBucket.tres" id="7"]
+[ext_resource type="Resource" uid="uid://dmgd4ygng30xn" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorScreendoor.tres" id="8"]
+[ext_resource type="Resource" uid="uid://byth0yfgejk1l" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorHelmet.tres" id="9"]
+[ext_resource type="Resource" uid="uid://clvqblkq2jo2l" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorBlackHelmet.tres" id="10"]
+[ext_resource type="Resource" uid="uid://cryuyu1d8jqbt" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorSpecialHelmet.tres" id="11"]
+[ext_resource type="PackedScene" uid="uid://doqab6xerisx6" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Sprite/Squash/ZombieNormalSquash.tscn" id="12"]
+[ext_resource type="PackedScene" uid="uid://dir0f8lu1l3b3" path="res://Script/Component/TowerDefense/Character/AttackComponent/AttackComponent.tscn" id="13"]
+
+[sub_resource type="Resource" id="Resource_4mnjs"]
+script = ExtResource("3")
+num = 1800.0
+metadata/_custom_type_script = "uid://cmcedyo33nqj4"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4mnjs"]
+size = Vector2(75, 34)
+
+[node name="TowerDefenseZombieNormalSquash" node_paths=PackedStringArray("sprite", "headSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+eventList = [SubResource("Resource_4mnjs")]
+walkSpeedScale = 3.0
+walkAnimeClip = "Walk1&Walk2"
+swimAnimeClip = "Swim"
+dieAnimeClip = "Death1&Death2"
+dieWaterAnimeClip = "Waterdeath"
+idleAnimeClip = "Idle1&Idle2"
+config = ExtResource("4")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieNormalSquash")
+headSlot = NodePath("SpriteGroup/TransformPoint/ZombieNormalSquash/HeadSlot")
+damagePart = {
+"Arm": ExtResource("5"),
+"BlackHelmet": ExtResource("10"),
+"Bucket": ExtResource("7"),
+"Cone": ExtResource("6"),
+"Helmet": ExtResource("9"),
+"Screendoor": ExtResource("8"),
+"SpecialHelmet": ExtResource("11")
+}
+PreviewDamagePointPersontage = 1.0
+Armor = []
+DamagePartSlot/Arm = NodePath("SpriteGroup/TransformPoint/ZombieNormalSquash/ArmSlot")
+DamagePartSlot/Cone = NodePath("SpriteGroup/TransformPoint/ZombieNormalSquash/ConeSlot")
+DamagePartSlot/Bucket = NodePath("SpriteGroup/TransformPoint/ZombieNormalSquash/BucketSlot")
+DamagePartSlot/Screendoor = NodePath("SpriteGroup/TransformPoint/ZombieNormalSquash/ScreendoorSlot")
+DamagePartSlot/Helmet = NodePath("SpriteGroup/TransformPoint/ZombieNormalSquash/HeadSlot")
+DamagePartSlot/BlackHelmet = NodePath("SpriteGroup/TransformPoint/ZombieNormalSquash/HeadSlot")
+DamagePartSlot/SpecialHelmet = NodePath("SpriteGroup/TransformPoint/ZombieNormalSquash/HeadSlot")
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(12, 33)
+
+[node name="ZombieNormalSquash" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("12")]
+position = Vector2(-12, -33)
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ConeSlot"), NodePath("BucketSlot"), null, NodePath("ScreendoorSlot"), null, null, NodePath("ArmSlot"), null, NodePath("ConeSlot"), NodePath("BucketSlot"), null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("Head"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="Head" parent="SpriteGroup/TransformPoint/ZombieNormalSquash" index="0" node_paths=PackedStringArray("layerSprite")]
+position = Vector2(-5.6, -50.1)
+rotation = -0.127563
+trueFrameRate = inf
+layerSprite = [null, null, null, null, null]
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieNormalSquash" index="1"]
+position = Vector2(-7.03088, -52.1515)
+rotation = 0.039505
+scale = Vector2(0.799269, 0.799269)
+
+[node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieNormalSquash" index="2"]
+position = Vector2(-0.59038, 13.6995)
+rotation = 0.152889
+scale = Vector2(0.798486, 0.798486)
+
+[node name="ConeSlot" parent="SpriteGroup/TransformPoint/ZombieNormalSquash" index="3"]
+position = Vector2(1.61257, -77.9218)
+rotation = 0.10053
+scale = Vector2(0.799717, 0.799717)
+
+[node name="BucketSlot" parent="SpriteGroup/TransformPoint/ZombieNormalSquash" index="4"]
+position = Vector2(23.7405, 10.1881)
+rotation = 0.152889
+scale = Vector2(0.798486, 0.798486)
+
+[node name="ScreendoorSlot" parent="SpriteGroup/TransformPoint/ZombieNormalSquash" index="5"]
+position = Vector2(-15.6995, -2.4487)
+scale = Vector2(0.79917, 0.79917)
+
+[node name="HitBox" parent="." index="5"]
+visible = false
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(4, -2)
+
+[node name="AttackComponent2" parent="." index="7" node_paths=PackedStringArray("checkArea") instance=ExtResource("13")]
+unique_name_in_owner = true
+attackType = "Default"
+checkArea = NodePath("CheckArea")
+
+[node name="CheckArea" type="Area2D" parent="AttackComponent2" index="0"]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent2/CheckArea" index="0"]
+position = Vector2(-28.5, 0)
+shape = SubResource("RectangleShape2D_4mnjs")
+
+[node name="GroundMoveComponent" parent="." index="9" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieNormalSquash/GroundSlot")
+
+[editable path="SpriteGroup/TransformPoint/ZombieNormalSquash"]

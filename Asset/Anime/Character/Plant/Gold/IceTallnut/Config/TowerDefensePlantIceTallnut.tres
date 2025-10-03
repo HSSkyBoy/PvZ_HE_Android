@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="TowerDefensePlantConfig" load_steps=3 format=4 uid="uid://w73m0i5eic4s"]
+
+[ext_resource type="Resource" uid="uid://3glhslartrpt" path="res://Asset/Anime/Character/Plant/Gold/IceTallnut/DamagePoint/IceTallnutDamagePointData.tres" id="1"]
+[ext_resource type="Script" uid="uid://bqd2rkadn8h4e" path="res://Resource/TowerDefense/Character/Config/TowerDefensePlantConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+canUsePlantfood = true
+name = "PlantIceTallnut"
+hitpointsNearDeath = 0.0
+hitpoints = 8000.0
+explosionHurt = 1000.0
+smashHurt = 1000.0
+spikeHurt = 1000.0
+canDragIntoWater = true
+sleepTime = "Never"
+height = 3
+damagePointData = ExtResource("1")
+armorData = null
+customData = null
+ashScene = null
+homeWorld = 1
+costRise = 100
+cost = 500
+packetCooldown = 30.0
+startingCooldown = 30.0
+plantCoverAll = false
+plantCover = []
+plantCoverRecycle = []
+plantGridType = [2, 6, 5]
+plantGridOverrideType = 0
+collisionFlags = 1
+maskFlags = 9
+unUseBuffFlags = 19
+physiqueTypeFlags = 17
+elementFlags = 1
+Flag/Collision = 1
+Flag/Mask = 9
+Flag/UnUseBuff = 19
+Flag/PhysiqueType = 17
+Flag/Elemet = 1

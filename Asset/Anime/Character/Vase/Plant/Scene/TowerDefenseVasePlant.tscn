@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=4 uid="uid://bunsorpj6v806"]
+
+[ext_resource type="PackedScene" uid="uid://udsya47xq3qh" path="res://Prefab/TowerDefense/Character/TowerDefenseVase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://c3pyfean85pid" path="res://Asset/Anime/Character/Vase/Plant/Scene/TowerDefenseVasePlant.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://drx6wjsp5hkv7" path="res://Prefab/Particles/Vase/Plant/VasePlantChunks.tscn" id="3"]
+[ext_resource type="Resource" uid="uid://c64h41abo8lwc" path="res://Asset/Anime/Character/Vase/Plant/Config/TowerDefenseVasePlant.tres" id="4"]
+[ext_resource type="PackedScene" uid="uid://d4elw6hscxsei" path="res://Asset/Anime/Character/Vase/Plant/VasePlant.tscn" id="5"]
+
+[node name="TowerDefenseVasePlant" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+chunkParticles = ExtResource("3")
+packetBank = "GeneralPlant"
+config = ExtResource("4")
+sprite = NodePath("SpriteGroup/TransformPoint/VasePlant")
+
+[node name="VasePlant" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("5")]
+position = Vector2(0, -36)
+
+[node name="ShadowSprite" parent="." index="4"]
+scale = Vector2(1.1395348, 1.1111112)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 1.25)

@@ -13,14 +13,14 @@ var landOver: bool = false
 func _ready() -> void :
     if Engine.is_editor_hint():
         return
-    super._ready()
+    super ._ready()
     collectonFlagsSave = instance.collisionFlags
     maskFlagsSave = instance.maskFlags
     if throw:
         Fly.call_deferred()
 
 func WalkEntered() -> void :
-    super.WalkEntered()
+    super .WalkEntered()
 
 func FlyEntered() -> void :
     AudioManager.AudioPlay("Imp", AudioManagerEnum.TYPE.SFX)
@@ -59,7 +59,7 @@ func Land() -> void :
 
 @warning_ignore("unused_parameter")
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         landAnimeClip:
             Walk()

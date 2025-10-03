@@ -1,26 +1,30 @@
-[gd_resource type="Resource" script_class="TowerDefensePlantConfig" load_steps=2 format=4 uid="uid://draura8w6tda8"]
+[gd_resource type="Resource" script_class="TowerDefensePlantConfig" load_steps=3 format=4 uid="uid://draura8w6tda8"]
 
-[ext_resource type="Script" uid="uid://bqd2rkadn8h4e" path="res://Resource/TowerDefense/Character/Config/TowerDefensePlantConfig.gd" id="1"]
+[ext_resource type="Resource" uid="uid://buopcd0dmcmew" path="res://Asset/Anime/Character/Plant/Gold/QueenSunFlower/Custom/QueenSunFlowerCoustomData.tres" id="1"]
+[ext_resource type="Script" uid="uid://bqd2rkadn8h4e" path="res://Resource/TowerDefense/Character/Config/TowerDefensePlantConfig.gd" id="2"]
 
 [resource]
-script = ExtResource("1")
+script = ExtResource("2")
 canUsePlantfood = true
 name = "PlantQueenSunFlower"
 hitpointsNearDeath = 0.0
 hitpoints = 1000.0
+explosionHurt = -1.0
 smashHurt = -1.0
 spikeHurt = -1.0
+canDragIntoWater = true
 sleepTime = "Never"
 height = 2
 damagePointData = null
 armorData = null
-customData = null
+customData = ExtResource("1")
 ashScene = null
 homeWorld = 1
 costRise = 100
 cost = 500
 packetCooldown = 30.0
 startingCooldown = 0.0
+plantCoverAll = false
 plantCover = []
 plantCoverRecycle = []
 plantGridType = [2, 6, 5]

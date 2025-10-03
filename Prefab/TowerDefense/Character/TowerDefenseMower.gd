@@ -1,7 +1,7 @@
 @tool
 class_name TowerDefenseMower extends TowerDefenseItem
 
-const MOWER_HIT: PackedScene = preload("uid://dtuc07xfk33qc")
+const MOWER_HIT: PackedScene = preload("res://Prefab/TowerDefense/Mower/MowerHit.tscn")
 const MOWER_PUFF = preload("uid://cv2sh3upqkd27")
 
 @export var runAnimeClips: String = "Normal"
@@ -17,7 +17,7 @@ signal running(mower: TowerDefenseMower)
 func _ready() -> void :
     if Engine.is_editor_hint():
         return
-    super._ready()
+    super ._ready()
     sprite.pause = true
     var tween = create_tween()
     tween.set_parallel(true)
@@ -32,14 +32,17 @@ func _ready() -> void :
 func _physics_process(delta: float) -> void :
     if Engine.is_editor_hint():
         return
-    super._physics_process(delta)
+    super ._physics_process(delta)
     var mapControl: TowerDefenseMapControl = TowerDefenseManager.GetMapControl()
     if global_position.x > mapControl.config.edge.z:
         queue_free()
 
     if TowerDefenseMapControl.instance:
-        var cell = TowerDefenseManager.GetMapCell(gridPos)
         if is_instance_valid(cell):
+            var cellPos: Vector2 = TowerDefenseManager.GetMapCellPos(gridPos)
+            var gridSize: Vector2 = TowerDefenseManager.GetMapGridSize()
+            var offset: Vector2 = global_position - cellPos
+            cellPercentage = offset.x / gridSize.x
             inWater = cell.IsWater()
         else:
             inWater = false
@@ -87,9 +90,9 @@ func Hit(character: TowerDefenseCharacter) -> void :
         if character.config.physique >= TowerDefenseEnum.ZOMBIE_PHYSIQUE.HUGE:
             character.Hurt(100000, false)
             return
-    var hit: MowerHit = MOWER_HIT.instantiate() as MowerHit
+    var hit = MOWER_HIT.instantiate()
     characterNode.add_child(hit)
-    hit.global_position = global_position
+    hit.global_position = sprite.global_position + Vector2(0, 0)
     hit.Init(character)
     character.HitBoxDestroy()
     character.die = true
@@ -109,11 +112,11 @@ func Run() -> void :
     state.send_event("ToRun")
 
 func InWater() -> void :
-    super.InWater()
+    super .InWater()
     if runWaterAnimeClips != "":
         sprite.SetAnimation(runWaterAnimeClips, true, 0.1)
 
 func OutWater() -> void :
-    super.OutWater()
+    super .OutWater()
     if runAnimeClips != "":
         sprite.SetAnimation(runAnimeClips, true, 0.1)

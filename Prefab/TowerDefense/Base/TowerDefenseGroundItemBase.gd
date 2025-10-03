@@ -11,11 +11,15 @@ class_name TowerDefenseGroundItemBase extends Node2D
     set(_gridPos):
         if gridPos != _gridPos:
             gridPos = _gridPos
+            cell = TowerDefenseManager.GetMapCell(gridPos)
             FreshZIndex()
 @export var itemLayer: TowerDefenseEnum.LAYER_GROUNDITEM = TowerDefenseEnum.LAYER_GROUNDITEM.DEFAULT:
     set(_itemLayer):
         itemLayer = _itemLayer
         FreshZIndex()
+
+@export var cell: TowerDefenseCellInstance
+@export var cellPercentage: float = 0.5
 
 @export var gravityUse: bool = true
 @export var gravity: float = 245.0

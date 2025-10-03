@@ -4,7 +4,7 @@ extends TowerDefensePlant
 var over: bool = false
 
 func AttackDeal(character: TowerDefenseCharacter, type: String) -> void :
-    super.AttackDeal(character, type)
+    super .AttackDeal(character, type)
     if instance.sleep:
         return
     if over:

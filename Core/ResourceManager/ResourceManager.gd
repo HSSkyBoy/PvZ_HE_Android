@@ -186,3 +186,5 @@ func Load() -> void :
     stepName = ""
     loadPercentage.emit.call_deferred(float(currentStep) / float(stepMax), stepName)
     loadOver.emit.call_deferred()
+
+    thread.wait_to_finish.call_deferred()

@@ -31,7 +31,6 @@ sleepAnimeClip = "Sleep"
 config = ExtResource("5")
 sprite = NodePath("SpriteGroup/TransformPoint/SnowShroom")
 Custom = []
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)

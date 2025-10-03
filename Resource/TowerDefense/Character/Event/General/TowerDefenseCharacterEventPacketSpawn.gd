@@ -16,6 +16,22 @@ func ExecuteDps(pos: Vector2, target: TowerDefenseCharacter, delta: float) -> vo
 func ExecuteProject(projectile: TowerDefenseProjectile, target: TowerDefenseCharacter) -> void :
     Run(target, packetName, percentage, dieSpawn)
 
+@warning_ignore("unused_parameter")
+func Init(valueDictionary: Dictionary) -> void :
+    packetName = valueDictionary.get("PacketName", "")
+    percentage = valueDictionary.get("Percentage", 1.0)
+    dieSpawn = valueDictionary.get("DieSpawn", false)
+
+func Export() -> Dictionary:
+    return {
+        "EventName": "CraterCreate", 
+        "Value": {
+            "PacketName": packetName, 
+            "Percentage": percentage, 
+            "DieSpawn": dieSpawn
+        }
+    }
+
 static func Run(target: TowerDefenseCharacter, _packetName: String, _percentage: float, _dieSpawn: bool = false) -> void :
     if randf() > _percentage:
         return

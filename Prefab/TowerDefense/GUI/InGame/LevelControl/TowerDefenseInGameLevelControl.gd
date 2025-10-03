@@ -1,6 +1,8 @@
 class_name TowerDefenseInGameLevelControl extends Control
 
 @onready var waveManager: TowerDefenseInGameWaveManager = %TowerDefenseInGameWaveManager
+@onready var vaseManager: TowerDefenseInGameVaseManager = %TowerDefenseInGameVaseManager
+
 @onready var sunManager: TowerDefenseInGameSunManager = %TowerDefenseInGameSunManager
 
 @onready var worldEntryLabel: RichTextLabel = %WorldEntryLabel
@@ -15,6 +17,10 @@ var backgroundDrumsAudio: AudioStreamPlayerMember
 var config: TowerDefenseLevelConfig
 var backgroundMusicConfig: TowerDefenseBackgroundMusicConfig
 
+var awardPos: Vector2 = Vector2.ZERO
+var awardCreate: bool = false
+var awardCheckTime: float = 0.5
+
 func Init(_config: TowerDefenseLevelConfig) -> void :
     config = _config
     config.Init()
@@ -23,7 +29,11 @@ func Init(_config: TowerDefenseLevelConfig) -> void :
     worldEntryLabel.text = text
 
 func InitManager() -> void :
-    waveManager.Init(config.waveManager)
+    match config.finishMethod:
+        TowerDefenseEnum.LEVEL_FINISH_METHOD.WAVE:
+            waveManager.Init(config.waveManager)
+        TowerDefenseEnum.LEVEL_FINISH_METHOD.VASE:
+            vaseManager.Init(config.vaseManager)
     sunManager.Init(config.sunManager)
 
 func _ready() -> void :
@@ -36,6 +46,18 @@ func _physics_process(delta: float) -> void :
             backgroundDrumsAudio.volumeScale = lerpf(backgroundDrumsAudio.volumeScale, 1.0, delta * 1.0)
         else:
             backgroundDrumsAudio.volumeScale = lerpf(backgroundDrumsAudio.volumeScale, 0.0, delta * 1.0)
+    if !awardCreate:
+        if awardCheckTime > 0:
+            awardCheckTime -= delta
+        awardCheckTime = 0.5
+        match config.finishMethod:
+            TowerDefenseEnum.LEVEL_FINISH_METHOD.WAVE:
+                if waveManager.waveFinal:
+                    if CheckFinal():
+                        AwardCreate(awardPos)
+            TowerDefenseEnum.LEVEL_FINISH_METHOD.VASE:
+                if CheckFinal():
+                    AwardCreate(awardPos)
 
 func ReadySetPlantPlay() -> void :
     if is_instance_valid(backgroundAudio):
@@ -109,14 +131,50 @@ func LevelStart() -> void :
         if !tutorialGet:
             TutorialManager.TutorialEnter(tutorial)
             await TutorialManager.tutorialFinish
-    waveManager.StartWave()
+    match config.finishMethod:
+        TowerDefenseEnum.LEVEL_FINISH_METHOD.WAVE:
+            waveManager.StartWave()
 
 func LevelFail() -> void :
     waveManager.isRunning = false
     waveManager.visible = false
     sunManager.isRunning = false
 
+func CheckFinal() -> bool:
+    match config.finishMethod:
+        TowerDefenseEnum.LEVEL_FINISH_METHOD.WAVE:
+            var targetList: Array = TowerDefenseManager.GetCampTarget(TowerDefenseEnum.CHARACTER_CAMP.PLANT)
+            var targetNum: int = targetList.size()
+            for target: TowerDefenseCharacter in targetList:
+                if target.instance.die == true:
+                    targetNum -= 1
+            if targetNum > 0:
+                awardPos = targetList[0].global_position
+            if targetNum == 0:
+                for target: TowerDefenseCharacter in targetList:
+                    target.Destroy()
+            return targetNum <= 0
+        TowerDefenseEnum.LEVEL_FINISH_METHOD.VASE:
+            var vaseList: Array = get_tree().get_nodes_in_group("Vase")
+            if vaseList.size() > 0:
+                return false
+            var targetList: Array = TowerDefenseManager.GetCampTarget(TowerDefenseEnum.CHARACTER_CAMP.PLANT)
+            var targetNum: int = targetList.size()
+            for target: TowerDefenseCharacter in targetList:
+                if target.instance.die == true:
+                    targetNum -= 1
+            if targetNum > 0:
+                awardPos = targetList[0].global_position
+            if targetNum == 0:
+                for target: TowerDefenseCharacter in targetList:
+                    target.Destroy()
+            return targetNum <= 0
+    return false
+
 func AwardCreate(pos: Vector2) -> void :
+    if awardCreate:
+        return
+    awardCreate = true
     if (Global.isEditor && Global.enterLevelMode == "DiyLevel") || Global.enterLevelMode == "LoadLevel":
         if Global.enterLevelMode == "DiyLevel":
             TowerDefenseManager.currentLevelConfig.canExport = true

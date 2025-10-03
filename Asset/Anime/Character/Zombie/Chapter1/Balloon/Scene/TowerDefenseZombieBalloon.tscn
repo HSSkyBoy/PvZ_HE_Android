@@ -18,9 +18,6 @@
 [node name="TowerDefenseZombieBalloon" node_paths=PackedStringArray("duckytobeSprite", "waterLineSprite", "sprite", "headSlot") instance=ExtResource("1")]
 script = ExtResource("2")
 walkSpeedScale = 1.5
-inSwimAnimeClip = ""
-outSwimAnimeClip = ""
-attackWaterAnimeClip = ""
 duckytobeSprite = NodePath("SpriteGroup/TransformPoint/ZombieBalloon/ZombieDuckytube")
 waterLineSprite = NodePath("SpriteGroup/TransformPoint/ZombieWaterLine")
 waterHeightPersontage = 0.7
@@ -46,38 +43,32 @@ DamagePartSlot/Helmet = NodePath("SpriteGroup/TransformPoint/ZombieBalloon/HeadS
 DamagePartSlot/BlackHelmet = NodePath("SpriteGroup/TransformPoint/ZombieBalloon/HeadSlot")
 DamagePartSlot/SpecialHelmet = NodePath("SpriteGroup/TransformPoint/ZombieBalloon/HeadSlot")
 
-[node name="SpriteMask" parent="SpriteGroup" index="0"]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 89.0
-offset_bottom = 191.0
-
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(12, 33)
 
 [node name="ZombieBalloon" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("11")]
 position = Vector2(-4, -29)
-layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
-layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, NodePath("ArmSlot"), NodePath("PropellerSlot"), null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ZombieDuckytube"), null, null, null, null, null, null, null, null, null]
 
 [node name="ZombieDuckytube" parent="SpriteGroup/TransformPoint/ZombieBalloon" index="0"]
-position = Vector2(-23.1667, -55.2667)
-rotation = -0.963842
+position = Vector2(-22.89, -62.28)
+rotation = -0.896114
 
 [node name="PropellerSlot" parent="SpriteGroup/TransformPoint/ZombieBalloon" index="1"]
-position = Vector2(-43.6167, -54.6333)
-rotation = -0.119148
-scale = Vector2(0.798393, 0.798393)
+position = Vector2(-38.83, -67.12)
+rotation = 0.116038
+scale = Vector2(0.799684, 0.799684)
 
 [node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieBalloon" index="2"]
-position = Vector2(-27.8099, -30.4552)
-rotation = -0.0359992
-scale = Vector2(0.799762, 0.799762)
+position = Vector2(-28.565, -39.9569)
+rotation = 0.154778
+scale = Vector2(0.799508, 0.799508)
 
 [node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieBalloon" index="3"]
-position = Vector2(-4.77716, 4.06873)
-rotation = -0.00384219
-scale = Vector2(0.599888, 0.599888)
+position = Vector2(-6.13067, -4.38179)
+rotation = 0.181826
+scale = Vector2(0.599235, 0.599235)
 
 [node name="GroundSlot" parent="SpriteGroup/TransformPoint/ZombieBalloon" index="4"]
 position = Vector2(-37.27, -60)

@@ -15,8 +15,6 @@
 [node name="TowerDefenseZombieDigger" node_paths=PackedStringArray("sprite", "headSlot") instance=ExtResource("1")]
 script = ExtResource("2")
 walkSpeedScale = 0.5
-inSwimAnimeClip = ""
-outSwimAnimeClip = ""
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/ZombieDigger")
 headSlot = NodePath("SpriteGroup/TransformPoint/ZombieDigger/HeadSlot")
@@ -45,24 +43,24 @@ layerSlot = [NodePath("GroundSlot"), null, NodePath("PickSlot"), null, null, nul
 Animation/MediaReplace/Zombie_digger_hardhat.png = ExtResource("9")
 
 [node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieDigger" index="0"]
-position = Vector2(-18.0584, -44.5771)
-rotation = 0.00219335
-scale = Vector2(0.79997, 0.79997)
+position = Vector2(-20.686525, -40.47229)
+rotation = -0.011157153
+scale = Vector2(0.79959774, 0.79959774)
 
 [node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieDigger" index="1"]
-position = Vector2(1.35892, 2.83904)
-rotation = 0.00753051
-scale = Vector2(0.799963, 0.799963)
+position = Vector2(0.92843914, 5.1432705)
+rotation = 0.068837106
+scale = Vector2(0.7997571, 0.79976803)
 
 [node name="HardHatSlot" parent="SpriteGroup/TransformPoint/ZombieDigger" index="2"]
-position = Vector2(-14.6459, -60.2062)
-rotation = 0.00499966
-scale = Vector2(0.799958, 0.799958)
+position = Vector2(-17.4375, -56.38652)
+rotation = 0.061014876
+scale = Vector2(0.7993945, 0.7993945)
 
 [node name="PickSlot" parent="SpriteGroup/TransformPoint/ZombieDigger" index="3"]
-position = Vector2(-30.5641, 4.70671)
-rotation = 0.0145209
-scale = Vector2(0.799937, 0.799937)
+position = Vector2(-30.057236, 8.352676)
+rotation = 0.05835967
+scale = Vector2(0.79941297, 0.79941297)
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(4, -2)

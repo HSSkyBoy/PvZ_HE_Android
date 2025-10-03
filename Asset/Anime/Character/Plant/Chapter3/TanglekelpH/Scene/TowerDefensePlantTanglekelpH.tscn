@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=4 uid="uid://crchbngu3jd20"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://dptmig3und1ja" path="res://Asset/Anime/Character/Plant/Chapter3/TanglekelpH/Scene/TowerDefensePlantTanglekelpH.gd" id="2"]
+[ext_resource type="Resource" uid="uid://cpa1i7aihruoy" path="res://Asset/Anime/Character/Plant/Chapter3/TanglekelpH/Config/TowerDefensePlantTanglekelpH.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://bwjhkuhe68hy5" path="res://Asset/Anime/Character/Plant/Chapter3/TanglekelpH/TanglekelpH.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://bxdc7pwp3i4so" path="res://Asset/Anime/Character/Plant/Chapter3/TanglekelpH/TanglekelpHGrab.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://dir0f8lu1l3b3" path="res://Script/Component/TowerDefense/Character/AttackComponent/AttackComponent.tscn" id="6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5m3eh"]
+size = Vector2(84, 36)
+
+[node name="TowerDefensePlantTanglekelpH" node_paths=PackedStringArray("grab", "sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+grab = NodePath("SpriteGroup/TanglekelpHGrab")
+sleepAnimeClip = "Sleep"
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/SpriteMask/TanglekelpH")
+
+[node name="TanglekelpH" parent="SpriteGroup/SpriteMask" index="0" instance=ExtResource("4")]
+position = Vector2(30, 90)
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="TanglekelpHGrab" parent="SpriteGroup" index="2" instance=ExtResource("5")]
+visible = false
+
+[node name="ShadowSprite" parent="." index="3"]
+visible = false
+position = Vector2(0, 30)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+
+[node name="AttackComponent" parent="." index="8" node_paths=PackedStringArray("checkArea") instance=ExtResource("6")]
+unique_name_in_owner = true
+attackType = "Default"
+checkArea = NodePath("CheckArea")
+
+[node name="CheckArea" type="Area2D" parent="AttackComponent" index="0"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent/CheckArea" index="0"]
+shape = SubResource("RectangleShape2D_5m3eh")

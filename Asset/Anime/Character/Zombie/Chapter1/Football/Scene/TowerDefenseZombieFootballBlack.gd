@@ -5,7 +5,7 @@ var halfHp: bool = false
 var isAttack: bool = false
 
 func _ready() -> void :
-    super._ready()
+    super ._ready()
     if Engine.is_editor_hint():
         return
     if randf() > 0.5:
@@ -14,7 +14,7 @@ func _ready() -> void :
         sprite.SetFliters(["Zombie_duckytube", "Zombie_whitewater"], true)
 
 func AttackEntered():
-    super.AttackEntered()
+    super .AttackEntered()
     isAttack = true
     if HasShield():
         sprite.SetFliters(["Zombie_outerarm_upper"], true)
@@ -22,24 +22,24 @@ func AttackEntered():
             sprite.SetFliters(["Zombie_outerarm_hand", "Zombie_outerarm_lower"], true)
 
 func AttackExited() -> void :
-    super.AttackExited()
+    super .AttackExited()
     isAttack = false
     if HasShield():
         sprite.SetFliters(["Zombie_outerarm_upper", "Zombie_outerarm_hand", "Zombie_outerarm_lower"], false)
 
 func DieProcessing(delta: float) -> void :
-    super.DieProcessing(delta)
+    super .DieProcessing(delta)
     sprite.timeScale = timeScale * 2.0
 
 func DamagePointReach(damangePointName: String) -> void :
-    super.DamagePointReach(damangePointName)
+    super .DamagePointReach(damangePointName)
     match damangePointName:
         "Arm":
             halfHp = true
             sprite.SetFliters(["Zombie_outerarm_upper"], true)
 
 func ArmorDamagePointReach(armorName: String, stage: int) -> void :
-    super.ArmorDamagePointReach(armorName, stage)
+    super .ArmorDamagePointReach(armorName, stage)
     if isAttack && HasShield() && stage > 0:
         sprite.SetFliters(["Zombie_outerarm_upper"], true)
         if !halfHp:

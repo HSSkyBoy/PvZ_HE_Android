@@ -1,0 +1,104 @@
+[gd_scene load_steps=13 format=4 uid="uid://dnqqkieabgbc6"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cdw8cbuog8vlm" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Scene/Sunflower/TowerDefenseZombieNormalSunflower.gd" id="2"]
+[ext_resource type="Resource" uid="uid://bwxwh7qj3jibx" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Config/TowerDefenseZombieNormalSunflower.tres" id="3"]
+[ext_resource type="Resource" uid="uid://chvyxpm81irbp" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/DamagePoint/Config/ZombieNormalDamagePointArm.tres" id="4"]
+[ext_resource type="Resource" uid="uid://cfim36uopws7u" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorCone.tres" id="5"]
+[ext_resource type="Resource" uid="uid://d4b68a6hw3c2d" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorBucket.tres" id="6"]
+[ext_resource type="Resource" uid="uid://dmgd4ygng30xn" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorScreendoor.tres" id="7"]
+[ext_resource type="Resource" uid="uid://byth0yfgejk1l" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorHelmet.tres" id="8"]
+[ext_resource type="Resource" uid="uid://clvqblkq2jo2l" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorBlackHelmet.tres" id="9"]
+[ext_resource type="Resource" uid="uid://cryuyu1d8jqbt" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorSpecialHelmet.tres" id="10"]
+[ext_resource type="PackedScene" uid="uid://datysqljoynjg" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Sprite/Sunflower/ZombieNormalSunflower.tscn" id="11"]
+[ext_resource type="PackedScene" uid="uid://c5d74tbefbann" path="res://Script/Component/TowerDefense/Character/ProduceComponent/ProduceComponent.tscn" id="12"]
+
+[node name="TowerDefenseZombieNormalSunflower" node_paths=PackedStringArray("sprite", "headSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+produceInterval = 10.0
+sunNum = 25
+walkAnimeClip = "Walk1&Walk2"
+swimAnimeClip = "Swim"
+dieAnimeClip = "Death1&Death2"
+dieWaterAnimeClip = "Waterdeath"
+idleAnimeClip = "Idle1&Idle2"
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieNormalSunflower")
+headSlot = NodePath("SpriteGroup/TransformPoint/ZombieNormalSunflower/HeadSlot")
+damagePart = {
+"Arm": ExtResource("4"),
+"BlackHelmet": ExtResource("9"),
+"Bucket": ExtResource("6"),
+"Cone": ExtResource("5"),
+"Helmet": ExtResource("8"),
+"Screendoor": ExtResource("7"),
+"SpecialHelmet": ExtResource("10")
+}
+PreviewDamagePointPersontage = 1.0
+Armor = []
+DamagePartSlot/Arm = NodePath("SpriteGroup/TransformPoint/ZombieNormalSunflower/ArmSlot")
+DamagePartSlot/Cone = NodePath("SpriteGroup/TransformPoint/ZombieNormalSunflower/ConeSlot")
+DamagePartSlot/Bucket = NodePath("SpriteGroup/TransformPoint/ZombieNormalSunflower/BucketSlot")
+DamagePartSlot/Screendoor = NodePath("SpriteGroup/TransformPoint/ZombieNormalSunflower/ScreendoorSlot")
+DamagePartSlot/Helmet = NodePath("SpriteGroup/TransformPoint/ZombieNormalSunflower/HeadSlot")
+DamagePartSlot/BlackHelmet = NodePath("SpriteGroup/TransformPoint/ZombieNormalSunflower/HeadSlot")
+DamagePartSlot/SpecialHelmet = NodePath("SpriteGroup/TransformPoint/ZombieNormalSunflower/HeadSlot")
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(12, 33)
+
+[node name="ZombieNormalSunflower" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("11")]
+position = Vector2(-12, -33)
+trueFrameRate = 30.0
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ConeSlot"), NodePath("BucketSlot"), null, NodePath("ScreendoorSlot"), null, null, NodePath("ArmSlot"), null, NodePath("ConeSlot"), NodePath("BucketSlot"), null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("Head"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="Head" parent="SpriteGroup/TransformPoint/ZombieNormalSunflower" index="0" node_paths=PackedStringArray("layerSprite")]
+position = Vector2(-11.88, -44.92)
+rotation = -0.288505
+trueFrameRate = 30.0
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieNormalSunflower" index="1"]
+position = Vector2(-14.0402, -45.2396)
+rotation = -0.123491
+scale = Vector2(0.799502, 0.799502)
+
+[node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/ZombieNormalSunflower/HeadSlot" index="0"]
+position = Vector2(0.785607, -4.5013)
+
+[node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieNormalSunflower" index="2"]
+position = Vector2(3.32797, 20.5595)
+rotation = -0.0898304
+scale = Vector2(0.799564, 0.799564)
+
+[node name="ConeSlot" parent="SpriteGroup/TransformPoint/ZombieNormalSunflower" index="3"]
+position = Vector2(-11.3592, -70.7056)
+rotation = -0.184996
+scale = Vector2(0.79702, 0.79702)
+
+[node name="BucketSlot" parent="SpriteGroup/TransformPoint/ZombieNormalSunflower" index="4"]
+position = Vector2(26.1045, 9.9218)
+rotation = -0.0914425
+scale = Vector2(0.79974, 0.79974)
+
+[node name="ScreendoorSlot" parent="SpriteGroup/TransformPoint/ZombieNormalSunflower" index="5"]
+position = Vector2(-17.3686, 1.13158)
+rotation = -0.0455551
+scale = Vector2(0.799273, 0.799273)
+
+[node name="HitBox" parent="." index="5"]
+visible = false
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(4, -2)
+
+[node name="ProduceComponent" parent="." index="7" instance=ExtResource("12")]
+unique_name_in_owner = true
+produceType = "BrainSun"
+produceInterval = 10.0
+
+[node name="GroundMoveComponent" parent="." index="9" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieNormalSunflower/GroundSlot")
+
+[editable path="SpriteGroup/TransformPoint/ZombieNormalSunflower"]

@@ -12,7 +12,7 @@ class_name MenuDialogBase extends DialogBoxBase
 @onready var mobilePresetLabel: Label = %MobilePresetLabel
 
 func _ready() -> void :
-    super._ready()
+    super ._ready()
     animeFrameRateSlider.max_value = Global.maxFps
     animeFrameRateSlider.value = Global.animeFrameRate
     animeFrameRateLabel.text = "动画帧率:%d" % animeFrameRateSlider.value

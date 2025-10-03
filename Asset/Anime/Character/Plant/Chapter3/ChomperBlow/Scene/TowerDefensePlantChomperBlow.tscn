@@ -1,0 +1,82 @@
+[gd_scene load_steps=10 format=4 uid="uid://cices8rbeqoc1"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://opjs87r1kqav" path="res://Asset/Anime/Character/Plant/Chapter3/ChomperBlow/Scene/TowerDefensePlantChomperBlow.gd" id="2"]
+[ext_resource type="Resource" uid="uid://cdl82mdrscgx2" path="res://Asset/Anime/Character/Plant/Chapter3/ChomperBlow/Config/TowerDefensePlantChomperBlow.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://b7dwclqc7rx2m" path="res://Asset/Anime/Character/Plant/Chapter3/ChomperBlow/ChomperBlow.tscn" id="4"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="5"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="6"]
+[ext_resource type="PackedScene" uid="uid://dir0f8lu1l3b3" path="res://Script/Component/TowerDefense/Character/AttackComponent/AttackComponent.tscn" id="7"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ue5jv"]
+b = Vector2(100, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_4b318"]
+b = Vector2(2000, 0)
+
+[node name="TowerDefensePlantChomperBlow" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+chewTime = 30.0
+sleepAnimeClip = "Sleep"
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ChomperBlow")
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="ChomperBlow" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+position = Vector2(0, -30)
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 30)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+
+[node name="Attack" type="Node" parent="StateChart/CompoundState" index="3"]
+script = ExtResource("5")
+
+[node name="Chew" type="Node" parent="StateChart/CompoundState" index="4"]
+script = ExtResource("5")
+
+[node name="ToAttack" type="Node" parent="StateChart/CompoundState" index="7"]
+script = ExtResource("6")
+to = NodePath("../Attack")
+event = &"ToAttack"
+delay_in_seconds = "0.0"
+
+[node name="ToChew" type="Node" parent="StateChart/CompoundState" index="8"]
+script = ExtResource("6")
+to = NodePath("../Chew")
+event = &"ToChew"
+delay_in_seconds = "0.0"
+
+[node name="AttackComponent" parent="." index="9" node_paths=PackedStringArray("checkArea") instance=ExtResource("7")]
+unique_name_in_owner = true
+attackType = "Chomp"
+checkArea = NodePath("CheckNear")
+checkIntreval = 1
+
+[node name="CheckNear" type="Area2D" parent="AttackComponent" index="0"]
+unique_name_in_owner = true
+collision_layer = 0
+monitorable = false
+
+[node name="CheckShape" type="CollisionShape2D" parent="AttackComponent/CheckNear" index="0"]
+unique_name_in_owner = true
+shape = SubResource("SegmentShape2D_ue5jv")
+
+[node name="CheckArea" type="Area2D" parent="AttackComponent" index="1"]
+unique_name_in_owner = true
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent/CheckArea" index="0"]
+shape = SubResource("SegmentShape2D_4b318")
+
+[connection signal="state_entered" from="StateChart/CompoundState/Attack" to="." method="AttackEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Attack" to="." method="AttackExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Attack" to="." method="AttackProcessing"]
+[connection signal="state_entered" from="StateChart/CompoundState/Chew" to="." method="ChewEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Chew" to="." method="ChewExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Chew" to="." method="ChewProcessing"]

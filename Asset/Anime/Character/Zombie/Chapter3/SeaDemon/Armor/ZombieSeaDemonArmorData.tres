@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="CharacterArmorData" load_steps=5 format=4 uid="uid://c1so5y7wlfubf"]
+
+[ext_resource type="Resource" uid="uid://dtkw884fntese" path="res://Asset/Anime/Character/Zombie/Chapter3/SeaDemon/Armor/Config/ZombieSeaDemonArmorBlackHelmet.tres" id="1"]
+[ext_resource type="Resource" uid="uid://bddo786kv1fq5" path="res://Asset/Anime/Character/Zombie/Chapter3/SeaDemon/Armor/Config/ZombieSeaDemonArmorHelmet.tres" id="2"]
+[ext_resource type="Resource" uid="uid://bnafstq8gupyf" path="res://Asset/Anime/Character/Zombie/Chapter3/SeaDemon/Armor/Config/ZombieSeaDemonArmorSpecialHelmet.tres" id="3"]
+[ext_resource type="Script" uid="uid://ci4c6gpjugqpl" path="res://Resource/General/Character/Armor/CharacterArmorData.gd" id="4"]
+
+[resource]
+script = ExtResource("4")
+armorList = [ExtResource("2"), ExtResource("1"), ExtResource("3")]
+armorDictionary = {
+"BlackHelmet": ExtResource("1"),
+"Helmet": ExtResource("2"),
+"SpecialHelmet": ExtResource("3")
+}
+fliterAllDictionary = {
+"BlackHelmet": [],
+"Helmet": [],
+"SpecialHelmet": []
+}
+fliterOpenDictionary = {
+"BlackHelmet": [],
+"Helmet": [],
+"SpecialHelmet": []
+}
+fliterCloseDictionary = {
+"BlackHelmet": [],
+"Helmet": [],
+"SpecialHelmet": []
+}

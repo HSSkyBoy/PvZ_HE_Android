@@ -1,0 +1,89 @@
+[gd_scene load_steps=12 format=4 uid="uid://bynx17tp44ayo"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://c36mjuvejgy3d" path="res://Asset/Anime/Character/Zombie/Chapter3/SeaDemon/Scene/Base/TowerDefenseZombieSeaDemon.gd" id="2"]
+[ext_resource type="Resource" uid="uid://ov0p8peemmbu" path="res://Asset/Anime/Character/Zombie/Chapter3/SeaDemon/Config/TowerDefenseZombieSeaDemon.tres" id="3"]
+[ext_resource type="Resource" uid="uid://5pbudhad0osw" path="res://Asset/Anime/Character/Zombie/Chapter3/SeaDemon/DamagePoint/Config/ZombieSeaDemonDamagePointArm.tres" id="4"]
+[ext_resource type="Resource" uid="uid://d0rb5yqixtlf1" path="res://Asset/Anime/Character/Zombie/Chapter3/SeaDemon/DamagePoint/Config/ZombieSeaDemonDamagePointHead.tres" id="5"]
+[ext_resource type="Resource" uid="uid://bddo786kv1fq5" path="res://Asset/Anime/Character/Zombie/Chapter3/SeaDemon/Armor/Config/ZombieSeaDemonArmorHelmet.tres" id="6"]
+[ext_resource type="Resource" uid="uid://dtkw884fntese" path="res://Asset/Anime/Character/Zombie/Chapter3/SeaDemon/Armor/Config/ZombieSeaDemonArmorBlackHelmet.tres" id="7"]
+[ext_resource type="Resource" uid="uid://bnafstq8gupyf" path="res://Asset/Anime/Character/Zombie/Chapter3/SeaDemon/Armor/Config/ZombieSeaDemonArmorSpecialHelmet.tres" id="8"]
+[ext_resource type="PackedScene" uid="uid://sftmgg4oomkw" path="res://Asset/Anime/Character/Zombie/Chapter3/SeaDemon/Sprite/Base/ZombieSeaDemon.tscn" id="9"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="10"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="11"]
+
+[node name="TowerDefenseZombieSeaDemon" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+walkSpeedScale = 1.5
+useAttackDps = false
+inSwimAnimeClip = "Jump"
+swimAnimeClip = "Swim"
+outSwimAnimeClip = "OutWater"
+attackAnimeClip = "Attack"
+attackWaterAnimeClip = "SwimAttack"
+dieWaterAnimeClip = "SwimDeath"
+waterHeightPersontage = 0.496
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieSeaDemon")
+damagePart = {
+"Arm": ExtResource("4"),
+"BlackHelmet": ExtResource("7"),
+"Head": ExtResource("5"),
+"Helmet": ExtResource("6"),
+"SpecialHelmet": ExtResource("8")
+}
+PreviewDamagePointPersontage = 1.0
+Armor = []
+DamagePartSlot/Arm = NodePath("SpriteGroup/TransformPoint/ZombieSeaDemon/ArmSlot")
+DamagePartSlot/Head = NodePath("SpriteGroup/TransformPoint/ZombieSeaDemon/HeadSlot")
+DamagePartSlot/Helmet = NodePath("SpriteGroup/TransformPoint/ZombieSeaDemon/HeadSlot")
+DamagePartSlot/BlackHelmet = NodePath("SpriteGroup/TransformPoint/ZombieSeaDemon/HeadSlot")
+DamagePartSlot/SpecialHelmet = NodePath("SpriteGroup/TransformPoint/ZombieSeaDemon/HeadSlot")
+
+[node name="SpriteMask" parent="SpriteGroup" index="0"]
+offset_top = -173.0
+offset_bottom = 197.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(12, 33)
+
+[node name="ZombieSeaDemon" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("9")]
+position = Vector2(0, -33)
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, NodePath("HeadSlot"), null, null, NodePath("ArmSlot"), null, null, null, null, null, null]
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieSeaDemon" index="0"]
+position = Vector2(-19.5878, -59.8257)
+rotation = -0.0383266
+scale = Vector2(0.799889, 0.799889)
+
+[node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieSeaDemon" index="1"]
+position = Vector2(0.133769, -2.56391)
+rotation = -0.034588
+scale = Vector2(0.799827, 0.799827)
+
+[node name="GroundSlot" parent="SpriteGroup/TransformPoint/ZombieSeaDemon" index="2"]
+position = Vector2(-39.525, -40)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(-1.5, -2)
+
+[node name="AttackComponent" parent="." index="7"]
+attackType = "Smash"
+
+[node name="GroundMoveComponent" parent="." index="8" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieSeaDemon/GroundSlot")
+
+[node name="Point" type="Node" parent="StateChart/CompoundState" index="6"]
+script = ExtResource("10")
+
+[node name="ToPoint" type="Node" parent="StateChart/CompoundState" index="13"]
+script = ExtResource("11")
+to = NodePath("../Point")
+event = &"ToPoint"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="StateChart/CompoundState/Point" to="." method="PointEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Point" to="." method="PointExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Point" to="." method="PointProcessing"]
+
+[editable path="SpriteGroup/TransformPoint/ZombieSeaDemon"]

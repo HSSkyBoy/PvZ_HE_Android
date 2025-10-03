@@ -76,11 +76,11 @@ func _input(event: InputEvent) -> void :
 
 @warning_ignore("unused_parameter")
 func _physics_process(delta: float) -> void :
-    if camera:
-        if !camera.get_viewport_rect().has_point(sprite.global_position):
-            var cameraPos: Vector2 = camera.global_position
-            sprite.global_position.x = clamp(sprite.global_position.x, cameraPos.x + 40, cameraPos.x + viewSize.x - 40)
-            sprite.global_position.y = clamp(sprite.global_position.y, cameraPos.y + 40, cameraPos.y + viewSize.y - 40)
+
+
+
+
+
 
     if !over:
         if sprite.position.y > height:

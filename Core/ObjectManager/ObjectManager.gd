@@ -25,6 +25,7 @@ func _ready() -> void :
     PoolCreate(preload("uid://c5euyremx5if3"), ObjectManagerConfig.OBJECT.PARTICLES_PUFF_SPLATS, 200, "Refresh", "Recycle")
     PoolCreate(preload("uid://cn4yxuuid8kxl"), ObjectManagerConfig.OBJECT.PARTICLES_SPIKE_SPLATS, 200, "Refresh", "Recycle")
     PoolCreate(preload("uid://gwo4qka84n87"), ObjectManagerConfig.OBJECT.PARTICLES_BUTTER_SPLATS, 200, "Refresh", "Recycle")
+    PoolCreate(preload("uid://b60jsthf71tyc"), ObjectManagerConfig.OBJECT.PARTICLES_MELON_SPLATS, 200, "Refresh", "Recycle")
     PoolCreate(preload("uid://b7h8n8k20miuu"), ObjectManagerConfig.OBJECT.PARTICLES_WINTER_MELON_SPLATS, 200, "Refresh", "Recycle")
     PoolCreate(preload("uid://djchpnx8iwbpe"), ObjectManagerConfig.OBJECT.PARTICLES_GLOOM_SPLATS, 200, "Refresh", "Recycle")
     PoolCreate(preload("uid://xh43v6jwid53"), ObjectManagerConfig.OBJECT.PARTICLES_ICE_FIRE_SPLATS, 200, "Refresh", "Recycle")
@@ -42,12 +43,18 @@ func _ready() -> void :
     PoolCreate(preload("uid://cvg1cajrl4s4e"), ObjectManagerConfig.OBJECT.PROJECTILE_SPRITE_SPIKE, 200, "", "")
     PoolCreate(preload("uid://c5i60e3puevnc"), ObjectManagerConfig.OBJECT.PROJECTILE_SPRITE_KERNAL, 200, "", "")
     PoolCreate(preload("uid://bpu1ibbqp3m2"), ObjectManagerConfig.OBJECT.PROJECTILE_SPRITE_BUTTER, 200, "", "")
+    PoolCreate(preload("uid://oljar5hd2ra7"), ObjectManagerConfig.OBJECT.PROJECTILE_SPRITE_MELON, 200, "", "")
     PoolCreate(preload("uid://x8go376ra0lr"), ObjectManagerConfig.OBJECT.PROJECTILE_SPRITE_WINTER_MELON, 200, "", "")
     PoolCreate(preload("uid://66ajnsmq2qtq"), ObjectManagerConfig.OBJECT.PROJECTILE_SPRITE_GLOOM, 200, "", "")
     PoolCreate(preload("uid://yjbbnk8kl5qd"), ObjectManagerConfig.OBJECT.PROJECTILE_SPRITE_ICE_SWORD, 200, "", "")
     PoolCreate(preload("uid://btv02lfwnomhx"), ObjectManagerConfig.OBJECT.PROJECTILE_SPRITE_ICE_FIRE_PEA, 200, "", "")
     PoolCreate(preload("uid://bnl0hms7upsbj"), ObjectManagerConfig.OBJECT.PROJECTILE_SPRITE_ICE_SPEAR, 200, "", "")
     PoolCreate(preload("uid://bshbr6o1rfytt"), ObjectManagerConfig.OBJECT.PROJECTILE_SPRITE_SPIKE_MELON, 200, "", "")
+    PoolCreate(preload("uid://du7kby6nyekqt"), ObjectManagerConfig.OBJECT.PROJECTILE_SPRITE_FIRE_NOTE, 200, "", "")
+    PoolCreate(preload("uid://b7bs6ycus24ll"), ObjectManagerConfig.OBJECT.PROJECTILE_SPRITE_ICE_FIRE_NOTE, 200, "", "")
+    PoolCreate(preload("uid://cddt3dm8bb6te"), ObjectManagerConfig.OBJECT.PROJECTILE_SPRITE_CYBER, 200, "", "")
+    PoolCreate(preload("uid://b4gse3ycf5ocj"), ObjectManagerConfig.OBJECT.PROJECTILE_SPRITE_FIRE_CYBER, 200, "", "")
+    PoolCreate(preload("uid://b1fqvgvs57o5o"), ObjectManagerConfig.OBJECT.PROJECTILE_SPRITE_ICE_FIRE_CYBER, 200, "", "")
 
 func Clear() -> void :
     for i in range(poolList.size()):

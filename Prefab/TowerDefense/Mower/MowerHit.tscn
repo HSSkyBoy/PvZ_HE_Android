@@ -8,17 +8,20 @@
 z_index = -8
 script = ExtResource("1")
 itemLayer = 7
+gravity = 1.0
+gravityScale = 245.0
+ySpeed = 1.5
 
 [node name="MowerHitSprite" parent="." node_paths=PackedStringArray("layerSprite") instance=ExtResource("2")]
 position = Vector2(24, -8)
+trueFrameRate = 30.0
 layerSprite = [null, null]
 
 [node name="AdobeAnimateSlot" type="Node2D" parent="MowerHitSprite"]
 unique_name_in_owner = true
-position = Vector2(58.9802, 23.7566)
-rotation = 1.70613
-scale = Vector2(0.687996, 1.01762)
-skew = 1.43051e-05
+position = Vector2(-9.25312, 15.9167)
+rotation = 0.341231
+scale = Vector2(1.00057, 1.00024)
 script = ExtResource("3")
 followSlotId = 1
 offset = Vector2(23, 76)

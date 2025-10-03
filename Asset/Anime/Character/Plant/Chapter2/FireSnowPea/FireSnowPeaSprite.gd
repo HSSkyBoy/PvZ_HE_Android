@@ -6,7 +6,7 @@ extends AdobeAnimateSpriteBase
 
 @warning_ignore("unused_parameter")
 func _physics_process(delta: float) -> void :
-    super._physics_process(delta)
+    super ._physics_process(delta)
     if Engine.is_editor_hint():
         return
     if headRight.is_node_ready():

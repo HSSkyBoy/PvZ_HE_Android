@@ -85,5 +85,43 @@
 			"ShowCharacter" : "PlantIcenut",
 			"ShowCustom" : "Custom0"
 		}
+	],
+	"2025-09" : [
+		{
+			"Type" : "Feature" ,
+			"Key" : "PeaLilyPadCustom0" ,
+			"ConditionType" : "FinishLevelNum" ,
+			"ConditionArg" : [ 7 ] ,
+			"Icon" : "uid://ds8cclhsmmdlj" ,
+			"ShowCharacter" : "PlantPeaLilyPad",
+			"ShowCustom" : "Custom0"
+		},
+		{
+			"Type" : "Feature" ,
+			"Key" : "SeaNutCustom0" ,
+			"ConditionType" : "FinishLevelNum" ,
+			"ConditionArg" : [ 14 ] ,
+			"Icon" : "uid://dtl8gtqna5p6b" ,
+			"ShowCharacter" : "PlantSeaNut",
+			"ShowCustom" : "Custom0"
+		},
+		{
+			"Type" : "Feature" ,
+			"Key" : "MelonpultSpikeCustom0" ,
+			"ConditionType" : "FinishLevelNum" ,
+			"ConditionArg" : [ 21 ] ,
+			"Icon" : "uid://qb4gpet7m82a" ,
+			"ShowCharacter" : "PlantMelonpultSpike",
+			"ShowCustom" : "Custom0"
+		},
+		{
+			"Type" : "Feature" ,
+			"Key" : "SnowwoodCoustom0" ,
+			"ConditionType" : "FinishLevelNum" ,
+			"ConditionArg" : [ 28 ] ,
+			"Icon" : "uid://lqajq31kn3dt" ,
+			"ShowCharacter" : "PlantSnowwood",
+			"ShowCustom" : "Custom0"
+		}
 	]
 }

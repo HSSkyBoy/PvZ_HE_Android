@@ -20,6 +20,8 @@ func _ready():
 func ChangeProjectile(area: Area2D):
     if !alive:
         return
+    if parent.die || parent.nearDie:
+        return
     var projectile = area.get_parent()
     if projectile is TowerDefenseProjectile:
         for checkProjectile: ChangeProjectileSingleConfig in projectileConfig.changeList:

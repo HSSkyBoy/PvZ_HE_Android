@@ -46,9 +46,14 @@ func _ready() -> void :
     if data:
         Init(data)
 
-    cardZombie.visible = Global.debugPacketOpenAll
-    cardItem.visible = Global.debugPacketOpenAll
-    cardGraveStone.visible = Global.debugPacketOpenAll
+    var open = Global.debugPacketOpenAll || \
+Global.enterLevelMode == "OnlineLevel" || \
+Global.enterLevelMode == "LoadLevel" || \
+Global.enterLevelMode == "DiyLevel"
+
+    cardZombie.visible = open
+    cardItem.visible = open
+    cardGraveStone.visible = open
 
 func PacketChoose(packet: TowerDefenseInGamePacketShow) -> void :
     var nextIndex: int = packetList.find(packet)
@@ -174,7 +179,10 @@ func CategoryChoose(_category: String, reFresh: bool = false) -> void :
         packet.loveChange.connect(LoveChange)
         packet.pressed.connect(PacketChoose)
         packet.alive = !seedBank.HasPacket(configName)
-        if Global.debugPacketOpenAll:
+        if Global.debugPacketOpenAll || \
+Global.enterLevelMode == "OnlineLevel" || \
+Global.enterLevelMode == "LoadLevel" || \
+Global.enterLevelMode == "DiyLevel":
             packet.alive = !seedBank.HasPacket(configName)
         packetList.append(packet)
 

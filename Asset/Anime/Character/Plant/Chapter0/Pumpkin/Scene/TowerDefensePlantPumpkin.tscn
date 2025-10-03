@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=4 uid="uid://com84jod122g5"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cj6i6m5nea5bl" path="res://Asset/Anime/Character/Plant/Chapter0/Pumpkin/Scene/TowerDefensePlantPumpkin.gd" id="2"]
+[ext_resource type="Resource" uid="uid://dg4a4bap1kkts" path="res://Asset/Anime/Character/Plant/Chapter0/Pumpkin/Config/TowerDefensePlantPumpkin.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://cjnbqj3wah7l4" path="res://Asset/Anime/Character/Plant/Chapter0/Pumpkin/Pumpkin.tscn" id="4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vpdpe"]
+size = Vector2(64, 33)
+
+[node name="TowerDefensePlantPumpkin" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+z_index = -10
+script = ExtResource("2")
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/PumpkinFire")
+PreviewDamagePointPersontage = 1.0
+itemLayer = 5
+
+[node name="SpriteMask" parent="SpriteGroup" index="0"]
+modulate = Color(1, 1, 1, 0)
+offset_top = -49.0
+offset_bottom = 54.0
+color = Color(1, 1, 1, 1)
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="PumpkinFire" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+position = Vector2(0, -30)
+
+[node name="Back" parent="SpriteGroup/TransformPoint/PumpkinFire/Node2D" index="0"]
+z_index = -2
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 30)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+shape = SubResource("RectangleShape2D_vpdpe")
+
+[node name="ShowHealthComponent" parent="." index="7"]
+position = Vector2(0, 16)
+
+[editable path="SpriteGroup/TransformPoint/PumpkinFire"]

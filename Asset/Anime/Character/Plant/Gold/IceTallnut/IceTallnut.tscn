@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=4 uid="uid://djy7gpp8wfa6"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://hlyopdiilf5p" path="res://Asset/Anime/Character/Plant/Gold/IceTallnut/IceTallnut.tres" id="2"]
+
+[node name="IceTallnut" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/AnimeEvents = false
+Animation/LayerVisible/anim_face = true
+"Animation/LayerVisible/图层_10" = true
+"Animation/LayerVisible/图层_11" = true
+"Animation/LayerVisible/图层_12" = true
+"Animation/LayerVisible/图层_3" = true
+"Animation/LayerVisible/图层_4" = true
+"Animation/LayerVisible/图层_45" = true
+"Animation/LayerVisible/图层_5" = true
+"Animation/LayerVisible/图层_6" = true
+"Animation/LayerVisible/图层_7" = true
+"Animation/LayerVisible/图层_8" = true
+"Animation/LayerVisible/图层_9" = true
+Animation/MediaReplace/BDZX_0000_6.png = null
+Animation/MediaReplace/BDZX_0001_5.png = null
+Animation/MediaReplace/BDZX_0002_4.png = null
+Animation/MediaReplace/BDZX_0003_3.png = null
+Animation/MediaReplace/BDZX_0004_2.png = null
+Animation/MediaReplace/BDZX_0005_1.png = null
+Animation/MediaReplace/IceTallnut_body.png = null
+Animation/MediaReplace/Tallnut_body_0000_11.png = null
+Animation/MediaReplace/Tallnut_body_0001_10.png = null
+Animation/MediaReplace/Tallnut_body_0002_9.png = null
+Animation/MediaReplace/Tallnut_body_0003_8.png = null
+Animation/MediaReplace/Tallnut_body_0004_7.png = null
+Animation/MediaReplace/Tallnut_body_0005_6.png = null
+Animation/MediaReplace/Tallnut_body_0006_5.png = null
+Animation/MediaReplace/Tallnut_body_0007_4.png = null
+Animation/MediaReplace/Tallnut_body_0008_3.png = null
+Animation/MediaReplace/Tallnut_body_0009_2.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

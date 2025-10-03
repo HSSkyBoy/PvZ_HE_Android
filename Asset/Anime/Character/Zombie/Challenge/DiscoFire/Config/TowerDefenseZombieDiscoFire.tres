@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="TowerDefenseZombieConfig" load_steps=4 format=4 uid="uid://c5b7385s8lcxv"]
+
+[ext_resource type="PackedScene" uid="uid://bpf07yxaoaqj0" path="res://Asset/Anime/Character/Zombie/Ash/General/ZombieGeneralAsh.tscn" id="1"]
+[ext_resource type="Resource" uid="uid://q7pxovr3atrb" path="res://Asset/Anime/Character/Zombie/Challenge/DiscoFire/DamagePoint/ZombieDiscoFireDamagePointData.tres" id="2"]
+[ext_resource type="Script" uid="uid://fq0affmtew5n" path="res://Resource/TowerDefense/Character/Config/TowerDefenseZombieConfig.gd" id="3"]
+
+[resource]
+script = ExtResource("3")
+physique = 2
+attack = 100.0
+smashAttack = 0.0
+impactAudio = ""
+weight = 3000
+wavePointCost = 200
+canSpawnPlantfood = true
+excludeLineGridType = []
+spawnLineNeed = []
+name = "ZombieDiscoFire"
+hitpointsNearDeath = 167.0
+hitpoints = 933.0
+explosionHurt = -1.0
+smashHurt = -1.0
+spikeHurt = -1.0
+canDragIntoWater = true
+sleepTime = "Never"
+height = 2
+damagePointData = ExtResource("2")
+armorData = null
+customData = null
+ashScene = ExtResource("1")
+homeWorld = 1
+costRise = -1
+cost = 200
+packetCooldown = 5.0
+startingCooldown = 0.0
+plantCoverAll = false
+plantCover = []
+plantCoverRecycle = []
+plantGridType = [-1]
+plantGridOverrideType = 0
+collisionFlags = 1
+maskFlags = 9
+unUseBuffFlags = 19
+physiqueTypeFlags = 0
+elementFlags = 0
+Flag/Collision = 1
+Flag/Mask = 9
+Flag/UnUseBuff = 19
+Flag/PhysiqueType = 0
+Flag/Elemet = 0

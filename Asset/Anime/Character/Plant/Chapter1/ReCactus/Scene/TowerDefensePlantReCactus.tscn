@@ -19,18 +19,18 @@ idleAnimeClip = "BodyIdle"
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/ReCactus")
 Custom = []
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
 
-[node name="ReCactus" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+[node name="ReCactus" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSprite") instance=ExtResource("4")]
 position = Vector2(0, -30)
 trueFrameRate = 30.0
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, NodePath("Head"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 Animation/LayerVisible/Cactus_floer_top = true
 
 [node name="Head" parent="SpriteGroup/TransformPoint/ReCactus" index="0"]
-position = Vector2(0.310001, 2.17)
+position = Vector2(-2.49, 3.4533)
 trueFrameRate = 30.0
 Animation/LayerVisible/frontleaf = true
 Animation/LayerVisible/frontleaf_right_tip = true

@@ -29,10 +29,8 @@ sprite = NodePath("SpriteGroup/TransformPoint/CactusBlover")
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
 
-[node name="CactusBlover" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSprite") instance=ExtResource("6")]
+[node name="CactusBlover" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("6")]
 position = Vector2(0, -30)
-trueFrameRate = 30.0
-layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 
 [node name="ShadowSprite" parent="." index="3"]
 position = Vector2(0, 30)

@@ -20,13 +20,13 @@ fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.8, 0.8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgmr6"]
-size = Vector2(54, 66)
+size = Vector2(72, 80)
 
 [node name="TowerDefensePlantSnowwood" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
 script = ExtResource("2")
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/Snowwood")
-gravity = 245.0
+Custom = []
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
@@ -36,9 +36,6 @@ position = Vector2(0, -30)
 
 [node name="ShadowSprite" parent="." index="3"]
 position = Vector2(0, 30)
-
-[node name="HitBox" parent="." index="5"]
-visible = true
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(0, 0)
@@ -55,7 +52,6 @@ projectileConfig = ExtResource("6")
 checkArea = NodePath("Area2D")
 
 [node name="Area2D" type="Area2D" parent="ChangeProjectileComponent" index="0"]
-visible = false
 collision_layer = 0
 collision_mask = 2
 monitorable = false

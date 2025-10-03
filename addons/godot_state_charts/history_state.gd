@@ -34,7 +34,7 @@ func _state_restore(saved_state: SavedState, _child_levels: int = -1) -> void :
 
 
 func _get_configuration_warnings() -> PackedStringArray:
-    var warnings: = super._get_configuration_warnings()
+    var warnings: = super ._get_configuration_warnings()
 
 
     var parent_state: = get_parent()

@@ -59,6 +59,7 @@ pivot_offset = Vector2(182, 120)
 mouse_filter = 2
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Layer/Control/MarginContainer2"]
+unique_name_in_owner = true
 light_mask = 0
 layout_mode = 2
 texture = ExtResource("2")
@@ -68,8 +69,9 @@ patch_margin_right = 50
 patch_margin_bottom = 110
 
 [node name="HeadTextureRect" type="TextureRect" parent="Layer/Control/MarginContainer2/NinePatchRect"]
+unique_name_in_owner = true
 light_mask = 0
-layout_mode = 2
+layout_mode = 0
 anchor_left = 0.496
 anchor_right = 0.496
 offset_left = -93.336

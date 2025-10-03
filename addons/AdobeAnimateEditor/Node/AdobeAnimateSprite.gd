@@ -365,6 +365,8 @@ func _draw() -> void :
                 mediaTransform = element[1]
                 mediaColor = element[2]
                 mediaRect = flashAnimeData.mediaList[element[0]]
+
+
             if canUseTween:
                 var nextElement: Array = nextElementList[elementId]
                 if nextElement[0] == 65535:

@@ -6,7 +6,7 @@ class_name NpcTalkHandConfig extends NpcTalkBaseConfig
 @export var headScene: PackedScene
 
 func Init(data: Dictionary) -> void :
-    super.Init(data)
+    super .Init(data)
     if data["Arg"].size() >= 1:
         handScene = load(data["Arg"][0])
     if data["Arg"].size() >= 2:

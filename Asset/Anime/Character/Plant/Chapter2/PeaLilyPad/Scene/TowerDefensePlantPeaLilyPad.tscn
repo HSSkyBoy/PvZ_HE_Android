@@ -17,21 +17,22 @@ b = Vector2(2000, 0)
 z_index = -13
 script = ExtResource("2")
 fireInterval = 3.0
+fireNum = 1
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/PeaLilyPad")
+Custom = []
 itemLayer = 2
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
 
 [node name="PeaLilyPad" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("4")]
 position = Vector2(0, -30)
-offset = Vector2(-40, -22.8612)
-layerSlot = [NodePath("PotSlot"), NodePath("MouseSlot"), null, null]
+offset = Vector2(-40, -21.9589)
+layerSlot = [NodePath("PotSlot"), null, null, NodePath("MouseSlot"), null, null]
 
 [node name="PotSlot" type="Node2D" parent="SpriteGroup/TransformPoint/PeaLilyPad" index="0"]
-position = Vector2(-40.35, -17.3612)
+position = Vector2(-40.35, -16.4589)
 script = ExtResource("5")
 followSlotId = 1
 useScale = false
@@ -41,10 +42,10 @@ metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
 position = Vector2(41.35, 10.1448)
 
 [node name="MouseSlot" type="Node2D" parent="SpriteGroup/TransformPoint/PeaLilyPad" index="1"]
-position = Vector2(34.23, 5.13875)
-scale = Vector2(0.524982, 0.507983)
+position = Vector2(33.544, 6.08105)
+scale = Vector2(0.530984, 0.506387)
 script = ExtResource("5")
-followSlotId = 2
+followSlotId = 4
 useRotate = false
 useSkew = false
 metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

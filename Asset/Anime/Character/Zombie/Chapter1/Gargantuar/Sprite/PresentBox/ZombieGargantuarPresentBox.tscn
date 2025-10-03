@@ -1,0 +1,197 @@
+[gd_scene load_steps=6 format=4 uid="uid://co5hd5slydim3"]
+
+[ext_resource type="Script" uid="uid://d4jipgvar06y3" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/Sprite/PresentBox/ZombieGargantuarPresentBoxSprite.gd" id="1"]
+[ext_resource type="Resource" uid="uid://c5y8h54m0c51y" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/ZombieGargantuar.tres" id="2"]
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="3"]
+[ext_resource type="Resource" uid="uid://0puolnp4gbov" path="res://Asset/Anime/Character/Plant/Special/PresentBox/PresentBox.tres" id="4"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="5"]
+
+[node name="ZombieGargantuarPresentBox" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -90)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/AnimeEvents = false
+Animation/LayerVisible/Zombie_duckytube = false
+Animation/LayerVisible/Zombie_gargantua_body1 = true
+Animation/LayerVisible/Zombie_gargantua_body2 = true
+Animation/LayerVisible/Zombie_gargantua_innerleg_foot = true
+Animation/LayerVisible/Zombie_gargantua_innerleg_lower = true
+Animation/LayerVisible/Zombie_gargantua_innerleg_upper = true
+Animation/LayerVisible/Zombie_gargantua_jaw = false
+Animation/LayerVisible/Zombie_gargantuar_innerarm_hand = true
+Animation/LayerVisible/Zombie_gargantuar_innerarm_lower = true
+Animation/LayerVisible/Zombie_gargantuar_innerarm_thumb = true
+Animation/LayerVisible/Zombie_gargantuar_innerarm_upper = true
+Animation/LayerVisible/Zombie_gargantuar_outerarm_hand = true
+Animation/LayerVisible/Zombie_gargantuar_outerarm_lower = true
+Animation/LayerVisible/Zombie_gargantuar_outerarm_upper = true
+Animation/LayerVisible/Zombie_gargantuar_outerleg_foot = true
+Animation/LayerVisible/Zombie_gargantuar_outerleg_lower = true
+Animation/LayerVisible/Zombie_gargantuar_outerleg_upper = true
+Animation/LayerVisible/Zombie_gargantuar_rope = true
+Animation/LayerVisible/Zombie_gargantuar_telephonepole = true
+Animation/LayerVisible/Zombie_gargantuar_trashcan = true
+Animation/LayerVisible/Zombie_gargantuar_trashcan2 = true
+Animation/LayerVisible/Zombie_gargantuar_whiterope = true
+Animation/LayerVisible/Zombie_imp_body1 = true
+Animation/LayerVisible/Zombie_imp_body2 = true
+Animation/LayerVisible/Zombie_imp_head = false
+Animation/LayerVisible/Zombie_imp_innerarm_lower = true
+Animation/LayerVisible/Zombie_imp_innerarm_lower1 = true
+Animation/LayerVisible/Zombie_imp_innerarm_upper = true
+Animation/LayerVisible/Zombie_imp_innerleg_foot = true
+Animation/LayerVisible/Zombie_imp_innerleg_lower = true
+Animation/LayerVisible/Zombie_imp_innerleg_upper = true
+Animation/LayerVisible/Zombie_imp_jaw = false
+Animation/LayerVisible/Zombie_imp_outerarm_lower = true
+Animation/LayerVisible/Zombie_imp_outerarm_upper = true
+Animation/LayerVisible/Zombie_imp_outerleg_foot = true
+Animation/LayerVisible/Zombie_imp_outerleg_lower = true
+Animation/LayerVisible/Zombie_imp_outerleg_upper = true
+Animation/LayerVisible/Zombie_whitewater = false
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/anim_bucket = false
+Animation/LayerVisible/anim_gargantuar = false
+Animation/LayerVisible/anim_head1 = false
+Animation/LayerVisible/anim_screendoor = false
+Animation/LayerVisible/zombie_football_helmet = false
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/Zombie_bucket1.png = null
+Animation/MediaReplace/Zombie_duckytube.png = null
+Animation/MediaReplace/Zombie_football_helmet.png = null
+Animation/MediaReplace/Zombie_gargantuar_body1.png = null
+Animation/MediaReplace/Zombie_gargantuar_body2.png = null
+Animation/MediaReplace/Zombie_gargantuar_foot.png = null
+Animation/MediaReplace/Zombie_gargantuar_head.png = null
+Animation/MediaReplace/Zombie_gargantuar_helmet.png = null
+Animation/MediaReplace/Zombie_gargantuar_innerarm_hand.png = null
+Animation/MediaReplace/Zombie_gargantuar_innerarm_lower.png = null
+Animation/MediaReplace/Zombie_gargantuar_innerarm_thumb.png = null
+Animation/MediaReplace/Zombie_gargantuar_innerarm_upper.png = null
+Animation/MediaReplace/Zombie_gargantuar_innerleg_lower.png = null
+Animation/MediaReplace/Zombie_gargantuar_innerleg_upper.png = null
+Animation/MediaReplace/Zombie_gargantuar_jaw.png = null
+Animation/MediaReplace/Zombie_gargantuar_outerarm_hand.png = null
+Animation/MediaReplace/Zombie_gargantuar_outerarm_lower.png = null
+Animation/MediaReplace/Zombie_gargantuar_outerarm_upper.png = null
+Animation/MediaReplace/Zombie_gargantuar_outerleg_lower.png = null
+Animation/MediaReplace/Zombie_gargantuar_outerleg_upper.png = null
+Animation/MediaReplace/Zombie_gargantuar_rope.png = null
+Animation/MediaReplace/Zombie_gargantuar_telephonepole.png = null
+Animation/MediaReplace/Zombie_gargantuar_trashcan1.png = null
+Animation/MediaReplace/Zombie_gargantuar_trashcan2.png = null
+Animation/MediaReplace/Zombie_gargantuar_water1.png = null
+Animation/MediaReplace/Zombie_gargantuar_water2.png = null
+Animation/MediaReplace/Zombie_gargantuar_water3.png = null
+Animation/MediaReplace/Zombie_gargantuar_whiterope.png = null
+Animation/MediaReplace/Zombie_imp_arm1.png = null
+Animation/MediaReplace/Zombie_imp_arm2.png = null
+Animation/MediaReplace/Zombie_imp_body1.png = null
+Animation/MediaReplace/Zombie_imp_body2.png = null
+Animation/MediaReplace/Zombie_imp_head.png = null
+Animation/MediaReplace/Zombie_imp_innerleg_foot.png = null
+Animation/MediaReplace/Zombie_imp_innerleg_lower.png = null
+Animation/MediaReplace/Zombie_imp_innerleg_upper.png = null
+Animation/MediaReplace/Zombie_imp_jaw.png = null
+Animation/MediaReplace/Zombie_imp_outerleg_foot.png = null
+Animation/MediaReplace/Zombie_imp_outerleg_lower.png = null
+Animation/MediaReplace/Zombie_imp_outerleg_upper.png = null
+Animation/MediaReplace/Zombie_screendoor1.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="PresentBoxHead" type="Node2D" parent="." node_paths=PackedStringArray("layerSlot", "layerSprite", "parentSprite")]
+unique_name_in_owner = true
+position = Vector2(-81.075, -115.675)
+rotation = -0.100458
+scale = Vector2(0.9, 0.9)
+script = ExtResource("3")
+flashAnimeData = ExtResource("4")
+offset = Vector2(0, -30)
+useTween = false
+layerSlot = [null, null]
+layerSprite = [null, null]
+parentSprite = NodePath("..")
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/box = true
+Animation/MediaReplace/Present.png = null
+Animation/MediaReplace/PresentOpen.png = null
+Layer = 32
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="PresentBoxImpHead" type="Node2D" parent="." node_paths=PackedStringArray("layerSlot", "layerSprite", "parentSprite")]
+unique_name_in_owner = true
+position = Vector2(14.76, -149.155)
+rotation = -0.130302
+scale = Vector2(0.5, 0.5)
+script = ExtResource("3")
+flashAnimeData = ExtResource("4")
+offset = Vector2(0, -25)
+useTween = false
+layerSlot = [null, null]
+layerSprite = [null, null]
+parentSprite = NodePath("..")
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/box = true
+Animation/MediaReplace/Present.png = null
+Animation/MediaReplace/PresentOpen.png = null
+Layer = 21
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="HeadSlot" type="Node2D" parent="."]
+position = Vector2(-52.2035, -78.402)
+rotation = -0.100458
+scale = Vector2(0.999514, 0.999514)
+script = ExtResource("5")
+followSlotId = 33
+offset = Vector2(25, 40)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="BucketSlot" type="Node2D" parent="."]
+position = Vector2(-49.1962, -95.5827)
+rotation = 0.0314147
+scale = Vector2(0.999573, 0.999573)
+script = ExtResource("5")
+followSlotId = 35
+offset = Vector2(30, 35)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="HelmetSlot" type="Node2D" parent="."]
+position = Vector2(-55.2848, -79.7739)
+rotation = 0.0314147
+scale = Vector2(0.999573, 0.999573)
+script = ExtResource("5")
+followSlotId = 36
+offset = Vector2(24, 38)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ScreenDoorSlot" type="Node2D" parent="."]
+position = Vector2(-57.5888, -7.96089)
+rotation = -0.244346
+scale = Vector2(0.999916, 0.999916)
+script = ExtResource("5")
+followSlotId = 38
+offset = Vector2(30, 60)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ImpSlot" type="Node2D" parent="."]
+position = Vector2(43.6559, -113.728)
+rotation = 0.236293
+scale = Vector2(0.993865, 0.998647)
+skew = -0.0737725
+script = ExtResource("5")
+followSlotId = 21
+offset = Vector2(20, 20)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="GroundSlot" type="Node2D" parent="."]
+position = Vector2(-8.3, -10)
+script = ExtResource("5")
+followSlotId = 1
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

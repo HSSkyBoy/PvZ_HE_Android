@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=4 uid="uid://bvhgybgifjsxr"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://cjul6om5c6ga3" path="res://Asset/Anime/Character/Zombie/Challenge/JacksonX/ZombieJacksonX.tres" id="2"]
+[ext_resource type="PackedScene" uid="uid://cfgdfuopusvnr" path="res://Asset/Anime/Character/Zombie/Duckytube/ZombieDuckytube.tscn" id="3"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="4"]
+
+[node name="ZombieJacksonX" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -80)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "MoonWalk"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/AnimeEvents = false
+Animation/LayerVisible/Zombie_Jackson_body1 = true
+Animation/LayerVisible/Zombie_Jackson_body2 = true
+Animation/LayerVisible/Zombie_Jackson_colar = true
+Animation/LayerVisible/Zombie_Jackson_innerarm_hand = true
+Animation/LayerVisible/Zombie_Jackson_innerarm_lower = true
+Animation/LayerVisible/Zombie_Jackson_innerarm_upper = true
+Animation/LayerVisible/Zombie_Jackson_innerleg_foot = true
+Animation/LayerVisible/Zombie_Jackson_innerleg_lower = true
+Animation/LayerVisible/Zombie_Jackson_innerleg_toe = true
+Animation/LayerVisible/Zombie_Jackson_innerleg_upper = true
+Animation/LayerVisible/Zombie_Jackson_outerarm_upper = true
+Animation/LayerVisible/Zombie_Jackson_outerleg_foot = true
+Animation/LayerVisible/Zombie_Jackson_outerleg_lower = true
+Animation/LayerVisible/Zombie_Jackson_outerleg_toe = true
+Animation/LayerVisible/Zombie_Jackson_outerleg_upper = true
+Animation/LayerVisible/Zombie_outerarm_hand = true
+Animation/LayerVisible/Zombie_outerarm_lower = true
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/anim_hair = true
+Animation/LayerVisible/anim_head1 = true
+Animation/LayerVisible/anim_head2 = true
+Animation/LayerVisible/glasses = true
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/Zombie_JacksonX_body1.png = null
+Animation/MediaReplace/Zombie_JacksonX_body2.png = null
+Animation/MediaReplace/Zombie_JacksonX_colar.png = null
+Animation/MediaReplace/Zombie_JacksonX_hair.png = null
+Animation/MediaReplace/Zombie_JacksonX_innerarm_hand.png = null
+Animation/MediaReplace/Zombie_JacksonX_innerarm_hand2.png = null
+Animation/MediaReplace/Zombie_JacksonX_innerarm_lower.png = null
+Animation/MediaReplace/Zombie_JacksonX_innerarm_upper.png = null
+Animation/MediaReplace/Zombie_JacksonX_innerleg_foot.png = null
+Animation/MediaReplace/Zombie_JacksonX_innerleg_lower.png = null
+Animation/MediaReplace/Zombie_JacksonX_innerleg_toe.png = null
+Animation/MediaReplace/Zombie_JacksonX_innerleg_upper.png = null
+Animation/MediaReplace/Zombie_JacksonX_outerarm_lower.png = null
+Animation/MediaReplace/Zombie_JacksonX_outerarm_upper.png = null
+Animation/MediaReplace/Zombie_JacksonX_outerleg_foot.png = null
+Animation/MediaReplace/Zombie_JacksonX_outerleg_lower.png = null
+Animation/MediaReplace/Zombie_JacksonX_outerleg_toe.png = null
+Animation/MediaReplace/Zombie_JacksonX_outerleg_upper.png = null
+Animation/MediaReplace/Zombie_Jackson_outerarm_hand.png = null
+Animation/MediaReplace/Zombie_jacksonX_glasses.png = null
+Animation/MediaReplace/Zombie_jackson_head.png = null
+Animation/MediaReplace/Zombie_jaw.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="ZombieDuckytube" parent="." node_paths=PackedStringArray("parentSprite") instance=ExtResource("3")]
+visible = false
+position = Vector2(-27.64, -42.91)
+rotation = -0.0609188
+offset = Vector2(3.43, 50.295)
+offsetRotate = -0.04
+parentSprite = NodePath("..")
+Layer = 13
+
+[node name="HeadSlot" type="Node2D" parent="."]
+position = Vector2(-22.2352, -41.2883)
+rotation = -0.0209188
+scale = Vector2(0.7995, 0.7995)
+script = ExtResource("4")
+followSlotId = 15
+offset = Vector2(25, 30)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ArmSlot" type="Node2D" parent="."]
+position = Vector2(2.32772, 3.93926)
+rotation = -0.0209188
+scale = Vector2(0.7995, 0.7995)
+script = ExtResource("4")
+followSlotId = 21
+offset = Vector2(10, 20)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="GroundSlot" type="Node2D" parent="."]
+position = Vector2(-92.35, -38.25)
+script = ExtResource("4")
+followSlotId = 1
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

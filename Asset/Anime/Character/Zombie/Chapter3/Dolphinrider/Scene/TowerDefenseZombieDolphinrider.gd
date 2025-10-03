@@ -19,17 +19,8 @@ var isBlock: bool = false
 var audioPlay: bool = false
 
 func _ready() -> void :
-    super._ready()
+    super ._ready()
     sprite.animeStarted.connect(AnimeStarted)
-
-func _physics_process(delta: float) -> void :
-    if Engine.is_editor_hint():
-        return
-    super._physics_process(delta)
-    if !audioPlay:
-        if global_position.x < TowerDefenseManager.GetMapGroundRight():
-            AudioManager.AudioPlay("DolphinAppears", AudioManagerEnum.TYPE.SFX)
-            audioPlay = true
 
 func WalkEntered() -> void :
     if jumpMove:
@@ -54,8 +45,11 @@ func WalkEntered() -> void :
     groundMoveComponent.alive = true
 
 func WalkProcessing(delta: float) -> void :
-    super.WalkProcessing(delta)
-    sprite.timeScale = timeScale * 1.0
+    super .WalkProcessing(delta)
+    if !audioPlay:
+        if global_position.x < TowerDefenseManager.GetMapGroundRight():
+            AudioManager.AudioPlay("DolphinAppears", AudioManagerEnum.TYPE.SFX)
+            audioPlay = true
 
 func Walk() -> void :
     if dolphin && inWater:
@@ -85,7 +79,7 @@ func RunProcessing(delta: float) -> void :
         return
     if sprite.clip == "DolphinRun":
         if attackComponent2.CanAttack(false):
-            if is_instance_valid(attackComponent2.target) && (attackComponent2.target is TowerDefensePlantBowlingBase || (attackComponent2.target.gridPos.y == gridPos.y)):
+            if is_instance_valid(attackComponent2.target):
                 state.send_event("ToJump")
 
 func RunExited() -> void :
@@ -107,6 +101,7 @@ func JumpProcessing(delta: float) -> void :
                 if attackComponent2.target.config.height >= TowerDefenseEnum.CHARACTER_HEIGHT.TALL:
                     dolphin = false
                     global_position.x = attackComponent2.target.global_position.x + 40
+                    waterHeight = 60
                     groundHeight = -60
                     z = -60
                     spriteGroup.position.y = - z
@@ -123,7 +118,7 @@ func JumpExited() -> void :
     instance.maskFlags = TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.GROUND_CHARACTRE
 
 func InWater() -> void :
-    super.InWater()
+    super .InWater()
     if !dolphin:
         sprite.offset = Vector2(24, -97)
 
@@ -131,26 +126,30 @@ func InWater() -> void :
     useAttackDps = true
 
 func OutWater() -> void :
-    super.OutWater()
+    super .OutWater()
     var tween = create_tween()
     tween.tween_property(sprite, ^"offset", Vector2(-40, -92), 0.25)
     if dolphin:
         global_position.x -= scale.x * 30.0
     useAttackDps = !dolphin
+    waterHeight = 0
 
 func DieEntered() -> void :
-    super.DieEntered()
+    super .DieEntered()
     sprite.offset = Vector2(-40, -92)
     if inWater:
+        waterHeight = 60
+        groundHeight = -60
+        z = -60
         var tween = create_tween()
         tween.set_parallel(true)
         tween.set_ease(Tween.EASE_OUT)
         tween.set_trans(Tween.TRANS_CUBIC)
         tween.tween_property(self, "groundHeight", -100.0, 1.0)
-        tween.tween_property(spriteGroup.material, "shader_parameter/surfaceDownPos", 0.0, 4.0)
+        tween.tween_property(spriteGroup.material, "shader_parameter/surfaceDownPos", 0.0, 2.0)
 
 func AnimeEvent(command: String, argument: Variant) -> void :
-    super.AnimeEvent(command, argument)
+    super .AnimeEvent(command, argument)
     match command:
         "hit":
             attackComponent.Attack(config.smashAttack)
@@ -169,17 +168,18 @@ func AnimeStarted(clip: String) -> void :
             sprite.offset.x = 24
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "DolphinJump":
             jumpMove = true
+            waterHeight = 60
             groundHeight = -60
             z = -60
             spriteGroup.position.y = - z
             sprite.offset.x = -40
-            global_position.x -= transformPoint.scale.x * 104.0
+            global_position.x -= scale.x * transformPoint.scale.x * 104.0
             sprite.queue_redraw()
             Walk()
         "JumpInWater":
-            global_position.x -= transformPoint.scale.x * 64.0
+            global_position.x -= scale.x * transformPoint.scale.x * 64.0
             sprite.offset.x = 24

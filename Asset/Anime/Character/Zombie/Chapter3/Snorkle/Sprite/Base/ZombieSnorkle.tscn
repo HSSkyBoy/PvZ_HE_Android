@@ -1,0 +1,88 @@
+[gd_scene load_steps=4 format=4 uid="uid://bkrcpah82r3ie"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://dhk1nbbhkr6u0" path="res://Asset/Anime/Character/Zombie/Chapter3/Snorkle/ZombieSnorkle.tres" id="2"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="3"]
+
+[node name="ZombieSnorkle" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-50, -80)
+useTween = false
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, null, null, NodePath("ArmSlot"), null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/Zombie_outerarm_hand = true
+Animation/LayerVisible/Zombie_outerarm_lower = true
+Animation/LayerVisible/Zombie_snorkle_body1 = true
+Animation/LayerVisible/Zombie_snorkle_body2 = true
+Animation/LayerVisible/Zombie_snorkle_innerarm_hand = true
+Animation/LayerVisible/Zombie_snorkle_innerarm_lower = true
+Animation/LayerVisible/Zombie_snorkle_innerarm_upper = true
+Animation/LayerVisible/Zombie_snorkle_innerleg_foot = true
+Animation/LayerVisible/Zombie_snorkle_innerleg_lower = true
+Animation/LayerVisible/Zombie_snorkle_innerleg_upper = true
+Animation/LayerVisible/Zombie_snorkle_outerarm_upper = true
+Animation/LayerVisible/Zombie_snorkle_outerleg_lower = true
+Animation/LayerVisible/Zombie_snorkle_outerleg_toe = true
+Animation/LayerVisible/Zombie_snorkle_outerleg_upper = true
+Animation/LayerVisible/Zombie_snorkle_whitewater = true
+Animation/LayerVisible/Zombie_snorkle_whitewater2 = true
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/anim_head1 = true
+Animation/LayerVisible/anim_head_jaw = true
+Animation/LayerVisible/anim_head_lips = true
+Animation/LayerVisible/anim_head_snorkle = true
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/Zombie_outerarm_hand.png = null
+Animation/MediaReplace/Zombie_snorkle_body1.png = null
+Animation/MediaReplace/Zombie_snorkle_body2.png = null
+Animation/MediaReplace/Zombie_snorkle_head.png = null
+Animation/MediaReplace/Zombie_snorkle_head3.png = null
+Animation/MediaReplace/Zombie_snorkle_head4.png = null
+Animation/MediaReplace/Zombie_snorkle_head_jaw.png = null
+Animation/MediaReplace/Zombie_snorkle_headlips.png = null
+Animation/MediaReplace/Zombie_snorkle_headwater.png = null
+Animation/MediaReplace/Zombie_snorkle_innerarm_hand.png = null
+Animation/MediaReplace/Zombie_snorkle_innerarm_lower.png = null
+Animation/MediaReplace/Zombie_snorkle_innerarm_upper.png = null
+Animation/MediaReplace/Zombie_snorkle_innerleg_foot.png = null
+Animation/MediaReplace/Zombie_snorkle_innerleg_lower.png = null
+Animation/MediaReplace/Zombie_snorkle_innerleg_upper.png = null
+Animation/MediaReplace/Zombie_snorkle_outerarm_lower.png = null
+Animation/MediaReplace/Zombie_snorkle_outerarm_upper.png = null
+Animation/MediaReplace/Zombie_snorkle_outerarm_upper2.png = null
+Animation/MediaReplace/Zombie_snorkle_outerleg_foot.png = null
+Animation/MediaReplace/Zombie_snorkle_outerleg_lower.png = null
+Animation/MediaReplace/Zombie_snorkle_outerleg_upper.png = null
+Animation/MediaReplace/Zombie_snorkle_snorkle.png = null
+Animation/MediaReplace/Zombie_snorkle_whitewater1.png = null
+Animation/MediaReplace/Zombie_snorkle_whitewater2.png = null
+Animation/MediaReplace/Zombie_snorkle_whitewater3.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="HeadSlot" type="Node2D" parent="."]
+position = Vector2(-14.3348, -50.4239)
+rotation = -0.103846
+scale = Vector2(0.79818, 0.799031)
+skew = 0.00192869
+script = ExtResource("3")
+followSlotId = 13
+offset = Vector2(25, 30)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ArmSlot" type="Node2D" parent="."]
+position = Vector2(18.0275, -1.62736)
+rotation = -0.381245
+scale = Vector2(0.798094, 0.798094)
+script = ExtResource("3")
+followSlotId = 19
+offset = Vector2(10, 20)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="GroundSlot" type="Node2D" parent="."]
+position = Vector2(-42.8958, -40)
+script = ExtResource("3")
+followSlotId = 1
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

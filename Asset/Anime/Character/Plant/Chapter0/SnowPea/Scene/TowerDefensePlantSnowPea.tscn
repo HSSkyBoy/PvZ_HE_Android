@@ -18,17 +18,18 @@ fireNum = 1
 idleAnimeClip = "BodyIdle"
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/SnowPea")
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
 
 [node name="SnowPea" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSprite") instance=ExtResource("4")]
 position = Vector2(0, -30)
+trueFrameRate = 30.0
 layerSprite = [null, null, null, null, null, null, null, null, NodePath("Head"), null, null, null, null, null, null, null, null]
 
 [node name="Head" parent="SpriteGroup/TransformPoint/SnowPea" index="0"]
-position = Vector2(0.73, 2.31)
+position = Vector2(-2.42, 3.1267)
+trueFrameRate = 30.0
 
 [node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/SnowPea/Head" index="0"]
 position = Vector2(29.24, -18.1267)

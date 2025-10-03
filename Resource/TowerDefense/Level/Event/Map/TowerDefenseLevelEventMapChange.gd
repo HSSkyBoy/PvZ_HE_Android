@@ -26,7 +26,7 @@ func Export() -> Dictionary:
     }
 
 func GetProperty() -> Dictionary:
-    var data = super.GetProperty()
+    var data = super .GetProperty()
     data["改变地图"] = {
         "地图": {
             "Object": self, 

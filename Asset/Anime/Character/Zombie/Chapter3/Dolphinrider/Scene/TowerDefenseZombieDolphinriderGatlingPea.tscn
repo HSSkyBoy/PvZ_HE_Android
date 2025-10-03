@@ -1,0 +1,176 @@
+[gd_scene load_steps=18 format=4 uid="uid://c3sm5l5asw3gy"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cbqw6khtt26pc" path="res://Asset/Anime/Character/Zombie/Chapter3/Dolphinrider/Scene/TowerDefenseZombieDolphinriderGatlingPea.gd" id="2"]
+[ext_resource type="Resource" uid="uid://bcu33b2br3j3f" path="res://Asset/Anime/Character/Zombie/Chapter3/Dolphinrider/Config/TowerDefenseZombieDolphinriderGatlingPea.tres" id="3"]
+[ext_resource type="Resource" uid="uid://b3ubc70a7n1db" path="res://Asset/Anime/Character/Zombie/Chapter3/Dolphinrider/DamagePoint/Config/ZombieDolphinriderDamagePointArm.tres" id="4"]
+[ext_resource type="Resource" uid="uid://cmpwkc62dhvit" path="res://Asset/Anime/Character/Zombie/Chapter3/Dolphinrider/DamagePoint/Config/ZombieDolphinriderDamagePointHead.tres" id="5"]
+[ext_resource type="Resource" uid="uid://hpapb5s2884t" path="res://Asset/Anime/Character/Zombie/Chapter3/Dolphinrider/Armor/Config/ZombieDolphinriderArmorHelmet.tres" id="6"]
+[ext_resource type="Resource" uid="uid://ryoresff6mb5" path="res://Asset/Anime/Character/Zombie/Chapter3/Dolphinrider/Armor/Config/ZombieDolphinriderArmorBlackHelmet.tres" id="7"]
+[ext_resource type="Resource" uid="uid://c1ghmtt3o6mxh" path="res://Asset/Anime/Character/Zombie/Chapter3/Dolphinrider/Armor/Config/ZombieDolphinriderArmorSpecialHelmet.tres" id="8"]
+[ext_resource type="PackedScene" uid="uid://b3d6jaa3dewca" path="res://Asset/Anime/Character/Zombie/Chapter3/Dolphinrider/Sprite/GatlingPea/ZombieDolphinriderGatlingPea.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://dir0f8lu1l3b3" path="res://Script/Component/TowerDefense/Character/AttackComponent/AttackComponent.tscn" id="10"]
+[ext_resource type="PackedScene" uid="uid://b5htxrgm8twcr" path="res://Script/Component/TowerDefense/Character/FireComponent/FireComponent.tscn" id="11"]
+[ext_resource type="Script" uid="uid://crrpyxc32l472" path="res://addons/godot_state_charts/state_chart.gd" id="12"]
+[ext_resource type="Script" uid="uid://dp7fkbu3flis1" path="res://addons/godot_state_charts/compound_state.gd" id="13"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="14"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="15"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqoxo"]
+size = Vector2(85, 76)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_xroth"]
+b = Vector2(-2000, 0)
+
+[node name="TowerDefenseZombieDolphinriderGatlingPea" node_paths=PackedStringArray("sprite", "headSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+fireInterval = 1.5
+fireNum = 1
+walkSpeedScale = 1.5
+useAttackDps = false
+walkAnimeClip = "DolphinWalk"
+inSwimAnimeClip = "JumpInWater"
+swimAnimeClip = "SwimWalk"
+attackAnimeClip = "DolphinAttack"
+attackWaterAnimeClip = "SwimEat"
+dieAnimeClip = "DolphinDeath"
+dieWaterAnimeClip = "SwimDeath"
+waterHeightPersontage = 1.0
+waterHeight = 0.0
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieDolphinriderGatlingPea")
+headSlot = NodePath("SpriteGroup/TransformPoint/ZombieDolphinriderGatlingPea/HeadSlot")
+damagePart = {
+"Arm": ExtResource("4"),
+"BlackHelmet": ExtResource("7"),
+"Head": ExtResource("5"),
+"Helmet": ExtResource("6"),
+"SpecialHelmet": ExtResource("8")
+}
+PreviewDamagePointPersontage = 1.0
+Armor = []
+DamagePartSlot/Arm = NodePath("SpriteGroup/TransformPoint/ZombieDolphinriderGatlingPea/ArmSlot")
+DamagePartSlot/Head = NodePath("SpriteGroup/TransformPoint/ZombieDolphinriderGatlingPea/HeadSlot")
+DamagePartSlot/Helmet = NodePath("SpriteGroup/TransformPoint/ZombieDolphinriderGatlingPea/HeadSlot")
+DamagePartSlot/BlackHelmet = NodePath("SpriteGroup/TransformPoint/ZombieDolphinriderGatlingPea/HeadSlot")
+DamagePartSlot/SpecialHelmet = NodePath("SpriteGroup/TransformPoint/ZombieDolphinriderGatlingPea/HeadSlot")
+
+[node name="SpriteMask" parent="SpriteGroup" index="0"]
+offset_top = -145.0
+offset_bottom = 46.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(12, 33)
+
+[node name="ZombieDolphinriderGatlingPea" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("9")]
+position = Vector2(-12, -33)
+
+[node name="Head" parent="SpriteGroup/TransformPoint/ZombieDolphinriderGatlingPea" index="0"]
+position = Vector2(-42.726, -65.508)
+rotation = -0.277374
+
+[node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/ZombieDolphinriderGatlingPea/Head" index="0"]
+position = Vector2(9.96721, 20.9826)
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieDolphinriderGatlingPea" index="1"]
+position = Vector2(-22.1676, -45.2666)
+rotation = -0.027374
+scale = Vector2(0.799867, 0.799867)
+
+[node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieDolphinriderGatlingPea" index="2"]
+position = Vector2(20.948, -10.8227)
+rotation = -0.0231363
+scale = Vector2(0.799806, 0.799806)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(4, -2)
+
+[node name="GroundMoveComponent" parent="." index="8" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieDolphinriderGatlingPea/GroundSlot")
+
+[node name="AttackComponent2" parent="." index="10" node_paths=PackedStringArray("checkArea") instance=ExtResource("10")]
+unique_name_in_owner = true
+checkArea = NodePath("CheckJumpArea")
+checkIntreval = 0
+checkLine = true
+checkTall = true
+
+[node name="CheckJumpArea" type="Area2D" parent="AttackComponent2" index="0"]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent2/CheckJumpArea" index="0"]
+position = Vector2(-20, 0)
+shape = SubResource("RectangleShape2D_aqoxo")
+
+[node name="FireComponent" parent="." index="11" node_paths=PackedStringArray("firePosMarker", "checkArea") instance=ExtResource("11")]
+unique_name_in_owner = true
+firePosMarker = [NodePath("../SpriteGroup/TransformPoint/ZombieDolphinriderGatlingPea/Head/Marker2D")]
+checkArea = NodePath("Area2D")
+fireInterval = 1.5
+
+[node name="Area2D" type="Area2D" parent="FireComponent" index="0"]
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FireComponent/Area2D" index="0"]
+shape = SubResource("SegmentShape2D_xroth")
+
+[node name="HeadStateChart" type="Node" parent="." index="12"]
+unique_name_in_owner = true
+script = ExtResource("12")
+metadata/_custom_type_script = "uid://crrpyxc32l472"
+
+[node name="CompoundState" type="Node" parent="HeadStateChart" index="0"]
+script = ExtResource("13")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="HeadStateChart/CompoundState" index="0"]
+script = ExtResource("14")
+
+[node name="Attack" type="Node" parent="HeadStateChart/CompoundState" index="1"]
+script = ExtResource("14")
+
+[node name="ToIdle" type="Node" parent="HeadStateChart/CompoundState" index="2"]
+script = ExtResource("15")
+to = NodePath("../Idle")
+event = &"ToIdle"
+delay_in_seconds = "0.0"
+
+[node name="ToAttack" type="Node" parent="HeadStateChart/CompoundState" index="3"]
+script = ExtResource("15")
+to = NodePath("../Attack")
+event = &"ToAttack"
+delay_in_seconds = "0.0"
+
+[node name="Jump" type="Node" parent="StateChart/CompoundState" index="6"]
+script = ExtResource("14")
+
+[node name="Run" type="Node" parent="StateChart/CompoundState" index="7"]
+script = ExtResource("14")
+
+[node name="ToJump" type="Node" parent="StateChart/CompoundState" index="14"]
+script = ExtResource("15")
+to = NodePath("../Jump")
+event = &"ToJump"
+delay_in_seconds = "0.0"
+
+[node name="ToRun" type="Node" parent="StateChart/CompoundState" index="15"]
+script = ExtResource("15")
+to = NodePath("../Run")
+event = &"ToRun"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="HeadStateChart/CompoundState/Idle" to="." method="HeadIdleEntered"]
+[connection signal="state_exited" from="HeadStateChart/CompoundState/Idle" to="." method="HeadIdleExited"]
+[connection signal="state_physics_processing" from="HeadStateChart/CompoundState/Idle" to="." method="HeadIdleProcessing"]
+[connection signal="state_entered" from="HeadStateChart/CompoundState/Attack" to="." method="HeadAttackEntered"]
+[connection signal="state_exited" from="HeadStateChart/CompoundState/Attack" to="." method="HeadAttackExited"]
+[connection signal="state_physics_processing" from="HeadStateChart/CompoundState/Attack" to="." method="HeadAttackProcessing"]
+[connection signal="state_entered" from="StateChart/CompoundState/Jump" to="." method="JumpEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Jump" to="." method="JumpExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Jump" to="." method="JumpProcessing"]
+[connection signal="state_entered" from="StateChart/CompoundState/Run" to="." method="RunEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Run" to="." method="RunExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Run" to="." method="RunProcessing"]
+
+[editable path="SpriteGroup/TransformPoint/ZombieDolphinriderGatlingPea"]

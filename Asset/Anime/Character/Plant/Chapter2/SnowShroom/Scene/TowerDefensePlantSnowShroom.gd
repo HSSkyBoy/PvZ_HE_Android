@@ -8,16 +8,16 @@ const SNOW_FLAKES = preload("uid://b1ba7ajcvcgj8")
 var projectileName: String = "SnowPeaFull"
 
 func _ready() -> void :
-    super._ready()
+    super ._ready()
     if currentCustom.has("Custom0"):
         projectileName = "IceSwordFull"
 
 func SleepEntered() -> void :
-    super.SleepEntered()
+    super .SleepEntered()
     instance.invincible = false
 
 func SleepProcessing(delta: float) -> void :
-    super.SleepProcessing(delta)
+    super .SleepProcessing(delta)
     instance.invincible = false
 
 func IdleEntered() -> void :
@@ -28,7 +28,7 @@ func IdleEntered() -> void :
     if CanSleep():
         Sleep()
         return
-    super.IdleEntered()
+    super .IdleEntered()
     CreateProjectile()
     HitBoxDestroy()
     instance.invincible = true
@@ -42,7 +42,7 @@ func CreateProjectile() -> void :
             for y in range(1, gridNum.y + 1):
                 var pos: Vector2 = TowerDefenseManager.GetMapCellPlantPos(Vector2i(x, y)) - Vector2(150, 0.0) + Vector2(randf_range( - gridSize.x / 2, gridSize.x / 2), 0.0)
                 var heightOffset: float = randf_range(0, 200)
-                var projectile: TowerDefenseProjectile = FireComponent.CreateProjectilePosition(self, null, GetGroundHeight(self.global_position.y), pos, Vector2(randf_range(50, 150), 0.0), projectileName, camp)
+                var projectile: TowerDefenseProjectile = FireComponent.CreateProjectilePosition(null, null, GetGroundHeight(self.global_position.y) + 30, pos, Vector2(randf_range(50, 150), 0.0), projectileName, -1, camp)
                 projectile.gridPos.y = y
                 projectile.z = height + heightOffset
                 projectile.ySpeed = 400

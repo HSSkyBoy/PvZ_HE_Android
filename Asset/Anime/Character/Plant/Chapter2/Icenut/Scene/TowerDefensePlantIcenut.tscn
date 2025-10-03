@@ -27,7 +27,7 @@ buffList = [SubResource("Resource_kottb")]
 metadata/_custom_type_script = "uid://dtvfjfgy00epu"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0u758"]
-size = Vector2(40.5, 90)
+size = Vector2(40.5, 66)
 
 [sub_resource type="Resource" id="Resource_l4vja"]
 script = ExtResource("9")
@@ -62,13 +62,13 @@ config = ExtResource("5")
 sprite = NodePath("SpriteGroup/TransformPoint/Icenut")
 PreviewDamagePointPersontage = 1.0
 Custom = []
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
 
-[node name="Icenut" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("6")]
+[node name="Icenut" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("6")]
 position = Vector2(0, -30)
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("AdobeAnimateSlot"), null, null]
 
 [node name="AdobeAnimateSlot" type="Node2D" parent="SpriteGroup/TransformPoint/Icenut" index="0"]
 position = Vector2(-1.6164, -1.9245)
@@ -85,11 +85,8 @@ position = Vector2(6.65701, 8.30442)
 [node name="ShadowSprite" parent="." index="3"]
 position = Vector2(0, 30)
 
-[node name="HitBox" parent="." index="5"]
-visible = true
-
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2(0, -5)
+position = Vector2(0, 0)
 shape = SubResource("RectangleShape2D_0u758")
 
 [node name="ReverseInjuryComponent" parent="." index="7" instance=ExtResource("8")]

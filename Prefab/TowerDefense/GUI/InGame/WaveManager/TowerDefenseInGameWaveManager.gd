@@ -9,7 +9,6 @@ signal waveReady()
 signal waveBegin(id: int, isBigWave: bool, isFinalWave: bool)
 signal bigWaveBegin(bigWaveId: int)
 signal final()
-signal award(pos: Vector2)
 
 static  var instance: TowerDefenseInGameWaveManager = null
 
@@ -48,12 +47,15 @@ func Init(_config: TowerDefenseLevelWaveManagerConfig) -> void :
     else:
         currentDynamic = TowerDefenseLevelDynamicConfig.new()
     progressMeter.Init(config.wave.size(), config.flagWaveInterval)
+
+func _ready() -> void :
+    instance = self
     var difficult: String = GameSaveManager.GetKeyValue("CurrentDifficult")
     var difiicultString: String = ""
     match difficult:
         "Normal":
             difiicultString = "正常"
-            difficultLabel.modulate.g = 255.0 * (1.0 - float(TowerDefenseManager.currentDynamicLevel + 1) / float(config.dynamic.size()))
+            difficultLabel.modulate.g = 255.0 / 2.0
         "Difficult":
             difiicultString = "困难"
             difficultLabel.modulate.g = 0.0
@@ -63,9 +65,6 @@ func Init(_config: TowerDefenseLevelWaveManagerConfig) -> void :
     var text = tr(TowerDefenseManager.currentLevelConfig.levelName).replace("{LevelNumber}", str(TowerDefenseManager.currentLevelConfig.levelNumber))
     levelNameLabel.text = text
     difficultLabel.text = tr("INGAME_DIFFICULT") %[difiicultString]
-
-func _ready() -> void :
-    instance = self
 
 func _physics_process(delta: float) -> void :
     if isRunning && !awaitSpawn && !waveFinal:
@@ -87,16 +86,6 @@ func _physics_process(delta: float) -> void :
             timer = 0.0
             awaitSpawn = true
             NextWave()
-
-    if waveFinal:
-        if !awardTime:
-            if checkTime > 0:
-                checkTime -= delta
-                return
-            checkTime = 0.5
-            if CheckFinal():
-                award.emit(awardPos)
-                awardTime = true
 
 @warning_ignore("unused_parameter")
 func _input(event: InputEvent) -> void :
@@ -191,18 +180,27 @@ func Spawn(waveId: int, dynamic: bool = false) -> void :
     for spawnLine: int in TowerDefenseManager.GetMapGridNum().y:
         spawnList[spawnLine + 1] = []
 
-    if isHugeWave:
+    if isHugeWave && config.flagZombie != "":
         var spawnLinePick: int = 1 + randi() %TowerDefenseManager.GetMapGridNum().y
         var minNum: int = 10000
+        var packetConfig: TowerDefensePacketConfig = TowerDefenseManager.GetPacketConfig(config.flagZombie)
+        var checkList: Array = []
         for lineId in TowerDefenseManager.GetMapGridNum().y:
             if TowerDefenseManager.GetMapLineUse(lineId + 1):
                 minNum = min(minNum, spawnList[lineId + 1].size())
-        while ( !TowerDefenseManager.GetMapLineUse(spawnLinePick) || minNum != spawnList[spawnLinePick].size()):
-            spawnLinePick = 1 + randi() %TowerDefenseManager.GetMapGridNum().y
+        for lineId in TowerDefenseManager.GetMapGridNum().y:
+            checkList.append(lineId + 1)
+        spawnLinePick = checkList.pick_random()
+        checkList.erase(spawnLinePick)
+        while (checkList.size() > 0 && ( !TowerDefenseManager.GetMapLineUse(spawnLinePick)\
+|| (minNum != spawnList[spawnLinePick].size() && !packetConfig.HasSpawnLimit())\
+|| !packetConfig.CanSpawn(spawnLinePick))):
+            spawnLinePick = checkList.pick_random()
+            checkList.erase(spawnLinePick)
         var spawn: TowerDefenseLevelSpawnConfig = TowerDefenseLevelSpawnConfig.new()
         spawn.zombie = config.flagZombie
         spawnList[spawnLinePick].append(spawn)
-
+    wave.spawn.shuffle()
     for spawn: TowerDefenseLevelSpawnConfig in wave.spawn:
         for i in spawn.num:
             if savePitchforkLine != -1:
@@ -213,11 +211,19 @@ func Spawn(waveId: int, dynamic: bool = false) -> void :
             else:
                 var spawnLinePick: int = 1 + randi() %TowerDefenseManager.GetMapGridNum().y
                 var minNum: int = 10000
+                var packetConfig: TowerDefensePacketConfig = TowerDefenseManager.GetPacketConfig(spawn.zombie)
+                var checkList: Array = []
                 for lineId in TowerDefenseManager.GetMapGridNum().y:
                     if TowerDefenseManager.GetMapLineUse(lineId + 1):
                         minNum = min(minNum, spawnList[lineId + 1].size())
-                while ( !TowerDefenseManager.GetMapLineUse(spawnLinePick) || minNum != spawnList[spawnLinePick].size()):
-                    spawnLinePick = 1 + randi() %TowerDefenseManager.GetMapGridNum().y
+                    checkList.append(lineId + 1)
+                spawnLinePick = checkList.pick_random()
+                checkList.erase(spawnLinePick)
+                while (checkList.size() > 0 && ( !TowerDefenseManager.GetMapLineUse(spawnLinePick)\
+|| (minNum != spawnList[spawnLinePick].size() && !packetConfig.HasSpawnLimit())\
+|| !packetConfig.CanSpawn(spawnLinePick))):
+                    spawnLinePick = checkList.pick_random()
+                    checkList.erase(spawnLinePick)
                 spawnList[spawnLinePick].append(spawn)
 
     if dynamic || wave.dynamic:
@@ -232,14 +238,9 @@ func Spawn(waveId: int, dynamic: bool = false) -> void :
                 var spawn: TowerDefenseLevelSpawnConfig = TowerDefenseLevelSpawnConfig.new()
                 spawn.zombie = zombieName
                 if characterConfig is TowerDefenseZombieConfig:
-                    var weight: int = characterConfig.weight
-                    if packetConfig.overrideWeight != -1:
-                        weight = packetConfig.overrideWeight
+                    var weight: int = packetConfig.GetWeight()
                     var weightPickItem: WeightPickItemBase = WeightPickItemBase.new(spawn, weight)
-                    if packetConfig.overrideWavePointCost == -1:
-                        spawnPointMin = min(spawnPointMin, characterConfig.wavePointCost)
-                    else:
-                        spawnPointMin = min(spawnPointMin, packetConfig.overrideWavePointCost)
+                    spawnPointMin = min(spawnPointMin, packetConfig.GetWavePointCost())
                     weightPick.append(weightPickItem)
             if spawnPoint > 0:
                 while (spawnPoint >= spawnPointMin):
@@ -248,19 +249,24 @@ func Spawn(waveId: int, dynamic: bool = false) -> void :
                     var characterConfig: TowerDefenseCharacterConfig = packetConfig.characterConfig
                     var pointCost: int = item.weight
                     if characterConfig is TowerDefenseZombieConfig:
-                        pointCost = characterConfig.wavePointCost
-                        if packetConfig.overrideWavePointCost != -1:
-                            pointCost = packetConfig.overrideWavePointCost
+                        pointCost = packetConfig.GetWavePointCost()
                     if spawnPoint < pointCost:
                         continue
                     spawnPoint -= pointCost
                     var spawnLinePick: int = 1 + randi() %TowerDefenseManager.GetMapGridNum().y
                     var minNum: int = 10000
+                    var checkList: Array = []
                     for lineId in TowerDefenseManager.GetMapGridNum().y:
                         if TowerDefenseManager.GetMapLineUse(lineId + 1):
                             minNum = min(minNum, spawnList[lineId + 1].size())
-                    while ( !TowerDefenseManager.GetMapLineUse(spawnLinePick) || minNum != spawnList[spawnLinePick].size()):
-                        spawnLinePick = 1 + randi() %TowerDefenseManager.GetMapGridNum().y
+                        checkList.append(lineId + 1)
+                    spawnLinePick = checkList.pick_random()
+                    checkList.erase(spawnLinePick)
+                    while (checkList.size() > 0 && ( !TowerDefenseManager.GetMapLineUse(spawnLinePick)\
+|| (minNum != spawnList[spawnLinePick].size() && !packetConfig.HasSpawnLimit())\
+|| !packetConfig.CanSpawn(spawnLinePick))):
+                        spawnLinePick = checkList.pick_random()
+                        checkList.erase(spawnLinePick)
                     spawnList[spawnLinePick].append(item.item)
             else:
                 spawnPoint = - spawnPoint
@@ -270,9 +276,7 @@ func Spawn(waveId: int, dynamic: bool = false) -> void :
                     var characterConfig: TowerDefenseCharacterConfig = packetConfig.characterConfig
                     var pointCost: int = item.weight
                     if characterConfig is TowerDefenseZombieConfig:
-                        pointCost = characterConfig.wavePointCost
-                        if packetConfig.overrideWavePointCost != -1:
-                            pointCost = packetConfig.overrideWavePointCost
+                        pointCost = packetConfig.GetWavePointCost()
                     if spawnPoint < pointCost:
                         continue
                     var hasFlag: bool = false
@@ -308,6 +312,7 @@ func Spawn(waveId: int, dynamic: bool = false) -> void :
 
     for spawnLine: int in TowerDefenseManager.GetMapGridNum().y:
         var spawnLineList: Array = spawnList[spawnLine + 1]
+        spawnLineList.shuffle()
         for spawnNameId: int in spawnLineList.size():
             var spawn: TowerDefenseLevelSpawnConfig = spawnLineList[spawnNameId]
             var spawnName: String = spawn.zombie
@@ -315,11 +320,13 @@ func Spawn(waveId: int, dynamic: bool = false) -> void :
                 continue
             var packetConfig: TowerDefensePacketConfig = TowerDefenseManager.GetPacketConfig(spawnName)
             var character: TowerDefenseCharacter = packetConfig.Spawn(spawnLine + 1, spawnNameId * 60.0 + randf() * 60.0)
-            if spawn.override:
+            if is_instance_valid(config.spawnOverride):
+                config.spawnOverride.ExecuteCharacter(character)
+            if is_instance_valid(spawn.override):
                 spawn.override.ExecuteCharacter(character)
-            character.dieEvent = spawn.dieEvent
             for event: TowerDefenseCharacterEventBase in spawn.spawnEvent:
                 event.Execute(character.global_position, character)
+            character.dieEvent.append_array(spawn.dieEvent)
 
             currentHpPointTotal += character.GetTotalHitPoint()
             character.bodyHurt.connect(HpPointDecrease)
@@ -399,16 +406,3 @@ func ClearShowCharacter() -> void :
     for character: TowerDefenseCharacter in showCharacter:
         if is_instance_valid(character):
             character.queue_free()
-
-func CheckFinal() -> bool:
-    var targetList: Array = TowerDefenseManager.GetCampTarget(TowerDefenseEnum.CHARACTER_CAMP.PLANT)
-    var targetNum: int = targetList.size()
-    for target: TowerDefenseCharacter in targetList:
-        if target.instance.die == true:
-            targetNum -= 1
-    if targetNum > 0:
-        awardPos = targetList[0].global_position
-    if targetNum == 0:
-        for target: TowerDefenseCharacter in targetList:
-            target.Destroy()
-    return targetNum <= 0

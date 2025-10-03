@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharacterCustomData" load_steps=3 format=4 uid="uid://dfbaj6nrl8pmd"]
+
+[ext_resource type="Resource" uid="uid://bbllf5abi1gx0" path="res://Asset/Anime/Character/Plant/Chapter3/SunPad/Custom/Config/SunPadCustom0.tres" id="1"]
+[ext_resource type="Script" uid="uid://onv5rieax7m5" path="res://Resource/General/Character/Costom/CharacterCustomData.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+customList = [ExtResource("1")]
+customDictionary = {
+"Custom0": {
+"Close": ["fire2", "piece1", "piece1", "piece2", "fire1"],
+"Config": ExtResource("1"),
+"Open": ["skin1_1", "skin1_2"]
+}
+}
+fliterOpenAll = ["skin1_1", "skin1_2"]
+fliterCloseAll = ["fire2", "piece1", "piece1", "piece2", "fire1"]
+metadata/_custom_type_script = "uid://onv5rieax7m5"

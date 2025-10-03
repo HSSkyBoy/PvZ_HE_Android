@@ -1,12 +1,20 @@
-[gd_resource type="Resource" script_class="TowerDefensePacketConfig" load_steps=3 format=4 uid="uid://bhf6mw7c07fc7"]
+[gd_resource type="Resource" script_class="TowerDefensePacketConfig" load_steps=5 format=4 uid="uid://bhf6mw7c07fc7"]
 
 [ext_resource type="Resource" uid="uid://cawyn4t63fkbq" path="res://Asset/Anime/Character/Plant/Cover/GatlingPea/Config/TowerDefensePlantGatlingPea.tres" id="1"]
 [ext_resource type="Script" uid="uid://c6d3po5310ugw" path="res://Resource/TowerDefense/PacketBank/Packet/TowerDefensePacketConfig.gd" id="2"]
+[ext_resource type="Script" uid="uid://c15dqem5a7o7t" path="res://Resource/UnlockCondition/UnlockConditionPacketBankCategoryPacketUnlockNumConfig.gd" id="3"]
+
+[sub_resource type="Resource" id="Resource_1imgg"]
+script = ExtResource("3")
+packetBankName = "GeneralPlant"
+category = "Original"
+num = 10
+metadata/_custom_type_script = "uid://c15dqem5a7o7t"
 
 [resource]
 script = ExtResource("2")
 saveKey = "PlantGatlingPea"
-unlockCheckList = []
+unlockCheckList = [SubResource("Resource_1imgg")]
 name = "TOWERDEFENSE_PLANT_GATLINGPEA_NAME"
 describe = "TOWERDEFENSE_PLANT_GATLINGPEA_EXPRESTION"
 plantfood = ""
@@ -18,10 +26,13 @@ packetAnimeScale = Vector2(0.5, 0.5)
 characterConfig = ExtResource("1")
 type = 7
 spawnMethod = "Rise"
+eventPress = []
+eventPlant = []
+override = null
 overrideCostRise = -1
 overrideCost = -1
-overridPacketCooldown = -1.0
-overridStartingCooldown = -1.0
+overridePacketCooldown = -1.0
+overrideStartingCooldown = -1.0
 overrideWeight = -1
 overrideWavePointCost = -1
 initArmor = []

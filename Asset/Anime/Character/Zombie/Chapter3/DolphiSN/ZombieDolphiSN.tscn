@@ -1,0 +1,114 @@
+[gd_scene load_steps=4 format=4 uid="uid://cfrrf6mqs3hhy"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://b6j8cynseb1hu" path="res://Asset/Anime/Character/Zombie/Chapter3/DolphiSN/ZombieDolphiSN.tres" id="2"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="3"]
+
+[node name="ZombieDolphinrider" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -92)
+useTween = false
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, null, null, null, null, null, null, null, null, NodePath("ArmSlot"), null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/AnimeEvents = false
+"Animation/LayerVisible/Layer 185" = true
+Animation/LayerVisible/Zombie_dolphinrider_body1 = true
+Animation/LayerVisible/Zombie_dolphinrider_body2 = true
+Animation/LayerVisible/Zombie_dolphinrider_dolphinbody1 = true
+Animation/LayerVisible/Zombie_dolphinrider_dolphinbody2 = true
+Animation/LayerVisible/Zombie_dolphinrider_dolphinfin1 = true
+Animation/LayerVisible/Zombie_dolphinrider_dolphinfin2 = true
+Animation/LayerVisible/Zombie_dolphinrider_dolphininwater = true
+Animation/LayerVisible/Zombie_dolphinrider_dolphinjaw = true
+Animation/LayerVisible/Zombie_dolphinrider_innerarm_hand = true
+Animation/LayerVisible/Zombie_dolphinrider_innerarm_lower = true
+Animation/LayerVisible/Zombie_dolphinrider_innerarm_upper = true
+Animation/LayerVisible/Zombie_dolphinrider_innerleg_foot = true
+Animation/LayerVisible/Zombie_dolphinrider_innerleg_lower = true
+Animation/LayerVisible/Zombie_dolphinrider_innerleg_upper = true
+Animation/LayerVisible/Zombie_dolphinrider_outerarm_upper = true
+Animation/LayerVisible/Zombie_dolphinrider_outerleg_foot1 = true
+Animation/LayerVisible/Zombie_dolphinrider_outerleg_foot2 = true
+Animation/LayerVisible/Zombie_dolphinrider_outerleg_lower = true
+Animation/LayerVisible/Zombie_dolphinrider_outerleg_upper = true
+Animation/LayerVisible/Zombie_dolphinrider_watershadow = true
+Animation/LayerVisible/Zombie_dolphinrider_whitewater = true
+Animation/LayerVisible/Zombie_dolphinrider_whitewater2 = true
+Animation/LayerVisible/Zombie_outerarm_hand = true
+Animation/LayerVisible/Zombie_outerarm_lower = true
+Animation/LayerVisible/Zombie_snorkle_whitewater = true
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/anim_head1 = true
+Animation/LayerVisible/anim_head_jaw = true
+Animation/LayerVisible/anim_head_lips = true
+Animation/LayerVisible/anim_head_snorkle = true
+Animation/LayerVisible/innertip = true
+Animation/LayerVisible/outertip = true
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/Zombie_dolphinSN_head.png = null
+Animation/MediaReplace/Zombie_dolphinSN_head3.png = null
+Animation/MediaReplace/Zombie_dolphinSN_head4.png = null
+Animation/MediaReplace/Zombie_dolphinSN_headwater.png = null
+Animation/MediaReplace/Zombie_dolphinSN_innertip.png = null
+Animation/MediaReplace/Zombie_dolphinSN_outerleg_foot1.png = null
+Animation/MediaReplace/Zombie_dolphinSN_outerleg_foot2.png = null
+Animation/MediaReplace/Zombie_dolphinSN_outertip.png = null
+Animation/MediaReplace/Zombie_dolphinrider_body1.png = null
+Animation/MediaReplace/Zombie_dolphinrider_body2.png = null
+Animation/MediaReplace/Zombie_dolphinrider_dolphinbody1.png = null
+Animation/MediaReplace/Zombie_dolphinrider_dolphinbody2.png = null
+Animation/MediaReplace/Zombie_dolphinrider_dolphinbodydead.png = null
+Animation/MediaReplace/Zombie_dolphinrider_dolphinfin1.png = null
+Animation/MediaReplace/Zombie_dolphinrider_dolphinfin2.png = null
+Animation/MediaReplace/Zombie_dolphinrider_dolphininwater.png = null
+Animation/MediaReplace/Zombie_dolphinrider_dolphinjaw.png = null
+Animation/MediaReplace/Zombie_dolphinrider_innerarm_hand.png = null
+Animation/MediaReplace/Zombie_dolphinrider_innerarm_lower.png = null
+Animation/MediaReplace/Zombie_dolphinrider_innerarm_upper.png = null
+Animation/MediaReplace/Zombie_dolphinrider_innerleg_foot.png = null
+Animation/MediaReplace/Zombie_dolphinrider_innerleg_lower.png = null
+Animation/MediaReplace/Zombie_dolphinrider_innerleg_upper.png = null
+Animation/MediaReplace/Zombie_dolphinrider_outerarm_hand.png = null
+Animation/MediaReplace/Zombie_dolphinrider_outerarm_lower.png = null
+Animation/MediaReplace/Zombie_dolphinrider_outerarm_upper.png = null
+Animation/MediaReplace/Zombie_dolphinrider_outerarm_upper2.png = null
+Animation/MediaReplace/Zombie_dolphinrider_outerleg_lower.png = null
+Animation/MediaReplace/Zombie_dolphinrider_outerleg_upper.png = null
+Animation/MediaReplace/Zombie_dolphinrider_watershadow.png = null
+Animation/MediaReplace/Zombie_dolphinrider_whitewater1.png = null
+Animation/MediaReplace/Zombie_dolphinrider_whitewater2.png = null
+Animation/MediaReplace/Zombie_dolphinrider_whitewater3.png = null
+Animation/MediaReplace/Zombie_snorkle_head_jaw.png = null
+Animation/MediaReplace/Zombie_snorkle_headlips.png = null
+Animation/MediaReplace/Zombie_snorkle_snorkle.png = null
+Animation/MediaReplace/Zombie_snorkle_whitewater1.png = null
+Animation/MediaReplace/Zombie_snorkle_whitewater2.png = null
+Animation/MediaReplace/Zombie_snorkle_whitewater3.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="HeadSlot" type="Node2D" parent="."]
+position = Vector2(-28.9178, -41.0295)
+rotation = -0.0743805
+scale = Vector2(0.751713, 0.751713)
+script = ExtResource("3")
+followSlotId = 18
+offset = Vector2(25, 36)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ArmSlot" type="Node2D" parent="."]
+position = Vector2(19.4868, -9.92739)
+rotation = -0.0859375
+scale = Vector2(0.799743, 0.799743)
+script = ExtResource("3")
+followSlotId = 30
+offset = Vector2(5, 20)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="GroundSlot" type="Node2D" parent="."]
+position = Vector2(-91, 18)
+script = ExtResource("3")
+followSlotId = 1
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

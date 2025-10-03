@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharacterCustomData" load_steps=3 format=4 uid="uid://conado6aqg1qi"]
+
+[ext_resource type="Resource" uid="uid://dtxnhjr6fb6yy" path="res://Asset/Anime/Character/Plant/Chapter3/MelonpultSpike/Custom/Config/MelonpultSpikeCustom0.tres" id="1"]
+[ext_resource type="Script" uid="uid://onv5rieax7m5" path="res://Resource/General/Character/Costom/CharacterCustomData.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+customList = [ExtResource("1")]
+customDictionary = {
+"Custom0": {
+"Close": ["Cabbagepult_basket", "Cabbagepult_basket_overlay"],
+"Config": ExtResource("1"),
+"Open": ["skin1", "skin2_1", "skin2_2", "skin3_1", "skin3_2", "skin4"]
+}
+}
+fliterOpenAll = ["skin1", "skin2_1", "skin2_2", "skin3_1", "skin3_2", "skin4"]
+fliterCloseAll = ["Cabbagepult_basket", "Cabbagepult_basket_overlay"]
+metadata/_custom_type_script = "uid://onv5rieax7m5"

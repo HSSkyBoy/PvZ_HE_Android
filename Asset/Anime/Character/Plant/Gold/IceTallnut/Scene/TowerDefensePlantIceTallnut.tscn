@@ -1,0 +1,127 @@
+[gd_scene load_steps=22 format=4 uid="uid://g56fgybispeq"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cfeqhafyh21hb" path="res://Asset/Anime/Character/Plant/Gold/IceTallnut/Scene/TowerDefensePlantIceTallnut.gd" id="2"]
+[ext_resource type="Script" uid="uid://c1l0ssv1s1jul" path="res://Resource/TowerDefense/Character/Buff/TowerDefenseCharacterBuffFrozen.gd" id="3"]
+[ext_resource type="Script" uid="uid://dtvfjfgy00epu" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventAddBuff.gd" id="4"]
+[ext_resource type="Script" uid="uid://cmqmtitj4tcd8" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventHurt.gd" id="5"]
+[ext_resource type="Resource" uid="uid://w73m0i5eic4s" path="res://Asset/Anime/Character/Plant/Gold/IceTallnut/Config/TowerDefensePlantIceTallnut.tres" id="6"]
+[ext_resource type="PackedScene" uid="uid://djy7gpp8wfa6" path="res://Asset/Anime/Character/Plant/Gold/IceTallnut/IceTallnut.tscn" id="7"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="8"]
+[ext_resource type="PackedScene" uid="uid://8fpowsb3exlb" path="res://Script/Component/TowerDefense/Character/ReverseInjuryComponent/ReverseInjuryComponent.tscn" id="9"]
+[ext_resource type="Script" uid="uid://xug53xwvy4my" path="res://Resource/TowerDefense/Character/Buff/TowerDefenseCharacterBuffIceSpeedDown.gd" id="10"]
+[ext_resource type="PackedScene" uid="uid://b5htxrgm8twcr" path="res://Script/Component/TowerDefense/Character/FireComponent/FireComponent.tscn" id="11"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="12"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="13"]
+
+[sub_resource type="Resource" id="Resource_kottb"]
+script = ExtResource("3")
+time = 8.0
+iceSpeedDownTime = 15.0
+refresh = true
+metadata/_custom_type_script = "uid://c1l0ssv1s1jul"
+
+[sub_resource type="Resource" id="Resource_xth77"]
+script = ExtResource("4")
+buffList = [SubResource("Resource_kottb")]
+metadata/_custom_type_script = "uid://dtvfjfgy00epu"
+
+[sub_resource type="Resource" id="Resource_8iaca"]
+script = ExtResource("5")
+num = 20.0
+playSplatAudio = true
+damageFlags = 3
+collisionFlags = 15
+Flag/Damage = 3
+Flag/Collision = 15
+metadata/_custom_type_script = "uid://cmqmtitj4tcd8"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0u758"]
+size = Vector2(72, 90)
+
+[sub_resource type="Resource" id="Resource_l4vja"]
+script = ExtResource("10")
+time = 15.0
+refresh = false
+metadata/_custom_type_script = "uid://xug53xwvy4my"
+
+[sub_resource type="Resource" id="Resource_gy5t8"]
+script = ExtResource("4")
+buffList = [SubResource("Resource_l4vja")]
+metadata/_custom_type_script = "uid://dtvfjfgy00epu"
+
+[sub_resource type="Resource" id="Resource_amf3i"]
+script = ExtResource("5")
+num = 20.0
+playSplatAudio = true
+damageFlags = 3
+collisionFlags = 9
+Flag/Damage = 3
+Flag/Collision = 9
+metadata/_custom_type_script = "uid://cmqmtitj4tcd8"
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_mig1w"]
+b = Vector2(2000, 0)
+
+[node name="TowerDefensePlantIceTallnut" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+fireInterval = 1.5
+fireNum = 1
+eventList = [SubResource("Resource_xth77"), SubResource("Resource_8iaca")]
+config = ExtResource("6")
+sprite = NodePath("SpriteGroup/TransformPoint/IceTallnut")
+PreviewDamagePointPersontage = 1.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="IceTallnut" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("7")]
+position = Vector2(0, -30)
+layerSlot = [null, null, null, null, null, null, null, null, null, null, NodePath("AdobeAnimateSlot"), null, null, null]
+
+[node name="AdobeAnimateSlot" type="Node2D" parent="SpriteGroup/TransformPoint/IceTallnut" index="0"]
+position = Vector2(7.87067, -38.5408)
+rotation = -0.109961
+scale = Vector2(1.01994, 1.01994)
+script = ExtResource("8")
+followSlotId = 11
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/IceTallnut/AdobeAnimateSlot" index="0"]
+position = Vector2(10.1377, 10.5002)
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 30)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_0u758")
+
+[node name="ReverseInjuryComponent" parent="." index="7" instance=ExtResource("9")]
+eventList = [SubResource("Resource_gy5t8"), SubResource("Resource_amf3i")]
+staticTime = 0.5
+
+[node name="FireComponent" parent="." index="8" node_paths=PackedStringArray("firePosMarker", "checkArea") instance=ExtResource("11")]
+unique_name_in_owner = true
+firePosMarker = [NodePath("../SpriteGroup/TransformPoint/IceTallnut/AdobeAnimateSlot/Marker2D")]
+checkArea = NodePath("Area2D")
+fireInterval = 1.5
+
+[node name="Area2D" type="Area2D" parent="FireComponent" index="0"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FireComponent/Area2D" index="0"]
+shape = SubResource("SegmentShape2D_mig1w")
+
+[node name="Attack" type="Node" parent="StateChart/CompoundState" index="2"]
+script = ExtResource("12")
+
+[node name="ToAttack" type="Node" parent="StateChart/CompoundState" index="6"]
+script = ExtResource("13")
+to = NodePath("../Attack")
+event = &"ToAttack"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="StateChart/CompoundState/Attack" to="." method="AttackEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Attack" to="." method="AttackExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Attack" to="." method="AttackProcessing"]

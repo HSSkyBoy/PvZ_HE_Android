@@ -9,11 +9,11 @@ var over: bool = false
 var run: bool = false
 
 func SleepEntered() -> void :
-    super.SleepEntered()
+    super .SleepEntered()
     instance.invincible = false
 
 func IdleEntered() -> void :
-    super.IdleEntered()
+    super .IdleEntered()
     if !is_instance_valid(TowerDefenseManager.currentControl) || !TowerDefenseManager.currentControl.isGameRunning:
         return
     if !inGame:
@@ -27,16 +27,16 @@ func IdleEntered() -> void :
 
 @warning_ignore("unused_parameter")
 func IdleProcessing(delta: float) -> void :
-    super.IdleProcessing(delta)
+    super .IdleProcessing(delta)
     sprite.timeScale = timeScale
 
 func IdleExited() -> void :
-    super.IdleExited()
+    super .IdleExited()
 
 func AnimeCompleted(clip: String) -> void :
     if !inGame:
         return
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "Idle":
             if !run:

@@ -20,9 +20,6 @@ gravity = 245.0
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 26)
 
-[node name="HitBox" parent="." index="5"]
-visible = false
-
 [node name="CompoundState" parent="StateChart" index="0"]
 initial_state = NodePath("Plant")
 

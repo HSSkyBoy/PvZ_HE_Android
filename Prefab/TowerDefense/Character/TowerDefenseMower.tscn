@@ -16,7 +16,6 @@ runAnimeClips = "Normal"
 runWaterAnimeClips = "Normal"
 attackAnimeClips = ""
 attackWaterAnimeClips = ""
-idleAnimeClip = "Normal"
 sleepAnimeClip = "Normal"
 itemLayer = 8
 

@@ -15,6 +15,7 @@ class_name TowerDefenseLevelConfig extends Resource
 @export var levelNumber: int = 1
 @export var nextLevel: String = ""
 @export var homeWorld: GeneralEnum.HOMEWORLD = GeneralEnum.HOMEWORLD.NOONE
+@export var finishMethod: TowerDefenseEnum.LEVEL_FINISH_METHOD = TowerDefenseEnum.LEVEL_FINISH_METHOD.WAVE
 @export_category("Mower")
 @export var mowerUse: bool = true
 @export_category("Tutorial")
@@ -34,6 +35,8 @@ class_name TowerDefenseLevelConfig extends Resource
 @export_category("PreSpawn")
 @export var preSpawnList: Array[TowerDefenseLevelPreSpawnConfig] = []
 @export_category("PacketBank")
+@export var limitGridPlantNum: int = -1
+@export var plantColumn: bool = false
 @export var packetColdDownStart: bool = true
 @export var packetBankMethod: TowerDefenseEnum.LEVEL_SEEDBANK_METHOD = TowerDefenseEnum.LEVEL_SEEDBANK_METHOD.CHOOSE:
     set(_packetBankMethod):
@@ -42,16 +45,18 @@ class_name TowerDefenseLevelConfig extends Resource
 @export_category("Sun")
 @export var sunManager: TowerDefenseLevelSunManagerConfig = TowerDefenseLevelSunManagerConfig.new()
 @export_category("Wave")
-@export var waveManager: TowerDefenseLevelWaveManagerConfig = TowerDefenseLevelWaveManagerConfig.new()
+@export var waveManager: TowerDefenseLevelWaveManagerConfig
+@export_category("Vase")
+@export var vaseManager: TowerDefenseLevelVaseManagerConfig
 @export_category("Option")
-
 @export var isCustomTalk: bool = false
 @export var isCustomTutorial: bool = false
 @export var customTalk: NpcTalkConfig
 @export var customTutorial: TutorialConfig
 @export_storage var packetBank: String = "GeneralPlant"
-@export_storage var packetBankList: Array[String] = []
-@export var conveyorData: TowerDefenseConveyorConfig = TowerDefenseConveyorConfig.new()
+@export var packetBankList: Array = []
+@export var conveyorData: TowerDefenseConveyorConfig
+@export var rainData: TowerDefenseRainModeConfig
 
 func _get_property_list() -> Array[Dictionary]:
     var properties: Array[Dictionary] = []
@@ -63,21 +68,6 @@ func _get_property_list() -> Array[Dictionary]:
                     "type": TYPE_STRING, 
                 }
             )
-            properties.append(
-                {
-                    "name": "PacketBank/PacketName", 
-                    "type": TYPE_ARRAY, 
-                    "hint": PROPERTY_HINT_TYPE_STRING, 
-                }
-            )
-        TowerDefenseEnum.LEVEL_SEEDBANK_METHOD.PRESET:
-            properties.append(
-                {
-                    "name": "PacketBank/PacketName", 
-                    "type": TYPE_ARRAY, 
-                    "hint": PROPERTY_HINT_TYPE_STRING, 
-                }
-            )
     return properties
 
 func _set(property: StringName, value: Variant) -> bool:
@@ -85,24 +75,17 @@ func _set(property: StringName, value: Variant) -> bool:
         "PacketBank/Name":
             packetBank = value
             return true
-        "PacketBank/PacketName":
-            packetBankList = value
-            return true
     return false
 
 func _get(property: StringName) -> Variant:
     match property:
         "PacketBank/Name":
             return packetBank
-        "PacketBank/PacketName":
-            return packetBankList
     return null
 
 func _property_can_revert(property: StringName) -> bool:
     match property:
         "PacketBank/Name":
-            return true
-        "PacketBank/PacketName":
             return true
     return false
 
@@ -110,22 +93,31 @@ func _property_get_revert(property: StringName) -> Variant:
     match property:
         "PacketBank/Name":
             return ""
-        "PacketBank/PacketName":
-            return Array([], TYPE_STRING, "", null)
     return null
 
-func Init() -> void :
-    if !data:
-        return
-    eventInit = []
-    eventReady = []
-    eventStart = []
+func Clear() -> void :
+    homeWorld = GeneralEnum.HOMEWORLD.NOONE
+    finishMethod = TowerDefenseEnum.LEVEL_FINISH_METHOD.WAVE
+    packetBankMethod = TowerDefenseEnum.LEVEL_SEEDBANK_METHOD.CHOOSE
+    eventInit.clear()
+    eventReady.clear()
+    eventStart.clear()
     sunManager = null
     waveManager = null
+    vaseManager = null
     isCustomTalk = false
     isCustomTutorial = false
     customTalk = null
     customTutorial = null
+    packetBankList.clear()
+    conveyorData = null
+    rainData = null
+
+func Init() -> void :
+    if !data:
+        return
+    Clear()
+
 
     var levelData: Dictionary = data.data as Dictionary
     name = levelData.get("Name", "")
@@ -134,7 +126,10 @@ func Init() -> void :
     levelNumber = levelData.get("LevelNumber", 0)
     nextLevel = levelData.get("NextLevel", "")
     homeWorld = GeneralEnum.HOMEWORLD.get(levelData.get("HomeWorld", "NOONE").to_upper())
+    finishMethod = TowerDefenseEnum.LEVEL_FINISH_METHOD.get(levelData.get("FinishMethod", "WAVE").to_upper())
+
     mowerUse = levelData.get("MowerUse", true)
+
     var talkGet = levelData.get("Talk", "")
     if talkGet is Dictionary:
         isCustomTalk = true
@@ -195,26 +190,50 @@ func Init() -> void :
         preSpawnList.append(preSpawnConfig)
 
     var packetBankData: Dictionary = levelData.get("PacketBank", {}) as Dictionary
+    limitGridPlantNum = packetBankData.get("LimitGridPlantNum", -1)
     packetColdDownStart = packetBankData.get("ColdDownStart", true)
     packetBankMethod = TowerDefenseEnum.LEVEL_SEEDBANK_METHOD.get(packetBankData.get("Method", "NOONE").to_upper())
+    plantColumn = packetBankData.get("PlantColumn", false)
     var packetBankValue = packetBankData.get("Value", [])
+
     match packetBankMethod:
         TowerDefenseEnum.LEVEL_SEEDBANK_METHOD.PRESET:
-            packetBankList = Array(packetBankValue, TYPE_STRING, "", null)
+            for packetData in packetBankValue:
+                var packet: TowerDefenseLevelPacketConfig = TowerDefenseLevelPacketConfig.new()
+                packet.Init(packetData)
+                packetBankList.append(packet)
         TowerDefenseEnum.LEVEL_SEEDBANK_METHOD.CHOOSE:
-            packetBankList = Array(packetBankValue, TYPE_STRING, "", null)
+            for packetData in packetBankValue:
+                var packet: TowerDefenseLevelPacketConfig = TowerDefenseLevelPacketConfig.new()
+                packet.Init(packetData)
+                packetBankList.append(packet)
             packetBank = packetBankData.get("Type", "")
         TowerDefenseEnum.LEVEL_SEEDBANK_METHOD.CONVEYOR:
             conveyorData = TowerDefenseConveyorConfig.new()
-            conveyorData.Init(packetBankValue[0])
+            if packetBankValue.size() == 1 && (typeof(packetBankValue[0]) == TYPE_DICTIONARY && packetBankValue[0].has("Packet")):
+                conveyorData.Init(packetBankValue[0])
+            else:
+                conveyorData.Init(packetBankData.get("ConveyorPreset", []))
+        TowerDefenseEnum.LEVEL_SEEDBANK_METHOD.RAIN:
+            rainData = TowerDefenseRainModeConfig.new()
+            if packetBankValue.size() == 1 && (typeof(packetBankValue[0]) == TYPE_DICTIONARY && packetBankValue[0].has("Packet")):
+                rainData.Init(packetBankValue[0])
+            else:
+                rainData.Init(packetBankData.get("RainPreset", []))
 
     var sunManagerData: Dictionary = levelData.get("SunManager", {}) as Dictionary
     sunManager = TowerDefenseLevelSunManagerConfig.new()
     sunManager.Init(sunManagerData)
 
-    var waveManagerData: Dictionary = levelData.get("WaveManager", {}) as Dictionary
-    waveManager = TowerDefenseLevelWaveManagerConfig.new()
-    waveManager.Init(waveManagerData)
+    match finishMethod:
+        TowerDefenseEnum.LEVEL_FINISH_METHOD.WAVE:
+            var waveManagerData: Dictionary = levelData.get("WaveManager", {}) as Dictionary
+            waveManager = TowerDefenseLevelWaveManagerConfig.new()
+            waveManager.Init(waveManagerData)
+        TowerDefenseEnum.LEVEL_FINISH_METHOD.VASE:
+            var vaseManagerData: Dictionary = levelData.get("VaseManager", {}) as Dictionary
+            vaseManager = TowerDefenseLevelVaseManagerConfig.new()
+            vaseManager.Init(vaseManagerData)
 
 func Export() -> Dictionary:
     var _data: Dictionary = {
@@ -222,6 +241,7 @@ func Export() -> Dictionary:
         "LevelNumber": levelNumber, 
         "Description": description, 
         "HomeWorld": GeneralEnum.HOMEWORLD.find_key(homeWorld), 
+        "FinishMethod": TowerDefenseEnum.LEVEL_FINISH_METHOD.find_key(finishMethod), 
         "Talk": talk, 
         "Tutorial": tutorial, 
         "Map": map, 
@@ -240,13 +260,14 @@ func Export() -> Dictionary:
             "Packet": []
         }, 
         "PacketBank": {
+            "LimitGridPlantNum": limitGridPlantNum, 
+            "PlantColumn": plantColumn, 
             "ColdDownStart": packetColdDownStart, 
             "Method": TowerDefenseEnum.LEVEL_SEEDBANK_METHOD.find_key(packetBankMethod), 
             "Type": packetBank, 
-            "Value": packetBankList
+            "Value": []
         }, 
         "SunManager": sunManager.Export(), 
-        "WaveManager": waveManager.Export()
     }
     for preSpawn: TowerDefenseLevelPreSpawnConfig in preSpawnList:
         _data["PreSpawn"]["Packet"].append(preSpawn.Export())
@@ -258,10 +279,25 @@ func Export() -> Dictionary:
     for eventGet: TowerDefenseLevelEventBase in eventStart:
         _data["Event"]["EventStart"].append(eventGet.Export())
 
+    for packetData in packetBankList:
+        if packetData is TowerDefenseLevelPacketConfig:
+            _data["PacketBank"]["Value"].append(packetData.Export())
+        elif typeof(packetData) == TYPE_STRING:
+            _data["PacketBank"]["Value"].append(packetData)
     match packetBankMethod:
         TowerDefenseEnum.LEVEL_SEEDBANK_METHOD.CONVEYOR:
+            _data["PacketBank"]["ConveyorPreset"] = conveyorData.Export()
             _data["PacketBank"]["Value"] = []
-            _data["PacketBank"]["Value"].append(conveyorData.Export())
+        TowerDefenseEnum.LEVEL_SEEDBANK_METHOD.RAIN:
+            _data["PacketBank"]["RainPreset"] = rainData.Export()
+            _data["PacketBank"]["Value"] = []
+
+    match finishMethod:
+        TowerDefenseEnum.LEVEL_FINISH_METHOD.WAVE:
+            _data["WaveManager"] = waveManager.Export()
+        TowerDefenseEnum.LEVEL_FINISH_METHOD.VASE:
+            _data["VaseManager"] = vaseManager.Export()
+
     return _data
 
 func ConveyorPreset() -> void :
@@ -271,4 +307,8 @@ func ConveyorPreset() -> void :
     waveManager.beginCol = 9.0
     waveManager.spawnColEnd = 15.0
     waveManager.spawnColStart = 6.0
+    sunManager.open = false
+
+func RainPreset() -> void :
+    packetBankMethod = TowerDefenseEnum.LEVEL_SEEDBANK_METHOD.RAIN
     sunManager.open = false

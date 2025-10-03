@@ -14,6 +14,7 @@ mouse_filter = 2
 script = ExtResource("1")
 
 [node name="LevelEditorSeedbank" parent="." instance=ExtResource("2")]
+layout_mode = 0
 
 [node name="CommandContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -39,6 +40,23 @@ theme_override_constants/separation = 50
 custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
 theme_override_constants/separation = 10
+
+[node name="PlantColumnContainer" type="HBoxContainer" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/PlantColumnContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "柱子模式"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlantColumnCheckBox" type="CheckBox" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/PlantColumnContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
 
 [node name="MethodContainer" type="HBoxContainer" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer"]
 custom_minimum_size = Vector2(0, 40)
@@ -184,7 +202,52 @@ max_value = 100000.0
 value = 5.0
 suffix = "s"
 
+[node name="RainModeContainer" type="VBoxContainer" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="RainModeIntervalContainer" type="HBoxContainer" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/RainModeContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/RainModeContainer/RainModeIntervalContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "种子下落间隔"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RainModeIntervalSpinBox" type="SpinBox" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/RainModeContainer/RainModeIntervalContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 1.0
+max_value = 100000.0
+value = 30.0
+suffix = "s"
+
+[node name="RainModeAliveTimeContainer" type="HBoxContainer" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/RainModeContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/RainModeContainer/RainModeAliveTimeContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "种子存在时间"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RainModeAliveTimeSpinBox" type="SpinBox" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/RainModeContainer/RainModeAliveTimeContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 1.0
+max_value = 100000.0
+value = 30.0
+suffix = "s"
+
 [connection signal="visibility_changed" from="." to="." method="Save"]
+[connection signal="toggled" from="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/PlantColumnContainer/PlantColumnCheckBox" to="." method="PlantColumnCheckBoxToggled"]
 [connection signal="item_selected" from="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/MethodContainer/MethodOptionButton" to="." method="MethodOptionButtonItemSelected"]
 [connection signal="pressed" from="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/PacketColdDownStartContainer/PacketColdDownStartUseCheckBox" to="." method="PacketColdDownStartUseCheckBoxPressed"]
 [connection signal="value_changed" from="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/SunContainer/SunNumContainer/SunSpinBox" to="." method="SunSpinBoxValueChanged"]
@@ -192,3 +255,5 @@ suffix = "s"
 [connection signal="value_changed" from="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/SunContainer/SunManagerContainer/SunSpawnIntervalContainer/SunSpawnIntervalSpinBox" to="." method="SunSpawnIntervalSpinBoxValueChanged"]
 [connection signal="value_changed" from="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/SunContainer/SunManagerContainer/SunSpawnNumContainer/SunSpawnNumSpinBox" to="." method="SunSpawnNumSpinBoxValueChanged"]
 [connection signal="value_changed" from="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/ConveyorContainer/ConveyorIntervalContainer/ConveyorIntervalSpinBox" to="." method="SunSpawnNumSpinBoxValueChanged"]
+[connection signal="value_changed" from="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/RainModeContainer/RainModeIntervalContainer/RainModeIntervalSpinBox" to="." method="RainModeIntervalSpinBoxValueChanged"]
+[connection signal="value_changed" from="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/RainModeContainer/RainModeAliveTimeContainer/RainModeAliveTimeSpinBox" to="." method="RainModeAliveTimeSpinBoxValueChanged"]

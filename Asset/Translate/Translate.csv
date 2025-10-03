@@ -1,490 +1,165 @@
 ﻿key,en,es,zh
-TOWERDEFENSE_PLANT_CATPOT_EXPRESTION,,,这可不是给猫尾草用的？
-<!MissingKey:游戏暂停>,PAUSE,PAUSE,游戏暂停
-TOWERDEFENSE_TIPS_AFTERNOON,SUN IS GOING DOWN,SUN IS GOING DOWN,太阳开始下山了!
-TOWERDEFENSE_PLANT_SQUASH_HANDBOOK_STORY,,,“我准备好了！”窝瓜大吼道，“干吧！算我一份；没人比我厉害，我就是你要的人！来啊！还等什么？要的就是这个。”
-TOWERDEFENSE_PLANT_GRAVEMINE_NAME,GraveMine,GraveMine,墓碑埋雷者
-TOWERDEFENSE_ZOMBIE_NEWSPAPER_HANDBOOK_STORY,,,读报僵尸只差一点点就完成他的数独谜题了，难怪他会暴怒。
-MAP_FRONTLAWN_EMPTY,"Front Yard (Day,Empty)","Front Yard (Day,Empty)",前院(白天裸地)
-<!MissingKey:荷包蛋>,Poached Pad,Poached Pad,荷包蛋
-TOWERDEFENSE_ZOMBIE_YETIDIGGER_HANDBOOK_STORY,,,在寒冷的雪山上不停的挖矿，直到自己头发灰白。他之前在沙漠采金矿就丢了一只靴子，这下好了，两只全丢了。他不得不找矿工僵尸又借了一双新鞋子。
-TOWERDEFENSE_PLANT_SQUASH_NAME,Squash,Squash,窝瓜
-BGM_FRONTLAWN_NIGHT,Front Yard (Night),Front Yard (Night),前院(夜晚)
-LOAD_TALK,Load talk,Load talk,加载对话
-TOWERDEFENSE_PLANT_PUFFPOT_CUSTOM_1_ACCESS,,,每日挑战 2025/8月 累计完成7天
-TOWERDEFENSE_PLANT_MAGNETMINE_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+<!MissingKey:小喷菇：“我是最近才知道僵尸的事情。和很多蘑菇一样，我只是把他们想象成童话和电影里的怪物。不过这次的经历已经让我大开眼界了。”>,,,小喷菇：“我是最近才知道僵尸的事情。和很多蘑菇一样，我只是把他们想象成童话和电影里的怪物。不过这次的经历已经让我大开眼界了。”
+TOWERDEFENSE_PLANT_SUNMINE_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
 威力：[color=cc241d]1800[/color]
 范围：[color=cc241d]单格[/color]
-特点1：[color=cc241d]种下后需要5秒准备时间[/color]
-特点2：[color=cc241d]出土后僵尸触碰会爆炸，产生单格1800点伤害。若其3*3范围内存在携带金属防具的僵尸，则立即将符合条件的僵尸吸引到自身所在格子并爆炸[/color]"
-SHOP_OPEN,,,"你获得了金币，现在商店开启了！
-你可以在商店购买你所需要的物品！"
-SHOP_NPC_TALK_PLANT_ICEAPEARPEA,,,把这张紫卡种在你的寒冰射手上，把它升级成冰锥射手！
-TOWERDEFENSE_PLANT_SUNSHROOM_NAME,SunShroom,SunShroom,阳光向日葵
-TOWERDEFENSE_ZOMBIE_SNORKLE_NAME,Snorkel Zombie,Snorkel Zombie,潜水僵尸
-<!MissingKey:尽管墓碑吞噬者的外表十分吓人，但他想要所有人都知道，其实他喜欢小猫咪，而且利用业余时间，在一家僵尸康复中心做志愿者。“我只是在做正确的事情，”他说。>,,,尽管墓碑吞噬者的外表十分吓人，但他想要所有人都知道，其实他喜欢小猫咪，而且利用业余时间，在一家僵尸康复中心做志愿者。“我只是在做正确的事情，”他说。
-TOWERDEFENSE_PLANT_SUNMINE_EXPRESTION,,,爆炸时提供阳光的免费地雷，需要一点时间来武装自己。
-TOWERDEFENSE_ZOMBIE_GARGANTUAR_HANDBOOK_STORY,,,当伽刚特尔走动的时候，大地在震颤。当他悲叹的时候，其他僵尸都为之沉默。他是僵尸们梦想成为的偶像，不过他到现在还没交到女朋友。
-TOWERDEFENSE_ZOMBIE_SNORKLE_EXPRESTION,,,潜水僵尸可以在水下潜行。
-NPC_TALK_LEVEL1_7_TUTORIAL_5,,,祝你好运，我们一会见！
-TOWERDEFENSE_PLANT_GATLINGCAT_EXPRESTION,,,这机枪又是哪路高手来的？！
-NPC_TALK_LEVEL1_7_TUTORIAL_4,,,你或许应该试试更加专注于生产阳光的杂交植物！
-NPC_TALK_LEVEL1_7_TUTORIAL_3,,,但太阳已经快落山了！你获得的阳光也会变少！
-NPC_TALK_LEVEL1_7_TUTORIAL_2,,,僵尸还是没有减少的迹象…
-NPC_TALK_LEVEL1_7_TUTORIAL_1,,,看起来马上就要天黑了。
-TOWERDEFENSE_ZOMBIE_PEASHOOTER_HANDBOOK_STORY,,,面对现在可怕的植物们，普通僵尸想念曾经的豌豆射手。他曾经有一次有机会吃到脑子，但是他本能的当成豌豆吐了出去。
-TOWERDEFENSE_PLANT_GATLINGCAT_HANDBOOK_STORY,,,“军用头盔？早扔了。戴夫说现在这招叫'战术萌化'——显然我的射速快了20%，这还真有用。”
-SHOP_ITEM_NUTBANDAGING,,,坚果包扎术
-TOWERDEFENSE_PLANT_PUFFPOT_CUSTOM_1_NAME,,,青花瓷
-SHOP_NPC_TALK_PLANT_WINTERMELONGSHROOM_CUSTOM_0,,,冰瓜大喷菇的皮肤！你可以在图鉴装扮你的植物！
-TOWERDEFENSE_ZOMBIE_NORMAL_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
-伤害：[color=cc241d]100/s[/color]
-佩戴：[color=cc241d]----[/color]
-类型：[color=cc241d]小型僵尸[/color]
-移速：[color=cc241d]慢[/color]"
-TOWERDEFENSE_PLANT_PEASHOOTER_NAME,Peashooter,Peashooter,双发射手
-SHOP_NPC_TALK_PACKETSLOT,,,额外的卡槽！让你在每关可多携带一种植物！
-LEVEL1_2_TUTORIAL_1,,,请先种植豌豆向日葵，以获取足够的阳光！
-TOWERDEFENSE_PLANT_GRAVEMINE_CUSTOM_1_ACCESS,,,每日挑战 2025/8月 累计完成14天
-TOWERDEFENSE_ZOMBIE_SCREEN_DOOR_EXPRESTION,,,他的铁栅门是有效的盾牌。
-LEVEL1_2_TUTORIAL_2,,,请至少种植3株豌豆向日葵！
-LOAD_BGM,Load BGM,Load BGM,加载音乐
-AWARD_COLLECTABLE_SHOVEL,You got a new shovel,You got a new shovel,你获得了一把新铲子!
-TOWERDEFENSE_ZOMBIE_SCREEN_DOOR_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]1100（二类） + 270[/color]
-伤害：[color=cc241d]100/s[/color]
-佩戴：[color=cc241d]铁栅门（二类）[/color]
-类型：[color=cc241d]小型僵尸[/color]
-移速：[color=cc241d]慢[/color]
-弱点：[color=441D62]磁力菇、穿透攻击[/color]"
-TOWERDEFENSE_MOWER_DEFAULT_HANDBOOK_STORY,,,你的院子里配备已久的除草机，稍微改装了一下用于清理僵尸。
-TOWERDEFENSE_ZOMBIE_SQUASH_NAME,Squash Zombie,Squash Zombie,窝瓜僵尸
-PLAYERS_TRIP_TO_MODERN,{UserName}'s House,{UserName}'s House,{UserName}的房子
-TOWERDEFENSE_SHOVEL_GOLD_HANDBOOK_STORY,,,在草坪上捡到的金铲子。看起来像是黄金制品但意外地耐用，估计只是镀金的。
+特点：[color=cc241d]单独使用，需要15秒准备时间，爆炸后获得50阳光[/color]"
 TOWERDEFENSE_PLANT_SUNMINE_CUSTOM_1_ACCESS,,,每日挑战 2025/7月 累计完成21天
-TOWERDEFENSE_PLANT_SUNSHROOM_CUSTOM_1_NAME,,,小红帽
-TOWERDEFENSE_ZOMBIE_SNOWPEA_EXPRESTION,,,向你的防线发射寒冰子弹。
-LOAD_TUTORIAL,Load tutorial,Load tutorial,加载教程
-TOWERDEFENSE_PLANT_SCAREDYSUNSHROOM_EXPRESTION,,,阳光下成长——但还是胆小。
-TOWERDEFENSE_PLANT_SNOWSHROOM_CUSTOM_1_NAME,,,寒霜剑客
-TOWERDEFENSE_PLANT_ICESUNSHROOM_HANDBOOK_STORY,,,寒光菇是一位伟大的科学家，它实现了将僵尸的内能转化为太阳能，但地中海式的发型一直困扰着它。“科研是要付出一些代价的。”它只好这样安慰自己。
-<!MissingKey:韧性：[color=cc241d]300[/color]>,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]20/1.5s[/color]
-范围：[color=cc241d]前方三格[/color]
-特性：[color=C71585]白天会睡觉[/color]"
-TOWERDEFENSE_PLANT_GATLINGCAT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]20x6/1.5s[/color]
-范围：[color=cc241d]全屏追踪[/color]
-特性：[color=C71585]两栖植物，紫卡植物[/color]
-特点：[color=cc241d]攻击可以追踪空中僵尸[/color]
-紫卡植物：[color=0000FF]需要种植在豌豆香蒲上[/color]"
-TOWERDEFENSE_PLANT_SUNBOMB_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]1800[/color]
-范围：[color=cc241d]自身为中心周围1.5格的圆[/color]
-特点：[color=cc241d]被炸死的僵尸变为25阳光[/color]
-"
-TOWERDEFENSE_PLANT_PEALILYPAD_NAME,Pea waterlily,Pea waterlily,豌豆睡莲
-TOWERDEFENSE_PLANT_JALANUT_HANDBOOK_STORY,,,火爆坚果总是把辣椒背在身上，仿佛这是非常宝贵的东西。“这是我珍贵的战友！”火爆坚果这么说，但实际上那只是普通的辣椒。
-TOWERDEFENSE_PLANT_PEALILYPAD_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]20/3s[/color]
-范围：[color=cc241d]前方一行[/color]
-特性：[color=C71585]可在水上承载植物[/color]
-特点：[color=cc241d]发射的子弹可以攻击潜水状态的僵尸[/color]"
-TOWERDEFENSE_PLANT_GATLINGPEA_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]20x4/1.5s[/color]
-范围：[color=cc241d]前方一行[/color]
-特性：[color=C71585]紫卡植物[/color]
-紫卡植物：[color=0000FF]需要种植在双发射手上[/color]"
-TOWERDEFENSE_PLANT_PEAPOT_EXPRESTION,,,豌豆花盆是你的一道花盆防线！
-TOWERDEFENSE_PLANT_HYPNOSHROOM_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-特性：[color=C71585]白天会睡觉[/color]
-特点：[color=cc241d]吃掉它的僵尸会变成友军单位为你作战[/color]"
-LEVLE_EVENT_GRAVESTONE_SPAWN_ZOMBIE,GravestoneSpawnZombie,GravestoneSpawnZombie,墓碑产生僵尸
-SHOP_NPC_TALK_COINCOLLECT,,,吸金磁的场外支援，能帮你自动拾取掉落的钱币！
-TOWERDEFENSE_PLANT_CORNTROP_HANDBOOK_STORY,,,戴夫打翻了一罐黄油玉米粒，不小心洒在了地刺上，于是罐头改变了地刺的颜色和尖刺。尽管他现在看起来像一块玉米挞，但僵尸再也不能“脚滑”地轻易通过了。
-TOWERDEFENSE_PLANT_FIRESNOWPEA_HANDBOOK_STORY,,,"“走，去桑拿房！”“不，去冰箱！”冰火裂荚射手每天都在为去哪个房间睡觉而烦恼。
-“不过两个头烤出来的水蒸气确实适合用于桑拿房。”戴夫评价道。"
-SHOP_NPC_TALK_POYREPLACEMENT,,,花盆替换术，能让你直接替换种植不同种类的花盆！对睡莲同样有效哦！
-TOWERDEFENSE_PLANT_GRAVEMINE_CUSTOM_1_NAME,,,施工现场
-TOWERDEFENSE_ZOMBIE_WILDPEA_NAME,Wild Gun Zombie,Wild Gun Zombie,狂野机枪僵尸
-SHOP_NPC_TALK_PLANT_SUNSHROOM_CUSTOM_1,,,阳光向日葵的皮肤！你可以在图鉴装扮你的植物！
-<!MissingKey:怎么还把吸尘器搬出来了？>,,,怎么还把吸尘器搬出来了？
-TOWERDEFENSE_PLANT_MAGNETMINE_EXPRESTION,,,金属制品聚聚爆！
-<!MissingKey:火焰效果>,Fire Buff,Fire Buff,火焰效果
-TOWERDEFENSE_ZOMBIE_DARKFOOTBALL_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]3000 + 270[/color]
-伤害：[color=cc241d]200/s[/color]
-佩戴：[color=cc241d]黑橄榄头盔（一类）[/color]
-类型：[color=cc241d]小型僵尸[/color]
-速度：[color=cc241d]快[/color]
-弱点：[color=441D62]磁力菇[/color]"
-<!MissingKey:灵活的猫战士，会通过肩炮发射追踪攻击！>,,,灵活的猫战士，会通过肩炮发射追踪攻击！
-TOWERDEFENSE_PLANT_RECACTUS_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]20×2/1.5s[/color]
-范围：[color=cc241d]前方一行[/color]
-特点1：[color=cc241d]子弹最多穿透3个僵尸，无视二类防具[/color]
-特点2：[color=cc241d]当有空中僵尸时，优先跳起来攻击空中僵尸[/color]"
-MAP_FRONTLAWN_THREEPART,Front Yard (Three Part),Front Yard (Three Part),前院(三分)
-TOWERDEFENSE_SHOVEL_JALAPENO_NAME,Jalapeno shovel,Jalapeno shovel,辣椒铲
-TOWERDEFENSE_ZOMBIE_SLEEP_NAME,Sleep Zombie,Sleep Zombie,小摔哥僵尸
-BGM_BACKYARD_NIGHT,Back Yard (Night),Back Yard (Night),后院(夜晚)
-<!MissingKey:减速效果>,Slow down Buff,Slow down Buff,减速效果
-TOWERDEFENSE_PLANT_PEACAT_EXPRESTION,,,猫尾草和豌豆居然也喝醉了！？
-TOWERDEFENSE_PLANT_ICESPEARPEA_EXPRESTION,,,原版寒冰射手的升级姿态！
-TOWERDEFENSE_PLANT_SUNSHROOM_CUSTOM_2_ACCESS,,,商店购买（价格5000）
-PLAYERS_MORDEN_LEVEL_NAME,Front Yard 1 - {LevelNumber},Front Yard 1 - {LevelNumber},前院告急1 - {LevelNumber}
-PLAYERS_MORDEN_NIGHT_LEVEL_NAME,Nightfall 2 - {LevelNumber},Nightfall 2 - {LevelNumber},夜幕降临2 - {LevelNumber}
-TOWERDEFENSE_SHOVEL_DIAMOND_NAME,Diamond Shovel,Diamond Shovel,钻石铲
-TOWERDEFENSE_PLANT_PEAWELL_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]2000[/color]
-威力：[color=cc241d]20*36/3s[/color]
-范围：[color=cc241d]360度[/color]
-特性：[color=C71585]两栖植物[/color]
-特点：[color=cc241d]每3秒自动发射一圈共计36颗豌豆（每10°一发）[/color]"
-TOWERDEFENSE_PLANT_QUEENSUNFLOWER_EXPRESTION,,,发射追踪火球，生产大量阳光。
-TOWERDEFENSE_ZOMBIE_SCREEN_DOOR_NAME,Screen Door Zombie,Screen Door Zombie,铁栅门僵尸
-TOWERDEFENSE_ZOMBIE_GARGANTUAR_REDEYE_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]6000[/color]
-伤害：[color=cc241d]即死（锤击）[/color]
+TOWERDEFENSE_PLANT_CORNTROP_EXPRESTION,,,爆胎与黄油玉米的艺术。
+TOWERDEFENSE_ZOMBIE_SNOWPEA_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
+伤害：[color=cc241d]100/s（啃食） + 20x1/次（射击）[/color]
 佩戴：[color=cc241d]----[/color]
-类型：[color=cc241d]大型僵尸[/color]
-速度：[color=cc241d]非常慢[/color]
-特性：[color=C71585]锤扁植物[/color]
-特点：[color=cc241d]低于一定血量时会丢出小鬼僵尸[/color]"
-<!MissingKey:血量：[color=cc241d]800 + 270[/color]>,,,"血量：[color=cc241d]800 + 270[/color]
-伤害：[color=cc241d]即死（碾压） / 100/s（啃食）[/color]
-佩戴：[color=cc241d]大黄鸭（二类）+铁桶（一类）/ 路障（一类）[/color]
-类型：[color=cc241d]车类僵尸，失去大黄鸭后变为小型僵尸[/color]
-特点：[color=cc241d]骑鸭僵尸概率会佩戴铁桶和路障，在骑乘状态下会碾压碰到的所有植物，并能承载一个遇到的小型僵尸[/color]
-亡语：[color=cc241d]骑乘和被承载的僵尸脱离大黄鸭继续前行[/color]"
-<!MissingKey:缠绕潜水僵尸能够将你的植物拖下水。>,,,缠绕潜水僵尸能够将你的植物拖下水。
-LEVLE_EVENT_CHAGE_PROTAL_POS,ChangeProtalPos,ChangeProtalPos,改变传送门位置
-TOWERDEFENSE_MOWER_SUN_HANDBOOK_STORY,,,这是小推车帮你申请的备用应急阳光。或许你可以直接弃车把它当作启动资金？
-NPC_TALK_LEVEL1_5_TUTORIAL_5,,,现在，打了好久僵尸，我们也该放松一下了。
-NPC_TALK_LEVEL1_5_TUTORIAL_4,,,我猜你以后会遇见更多神奇的铲子！
-MAP_BACKYARD_FULL,"Back Yard (Day,Full Pool)","Back Yard (Day,Full Pool)",后院(白天全泳池)
-LOAD_MAP,Load map,Load map,加载地图
-NPC_TALK_LEVEL1_5_TUTORIAL_7,,,我会借给你更多的杂交坚果，你来试试看他们是否趁手！
-NPC_TALK_LEVEL1_5_TUTORIAL_6,,,我们来玩保龄球吧！
-NPC_TALK_LEVEL1_5_TUTORIAL_1,,,哟，伙计，你刚刚获得了一把新的铲子！
-NPC_TALK_LEVEL1_5_TUTORIAL_3,,,喔，它返还了阳光！
-TOWERDEFENSE_ZOMBIE_BALLOON_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]40 + 270[/color]
-伤害：[color=cc241d]100/s[/color]
-佩戴：[color=cc241d]气球（特殊）[/color]
-类型：[color=cc241d]飞行僵尸[/color]
-移速：[color=cc241d]慢[/color]
-特点：[color=cc241d]无[/color]
-弱点：[color=441D62]仙人掌、三叶草[/color]"
-NPC_TALK_LEVEL1_5_TUTORIAL_2,,,铲掉那几株豌豆向日葵试试吧，看看它有什么作用！
-LEVLE_EVENT_MAP_CHANGE,MapChange,MapChange,切换地图
-TOWERDEFENSE_ZOMBIE_JACKBOX_EXPRESTION,,,这只僵尸带着个会爆炸的潘多拉匣子。
-TOWERDEFENSE_PLANT_SEANUT_NAME,Sea Nut,Sea Nut,海坚果
-<!MissingKey:韧性：[color=cc241d]300威力: 40/1.5s（火焰伤害）[/color]>,,,"韧性：[color=cc241d]300威力: 40/1.5s（火焰伤害）[/color]
-范围：[color=cc241d]单格[/color]
-特性：[color=C71585]可在水上承载植物、本格非悬浮类植物免疫减速与冻结[/color]
-特点：[color=cc241d]灼烧靠近他的僵尸，受到40点火焰伤害，抵消减速与冻结[/color]"
-NPC_TALK_LEVEL1_5_TUTORIAL_9,,,因为我疯——掉啦！
-TOWERDEFENSE_PLANT_SUNSHROOM_CUSTOM_2_NAME,,,夏日时光
-REGIST_FAILD,Registration failed,Registration failed,注册失败!
-NPC_TALK_LEVEL1_5_TUTORIAL_8,,,为什么我们要用杂交坚果打保龄球？
-<!MissingKey:创建比赛失败!>,Create match failed,Create match failed,创建比赛失败!
-TOWERDEFENSE_TIPS_NIGHT,SUN IS GOING DOWN,SUN IS GOING DOWN,太阳落山了!
-TOWERDEFENSE_PLANT_RECACTUS_NAME,ReCactus,ReCactus,双发仙人掌
-TOWERDEFENSE_ZOMBIE_LADDER_NAME,Escalator Zombie,Escalator Zombie,扶梯僵尸
-TOWERDEFENSE_PLANT_WALLNUT_HANDBOOK_STORY,,,坚果：“人们想知道，经常被僵尸啃的感觉怎样？他们不知道，我有限的感官，只能让我感到一种麻麻的感觉，像是，令人放松的背部按摩。”
-BGM_FRONTLAWN,Front Yard (Day),Front Yard (Day),前院(白天)
-<!MissingKey:水中精英，能召唤缠绕潜水僵尸作战。>,,,水中精英，能召唤缠绕潜水僵尸作战。
-TOWERDEFENSE_ZOMBIE_JACKBOX_HANDBOOK_STORY,,,这只僵尸颤抖着，不是因为他冷，而是因为他疯。
-TOWERDEFENSE_PLANT_PEACAT_NAME,Pea Cat,Pea Cat,豌豆香蒲
-TOWERDEFENSE_PLANT_SCAREDYSHROOM_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]20/1.5s[/color]
-范围：[color=cc241d]前方一行[/color]
-特性：[color=C71585]白天会睡觉[/color]
-特点：[color=cc241d]以自身为圆心周围约1.5格内有僵尸时会躲起来停止攻击[/color]"
-TOWERDEFENSE_SHOVEL_DEFAULT_HANDBOOK_EXPRESTION,,,特点：无
-TOWERDEFENSE_PLANT_HYPNOGARLIC_EXPRESTION,,,魅惑大蒜可以让僵尸改变前进的路线并将其魅惑。
-TOWERDEFENSE_PLANT_ICESPEARPEA_NAME,Ice Spear Pea,Ice Spear Pea,冰锥射手
-TOWERDEFENSE_ZOMBIE_LADDER_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]500 + 500[/color]
-伤害：[color=cc241d]100/s[/color]
-佩戴：[color=cc241d]扶梯（二类）[/color]
 类型：[color=cc241d]小型僵尸[/color]
-速度：[color=cc241d]快，而后慢（放下梯子后）[/color]
-特点：[color=cc241d]放下梯子让僵尸们爬过面前的植物[/color]
-弱点：[color=441D62]穿透和磁力菇[/color]"
-MAP_OUTSIDE_FRONTLAWN,Outside Front Yard,Outside Front Yard,外部前院
-TOWERDEFENSE_PLANT_HYPNOGARLIC_HANDBOOK_STORY,,,大蒜原本是一家油漆厂的工人，只有这里才可以掩盖住他的气味——某一天有个笨手笨脚的家伙打翻了油漆，这使得他失去工作，并且变得五颜六色起来。
-TOWERDEFENSE_PLANT_PLANTERNSIX_HANDBOOK_STORY,,,“6”号路灯花说圣诞节之后是很重要的日子——也就是2“6”日那天——可她忘了缘由，并为此哭红了眼睛。“那是在1893年，他的生日。”智慧树回答道，“正如路灯花一样，他有着火热的内心，并照亮了植物们前行的路。”
-TOWERDEFENSE_ZOMBIE_LADDER_EXPRESTION,,,扶梯僵尸的梯子可以让僵尸们爬过面前的障碍物。
-LOGIN_ERROR_PASSWORD_EMPTY,Password is empty,Password is empty,密码为空
-AWARD_PACKET_PLANT,You got a new plant!,You got a new plant!,你获得了一株新植物!
-TOWERDEFENSE_ZOMBIE_NEWSPAPER_NAME,Newspaper zombie,Newspaper zombie,读报僵尸
-TOWERDEFENSE_PLANT_SNOWWOOD_NAME,Ice Torch Stump,Ice Torch Stump,冰炬树桩
-SHOP_NPC_TALK_IDLE_1,,,感谢你对杂交版的游玩和关注！如果对游戏设计有什么建议，欢迎说给我听听哦！
-<!MissingKey:“你很幸运，我是和你一伙的，”毁灭菇说，“我能摧毁任何你所害怕的东西，小菜一碟。”>,,,“你很幸运，我是和你一伙的，”毁灭菇说，“我能摧毁任何你所害怕的东西，小菜一碟。”
-SHOP_NPC_TALK_IDLE_2,,,通关遇到困难？试着买一些道具吧，适当使用道具可以让游戏更轻松哦！
-SHOP_NPC_TALK_IDLE_3,,,明码标价，童叟无欺！
-TOWERDEFENSE_ZOMBIE_SUNFLOWER_HANDBOOK_STORY,,,"“我想融入向日葵群体，但她们都说我是阳光小偷。”向日葵僵尸向心理医生倾诉，“可我明明在生产阳光呀！”
-医生经过细致的诊断，最后联合眼科确诊：这家伙是个色盲。"
-SHOP_NPC_TALK_IDLE_4,,,潜艇伟伟迷的花俏小玩意！24小时全天候为您服务！
-TOWERDEFENSE_PLANT_JALACHERRYBOMB_EXPRESTION,,,樱桃辣椒可以摧毁三条线上的敌人。
-TOWERDEFENSE_ZOMBIE_NEWSPAPER_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]150 + 270[/color]
-伤害：[color=cc241d]100/s[/color]
-佩戴：[color=cc241d]报纸（二类）[/color]
-类型：[color=cc241d]小型僵尸[/color]
-移速：[color=cc241d]普通，而后快（失去报纸后）[/color]
-弱点：[color=441D62]穿透攻击[/color]"
-TOWERDEFENSE_SHOVEL_JALAPENO_HANDBOOK_EXPRESTION,,,特点：[color=cc241d]铲掉植物时，释放一次整行的火焰效果，对本行僵尸造成等同于植物价格的火焰伤害（铲掉价格为0的植物不触发效果）[/color]
-<!MissingKey:特点：当僵尸获得该效果后，会使其受到更高的[color=cc241d]火焰伤害[/color]>,,,"特点：当僵尸获得该效果后，会使其受到更高的[color=cc241d]火焰伤害[/color]
-互斥：无"
-MAP_FRONTLAWN_NIGHT_COLD,Front Yard (Winter Night),Front Yard (Winter Night),前院(冬夜)
-<!MissingKey:睡莲>,Water lily,Water lily,睡莲
-TOWERDEFENSE_PLANT_WALLNUT_EXPRESTION,,,坚果拥有足以让你保护其它植物的坚硬外壳。
-<!MissingKey:大喷菇喷出的气液可以穿透铁丝网门。>,,,大喷菇喷出的气液可以穿透铁丝网门。
-TOWERDEFENSE_PLANT_RECACTUS_HANDBOOK_STORY,,,仙人掌热爱拥抱，可她的外表连铠甲鼠都趋之若鹜。“不管人们如何议论，总之我爱她”双发射手说道，“这是我和她的爱情结晶。”
-TOWERDEFENSE_ZOMBIE_IMP_EXPRESTION,,,一种小型的僵尸，由伽刚特尔扔进你的防线。
-<!MissingKey:韧性：[color=cc241d]300[/color]>,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]吞噬（小型僵尸）[/color]
-范围：[color=cc241d]前方一行[/color]
-特点：[color=cc241d]当本行前方有可吞噬僵尸时，旋转扇叶将其吸过来吃掉；消化完毕后向前吹风，将前方全部小体型飞行僵尸可以吹退3格、地面小体型僵尸吹退一格[/color]"
-TOWERDEFENSE_PLANT_SCAREDYSUNSHROOM_HANDBOOK_STORY,,,因为害怕黑暗而让自己的脑袋发光，殊不知僵尸也被吸引过来了。
-TOWERDEFENSE_ZOMBIE_BALLOON_NAME,Balloon Zombie,Balloon Zombie,气球僵尸
-TOWERDEFENSE_ZOMBIE_SHADOW_EXPRESTION,,,影子僵尸的影子会在本体倒下后继续前进。
-TOWERDEFENSE_SHOVEL_COLD_NAME,Cold Shovel,Cold Shovel,寒冰铲
-TOWERDEFENSE_PLANT_MAGNETNUT_HANDBOOK_STORY,,,“物理学家争论的焦点从来不在于为什么一个坚果能产生金属作用力，”磁力坚果说道，“其实在哲学层面就很好解释了，我思故我在。”磁力坚果坚信自己读完王阳明心学会更有所收获。
+速度：[color=cc241d]慢[/color]
+特点：[color=cc241d]当前方有非低矮植物时每次能发射1颗寒冰豌豆攻击并减速你的植物[/color]"
+TOWERDEFENSE_READYSETPLANTS_READY,Ready..,Ready..,准备..
+TOWERDEFENSE_PLANT_SQUASH_EXPRESTION,,,窝瓜会压扁第一个接近它的僵尸
+SHOP_NPC_TALK_PLANT_QUEENSUNFLOWER_CUSTOM_0,,,向日葵女王的皮肤！你可以在图鉴装扮你的植物！
+LOAD_COLLECTABLE,Load collectable,Load collectable,加载收集物
+SHOP_NPC_TALK_SUNCOLLECT,,,阳光手套，能帮你自动拾取场上的阳光！
+TOWERDEFENSE_ZOMBIE_GATLINGDOLPHINRIDER_EXPRESTION,,,机枪海豚僵尸归来了，所有僵尸——都闪开！
+SHOP_NPC_TALK_PLANT_WINTERMELONGSHROOM_CUSTOM_0,,,冰瓜大喷菇的皮肤！你可以在图鉴装扮你的植物！
+TOWERDEFENSE_PLANT_SUNPAD_EXPRESTION,,,睡莲多面手，生产阳光、温暖植物、灼烧僵尸！
+TOWERDEFENSE,Defense,Defense,塔防
+TOWERDEFENSE_PLANT_PUMPKINFIREICE_NAME,Ice Flame Pumpkin Head,Ice Flame Pumpkin Head,冰焰南瓜头
+TOWERDEFENSE_ZOMBIE_DANCERFIRE_HANDBOOK_STORY,,,火焰舞者正值青春期，他们的胡子是贴上去的。他们为了衬托领舞的黄火，把自己的火焰改成了绿色。“其实我不是很想把这玩意染成绿的！”
+LEVEL1_5_BROADCAST_1,,,一直挖吧，直到你的场地上没有植物！
+NPC_TALK_LEVEL3_5_TUTORIAL_3,,,等等？天上掉下来的这是什么？
+NPC_TALK_LEVEL3_5_TUTORIAL_2,,,感觉我的帽子都要生锈了！
+TOWERDEFENSE_ZOMBIE_SNOWPEA_EXPRESTION,,,向你的防线发射寒冰子弹。
+NPC_TALK_LEVEL3_5_TUTORIAL_1,,,下雨了？我不喜欢这种潮湿的天气。
 SHOP_NPC_TALK_PITCHFORK_SUN,,,阳光草耙，干掉僵尸的同时掉落阳光！能使用三关！
-TOWERDEFENSE_PLANT_TABOODOOMSHROOM_HANDBOOK_STORY,,,哪有什么爆炸的无限伤害，禁忌毁灭菇只是趁着烟雾未散尽之时把僵尸拖入地底。“没有人能发现我的魔术。”禁忌毁灭菇洋洋得意的说，只是他忘了把坑埋起来。
-MAP_FRONTLAWN_NIGHT,Front Yard Night,Front Yard Night,前院(夜晚)
-TOWERDEFENSE_PLANT_TWINSUNSHROOM_NAME,Twin SunShroom,Twin SunShroom,双子阳光向日葵
-LEVLE_EVENT_TIPS_PLAY,TipsPlay,TipsPlay,播放警告
-<!MissingKey:小喷菇>,Little Puffcap,Little Puffcap,小喷菇
-TOWERDEFENSE_PLANT_PEAPOT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]20/3s[/color]
-特性：[color=C71585]可在裸地上承载植物[/color]"
-TOWERDEFENSE_PLANT_TWINSUNSHROOM_HANDBOOK_STORY,,,“我原以为豌豆向日葵的诞生已经够疯狂了，但万万没想到，有一天我自己都要被拿来做实验！”每次提到双子阳光向日葵，双子向日葵都会这么说，毕竟她怎么也想不到，实验成果还能被再次拿来做实验素材。
-TOWERDEFENSE_PLANT_ICENUT_EXPRESTION,,,发射冰弹攻击僵尸，被啃碎后冻结附近的僵尸。
-TOWERDEFENSE_ZOMBIE_GARGANTUAR_REDEYE_HANDBOOK_STORY,,,“红眼巨人”是暴走伽刚特尔的别称。他是僵尸界的巨无霸，拥有令僵尸们无比仰慕的力量…然而他还是没交到女朋友。
-<!MissingKey:V0.4版本更新公告>,,,V0.4版本更新公告
-TOWERDEFENSE_PLANT_FIRENUT_CUSTOM_1_NAME,,,炎头队长
+NPC_TALK_LEVEL3_5_TUTORIAL_6,,,我收回那句话，这雨可太棒了！
+NPC_TALK_LEVEL3_5_TUTORIAL_5,,,哈哈，不管怎么说这可是天降馅饼了！
+NPC_TALK_LEVEL3_5_TUTORIAL_4,,,为什么杂交植物的种子会和雨水一起掉下来？
+TOWERDEFENSE_ZOMBIE_DOLPHINSN_EXPRESTION,,,海豚骑士僵尸迷上了潜水！
+TOWERDEFENSE_ZOMBIE_PRESENTBOX_HANDBOOK_STORY,,,抽奖盒子僵尸不知道自己头顶是什么东西，这个盒子从未开启过，但他预感它一旦打开，可能会放出什么东西。他不清楚那时的自己还算不算自己，但当他踏上草坪时，总有那么一瞬间，他会突然希望有谁将盒子打开。
+TOWERDEFENSE_ZOMBIE_PEASHOOTER_HANDBOOK_STORY,,,面对现在可怕的植物们，普通僵尸想念曾经的豌豆射手。他曾经有一次有机会吃到脑子，但是他本能的当成豌豆吐了出去。
 <!MissingKey:继续游戏>,RESUME,RESUME,继续游戏
-TOWERDEFENSE_PLANT_SNOWSHROOM_CUSTOM_1_ACCESS,,,商店购买（价格8000）
-<!MissingKey:我是高手>,I'm a pro,I'm a pro,我是高手
-TOWERDEFENSE_ZOMBIE_POLEVAULTING_NAME,Pole Vauting Zombie,Pole Vauting Zombie,撑杆僵尸
-TOWERDEFENSE_PLANT_SQUASH_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]1800[/color]
-范围：[color=cc241d]自身周围一格[/color]"
-<!MissingKey:机枪海豚僵尸归来了，所有僵尸——都闪开！>,,,机枪海豚僵尸归来了，所有僵尸——都闪开！
-TOWERDEFENSE_PLANT_RECACTUS_EXPRESTION,,,双发仙人掌可以一次发射两枚穿透尖刺。
-TOWERDEFENSE_ZOMBIE_BACKUPDANCER_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]370 + 270[/color]
+TOWERDEFENSE_ZOMBIE_LADDER_EXPRESTION,,,扶梯僵尸的梯子可以让僵尸们爬过面前的障碍物。
+TOWERDEFENSE_ZOMBIE_BACKUP_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
 伤害：[color=cc241d]100/s[/color]
-可能佩戴：[color=cc241d]路障（仅限被黑橄榄舞王召唤时佩戴）[/color]
+佩戴：[color=cc241d]----[/color]
 类型：[color=cc241d]小型僵尸[/color]
 移速：[color=cc241d]慢[/color]"
-TOWERDEFENSE_PLANT_THREECACTUS_NAME,ThreeCactus,ThreeCactus,三叶仙人掌
-LEVLE_EVENT_CURRENTMAP_USE_STRIPE,CurrentMapUseStripe,CurrentMapUseStripe,使用当前地图限制红线
-TOWERDEFENSE_PLANT_ICESUNMINE_EXPRESTION,,,触发式爆炸型寒光菇！
-<!MissingKey:血量：[color=cc241d]1400 + 500[/color]>,,,"血量：[color=cc241d]1400 + 500[/color]
-伤害：[color=cc241d]200/s（啃食） + 20x2/1.5（射击）[/color]
-佩戴：[color=cc241d]铁桶（一类）、路障（一类）[/color]
-速度：[color=cc241d]快[/color]
-特点1：[color=cc241d]每1.5秒发射两枚追踪尖刺，对最近的植物造成20×2点伤害[/color]
-特点1：[color=cc241d]每次啃食植物都会换行[/color]"
-TOWERDEFENSE_PLANT_WILDPEA_EXPRESTION,,,狂野机枪射手可以朝前方发射霰弹豌豆。
-TOWERDEFENSE_ZOMBIE_GARGANTUAR_REDEYE_NAME,Gargantuar,Gargantuar,暴走伽刚特尔
-TOWERDEFENSE_ZOMBIE_ZOMBONI_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]1350[/color]
-伤害：[color=cc241d]即死（碾压）[/color]
+TOWERDEFENSE_READYSETPLANTS_PLANTS,PLANT!,PLANT!,植物!
+TOWERDEFENSE_PLANT_QUEENSUNFLOWER_CUSTOM_1_ACCESS,,,商店购买（价格15000）
+TOWERDEFENSE_PLANT_CHERRYBOMB_HANDBOOK_STORY,,,“我要‘爆’开了，”樱桃一号说。“不，我们是要‘炸’开了！”它哥哥樱桃二号说。经过激烈的商议之后，它们才统一达成“爆炸”这个说法。
+TOWERDEFENSE_ZOMBIE_FLAG_HANDBOOK_STORY,,,无需置疑：摇旗僵尸喜爱脑子，但在私下里他也迷恋旗帜。或许是因为旗帜上也画有脑子吧，这很难说。
+TOWERDEFENSE_PLANT_FIRENUT_CUSTOM_1_ACCESS,,,每日挑战 2025/7月 累计完成7天
+TOWERDEFENSE_ZOMBIE_SHADOW_HANDBOOK_STORY,,,所有僵尸都有自己的影子，但他们更加羡慕影子僵尸的影子，因为他的影子总是能够自由移动，而且很板正。“想知道为什么吗，因为身正不怕影子斜。”影子僵尸如是说。
+TOWERDEFENSE_PLANT_TABOODOOMSHROOM_NAME,Taboo Doomshroom,Taboo Doomshroom,禁忌毁灭菇
+<!MissingKey:重新开始>,RESTART,RESTART,重新开始
+TOWERDEFENSE_PLANT_MELONPULTSPIKE_CUSTOM_1_ACCESS,,,每日挑战 2025/9月 累计完成21天
+<!MissingKey:墓碑开始松动!>,THE TOMBSTONE IS STARTING TO LOOSEN,THE TOMBSTONE IS STARTING TO LOOSEN,墓碑开始松动!
+NPC_TALK_LEVEL1_1_TUTORIAL_1,,,你好，我的邻居。
+NPC_TALK_LEVEL1_1_TUTORIAL_3,,,那帮僵尸还在源源不断地进攻，而你的植物却不知所踪？
+NPC_TALK_LEVEL1_1_TUTORIAL_2,,,我听说了你的情况，所以赶来了。
+NPC_TALK_LEVEL1_1_TUTORIAL_5,,,没关系！你的好邻居：疯狂戴夫，特此来帮助你了！
+NPC_TALK_LEVEL1_1_TUTORIAL_4,,,看来是埃德加那家伙在作怪。
+NPC_TALK_LEVEL1_1_TUTORIAL_7,,,这些全新的——杂交植物！
+NPC_TALK_LEVEL1_1_TUTORIAL_6,,,我要给你看看我的压箱底的好东西...
+NPC_TALK_LEVEL1_1_TUTORIAL_9,,,来，试着种植一下吧！
+NPC_TALK_LEVEL1_1_TUTORIAL_8,,,比如这株豌豆向日葵！集合生产和攻击，为你节省一倍的草坪空间！
+TOWERDEFENSE_ZOMBIE_GATLINGPEA_HANDBOOK_STORY,,,机枪僵尸很生气：曾经的他是那么威风，但据说越来越多僵尸都开始配备了机枪，这使他的威严黯然失色。他正在研究更厉害的狂野机枪。
+TOWERDEFENSE_ZOMBIE_GATLINGDOLPHINRIDER_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]500[/color]
+伤害：[color=cc241d]150/s（挥砍）或 100/s（啃食）+ 20x4/次（射击）[/color]
 佩戴：[color=cc241d]----[/color]
-类型：[color=cc241d]车类僵尸[/color]
-速度：[color=cc241d]慢[/color]
-特点：[color=cc241d]碾压植物，留下不可种植的冰道[/color]
-弱点：[color=441D62]地刺[/color]"
-TOWERDEFENSE_SHOVEL_GOLD_HANDBOOK_EXPRESTION,,,特点：移除植物，并回收20%阳光。
-TOWERDEFENSE_PLANT_CATPOT_NAME,CatPot,CatPot,猫砂盆
-TOWERDEFENSE_PLANT_FIRESNOWPEA_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-攻速：[color=cc241d]（20或20x2）/1.5s[/color]
+类型：[color=cc241d]小型僵尸[/color]
+速度：[color=cc241d]快，跳跃后慢[/color]
+特点：[color=cc241d]发射四颗豌豆攻击植物，并能够跃过碰到的第一株植物[/color]
+弱点：[color=441D62]高坚果[/color]"
+TOWERDEFENSE_PLANT_SUNBOMB_EXPRESTION,,,能将僵尸转化为阳光！
+TOWERDEFENSE_ZOMBIE_JALAPENO_NAME,Hot Pepper Zombie,Hot Pepper Zombie,火爆辣椒僵尸
+TOWERDEFENSE_PLANT_GLOOMPULT_NAME,Gloompult,Gloompult,忧郁菇投手
+TOWERDEFENSE_PLANT_FIRENUT_CUSTOM_1_NAME,,,炎头队长
+TOWERDEFENSE_PLANT_JALAPENO_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]1800（火焰伤害）[/color]
 范围：[color=cc241d]自身所在一整行[/color]
-特点：[color=cc241d]点击该植物可以转换方向[/color]"
-TOWERDEFENSE_ZOMBIE_DUCK_NAME,Yellow Duck Zombie,Yellow Duck Zombie,小黄鸭僵尸
-BGM_BACKYARD,Back Yard (Day),Back Yard (Day),后院(白天)
-TOWERDEFENSE_PLANT_WILDPEA_HANDBOOK_STORY,,,"作为机枪射手中最勇猛的机枪，在战场上的火力如同天上下陨石一样恐怖。
-哦对了，他的帽子其实是从隔壁家前院拿来的灌木丛，披风也是隔壁家的床单。"
-START_GAME,Start,Start,开始游戏
+特性：[color=C71585]清除冰道与冰球[/color]
+特点：[color=cc241d]并解除植物与僵尸身上的减速和冻结效果[/color]"
+TOWERDEFENSE_PLANT_PUMPKINFIRE_EXPRESTION,,,火炬树桩喝了酒，火势一发不可收拾！
+TOWERDEFENSE_PLANT_SCAREDYSHROOM_EXPRESTION,,,胆小菇是一种远程射手，但敌人接近后会躲起来。
+TOWERDEFENSE_PLANT_SNOWWOOD_EXPRESTION,,,点燃豌豆、冰豆、火球为具有减速的冰焰豌豆。
+LOAD_CHARACTER,Load character,Load character,加载植物和僵尸
+<!MissingKey:毁灭菇可以摧毁大范围的僵尸，并留下一个不能种植物的弹坑。>,,,毁灭菇可以摧毁大范围的僵尸，并留下一个不能种植物的弹坑。
+TOWERDEFENSE_ZOMBIE_FOOTBALL_EXPRESTION,,,橄榄球僵尸的表演秀。
+TOWERDEFENSE_PLANT_MAGNETNUT_HANDBOOK_STORY,,,“物理学家争论的焦点从来不在于为什么一个坚果能产生金属作用力，”磁力坚果说道，“其实在哲学层面就很好解释了，我思故我在。”磁力坚果坚信自己读完王阳明心学会更有所收获。
+TOWERDEFENSE_ZOMBIE_BACKUP_EXPRESTION,,,当迪斯科僵尸摇摆时，四名舞者结伙出现。
+LEVLE_EVENT_TIPS_PLAY,TipsPlay,TipsPlay,播放警告
+TOWERDEFENSE_PLANT_SNOWWOOD_HANDBOOK_STORY,,,"头冠在火炬树桩家族都是很重要的物品，谁的火冠大，谁的地位就越高。“我曾想通过带一个皇冠来凸现我的火冠的，可惜他们都说我老土。”冰炬树桩说，“现在，有了这个冰冠，我也成了火炬树桩中地位高的那一个了。”
+“这不是寒冰射手的头饰吗…”豌豆射手小声说道。"
+PLAYERS_MORDEN_LEVEL_NAME,Front Yard 1 - {LevelNumber},Front Yard 1 - {LevelNumber},前院告急1 - {LevelNumber}
+TOWERDEFENSE_ZOMBIE_YETIDIGGER_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]100 + 800[/color]
+伤害：[color=cc241d]100/s[/color]
+佩戴：[color=cc241d]矿工头盔（一类）[/color]
+类型：[color=cc241d]矿工僵尸[/color]
+速度：[color=cc241d]快，而后慢（出土后）[/color]
+特点：[color=cc241d]挖地道，从第2列出来反向走10秒后再次转向[/color]
+亡语：[color=cc241d]死亡后掉落1枚随机种类货币（银币80%，金币18%，钻石2%）[/color]"
+TOWERDEFENSE_ZOMBIE_DOLPHINRIDER_HANDBOOK_STORY,,,那海豚其实也是个僵尸。
+TOWERDEFENSE_PLANT_SCAREDYSUNSHROOM_CUSTOM_1_NAME,,,秘制汉堡
+TOWERDEFENSE_ZOMBIE_JACKSONX_NAME,Dancing Zombie,Dancing Zombie,精英舞王僵尸
+TOWERDEFENSE_ZOMBIE_GARGANTUARZOMBONI_HANDBOOK_STORY,,,退休的雪橇车僵尸用毕生所学传教伽刚特尔，并为他定制了一辆巨型雪橇车。
+<!MissingKey:蹦极僵尸从天而降，偷走你的植物。>,,,蹦极僵尸从天而降，偷走你的植物。
+<!MissingKey:特点：受到该效果的僵尸会在持续时间内减缓移动速度。>,,,"特点：受到该效果的僵尸会在持续时间内减缓移动速度。
+进阶：无
+互斥：受到火焰效果时会立即结束该效果"
+SHOP_NPC_TALK_PITCHFORK,,,这把草耙能给僵尸当头一棒！它会自动摆放在僵尸的必经之路上！
+NPC_TALK_LEVEL3_1_TUTORIAL_4,,,放轻松，像以前一样打飞那帮僵尸的脑袋吧！
+NPC_TALK_LEVEL3_1_TUTORIAL_3,,,不过没关系！在杂交植物的帮助下，僵尸想闯进来可没那么容易！
+TOWERDEFENSE_PLANT_CACTUSBLOVER_HANDBOOK_STORY,,,仙人三叶草喜欢速战速决，尽管吹出一大堆尖刺容易让他肌肉疲劳，但他依然乐此不疲。只是他还要提防三叶仙人掌的碎碎念。
+NPC_TALK_LEVEL3_1_TUTORIAL_2,,,瞧见那些泳圈了吗？你的后院看样子要热闹起来了。
+NPC_TALK_LEVEL3_1_TUTORIAL_1,,,看来僵尸们的思考回路没有多大变化。
+TOWERDEFENSE_PLANT_SUNBEAN_EXPRESTION,,,阳光豆，不占位置的阳光作物，还会长大！
+<!MissingKey:密码>,PASSWORD,PASSWORD,密码
+SHOP_NPC_TALK_PLANT_FIRETALLNUT,,,把这张紫卡种在你的火炬坚果/冰炬树桩上，把它升级成冰炬高坚果！
+TOWERDEFENSE_PLANT_SUNMINE_CUSTOM_1_NAME,,,地雷龟
+TOWERDEFENSE_PLANT_GARGANTUARSHROOM_CUSTOM_1_NAME,,,科学怪人
+LOAD_MOWER,Load mower,Load mower,加载小推车
+TOWERDEFENSE_ZOMBIE_BALLOON_NAME,Balloon Zombie,Balloon Zombie,气球僵尸
+TOWERDEFENSE_PLANT_JALANUT_NAME,Jalapeno Nut,Jalapeno Nut,火爆坚果
+TOWERDEFENSE_ZOMBIE_BUCKETHEAD_EXPRESTION,,,他的铁桶头盔，能极大程度的承受伤害。
+<!MissingKey:游戏暂停>,PAUSE,PAUSE,游戏暂停
+<!MissingKey:大喷菇>,Giant puffball,Giant puffball,大喷菇
+TOWERDEFENSE_ZOMBIE_FOOTBALL_NAME,Football Zombie,Football Zombie,橄榄球僵尸
+TOWERDEFENSE_TIPS_DAY,SUN IS RISING,SUN IS RISING,天亮了！
+TOWERDEFENSE_PLANT_CORNTROP_HANDBOOK_STORY,,,戴夫打翻了一罐黄油玉米粒，不小心洒在了地刺上，于是罐头改变了地刺的颜色和尖刺。尽管他现在看起来像一块玉米挞，但僵尸再也不能“脚滑”地轻易通过了。
+TOWERDEFENSE_PLANT_TANGLEKELPH_EXPRESTION,,,魅惑海草能够拖僵尸下水，将其魅惑后放出。
+TOWERDEFENSE_ZOMBIE_NUT_EXPRESTION,,,据说这种僵尸跟坚果一样抗揍。
+AWARD_PACKET_PLANT,You got a new plant!,You got a new plant!,你获得了一株新植物!
+<!MissingKey:你对植物大战僵尸这款游戏的熟悉程度>,How familiar are you with Plants vs. Zombies?,How familiar are you with Plants vs. Zombies?,你对植物大战僵尸这款游戏的熟悉程度
+TOWERDEFENSE_PLANT_CHOMPERBLOW_NAME,Chomper Blow,Chomper Blow,三叶大嘴花
+SHOP_NPC_TALK_PLANT_WILDPEA_CUSTOM_0,,,狂野机枪射手的皮肤！你可以在图鉴装扮你的植物！
+LEVLE_EVENT_CHAGE_PROTAL_POS,ChangeProtalPos,ChangeProtalPos,改变传送门位置
 TOWERDEFENSE_TIPS_HUGEWAVE,A HUGE WAVE OF ZOMBIES IS APPROACHINE!,A HUGE WAVE OF ZOMBIES IS APPROACHINE!,一大波僵尸正在接近!
-TOWERDEFENSE_PLANT_GATLINGPEA_HANDBOOK_STORY,,,当机枪射手宣布他要服役的时候，他的父母很为它担心，他们异口同声地对他说：“亲爱的，这太危险了。”但机枪射手拒绝妥协：“生活本就是危险的。”他这样回答，此时他的眼睛里正闪烁着钢铁般的信念。
-TOWERDEFENSE_PLANT_PEAPOT_HANDBOOK_STORY,,,“我是个花盆，但我也是一株豌豆，是不是很意外？”
-TOWERDEFENSE_PLANT_SUNFLOWERPEA_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-生产：[color=cc241d]25阳光/25秒[/color]
+TOWERDEFENSE_PLANT_PEASHOOTERSINGLE_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
 威力：[color=cc241d]20/1.5s[/color]
 范围：[color=cc241d]前方一行[/color]"
-TOWERDEFENSE_ZOMBIE_JACKSON_HANDBOOK_STORY,,,舞王僵尸的最新唱片“抓住脑子啃啊啃”在僵尸界的人气正急速飙升。
-MAP_FRONTLAWN_EMPTY_BIG,"Front Yard (Day,Empty,Big Map)","Front Yard (Day,Empty,Big Map)",前院(白天裸地大地图)
-<!MissingKey:墓碑吞噬者>,Grave Monument Eater,Grave Monument Eater,墓碑吞噬者
-TOWERDEFENSE_PLANT_ICESUNSHROOM_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]20[/color]
-[color=cc241d]白天会睡觉[/color]
-范围：[color=cc241d]全屏[/color]
-特性：[color=C71585]清除火球、白天会睡觉[/color]
-特点：[color=cc241d]一次性植物，释放寒冰菇效果冻结全屏僵尸3秒+减速15秒，且每冻结一个僵尸掉落15阳光[/color]"
-TOWERDEFENSE_PLANT_SNOWWOOD_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]40（25%单格溅射伤害）[/color]
-特性：[color=C71585]点燃豌豆为冰焰豌豆[/color]
-特点：[color=cc241d]自身不会攻击，但会将经过的豌豆、冰豆、火球点燃成具有减速的冰焰豌豆[/color]"
-TOWERDEFENSE_SHOVEL_JALAPENO_EXPRESTION,,,移除植物时释放一行火焰！
-<!MissingKey:睡莲从不抱怨，它也从来不想知道发生了什么事。在它身上种植物，它也不会说什么。难道，它有什么惊奇想法或者可怕的秘密？没人知道。睡莲把这些都埋藏在心底。>,,,睡莲从不抱怨，它也从来不想知道发生了什么事。在它身上种植物，它也不会说什么。难道，它有什么惊奇想法或者可怕的秘密？没人知道。睡莲把这些都埋藏在心底。
-TOWERDEFENSE_PLANT_GARGANTUARSHROOM_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-特性：[color=C71585]白天会睡觉[/color]
-特点：[color=cc241d]吃掉它的僵尸会变成魅惑红眼巨人，巨人锤击伤害为1800（单体）[/color]"
-TOWERDEFENSE_ZOMBIE_SLEEP_EXPRESTION,,,小摔哥僵尸讨厌早八！
-TOWERDEFENSE_PLANT_GARGANTUARSHROOM_HANDBOOK_STORY,,,"这株植物是戴夫活捉了一只红眼巨人研究出来的，他的身上早就没有魅惑菇的半点特征了。在僵尸吃掉红眼菇的时候，那巨人的冤魂便会寄生到那个僵尸里为戴夫战斗…“
-你们在干什么？”豌豆射手打开灯。“这只是一个发霉的魅惑菇而已啦！”"
-TOWERDEFENSE_ZOMBIE_ARMORED_GARGANTUAR_EXPRESTION,,,全副武装的伽刚特尔！
-TOWERDEFENSE_PLANT_FIRESNOWPEA_EXPRESTION,,,冰火裂荚射手能向两边同时发射冰豆和火球
-<!MissingKey:海豚骑士僵尸迷上了潜水！>,,,海豚骑士僵尸迷上了潜水！
-TOWERDEFENSE_ZOMBIE_JACKBOX_NAME,Toy Box Zombie,Toy Box Zombie,玩具匣僵尸
-TOWERDEFENSE_PLANT_MAGNETNUT_EXPRESTION,,,磁力坚果可以吸走僵尸携带的金属制品。
-MAINMENU,Main Menu,Main Menu,主菜单
-TOWERDEFENSE_PLANT_JALACHERRYBOMB_HANDBOOK_STORY,,,“我要‘爆’了！”“不，应该是我要‘炸’了！”樱桃炸弹两兄弟在“爆炸”这个词上争论许久——不过火“爆”辣椒的出现平息了这场争论。
-INGAME_DIFFICULT,Difficulty:%s,Difficulty:%s,难度:%s
-SHOP_NPC_TALK_PLANT_TWINSUNSHROOM,,,把这张紫卡种在你的阳光向日葵上，把它升级成双子阳光向日葵！
-TOWERDEFENSE_PLANT_GRAVEMINE_HANDBOOK_STORY,,,"“每次都是这样，为什么要让我来打扫杂草。”
-“不如你每次都带上我吧，这样就不需要再打扫一遍那个地方了。”土豆地雷对墓碑吞噬者说道。"
-TOWERDEFENSE_MOWER_SUN_EXPRESTION,,,碾压僵尸可以获得阳光！
-LOGIN_ERROR_EMAIL_EMPTY,Email is empty,Email is empty,邮箱为空
-TOWERDEFENSE_TIPS_NIGHT_DEEP,SUN IS GOING UP,SUN IS GOING UP,太阳开始慢慢升起了！
-TOWERDEFENSE_PLANT_ICESUNMINE_NAME,Ice SunMine,Ice SunMine,寒光土豆雷
-TOWERDEFENSE_PLANT_SCAREDYSUNSHROOM_NAME,ScaredySunShroom,ScaredySunShroom,阳光胆小菇
-SHOP_NPC_TALK_SHOVEL_DIAMOND,,,钻石铲，铲掉植物能回收大量阳光！
-SHOP_NPC_TALK_PLANT_GATLINGCAT,,,把这张紫卡种在你的豌豆香蒲上，把它升级成机枪香蒲！
 TOWERDEFENSE_PLANT_SNOWPEA_NAME,Ice Archer,Ice Archer,寒冰射手
-TOWERDEFENSE_PLANT_SUNSHROOM_EXPRESTION,,,会长大的向日葵，阳光产量No.2！
-TOWERDEFENSE_PLANT_GATLINGPEA_EXPRESTION,,,机枪射手可以一次发射四颗豌豆
-TOWERDEFENSE_ZOMBIE_POLESTRIKER_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]1400 + 270[/color]
-伤害：[color=cc241d]200/s[/color]
-佩戴：[color=cc241d]橄榄头盔（一类）[/color]
-类型：[color=cc241d]小型僵尸[/color]
-移速：[color=cc241d]快[/color]
-特点：[color=cc241d]一次性跃过2格距离[/color]
-弱点：[color=441D62]磁力菇、高坚果[/color]"
-INGAME_RESELECT,RESELECT LAST CARD,RESELECT LAST CARD,重选上次卡片
-TOWERDEFENSE_PLANT_GLOOMPULT_NAME,Gloompult,Gloompult,忧郁菇投手
-SHOP_NPC_TALK_PLANT_ICESUNMINE,,,把这张紫卡种在你的阳光土豆雷上，把它升级成寒光土豆雷！
-BGM_LOONBOON,Loonboon,Loonboon,小游戏
-TOWERDEFENSE_READYSETPLANTS_READY,Ready..,Ready..,准备..
-TOWERDEFENSE_PLANT_SUNBEAN_NAME,SunBean,SunBean,阳光豆
-TOWERDEFENSE_ZOMBIE_NUT_HANDBOOK_STORY,,,坚果僵尸喜爱保龄球，于是在路边捡了个保龄球头套戴在脑袋上。但没人告诉他那其实是个坚果。
-TOWERDEFENSE_PLANT_SUNFLOWERPEA_CUSTOM_1_STORY,,,天使与恶魔并不一定针锋相对，有时他们也会并肩而行。
-MAP_FRONTLAWN_NIGHT_EMPTY,"Front Yard (Night,Empty)","Front Yard (Night,Empty)",前院(夜晚裸地)
-TOWERDEFENSE_PLANT_JALASUNSHROOM_EXPRESTION,,,辣椒阳光菇能生产辣椒阳光，并伴随火焰。
-<!MissingKey:蹦极僵尸最爱冒险。毕竟，如果你不再活着，那再体验次死亡又有何妨呢？>,,,蹦极僵尸最爱冒险。毕竟，如果你不再活着，那再体验次死亡又有何妨呢？
-TOWERDEFENSE_MOWER_DEFAULT_HANDBOOK_EXPRESTION,,,特点：[color=cc241d]无[/color]
-TOWERDEFENSE_SHOVEL_DEFAULT_HANDBOOK_STORY,,,戴夫送你的小铲子！现在有了其他强力的铲子，它或许也可以放个假了。
-TOWERDEFENSE_PLANT_WALLNUT_NAME,Wallnut,Wallnut,坚果
+TOWERDEFENSE_PLANT_FIRESNOWPEA_NAME,Ice Fire Splitting Archer,Ice Fire Splitting Archer,冰火裂荚射手
+TOWERDEFENSE_PLANT_CACTUSBLOVER_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]20×20/行[/color]
+范围：[color=cc241d]全场各行[/color]
+特性：[color=C71585]吹退僵尸[/color]
+特点：[color=cc241d]吹退全屏僵尸0.5格（大型僵尸，巨人，车除外），吹走空中小型僵尸（如气球僵尸和多彩气球）和浓雾，并在每行释放20枚尖刺。[/color]"
+TOWERDEFENSE_SHOVEL_JALAPENO_HANDBOOK_EXPRESTION,,,特点：[color=cc241d]铲掉植物时，释放一次整行的火焰效果，对本行僵尸造成等同于植物价格的火焰伤害（铲掉价格为0的植物不触发效果）[/color]
+TOWERDEFENSE_ZOMBIE_DARKFOOTBALL_NAME,Dark football zombie,Dark football zombie,暗黑橄榄球僵尸
+TOWERDEFENSE_ZOMBIE_SNORKLE_EXPRESTION,,,潜水僵尸可以在水下潜行。
+TOWERDEFENSE_ZOMBIE_DOLPHINSN_HANDBOOK_STORY,,,为了在水下骑乘海豚，海豚骑士借来了一套潜水装备。虽然没有多余的面罩留给他的海豚，但他并不担心海豚会被淹死——诚然海豚需要呼吸，但别忘了，那海豚也是个僵尸。
+TOWERDEFENSE_PLANT_GATLINGPOT_NAME,Gatlingpot,Gatlingpot,机枪花盆
 TOWERDEFENSE_PLANT_WINTERMELONSHROOM_HANDBOOK_STORY,,,这个冰瓜条纹的帽子让大喷菇一下变成了蘑菇家族里最特殊的一个，每个蘑菇都在惊讶他的伞盖就像冬天的凉意，给了他们与众不同的感觉…哦不，他要打喷嚏了，大家快躲开，躲开！
-TOWERDEFENSE_PLANT_CHERRYBOMB_EXPRESTION,,,樱桃炸弹能炸掉一定区域内所有僵尸。他们一种下就会立刻引爆，所以请把他们种在僵尸们的身边。
-TOWERDEFENSE_ZOMBIE_BALLOONCOLOUR_HANDBOOK_STORY,,,多彩气球僵尸常年在游乐场和公园搜集气球，在他眼里气球似乎与脑子一样有吸引力。以至于自己宝贝的气球被打破时，他比谁都急着想要离开场地，却没注意到自己飞错了方向。
-TOWERDEFENSE_PLANT_PEASHOOTERSINGLE_HANDBOOK_STORY,,,一棵植物，怎么能如此快地生长，并发射如此多的豌豆呢？豌豆射手回答：“努力工作，奉献自己，再加上一份阳光，高纤维和氧化碳均衡搭配，这种健康早餐让一切成为可能。”
-TOWERDEFENSE_ZOMBIE_DIGGER_HANDBOOK_STORY,,,矿工僵尸每周花费三天时间申请他的挖掘许可证。
-TOWERDEFENSE_ZOMBIE_JACKSON_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]2200 + 500[/color]
-伤害：[color=cc241d]100/s[/color]
-可能佩戴：[color=cc241d]黑橄榄头盔（一类）[/color]
-类型：[color=cc241d]小型僵尸[/color]
-移速：[color=cc241d]快（出场），而后慢（召唤后）[/color]
-特点：[color=cc241d]召唤伴舞僵尸（佩戴黑橄榄头盔时召唤路障伴舞僵尸）[/color]"
-TOWERDEFENSE_PLANT_CATPOT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-伤害：[color=cc241d]20×2/1.5s[/color]
-范围：[color=cc241d]全屏追踪[/color]
-特性：[color=C71585]可在裸地上承载植物[/color]
-特点：[color=cc241d]发射的追踪尖刺会无视二类防具[/color]"
-TOWERDEFENSE_PLANT_FIRENUT_EXPRESTION,,,防守整活两不误！
-<!MissingKey:寒冰菇，能短暂的冻结屏幕上所有僵尸。>,,,寒冰菇，能短暂的冻结屏幕上所有僵尸。
-TOWERDEFENSE_ZOMBIE_ARMORED_GARGANTUAR_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d](1100/2200) + (1100/3000) + 3000[/color]
-伤害：[color=cc241d]即死（锤击）[/color]
-佩戴：[color=cc241d]铁桶/黑橄榄头盔/废稿头盔（一类） & 铁栅门/防爆门（二类）[/color]
-类型：[color=cc241d]大型僵尸[/color]
-速度：[color=cc241d]非常慢[/color]
-特性：[color=C71585]锤扁植物[/color]
-特点：[color=cc241d]低于一定血量时会丢出小鬼僵尸；当佩戴废稿头盔时，免疫控制[/color]
-弱点：[color=441D62]磁力菇[/color]"
-TOWERDEFENSE_ZOMBIE_GATLINGPEA_HANDBOOK_STORY,,,机枪僵尸很生气：曾经的他是那么威风，但据说越来越多僵尸都开始配备了机枪，这使他的威严黯然失色。他正在研究更厉害的狂野机枪。
-TOWERDEFENSE_ZOMBIE_PRESENTBOX_HANDBOOK_STORY,,,抽奖盒子僵尸不知道自己头顶是什么东西，这个盒子从未开启过，但他预感它一旦打开，可能会放出什么东西。他不清楚那时的自己还算不算自己，但当他踏上草坪时，总有那么一瞬间，他会突然希望有谁将盒子打开。
-MAP_OUTSIDE_BACKYARD_NIGHT,Outside Back Yard Night,Outside Back Yard Night,外部后院(夜晚)
-BGM_CEREBRAW,Brain War,Brain War,解迷
-TOWERDEFENSE_PLANT_WINTERMELONSHROOM_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]（20+80）/1.5s[/color]
-范围：[color=cc241d]前方四格[/color]
-特性：[color=C71585]白天会睡觉[/color]
-特点：[color=cc241d]寒冰孢子对范围内所有僵尸造成伤害并附带15秒减速，冰瓜造成80点单体伤害+1*3范围20%溅射伤害+15秒减速[/color]"
-SHOP_PLANT_SUNSHROOM_CUSTOM_1,,,草耙
-TOWERDEFENSE_ZOMBIE_SUNFLOWER_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
-伤害：[color=cc241d]100/s[/color]
-佩戴：[color=cc241d]----[/color]
-类型：[color=cc241d]小型僵尸[/color]
-速度：[color=cc241d]慢[/color]
-特点：[color=cc241d]每10秒生产一个脑光，扣除你25点阳光[/color]"
-TOWERDEFENSE_PLANT_SUNBEAN_EXPRESTION,,,阳光豆，不占位置的阳光作物，还会长大！
-LOAD_MOD,Load mod,Load mod,加载模组
-BGM_ULTIMATE_BATTLE,Ultimate Battle,Ultimate Battle,决战
-<!MissingKey:水下的海草确实具有迷惑性，溺水者常常觉得它不足以将他们困于水中，但这也造就了悲剧的发生。“我也不想的，但他们只会一直往前游，我可怜他们，就把他们放回去了。”>,,,水下的海草确实具有迷惑性，溺水者常常觉得它不足以将他们困于水中，但这也造就了悲剧的发生。“我也不想的，但他们只会一直往前游，我可怜他们，就把他们放回去了。”
-TOWERDEFENSE_PLANT_CATPOT_HANDBOOK_STORY,,,“你也许不知道，”猫尾草说，“我的尾巴才是本体。”她摘掉帽子，里面是空的。于是戴夫往里面填上了土。“叫猫盆就得了，谁再叫猫砂盆我就跟谁急！”
-TOWERDEFENSE_PLANT_PEACAT_CUSTOM_1_STORY,,,他还是不太喜欢这顶猫耳睡帽，但看在这套衣服很舒适的份上，还是穿着吧。
-MAP_FRONTLAWN_NIGHT_BIG,"Front Yard (Night,Big Map)","Front Yard (Night,Big Map)",前院(夜晚大地图)
-<!MissingKey:寒冰菇皱着眉头，倒不是因为它不高兴或不满意，只是因为，它儿时因受创伤而遗留下了面瘫。>,,,寒冰菇皱着眉头，倒不是因为它不高兴或不满意，只是因为，它儿时因受创伤而遗留下了面瘫。
-TOWERDEFENSE_ZOMBIE_IMP_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
-伤害：[color=cc241d]100/s[/color]
-佩戴：[color=cc241d]----[/color]
-类型：[color=cc241d]小型僵尸[/color]
-速度：[color=cc241d]慢[/color]"
-NEXTLEVEL,Next level,Next level,下一关
-TOWERDEFENSE_PLANT_PRESENTBOX_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-范围：[color=cc241d]自身所在格[/color]
-特性：[color=C71585]随机植物[/color]
-特点：[color=cc241d]随机开出一株植物，夜间植物不会睡觉[/color]"
-NPC_TALK_LEVEL1_10_TUTORIAL_3,,,它们似乎记不清离开你之后发生的事情了…
-NPC_TALK_LEVEL1_10_TUTORIAL_2,,,我刚刚在你的草坪上发现了一些植物！
-TOWERDEFENSE_PLANT_SUNBOMB_CUSTOM_1_NAME,,,活力双子
-NPC_TALK_LEVEL1_10_TUTORIAL_1,,,一个好消息，伙计！
-TOWERDEFENSE_PLANT_JALANUT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]4000[/color]
-反伤：[color=cc241d]40/1.5s（火焰伤害）[/color]
-特性：[color=C71585]赋予红温、亡语清除冰道与冰球[/color]
-特点：[color=cc241d]使啃咬自己的僵尸每1.5秒受到40点火焰伤害，抵消减速与冻结；并使其暂时进入红温状态，直至结束啃咬[/color]
-亡语：[color=cc241d]释放一次火爆辣椒效果[/color]
-红温状态：[color=cc241d]该状态下的僵尸受到的火焰伤害翻倍[/color]"
-LOAD_PACKETBANK,Load packetbank,Load packetbank,加载卡牌库
-TOWERDEFENSE_ZOMBIE_FLAG_NAME,Flag Zombie,Flag Zombie,摇旗僵尸
-NPC_TALK_LEVEL1_10_TUTORIAL_6,,,我们也做好120%的应对吧！传送带启动！
-NPC_TALK_LEVEL1_10_TUTORIAL_5,,,僵尸似乎准备在天黑前发起一波总攻。
-NPC_TALK_LEVEL1_10_TUTORIAL_4,,,不过，它们仍然能在接下来的战斗中助你一臂之力！
-MAP_OUTSIDE_FRONTLAWN_NIGHT,Outside Front Yard Night,Outside Front Yard Night,外部前院(夜晚)
-TOWERDEFENSE_PLANT_ICENUT_HANDBOOK_STORY,,,坚果从冰箱出来后，赶紧多穿了几件衣服。但让他没想到的是：衣服也被冻住了……
-TOWERDEFENSE_ZOMBIE_NORMAL_NAME,Normal Zombie,Normal Zombie,普通僵尸
-TOWERDEFENSE_PLANT_CORNTROP_EXPRESTION,,,爆胎与黄油玉米的艺术。
-TOWERDEFENSE_PLANT_SNOWSHROOM_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]50/颗[/color]
-范围：[color=cc241d]全屏[/color]
-特性：[color=C71585]清除火球、白天会睡觉[/color]
-特点：[color=cc241d]不被索敌，在场时随机位置每秒天降50颗寒冰豌豆，持续8秒；消失后释放寒冰菇效果，冻结全屏僵尸3秒+15秒减速[/color]"
-TOWERDEFENSE_PLANT_SUNBOMB_CUSTOM_1_ACCESS,,,每日挑战 2025/7月 累计完成14天
-TOWERDEFENSE_PLANT_SUNMINE_CUSTOM_1_STORY,,,暗中观察.jpg
-TOWERDEFENSE_ZOMBIE_SQUASH_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
-伤害：[color=cc241d]即死（压扁）[/color]
-佩戴：[color=cc241d]----[/color]
-类型：[color=cc241d]小型僵尸[/color]
-速度：[color=cc241d]快[/color]
-特点：[color=cc241d]用脑袋压扁碰到的第一株植物[/color]"
-TOWERDEFENSE_PLANT_FIRETALLNUT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]8000[/color]
-威力：[color=cc241d]40/1.5s（对靠近的僵尸）[/color]
-范围：[color=cc241d]自身所在格[/color]
-特性：[color=C71585]阻挡僵尸跳跃、点燃豌豆为冰焰豌豆、紫卡植物[/color]
-特点1：[color=cc241d]点燃豌豆为冰焰豌豆（40伤害，25%单格溅射伤害），对靠近的僵尸每1.5秒造成40点冰焰伤害[/color]
-特点2：[color=cc241d]种在冰炬树桩上会返还75阳光[/color]
-紫卡植物：[color=0000FF]需要种植在火炬坚果或冰炬树桩上[/color]"
-TOWERDEFENSE_PLANT_SUNSHROOM_CUSTOM_2_STORY,,,撑起遮阳伞，草坪上的向日葵陪你一起度过炎热的盛夏～
-TOWERDEFENSE_ZOMBIE_SNOWPEA_NAME,SnowPea Zombie,SnowPea Zombie,寒冰射手僵尸
-TOWERDEFENSE_PLANT_JALANUT_EXPRESTION,,,那天坚果墙居然也在场！
-TOWERDEFENSE_MOWER_SUN_HANDBOOK_EXPRESTION,,,特点：[color=cc241d]替换草坪小推车，每碾压一只僵尸掉落25点阳光
-TOWERDEFENSE_PLANT_PLANTERNSIX_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]20/1.5s（光环伤害）[/color]
-光环范围：[color=cc241d]3x3[/color]
-特性：[color=C71585]驱散一定范围的迷雾[/color]
-特点：[color=cc241d]减速并伤害光环范围内的所有僵尸[/color]
-亡语：[color=cc241d]向六个方向各发射10枚子弹，分别为火球、冰豆、豌豆（对称式发射）[/color]"
-SHOP_NPC_TALK_PITCHFORK,,,这把草耙能给僵尸当头一棒！它会自动摆放在僵尸的必经之路上！
-TOWERDEFENSE_ZOMBIE_SHADOW_NAME,Shadow Zombie,Shadow Zombie,影子僵尸
+TOWERDEFENSE_PLANT_SUNBOMB_HANDBOOK_STORY,,,在是否要从僵尸身上获取阳光的问题上，阳光炸弹和向日葵有过激烈的争执，但是这并不妨碍她在每周四的下午准时参加阳光爱好者俱乐部。
+TOWERDEFENSE_ZOMBIE_DARKFOOTBALL_HANDBOOK_STORY,,,在球场上，暗黑橄榄球僵尸身为队长，总是能表现出300%的热情。他对防守和进攻了如指掌，虽然他还是不懂橄榄球。
+TOWERDEFENSE_PLANT_PUMPKINFIREICE_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]4000[/color]
+威力：[color=cc241d]40/1.5s（冰焰伤害）[/color]
+范围：[color=cc241d]自身周围一格[/color]
+特性：[color=C71585]点燃豌豆为冰焰豌豆、保护植物、紫卡植物、本格植物免疫减速与冻结[/color]
+特点：[color=cc241d]灼烧靠近的僵尸，使其每1.5秒受到40点冰焰伤害[/color]
+紫卡植物：[color=0000FF]需要种植在火焰南瓜头上[/color]"
+<!MissingKey:我是老手>,I'm a veteran,I'm a veteran,我是老手
+TOWERDEFENSE_SHOVEL_JALAPENO_HANDBOOK_STORY,,,一把火辣辣的铲子，冬天拿在手里也很温暖。
+TOWERDEFENSE_PLANT_MELONPULT_HANDBOOK_STORY,,,低调从来不是西瓜投手的风格，“太阳——赐予我——力量，我是草地上最能打的。”他说，“我不是吹牛，瞅瞅那些统计数据，你就会明白了。”
 TOWERDEFENSE_PLANT_THREECACTUS_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
 威力：[color=cc241d]20x3/1.5s[/color]
 范围：[color=cc241d]前方一行[/color]
@@ -492,234 +167,388 @@ TOWERDEFENSE_PLANT_THREECACTUS_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300
 特点：[color=cc241d]攻击时会将本行所有小体型僵尸向后稍微击退（对空中僵尸击退幅度更大）
 会优先跳起来攻击空中僵尸[/color]
 紫卡植物：[color=0000FF]需要种植在双发仙人掌上[/color]"
-TOWERDEFENSE_ZOMBIE_DOLPHINRIDER_NAME,Snorkel Zombie,Snorkel Zombie,海豚骑士僵尸
-TOWERDEFENSE_PLANT_SUNFLOWERPEA_EXPRESTION,,,攻产兼备的植物，梦开始的地方！
-TOWERDEFENSE_PLANT_PUFFPOT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]20/1.5s[/color]
-范围：[color=cc241d]前方三格[/color]
-特性：[color=C71585]白天会睡觉、可在裸地上承载植物[/color]"
-TOWERDEFENSE_ZOMBIE_POLESTRIKER_HANDBOOK_STORY,,,"橄榄撑杆僵尸曾向他的体育教练咨询自己未来的发展方向。
-“你的橄榄球和撑杆跳技术都只能拿50分，所以…”
-“等下，我没叫你把这两项运动结合！”"
-TOWERDEFENSE_PLANT_SUNFLOWERPEA_HANDBOOK_STORY,,,杂交植物们来自于和双子向日葵所诞生的同一个实验室。“但这不代表我们就是兄弟了，”双子向日葵说，“他们的诞生简直就是一场恐怖的悲剧！”
-<!MissingKey:缠绕潜水僵尸>,Tangled Seaweed Zombie,Tangled Seaweed Zombie,缠绕潜水僵尸
-TOWERDEFENSE_PLANT_SCAREDYSHROOM_EXPRESTION,,,胆小菇是一种远程射手，但敌人接近后会躲起来。
-TOWERDEFENSE_PLANT_PLANTERNSIX_NAME,Sixth streetlight flower,Sixth streetlight flower,6号路灯花
-TOWERDEFENSE_ZOMBIE_POLEVAULTING_EXPRESTION,,,撑杆僵尸运用标杆跃过障碍物。
-<!MissingKey:我是老手>,I'm a veteran,I'm a veteran,我是老手
-TOWERDEFENSE_PLANT_TWINSUNSHROOM_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-生产：[color=cc241d]50阳光/25秒，长大后变为100阳光/25秒[/color]
-特性：[color=C71585]紫卡植物[/color]
-特点：[color=cc241d]需要60秒时间成长[/color]
-紫卡植物：[color=0000FF]需要种植在阳光向日葵上[/color]"
-TOWERDEFENSE_PLANT_SUNMINE_NAME,SunMine,SunMine,阳光土豆雷
-TOWERDEFENSE_PLANT_PEAWELL_NAME,Pea Wish Pool,Pea Wish Pool,豌豆许愿池
+TOWERDEFENSE_PLANT_CHOMPERBLOW_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]吞噬（秒杀，仅限小型僵尸）[/color]
+范围：[color=cc241d]前方一行[/color]
+特点：[color=cc241d]当本行前方有可吞噬僵尸时，旋转扇叶将其吸过来吃掉；消化完毕后向前吹风，将前方全部小体型飞行僵尸吹退3格、地面小体型僵尸吹退1格[/color]"
+<!MissingKey:南瓜壳，可以用它的外壳保护着其它的植物。>,,,南瓜壳，可以用它的外壳保护着其它的植物。
 TOWERDEFENSE_PLANT_PEACAT_HANDBOOK_STORY,,,“听说大家都喜欢猫娘，于是我勉为其难的穿上了这副装扮。这样，你的老伙计，豌豆射手，也能有更多的出场机会了。”顺便一提，他不喜欢猫尾草送给他的帽子。
-TOWERDEFENSE_PLANT_SUNBEAN_HANDBOOK_STORY,,,阳光豆是坚定的清洁能源支持者。“也许你会想说，太阳能本身不就是清洁能源吗？”阳光豆说，“但这不是重点！重点在于利用率，我们致力于覆盖每一寸可利用的草坪！”
-TOWERDEFENSE_PLANT_SNOWSHROOM_HANDBOOK_STORY,,,“冬天来了，春天还会远吗？”雪花冰川菇渴望春天的到来，身为寒带地区的植物，他一年大部分时间里都生活在冰雪世界。也许他并不喜欢寒冷，因为他总会在一年中最温暖的时候拉上自己的好友出去钓鱼。其实他还是寒冰射手的启蒙老师。
-TOWERDEFENSE_PLANT_FIRESNOWPEA_NAME,Ice Fire Splitting Archer,Ice Fire Splitting Archer,冰火裂荚射手
-<!MissingKey:毁灭海草>,Doom Tangle Kelp,Doom Tangle Kelp,毁灭海草
-TOWERDEFENSE_ZOMBIE_IMP_NAME,Imp zombie,Imp zombie,小鬼僵尸
-<!MissingKey:机枪海豚僵尸>,Snorkel Zombie,Snorkel Zombie,机枪海豚僵尸
-TOWERDEFENSE_SHOVEL_GOLD_NAME,Gold Shovel,Gold Shovel,金铲
-TOWERDEFENSE_ZOMBIE_BALLOON_HANDBOOK_STORY,,,气球僵尸真走运。气球有很多功效，而其他僵尸都不曾捡到过。
-TOWERDEFENSE_ZOMBIE_NUT_EXPRESTION,,,据说这种僵尸跟坚果一样抗揍。
-TOWERDEFENSE_PLANT_SNOWSHROOM_EXPRESTION,,,雪花飘飘，北风啸啸！
-TOWERDEFENSE_ZOMBIE_DIGGER_EXPRESTION,,,这种僵尸会挖地绕过你的防御。
-<!MissingKey:没有人知道那个海豚为啥也是僵尸，这点机枪海豚僵尸也不清楚，他从一开始就抱着这个玩意行走江湖，除了给这个海豚找到归属外，还寻找着自己头上那个路障的由来。但这其实是其他僵尸送给他的生日礼物，他忘记了而已。>,,,没有人知道那个海豚为啥也是僵尸，这点机枪海豚僵尸也不清楚，他从一开始就抱着这个玩意行走江湖，除了给这个海豚找到归属外，还寻找着自己头上那个路障的由来。但这其实是其他僵尸送给他的生日礼物，他忘记了而已。
-TOWERDEFENSE_ZOMBIE_NORMAL_EXPRESTION,,,平凡无奇的普通僵尸。
-MAP_BACKYARD,Back Yard,Back Yard,后院(白天)
-TOWERDEFENSE_ZOMBIE_FOOTBALL_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]1400 + 270[/color]
-伤害：[color=cc241d]100/s[/color]
-佩戴：[color=cc241d]橄榄头盔（一类）[/color]
-类型：[color=cc241d]小型僵尸[/color]
-移速：[color=cc241d]快[/color]
-弱点：[color=441D62]磁力菇[/color]"
-MAP_FRONTLAWN_NIGHT_EMPTY_BIG,"Front Yard (Night,Empty,Big Map)","Front Yard (Night,Empty,Big Map)",前院(夜晚裸地大地图)
-TOWERDEFENSE_ZOMBIE_ZOMBONI_NAME,Sledge Zombie,Sledge Zombie,雪橇车僵尸
-SHOP_NPC_TALK_NUTBANDAGING,,,坚果包扎术，能让你直接覆盖种植受伤的坚果！对高坚果和南瓜头同样有效！
-SHOP_ITEM_POYREPLACEMENT,,,花盆替换术
-TOWERDEFENSE_PLANT_ICESUNSHROOM_NAME,Ice Sunshroom,Ice Sunshroom,寒光菇
-<!MissingKey:特点：受到该效果的僵尸会在持续时间内减缓移动速度。>,,,"特点：受到该效果的僵尸会在持续时间内减缓移动速度。
-进阶：无
-互斥：受到火焰效果时会立即结束该效果"
-TOWERDEFENSE_PLANT_HYPNOGARLIC_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]150[/color]
-特性：[color=C71585]低矮植物、大蒜[/color]
-特点：[color=cc241d]啃咬它的非特殊僵尸会被魅惑+换行[/color]"
-TOWERDEFENSE_PLANT_PEAPOT_NAME,PeaPot,PeaPot,豌豆花盆
-<!MissingKey:韧性：[color=cc241d]300[/color]>,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]吞噬（小型僵尸）/42秒消化[/color]
-范围：[color=cc241d]前方一格[/color]
-特点：[color=cc241d]对可吞噬的僵尸即死对不可吞噬僵尸则造成40点伤害[/color]"
-NPC_TALK_LEVEL1_2_TUTORIAL_1,,,豌豆向日葵好用吗，伙计？
-NPC_TALK_LEVEL1_2_TUTORIAL_2,,,是时候来尝试更多的杂交植物了
-LOAD_COLLECTABLE,Load collectable,Load collectable,加载收集物
-NPC_TALK_LEVEL1_2_TUTORIAL_3,,,瞧瞧这个火炬坚果！能阻挡僵尸，还能点燃豌豆子弹！
-NPC_TALK_LEVEL1_2_TUTORIAL_4,,,让僵尸们感受一下“热情”吧！
-INGAME_VIEW,VIEW GRASS,VIEW GRASS,查看草坪
-TOWERDEFENSE_PLANT_SEANUT_HANDBOOK_STORY,,,高坚果尝试穿上海蘑菇的装扮下海游泳，可以看出，他高兴的嘴都翘起来了。不过别的高坚果却一脸疑惑…
-<!MissingKey:血量：[color=cc241d]270[/color]>,,,"血量：[color=cc241d]270[/color]
-伤害：[color=cc241d]即死[/color]
-佩戴：[color=cc241d]----[/color]
-类型：[color=cc241d]小型僵尸[/color]
-速度：[color=cc241d]快[/color]
-限制：[color=0000FF]只会在水上出现[/color]
-特点：[color=cc241d]潜水并将离他最近的一个植物拖下水，随后自己也消失[/color]"
-TOWERDEFENSE_PLANT_PRESENTBOX_HANDBOOK_STORY,,,“如你所见，我是一个盒子。”随机植物盒子说，“我里面有些种子，你可能会找到杂交种子，因为它们在里面打拳击（boxing）。至于为什么能开出玉米加农炮……”盒子迟疑了一下。“因为他是被挤出来的。”
-<!MissingKey:大嘴花可以一口吞掉一整只僵尸，但是他们消化僵尸的时候很脆弱。>,,,大嘴花可以一口吞掉一整只僵尸，但是他们消化僵尸的时候很脆弱。
-TOWERDEFENSE_ZOMBIE_PRESENTBOX_NAME,PresentBox Zombie,PresentBox Zombie,抽奖盒子僵尸
-<!MissingKey:一. 全新关卡>,,,"一. 全新关卡
-本次版本关卡进度将开放至夜幕降临2-15
-二. 全新植物
-游戏内白卡新增豌豆香蒲、冰炬树桩、海坚果、豌豆许愿池，它们将在未来的冒险关卡中解锁，游戏内商店也新增了全新紫卡：冰炬高坚果，欢迎前来购买
-三. 全新僵尸和防具变种:
-游戏内新增了抽奖盒子僵尸，并为读报僵尸、小鬼僵尸、玩偶匣僵尸、影子僵尸、僵尸影子、扶梯僵尸添加了一类防具变种，这些变种将会极大丰富自制关卡的僵尸选择
-四. 全新自制关卡功能：
-玩家可前往主界面的自制关卡板块内自制属于自己的关卡，并能将关卡导出并分享至其他人。
-五. 游戏优化与修复情况:
-优化了游戏部分地方的文本说明
-对于玩家反馈的多项BUG进行了修复，如若存在未修复BUG，请尽快在官方群中反馈。
-（如若遇到游戏卡顿，请尝试降低帧率）
-我们的下个版本会尽快到来，敬请期待"
-MAP_OUTSIDE_BACKYARD,Outside Back Yard,Outside Back Yard,外部后院
-TOWERDEFENSE_PLANT_ICENUT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]4000[/color]
-威力：[color=cc241d]20×2/1.5s[/color]
-范围：[color=cc241d]前方一行[/color]
-特点：[color=cc241d]每次发射2枚寒冰豌豆，对命中的僵尸造成15秒减速（不可叠加）[/color]
-亡语：[color=cc241d]冻结3×3范围内的僵尸8秒[/color]"
-TOWERDEFENSE_PLANT_GRAVEMINE_CUSTOM_1_STORY,,,【前方施工，请绕行！】
-LOGIN_FAILD,Log in failed,Log in failed,登录失败!
-TOWERDEFENSE_PLANT_TABOODOOMSHROOM_EXPRESTION,,,你想尝试禁忌的力量吗？
-TOWERDEFENSE_ZOMBIE_FLAG_HANDBOOK_STORY,,,无需置疑：摇旗僵尸喜爱脑子，但在私下里他也迷恋旗帜。或许是因为旗帜上也画有脑子吧，这很难说。
-TOWERDEFENSE_PLANT_CHERRYBOMB_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]1800（灰烬伤害）[/color]
-范围：[color=cc241d]自身为中心周围1.5格的圆[/color]"
-TOWERDEFENSE_ZOMBIE_BUCKETHEAD_HANDBOOK_STORY,,,铁桶头僵尸经常戴着水桶，在冷漠的世界里显得独一无二。但事实上，他只是忘记了那铁桶还在他头上而已。
-TOWERDEFENSE,Defense,Defense,塔防
-SHOP_NPC_TALK_PLANT_FIRETALLNUT,,,把这张紫卡种在你的火炬坚果/冰炬树桩上，把它升级成冰炬高坚果！
-<!MissingKey:韧性：[color=cc241d]300[/color]>,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]20/1.5s[/color]
-范围：[color=cc241d]前方四格所有僵尸[/color]
-特性：[color=C71585]白天会睡觉[/color]
-特点：[color=cc241d]攻击无视二类防具[/color]"
-TOWERDEFENSE_PLANT_PEASHOOTERSINGLE_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]20/1.5s[/color]
-范围：[color=cc241d]前方一行[/color]"
-TOWERDEFENSE_PLANT_SEANUT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]8000[/color]
-威力：[color=cc241d]20/1.5s[/color]
-范围：[color=cc241d]前方一行[/color]
-特性：[color=C71585]只能种在水中[/color]
-特点：[color=cc241d]可以阻挡僵尸跳跃[/color]"
-TOWERDEFENSE_PLANT_QUEENSUNFLOWER_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]1000[/color]
-生产：[color=cc241d]150阳光/25s[/color]
-威力：[color=cc241d]40×4/3s[/color]
-范围：[color=cc241d]全屏追踪[/color]
-特性：[color=C71585]至尊金卡[/color]
-至尊金卡：[color=FFFF00]场上每有一株该植物，植物价格增加100[/color]
-特点:[color=cc241d]3x3范围内的所有植物免疫减速与冻结，3x3范围内的所有僵尸每1.5秒受到40点的火焰伤害[/color]"
-<!MissingKey:骑鸭僵尸能够承载一个僵尸，踩过你的植物。>,,,骑鸭僵尸能够承载一个僵尸，踩过你的植物。
-<!MissingKey:韧性：[color=cc241d]300[/color]>,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]1800[/color]
+TOWERDEFENSE_PLANT_DOOMTANGLEKELP_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]即死（拉下水）+ 1800（毁灭菇）[/color]
 范围：[color=cc241d]以自身为圆心半径约3.5格的圆[/color]
 特性：[color=C71585]只能种在水中[/color]
-特点：[color=cc241d]将最靠近的一只僵尸拉下水，并释放毁灭菇效果对范围内全部僵尸造成1800灰烬伤害，并留下坑洞[/color]"
-<!MissingKey:用户名>,USERNAME,USERNAME,用户名
-TOWERDEFENSE_PLANT_ICESUNMINE_HANDBOOK_STORY,,,寒光土豆雷其实也是阳光俱乐部的重要成员，只不过他过于“冷”门无人知晓。他最近盘算着给自己的冰凌染些颜色，这样僵尸或许就会把他当作一碗刨冰主动靠近了。
-TOWERDEFENSE_PLANT_SUNMINE_HANDBOOK_STORY,,,从僵尸身上获取阳光，不只是阳光炸弹的想法，阳光土豆雷亦有。“我们之间不存在抄袭关系——事实上，阳光俱乐部是我开创的，她是我的成员。”阳光土豆雷如是说道。
-TOWERDEFENSE_PLANT_TABOODOOMSHROOM_NAME,Taboo Doomshroom,Taboo Doomshroom,禁忌毁灭菇
-TOWERDEFENSE_PLANT_SNOWPEA_HANDBOOK_STORY,,,人们经常告诉寒冰射手他是多么“冷酷”，或者告诫他要“冷静”。他们叫他要“保持镇静”。寒冰射手只是转转他的眼睛，其实他都听见了。
-TOWERDEFENSE_PLANT_MAGNETMINE_HANDBOOK_STORY,,,"某天晚上，土豆雷梦见自己获得了把僵尸传送到头顶的超能力…
-他将其视为预言并为此努力，现在这副样子只是其中一种尝试。"
-TOWERDEFENSE_PLANT_WILDPEA_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]20×4x5/2s[/color]
-特性：[color=C71585]至尊金卡[/color]
-至尊金卡：[color=FFFF00]场上每有一株该植物，植物价格增加100[/color]
-范围：[color=cc241d]五个角度（索敌&弹道）发射总计20颗散射豌豆[/color]"
-TOWERDEFENSE_ZOMBIE_BED_HANDBOOK_STORY,,,博士最近貌似从游戏里得到了启发：他把一个僵尸洗脑，成功让他迷恋上了睡觉和滑雪。尽管这里根本就没有雪。
-MAP_FRONTLAWN,Front Yard,Front Yard,前院(白天)
-TOWERDEFENSE_PLANT_CACTUSBLOVER_HANDBOOK_STORY,,,仙人三叶草喜欢速战速决，尽管吹出一大堆尖刺容易让他肌肉疲劳，但他依然乐此不疲。只是他还要提防三叶仙人掌的碎碎念。
-TOWERDEFENSE_PLANT_WINTERMELONSHROOM_NAME,Ice Spore Mushroom,Ice Spore Mushroom,冰瓜大喷菇
-MAP_BACKYARD_NIGHT,Back Yard Night,Back Yard Night,后院(夜晚)
-TOWERDEFENSE_PLANT_WINTERMELONSHROOM_EXPRESTION,,,冰瓜大喷菇喷出的气液可以穿透铁丝网门，同时发射一枚冰瓜。
-TOWERDEFENSE_PLANT_SUNSHROOM_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-生产：[color=cc241d]25阳光/25秒，长大后变为50阳光/25秒[/color]
-特点：[color=cc241d]需要60秒时间成长[/color]"
-TOWERDEFENSE_PLANT_TWINSUNSHROOM_EXPRESTION,,,双倍的阳光向日葵，阳光产量再翻倍！
-LOAD_SHOP,Load shop,Load shop,加载商店
-BGM_ROOF,Roof,Roof,屋顶(白天)
-<!MissingKey:邮箱>,EMAIL,EMAIL,邮箱
-<!MissingKey:音乐>,Music,Music,音乐
-TOWERDEFENSE_SHOVEL_DIAMOND_HANDBOOK_EXPRESTION,,,特点：移除植物，并回收30%阳光。
-TOWERDEFENSE_PLANT_SUNMINE_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]1800[/color]
-范围：[color=cc241d]单格[/color]
-特点：[color=cc241d]单独使用，需要15秒准备时间，爆炸后获得50阳光[/color]"
-TOWERDEFENSE_ZOMBIE_DOLPHINRIDER_HANDBOOK_STORY,,,那海豚其实也是个僵尸。
-<!MissingKey:我是新手>,I'm a beginner,I'm a beginner,我是新手
-MAP_FRONTLAWN_NIGHT_THREEPART,"Front Yard (Night,Three Part)","Front Yard (Night,Three Part)",前院(夜晚三分)
-TOWERDEFENSE_SHOVEL_COLD_HANDBOOK_EXPRESTION,,,特点：[color=cc241d]铲掉植物时向前发射寒冰豌豆，数量为该植物价格的10%（向下取整）[/color]
-TOWERDEFENSE_PLANT_SNOWSHROOM_CUSTOM_1_STORY,,,"雪域孤影，冰扇凝锋。
-特点：[color=cc241d]装扮该皮肤后，雪花寒冰菇召唤的冰弹替换为小型冰剑（仅外观变化，子弹伤害和性质不变）[/color]"
-<!MissingKey:你对植物大战僵尸这款游戏的熟悉程度>,How familiar are you with Plants vs. Zombies?,How familiar are you with Plants vs. Zombies?,你对植物大战僵尸这款游戏的熟悉程度
-TOWERDEFENSE_PLANT_PEACAT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]20×2/1.5s[/color]
-范围：[color=cc241d]全屏追踪[/color]
-特性：[color=cc241d]两栖植物[/color]
-特点：[color=cc241d]攻击可以追踪空中僵尸[/color]"
-TOWERDEFENSE_PLANT_MELONPULTSPIKE_HANDBOOK_STORY,,,据说地刺西瓜投手在汽车维修领域有着独到的见解：“很简单，直接把旧车报废、买辆新的，能解决百分之百的问题。”
-TOWERDEFENSE_ZOMBIE_NEWSPAPER_EXPRESTION,,,他的报纸只能提供有限的防御。
-TOWERDEFENSE_PLANT_PEALILYPAD_HANDBOOK_STORY,,,豌豆睡莲从不抱怨，它也从来不想知道发生了什么事。在它身上种植物，它也不会说什么。难道它有什么惊奇想法或者可怕的秘密？没人知道，豌豆睡莲把这些都埋藏在心底。
-TOWERDEFENSE_ZOMBIE_SQUASH_HANDBOOK_STORY,,,"压扁一株植物总共分几步？窝瓜僵尸答：两步。
-第一步，冲到随便一个什么植物面前；第二步，“嗯？！”"
-<!MissingKey:为了在水下骑乘海豚，海豚骑士借来了一套潜水装备。虽然没有多余的面罩留给他的海豚，但他并不担心海豚会被淹死——诚然海豚需要呼吸，但别忘了，那海豚也是个僵尸。>,,,为了在水下骑乘海豚，海豚骑士借来了一套潜水装备。虽然没有多余的面罩留给他的海豚，但他并不担心海豚会被淹死——诚然海豚需要呼吸，但别忘了，那海豚也是个僵尸。
-TOWERDEFENSE_PLANT_SNOWPEA_EXPRESTION,,,寒冰射手会发射寒冰豌豆攻击敌人，并具有减速效果。
-TOWERDEFENSE_ZOMBIE_GARGANTUAR_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]3000[/color]
+特点：[color=cc241d]将最靠近的一只僵尸拉下水，然后释放毁灭菇效果：对范围内全部僵尸造成1800灰烬伤害，并留下坑洞[/color]"
+TOWERDEFENSE_PLANT_SUNMINE_EXPRESTION,,,爆炸时提供阳光的免费地雷，需要一点时间来武装自己。
+SHOP_ITEM_POYREPLACEMENT,,,花盆替换术
+TOWERDEFENSE_ZOMBIE_POLEVAULTING_HANDBOOK_STORY,,,一些僵尸渴望走得更远、得到更多，这也促使他们由普通成为非凡。那就是撑杆僵尸。
+TOWERDEFENSE_ZOMBIE_DUCKRIDER_HANDBOOK_STORY,,,骑鸭僵尸顺走其他僵尸的装备，拼凑出了他的坐骑。他很乐意让别人搭一程顺风车，除非你说他的坐骑是一只鸭子——因为他以为这是一只鸵鸟。
+TOWERDEFENSE_PLANT_ICETALLNUT_EXPRESTION,,,高冰果具有强大的防守能力！还能发射子弹！
+TOWERDEFENSE_MOWER_SUN_HANDBOOK_EXPRESTION,,,特点：[color=cc241d]替换草坪小推车，每碾压一只僵尸掉落25点阳光
+TOWERDEFENSE_ZOMBIE_FLAG_EXPRESTION,,,摇旗僵尸标志着即将来袭的一大群僵尸。
+TOWERDEFENSE_ZOMBIE_ZOMBONI_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]1350[/color]
+伤害：[color=cc241d]即死（碾压）[/color]
+佩戴：[color=cc241d]----[/color]
+类型：[color=cc241d]车类僵尸[/color]
+速度：[color=cc241d]慢[/color]
+特点：[color=cc241d]碾压植物，留下不可种植的冰道[/color]
+弱点：[color=441D62]地刺[/color]"
+TOWERDEFENSE_ZOMBIE_NEWSPAPER_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]150 + 270[/color]
+伤害：[color=cc241d]200/s[/color]
+佩戴：[color=cc241d]报纸（二类）[/color]
+类型：[color=cc241d]小型僵尸[/color]
+移速：[color=cc241d]普通，而后快（失去报纸后）[/color]
+弱点：[color=441D62]穿透攻击[/color]"
+TOWERDEFENSE_PLANT_WINTERMELONSHROOM_CUSTOM_1_NAME,,,盛夏特饮
+TOWERDEFENSE_ZOMBIE_GARGANTUAR_PRESENTBOX_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]3000[/color]
 伤害：[color=cc241d]即死（锤击）[/color]
 佩戴：[color=cc241d]----[/color]
 类型：[color=cc241d]大型僵尸[/color]
 速度：[color=cc241d]非常慢[/color]
 特性：[color=C71585]锤扁植物[/color]
-特点：[color=cc241d]低于一定血量时会丢出小鬼僵尸[/color]"
-<!MissingKey:小喷菇：“我是最近才知道僵尸的事情。和很多蘑菇一样，我只是把他们想象成童话和电影里的怪物。不过这次的经历已经让我大开眼界了。”>,,,小喷菇：“我是最近才知道僵尸的事情。和很多蘑菇一样，我只是把他们想象成童话和电影里的怪物。不过这次的经历已经让我大开眼界了。”
-TOWERDEFENSE_PLANT_FIRETALLNUT_EXPRESTION,,,比坚果更强的堡垒，比火炬更冷的火焰！
-TOWERDEFENSE_PLANT_PEAWELL_HANDBOOK_STORY,,,“投下一个豌豆，许一次愿望。”这是豌豆许愿池的标语。“喂，不要投别的东西进去！不要投辣椒水啊！”戴夫正在拦住一只火爆辣椒。
-TOWERDEFENSE_PLANT_FIRENUT_HANDBOOK_STORY,,,坚果热爱烟火，对他而言，各类烟火百玩不厌。“一提到烟花，我便脑袋发热，连身体也变得燥热起来！”也许发热的不只是脑袋——看来他并没有意识到坚果壳属于易燃物。
-TOWERDEFENSE_PLANT_SCAREDYSUNSHROOM_CUSTOM_1_STORY,,,胆小菇试图伪装成其他东西，但这套装扮在僵尸眼中似乎更美味了…
-TOWERDEFENSE_ZOMBIE_BACKUPDANCER_NAME,Backup Dancer Zombie,Backup Dancer Zombie,伴舞僵尸
-MAP_BACKYARD_NIGHT_FULL,"Back Yard (Night,Full Pool)","Back Yard (Night,Full Pool)",后院(夜晚全泳池)
+特点：[color=cc241d]低于一定血量时会丢出小鬼僵尸[/color]
+亡语：[color=cc241d]在死亡位置生成一只随机巨人/巨大体型僵尸，巨大僵尸数值翻倍[/color]"
+TOWERDEFENSE_ZOMBIE_POLESTRIKER_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]1400 + 270[/color]
+伤害：[color=cc241d]200/s[/color]
+佩戴：[color=cc241d]橄榄头盔（一类）[/color]
+类型：[color=cc241d]小型僵尸[/color]
+移速：[color=cc241d]快[/color]
+特点：[color=cc241d]一次性跃过2格距离[/color]
+弱点：[color=441D62]磁力菇、高坚果[/color]"
+TOWERDEFENSE_PLANT_GATLINGPOT_EXPRESTION,,,机枪花盆能一次发射四颗豌豆！
+TOWERDEFENSE_PLANT_ICESUNMINE_EXPRESTION,,,触发式爆炸型寒光菇！
+TOWERDEFENSE_PLANT_SUNSHROOM_CUSTOM_1_STORY,,,“我独自走在~郊外的小路上~”
+TOWERDEFENSE_PLANT_JALACHERRYBOMB_NAME,Jalapeno CherryBomb ,CherryBomb,樱桃辣椒
+TOWERDEFENSE_ZOMBIE_JACKBOX_HANDBOOK_STORY,,,这只僵尸颤抖着，不是因为他冷，而是因为他疯。
+TOWERDEFENSE_SHOVEL_COLD_EXPRESTION,,,移除植物时向前发射寒冰豌豆！
+SHOP_PLANT_SUNSHROOM_CUSTOM_1,,,草耙
+BGM_BACKYARD,Back Yard,Back Yard,后院(白天)
+TOWERDEFENSE_ZOMBIE_GATLINGDOLPHINRIDER_NAME,Snorkel Zombie,Snorkel Zombie,机枪海豚僵尸
+TOWERDEFENSE_PLANT_WILDPEA_EXPRESTION,,,狂野机枪射手可以朝前方发射霰弹豌豆。
+TOWERDEFENSE_SHOVEL_JALAPENO_NAME,Jalapeno shovel,Jalapeno shovel,辣椒铲
+TOWERDEFENSE_PLANT_TABOODOOMSHROOM_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]无限大[/color]
+范围：[color=cc241d]以自身为圆心半径约3.5格的圆[/color]
+特点：[color=cc241d]每消灭一个僵尸，僵尸所在格留下一个坑洞[/color]"
+TOWERDEFENSE_PLANT_SUNSHROOM_CUSTOM_2_NAME,,,夏日时光
+TOWERDEFENSE_ZOMBIE_JACKSONX_EXPRESTION,,,精英舞王僵尸和人类（在世或者不朽的）如有雷同，纯属巧合。
+TOWERDEFENSE_PLANT_GARGANTUARSHROOM_NAME,Gargantuar Shroom,Gargantuar Shroom,红眼菇
+TOWERDEFENSE_PLANT_PEACAT_EXPRESTION,,,猫尾草和豌豆居然也喝醉了！？
+TOWERDEFENSE_PLANT_PUMPKINFIRE_HANDBOOK_STORY,,,南瓜头最近迷上了恶灵骑士，他准备在万圣节装扮成他的偶像，“我感觉我燃起来了！”南瓜头说道。其实他不知道，南瓜头本身就是万圣节的装饰。
+MAP_FRONTLAWN_NIGHT_EMPTY_BIG,"Front Yard (Night,Empty,Big Map)","Front Yard (Night,Empty,Big Map)",前院(夜晚裸地大地图)
+<!MissingKey:睡莲从不抱怨，它也从来不想知道发生了什么事。在它身上种植物，它也不会说什么。难道，它有什么惊奇想法或者可怕的秘密？没人知道。睡莲把这些都埋藏在心底。>,,,睡莲从不抱怨，它也从来不想知道发生了什么事。在它身上种植物，它也不会说什么。难道，它有什么惊奇想法或者可怕的秘密？没人知道。睡莲把这些都埋藏在心底。
+TOWERDEFENSE_PLANT_THREEPEATER_EXPRESTION,,,三线射手可以在三条线上同时射出豌豆。
+TOWERDEFENSE_PLANT_PEALILYPAD_HANDBOOK_STORY,,,豌豆睡莲从不抱怨，它也从来不想知道发生了什么事。在它身上种植物，它也不会说什么。难道它有什么惊奇想法或者可怕的秘密？没人知道，豌豆睡莲把这些都埋藏在心底。
+TOWERDEFENSE_PLANT_PEASHOOTERSINGLE_NAME,PeashooterSingle,PeashooterSingle,豌豆射手
+TOWERDEFENSE_ZOMBIE_SQUASH_HANDBOOK_STORY,,,"压扁一株植物总共分几步？窝瓜僵尸答：两步。
+第一步，冲到随便一个什么植物面前；第二步，“嗯？！”"
+TOWERDEFENSE_ZOMBIE_SNORKLE_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
+伤害：[color=cc241d]100/s[/color]
+佩戴：[color=cc241d]----[/color]
+类型：[color=cc241d]小型僵尸[/color]
+速度：[color=cc241d]快[/color]
+特点：[color=cc241d]潜水避开直线攻击，遇到植物时会上浮啃咬并暴露自己[/color]"
+INGAME_ROCK,LET'S ROCK!,LET'S ROCK!,一起摇滚吧!
 TOWERDEFENSE_PLANT_PEAWELL_EXPRESTION,,,豌豆许愿池可以不断进行360度全方位攻击。
-TOWERDEFENSE_PLANT_POT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-特性：[color=C71585]可在裸地上承载植物[/color]"
-TOWERDEFENSE_ZOMBIE_JACKSON_EXPRESTION,,,舞王僵尸和人类（在世或者死去的）如有雷同，纯属巧合。
-SHOP_ITEM_PACKETSLOT_9,,,9槽
+TOWERDEFENSE_ZOMBIE_DARKFOOTBALL_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]3000 + 270[/color]
+伤害：[color=cc241d]200/s[/color]
+佩戴：[color=cc241d]黑橄榄头盔（一类）[/color]
+类型：[color=cc241d]小型僵尸[/color]
+速度：[color=cc241d]快[/color]
+弱点：[color=441D62]磁力菇[/color]"
+TOWERDEFENSE_PLANT_JALAPENO_EXPRESTION,,,火爆辣椒可以摧毁一整条线上的敌人。
+TOWERDEFENSE_PLANT_JALAPENO_NAME,Jalapeno,Jalapeno,火爆辣椒
 LEVEL1_1_TUTORIAL_1,,,点击卡槽中的植物，然后点击草坪种植！
-TOWERDEFENSE_ZOMBIE_POLEVAULTING_HANDBOOK_STORY,,,一些僵尸渴望走得更远、得到更多，这也促使他们由普通成为非凡。那就是撑杆僵尸。
-SHOP_ITEM_PACKETSLOT_8,,,8槽
+TOWERDEFENSE_ZOMBIE_BALLOONCOLOUR_NAME,Colorful Balloon Zombie,Colorful Balloon Zombie,多彩气球僵尸
+TOWERDEFENSE_ZOMBIE_YETIDIGGER_HANDBOOK_STORY,,,在寒冷的雪山上不停的挖矿，直到自己头发灰白。他之前在沙漠采金矿就丢了一只靴子，这下好了，两只全丢了。他不得不找矿工僵尸又借了一双新鞋子。
 LEVEL1_1_TUTORIAL_2,,,干得漂亮！点击收集掉落的阳光！
-<!MissingKey:小喷菇是免费的，不过射程很近。>,,,小喷菇是免费的，不过射程很近。
-TOWERDEFENSE_PLANT_PEACAT_CUSTOM_1_NAME,,,睡衣派对
-SHOP_NPC_TALK_SUNCOLLECT,,,阳光手套，能帮你自动拾取场上的阳光！
+<!MissingKey:“你很幸运，我是和你一伙的，”毁灭菇说，“我能摧毁任何你所害怕的东西，小菜一碟。”>,,,“你很幸运，我是和你一伙的，”毁灭菇说，“我能摧毁任何你所害怕的东西，小菜一碟。”
+TOWERDEFENSE_ZOMBIE_NORMAL_NAME,Normal Zombie,Normal Zombie,普通僵尸
+<!MissingKey:蹦极僵尸>,Digger Zombie,Digger Zombie,蹦极僵尸
 LEVEL1_1_TUTORIAL_3,,,继续种植豌豆向日葵，抵挡僵尸的进攻吧！
+TOWERDEFENSE_PLANT_HYPNOSHROOM_HANDBOOK_STORY,,,魅惑菇声称：“僵尸们是我们的朋友，他们在我们的生态环境里扮演着重要角色。我们应当更努力地让他们学会用我们的方式来思考。”
+<!MissingKey:墓碑吞噬者用来吃掉墓碑。>,,,墓碑吞噬者用来吃掉墓碑。
+TOWERDEFENSE_PLANT_ICENUT_CUSTOM_1_ACCESS,,,每日挑战 2025/8月 累计完成28天
+TOWERDEFENSE_PLANT_SUNBOMB_CUSTOM_1_NAME,,,活力双子
+BGM_LOONBOON,Loonboon,Loonboon,小游戏
+TOWERDEFENSE_PLANT_CORNTROP_NAME,Corntrop,Corntrop,玉米地刺
+<!MissingKey:韧性：[color=cc241d]300[/color]>,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]20/1.5s[/color]
+范围：[color=cc241d]前方三格[/color]
+特性：[color=C71585]白天会睡觉[/color]"
+TOWERDEFENSE_ZOMBIE_FOOTBALL_HANDBOOK_STORY,,,在球场上，橄榄球僵尸表现出110%的激情。他善于与队友合作，进攻防守样样在行，虽然他完全不知道橄榄球是什么。
+MAP_FRONTLAWN_NIGHT_THREEPART,"Front Yard (Night,Three Part)","Front Yard (Night,Three Part)",前院(夜晚三分)
+<!MissingKey:减速效果>,Slow down Buff,Slow down Buff,减速效果
+INGAME_DIFFICULT,Difficulty:%s,Difficulty:%s,难度:%s
+TOWERDEFENSE_PLANT_PEALILYPAD_NAME,Pea waterlily,Pea waterlily,豌豆睡莲
+TOWERDEFENSE_PLANT_PLANTERNSIX_HANDBOOK_STORY,,,“6”号路灯花说圣诞节之后是很重要的日子——也就是2“6”日那天——可她忘了缘由，并为此哭红了眼睛。“那是在1893年，他的生日。”智慧树回答道，“正如路灯花一样，他有着火热的内心，并照亮了植物们前行的路。”
+TOWERDEFENSE_ZOMBIE_SEADEMON_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]4000[/color]
+伤害：[color=cc241d]300/s[/color]
+佩戴：[color=cc241d]----[/color]
+类型：[color=cc241d]小型僵尸[/color]
+速度：[color=cc241d]慢[/color]
+特性：[color=C71585]免疫常规海草与魅惑效果、免疫控制效果[/color]
+特点：[color=cc241d]每15秒在本行和上下两行召唤3只缠绕潜水僵尸（每行一只）[/color]"
+TOWERDEFENSE_ZOMBIE_POLEVAULTING_EXPRESTION,,,撑杆僵尸运用标杆跃过障碍物。
+TOWERDEFENSE_ZOMBIE_PEASHOOTER_NAME,Peashooter,Peashooter,豌豆僵尸
+TOWERDEFENSE_ZOMBIE_DUCK_NAME,Yellow Duck Zombie,Yellow Duck Zombie,小黄鸭僵尸
+<!MissingKey:特点：植物会生成单格或多格火焰特效并附加[color=cc241d]火焰伤害[/color]即为火焰效果。>,,,"特点：植物会生成单格或多格火焰特效并附加[color=cc241d]火焰伤害[/color]即为火焰效果。
+进阶：当对一整行或一竖列造成1800点以上的火焰伤害，当达到或大于以上要求则视为火爆辣椒效果，并可清除冰道与冰球。
+互斥：当拥有冻结或减速效果的僵尸会立即解除其效果
+强化：对红温状态的敌人造成的伤害更高"
+NPC_TALK_LEVEL2_1_TUTORIAL_4,,,多多种植你获得的小盆菇吧！
+NPC_TALK_LEVEL2_1_TUTORIAL_5,,,还有什么比免费更便宜呢？祝你好运！
+SHOP_NPC_TALK_COINCOLLECT,,,吸金磁的场外支援，能帮你自动拾取掉落的钱币！
+NPC_TALK_LEVEL2_1_TUTORIAL_1,,,现在是黑夜了，伙计！
+NPC_TALK_LEVEL2_1_TUTORIAL_2,,,这意味着你不能从天上获得阳光了！
+NPC_TALK_LEVEL2_1_TUTORIAL_3,,,但这难不倒你，对吧？
+TOWERDEFENSE_SHOVEL_DIAMOND_EXPRESTION,,,移除场地上的植物返还大量阳光！
+TOWERDEFENSE_ZOMBIE_JALAPENO_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]500[/color]
+伤害：[color=cc241d]100/s（啃食） 1800（火爆辣椒）[/color]
+佩戴：[color=cc241d]----[/color]
+类型：[color=cc241d]小型僵尸[/color]
+速度：[color=cc241d]慢[/color]
+特点：[color=cc241d]出场一段时间后释放火爆辣椒效果，烧掉你的植物并消失[/color]"
+<!MissingKey:“我以前那份没前途的工作，是为一个面包房生产酵母孢，”大喷菇说。“然后小喷菇，上帝保佑它，告诉了我这个喷杀僵尸的机会。现在我真觉得自己完全不同了。”>,,,“我以前那份没前途的工作，是为一个面包房生产酵母孢，”大喷菇说。“然后小喷菇，上帝保佑它，告诉了我这个喷杀僵尸的机会。现在我真觉得自己完全不同了。”
+TOWERDEFENSE_PLANT_MELONPULT_EXPRESTION,,,西瓜投手可以对成群的僵尸造成巨大伤害。
+NPC_TALK_LEVEL1_5_TUTORIAL_5,,,现在，打了好久僵尸，我们也该放松一下了。
+NPC_TALK_LEVEL1_5_TUTORIAL_4,,,我猜你以后会遇见更多神奇的铲子！
+NPC_TALK_LEVEL1_5_TUTORIAL_7,,,我会借给你更多的杂交坚果，你来试试看他们是否趁手！
+TOWERDEFENSE_PLANT_RECACTUS_HANDBOOK_STORY,,,仙人掌热爱拥抱，可她的外表连铠甲鼠都趋之若鹜。“不管人们如何议论，总之我爱她”双发射手说道，“这是我和她的爱情结晶。”
+TOWERDEFENSE_ZOMBIE_DOLPHINRIDER_NAME,Snorkel Zombie,Snorkel Zombie,海豚骑士僵尸
+NPC_TALK_LEVEL1_5_TUTORIAL_6,,,我们来玩保龄球吧！
+NPC_TALK_LEVEL1_5_TUTORIAL_1,,,哟，伙计，你刚刚获得了一把新的铲子！
+BGM_FIREMODE,FireMode,FireMode,射击模式
+TOWERDEFENSE_PLANT_MELONPULTSPIKE_CUSTOM_1_STORY,,,“又一场接舷战吗？你来搭跳板，我负责砸他们的脑袋！”
+NPC_TALK_LEVEL1_5_TUTORIAL_3,,,喔，它返还了阳光！
+TOWERDEFENSE_PLANT_GARGANTUARSHROOM_HANDBOOK_STORY,,,"这株植物是戴夫活捉了一只红眼巨人研究出来的，他的身上早就没有魅惑菇的半点特征了。在僵尸吃掉红眼菇的时候，那巨人的冤魂便会寄生到那个僵尸里为戴夫战斗…“
+你们在干什么？”豌豆射手打开灯。“这只是一个发霉的魅惑菇而已啦！”"
+NPC_TALK_LEVEL1_5_TUTORIAL_2,,,铲掉那几株豌豆向日葵试试吧，看看它有什么作用！
+NPC_TALK_LEVEL1_5_TUTORIAL_9,,,因为我疯——掉啦！
+NPC_TALK_LEVEL1_5_TUTORIAL_8,,,为什么我们要用杂交坚果打保龄球？
+TOWERDEFENSE_ZOMBIE_BACKUP_NAME,DancerZombie,Dancer Zombie,舞者僵尸
+TOWERDEFENSE_ZOMBIE_GARGANTUARZOMBONI_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]3000[/color]
+伤害：[color=cc241d]即死（碾压）[/color]
+佩戴：[color=cc241d]----[/color]
+类型：[color=cc241d]大型车类僵尸[/color]
+速度：[color=cc241d]慢[/color]
+亡语：[color=cc241d]原地召唤一个伽刚特尔[/color]"
+MAP_FRONTLAWN_THREEPART,Front Yard (Three Part),Front Yard (Three Part),前院(三分)
+TOWERDEFENSE_PLANT_FIRETALLNUT_NAME,Cold Fire TallNut,Cold Fire TallNut,冰炬高坚果
+TOWERDEFENSE_PLANT_TABOODOOMSHROOM_HANDBOOK_STORY,,,哪有什么爆炸的无限伤害，禁忌毁灭菇只是趁着烟雾未散尽之时把僵尸拖入地底。“没有人能发现我的魔术。”禁忌毁灭菇洋洋得意的说，只是他忘了把坑埋起来。
+TOWERDEFENSE_ZOMBIE_CONEHEAD_HANDBOOK_STORY,,,和其他僵尸一样，路障头僵尸盲目地向前。但某些事物却使他停下脚步，捡起一个交通路障，并固定在自己的脑袋上——是的，他很喜欢参加聚会。
+INGAME_RESELECT,RESELECT LAST CARD,RESELECT LAST CARD,重选上次卡片
+TOWERDEFENSE_SHOVEL_COLD_HANDBOOK_STORY,,,据说是从某个冰淇淋小摊淘来的铲子。
+TOWERDEFENSE_PLANT_POT_EXPRESTION,,,花盆可以让你在屋顶上种植植物。
+TOWERDEFENSE_ZOMBIE_CAT_NAME,Zombie Cat,Zombie Cat,猫战士僵尸
+TOWERDEFENSE_PLANT_PUMPKINFIREICE_EXPRESTION,,,冰焰南瓜头是火焰南瓜头的远房表哥
+INGAME_VIEW,VIEW GRASS,VIEW GRASS,查看草坪
+TOWERDEFENSE_PLANT_SUNSHROOM_CUSTOM_2_ACCESS,,,商店购买（价格5000）
+TOWERDEFENSE_PLANT_SUNSHROOM_HANDBOOK_STORY,,,绚丽的帽子给了向日葵更高的颜值，在植物走秀界和服装界一炮走红。当然，他也要回归本质，给植物提供阳光，让他们作战。阳光向日葵这么想着，完全没有听到他身后的植物说：“你挡我们视线了，走开啦！”
+TOWERDEFENSE_PLANT_QUEENSUNFLOWER_HANDBOOK_STORY,,,这是向日葵中最爱晒太阳的一只，被给予了王冠，成为了向日葵女王。“现在我可以随时吃免费的奶酪烧烤三明治了。”向日葵女王说。
+TOWERDEFENSE_PLANT_PUFFPOT_CUSTOM_1_STORY,,,天青色等烟雨，而我在等你~
+TOWERDEFENSE_PLANT_ICESUNSHROOM_NAME,Ice Sunshroom,Ice Sunshroom,寒光菇
+TOWERDEFENSE_PLANT_ICETALLNUT_NAME,Ice TallNut,Ice TallNut,高冰果
+TOWERDEFENSE_PLANT_JALACHERRYBOMB_HANDBOOK_STORY,,,“我要‘爆’了！”“不，应该是我要‘炸’了！”樱桃炸弹两兄弟在“爆炸”这个词上争论许久——不过火“爆”辣椒的出现平息了这场争论。
+LEVLE_EVENT_GRAVESTONE_SPAWN_ZOMBIE,GravestoneSpawnZombie,GravestoneSpawnZombie,墓碑产生僵尸
+SHOP_NPC_TALK_PLANT_GARGANTUARSHROOM_CUSTOM_0,,,红眼菇的皮肤！你可以在图鉴装扮你的植物！
+<!MissingKey:火焰效果>,Fire Buff,Fire Buff,火焰效果
+TOWERDEFENSE_PLANT_CHOMPERBLOW_EXPRESTION,,,怎么还把吸尘器搬出来了？
+TOWERDEFENSE_PLANT_PEACAT_CUSTOM_1_STORY,,,他还是不太喜欢这顶猫耳睡帽，但看在这套衣服很舒适的份上，还是穿着吧。
+TOWERDEFENSE_ZOMBIE_BALLOON_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]40 + 270[/color]
+伤害：[color=cc241d]100/s[/color]
+佩戴：[color=cc241d]气球（特殊）[/color]
+类型：[color=cc241d]飞行僵尸[/color]
+移速：[color=cc241d]慢[/color]
+特点：[color=cc241d]无[/color]
+弱点：[color=441D62]仙人掌、三叶草[/color]"
+TOWERDEFENSE_PLANT_SUNFLOWERPEA_NAME,SunflowerPea,SunflowerPea,豌豆向日葵
+MAP_OUTSIDE_BACKYARD,Outside Back Yard,Outside Back Yard,外部后院
+TOWERDEFENSE_PLANT_SUNBEAN_NAME,SunBean,SunBean,阳光豆
+TOWERDEFENSE_PLANT_FIRETALLNUT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]8000[/color]
+威力：[color=cc241d]40/1.5s（对靠近的僵尸）[/color]
+范围：[color=cc241d]自身所在格[/color]
+特性：[color=C71585]阻挡僵尸跳跃、点燃豌豆为冰焰豌豆、紫卡植物[/color]
+特点1：[color=cc241d]点燃豌豆为冰焰豌豆（40伤害，25%单格溅射伤害），对靠近的僵尸每1.5秒造成40点冰焰伤害[/color]
+特点2：[color=cc241d]种在冰炬树桩上会返还75阳光[/color]
+紫卡植物：[color=0000FF]需要种植在火炬坚果或冰炬树桩上[/color]"
+TOWERDEFENSE_ZOMBIE_GARGANTUAR_PRESENTBOX_NAME,Gargantuar presentbox,Gargantuar presentbox,礼盒伽刚特尔
+TOWERDEFENSE_PLANT_QUEENSUNFLOWER_CUSTOM_1_NAME,,,偶像歌手
+TOWERDEFENSE_ZOMBIE_DIGGER_NAME,Digger Zombie,Digger Zombie,矿工僵尸
+TOWERDEFENSE_PLANT_PUFFPOT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]20/1.5s[/color]
+范围：[color=cc241d]前方三格[/color]
+特性：[color=C71585]白天会睡觉、可在裸地上承载植物[/color]"
+<!MissingKey:注册>,REGISTER,REGISTER,注册
+MAP_FRONTLAWN_EMPTY_BIG,"Front Yard (Day,Empty,Big Map)","Front Yard (Day,Empty,Big Map)",前院(白天裸地大地图)
+TOWERDEFENSE_PLANT_PUMPKINFIRE_NAME,Fire Pumpkin,Fire Pumpkin,火焰南瓜头
+TOWERDEFENSE_PLANT_SNOWWOOD_CUSTOM_1_STORY,,,常年燃烧着幽灵般冷冽的火焰…
+TOWERDEFENSE_PLANT_GATLINGPOT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]20*4/1.5s[/color]
+范围：[color=cc241d]前方一行[/color]
+特性：[color=C71585]可在裸地上承载植物、紫卡植物[/color]
+紫卡植物：[color=0000FF]需要种植在任意花盆上[/color]"
+LOGIN_ERROR_EMAIL_EMPTY,Email is empty,Email is empty,邮箱为空
+TOWERDEFENSE_PLANT_MELONPULTSPIKE_NAME,Melon Pult Spike,Melon Pult Spike,地刺西瓜投手
+TOWERDEFENSE_ZOMBIE_IMP_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
+伤害：[color=cc241d]100/s[/color]
+佩戴：[color=cc241d]----[/color]
+类型：[color=cc241d]超小型僵尸[/color]
+速度：[color=cc241d]慢[/color]"
+TOWERDEFENSE_ZOMBIE_DUCKRIDER_EXPRESTION,,,骑鸭僵尸能够承载一个僵尸，踩过你的植物。
+SHOP_OPEN,,,"你获得了金币，现在商店开启了！
+你可以在商店购买你所需要的物品！"
+TOWERDEFENSE_PLANT_GATLINGCAT_EXPRESTION,,,这机枪又是哪路高手来的？！
+TOWERDEFENSE_ZOMBIE_GARGANTUAR_REDEYE_NAME,Gargantuar,Gargantuar,暴走伽刚特尔
+TOWERDEFENSE_PLANT_SNOWPEA_HANDBOOK_STORY,,,人们经常告诉寒冰射手他是多么“冷酷”，或者告诫他要“冷静”。他们叫他要“保持镇静”。寒冰射手只是转转他的眼睛，其实他都听见了。
+TOWERDEFENSE_PLANT_SCAREDYSHROOM_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]20/1.5s[/color]
+范围：[color=cc241d]前方一行[/color]
+特性：[color=C71585]白天会睡觉[/color]
+特点：[color=cc241d]以自身为圆心周围约1.5格内有僵尸时会躲起来停止攻击[/color]"
+TOWERDEFENSE_PLANT_MELONPULT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]80/3s[/color]
+范围：[color=cc241d]前方一行[/color]
+特点：[color=cc241d]投掷无视屋面角度[/color]"
+TOWERDEFENSE_ZOMBIE_YETIDIGGER_EXPRESTION,,,雪人僵尸改行挖钻石了！
+PLAYERS_MORDEN_BACKYARD_LEVEL_NAME,Swimming Pool Defense 3 - {LevelNumber},Swimming Pool Defense 3 - {LevelNumber},泳池防守3 - {LevelNumber}
+TOWERDEFENSE_PLANT_MELONPULTSPIKE_HANDBOOK_STORY,,,据说地刺西瓜投手在汽车维修领域有着独到的见解：“很简单，直接把旧车报废、买辆新的，能解决百分之百的问题。”
+TOWERDEFENSE_ZOMBIE_JACKSON_HANDBOOK_STORY,,,舞王僵尸发布的最新唱片“抓住脑子啃啊啃”在僵尸界的人气正急速飙升。
+TOWERDEFENSE_ZOMBIE_BALLOONCOLOUR_EXPRESTION,,,超级加倍的气球僵尸！
+BGM_ROOF_NIGHT,Roof Night,Roof Night,屋顶(夜晚)
+LEVLE_EVENT_GRAVESTONE_CREATE_RANDOM,GravestoneCreateRandom,GravestoneCreateRandom,随机位置创建墓碑
+TOWERDEFENSE_ZOMBIE_SHIELDARMOR_NAME,Zombie Shield,Zombie Shield,防爆门僵尸
+TOWERDEFENSE_PLANT_ICENUT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]4000[/color]
+威力：[color=cc241d]20×2/1.5s[/color]
+范围：[color=cc241d]前方一行[/color]
+特点：[color=cc241d]每次发射2枚寒冰豌豆，对命中的僵尸造成15秒减速（不可叠加）[/color]
+亡语：[color=cc241d]冻结3×3范围内的僵尸8秒[/color]"
+TOWERDEFENSE_PLANT_FIRESNOWPEA_EXPRESTION,,,冰火裂荚射手能向两边同时发射冰豆和火球
+LOAD_BGM,Load BGM,Load BGM,加载音乐
+TOWERDEFENSE_PLANT_SUNFLOWERPEA_CUSTOM_1_STORY,,,天使与恶魔并不一定针锋相对，有时他们也会并肩而行。
+TOWERDEFENSE_PLANT_PEAWELL_NAME,Pea Wish Pool,Pea Wish Pool,豌豆许愿池
+TOWERDEFENSE_PLANT_ICENUT_CUSTOM_1_NAME,,,战神之子
+TOWERDEFENSE_ZOMBIE_WILDPEA_NAME,Wild Gun Zombie,Wild Gun Zombie,狂野机枪僵尸
+LEVLE_EVENT_MAP_CHANGE,MapChange,MapChange,切换地图
+TOWERDEFENSE_PLANT_MELONPULT_NAME,Watermelon pitcher,Watermelon pitcher,西瓜投手
+TOWERDEFENSE_PLANT_RECACTUS_NAME,ReCactus,ReCactus,双发仙人掌
+TOWERDEFENSE_ZOMBIE_JACKSON_NAME,Dancing Zombie,Dancing Zombie,舞王僵尸
+TOWERDEFENSE_PLANT_SUNFLOWERPEA_CUSTOM_1_ACCESS,,,每日挑战 2025/6月 累计完成4天
+TOWERDEFENSE_SHOVEL_JALAPENO_EXPRESTION,,,移除植物时释放一行火焰！
 TOWERDEFENSE_ZOMBIE_ZOMBONI_EXPRESTION,,,雪橇车僵尸碾过你的植物，并留下一条冰道。
+PLAYERS_TRIP_TO_MODERN,{UserName}'s House,{UserName}'s House,{UserName}的房子
 <!MissingKey:韧性：[color=cc241d]300[/color]>,,,"韧性：[color=cc241d]300[/color]
 特性：[color=C71585]可在水上承载植物[/color]"
-<!MissingKey:海妖僵尸觉得自己生前是强大的海妖，为此他甚至偷走了邻居的干草叉，但其他僵尸都知道，他只不过是曾经多次被缠绕水草拖下水的鸭子救生员僵尸罢了。但让其他僵尸受不了的是，他最近开始了唱歌。>,,,海妖僵尸觉得自己生前是强大的海妖，为此他甚至偷走了邻居的干草叉，但其他僵尸都知道，他只不过是曾经多次被缠绕水草拖下水的鸭子救生员僵尸罢了。但让其他僵尸受不了的是，他最近开始了唱歌。
-TOWERDEFENSE_SHOVEL_DEFAULT_NAME,Iron Shovel,Iron Shovel,铁铲
-TOWERDEFENSE_PLANT_JALAPENO_HANDBOOK_STORY,,,“嘎嘎嘎嘎！”火爆辣椒说。他现在不会爆炸，还不到时候。不过快了，喔！快了快了，快来了。他知道，他感受到了，他一生都是在等待这一刻！
-TOWERDEFENSE_PLANT_FIRENUT_NAME,FireNut,FireNut,火炬坚果
-TOWERDEFENSE_PLANT_SUNBOMB_NAME,SunBomb,SunBomb,阳光炸弹
-TOWERDEFENSE_PLANT_RECACTUS_CUSTOM_1_ACCESS,,,每日挑战 2025/7月 累计完成28天
-TOWERDEFENSE_PLANT_MAGNETMINE_NAME,Magnetic Potato Mine,Magnetic Potato Mine,磁力土豆雷
-TOWERDEFENSE_PLANT_JALACHERRYBOMB_NAME,Jalapeno CherryBomb ,CherryBomb,樱桃辣椒
-TOWERDEFENSE_READYSETPLANTS_SET,Set...,Set...,种植...
-TOWERDEFENSE_PLANT_PEASHOOTER_EXPRESTION,,,双发射手可以一次发射两颗豌豆
-<!MissingKey:猫战士从不脱下他的面具。“我是猫，猫的反应速度是僵尸的7倍。”作为肉食爱好者，他认为这样能帮助自己更早避开难吃的植物。>,,,猫战士从不脱下他的面具。“我是猫，猫的反应速度是僵尸的7倍。”作为肉食爱好者，他认为这样能帮助自己更早避开难吃的植物。
-<!MissingKey:火焰伤害>,Fire Damage,Fire Damage,火焰伤害
-TOWERDEFENSE_SHOVEL_DEFAULT_EXPRESTION,,,移除植物，无特殊效果。
-TOWERDEFENSE_PLANT_PRESENTBOX_EXPRESTION,,,下一个惊喜是？
+TOWERDEFENSE_PLANT_TANGLEKELPH_HANDBOOK_STORY,,,水下的海草确实具有迷惑性，溺水者常常觉得它不足以将他们困于水中，但这也造就了悲剧的发生。“我也不想的，但他们只会一直往前游，我可怜他们，就把他们放回去了。”
+TOWERDEFENSE_ZOMBIE_SQUASH_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
+伤害：[color=cc241d]即死（压扁）[/color]
+佩戴：[color=cc241d]----[/color]
+类型：[color=cc241d]小型僵尸[/color]
+速度：[color=cc241d]快[/color]
+特点：[color=cc241d]用脑袋压扁碰到的第一株植物[/color]"
+TOWERDEFENSE_PLANT_TANGLEKELP_EXPRESTION,,,缠绕海藻能够拖僵尸下水.
+<!MissingKey:寒冰菇皱着眉头，倒不是因为它不高兴或不满意，只是因为，它儿时因受创伤而遗留下了面瘫。>,,,寒冰菇皱着眉头，倒不是因为它不高兴或不满意，只是因为，它儿时因受创伤而遗留下了面瘫。
+TOWERDEFENSE_PLANT_SCAREDYSHROOM_NAME,Timid mushroom,Timid mushroom,胆小菇
+TOWERDEFENSE_ZOMBIE_SLEEP_NAME,Sleep Zombie,Sleep Zombie,小摔哥僵尸
+<!MissingKey:寒冰菇>,Ice Mushroom,Ice Mushroom,寒冰菇
+TOWERDEFENSE_ZOMBIE_JALAPENO_EXPRESTION,,,火爆辣椒僵尸具有强大的杀伤力！
+TOWERDEFENSE_ZOMBIE_DUCKRIDER_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]800 + 270[/color]
+伤害：[color=cc241d]即死（碾压） / 100/s（啃食）[/color]
+佩戴：[color=cc241d]大黄鸭（二类）+ 铁桶（一类）/ 路障（一类）[/color]
+类型：[color=cc241d]车类僵尸，失去大黄鸭后变为小型僵尸[/color]
+特点：[color=cc241d]骑鸭僵尸概率会佩戴铁桶和路障，在骑乘状态下会碾压碰到的所有植物，并能承载一个遇到的小型僵尸[/color]
+亡语：[color=cc241d]骑乘和被承载的僵尸脱离大黄鸭继续前行[/color]"
+TOWERDEFENSE_PLANT_SNOWWOOD_CUSTOM_1_ACCESS,,,每日挑战 2025/9月 累计完成28天
+TOWERDEFENSE_SHOVEL_DIAMOND_HANDBOOK_EXPRESTION,,,特点：[color=cc241d]铲掉植物时回收30%阳光[/color]
+TOWERDEFENSE_ZOMBIE_SCREEN_DOOR_NAME,Screen Door Zombie,Screen Door Zombie,铁栅门僵尸
+<!MissingKey:爆炸伤害>,Boom Damage,,爆炸伤害
+TOWERDEFENSE_ZOMBIE_IMP_PRESENTBOX_HANDBOOK_STORY,,,小鬼僵尸本来只是想给伽刚特尔准备圣诞礼物，但他不小心把礼盒卡在头上取不下来了。他试图向伽刚特尔寻求帮助，但他的兄弟似乎完全没看到——为啥呢？
+SHOP_NPC_TALK_NUTBANDAGING,,,坚果包扎术，能让你直接覆盖种植受伤的坚果！对高坚果和南瓜头同样有效！
+LOAD_TALK,Load talk,Load talk,加载对话
+TOWERDEFENSE_ZOMBIE_SCREEN_DOOR_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]1100（二类） + 270[/color]
+伤害：[color=cc241d]100/s[/color]
+佩戴：[color=cc241d]铁栅门（二类）[/color]
+类型：[color=cc241d]小型僵尸[/color]
+移速：[color=cc241d]慢[/color]
+弱点：[color=441D62]磁力菇、穿透攻击[/color]"
+TOWERDEFENSE_PLANT_THREECACTUS_NAME,ThreeCactus,ThreeCactus,三叶仙人掌
+<!MissingKey:尽管墓碑吞噬者的外表十分吓人，但他想要所有人都知道，其实他喜欢小猫咪，而且利用业余时间，在一家僵尸康复中心做志愿者。“我只是在做正确的事情，”他说。>,,,尽管墓碑吞噬者的外表十分吓人，但他想要所有人都知道，其实他喜欢小猫咪，而且利用业余时间，在一家僵尸康复中心做志愿者。“我只是在做正确的事情，”他说。
+TOWERDEFENSE_PLANT_CHERRYBOMB_EXPRESTION,,,樱桃炸弹能炸掉一定区域内所有僵尸。他们一种下就会立刻引爆，所以请把他们种在僵尸们的身边。
+TOWERDEFENSE_ZOMBIE_JACKBOX_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]500[/color]
+伤害：[color=cc241d]100/s[/color]
+佩戴：[color=cc241d]玩具匣（特殊）[/color]
+类型：[color=cc241d]小型僵尸[/color]
+移速：[color=cc241d]慢[/color]
+特点：[color=cc241d]玩具匣僵尸会在出场一段时间后爆炸[/color]
+弱点：[color=441D62]磁力菇[/color]"
+TOWERDEFENSE_PLANT_TWINSUNSHROOM_NAME,Twin SunShroom,Twin SunShroom,双子阳光向日葵
+<!MissingKey:特点：受到该效果的僵尸会立刻在原地冻结，并在结束后施加一段时间的减速效果。>,,,"特点：受到该效果的僵尸会立刻在原地冻结，并在结束后施加一段时间的减速效果。
+进阶：全屏冻结3秒并在结束后再施加一段时间的减速效果，满足以上要求或大于要求则视为寒冰菇效果，并可清除火球。
+互斥：受到火焰效果时会立即结束该效果"
+TOWERDEFENSE_PLANT_ICESPEARPEA_HANDBOOK_STORY,,,冰锥射手是著名的登山博主，据说他身上的每一片冰晶都取自不同的雪山顶峰，是天然的勋章；但也有不少网友觉得这只是炒作的说法，“就算他说的属实，那也不是他整天不洗脸对着镜头的理由。”
+<!MissingKey:韧性：[color=cc241d]300[/color]>,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]吞噬（小型僵尸）/42秒消化[/color]
+范围：[color=cc241d]前方一格[/color]
+特点：[color=cc241d]对可吞噬的僵尸即死对不可吞噬僵尸则造成40点伤害[/color]"
+TOWERDEFENSE_PLANT_JALANUT_EXPRESTION,,,那天坚果墙居然也在场！
+TOWERDEFENSE_PLANT_MAGNETNUT_EXPRESTION,,,磁力坚果可以吸走僵尸携带的金属制品。
+TOWERDEFENSE_PLANT_FIRETALLNUT_EXPRESTION,,,比坚果更强的堡垒，比火炬更冷的火焰！
+<!MissingKey:南瓜壳最近都没有关于它表哥“刃菲尔德”的消息，刃菲尔德是个大明星，是一种叫什么运动来着？的体育明星？佩格跳跳球大师？总之南瓜壳搞不懂是什么运动，它只想做好他自己的本职工作。>,,,南瓜壳最近都没有关于它表哥“刃菲尔德”的消息，刃菲尔德是个大明星，是一种叫什么运动来着？的体育明星？佩格跳跳球大师？总之南瓜壳搞不懂是什么运动，它只想做好他自己的本职工作。
+TOWERDEFENSE_ZOMBIE_JALAPENO_HANDBOOK_STORY,,,火爆辣椒僵尸并不清楚自己头上是什么，或许是上次和朋友吃麻辣火锅的后果。但是他总感觉自己的头似乎不太好控制，他总想在某一刻释放自己为友谊牺牲的压力，这一刻他等了太久。
+TOWERDEFENSE_SHOVEL_DIAMOND_NAME,Diamond Shovel,Diamond Shovel,钻石铲
+TOWERDEFENSE_PLANT_ICESPEARPEA_NAME,Ice Spear Pea,Ice Spear Pea,冰锥射手
+<!MissingKey:韧性：[color=cc241d]300[/color]>,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]20[/color]
+范围：[color=cc241d]全屏[/color]
+特性：[color=C71585]清除火球、白天会睡觉[/color]
+特点：[color=cc241d]冻结范围内的所有僵尸3秒，并减速15秒[/color]"
+TOWERDEFENSE_PLANT_PEALILYPAD_EXPRESTION,,,豌豆睡莲可以承载非水生植物，并发射子弹。
+TOWERDEFENSE_ZOMBIE_SCREEN_DOOR_HANDBOOK_STORY,,,铁栅门僵尸上次拜访的房主防守并不专业，在吃掉那房主的脑子后拿走了他家的铁栅门。
+TOWERDEFENSE_PLANT_GATLINGCAT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]20x6/1.5s[/color]
+范围：[color=cc241d]全屏追踪[/color]
+特性：[color=C71585]两栖植物，紫卡植物[/color]
+特点：[color=cc241d]攻击可以追踪空中僵尸[/color]
+紫卡植物：[color=0000FF]需要种植在豌豆香蒲上[/color]"
+TOWERDEFENSE_SHOVEL_DIAMOND_HANDBOOK_STORY,,,看这通体的质感，不像是用一颗钻石两根木棍合成出的东西？
+TOWERDEFENSE_PLANT_SUNPAD_CUSTOM_1_NAME,,,荷包蛋
+TOWERDEFENSE_PLANT_HYPNOSHROOM_NAME,Scaredy Shroom,Scaredy Shroom,魅惑菇
+<!MissingKey:特点：部分植物的攻击会造成[color=cc241d]火焰伤害[/color]。>,,,"特点：部分植物的攻击会造成[color=cc241d]火焰伤害[/color]。
+互斥：当拥有冻结或减速效果的僵尸会立即解除其效果
+强化：对红温状态的敌人造成伤害更高"
+TOWERDEFENSE_PLANT_FIRENUT_HANDBOOK_STORY,,,坚果热爱烟火，对他而言，各类烟火百玩不厌。“一提到烟花，我便脑袋发热，连身体也变得燥热起来！”也许发热的不只是脑袋——看来他并没有意识到坚果壳属于易燃物。
+SHOP_NPC_TALK_PLANT_THREECATUS,,,把这张紫卡种在你的双发仙人掌上，把它升级成三叶仙人掌！
+TOWERDEFENSE_PLANT_GLOOMPULT_HANDBOOK_STORY,,,忧郁菇得了一种怪病，身后长出了一条尾巴，因此植物们总是把忧郁菇当做投手植物。只有忧郁菇自己知道它是蘑菇类植物，这或许就是忧郁菇抑郁的原因。
+LEVLE_EVENT_SET_GAME_MODE,SetGameMode,SetGameMode,设置游戏模式
+MAP_BACKYARD_FULL,"Back Yard (Day,Full Pool)","Back Yard (Day,Full Pool)",后院(白天全泳池)
+SHOP_NPC_TALK_PLANT_GATLINGCAT,,,把这张紫卡种在你的豌豆香蒲上，把它升级成机枪香蒲！
+TOWERDEFENSE_PLANT_JALASUNSHROOM_HANDBOOK_STORY,,,辣椒阳光菇患有严重的选择恐惧症，曾经的他每天都在产阳光和打僵尸之间犹豫。“现在我终于学会了两者兼顾——虽然我也不清楚怎么做到的。”
+LOAD_AUDIO,Load audio,Load audio,加载音效
+TOWERDEFENSE_ZOMBIE_BACKUPDANCER_EXPRESTION,,,当舞王僵尸摇摆时，四名伴舞粉墨登场。
+TOWERDEFENSE_ZOMBIE_SQUASH_NAME,Squash Zombie,Squash Zombie,窝瓜僵尸
+TOWERDEFENSE_PLANT_PEASHOOTERSINGLE_HANDBOOK_STORY,,,一棵植物，怎么能如此快地生长，并发射如此多的豌豆呢？豌豆射手回答：“努力工作，奉献自己，再加上一份阳光，高纤维和氧化碳均衡搭配，这种健康早餐让一切成为可能。”
 TOWERDEFENSE_PLANT_PUFFPOT_HANDBOOK_STORY,,,"小盆菇因为不想做蘑菇家族里最底层的那个，于是在头上放了一个花盆。“在这个花盆种上高的植物，我就能让植物对我毕恭毕敬了！”
 （这不是狐假虎威吗…）大喷菇想着。"
-TOWERDEFENSE_PLANT_ICESPEARPEA_HANDBOOK_STORY,,,冰锥射手是著名的登山博主，据说他身上的每一片冰晶都取自不同的雪山顶峰，是天然的勋章；但也有不少网友觉得这只是炒作的说法，“就算他说的属实，那也不是他整天不洗脸对着镜头的理由。”
+TOWERDEFENSE_ZOMBIE_DISCO_EXPRESTION,,,迪斯科僵尸和人类(在世或者死去的)如有雷同，纯属巧合。
+TOWERDEFENSE_PLANT_POT_NAME,Pot,Pot,花盆
+TOWERDEFENSE_ZOMBIE_NUT_HANDBOOK_STORY,,,坚果僵尸喜爱保龄球，于是在路边捡了个保龄球头套戴在脑袋上。但没人告诉他那其实是个坚果。
+<!MissingKey:用户名>,USERNAME,USERNAME,用户名
+TOWERDEFENSE_ZOMBIE_DANCERFIRE_NAME,Fire DancerZombie,Fire Dancer Zombie,火焰舞者僵尸
+LOAD_PROJECTILE,Load projectile,Load projectile,加载子弹
+<!MissingKey:V0.7版本更新公告>,,,V0.7版本更新公告
+TOWERDEFENSE_PLANT_ICESUNMINE_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]1800（爆炸）+ 20（寒光菇）[/color]
+范围：[color=cc241d]单格[/color]
+特性：[color=C71585]紫卡植物[/color]
+特点1：[color=cc241d]需要15秒准备时间，种植时继承原本阳光土豆雷的准备时间[/color]
+特点2：[color=cc241d]被僵尸触发爆炸后生成50阳光，并释放一次寒光菇效果[/color]
+紫卡植物：[color=0000FF]需要种植在阳光土豆雷上[/color]"
+TOWERDEFENSE_ZOMBIE_DISCO_HANDBOOK_STORY,,,迪斯科僵尸参与的最新唱片“抓住脑子咬啊咬”在僵尸界的人气正急速飙升。
+TOWERDEFENSE_PLANT_SUNBOMB_CUSTOM_1_ACCESS,,,每日挑战 2025/7月 累计完成14天
+NPC_TALK_LEVEL1_5_TUTORIAL_10,,,加油，给我赢个冠军回来！
+BGM_BACKYARD_NIGHT,Back Yard Night,Back Yard Night,后院(夜晚)
+LOAD_MAP,Load map,Load map,加载地图
+TOWERDEFENSE_PLANT_DOOMTANGLEKELP_EXPRESTION,,,毁灭水草可以拉僵尸下水，并释放毁灭菇爆炸。
+TOWERDEFENSE_ZOMBIE_SNORKLE_NAME,Snorkel Zombie,Snorkel Zombie,潜水僵尸
 TOWERDEFENSE_PLANT_MELONPULTSPIKE_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
 威力：[color=cc241d]80/3s[/color]
 范围：[color=cc241d]前方一行[/color]
@@ -730,328 +559,7 @@ TOWERDEFENSE_PLANT_MELONPULTSPIKE_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]
 范围：[color=cc241d]单格[/color]
 特点：[color=cc241d]本体和瓜皮均可爆胎车辆（一次性）
 地刺瓜皮最多存在10秒[/color]"
-TOWERDEFENSE_ZOMBIE_SCREEN_DOOR_HANDBOOK_STORY,,,铁栅门僵尸上次拜访的房主防守并不专业，在吃掉那房主的脑子后拿走了他家的铁栅门。
-TOWERDEFENSE_PLANT_PUFFPOT_NAME,PuffPot,PuffPot,小盆菇
-<!MissingKey:戴夫把三叶草的扇叶装到了大嘴花头上，并宣称自己发明了利用僵尸生物能的风扇。>,,,"戴夫把三叶草的扇叶装到了大嘴花头上，并宣称自己发明了利用僵尸生物能的风扇。
-对此大嘴花并不在意，反正他只要有东西吃就够了。“快到我嘴里来！”"
-TOWERDEFENSE_PLANT_SCAREDYSHROOM_NAME,Timid mushroom,Timid mushroom,胆小菇
-TOWERDEFENSE_PLANT_PUMPKINFIRE_EXPRESTION,,,火炬树桩喝了酒，火势一发不可收拾！
-TOWERDEFENSE_ZOMBIE_SNOWPEA_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
-伤害：[color=cc241d]100/s（啃食） + 20x1/次（射击）[/color]
-佩戴：[color=cc241d]----[/color]
-类型：[color=cc241d]小型僵尸[/color]
-速度：[color=cc241d]慢[/color]
-特点：[color=cc241d]当前方有非低矮植物时每次能发射1颗寒冰豌豆攻击并减速你的植物[/color]"
-REGIST_ERROR_PASSWORD_LESS_THAN_EIGHT,Password length must be greater than 8,Password length must be greater than 8,密码长度需大于8位
-<!MissingKey:重新开始>,RESTART,RESTART,重新开始
-TOWERDEFENSE_PLANT_FIRETALLNUT_HANDBOOK_STORY,,,显而易见，冰炬高坚果承担着比他兄弟更加“坚炬”的任务，但他有着一颗与外表相反的温暖内心。他喜欢别人叫自己“冰糕”，这个称呼对那些既想吃冰品又想喝热饮的孩子们太友好了。
-LEVEL1_7_BROADCAST_1,,,现在是傍晚，天上掉落的阳光更小了！
-TOWERDEFENSE_PLANT_JALAPENO_EXPRESTION,,,火爆辣椒可以摧毁一整条线上的敌人。
-TOWERDEFENSE_PLANT_JALASUNSHROOM_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-生产：[color=cc241d]15阳光/25秒，长大后变为50阳光/25秒[/color]
-威力：[color=cc241d]150，长大后250（均属于火焰伤害）[/color]
-特性：[color=C71585]低矮植物、白天会睡觉[/color]
-特点：[color=cc241d]需要60秒时间成长，拾取辣椒阳光会同时释放一整行的火焰效果[/color]"
-TOWERDEFENSE_ZOMBIE_PEASHOOTER_NAME,Peashooter,Peashooter,豌豆僵尸
-TOWERDEFENSE_ZOMBIE_JALAPENO_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]500[/color]
-伤害：[color=cc241d]100/s（啃食） 1800（火爆辣椒）[/color]
-佩戴：[color=cc241d]----[/color]
-类型：[color=cc241d]小型僵尸[/color]
-速度：[color=cc241d]慢[/color]
-特点：[color=cc241d]出场一段时间后释放火爆辣椒效果，烧掉你的植物并消失[/color]"
-TOWERDEFENSE_PLANT_WINTERMELONSHROOM_CUSTOM_1_NAME,,,盛夏特饮
-<!MissingKey:威力：[color=cc241d]即死[/color]>,,,"威力：[color=cc241d]即死[/color]
-范围：[color=cc241d]单格[/color]
-特性：[color=C71585]只能种在水中[/color]
-特点：[color=cc241d]无视免疫魅惑，能将所有非BOSS类僵尸拖下水并生成一个它的魅惑形态[/color]"
-TOWERDEFENSE_PLANT_HYPNOSHROOM_EXPRESTION,,,当僵尸吃下魅惑菇后，它将会掉转方向为你作战。
-TOWERDEFENSE_SHOVEL_DIAMOND_EXPRESTION,,,移除场地上的植物返还大量阳光！
-TOWERDEFENSE_PLANT_SUNFLOWERPEA_CUSTOM_1_NAME,,,天使与恶魔
-TOWERDEFENSE_ZOMBIE_NORMAL_HANDBOOK_STORY,,,这种僵尸酷爱脑子，贪婪而不知足。脑子、脑子、脑子，——夜以继日地追求着。恶臭难闻的脑子？腐烂的脑子？我想这都没关系，僵尸不介意。
-TOWERDEFENSE_PLANT_CHERRYBOMB_HANDBOOK_STORY,,,“我要‘爆’开了，”樱桃一号说。“不，我们是要‘炸’开了！”它哥哥樱桃二号说。经过激烈的商议之后，它们才统一达成“爆炸”这个说法。
-TOWERDEFENSE_ZOMBIE_DUCK_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
-伤害：[color=cc241d]100/s[/color]
-佩戴：[color=cc241d]----[/color]
-速度：[color=cc241d]慢[/color]
-限制：[color=0000FF]只会在水上出现[/color]
-亡语：[color=cc241d]死亡后留下一个500血量的游泳圈，游泳圈能阻挡平射子弹[/color]"
-SHOP_NPC_TALK_PLANT_PEACAT_CUSTOM_0,,,豌豆香蒲的皮肤！你可以在图鉴装扮你的植物！
-PLAYERS_MORDEN_BACKYARD_LEVEL_NAME,Swimming Pool Defense 3 - {LevelNumber},Swimming Pool Defense 3 - {LevelNumber},泳池防守3 - {LevelNumber}
-TOWERDEFENSE_PLANT_SUNBOMB_CUSTOM_1_STORY,,,“准备好了吗？接下来我们要让气氛轰到爆！”
-TOWERDEFENSE_PLANT_FIRENUT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]4000[/color]
-反伤：[color=cc241d]40/1.5s（火焰伤害）[/color]
-特点：[color=cc241d]点燃豌豆为火焰豌豆[/color]"
-TOWERDEFENSE_ZOMBIE_ARMORED_GARGANTUAR_HANDBOOK_STORY,,,伽刚特尔本就是僵尸中的精锐，能够被授予武装的伽刚特尔更是精锐中的精锐。不过武装伽刚特尔似乎仍然不开心，毕竟这身装备不能帮他交到女朋友。
-TOWERDEFENSE_ZOMBIE_GARGANTUAR_REDEYE_EXPRESTION,,,红眼伽刚特尔，双倍防御，双倍的威胁！
-<!MissingKey:骑鸭僵尸顺走其他僵尸的装备，拼凑出了他的坐骑。他很乐意让别人搭一程顺风车，除非你说他的坐骑是一只鸭子——因为他以为这是一只鸵鸟。>,,,骑鸭僵尸顺走其他僵尸的装备，拼凑出了他的坐骑。他很乐意让别人搭一程顺风车，除非你说他的坐骑是一只鸭子——因为他以为这是一只鸵鸟。
-TOWERDEFENSE_ZOMBIE_GATLINGPEA_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
-伤害：[color=cc241d]100/s（啃食） + 20x4/次（射击）[/color]
-佩戴：[color=cc241d]----[/color]
-类型：[color=cc241d]小型僵尸[/color]
-速度：[color=cc241d]慢[/color]
-特点：[color=cc241d]当前方有非低矮植物时每次能发射4颗豌豆攻击你的植物[/color]"
-TOWERDEFENSE_PLANT_PEASHOOTERSINGLE_NAME,PeashooterSingle,PeashooterSingle,豌豆射手
-TOWERDEFENSE_PLANT_FIRENUT_CUSTOM_1_STORY,,,“宇宙超人，睁开眼睛——”
-TOWERDEFENSE_ZOMBIE_BALLOON_EXPRESTION,,,气球僵尸漂浮在空中，躲过大多数攻击。
-TOWERDEFENSE_PLANT_SCAREDYSHROOM_HANDBOOK_STORY,,,“谁在那？”胆小菇低声说，声音细微难辨。“走开！我不想见任何人。除非……除非你是马戏团的人。”
-TOWERDEFENSE_ZOMBIE_JALAPENO_HANDBOOK_STORY,,,火爆辣椒僵尸并不清楚自己头上是什么，或许是上次和朋友吃麻辣火锅的后果。但是他总感觉自己的头似乎不太好控制，他总想在某一刻释放自己为友谊牺牲的压力，这一刻他等了太久。
-TOWERDEFENSE_PLANT_PEASHOOTERSINGLE_EXPRESTION,,,豌豆射手，你的第一道防线。它们通过发射豌豆来攻击僵尸。
-SHOP_NPC_TALK_MOWER_SUN,,,阳光小推车，碾压僵尸能够获得阳光！
-TOWERDEFENSE_PLANT_SNOWWOOD_HANDBOOK_STORY,,,"头冠在火炬树桩家族都是很重要的物品，谁的火冠大，谁的地位就越高。“我曾想通过带一个皇冠来凸现我的火冠的，可惜他们都说我老土。”冰炬树桩说，“现在，有了这个冰冠，我也成了火炬树桩中地位高的那一个了。”
-“这不是寒冰射手的头饰吗…”豌豆射手小声说道。"
-<!MissingKey:爆炸伤害>,Boom Damage,,爆炸伤害
-TOWERDEFENSE_READYSETPLANTS_PLANTS,PLANT!,PLANT!,植物!
 TOWERDEFENSE_PLANT_THREECACTUS_EXPRESTION,,,快速发射三枚尖刺，吹起微风阻碍僵尸前进！
-TOWERDEFENSE_PLANT_CORNTROP_NAME,Corntrop,Corntrop,玉米地刺
-TOWERDEFENSE_PLANT_QUEENSUNFLOWER_HANDBOOK_STORY,,,这是向日葵中最爱晒太阳的一只，被给予了王冠，成为了向日葵女王。“现在我可以随时吃免费的奶酪烧烤三明治了。”向日葵女王说。
-<!MissingKey:大喷菇>,Giant puffball,Giant puffball,大喷菇
-TOWERDEFENSE_PLANT_SUNBEAN_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-特性：[color=C71585]悬浮植物、唤醒本格植物[/color]
-特点1：[color=cc241d]每25秒生产15阳光
-60秒后长大，每25秒生产25阳光[/color]"
-TOWERDEFENSE_PLANT_SNOWWOOD_EXPRESTION,,,点燃豌豆、冰豆、火球为具有减速的冰焰豌豆。
-TOWERDEFENSE_ZOMBIE_GARGANTUAR_EXPRESTION,,,伽刚特尔是一种巨型僵尸。
-TOWERDEFENSE_ZOMBIE_CONEHEAD_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]370 + 270[/color]
-伤害：[color=cc241d]100/s[/color]
-佩戴：[color=cc241d]路障（一类）[/color]
-类型：[color=cc241d]小型僵尸[/color]
-移速：[color=cc241d]慢[/color]"
-TOWERDEFENSE_PLANT_QUEENSUNFLOWER_NAME,Queen Sunflower,Queen Sunflower,向日葵女王
-TOWERDEFENSE_ZOMBIE_DUCK_EXPRESTION,,,小黄鸭批发商！
-TOWERDEFENSE_PLANT_GATLINGPEA_NAME,GatlingPea,GatlingPea,机枪射手
-TOWERDEFENSE_ZOMBIE_BALLOONCOLOUR_EXPRESTION,,,超级加倍的气球僵尸！
-LOAD_MOWER,Load mower,Load mower,加载小推车
-TOWERDEFENSE_ZOMBIE_SUNFLOWER_NAME,Sunflower Zombie,Sunflower Zombie,向日葵僵尸
-TOWERDEFENSE_PLANT_POT_HANDBOOK_STORY,,,“我是一个花盆，但我也是一棵植物。是不是很意外？”
-TOWERDEFENSE_PLANT_ICENUT_NAME,Icenut,Icenut,冰冻坚果
-TOWERDEFENSE_ZOMBIE_CONEHEAD_HANDBOOK_STORY,,,和其他僵尸一样，路障头僵尸盲目地向前。但某些事物却使他停下脚步，捡起一个交通路障，并固定在自己的脑袋上——是的，他很喜欢参加聚会。
-TOWERDEFENSE_ZOMBIE_BACKUPDANCER_HANDBOOK_STORY,,,伴舞僵尸曾在位于僵尸纽约城的“咀利牙”表演艺术学院钻研过六年的舞技。
-<!MissingKey:特点：植物会生成单格或多格火焰特效并附加[color=cc241d]火焰伤害[/color]即为火焰效果。>,,,"特点：植物会生成单格或多格火焰特效并附加[color=cc241d]火焰伤害[/color]即为火焰效果。
-进阶：当对一整行或一竖列造成1800点以上的火焰伤害，当达到或大于以上要求则视为火爆辣椒效果，并可清除冰道与冰球。
-互斥：当拥有冻结或减速效果的僵尸会立即解除其效果
-强化：对红温状态的敌人造成的伤害更高"
-<!MissingKey:血量：[color=cc241d]4000[/color]>,,,"血量：[color=cc241d]4000[/color]
-伤害：[color=cc241d]300/s[/color]
-佩戴：[color=cc241d]----[/color]
-类型：[color=cc241d]小型僵尸[/color]
-速度：[color=cc241d]慢[/color]
-限制：[color=0000FF]只会在水上出现[/color]
-特性：[color=C71585]免疫常规海草与魅惑效果、免疫控制效果[/color]
-特点：[color=cc241d]每15秒，召唤3个缠绕潜水僵尸（三行，每行一个）[/color]"
-<!MissingKey:“我以前那份没前途的工作，是为一个面包房生产酵母孢，”大喷菇说。“然后小喷菇，上帝保佑它，告诉了我这个喷杀僵尸的机会。现在我真觉得自己完全不同了。”>,,,“我以前那份没前途的工作，是为一个面包房生产酵母孢，”大喷菇说。“然后小喷菇，上帝保佑它，告诉了我这个喷杀僵尸的机会。现在我真觉得自己完全不同了。”
-<!MissingKey:魅惑海草>,Enchanted Seaweed,Enchanted Seaweed,魅惑海草
-TOWERDEFENSE_ZOMBIE_WILDPEA_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
-伤害：[color=cc241d]100/s（啃食） + 20x4*5/次（射击）[/color]
-佩戴：[color=cc241d]----[/color]
-类型：[color=cc241d]小型僵尸[/color]
-速度：[color=cc241d]慢[/color]
-特点：[color=cc241d]当前方有非低矮植物时每次向五个方向发射4颗散射的豌豆[/color]"
-<!MissingKey:音效>,Sound FX,Sound FX,音效
-TOWERDEFENSE_ZOMBIE_DOLPHINRIDER_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]500[/color]
-伤害：[color=cc241d]100/s[/color]
-佩戴：[color=cc241d]----[/color]
-类型：[color=cc241d]小型僵尸[/color]
-速度：[color=cc241d]快，跳跃后慢[/color]
-限制：[color=0000FF]只会在水上出现[/color]
-特点：[color=cc241d]骑乘海豚时跃过他所碰到的第一株植物，并丢弃海豚[/color]
-弱点：[color=441D62]高坚果[/color]"
-TOWERDEFENSE_MOWER_DEFAULT_EXPRESTION,,,默认的陆地小推车
-TOWERDEFENSE_PLANT_ICESPEARPEA_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]60/1.5s[/color]
-范围：[color=cc241d]前方一行[/color]
-特性：[color=C71585]紫卡植物[/color]
-特点：[color=cc241d]冰锥子弹能穿透最多3只僵尸，无视二类防具，并对僵尸附加减速15秒+5%概率冻结3秒[/color]
-紫卡植物：[color=0000FF]需要种植在寒冰射手上[/color]"
-TOWERDEFENSE_ZOMBIE_SLEEP_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]500 + 270[/color]
-伤害：[color=cc241d]200/s[/color]
-佩戴：[color=cc241d]睡帽（一类）[/color]
-类型：[color=cc241d]小型僵尸[/color]
-移速：[color=cc241d]快[/color]"
-<!MissingKey:登录>,LOGIN,LOGIN,登录
-TOWERDEFENSE_PLANT_GRAVEMINE_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]1800（阳光土豆雷）[/color]
-范围：[color=cc241d]自身所在格[/color]
-特性：[color=C71585]吞噬墓碑[/color]
-特点：[color=cc241d]种在墓碑上吞噬墓碑，并在吞噬完后产生一个阳光土豆雷[/color]"
-<!MissingKey:红温效果>,,,红温效果
-TOWERDEFENSE_ZOMBIE_BACKUPDANCER_EXPRESTION,,,当舞王僵尸摇摆时，四名伴舞粉墨登场。
-<!MissingKey:冻结效果>,freeze Buff,freeze Buff,冻结效果
-BGM_ROOF_NIGHT,Roof Night,Roof Night,屋顶(夜晚)
-<!MissingKey:血量：[color=cc241d]450[/color]>,,,"血量：[color=cc241d]450[/color]
-伤害：[color=cc241d]即死（抓取）[/color]
-佩戴：[color=cc241d]----[/color]
-类型：[color=cc241d]小型僵尸[/color]
-特点：[color=cc241d]从天而降，停留一段时间后窃取你的植物[/color]
-弱点：[color=441D62]叶子保护伞[/color]"
-LOAD_AUDIO,Load audio,Load audio,加载音效
-TOWERDEFENSE_PLANT_SUNSHROOM_CUSTOM_1_ACCESS,,,0.2版本更新奖励
-TOWERDEFENSE_ZOMBIE_SHADOW_HANDBOOK_STORY,,,所有僵尸都有自己的影子，但他们更加羡慕影子僵尸的影子，因为他的影子总是能够自由移动，而且很板正。“想知道为什么吗，因为身正不怕影子斜。”影子僵尸如是说。
-<!MissingKey:其实缠绕水草本就是一个毁灭菇，只是他之前不小心跌进水里被水草缠住了。>,,,其实缠绕水草本就是一个毁灭菇，只是他之前不小心跌进水里被水草缠住了。
-TOWERDEFENSE_PLANT_PEASHOOTER_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]20x2/1.5s[/color]
-范围：[color=cc241d]前方一行[/color]"
-TOWERDEFENSE_PLANT_JALACHERRYBOMB_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]1800（每行火焰伤害）[/color]
-范围：[color=cc241d]上中下三行[/color]
-特性：[color=C71585]清除冰道与冰球[/color]
-特点：[color=cc241d]对三行各释放一次火爆辣椒效果，对范围内所有僵尸造成1800火焰伤害，并解除植物与僵尸身上的减速和冻结效果[/color]"
-TOWERDEFENSE_ZOMBIE_DARKFOOTBALL_HANDBOOK_STORY,,,在球场上，暗黑橄榄球僵尸身为队长，总是能表现出300%的热情。他对防守和进攻了如指掌，虽然他还是不懂橄榄球。
-NPC_TALK_LEVEL1_5_TUTORIAL_10,,,加油，给我赢个冠军回来！
-TOWERDEFENSE_PLANT_GLOOMPULT_HANDBOOK_STORY,,,忧郁菇得了一种怪病，身后长出了一条尾巴，因此植物们总是把忧郁菇当做投手植物。只有忧郁菇自己知道它是蘑菇类植物，这或许就是忧郁菇抑郁的原因。
-TOWERDEFENSE_ZOMBIE_GATLINGPEA_NAME,Machine Gun Zombie,Machine Gun Zombie,机枪僵尸
-TOWERDEFENSE_PLANT_RECACTUS_CUSTOM_1_STORY,,,“前面的僵尸，你已经在我的通缉令上了！”
-TOWERDEFENSE_PLANT_WINTERMELONSHROOM_CUSTOM_1_STORY,,,纯天然冰镇西瓜汁！只要300阳光！
-TOWERDEFENSE_ZOMBIE_NUT_NAME,Nut Zombie,Nut Zombie,坚果僵尸
-REGIST_SUCCESS,Registered successfully,Registered successfully ,注册成功!
-TOWERDEFENSE_ZOMBIE_PRESENTBOX_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
-伤害：[color=cc241d]100/s[/color]
-佩戴：[color=cc241d]----[/color]
-类型：[color=cc241d]小型僵尸[/color]
-速度：[color=cc241d]慢[/color]
-亡语：[color=cc241d]在死亡位置生成一只随机僵尸[/color]"
-<!MissingKey:特点：部分植物的攻击会造成[color=cc241d]火焰伤害[/color]。>,,,"特点：部分植物的攻击会造成[color=cc241d]火焰伤害[/color]。
-互斥：当拥有冻结或减速效果的僵尸会立即解除其效果
-强化：对红温状态的敌人造成伤害更高"
-TOWERDEFENSE_MOWER_SUN_NAME,Sun Mower,Sun Mower,阳光小推车
-TOWERDEFENSE_ZOMBIE_ARMORED_GARGANTUAR_NAME,Armored Gargantuar,Armored Gargantuar,武装伽刚特尔
-TOWERDEFENSE_PLANT_FIRETALLNUT_NAME,Cold Fire TallNut,Cold Fire TallNut,冰炬高坚果
-TOWERDEFENSE_ZOMBIE_CONEHEAD_NAME,Conehead Zombie,Conehead Zombie,路障僵尸
-REGIST_ERROR_PASSWORD_NOT_SAME,Password not same,Password not same,再次输入密码与密码不同
-SHOP_ITEM_PACKETSLOT_12,,,12槽
-TOWERDEFENSE_PLANT_SUNSHROOM_CUSTOM_1_STORY,,,“我独自走在~郊外的小路上~”
-SHOP_ITEM_PACKETSLOT_13,,,13槽
-TOWERDEFENSE_PLANT_JALAPENO_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]1800（火焰伤害）[/color]
-范围：[color=cc241d]自身所在一整行[/color]
-特性：[color=C71585]清除冰道与冰球[/color]
-特点：[color=cc241d]并解除植物与僵尸身上的减速和冻结效果[/color]"
-SHOP_ITEM_PACKETSLOT_10,,,10槽
-SHOP_NPC_TALK_PLANT_THREECATUS,,,把这张紫卡种在你的双发仙人掌上，把它升级成三叶仙人掌！
-SHOP_ITEM_PACKETSLOT_11,,,11槽
-TOWERDEFENSE_PLANT_PUMPKINFIRE_HANDBOOK_STORY,,,南瓜头最近迷上了恶灵骑士，他准备在万圣节装扮成他的偶像，“我感觉我燃起来了！”南瓜头说道。其实他不知道，南瓜头本身就是万圣节的装饰。
-SHOP_ITEM_PACKETSLOT_16,,,16槽
-<!MissingKey:墓碑开始松动!>,THE TOMBSTONE IS STARTING TO LOOSEN,THE TOMBSTONE IS STARTING TO LOOSEN,墓碑开始松动!
-SHOP_ITEM_PACKETSLOT_14,,,14槽
-TOWERDEFENSE_ZOMBIE_FOOTBALL_HANDBOOK_STORY,,,在球场上，橄榄球僵尸表现出110%的激情。他善于与队友合作，进攻防守样样在行，虽然他完全不知道橄榄球是什么。
-SHOP_ITEM_PACKETSLOT_15,,,15槽
-<!MissingKey:海妖僵尸>,Sea Demon Zombie,Sea Demon Zombie,海妖僵尸
-<!MissingKey:毁灭水草可以拉僵尸下水，并释放毁灭菇爆炸。>,,,毁灭水草可以拉僵尸下水，并释放毁灭菇爆炸。
-LEVLE_EVENT_CURRENTMAP_CHARACTER_CLEAR,CurrentMapCharacterClear,CurrentMapCharacterClear,清除当前地图角色
-<!MissingKey:大嘴花几乎可以到“恐怖小店”表演他的绝技了，不过他的经济人榨取了他太多的钱，所以他没去成。尽管如此，大嘴花没有怨言，只说了句这只是交易的一部分。>,,,大嘴花几乎可以到“恐怖小店”表演他的绝技了，不过他的经济人榨取了他太多的钱，所以他没去成。尽管如此，大嘴花没有怨言，只说了句这只是交易的一部分。
-LEVLE_EVENT_GRAVESTONE_CREATE_RANDOM,GravestoneCreateRandom,GravestoneCreateRandom,随机位置创建墓碑
-LOAD_SHOVEL,Load shovel,Load shovel,加载铲子
-<!MissingKey:荷包蛋能可在水上承载植物，并灼烧路过的僵尸>,,,荷包蛋能可在水上承载植物，并灼烧路过的僵尸
-<!MissingKey:猫战士僵尸>,Zombie Cat,Zombie Cat,猫战士僵尸
-NPC_TALK_LEVEL1_11_TUTORIAL_1,,,天啦噜，伙计！你的草坪呢？！
-NPC_TALK_LEVEL1_11_TUTORIAL_2,,,难道是蹦极僵尸把草皮掀走了？
-TOWERDEFENSE_PLANT_WINTERMELONSHROOM_CUSTOM_1_ACCESS,,,商店购买（价格5000）
-NPC_TALK_LEVEL1_11_TUTORIAL_3,,,还是它们终于学会了使用小推车？......那太可怕了。
-TOWERDEFENSE_PLANT_GLOOMPULT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]20×4/3s[/color]
-特性：[color=C71585]白天会睡觉[/color]
-特点：[color=cc241d]每3秒向本行最靠近自己的僵尸投掷一枚忧郁菇子弹，击中僵尸后释放忧郁菇效果（3x3范围20*4伤害）；当自身3x3范围内有僵尸时，每3秒释放忧郁菇效果[/color]"
-NPC_TALK_LEVEL1_11_TUTORIAL_4,,,不过别担心！虽然很多植物不能直接放在裸地上...
-TOWERDEFENSE_PLANT_ICENUT_CUSTOM_1_ACCESS,,,每日挑战 2025/8月 累计完成28天
-NPC_TALK_LEVEL1_11_TUTORIAL_5,,,...但地刺和花盆可以！
-NPC_TALK_LEVEL1_11_TUTORIAL_6,,,喏，拿好这个豌豆花盆！
-NPC_TALK_LEVEL1_11_TUTORIAL_7,,,让它们帮你教训僵尸吧！
-MAP_FRONTLAWN_BIG,"Front Yard (Day,Big Map)","Front Yard (Day,Big Map)",前院(白天大地图)
-MAP_FRONTLAWN_NIGHT_DEEP,Front Yard (Deep Night),Front Yard (Deep Night),前院(深夜)
-TOWERDEFENSE_ZOMBIE_DOLPHINRIDER_EXPRESTION,,,海豚骑士僵尸善于利用你水池防御的弱点。
-<!MissingKey:密码>,PASSWORD,PASSWORD,密码
-TOWERDEFENSE_PLANT_SQUASH_EXPRESTION,,,窝瓜会压扁第一个接近它的僵尸
-TOWERDEFENSE_PLANT_ICESUNMINE_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]1800（爆炸）+ 20（寒光菇）[/color]
-范围：[color=cc241d]单格[/color]
-特性：[color=C71585]紫卡植物[/color]
-特点1：[color=cc241d]需要15秒准备时间，种植时继承原本阳光土豆雷的准备时间[/color]
-特点2：[color=cc241d]被僵尸触发爆炸后生成50阳光，并释放一次寒光菇效果[/color]
-紫卡植物：[color=0000FF]需要种植在阳光土豆雷上[/color]"
-<!MissingKey:潜水海豚僵尸>,Snorkel Zombie,Snorkel Zombie,潜水海豚僵尸
-LEVLE_EVENT_CREATE_PROTAL,CreateProtal,CreateProtal,创建传送门
-TOWERDEFENSE_ZOMBIE_JACKSON_NAME,Dancing Zombie,Dancing Zombie,舞王僵尸
-TOWERDEFENSE_ZOMBIE_DARKFOOTBALL_NAME,Dark football zombie,Dark football zombie,暗黑橄榄球僵尸
-TOWERDEFENSE_ZOMBIE_PRESENTBOX_EXPRESTION,,,盒子里藏着别样的惊喜。
-TOWERDEFENSE_PLANT_PEASHOOTER_HANDBOOK_STORY,,,双发射手很凶悍，他是在街头混大的。他不在乎任何人的看法，无论是植物还是僵尸，他打出豌豆，是为了让别人离他远点。但其实，双发射手一直暗地里渴望着爱情。
-<!MissingKey:大嘴花>,Big Mouth Flower,Big Mouth Flower,大嘴花
-<!MissingKey:毁灭菇可以摧毁大范围的僵尸，并留下一个不能种植物的弹坑。>,,,毁灭菇可以摧毁大范围的僵尸，并留下一个不能种植物的弹坑。
-<!MissingKey:骑鸭僵尸>,Zombie Duckrider,Zombie Duckrider,骑鸭僵尸
-TOWERDEFENSE_TIPS_FINALWAVE,FINAL WAVE,FINAL WAVE,最后一波
-<!MissingKey:魅惑海草能够拖僵尸下水，将其魅惑后放出。>,,,魅惑海草能够拖僵尸下水，将其魅惑后放出。
-<!MissingKey:墓碑吞噬者用来吃掉墓碑。>,,,墓碑吞噬者用来吃掉墓碑。
-TOWERDEFENSE_ZOMBIE_SNOWPEA_HANDBOOK_STORY,,,寒冰射手僵尸非常害怕现在可怕的杂交植物们，他瑟瑟发抖，不禁打了个寒颤。
-TOWERDEFENSE_ZOMBIE_SLEEP_HANDBOOK_STORY,,,“我的雪橇在哪里？就没有企鹅和摩托车帮我吗？哦，至少雪怪还是有的。”小摔哥僵尸说完，就继续沉浸在梦乡里，殊不知他的床下一秒就要被打破了
-TOWERDEFENSE_ZOMBIE_POLESTRIKER_NAME,Olive Polestalker,Olive Polestalker,橄榄撑杆僵尸
-TOWERDEFENSE_PLANT_SUNBOMB_HANDBOOK_STORY,,,在是否要从僵尸身上获取阳光的问题上，阳光炸弹和向日葵有过激烈的争执，但是这并不妨碍她在每周四的下午准时参加阳光爱好者俱乐部。
-TOWERDEFENSE_ZOMBIE_FLAG_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]370 + 270[/color]
-伤害：[color=cc241d]100/s[/color]
-佩戴：[color=cc241d]路障（一类）[/color]
-类型：[color=cc241d]小型僵尸[/color]
-移速：[color=cc241d]稍快（对比普通僵尸）[/color]"
-TOWERDEFENSE_SHOVEL_COLD_HANDBOOK_STORY,,,据说是从某个冰淇淋小摊淘来的铲子。
-TOWERDEFENSE_ZOMBIE_BUCKETHEAD_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]1100 + 270[/color]
-伤害：[color=cc241d]100/s[/color]
-佩戴：[color=cc241d]铁桶（一类）[/color]
-类型：[color=cc241d]小型僵尸[/color]
-移速：[color=cc241d]慢[/color]
-弱点：[color=441D62]磁力菇[/color]"
-LEVEL1_5_BROADCAST_1,,,一直挖吧，直到你的场地上没有植物！
-LOGIN_SUCCESS,Log in successfully,Log in successfully,登录成功!
-MAP_FRONTLAWN_AFTERNOON,Front Yard (Afternoon),Front Yard (Afternoon),前院(黄昏)
-TOWERDEFENSE_PLANT_GATLINGCAT_NAME,Gatling PeaCat,Gatling PeaCat,机枪香蒲
-TOWERDEFENSE_PLANT_FIRENUT_CUSTOM_1_ACCESS,,,每日挑战 2025/7月 累计完成7天
-TOWERDEFENSE_ZOMBIE_DIGGER_NAME,Digger Zombie,Digger Zombie,矿工僵尸
-LOAD_CHARACTER,Load character,Load character,加载植物和僵尸
-TOWERDEFENSE_PLANT_PUFFPOT_EXPRESTION,,,免费的蘑菇，免费的花盆。
-TOWERDEFENSE_ZOMBIE_SNORKLE_HANDBOOK_STORY,,,僵尸不呼吸，他们不需要空气，那么为什么潜水僵尸还需要一套噱头的潜水装置来潜水呢？答案：同行的压力。
-<!MissingKey:蹦极僵尸>,Digger Zombie,Digger Zombie,蹦极僵尸
-TOWERDEFENSE_PLANT_PUMPKINFIRE_NAME,Fire Pumpkin,Fire Pumpkin,火焰南瓜头
-TOWERDEFENSE_ZOMBIE_POLESTRIKER_EXPRESTION,,,橄榄球和撑杆，强强联合！
-TOWERDEFENSE_ZOMBIE_LADDER_HANDBOOK_STORY,,,这架梯子花了他八块九毛九。
-TOWERDEFENSE_PLANT_WILDPEA_NAME,WildPea,WildPea,狂野机枪射手
-SHOP_NPC_TALK_PLANT_SNOWSHROOM_CUSTOM_0,,,雪花寒冰菇的皮肤！你可以在图鉴装扮你的植物！
-TOWERDEFENSE_ZOMBIE_DIGGER_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]100 + 270[/color]
-伤害：[color=cc241d]100/s[/color]
-佩戴：[color=cc241d]矿工头盔（一类）[/color]
-类型：[color=cc241d]矿工僵尸[/color]
-速度：[color=cc241d]快，而后慢（出土后）[/color]
-特点：[color=cc241d]挖地绕过你的前排植物，最左侧出土后反向行走[/color]
-弱点：[color=441D62]磁力菇[/color]"
-TOWERDEFENSE_ZOMBIE_JACKBOX_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]500[/color]
-伤害：[color=cc241d]100/s[/color]
-佩戴：[color=cc241d]玩具匣（特殊）[/color]
-类型：[color=cc241d]小型僵尸[/color]
-移速：[color=cc241d]慢[/color]
-特点：[color=cc241d]玩具匣僵尸会在出场一段时间后爆炸[/color]
-弱点：[color=441D62]磁力菇[/color]"
-TOWERDEFENSE_PLANT_HYPNOGARLIC_NAME,HypnoGarlic,HypnoGarlic,魅惑大蒜
-TOWERDEFENSE_SHOVEL_DIAMOND_HANDBOOK_STORY,,,看这通体的质感，不像是用一颗钻石两根木棍合成出的东西？
-TOWERDEFENSE_PLANT_PEALILYPAD_EXPRESTION,,,豌豆睡莲可以承载非水生植物，并发射子弹。
-<!MissingKey:韧性：[color=cc241d]300[/color]>,,,"韧性：[color=cc241d]300[/color]
-特性：[color=C71585]只能种在墓碑上，并花费时间吞噬[/color]"
-TOWERDEFENSE_PLANT_SUNFLOWERPEA_NAME,SunflowerPea,SunflowerPea,豌豆向日葵
-<!MissingKey:潜水僵尸讨厌缠绕海草，他更讨厌自己现在的样子。>,,,潜水僵尸讨厌缠绕海草，他更讨厌自己现在的样子。
-TOWERDEFENSE_PLANT_MAGNETNUT_NAME,MagnetNut,MagnetNut,磁力坚果
-TOWERDEFENSE_ZOMBIE_GATLINGPEA_EXPRESTION,,,机枪僵尸是豌豆僵尸的大哥！、
-TOWERDEFENSE_ZOMBIE_PEASHOOTER_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
-伤害：[color=cc241d]100/s（啃食） + 20/次（射击）[/color]
-佩戴：[color=cc241d]----[/color]
-类型：[color=cc241d]小型僵尸[/color]
-速度：[color=cc241d]慢[/color]
-特点：[color=cc241d]当前方有非低矮植物时每次发射1颗豌豆攻击你的植物[/color]"
-TOWERDEFENSE_ZOMBIE_WILDPEA_EXPRESTION,,,狂野机枪僵尸拥有碾压般的子弹输出！
-TOWERDEFENSE_ZOMBIE_JALAPENO_EXPRESTION,,,火爆辣椒僵尸具有强大的杀伤力！
-TOWERDEFENSE_PLANT_SEANUT_EXPRESTION,,,海上高坚果，泳池关卡好帮手！
-TOWERDEFENSE_ZOMBIE_PEASHOOTER_EXPRESTION,,,豌豆僵尸朴实无华，就像豌豆射手一样。
-LOAD_PROJECTILE,Load projectile,Load projectile,加载子弹
-TOWERDEFENSE_PLANT_SUNFLOWERPEA_CUSTOM_1_ACCESS,,,每日挑战 2025/6月 累计完成4天
-TOWERDEFENSE_PLANT_CORNTROP_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]20/1.5s + 20*4/1.5s[/color]
-范围：[color=cc241d]自身所在格[/color]
-特性：[color=C71585]爆胎车辆[/color]
-特点：[color=cc241d]对经过的僵尸每1.5秒造成20伤害，向上随机位置发射共计4枚玉米粒，有15%概率改为发射4枚黄油。[/color]"
-TOWERDEFENSE_ZOMBIE_FOOTBALL_NAME,Football Zombie,Football Zombie,橄榄球僵尸
-TOWERDEFENSE_MOWER_DEFAULT_NAME,Default Mower,Default Mower,草坪小推车
 TOWERDEFENSE_ZOMBIE_POLEVAULTING_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]500[/color]
 伤害：[color=cc241d]100/s[/color]
 佩戴：[color=cc241d]----[/color]
@@ -1059,7 +567,115 @@ TOWERDEFENSE_ZOMBIE_POLEVAULTING_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]5
 移速：[color=cc241d]快，跳跃后慢[/color]
 特点：[color=cc241d]跃过他所碰到的第一株植物[/color]
 弱点：[color=441D62]高坚果[/color]"
-<!MissingKey:睡莲可以让你种植非水生植物在它上面。>,,,睡莲可以让你种植非水生植物在它上面。
+TOWERDEFENSE_SHOVEL_DEFAULT_HANDBOOK_STORY,,,戴夫送你的小铲子！现在有了其他强力的铲子，它或许也可以放个假了。
+<!MissingKey:韧性：[color=cc241d]4000[/color]>,,,"韧性：[color=cc241d]4000[/color]
+特性：[color=cc241d]保护植物[/color]"
+TOWERDEFENSE_ZOMBIE_TANGLEKELPSNORKLE_EXPRESTION,,,缠绕潜水僵尸能够将你的植物拖下水。
+TOWERDEFENSE_PLANT_SUNBEAN_HANDBOOK_STORY,,,阳光豆是坚定的清洁能源支持者。“也许你会想说，太阳能本身不就是清洁能源吗？”阳光豆说，“但这不是重点！重点在于利用率，我们致力于覆盖每一寸可利用的草坪！”
+TOWERDEFENSE_ZOMBIE_DIGGER_EXPRESTION,,,这种僵尸会挖地绕过你的防御。
+TOWERDEFENSE_PLANT_CACTUSBLOVER_EXPRESTION,,,万箭齐发！
+<!MissingKey:登录>,LOGIN,LOGIN,登录
+TOWERDEFENSE_PLANT_CHERRYBOMB_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]1800（灰烬伤害）[/color]
+范围：[color=cc241d]自身为中心周围1.5格的圆[/color]"
+TOWERDEFENSE_PLANT_WALLNUT_HANDBOOK_EXPRESTION,,,韧性：[color=cc241d]4000[/color]
+SHOP_ITEM_PACKETSLOT_9,,,9槽
+SHOP_ITEM_PACKETSLOT_8,,,8槽
+TOWERDEFENSE_PLANT_SNOWSHROOM_EXPRESTION,,,雪花飘飘，北风啸啸！
+TOWERDEFENSE_ZOMBIE_BALLOON_EXPRESTION,,,气球僵尸漂浮在空中，躲过大多数攻击。
+TOWERDEFENSE_ZOMBIE_DUCKRIDER_NAME,Zombie Duckrider,Zombie Duckrider,骑鸭僵尸
+TOWERDEFENSE_ZOMBIE_SNOWPEA_HANDBOOK_STORY,,,寒冰射手僵尸非常害怕现在可怕的杂交植物们，他瑟瑟发抖，不禁打了个寒颤。
+TOWERDEFENSE_PLANT_PUFFPOT_NAME,PuffPot,PuffPot,小盆菇
+TOWERDEFENSE_ZOMBIE_SLEEP_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]500 + 270[/color]
+伤害：[color=cc241d]200/s[/color]
+佩戴：[color=cc241d]睡帽（一类）[/color]
+类型：[color=cc241d]小型僵尸[/color]
+移速：[color=cc241d]快[/color]"
+TOWERDEFENSE_PLANT_CATPOT_EXPRESTION,,,这可不是给猫尾草用的？
+TOWERDEFENSE_PLANT_RECACTUS_EXPRESTION,,,双发仙人掌可以一次发射两枚穿透尖刺。
+TOWERDEFENSE_PLANT_RECACTUS_CUSTOM_1_NAME,,,西部警长
+TOWERDEFENSE_ZOMBIE_IMP_EXPRESTION,,,一种小型的僵尸，由伽刚特尔扔进你的防线。
+TOWERDEFENSE_ZOMBIE_WILDPEA_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
+伤害：[color=cc241d]100/s（啃食） + 20x4*5/次（射击）[/color]
+佩戴：[color=cc241d]----[/color]
+类型：[color=cc241d]小型僵尸[/color]
+速度：[color=cc241d]慢[/color]
+特点：[color=cc241d]当前方有非低矮植物时每次向五个方向发射4颗散射的豌豆[/color]"
+TOWERDEFENSE_ZOMBIE_GARGANTUAR_PRESENTBOX_EXPRESTION,,,买一送一的超大号“惊喜”。
+TOWERDEFENSE_ZOMBIE_ARMORED_GARGANTUAR_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d](1100/2200) + (1100/3000) + 3000[/color]
+伤害：[color=cc241d]即死（锤击）[/color]
+佩戴：[color=cc241d]铁桶/黑橄榄头盔/废稿头盔（一类） & 铁栅门/防爆门（二类）[/color]
+类型：[color=cc241d]大型僵尸[/color]
+速度：[color=cc241d]非常慢[/color]
+特性：[color=C71585]锤扁植物[/color]
+特点：[color=cc241d]低于一定血量时会丢出小鬼僵尸；当佩戴废稿头盔时，免疫控制[/color]
+弱点：[color=441D62]磁力菇[/color]"
+TOWERDEFENSE_ZOMBIE_BED_NAME,Bed zombie,Bed zombie,床车僵尸
+TOWERDEFENSE_PLANT_PEACAT_NAME,Pea Cat,Pea Cat,豌豆香蒲
+TOWERDEFENSE_ZOMBIE_TANGLEKELPSNORKLE_NAME,Tangled Seaweed Zombie,Tangled Seaweed Zombie,缠绕潜水僵尸
+TOWERDEFENSE_PLANT_TANGLEKELP_NAME,,,缠绕海藻
+TOWERDEFENSE_ZOMBIE_DISCOFIRE_HANDBOOK_STORY,,,“老兄，火焰并没有什么危险的。相反，处在内焰的我反而很安全。”火焰迪斯科僵尸骄傲地说道，“现在，我们火了！”
+MAP_FRONTLAWN_AFTERNOON,Front Yard (Afternoon),Front Yard (Afternoon),前院(黄昏)
+TOWERDEFENSE_PLANT_HYPNOGARLIC_HANDBOOK_STORY,,,大蒜原本是一家油漆厂的工人，只有这里才可以掩盖住他的气味——某一天有个笨手笨脚的家伙打翻了油漆，这使得他失去工作，并且变得五颜六色起来。
+<!MissingKey:我是新手>,I'm a beginner,I'm a beginner,我是新手
+TOWERDEFENSE_ZOMBIE_BUCKETHEAD_NAME,Bucket Head Zombie,Bucket Head Zombie,铁桶僵尸
+TOWERDEFENSE_ZOMBIE_SUNFLOWER_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
+伤害：[color=cc241d]100/s[/color]
+佩戴：[color=cc241d]----[/color]
+类型：[color=cc241d]小型僵尸[/color]
+速度：[color=cc241d]慢[/color]
+特点：[color=cc241d]每10秒生产一个脑光，扣除你25点阳光[/color]"
+TOWERDEFENSE_ZOMBIE_PEASHOOTER_EXPRESTION,,,豌豆僵尸朴实无华，就像豌豆射手一样。
+TOWERDEFENSE_PLANT_GRAVEMINE_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]1800（阳光土豆雷）[/color]
+范围：[color=cc241d]自身所在格[/color]
+特性：[color=C71585]吞噬墓碑[/color]
+特点：[color=cc241d]种在墓碑上吞噬墓碑，并在吞噬完后产生一个阳光土豆雷[/color]"
+TOWERDEFENSE_PLANT_SUNFLOWERPEA_HANDBOOK_STORY,,,杂交植物们来自于和双子向日葵所诞生的同一个实验室。“但这不代表我们就是兄弟了，”双子向日葵说，“他们的诞生简直就是一场恐怖的悲剧！”
+TOWERDEFENSE_PLANT_GRAVEMINE_CUSTOM_1_NAME,,,施工现场
+TOWERDEFENSE_PLANT_SEANUT_EXPRESTION,,,海上高坚果，泳池关卡好帮手！
+SHOP_ITEM_PITCHFORK,,,草耙
+TOWERDEFENSE_PLANT_GATLINGPEA_HANDBOOK_STORY,,,当机枪射手宣布他要服役的时候，他的父母很为它担心，他们异口同声地对他说：“亲爱的，这太危险了。”但机枪射手拒绝妥协：“生活本就是危险的。”他这样回答，此时他的眼睛里正闪烁着钢铁般的信念。
+TOWERDEFENSE_PLANT_HYPNOGARLIC_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]150[/color]
+特性：[color=C71585]低矮植物、大蒜[/color]
+特点：[color=cc241d]啃咬它的非特殊僵尸会被魅惑+换行[/color]"
+TOWERDEFENSE_PLANT_PEAPOT_NAME,PeaPot,PeaPot,豌豆花盆
+TOWERDEFENSE_PLANT_ICENUT_HANDBOOK_STORY,,,坚果从冰箱出来后，赶紧多穿了几件衣服。但让他没想到的是：衣服也被冻住了……
+TOWERDEFENSE_PLANT_CHERRYBOMB_NAME,CherryBomb,CherryBomb,樱桃炸弹
+TOWERDEFENSE_ZOMBIE_JACKSONX_HANDBOOK_STORY,,,精英舞王僵尸引领着僵尸流行音乐界的一代风潮，无数僵尸舞者都梦想着跟上他的脚步。当他出现在草坪上时，就意味着一场盛大的表演即将开幕：各路舞者纷至沓来，加入这场属于音乐的狂欢。
+TOWERDEFENSE_PLANT_SUNPAD_HANDBOOK_EXPRESTION,,,"生产：[color=cc241d]25阳光/25秒[/color]
+韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]40/1.5s（火焰伤害）[/color]
+范围：[color=cc241d]单格[/color]
+特性：[color=C71585]可在水上承载植物、本格非悬浮类植物免疫减速与冻结[/color]
+特点：[color=cc241d]灼烧靠近的僵尸，使其每1.5秒受到40点火焰伤害，抵消减速与冻结[/color]"
+TOWERDEFENSE_PLANT_SUNFLOWERPEA_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+生产：[color=cc241d]25阳光/25秒[/color]
+威力：[color=cc241d]20/1.5s[/color]
+范围：[color=cc241d]前方一行[/color]"
+TOWERDEFENSE_PLANT_PEAPOT_HANDBOOK_STORY,,,“我是个花盆，但我也是一株豌豆，是不是很意外？”
+<!MissingKey:我是高手>,I'm a pro,I'm a pro,我是高手
+<!MissingKey:创建比赛失败!>,Create match failed,Create match failed,创建比赛失败!
+TOWERDEFENSE_PLANT_POT_HANDBOOK_STORY,,,“我是一个花盆，但我也是一棵植物。是不是很意外？”
+TOWERDEFENSE_PLANT_WILDPEA_CUSTOM_1_ACCESS,,,商店购买（价格15000）
+TOWERDEFENSE_MOWER_DEFAULT_HANDBOOK_EXPRESTION,,,特点：[color=cc241d]无[/color]
+TOWERDEFENSE_PLANT_SNOWPEA_EXPRESTION,,,寒冰射手会发射寒冰豌豆攻击敌人，并具有减速效果。
+<!MissingKey:南瓜壳>,Pumpkin shell,Pumpkin shell,南瓜壳
+MAP_OUTSIDE_FRONTLAWN_NIGHT,Outside Front Yard Night,Outside Front Yard Night,外部前院(夜晚)
+TOWERDEFENSE_ZOMBIE_POLEVAULTING_NAME,Pole Vauting Zombie,Pole Vauting Zombie,撑杆僵尸
+TOWERDEFENSE_ZOMBIE_SHIELDARMOR_EXPRESTION,,,全副武装，手持阻挡实体穿透子弹并完全免疫灰烬的盾牌
+TOWERDEFENSE_PLANT_SUNMINE_HANDBOOK_STORY,,,从僵尸身上获取阳光，不只是阳光炸弹的想法，阳光土豆雷亦有。“我们之间不存在抄袭关系——事实上，阳光俱乐部是我开创的，她是我的成员。”阳光土豆雷如是说道。
+TOWERDEFENSE_ZOMBIE_NORMAL_EXPRESTION,,,平凡无奇的普通僵尸。
+TOWERDEFENSE_PLANT_PUFFPOT_CUSTOM_1_NAME,,,青花瓷
+TOWERDEFENSE_PLANT_SCAREDYSUNSHROOM_CUSTOM_1_STORY,,,胆小菇试图伪装成其他东西，但这套装扮在僵尸眼中似乎更美味了…
+TOWERDEFENSE_PLANT_GARGANTUARSHROOM_EXPRESTION,,,当僵尸吃下红眼菇后，会变成一个魅惑的红眼巨人。
+MAP_BACKYARD_NIGHT,Back Yard (Night),Back Yard (Night),后院(夜晚)
+TOWERDEFENSE_ZOMBIE_SUNFLOWER_NAME,Sunflower Zombie,Sunflower Zombie,向日葵僵尸
+TOWERDEFENSE_PLANT_MAGNETMINE_NAME,Magnetic Potato Mine,Magnetic Potato Mine,磁力土豆雷
+TOWERDEFENSE_PLANT_GARGANTUARSHROOM_CUSTOM_1_ACCESS,,,商店购买（价格5000）
+MAP_FRONTLAWN_EMPTY,"Front Yard (Day,Empty)","Front Yard (Day,Empty)",前院(白天裸地)
+TOWERDEFENSE_PLANT_SNOWWOOD_NAME,Ice Torch Stump,Ice Torch Stump,冰炬树桩
+TOWERDEFENSE_ZOMBIE_DUCK_HANDBOOK_STORY,,,“你为什么总是扎着双马尾？”这是僵尸们对小黄鸭僵尸最多的疑问。小黄鸭僵尸没有对此做出过多解释，他认为保留儿时的童心是非常重要的，只不过他常常忘记带回他的黄鸭游泳圈。
 TOWERDEFENSE_ZOMBIE_SHADOW_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]500[/color]
 伤害：[color=cc241d]100/s[/color]
 佩戴：[color=cc241d]----[/color]
@@ -1067,114 +683,673 @@ TOWERDEFENSE_ZOMBIE_SHADOW_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]500[/co
 速度：[color=cc241d]慢[/color]
 特点：[color=cc241d]死亡时在该僵尸的前方召唤一个僵尸影子[/color]
 僵尸影子：[color=cc241d]血量：270 伤害：100/s 速度：快 无视控制与植物[/color]"
-TOWERDEFENSE_ZOMBIE_BED_EXPRESTION,,,有时候僵尸只是不想起床！
-HAMMER,Hammer,Hammer,锤子
-TOWERDEFENSE_PLANT_SUNSHROOM_HANDBOOK_STORY,,,绚丽的帽子给了向日葵更高的颜值，在植物走秀界和服装界一炮走红。当然，他也要回归本质，给植物提供阳光，让他们作战。阳光向日葵这么想着，完全没有听到他身后的植物说：“你挡我们视线了，走开啦！”
-TOWERDEFENSE_PLANT_HYPNOSHROOM_NAME,Scaredy Shroom,Scaredy Shroom,魅惑菇
-TOWERDEFENSE_PLANT_GARGANTUARSHROOM_NAME,Hypno Shroom,Hypno Shroom,红眼菇
-TOWERDEFENSE_ZOMBIE_BUCKETHEAD_EXPRESTION,,,他的铁桶头盔，能极大程度的承受伤害。
-TOWERDEFENSE_ZOMBIE_DUCK_HANDBOOK_STORY,,,“你为什么总是扎着双马尾？”这是僵尸们对小黄鸭僵尸最多的疑问。小黄鸭僵尸没有对此做出过多解释，他认为保留儿时的童心是非常重要的，只不过他常常忘记带回他的黄鸭游泳圈。
-TOWERDEFENSE_PLANT_SUNBOMB_EXPRESTION,,,能将僵尸转化为阳光！
-TOWERDEFENSE_PLANT_ICENUT_CUSTOM_1_NAME,,,战神之子
-TOWERDEFENSE_PLANT_SCAREDYSUNSHROOM_CUSTOM_1_ACCESS,,,每日挑战 2025/8月 累计完成21天
-TOWERDEFENSE_ZOMBIE_GARGANTUAR_NAME,Gargantuar,Gargantuar,伽刚特尔
-<!MissingKey:三叶大嘴花>,Chomper Blow,Chomper Blow,三叶大嘴花
-TOWERDEFENSE_ZOMBIE_SQUASH_EXPRESTION,,,窝瓜僵尸会压扁他碰到的第一株植物
-TOWERDEFENSE_ZOMBIE_ZOMBONI_HANDBOOK_STORY,,,经常被误以为是在驾驶着造冰车的僵尸，但事实上雪橇车僵尸是一种完全不同的生物形式，他与太空兽人的联系更紧密。
-SHOP_ITEM_PITCHFORK,,,草耙
-TOWERDEFENSE_ZOMBIE_DARKFOOTBALL_EXPRESTION,,,暗黑橄榄球僵尸是橄榄球僵尸的队长。
-TOWERDEFENSE_PLANT_POT_NAME,Pot,Pot,花盆
-TOWERDEFENSE_PLANT_PLANTERNSIX_EXPRESTION,,,拨开迷雾，范围减速僵尸并造成伤害。
-<!MissingKey:蹦极僵尸从天而降，偷走你的植物。>,,,蹦极僵尸从天而降，偷走你的植物。
-TOWERDEFENSE_ZOMBIE_CONEHEAD_EXPRESTION,,,他的路障头盔，使他比普通僵尸更能承受伤害
-TOWERDEFENSE_ZOMBIE_FOOTBALL_EXPRESTION,,,橄榄球僵尸的表演秀。
-TOWERDEFENSE_PLANT_GRAVEMINE_EXPRESTION,,,吞噬墓碑，留下一枚已准备好的阳光土豆雷。
-TOWERDEFENSE_PLANT_WALLNUT_HANDBOOK_EXPRESTION,,,韧性：[color=cc241d]4000[/color]
-<!MissingKey:注册>,REGISTER,REGISTER,注册
-<!MissingKey:总有人问荷包蛋，他也能算是植物吗？“重点在于荷，而不在于蛋。”荷包蛋如是说。>,,,总有人问荷包蛋，他也能算是植物吗？“重点在于荷，而不在于蛋。”荷包蛋如是说。
-TOWERDEFENSE_PLANT_SNOWSHROOM_NAME,Snow Shroom,Snow Shroom,雪花寒冰菇
-TOWERDEFENSE_PLANT_JALASUNSHROOM_HANDBOOK_STORY,,,辣椒阳光菇患有严重的选择恐惧症，曾经的他每天都在产阳光和打僵尸之间犹豫。“现在我终于学会了两者兼顾——虽然我也不清楚怎么做到的。”
-TOWERDEFENSE_PLANT_PRESENTBOX_NAME,PresentBox,PresentBox,抽奖盒子
-TOWERDEFENSE_PLANT_ICESUNSHROOM_EXPRESTION,,,寒光菇可以冻结僵尸，并提供相对应的阳光。
-<!MissingKey:毁灭菇>,Destroyer Mushroom,Destroyer Mushroom,毁灭菇
-TOWERDEFENSE_PLANT_MAGNETNUT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]4000[/color]
-特性：[color=C71585]吸取铁器[/color]
-特点：[color=cc241d]吸取自身为中心周围5*5范围最靠近的一个铁器，但需要15秒消除它[/color]"
-TOWERDEFENSE_PLANT_GLOOMPULT_EXPRESTION,,,忧郁菇变成了投手！
-TOWERDEFENSE_ZOMBIE_SUNFLOWER_EXPRESTION,,,向日葵僵尸会减少你的阳光。
-TOWERDEFENSE_SHOVEL_GOLD_EXPRESTION,,,移除场地上的植物返还少量阳光！
-TOWERDEFENSE_ZOMBIE_FLAG_EXPRESTION,,,摇旗僵尸标志着即将来袭的一大群僵尸。
-TOWERDEFENSE_PLANT_SNOWPEA_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]20/1.5s[/color]
-范围：[color=cc241d]前方一行[/color]
-特点：[color=cc241d]发射的寒冰豌豆会减速命中的僵尸15秒[/color]"
-TOWERDEFENSE_PLANT_HYPNOSHROOM_HANDBOOK_STORY,,,魅惑菇声称：“僵尸们是我们的朋友，他们在我们的生态环境里扮演着重要角色。我们应当更努力地让他们学会用我们的方式来思考。”
-<!MissingKey:血量：[color=cc241d]500[/color]>,,,"血量：[color=cc241d]500[/color]
+TOWERDEFENSE_PLANT_SUNSHROOM_CUSTOM_1_ACCESS,,,0.2版本更新奖励
+TOWERDEFENSE_ZOMBIE_IMP_PRESENTBOX_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
 伤害：[color=cc241d]100/s[/color]
 佩戴：[color=cc241d]----[/color]
 类型：[color=cc241d]小型僵尸[/color]
-速度：[color=cc241d]快，跳跃后慢[/color]
-限制：[color=0000FF]只会在水上出现[/color]
-特点：[color=cc241d]骑乘海豚，越过植物前后均处于潜水状态，但会在啃咬植物时暴露自己[/color]"
-TOWERDEFENSE_ZOMBIE_NUT_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]1370[/color]
+速度：[color=cc241d]慢[/color]
+亡语：[color=cc241d]在死亡位置生成一只随机小鬼/迷你体型僵尸，迷你僵尸数值减半[/color]"
+MAP_FRONTLAWN_NIGHT_COLD,Front Yard (Winter Night),Front Yard (Winter Night),前院(冬夜)
+TOWERDEFENSE_ZOMBIE_NEWSPAPER_NAME,Newspaper zombie,Newspaper zombie,读报僵尸
+REGIST_ERROR_PASSWORD_LESS_THAN_EIGHT,Password length must be greater than 8,Password length must be greater than 8,密码长度需大于8位
+TOWERDEFENSE_ZOMBIE_ZOMBONI_NAME,Sledge Zombie,Sledge Zombie,雪橇车僵尸
+TOWERDEFENSE_PLANT_RECACTUS_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]20×2/1.5s[/color]
+范围：[color=cc241d]前方一行[/color]
+特点1：[color=cc241d]子弹最多穿透3个僵尸，无视二类防具[/color]
+特点2：[color=cc241d]当有空中僵尸时，优先跳起来攻击空中僵尸[/color]"
+<!MissingKey:墓碑开始生长!>,TOMBSTONE BEGINS TO GROW,TOMBSTONE BEGINS TO GROW,墓碑开始生长!
+TOWERDEFENSE_PLANT_ICENUT_EXPRESTION,,,发射冰弹攻击僵尸，被啃碎后冻结附近的僵尸。
+TOWERDEFENSE_PLANT_THREECACTUS_HANDBOOK_STORY,,,三叶仙人掌喜欢细水长流，在他看来团队合作才是王道，再小的风聚在一起也足够吹退来袭的僵尸。只是他还要提防仙人三叶草的嘀咕。
+TOWERDEFENSE_PLANT_SUNBOMB_CUSTOM_1_STORY,,,“准备好了吗？接下来我们要让气氛轰到爆！”
+MAP_OUTSIDE_FRONTLAWN,Outside Front Yard,Outside Front Yard,外部前院
+TOWERDEFENSE_ZOMBIE_DANCERFIRE_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]500[/color]
 伤害：[color=cc241d]100/s[/color]
-佩戴：[color=cc241d]无[/color]
+佩戴：[color=cc241d]----[/color]
 类型：[color=cc241d]小型僵尸[/color]
-速度：[color=cc241d]慢[/color]"
+速度：[color=cc241d]慢[/color]
+特点：[color=cc241d]免疫减速与冻结，且僵尸方的豌豆经过自己会点燃成火焰豌豆[/color]"
+MAP_FRONTLAWN_NIGHT_COLD_BIG,"Front Yard (Winter Night,Big Map)","Front Yard (Winter Night,Big Map)",前院(冬夜大地图)
+TOWERDEFENSE_PLANT_SUNBOMB_NAME,SunBomb,SunBomb,阳光炸弹
+MAP_FRONTLAWN_COLD,Front Yard (Winter),Front Yard (Winter),前院(冬)
+TOWERDEFENSE_PLANT_JALASUNSHROOM_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+生产：[color=cc241d]15阳光/25秒，长大后变为25阳光/25秒[/color]
+威力：[color=cc241d]150，长大后250（均属于火焰伤害）[/color]
+特性：[color=C71585]低矮植物、白天会睡觉[/color]
+特点：[color=cc241d]需要60秒时间成长，拾取辣椒阳光会同时释放一整行的火焰效果[/color]"
+TOWERDEFENSE_ZOMBIE_BACKUP_HANDBOOK_STORY,,,舞者僵尸曾在位于僵尸纽约城的“咀利牙”表演艺术学院钻研过四年的舞技。
+<!MissingKey:毁灭菇>,Destroyer Mushroom,Destroyer Mushroom,毁灭菇
+LEVEL1_7_BROADCAST_1,,,现在是傍晚，天上掉落的阳光更小了！
+<!MissingKey:睡莲可以让你种植非水生植物在它上面。>,,,睡莲可以让你种植非水生植物在它上面。
 TOWERDEFENSE_PLANT_SCAREDYSUNSHROOM_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
 威力：[color=cc241d]20/1.5s，长大后40/1.5s[/color]
 范围：[color=cc241d]前方整行[/color]
 特性：[color=C71585]白天会睡觉[/color]
 特点1：[color=cc241d]每25秒生产15阳光，60秒后长大，每25秒生产25阳光。[/color]
 特点2：[color=cc241d]3*3范围内有僵尸时，会蹲下无法攻击，但仍会生产阳光[/color]"
+SHOP_NPC_TALK_PLANT_PEACAT_CUSTOM_0,,,豌豆香蒲的皮肤！你可以在图鉴装扮你的植物！
+TOWERDEFENSE_ZOMBIE_BED_EXPRESTION,,,有时候僵尸只是不想起床！
+TOWERDEFENSE_PLANT_MELONPULTSPIKE_EXPRESTION,,,攻击概率生成地刺瓜皮，对车宝具！
+TOWERDEFENSE_PLANT_PLANTERNSIX_NAME,Sixth streetlight flower,Sixth streetlight flower,6号路灯花
+CHALLENGE_LEVEL_NAME_1,,,向日葵女王 挑战 - {LevelNumber}
+TOWERDEFENSE_PLANT_ICETALLNUT_HANDBOOK_STORY,,,“从小时候起大家就因为矮小不喜欢我，所以我下定决心要变强，正是这样才有了横推一路的强大力量。但孤独感依旧不减，导致我的外表逐渐变得和内心一样冰冷。”
+CHALLENGE_LEVEL_NAME_2,,,狂野机枪射手 挑战 - {LevelNumber}
+TOWERDEFENSE_PLANT_SUNBOMB_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]1800[/color]
+范围：[color=cc241d]自身为中心周围1.5格的圆[/color]
+特点：[color=cc241d]被炸死的僵尸变为25阳光[/color]
+"
+TOWERDEFENSE_ZOMBIE_FLAG_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]370 + 270[/color]
+伤害：[color=cc241d]100/s[/color]
+佩戴：[color=cc241d]路障（一类）[/color]
+类型：[color=cc241d]小型僵尸[/color]
+移速：[color=cc241d]稍快（对比普通僵尸）[/color]"
+TOWERDEFENSE_ZOMBIE_CAT_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]1400 + 500[/color]
+伤害：[color=cc241d]200/s（啃食） + 20x2/1.5s（射击）[/color]
+佩戴：[color=cc241d]铁桶（一类）、路障（一类）[/color]
+速度：[color=cc241d]快[/color]
+特点1：[color=cc241d]每1.5秒发射两枚追踪尖刺，对最近的植物造成20×2点伤害[/color]
+特点2：[color=cc241d]每次遇到植物会立即换行躲避[/color]"
+TOWERDEFENSE_ZOMBIE_GARGANTUAR_PRESENTBOX_HANDBOOK_STORY,,,伽刚特尔和小鬼僵尸每年圣诞节都会互换礼物。为了第一时间给他的兄弟惊喜，伽刚特尔把礼盒放到了小鬼一眼就能看得到的地方——他的头上。但他没想到小鬼也这么做了，现在他们谁都看不见对方准备的礼物了。
+TOWERDEFENSE_TIPS_AFTERNOON,SUN IS GOING DOWN,SUN IS GOING DOWN,太阳开始下山了!
+TOWERDEFENSE_ZOMBIE_CONEHEAD_NAME,Conehead Zombie,Conehead Zombie,路障僵尸
+TOWERDEFENSE_ZOMBIE_TANGLEKELPSNORKLE_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
+伤害：[color=cc241d]即死[/color]
+佩戴：[color=cc241d]----[/color]
+类型：[color=cc241d]小型僵尸[/color]
+速度：[color=cc241d]快[/color]
+特点：[color=cc241d]潜水，接近植物后将其拖下水，随后自己也消失[/color]"
+TOWERDEFENSE_TIPS_FINALWAVE,FINAL WAVE,FINAL WAVE,最后一波
+SHOP_NPC_TALK_MOWER_SUN,,,阳光小推车，碾压僵尸能够获得阳光！
+TOWERDEFENSE_PLANT_TANGLEKELPH_NAME,Enchanted Seaweed,Enchanted Seaweed,魅惑海草
 <!MissingKey:韧性：[color=cc241d]300[/color]>,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]20/1.5s[/color]
+范围：[color=cc241d]前方四格所有僵尸[/color]
+特性：[color=C71585]白天会睡觉[/color]
+特点：[color=cc241d]攻击无视二类防具[/color]"
+TOWERDEFENSE_PLANT_WINTERMELONSHROOM_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]（20+80）/1.5s[/color]
+范围：[color=cc241d]前方六格[/color]
+特性：[color=C71585]白天会睡觉[/color]
+特点：[color=cc241d]寒冰孢子对范围内所有僵尸造成伤害并附带15秒减速，冰瓜造成80点单体伤害+1*3范围20%溅射伤害+15秒减速[/color]"
+TOWERDEFENSE_PLANT_PEALILYPAD_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]20/3s[/color]
+范围：[color=cc241d]前方一行[/color]
+特性：[color=C71585]可在水上承载植物[/color]
+特点：[color=cc241d]发射的子弹可以攻击潜水状态的僵尸[/color]"
+TOWERDEFENSE_ZOMBIE_SNORKLE_HANDBOOK_STORY,,,僵尸不呼吸，他们不需要空气，那么为什么潜水僵尸还需要一套噱头的潜水装置来潜水呢？答案：同行的压力。
+TOWERDEFENSE_PLANT_SNOWPEA_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]20/1.5s[/color]
+范围：[color=cc241d]前方一行[/color]
+特点：[color=cc241d]发射的寒冰豌豆会减速命中的僵尸15秒[/color]"
+TOWERDEFENSE_PLANT_HYPNOSHROOM_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+特性：[color=C71585]白天会睡觉[/color]
+特点：[color=cc241d]吃掉它的僵尸会变成友军单位为你作战[/color]"
+TOWERDEFENSE_PLANT_MAGNETNUT_NAME,MagnetNut,MagnetNut,磁力坚果
+TOWERDEFENSE_ZOMBIE_IMP_HANDBOOK_STORY,,,小鬼僵尸虽然瘦小，但是结实。它精通僵尸柔道、僵尸空手道、僵尸徒手斗殴。另外，他还会吹口风琴。
+TOWERDEFENSE_PLANT_SUNSHROOM_CUSTOM_2_STORY,,,撑起遮阳伞，草坪上的向日葵陪你一起度过炎热的盛夏～
+TOWERDEFENSE_PLANT_SEANUT_HANDBOOK_STORY,,,高坚果尝试穿上海蘑菇的装扮下海游泳，可以看出，他高兴的嘴都翘起来了。不过别的高坚果却一脸疑惑…
+TOWERDEFENSE_PLANT_SNOWWOOD_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]40（25%单格溅射伤害）[/color]
+特性：[color=C71585]点燃豌豆为冰焰豌豆[/color]
+特点：[color=cc241d]自身不会攻击，但会将经过的豌豆、冰豆、火球点燃成具有减速的冰焰豌豆[/color]"
+TOWERDEFENSE_PLANT_SUNMINE_NAME,SunMine,SunMine,阳光土豆雷
+TOWERDEFENSE_PLANT_GLOOMPULT_EXPRESTION,,,忧郁菇变成了投手！
+TOWERDEFENSE_ZOMBIE_BACKUPDANCER_NAME,Backup Dancer Zombie,Backup Dancer Zombie,伴舞僵尸
+TOWERDEFENSE_PLANT_PEAWELL_HANDBOOK_STORY,,,“投下一个豌豆，许一次愿望。”这是豌豆许愿池的标语。“喂，不要投别的东西进去！不要投辣椒水啊！”戴夫正在拦住一只火爆辣椒。
+TOWERDEFENSE_ZOMBIE_YETIDIGGER_NAME,Yeti Digger Zombie,Yeti Digger Zombie,矿工雪人僵尸
+TOWERDEFENSE_PLANT_QUEENSUNFLOWER_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]1000[/color]
+生产：[color=cc241d]150阳光/25s[/color]
+威力：[color=cc241d]40×4/3s[/color]
+范围：[color=cc241d]全屏追踪[/color]
+特性：[color=C71585]至尊金卡[/color]
+至尊金卡：[color=FFFF00]场上每有一株该植物，植物价格增加100[/color]
+特点:[color=cc241d]3x3范围内的所有植物免疫减速与冻结，3x3范围内的所有僵尸每1.5秒受到40点的火焰伤害[/color]"
+TOWERDEFENSE_ZOMBIE_DUCK_EXPRESTION,,,小黄鸭批发商！
+TOWERDEFENSE_PLANT_SEANUT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]8000[/color]
+威力：[color=cc241d]20/1.5s[/color]
+范围：[color=cc241d]前方一行[/color]
+特性：[color=C71585]只能种在水中、阻挡僵尸跳跃[/color]
+特点：[color=cc241d]每1.5秒对对前方一行的敌人发射一颗孢子[/color]"
+MAP_OUTSIDE_BACKYARD_NIGHT,Outside Back Yard Night,Outside Back Yard Night,外部后院(夜晚)
+TOWERDEFENSE_PLANT_WALLNUT_EXPRESTION,,,坚果拥有足以让你保护其它植物的坚硬外壳。
+<!MissingKey:大嘴花几乎可以到“恐怖小店”表演他的绝技了，不过他的经济人榨取了他太多的钱，所以他没去成。尽管如此，大嘴花没有怨言，只说了句这只是交易的一部分。>,,,大嘴花几乎可以到“恐怖小店”表演他的绝技了，不过他的经济人榨取了他太多的钱，所以他没去成。尽管如此，大嘴花没有怨言，只说了句这只是交易的一部分。
+TOWERDEFENSE_ZOMBIE_BALLOONCOLOUR_HANDBOOK_STORY,,,多彩气球僵尸常年在游乐场和公园搜集气球，在他眼里气球似乎与脑子一样有吸引力。以至于自己宝贝的气球被打破时，他比谁都急着想要离开场地，却没注意到自己飞错了方向。
+LOGIN_FAILD,Log in failed,Log in failed,登录失败!
+TOWERDEFENSE_PLANT_TWINSUNSHROOM_HANDBOOK_STORY,,,“我原以为豌豆向日葵的诞生已经够疯狂了，但万万没想到，有一天我自己都要被拿来做实验！”每次提到双子阳光向日葵，双子向日葵都会这么说，毕竟她怎么也想不到，实验成果还能被再次拿来做实验素材。
+TOWERDEFENSE_SHOVEL_GOLD_HANDBOOK_EXPRESTION,,,特点：[color=cc241d]铲掉植物时回收20%阳光[/color]
+SHOP_NPC_TALK_PLANT_PUMPKINFIREICE,,,把这张紫卡种在你的火焰南瓜头上，把它升级成冰焰南瓜头！
+TOWERDEFENSE_PLANT_SUNFLOWERPEA_EXPRESTION,,,攻产兼备的植物，梦开始的地方！
+TOWERDEFENSE_PLANT_SUNSHROOM_NAME,SunShroom,SunShroom,阳光向日葵
+TOWERDEFENSE_ZOMBIE_SHIELDARMOR_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]2200 + 500 + 500[/color]
+伤害：[color=cc241d]100/s[/color]
+佩戴：[color=cc241d]防爆头盔（一类）、防爆门（二类）[/color]
+速度：[color=cc241d]慢[/color]
+特点：[color=cc241d]当手持防爆门时，阻挡穿透子弹，免疫爆炸伤害[/color]"
+TOWERDEFENSE_ZOMBIE_BALLOON_HANDBOOK_STORY,,,气球僵尸真走运。气球有很多功效，而其他僵尸都不曾捡到过。
+SHOP_NPC_TALK_PLANT_ICESUNMINE,,,把这张紫卡种在你的阳光土豆雷上，把它升级成寒光土豆雷！
+TOWERDEFENSE_PLANT_SQUASH_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]1800[/color]
+范围：[color=cc241d]自身周围一格[/color]"
+TOWERDEFENSE_PLANT_JALASUNSHROOM_EXPRESTION,,,辣椒阳光菇能生产辣椒阳光，并伴随火焰。
+TOWERDEFENSE_PLANT_SNOWSHROOM_CUSTOM_1_STORY,,,"特效：[color=cc241d]装扮该皮肤后，雪花寒冰菇召唤的冰弹替换为小型冰剑（仅外观变化，子弹伤害和性质不变）[/color]
+雪域孤影，冰扇凝锋。"
+TOWERDEFENSE_PLANT_WILDPEA_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]20×4x5/2s[/color]
+特性：[color=C71585]至尊金卡[/color]
+至尊金卡：[color=FFFF00]场上每有一株该植物，植物价格增加100[/color]
+范围：[color=cc241d]五个角度（索敌&弹道）发射总计20颗散射豌豆[/color]"
+TOWERDEFENSE_ZOMBIE_BED_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]1400[/color]
+伤害：[color=cc241d]即死（碾压）[/color]
+佩戴：[color=cc241d]----[/color]
+类型：[color=cc241d]车类僵尸[/color]
+移速：[color=cc241d]快[/color]
+亡语：[color=cc241d]床车被破坏时，会使床上的小摔哥僵尸醒来[/color]
+弱点：[color=441D62]地刺[/color]"
+MAINMENU,Main Menu,Main Menu,主菜单
+TOWERDEFENSE_ZOMBIE_PRESENTBOX_NAME,PresentBox Zombie,PresentBox Zombie,抽奖盒子僵尸
+TOWERDEFENSE_PLANT_ICENUT_NAME,Icenut,Icenut,冰冻坚果
+TOWERDEFENSE_PLANT_FIRESNOWPEA_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+攻速：[color=cc241d]（20或20x2）/1.5s[/color]
+范围：[color=cc241d]自身所在一整行[/color]
+特点：[color=cc241d]点击该植物可以转换方向[/color]"
+TOWERDEFENSE_PLANT_GATLINGPEA_NAME,GatlingPea,GatlingPea,机枪射手
+TOWERDEFENSE_PLANT_QUEENSUNFLOWER_EXPRESTION,,,发射追踪火球，生产大量阳光。
+TOWERDEFENSE_ZOMBIE_PEASHOOTER_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
+伤害：[color=cc241d]100/s（啃食） + 20/次（射击）[/color]
+佩戴：[color=cc241d]----[/color]
+类型：[color=cc241d]小型僵尸[/color]
+速度：[color=cc241d]慢[/color]
+特点：[color=cc241d]当前方有非低矮植物时每次发射1颗豌豆攻击你的植物[/color]"
+TOWERDEFENSE_PLANT_PEASHOOTER_HANDBOOK_STORY,,,双发射手很凶悍，他是在街头混大的。他不在乎任何人的看法，无论是植物还是僵尸，他打出豌豆，是为了让别人离他远点。但其实，双发射手一直暗地里渴望着爱情。
+TOWERDEFENSE_ZOMBIE_BACKUPDANCER_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]370 + 270[/color]
+伤害：[color=cc241d]100/s[/color]
+可能佩戴：[color=cc241d]路障（仅限被黑橄榄舞王召唤时佩戴）[/color]
+类型：[color=cc241d]小型僵尸[/color]
+移速：[color=cc241d]慢[/color]"
+TOWERDEFENSE_ZOMBIE_WILDPEA_EXPRESTION,,,狂野机枪僵尸拥有碾压般的子弹输出！
+<!MissingKey:墓碑吞噬者>,Grave Monument Eater,Grave Monument Eater,墓碑吞噬者
+TOWERDEFENSE_PLANT_ICESUNMINE_HANDBOOK_STORY,,,寒光土豆雷其实也是阳光俱乐部的重要成员，只不过他过于“冷”门无人知晓。他最近盘算着给自己的冰凌染些颜色，这样僵尸或许就会把他当作一碗刨冰主动靠近了。
+TOWERDEFENSE_PLANT_DOOMTANGLEKELP_NAME,Doom Tangle Kelp,Doom Tangle Kelp,毁灭海草
+REGIST_SUCCESS,Registered successfully,Registered successfully ,注册成功!
+TOWERDEFENSE_ZOMBIE_NORMAL_HANDBOOK_STORY,,,这种僵尸酷爱脑子，贪婪而不知足。脑子、脑子、脑子，——夜以继日地追求着。恶臭难闻的脑子？腐烂的脑子？我想这都没关系，僵尸不介意。
+TOWERDEFENSE_PLANT_JALAPENO_HANDBOOK_STORY,,,“嘎嘎嘎嘎！”火爆辣椒说。他现在不会爆炸，还不到时候。不过快了，喔！快了快了，快来了。他知道，他感受到了，他一生都是在等待这一刻！
+TOWERDEFENSE_PLANT_MELONPULTSPIKE_CUSTOM_1_NAME,,,维京时代
+TOWERDEFENSE_PLANT_GRAVEMINE_CUSTOM_1_STORY,,,【前方施工，请绕行！】
+TOWERDEFENSE_PLANT_ICESUNSHROOM_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
 威力：[color=cc241d]20[/color]
+[color=cc241d]白天会睡觉[/color]
 范围：[color=cc241d]全屏[/color]
 特性：[color=C71585]清除火球、白天会睡觉[/color]
-特点：[color=cc241d]冻结范围内的所有僵尸3秒，并减速15秒[/color]"
-TOWERDEFENSE_PLANT_JALANUT_NAME,Jalapeno Nut,Jalapeno Nut,火爆坚果
-INGAME_VIEW_BACK,CLICK ANYWHERE TO RETURN,CLICK ANYWHERE TO RETURN,点击任意位置返回
+特点：[color=cc241d]一次性植物，释放寒冰菇效果冻结全屏僵尸3秒+减速15秒，且每冻结一个僵尸掉落15阳光[/color]"
+TOWERDEFENSE_ZOMBIE_ARMORED_GARGANTUAR_HANDBOOK_STORY,,,伽刚特尔本就是僵尸中的精锐，能够被授予武装的伽刚特尔更是精锐中的精锐。不过武装伽刚特尔似乎仍然不开心，毕竟这身装备不能帮他交到女朋友。
+TOWERDEFENSE_PLANT_MAGNETMINE_EXPRESTION,,,金属制品聚聚爆！
+TOWERDEFENSE_PLANT_JALACHERRYBOMB_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]1800（每行火焰伤害）[/color]
+范围：[color=cc241d]上中下三行[/color]
+特性：[color=C71585]清除冰道与冰球[/color]
+特点：[color=cc241d]对三行各释放一次火爆辣椒效果，对范围内所有僵尸造成1800火焰伤害，并解除植物与僵尸身上的减速和冻结效果[/color]"
+TOWERDEFENSE_PLANT_ICESPEARPEA_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]60/1.5s[/color]
+范围：[color=cc241d]前方一行[/color]
+特性：[color=C71585]紫卡植物[/color]
+特点：[color=cc241d]冰锥子弹能穿透最多3只僵尸，无视二类防具，并对僵尸附加减速15秒+5%概率冻结3秒[/color]
+紫卡植物：[color=0000FF]需要种植在寒冰射手上[/color]"
+<!MissingKey:特点：当僵尸获得该效果后，会使其受到更高的[color=cc241d]火焰伤害[/color]>,,,"特点：当僵尸获得该效果后，会使其受到更高的[color=cc241d]火焰伤害[/color]
+互斥：无"
+SHOP_NPC_TALK_PLANT_SNOWSHROOM_CUSTOM_0,,,雪花寒冰菇的皮肤！你可以在图鉴装扮你的植物！
+NPC_TALK_LEVEL1_11_TUTORIAL_1,,,天啦噜，伙计！你的草坪呢？！
+TOWERDEFENSE_PLANT_ICETALLNUT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]8000[/color]
+威力：[color=cc241d]20×6/1.5s[/color]
+范围：[color=cc241d]前方一行[/color]
+特性：[color=C71585]至尊金卡、阻挡僵尸跳跃[/color]
+至尊金卡：[color=FFFF00]场上每有一株该植物，植物价格增加100[/color]
+特点：[color=cc241d]可抵御8次锤击、碾压、爆炸，每次抵御扣除1000血量，抵御车辆碾压时将其爆胎[/color]
+亡语：[color=cc241d]释放寒冰菇效果，冻结全屏僵尸8秒+减速15秒[/color]"
+NPC_TALK_LEVEL1_11_TUTORIAL_2,,,难道是蹦极僵尸把草皮掀走了？
+NPC_TALK_LEVEL1_11_TUTORIAL_3,,,还是它们终于学会了使用小推车？......那太可怕了。
+NPC_TALK_LEVEL1_11_TUTORIAL_4,,,不过别担心！虽然很多植物不能直接放在裸地上...
+NPC_TALK_LEVEL1_11_TUTORIAL_5,,,...但地刺和花盆可以！
+TOWERDEFENSE_PLANT_SCAREDYSHROOM_HANDBOOK_STORY,,,“谁在那？”胆小菇低声说，声音细微难辨。“走开！我不想见任何人。除非……除非你是马戏团的人。”
+NPC_TALK_LEVEL1_11_TUTORIAL_6,,,喏，拿好这个豌豆花盆！
+TOWERDEFENSE_PLANT_POT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+特性：[color=C71585]可在裸地上承载植物[/color]"
+<!MissingKey:退出关卡>,EXIT,EXIT,退出关卡
+NPC_TALK_LEVEL1_11_TUTORIAL_7,,,让它们帮你教训僵尸吧！
+TOWERDEFENSE_PLANT_PLANTERNSIX_EXPRESTION,,,拨开迷雾，范围减速僵尸并造成伤害。
+TOWERDEFENSE_ZOMBIE_BED_HANDBOOK_STORY,,,博士最近貌似从游戏里得到了启发：他把一个僵尸洗脑，成功让他迷恋上了睡觉和滑雪。尽管这里根本就没有雪。
+LOAD_PACKETBANK,Load packetbank,Load packetbank,加载卡牌库
+TOWERDEFENSE_ZOMBIE_ARMORED_GARGANTUAR_EXPRESTION,,,全副武装的伽刚特尔！
+TOWERDEFENSE_PLANT_WILDPEA_CUSTOM_1_STORY,,,"特效：[color=cc241d]装扮该皮肤后，狂野机枪射手发射的豌豆子弹替换为赛博立方，经过火炬同样拥有专属点燃特效
+（仅外观变化，子弹伤害和性质不变）[/color]
+来自未来时代的流行风格"
+TOWERDEFENSE_TIPS_NIGHT_DEEP,SUN IS GOING UP,SUN IS GOING UP,太阳开始慢慢升起了！
+TOWERDEFENSE_PLANT_HYPNOSHROOM_EXPRESTION,,,当僵尸吃下魅惑菇后，它将会掉转方向为你作战。
+TOWERDEFENSE_ZOMBIE_IMP_PRESENTBOX_NAME,Imp presentbox zombie,Imp presentbox zombie,礼盒小鬼僵尸
+TOWERDEFENSE_PLANT_SUNPAD_NAME,Poached Pad,Poached Pad,骄阳睡莲
+TOWERDEFENSE_ZOMBIE_NUT_NAME,Nut Zombie,Nut Zombie,坚果僵尸
+LOAD_SHOVEL,Load shovel,Load shovel,加载铲子
+TOWERDEFENSE_ZOMBIE_GARGANTUAR_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]3000[/color]
+伤害：[color=cc241d]即死（锤击）[/color]
+佩戴：[color=cc241d]----[/color]
+类型：[color=cc241d]大型僵尸[/color]
+速度：[color=cc241d]非常慢[/color]
+特性：[color=C71585]锤扁植物[/color]
+特点：[color=cc241d]低于一定血量时会丢出小鬼僵尸[/color]"
+TOWERDEFENSE_PLANT_FIRENUT_EXPRESTION,,,防守整活两不误！
+TOWERDEFENSE_PLANT_GRAVEMINE_CUSTOM_1_ACCESS,,,每日挑战 2025/8月 累计完成14天
+TOWERDEFENSE_PLANT_ICESUNSHROOM_HANDBOOK_STORY,,,寒光菇是一位伟大的科学家，它实现了将僵尸的内能转化为太阳能，但地中海式的发型一直困扰着它。“科研是要付出一些代价的。”它只好这样安慰自己。
+<!MissingKey:大喷菇喷出的气液可以穿透铁丝网门。>,,,大喷菇喷出的气液可以穿透铁丝网门。
+NPC_TALK_LEVEL1_7_TUTORIAL_5,,,祝你好运，我们一会见！
+TOWERDEFENSE_PLANT_CATPOT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+伤害：[color=cc241d]20×2/1.5s[/color]
+范围：[color=cc241d]全屏追踪[/color]
+特性：[color=C71585]可在裸地上承载植物[/color]
+特点：[color=cc241d]发射的追踪尖刺会无视二类防具[/color]"
+NPC_TALK_LEVEL1_7_TUTORIAL_4,,,你或许应该试试更加专注于生产阳光的杂交植物！
+<!MissingKey:韧性：[color=cc241d]300[/color]>,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]1800（灰烬伤害）[/color]
+特性：[color=C71585]白天会睡觉[/color]
+特点：[color=cc241d]爆炸后残留一个弹坑，持续存在180秒[/color]"
+NPC_TALK_LEVEL1_7_TUTORIAL_3,,,但太阳已经快落山了！你获得的阳光也会变少！
+NPC_TALK_LEVEL1_7_TUTORIAL_2,,,僵尸还是没有减少的迹象…
+TOWERDEFENSE_SHOVEL_DEFAULT_NAME,Iron Shovel,Iron Shovel,铁铲
+NPC_TALK_LEVEL1_7_TUTORIAL_1,,,看起来马上就要天黑了。
+TOWERDEFENSE_MOWER_DEFAULT_HANDBOOK_STORY,,,你的院子里配备已久的除草机，稍微改装了一下用于清理僵尸。
+TOWERDEFENSE_ZOMBIE_SUNFLOWER_EXPRESTION,,,向日葵僵尸会减少你的阳光。
+TOWERDEFENSE_ZOMBIE_GARGANTUAR_EXPRESTION,,,伽刚特尔是一种巨型僵尸。
+LOAD_LEVEL,Load level,Load level,加载关卡
+TOWERDEFENSE_TIPS_NIGHT,SUN IS GOING DOWN,SUN IS GOING DOWN,太阳落山了!
+TOWERDEFENSE_ZOMBIE_CAT_EXPRESTION,,,灵活的猫战士，会通过肩炮发射追踪攻击！
+PLAYERS_MORDEN_NIGHT_LEVEL_NAME,Nightfall 2 - {LevelNumber},Nightfall 2 - {LevelNumber},夜幕降临2 - {LevelNumber}
+TOWERDEFENSE_ZOMBIE_FLAG_NAME,Flag Zombie,Flag Zombie,摇旗僵尸
+TOWERDEFENSE_PLANT_PUFFPOT_CUSTOM_1_ACCESS,,,每日挑战 2025/8月 累计完成7天
+TOWERDEFENSE_ZOMBIE_SHADOW_EXPRESTION,,,影子僵尸的影子会在本体倒下后继续前进。
+TOWERDEFENSE_ZOMBIE_ZOMBONI_HANDBOOK_STORY,,,经常被误以为是在驾驶着造冰车的僵尸，但事实上雪橇车僵尸是一种完全不同的生物形式，他与太空兽人的联系更紧密。
+TOWERDEFENSE_PLANT_PUMPKINFIREICE_HANDBOOK_STORY,,,冰焰南瓜头虽然外表冷酷，但是却有一颗火热的心。
+TOWERDEFENSE_ZOMBIE_SEADEMON_HANDBOOK_STORY,,,海妖僵尸觉得自己生前是强大的海妖，为此他甚至偷走了邻居的干草叉，但其他僵尸都知道，他只不过是个曾经多次被缠绕水草拖下水的倒霉蛋。最让其他僵尸受不了的是，他最近开始练习唱歌了…
 TOWERDEFENSE_ZOMBIE_WILDPEA_HANDBOOK_STORY,,,狂野，是狂野机枪僵尸最自豪的绰号，“看到我的脑袋了吗？，它能让你深刻体会到什么叫做狂！”
-TOWERDEFENSE_PLANT_CHERRYBOMB_NAME,CherryBomb,CherryBomb,樱桃炸弹
-TOWERDEFENSE_PLANT_RECACTUS_CUSTOM_1_NAME,,,西部警长
+TOWERDEFENSE_ZOMBIE_PRESENTBOX_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
+伤害：[color=cc241d]100/s[/color]
+佩戴：[color=cc241d]----[/color]
+类型：[color=cc241d]小型僵尸[/color]
+速度：[color=cc241d]慢[/color]
+亡语：[color=cc241d]在死亡位置生成一只随机僵尸[/color]"
+<!MissingKey:移除植物时吸取场上的铁器！>,,,移除植物时吸取场上的铁器！
+TOWERDEFENSE_ZOMBIE_SHIELDARMOR_HANDBOOK_STORY,,,戴夫博士的实验室并不专业，防爆门僵尸为了提升自身实力，出发前拆卸了实验室的防爆门。
+TOWERDEFENSE_ZOMBIE_GARGANTUAR_REDEYE_HANDBOOK_STORY,,,“红眼巨人”是暴走伽刚特尔的别称。他是僵尸界的巨无霸，拥有令僵尸们无比仰慕的力量…然而他还是没交到女朋友。
+TOWERDEFENSE_PLANT_RECACTUS_CUSTOM_1_STORY,,,“前面的僵尸，你已经在我的通缉令上了！”
+TOWERDEFENSE_PLANT_PEALILYPAD_CUSTOM_1_ACCESS,,,每日挑战 2025/9月 累计完成7天
+TOWERDEFENSE_ZOMBIE_IMP_PRESENTBOX_EXPRESTION,,,迷你款礼盒僵尸，通过投掷空降到你的防线中间。
+TOWERDEFENSE_ZOMBIE_DISCOFIRE_NAME,Fire Disco Zombie,Fire Disco Zombie,火焰迪斯科僵尸
+TOWERDEFENSE_PLANT_CACTUSBLOVER_NAME,CactusBlover,CactusBlover,仙人三叶草
+HAMMER,Hammer,Hammer,锤子
+TOWERDEFENSE_PLANT_QUEENSUNFLOWER_NAME,Queen Sunflower,Queen Sunflower,向日葵女王
+TOWERDEFENSE_MOWER_SUN_NAME,Sun Mower,Sun Mower,阳光小推车
+SHOP_NPC_TALK_PLANT_SUNSHROOM_CUSTOM_1,,,阳光向日葵的皮肤！你可以在图鉴装扮你的植物！
 TOWERDEFENSE_PLANT_JALASUNSHROOM_NAME,Chili Sun Mushroom,Chili Sun Mushroom,辣椒阳光菇
-INGAME_ROCK,LET'S ROCK!,LET'S ROCK!,一起摇滚吧!
-TOWERDEFENSE_PLANT_CACTUSBLOVER_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]20×20/行[/color]
-范围：[color=cc241d]全场各行[/color]
-特性：[color=C71585]吹退僵尸[/color]
-特点：[color=cc241d]吹退全屏僵尸0.5格（大型僵尸，巨人，车除外），吹走空中小型僵尸（如气球僵尸和多彩气球）和浓雾，并在每行释放20枚尖刺。[/color]"
-TOWERDEFENSE_SHOVEL_JALAPENO_HANDBOOK_STORY,,,一把火辣辣的铲子，冬天拿在手里也很温暖。
-LEVLE_EVENT_SET_GAME_MODE,SetGameMode,SetGameMode,设置游戏模式
-<!MissingKey:特点：植物爆炸使僵尸受到伤害即视为爆炸伤害>,,,"特点：植物爆炸使僵尸受到伤害即视为爆炸伤害
-互斥：无
-惧怕：防爆门"
-TOWERDEFENSE_ZOMBIE_YETIDIGGER_EXPRESTION,,,矿工僵尸去挖钻石了！
-<!MissingKey:血量：[color=cc241d]500[/color]>,,,"血量：[color=cc241d]500[/color]
-伤害：[color=cc241d]100/s（啃食） + 20x4/次（射击）[/color]
+TOWERDEFENSE_ZOMBIE_CAT_HANDBOOK_STORY,,,猫战士从不脱下他的面具。“我是猫，猫的反应速度是僵尸的7倍。”作为肉食爱好者，他认为这样能帮助自己更早避开难吃的植物。
+SHOP_ITEM_PACKETSLOT_12,,,12槽
+TOWERDEFENSE_PLANT_PUMPKINFIRE_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]4000[/color]
+威力：[color=cc241d]40/1.5s（靠近&火焰伤害）[/color]
+范围：[color=cc241d]自身周围一格[/color]
+特性：[color=C71585]点燃豌豆为火焰豌豆、保护植物、本格植物免疫减速与冻结[/color]
+特点：[color=cc241d]灼烧靠近的僵尸，使其每1.5秒受到40点火焰伤害[/color]"
+SHOP_ITEM_PACKETSLOT_13,,,13槽
+SHOP_ITEM_PACKETSLOT_10,,,10槽
+SHOP_ITEM_PACKETSLOT_11,,,11槽
+SHOP_ITEM_PACKETSLOT_16,,,16槽
+TOWERDEFENSE_PLANT_SUNFLOWERPEA_CUSTOM_1_NAME,,,天使与恶魔
+TOWERDEFENSE_PLANT_QUEENSUNFLOWER_CUSTOM_1_STORY,,,"特效：[color=cc241d]装扮该皮肤后，向日葵女王发射的火球子弹替换为火焰音符，经过冰炬同样拥有专属点燃特效
+（仅外观变化，子弹伤害和性质不变）[/color]
+花园里的当红偶像，她的歌声温暖着每一名植物和僵尸……
+…等等，那些僵尸是不是真的“燃”起来了？"
+SHOP_ITEM_PACKETSLOT_14,,,14槽
+<!MissingKey:>,,,
+SHOP_ITEM_PACKETSLOT_15,,,15槽
+TOWERDEFENSE_ZOMBIE_FOOTBALL_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]1400 + 270[/color]
+伤害：[color=cc241d]100/s[/color]
+佩戴：[color=cc241d]橄榄头盔（一类）[/color]
+类型：[color=cc241d]小型僵尸[/color]
+移速：[color=cc241d]快[/color]
+弱点：[color=441D62]磁力菇[/color]"
+TOWERDEFENSE_PLANT_SNOWWOOD_CUSTOM_1_NAME,,,冥界深寒
+TOWERDEFENSE_PLANT_FIRENUT_NAME,FireNut,FireNut,火炬坚果
+TOWERDEFENSE_SHOVEL_GOLD_EXPRESTION,,,移除场地上的植物返还少量阳光！
+TOWERDEFENSE_ZOMBIE_DUCK_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
+伤害：[color=cc241d]100/s[/color]
+佩戴：[color=cc241d]----[/color]
+速度：[color=cc241d]慢[/color]
+亡语：[color=cc241d]死亡后留下一个500血量的游泳圈，游泳圈能阻挡平射子弹[/color]"
+SHOP_NPC_TALK_PLANT_TWINSUNSHROOM,,,把这张紫卡种在你的阳光向日葵上，把它升级成双子阳光向日葵！
+TOWERDEFENSE_ZOMBIE_BACKUPDANCER_HANDBOOK_STORY,,,伴舞僵尸曾在位于僵尸纽约城的“咀利牙”表演艺术学院钻研过六年的舞技。
+NPC_TALK_LEVEL1_10_TUTORIAL_3,,,它们似乎记不清离开你之后发生的事情了…
+NPC_TALK_LEVEL1_10_TUTORIAL_2,,,我刚刚在你的草坪上发现了一些植物！
+NEXTLEVEL,Next level,Next level,下一关
+NPC_TALK_LEVEL1_10_TUTORIAL_1,,,一个好消息，伙计！
+TOWERDEFENSE_PLANT_ICETALLNUT_CUSTOM_1_STORY,,,"是年，尝有一战，此植初显风采，独守一路，屹立不倒，拒群尸于门外，故众人皆赞曰“战神”也。
+特效：[color=cc241d]装扮该皮肤后，高冰果发射的冰弹替换为武装冰弹，经过各种火炬同样拥有专属特效
+（仅外观变化，子弹伤害和性质不变）[/color]"
+TOWERDEFENSE_ZOMBIE_SHADOW_NAME,Shadow Zombie,Shadow Zombie,影子僵尸
+NPC_TALK_LEVEL1_10_TUTORIAL_6,,,我们也做好120%的应对吧！传送带启动！
+NPC_TALK_LEVEL1_10_TUTORIAL_5,,,僵尸似乎准备在天黑前发起一波总攻。
+NPC_TALK_LEVEL1_10_TUTORIAL_4,,,不过，它们仍然能在接下来的战斗中助你一臂之力！
+TOWERDEFENSE_ZOMBIE_DISCO_NAME,Disco Zombie,Disco Zombie,迪斯科僵尸
+TOWERDEFENSE_PLANT_GATLINGPEA_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]20x4/1.5s[/color]
+范围：[color=cc241d]前方一行[/color]
+特性：[color=C71585]紫卡植物[/color]
+紫卡植物：[color=0000FF]需要种植在双发射手上[/color]"
+<!MissingKey:血量：[color=cc241d]450[/color]>,,,"血量：[color=cc241d]450[/color]
+伤害：[color=cc241d]即死（抓取）[/color]
+佩戴：[color=cc241d]----[/color]
+类型：[color=cc241d]小型僵尸[/color]
+特点：[color=cc241d]从天而降，停留一段时间后窃取你的植物[/color]
+弱点：[color=441D62]叶子保护伞[/color]"
+TOWERDEFENSE_ZOMBIE_DOLPHINRIDER_EXPRESTION,,,海豚骑士僵尸善于利用你水池防御的弱点。
+NPC_TALK_LEVEL1_2_TUTORIAL_1,,,豌豆向日葵好用吗，伙计？
+NPC_TALK_LEVEL1_2_TUTORIAL_2,,,是时候来尝试更多的杂交植物了
+MAP_ROOF,Roof,Roof,屋顶
+NPC_TALK_LEVEL1_2_TUTORIAL_3,,,瞧瞧这个火炬坚果！能阻挡僵尸，还能点燃豌豆子弹！
+NPC_TALK_LEVEL1_2_TUTORIAL_4,,,让僵尸们感受一下“热情”吧！
+<!MissingKey:睡莲>,Water lily,Water lily,睡莲
+TOWERDEFENSE_ZOMBIE_DISCOFIRE_EXPRESTION,,,迪斯科僵尸燃起来了！
+TOWERDEFENSE_PLANT_CORNTROP_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]20/1.5s + 20*4/1.5s[/color]
+范围：[color=cc241d]自身所在格[/color]
+特性：[color=C71585]爆胎车辆[/color]
+特点：[color=cc241d]对经过的僵尸每1.5秒造成20伤害，向上随机位置发射共计4枚玉米粒，有15%概率改为发射4枚黄油。[/color]"
+TOWERDEFENSE_PLANT_TWINSUNSHROOM_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+生产：[color=cc241d]50阳光/25秒，长大后变为100阳光/25秒[/color]
+特性：[color=C71585]紫卡植物[/color]
+特点：[color=cc241d]需要60秒时间成长[/color]
+紫卡植物：[color=0000FF]需要种植在阳光向日葵上[/color]"
+TOWERDEFENSE_PLANT_TABOODOOMSHROOM_EXPRESTION,,,你想尝试禁忌的力量吗？
+TOWERDEFENSE_PLANT_PEALILYPAD_CUSTOM_1_STORY,,,这下真的变成热水袋了…虽然没有加热功能
+TOWERDEFENSE_ZOMBIE_DARKFOOTBALL_EXPRESTION,,,暗黑橄榄球僵尸是橄榄球僵尸的队长。
+SHOP_NPC_TALK_PLANT_ICEAPEARPEA,,,把这张紫卡种在你的寒冰射手上，把它升级成冰锥射手！
+MAP_ROOF_NIGHT,Roof Night,Roof Night,屋顶(夜晚)
+TOWERDEFENSE_PLANT_PRESENTBOX_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+范围：[color=cc241d]自身所在格[/color]
+特性：[color=C71585]随机植物[/color]
+特点：[color=cc241d]随机开出一株植物，夜间植物不会睡觉[/color]"
+<!MissingKey:韧性：[color=cc241d]300[/color]>,,,"韧性：[color=cc241d]300[/color]
+特性：[color=C71585]只能种在墓碑上，并花费时间吞噬[/color]"
+INGAME_VIEW_BACK,CLICK ANYWHERE TO RETURN,CLICK ANYWHERE TO RETURN,点击任意位置返回
+TOWERDEFENSE_SHOVEL_GOLD_HANDBOOK_STORY,,,在草坪上捡到的金铲子。看起来像是黄金制品但意外地耐用，估计只是镀金的。
+TOWERDEFENSE_ZOMBIE_POLESTRIKER_NAME,Olive Polestalker,Olive Polestalker,橄榄撑杆僵尸
+TOWERDEFENSE_ZOMBIE_SUNFLOWER_HANDBOOK_STORY,,,"“我想融入向日葵群体，但她们都说我是阳光小偷。”向日葵僵尸向心理医生倾诉，“可我明明在生产阳光呀！”
+医生经过细致的诊断，最后联合眼科确诊：这家伙是个色盲。"
+TOWERDEFENSE_PLANT_SCAREDYSUNSHROOM_CUSTOM_1_ACCESS,,,每日挑战 2025/8月 累计完成21天
+<!MissingKey:蹦极僵尸最爱冒险。毕竟，如果你不再活着，那再体验次死亡又有何妨呢？>,,,蹦极僵尸最爱冒险。毕竟，如果你不再活着，那再体验次死亡又有何妨呢？
+LEVEL2_7_BROADCAST_1,,,现在是凌晨，墓碑变少了！天上开始掉落小阳光了！
+<!MissingKey:大嘴花>,Big Mouth Flower,Big Mouth Flower,大嘴花
+TOWERDEFENSE_PLANT_FIRENUT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]4000[/color]
+反伤：[color=cc241d]40/1.5s（火焰伤害）[/color]
+特点：[color=cc241d]点燃豌豆为火焰豌豆[/color]"
+TOWERDEFENSE_ZOMBIE_IMP_NAME,Imp zombie,Imp zombie,小鬼僵尸
+TOWERDEFENSE_ZOMBIE_DOLPHINSN_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]500[/color]
+伤害：[color=cc241d]150/s（挥砍）或 100/s（啃食）[/color]
 佩戴：[color=cc241d]----[/color]
 类型：[color=cc241d]小型僵尸[/color]
 速度：[color=cc241d]快，跳跃后慢[/color]
-限制：[color=0000FF]只会在水上出现[/color]
-特点：[color=cc241d]发射四颗豌豆攻击你的防线，并能够跃过他所碰到的第一株植物[/color]
-弱点：[color=441D62]高坚果[/color]"
-<!MissingKey:退出关卡>,EXIT,EXIT,退出关卡
-TOWERDEFENSE_PLANT_JALAPENO_NAME,Jalapeno,Jalapeno,火爆辣椒
-TOWERDEFENSE_ZOMBIE_BUCKETHEAD_NAME,Bucket Head Zombie,Bucket Head Zombie,铁桶僵尸
-<!MissingKey:特点：受到该效果的僵尸会立刻在原地冻结，并在结束后施加一段时间的减速效果。>,,,"特点：受到该效果的僵尸会立刻在原地冻结，并在结束后施加一段时间的减速效果。
-进阶：全屏冻结3秒并在结束后再施加一段时间的减速效果，满足以上要求或大于要求则视为寒冰菇效果，并可清除火球。
-互斥：受到火焰效果时会立即结束该效果"
-<!MissingKey:寒冰菇>,Ice Mushroom,Ice Mushroom,寒冰菇
-TOWERDEFENSE_ZOMBIE_YETIDIGGER_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]100 + 800[/color]
+特点：[color=cc241d]骑乘海豚跃过碰到的第一株植物，随后丢弃海豚
+越过植物前后均处于潜水状态，遇到植物时会上浮啃咬并暴露自己[/color]"
+LOAD_MOD,Load mod,Load mod,加载模组
+TOWERDEFENSE_PLANT_PRESENTBOX_EXPRESTION,,,下一个惊喜是？
+TOWERDEFENSE_PLANT_GLOOMPULT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]20×4/3s[/color]
+特性：[color=C71585]白天会睡觉[/color]
+特点：[color=cc241d]每3秒向本行最靠近自己的僵尸投掷一枚忧郁菇子弹，击中僵尸后释放忧郁菇效果（3x3范围20*4伤害）；当自身3x3范围内有僵尸时，每3秒释放忧郁菇效果[/color]"
+TOWERDEFENSE_PLANT_SEANUT_CUSTOM_1_ACCESS,,,每日挑战 2025/9月 累计完成14天
+SHOP_NPC_TALK_PACKETSLOT,,,额外的卡槽！让你在每关可多携带一种植物！
+SHOP_NPC_TALK_SHOVEL_DIAMOND,,,钻石铲，铲掉植物能回收大量阳光！
+TOWERDEFENSE_PLANT_CATPOT_NAME,CatPot,CatPot,猫砂盆
+TOWERDEFENSE_PLANT_SEANUT_CUSTOM_1_STORY,,,泳帽、泳圈、泳镜，全套装备享受完美的水上假日~
+TOWERDEFENSE_ZOMBIE_CONEHEAD_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]370 + 270[/color]
+伤害：[color=cc241d]100/s[/color]
+佩戴：[color=cc241d]路障（一类）[/color]
+类型：[color=cc241d]小型僵尸[/color]
+移速：[color=cc241d]慢[/color]"
+LOGIN_ERROR_PASSWORD_EMPTY,Password is empty,Password is empty,密码为空
+TOWERDEFENSE_ZOMBIE_GARGANTUAR_REDEYE_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]6000[/color]
+伤害：[color=cc241d]即死（锤击）[/color]
+佩戴：[color=cc241d]----[/color]
+类型：[color=cc241d]大型僵尸[/color]
+速度：[color=cc241d]非常慢[/color]
+特性：[color=C71585]锤扁植物[/color]
+特点：[color=cc241d]低于一定血量时会丢出小鬼僵尸[/color]"
+TOWERDEFENSE_PLANT_WINTERMELONSHROOM_EXPRESTION,,,冰瓜大喷菇喷出的气液可以穿透铁丝网门，同时发射一枚冰瓜。
+TOWERDEFENSE_ZOMBIE_GATLINGDOLPHINRIDER_HANDBOOK_STORY,,,没有人知道那个海豚为啥也是僵尸，这点机枪海豚僵尸也不清楚。他从一开始就抱着这个玩意行走江湖，除了给这个海豚找到归属外，还寻找着自己头上那个头盔的由来。其实这些都是其他僵尸送给他的生日礼物，他忘记了而已。
+TOWERDEFENSE_ZOMBIE_DIGGER_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]100 + 270[/color]
 伤害：[color=cc241d]100/s[/color]
 佩戴：[color=cc241d]矿工头盔（一类）[/color]
 类型：[color=cc241d]矿工僵尸[/color]
 速度：[color=cc241d]快，而后慢（出土后）[/color]
-特点：[color=cc241d]挖地道，从第2列出来反向走10秒后再次转向[/color]
-亡语：[color=cc241d]死亡后掉落1枚随机种类货币（银币80%，金币18%，钻石2%）[/color]"
-MAP_FRONTLAWN_COLD,Front Yard (Winter),Front Yard (Winter),前院(冬)
-TOWERDEFENSE_ZOMBIE_IMP_HANDBOOK_STORY,,,小鬼僵尸虽然瘦小，但是结实。它精通僵尸柔道、僵尸空手道、僵尸徒手斗殴。另外，他还会吹口风琴。
-TOWERDEFENSE_TIPS_DAY,SUN IS RISING,SUN IS RISING,天亮了！
+特点：[color=cc241d]挖地绕过你的前排植物，最左侧出土后反向行走[/color]
+弱点：[color=441D62]磁力菇[/color]"
+TOWERDEFENSE_PLANT_WALLNUT_NAME,Wallnut,Wallnut,坚果
+TOWERDEFENSE_PLANT_PEACAT_CUSTOM_1_NAME,,,睡衣派对
+TOWERDEFENSE_ZOMBIE_SNOWPEA_NAME,SnowPea Zombie,SnowPea Zombie,寒冰射手僵尸
+TOWERDEFENSE_PLANT_ICETALLNUT_CUSTOM_1_ACCESS,,,（获取方式待补充）
+TOWERDEFENSE_PLANT_THREEPEATER_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]20/1.5s/行[/color]
+范围：[color=cc241d]前方三行[/color]
+边路补偿：[color=cc241d]种植于最上和最下行时向前多发射一枚子弹[/color]"
+TOWERDEFENSE_PLANT_PEASHOOTERSINGLE_EXPRESTION,,,豌豆射手，你的第一道防线。它们通过发射豌豆来攻击僵尸。
+TOWERDEFENSE_PLANT_PEASHOOTER_EXPRESTION,,,双发射手可以一次发射两颗豌豆
+TOWERDEFENSE_PLANT_GRAVEMINE_EXPRESTION,,,吞噬墓碑，留下一枚已准备好的阳光土豆雷。
+LEVLE_EVENT_CURRENTMAP_CHARACTER_CLEAR,CurrentMapCharacterClear,CurrentMapCharacterClear,清除当前地图角色
+TOWERDEFENSE_PLANT_WILDPEA_CUSTOM_1_NAME,,,赛博狂潮
+TOWERDEFENSE_ZOMBIE_GARGANTUAR_REDEYE_EXPRESTION,,,红眼伽刚特尔，双倍防御，双倍的威胁！
+REGIST_ERROR_PASSWORD_NOT_SAME,Password not same,Password not same,再次输入密码与密码不同
+TOWERDEFENSE_PLANT_SUNPAD_HANDBOOK_STORY,,,"骄阳睡莲自称“将阳光的力量凝聚于一身”，“我能帮你取暖，并且烧烤来袭的僵尸！”
+但如何平衡热量是个大问题，他经常为了不烫伤植物而调低功率，结果就是连自己附近的泳池水都煮不开。"
+TOWERDEFENSE_PLANT_SNOWSHROOM_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]50/颗[/color]
+范围：[color=cc241d]全屏[/color]
+特性：[color=C71585]清除火球、白天会睡觉[/color]
+特点：[color=cc241d]不被索敌，在场时随机位置每秒天降50颗寒冰豌豆，持续8秒；消失后释放寒冰菇效果，冻结全屏僵尸3秒+15秒减速[/color]"
+SHOP_ITEM_NUTBANDAGING,,,坚果包扎术
+TOWERDEFENSE_ZOMBIE_TANGLEKELPSNORKLE_HANDBOOK_STORY,,,潜水僵尸讨厌缠绕水草，他更讨厌自己现在的样子。
+TOWERDEFENSE_ZOMBIE_SEADEMON_NAME,Sea Demon Zombie,Sea Demon Zombie,海妖僵尸
+LOGIN_SUCCESS,Log in successfully,Log in successfully,登录成功!
+MAP_FRONTLAWN_NIGHT_DEEP,Front Yard (Deep Night),Front Yard (Deep Night),前院(深夜)
+TOWERDEFENSE_ZOMBIE_GATLINGPEA_EXPRESTION,,,机枪僵尸是豌豆僵尸的大哥！、
+TOWERDEFENSE_ZOMBIE_GARGANTUARZOMBONI_NAME,Ice Car Zombie,Ice Car Zombie,雪橇车巨人僵尸
+TOWERDEFENSE_PLANT_FIRENUT_CUSTOM_1_STORY,,,“宇宙超人，睁开眼睛——”
+TOWERDEFENSE_PLANT_WILDPEA_HANDBOOK_STORY,,,"作为机枪射手中最勇猛的机枪，在战场上的火力如同天上下陨石一样恐怖。
+哦对了，他的帽子其实是从隔壁家前院拿来的灌木丛，披风也是隔壁家的床单。"
+TOWERDEFENSE_ZOMBIE_SQUASH_EXPRESTION,,,窝瓜僵尸会压扁他碰到的第一株植物
+TOWERDEFENSE_PLANT_CATPOT_HANDBOOK_STORY,,,“你也许不知道，”猫尾草说，“我的尾巴才是本体。”她摘掉帽子，里面是空的。于是戴夫往里面填上了土。“叫猫盆就得了，谁再叫猫砂盆我就跟谁急！”
+LEVLE_EVENT_CURRENTMAP_USE_STRIPE,CurrentMapUseStripe,CurrentMapUseStripe,使用当前地图限制红线
+MAP_FRONTLAWN_COLD_BIG,"Front Yard (Winter,Big Map)","Front Yard (Winter,Big Map)",前院(冬大地图)
+MAP_FRONTLAWN_NIGHT_BIG,"Front Yard (Night,Big Map)","Front Yard (Night,Big Map)",前院(夜晚大地图)
+TOWERDEFENSE_PLANT_MAGNETNUT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]4000[/color]
+特性：[color=C71585]吸取铁器[/color]
+特点：[color=cc241d]吸取自身为中心周围5*5范围最靠近的一个铁器，但需要15秒消除它[/color]"
+TOWERDEFENSE_PLANT_SCAREDYSUNSHROOM_EXPRESTION,,,阳光下成长——但还是胆小。
+TOWERDEFENSE_PLANT_PRESENTBOX_NAME,PresentBox,PresentBox,抽奖盒子
+TOWERDEFENSE_PLANT_TANGLEKELPH_HANDBOOK_EXPRESTION,,,"威力：[color=cc241d]即死[/color]
+范围：[color=cc241d]单格[/color]
+特性：[color=C71585]只能种在水中[/color]
+特点：[color=cc241d]能将所有非BOSS类僵尸拖下水并生成一个它的魅惑形态[/color]"
+TOWERDEFENSE_PLANT_ICESUNSHROOM_EXPRESTION,,,寒光菇可以冻结僵尸，并提供相对应的阳光。
+<!MissingKey:冻结效果>,freeze Buff,freeze Buff,冻结效果
+TOWERDEFENSE_PLANT_TWINSUNSHROOM_EXPRESTION,,,双倍的阳光向日葵，阳光产量再翻倍！
+<!MissingKey:音效>,Sound FX,Sound FX,音效
+TOWERDEFENSE_PLANT_PLANTERNSIX_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]20/1.5s（光环伤害）[/color]
+光环范围：[color=cc241d]3x3[/color]
+特性：[color=C71585]驱散一定范围的迷雾[/color]
+特点：[color=cc241d]减速并伤害光环范围内的所有僵尸[/color]
+亡语：[color=cc241d]向六个方向各发射10枚子弹，分别为火球、冰豆、豌豆（对称式发射）[/color]"
+TOWERDEFENSE_MOWER_SUN_EXPRESTION,,,碾压僵尸可以获得阳光！
+TOWERDEFENSE_PLANT_PEASHOOTER_NAME,Peashooter,Peashooter,双发射手
+TOWERDEFENSE_READYSETPLANTS_SET,Set...,Set...,种植...
+TOWERDEFENSE_PLANT_GARGANTUARSHROOM_CUSTOM_1_STORY,,,据说这是用好几个红眼菇拼凑成的…好吧，其实只是万圣节风格的装扮：）
+LOAD_SHOP,Load shop,Load shop,加载商店
+TOWERDEFENSE_PLANT_SQUASH_HANDBOOK_STORY,,,“我准备好了！”窝瓜大吼道，“干吧！算我一份；没人比我厉害，我就是你要的人！来啊！还等什么？要的就是这个。”
+MAP_BACKYARD_NIGHT_FULL,"Back Yard (Night,Full Pool)","Back Yard (Night,Full Pool)",后院(夜晚全泳池)
+<!MissingKey:一. 全新关卡：>,,,"一. 全新关卡：
+开放挑战模式选项，并新增狂野机枪射手、向日葵女王、高冰果的挑战关卡
+二. 全新植物：
+游戏内紫卡新增机枪花盆（它将在狂野机枪挑战3通关后获得）商店新增紫卡商品：冰焰南瓜头
+三. 游戏调整：
+无
+四. 皮肤更新：
+商店新增了红眼菇、骄阳睡莲、向日葵女王、狂野机枪射手的皮肤售卖；豌豆睡莲、海坚果、地刺西瓜投手、冰炬树桩新增为9月每日挑战皮肤奖励
+五. 全新僵尸和防具变种:
+游戏内新增了机枪海豚骑士、潜水海豚僵尸、骑鸭僵尸、缠绕潜水僵尸、猫战士僵尸、海妖僵尸，并为潜水海豚僵尸、海妖僵尸、缠绕潜水僵尸添加了一类防具变种
+（如若遇到游戏卡顿，请尝试降低帧率）
+六. 游戏优化与修复情况:
+优化了游戏部分地方的文本说明。
+对于玩家反馈的多项BUG进行了修复，如若存在未修复BUG，请尽快在官方群中反馈。
+我们的下个版本会尽快到来，敬请期待"
+TOWERDEFENSE_PLANT_PEASHOOTER_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]20x2/1.5s[/color]
+范围：[color=cc241d]前方一行[/color]"
+TOWERDEFENSE_SHOVEL_COLD_HANDBOOK_EXPRESTION,,,特点：[color=cc241d]铲掉植物时向前发射寒冰豌豆，数量为该植物价格的10%（向下取整）[/color]
+TOWERDEFENSE_PLANT_GRAVEMINE_HANDBOOK_STORY,,,"“每次都是这样，为什么要让我来打扫杂草。”
+“不如你每次都带上我吧，这样就不需要再打扫一遍那个地方了。”土豆地雷对墓碑吞噬者说道。"
+TOWERDEFENSE_ZOMBIE_DOLPHINRIDER_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]500[/color]
+伤害：[color=cc241d]150/s（挥砍）或 100/s（啃食）[/color]
+佩戴：[color=cc241d]----[/color]
+类型：[color=cc241d]小型僵尸[/color]
+速度：[color=cc241d]快，跳跃后慢[/color]
+特点：[color=cc241d]骑乘海豚跃过碰到的第一株植物，随后丢弃海豚[/color]
+弱点：[color=441D62]高坚果[/color]"
+<!MissingKey:火焰伤害>,Fire Damage,Fire Damage,火焰伤害
+TOWERDEFENSE_PLANT_MAGNETMINE_HANDBOOK_STORY,,,"某天晚上，土豆雷梦见自己获得了把僵尸传送到头顶的超能力…
+他将其视为预言并为此努力，现在这副样子只是其中一种尝试。"
+TOWERDEFENSE_ZOMBIE_BUCKETHEAD_HANDBOOK_STORY,,,铁桶头僵尸经常戴着水桶，在冷漠的世界里显得独一无二。但事实上，他只是忘记了那铁桶还在他头上而已。
+TOWERDEFENSE_PLANT_PEAPOT_EXPRESTION,,,豌豆花盆是你的一道花盆防线！
+TOWERDEFENSE_ZOMBIE_JACKSONX_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]1000[/color]
+伤害：[color=cc241d]100/s[/color]
+佩戴：[color=cc241d]----[/color]
+类型：[color=cc241d]小型僵尸[/color]
+移速：[color=cc241d]快（出场），而后慢（召唤后）[/color]
+特点：[color=cc241d]每次召唤伴舞前先召唤一只迪斯科僵尸，再和迪斯科僵尸一同召唤各自的伴舞[/color]"
+TOWERDEFENSE_PLANT_RECACTUS_CUSTOM_1_ACCESS,,,每日挑战 2025/7月 累计完成28天
+TOWERDEFENSE_ZOMBIE_CONEHEAD_EXPRESTION,,,他的路障头盔，使他比普通僵尸更能承受伤害
+TOWERDEFENSE_ZOMBIE_LADDER_NAME,Escalator Zombie,Escalator Zombie,扶梯僵尸
+TOWERDEFENSE_ZOMBIE_ARMORED_GARGANTUAR_NAME,Armored Gargantuar,Armored Gargantuar,武装伽刚特尔
+TOWERDEFENSE_PLANT_GATLINGCAT_NAME,Gatling PeaCat,Gatling PeaCat,机枪香蒲
+TOWERDEFENSE_MOWER_SUN_HANDBOOK_STORY,,,这是小推车帮你申请的备用应急阳光。或许你可以直接弃车把它当作启动资金？
+TOWERDEFENSE_PLANT_SUNSHROOM_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+生产：[color=cc241d]25阳光/25秒，长大后变为50阳光/25秒[/color]
+特点：[color=cc241d]需要60秒时间成长[/color]"
+TOWERDEFENSE_ZOMBIE_GARGANTUARZOMBONI_EXPRESTION,,,雪橇车巨人僵尸碾过你的植物，并留下一条冰道。
+TOWERDEFENSE_PLANT_WINTERMELONSHROOM_NAME,WinterMelon Mushroom,WinterMelon Mushroom,冰瓜大喷菇
+TOWERDEFENSE_PLANT_THREEPEATER_NAME,Three-line shooter,Three-line shooter,三线射手
+TOWERDEFENSE_PLANT_WILDPEA_NAME,WildPea,WildPea,狂野机枪射手
+TOWERDEFENSE_PLANT_CHOMPERBLOW_HANDBOOK_STORY,,,"戴夫把三叶草的扇叶装到了大嘴花头上，并宣称自己发明了利用僵尸生物能的风扇。
+对此大嘴花并不在意，反正他只要有东西吃就够了。“快到我嘴里来！”"
+TOWERDEFENSE_PLANT_SUNPAD_CUSTOM_1_STORY,,,"“这造型还能算是植物吗？”
+“当然算，重点在于荷，而不在于蛋。”"
+TOWERDEFENSE_ZOMBIE_DIGGER_HANDBOOK_STORY,,,矿工僵尸每周花费三天时间申请他的挖掘许可证。
+TOWERDEFENSE_ZOMBIE_SLEEP_EXPRESTION,,,小摔哥僵尸讨厌早八！
+TOWERDEFENSE_ZOMBIE_SLEEP_HANDBOOK_STORY,,,“我的雪橇在哪里？就没有企鹅和摩托车帮我吗？哦，至少雪怪还是有的。”小摔哥僵尸说完，就继续沉浸在梦乡里，殊不知他的床下一秒就要被打破了
+TOWERDEFENSE_PLANT_PUFFPOT_EXPRESTION,,,免费的蘑菇，免费的花盆。
+BGM_ROOF,Roof,Roof,屋顶(白天)
+TOWERDEFENSE_ZOMBIE_POLESTRIKER_HANDBOOK_STORY,,,"橄榄撑杆僵尸曾向他的体育教练咨询自己未来的发展方向。
+“你的橄榄球和撑杆跳技术都只能拿50分，所以…”
+“等下，我没叫你把这两项运动结合！”"
+TOWERDEFENSE_PLANT_SNOWSHROOM_CUSTOM_1_NAME,,,寒霜剑客
+TOWERDEFENSE_MOWER_DEFAULT_NAME,Default Mower,Default Mower,草坪小推车
+TOWERDEFENSE_SHOVEL_DEFAULT_HANDBOOK_EXPRESTION,,,特点：[color=cc241d]无[/color]
+TOWERDEFENSE_PLANT_GATLINGCAT_HANDBOOK_STORY,,,“军用头盔？早扔了。戴夫说现在这招叫'战术萌化'——显然我的射速快了20%，这还真有用。”
+<!MissingKey:红温效果>,,,红温效果
+TOWERDEFENSE_ZOMBIE_GATLINGPEA_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
+伤害：[color=cc241d]100/s（啃食） + 20x4/次（射击）[/color]
+佩戴：[color=cc241d]----[/color]
+类型：[color=cc241d]小型僵尸[/color]
+速度：[color=cc241d]慢[/color]
+特点：[color=cc241d]当前方有非低矮植物时每次能发射4颗豌豆攻击你的植物[/color]"
+TOWERDEFENSE_PLANT_ICENUT_CUSTOM_1_STORY,,,他坚信自己有朝一日会成长，变得更加强大可靠。
+REGIST_FAILD,Registration failed,Registration failed,注册失败!
+<!MissingKey:音乐>,Music,Music,音乐
+TOWERDEFENSE_SHOVEL_GOLD_NAME,Gold Shovel,Gold Shovel,金铲
+TOWERDEFENSE_PLANT_JALACHERRYBOMB_EXPRESTION,,,樱桃辣椒可以摧毁三条线上的敌人。
+TOWERDEFENSE_ZOMBIE_JACKBOX_NAME,Toy Box Zombie,Toy Box Zombie,玩具匣僵尸
+TOWERDEFENSE_PLANT_SUNBEAN_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+特性：[color=C71585]悬浮植物、唤醒本格植物[/color]
+特点1：[color=cc241d]每25秒生产15阳光
+60秒后长大，每25秒生产25阳光[/color]"
+TOWERDEFENSE_PLANT_SEANUT_CUSTOM_1_NAME,,,假日清凉
+TOWERDEFENSE_ZOMBIE_GATLINGPEA_NAME,Machine Gun Zombie,Machine Gun Zombie,机枪僵尸
+TOWERDEFENSE_PLANT_ICESUNMINE_NAME,Ice SunMine,Ice SunMine,寒光土豆雷
+TOWERDEFENSE_PLANT_GRAVEMINE_NAME,GraveMine,GraveMine,墓碑埋雷者
+<!MissingKey:小喷菇>,Little Puffcap,Little Puffcap,小喷菇
+TOWERDEFENSE_PLANT_PEAPOT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]20/3s[/color]
+范围：[color=cc241d]前方一行[/color]
+特性：[color=C71585]可在裸地上承载植物[/color]"
+TOWERDEFENSE_ZOMBIE_JACKSON_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]2200 + 500[/color]
+伤害：[color=cc241d]100/s[/color]
+可能佩戴：[color=cc241d]黑橄榄头盔（一类）[/color]
+类型：[color=cc241d]小型僵尸[/color]
+移速：[color=cc241d]快（出场），而后慢（召唤后）[/color]
+特点：[color=cc241d]入场后原地召唤4名伴舞僵尸（佩戴黑橄榄头盔时召唤路障伴舞僵尸）[/color]"
+TOWERDEFENSE_PLANT_SUNSHROOM_CUSTOM_1_NAME,,,小红帽
+TOWERDEFENSE_ZOMBIE_DISCO_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]500[/color]
+伤害：[color=cc241d]100/s[/color]
+佩戴：[color=cc241d]----[/color]
+类型：[color=cc241d]小型僵尸[/color]
+移速：[color=cc241d]快（出场），而后慢（召唤后）[/color]
+特点：[color=cc241d]入场后原地召唤4名舞者僵尸[/color]"
+MAP_FRONTLAWN_NIGHT_EMPTY,"Front Yard (Night,Empty)","Front Yard (Night,Empty)",前院(夜晚裸地)
+TOWERDEFENSE_ZOMBIE_GARGANTUAR_NAME,Gargantuar,Gargantuar,伽刚特尔
+TOWERDEFENSE_SHOVEL_COLD_NAME,Cold Shovel,Cold Shovel,寒冰铲
+TOWERDEFENSE_PLANT_JALANUT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]4000[/color]
+反伤：[color=cc241d]40/1.5s（火焰伤害）[/color]
+特性：[color=C71585]赋予红温、亡语清除冰道与冰球[/color]
+特点：[color=cc241d]使啃咬自己的僵尸每1.5秒受到40点火焰伤害，抵消减速与冻结；并使其暂时进入红温状态，直至结束啃咬[/color]
+亡语：[color=cc241d]释放一次火爆辣椒效果[/color]
+红温状态：[color=cc241d]该状态下的僵尸受到的火焰伤害翻倍[/color]"
+TOWERDEFENSE_MOWER_DEFAULT_EXPRESTION,,,默认的陆地小推车
+NPC_TALK_LEVEL3_11_TUTORIAL_2,,,这是镇上最大的露天泳池，而且跟咱们只有几条街的距离！
+NPC_TALK_LEVEL3_11_TUTORIAL_3,,,太赞了！我每年夏天都会来这晒日光浴！
+NPC_TALK_LEVEL3_11_TUTORIAL_1,,,夏天果然还是要玩水，对吧？
+NPC_TALK_LEVEL3_11_TUTORIAL_6,,,拿上杂交植物，把这个泳池收复回来吧！
+BGM_FRONTLAWN_NIGHT,Front Yard Night,Front Yard Night,前院(夜晚)
+NPC_TALK_LEVEL3_11_TUTORIAL_4,,,唉，可惜，听说这里最近被僵尸侵占了。
+NPC_TALK_LEVEL3_11_TUTORIAL_5,,,所以我把你拉来了，我们的僵尸对抗专家！
+<!MissingKey:大嘴花可以一口吞掉一整只僵尸，但是他们消化僵尸的时候很脆弱。>,,,大嘴花可以一口吞掉一整只僵尸，但是他们消化僵尸的时候很脆弱。
+TOWERDEFENSE_PLANT_GATLINGPEA_EXPRESTION,,,机枪射手可以一次发射四颗豌豆
+TOWERDEFENSE_ZOMBIE_DANCERFIRE_EXPRESTION,,,火焰舞者僵尸也燃起来了！
+TOWERDEFENSE_PLANT_FIRETALLNUT_HANDBOOK_STORY,,,显而易见，冰炬高坚果承担着比他兄弟更加“坚炬”的任务，但他有着一颗与外表相反的温暖内心。他喜欢别人叫自己“冰糕”，这个称呼对那些既想吃冰品又想喝热饮的孩子们太友好了。
+TOWERDEFENSE_PLANT_HYPNOGARLIC_NAME,HypnoGarlic,HypnoGarlic,魅惑大蒜
+TOWERDEFENSE_ZOMBIE_DOLPHINSN_NAME,Snorkel Zombie,Snorkel Zombie,潜水海豚僵尸
+TOWERDEFENSE_PLANT_PEAWELL_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]2000[/color]
+威力：[color=cc241d]20*36/3s[/color]
+范围：[color=cc241d]360度[/color]
+特性：[color=C71585]两栖植物[/color]
+特点：[color=cc241d]每3秒自动发射一圈共计36颗豌豆（每颗间隔10度）[/color]"
+SHOP_NPC_TALK_PLANT_SUNPAD_CUSTOM_0,,,骄阳睡莲的皮肤！你可以在图鉴装扮你的植物！
+TOWERDEFENSE_PLANT_DOOMTANGLEKELP_HANDBOOK_STORY,,,其实缠绕水草本就是一个毁灭菇，只是他之前不小心跌进水里被水草缠住了。
+LEVEL1_2_TUTORIAL_1,,,请先种植豌豆向日葵，以获取足够的阳光！
+LEVLE_EVENT_CREATE_PROTAL,CreateProtal,CreateProtal,创建传送门
+BGM_FRONTLAWN,Front Yard (Day),Front Yard (Day),前院(白天)
+TOWERDEFENSE_PLANT_SQUASH_NAME,Squash,Squash,窝瓜
+TOWERDEFENSE_PLANT_TANGLEKELP_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]即死[/color]
+范围：[color=cc241d]单格[/color]
+特性：[color=C71585]只能种在水中[/color]
+特点：[color=cc241d]将靠近的一只僵尸拉下水，然后消失[/color]"
+LEVEL1_2_TUTORIAL_2,,,请至少种植3株豌豆向日葵！
+TOWERDEFENSE_PLANT_WINTERMELONSHROOM_CUSTOM_1_STORY,,,纯天然冰镇西瓜汁！只要300阳光！
+TOWERDEFENSE_PLANT_JALANUT_HANDBOOK_STORY,,,火爆坚果总是把辣椒背在身上，仿佛这是非常宝贵的东西。“这是我珍贵的战友！”火爆坚果这么说，但实际上那只是普通的辣椒。
+MAP_FRONTLAWN_BIG,"Front Yard (Day,Big Map)","Front Yard (Day,Big Map)",前院(白天大地图)
+START_GAME,Start,Start,开始游戏
+TOWERDEFENSE_ZOMBIE_POLESTRIKER_EXPRESTION,,,橄榄球和撑杆，强强联合！
+TOWERDEFENSE_ZOMBIE_PRESENTBOX_EXPRESTION,,,盒子里藏着别样的惊喜。
+TOWERDEFENSE_PLANT_WINTERMELONSHROOM_CUSTOM_1_ACCESS,,,商店购买（价格5000）
+TOWERDEFENSE_ZOMBIE_SEADEMON_EXPRESTION,,,水中精英，能召唤缠绕潜水僵尸作战。
+TOWERDEFENSE_PLANT_FIRESNOWPEA_HANDBOOK_STORY,,,"“走，去桑拿房！”“不，去冰箱！”冰火裂荚射手每天都在为去哪个房间睡觉而烦恼。
+“不过两个头烤出来的水蒸气确实适合用于桑拿房。”戴夫评价道。"
+TOWERDEFENSE_PLANT_SEANUT_NAME,Sea Nut,Sea Nut,海坚果
 TOWERDEFENSE_ZOMBIE_BALLOONCOLOUR_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]40*6 + 270[/color]
 伤害：[color=cc241d]100/s[/color]
 佩戴：[color=cc241d]多彩气球（特殊）[/color]
@@ -1184,64 +1359,91 @@ TOWERDEFENSE_ZOMBIE_BALLOONCOLOUR_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]
 每被击落一个气球，飞行移速都会加快20%
 失去全部气球后落地[/color]
 弱点：[color=441D62]仙人掌、三叶草[/color]"
-TOWERDEFENSE_ZOMBIE_BED_NAME,Bed zombie,Bed zombie,床车僵尸
-TOWERDEFENSE_PLANT_PUMPKINFIRE_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]4000[/color]
-威力：[color=cc241d]40/1.5s（靠近&火焰伤害）[/color]
-范围：[color=cc241d]自身周围一格[/color]
-特性：[color=C71585]点燃豌豆为火焰豌豆、保护植物、本格植物免疫减速与冻结[/color]
-特点：[color=cc241d]每1.5秒灼烧靠近它的僵尸，使其受到40点火焰伤害[/color]"
-TOWERDEFENSE_PLANT_THREECACTUS_HANDBOOK_STORY,,,三叶仙人掌喜欢细水长流，在他看来团队合作才是王道，再小的风聚在一起也足够吹退来袭的僵尸。只是他还要提防仙人三叶草的嘀咕。
-<!MissingKey:韧性：[color=cc241d]300[/color]>,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]1800（灰烬伤害）[/color]
-特性：[color=C71585]白天会睡觉[/color]
-特点：[color=cc241d]爆炸后残留一个弹坑，持续存在180秒[/color]"
-TOWERDEFENSE_ZOMBIE_YETIDIGGER_NAME,Yeti Digger Zombie,Yeti Digger Zombie,矿工雪人僵尸
-TOWERDEFENSE_ZOMBIE_SNORKLE_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
+TOWERDEFENSE_PLANT_SNOWSHROOM_CUSTOM_1_ACCESS,,,商店购买（价格8000）
+TOWERDEFENSE_PLANT_PEACAT_CUSTOM_1_ACCESS,,,商店购买（价格5000）
+TOWERDEFENSE_PLANT_SUNSHROOM_EXPRESTION,,,会长大的向日葵，阳光产量No.2！
+TOWERDEFENSE_PLANT_THREEPEATER_HANDBOOK_STORY,,,三线射手喜欢读书、下棋和在公园里傻坐着，他也喜欢演出，特别是现代爵士乐。“我正在寻找我生命中的另一半，”他说。三线射手最爱的数字是5。
+SHOP_NPC_TALK_POYREPLACEMENT,,,花盆替换术，能让你直接替换种植不同种类的花盆！对睡莲同样有效哦！
+TOWERDEFENSE_ZOMBIE_BUCKETHEAD_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]1100 + 270[/color]
+伤害：[color=cc241d]100/s[/color]
+佩戴：[color=cc241d]铁桶（一类）[/color]
+类型：[color=cc241d]小型僵尸[/color]
+移速：[color=cc241d]慢[/color]
+弱点：[color=441D62]磁力菇[/color]"
+<!MissingKey:特点：植物爆炸使僵尸受到伤害即视为爆炸伤害>,,,"特点：植物爆炸使僵尸受到伤害即视为爆炸伤害
+互斥：无
+惧怕：防爆门"
+TOWERDEFENSE_ZOMBIE_NEWSPAPER_EXPRESTION,,,他的报纸只能提供有限的防御。
+TOWERDEFENSE_PLANT_PRESENTBOX_HANDBOOK_STORY,,,“如你所见，我是一个盒子。”随机植物盒子说，“我里面有些种子，你可能会找到杂交种子，因为它们在里面打拳击（boxing）。至于为什么能开出玉米加农炮……”盒子迟疑了一下。“因为他是被挤出来的。”
+TOWERDEFENSE_ZOMBIE_JACKBOX_EXPRESTION,,,这只僵尸带着个会爆炸的潘多拉匣子。
+LOAD_TUTORIAL,Load tutorial,Load tutorial,加载教程
+TOWERDEFENSE_SHOVEL_DEFAULT_EXPRESTION,,,移除植物，无特殊效果。
+TOWERDEFENSE_ZOMBIE_LADDER_HANDBOOK_STORY,,,这架梯子花了他八块九毛九。
+BGM_ULTIMATE_BATTLE,Ultimate Battle,Ultimate Battle,传送带
+MAP_FRONTLAWN_NIGHT,Front Yard (Night),Front Yard (Night),前院(夜晚)
+<!MissingKey:小喷菇是免费的，不过射程很近。>,,,小喷菇是免费的，不过射程很近。
+TOWERDEFENSE_PLANT_SNOWSHROOM_HANDBOOK_STORY,,,“冬天来了，春天还会远吗？”雪花冰川菇渴望春天的到来，身为寒带地区的植物，他一年大部分时间里都生活在冰雪世界。也许他并不喜欢寒冷，因为他总会在一年中最温暖的时候拉上自己的好友出去钓鱼。其实他还是寒冰射手的启蒙老师。
+TOWERDEFENSE_PLANT_MAGNETMINE_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]1800[/color]
+范围：[color=cc241d]单格[/color]
+特点1：[color=cc241d]种下后需要5秒准备时间[/color]
+特点2：[color=cc241d]出土后僵尸触碰会爆炸，产生单格1800点伤害。若其3*3范围内存在携带金属防具的僵尸，则立即将符合条件的僵尸吸引到自身所在格子并爆炸[/color]"
+TOWERDEFENSE_PLANT_PEACAT_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+威力：[color=cc241d]20×2/1.5s[/color]
+范围：[color=cc241d]全屏追踪[/color]
+特性：[color=cc241d]两栖植物[/color]
+特点：[color=cc241d]攻击可以追踪空中僵尸[/color]"
+<!MissingKey:特点：[color=cc241d]铲掉植物时，生成一个磁力旋涡，全屏吸取僵尸铁器并销毁（优先吸取距离最近的），吸取数量为该植物价格÷50（向下取整）[/color]>,,,特点：[color=cc241d]铲掉植物时，生成一个磁力旋涡，全屏吸取僵尸铁器并销毁（优先吸取距离最近的），吸取数量为该植物价格÷50（向下取整）[/color]
+TOWERDEFENSE_PLANT_SUNPAD_CUSTOM_1_ACCESS,,,商店购买（价格5000）
+TOWERDEFENSE_ZOMBIE_NORMAL_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]270[/color]
 伤害：[color=cc241d]100/s[/color]
 佩戴：[color=cc241d]----[/color]
 类型：[color=cc241d]小型僵尸[/color]
-速度：[color=cc241d]快[/color]
-限制：[color=0000FF]只会在水上出现[/color]
-特点：[color=cc241d]潜泳以避免遭到攻击，但遇到植物时会啃咬并暴露自己[/color]"
-NPC_TALK_LEVEL1_1_TUTORIAL_1,,,你好，我的邻居。
-NPC_TALK_LEVEL2_1_TUTORIAL_4,,,多多种植你获得的小盆菇吧！
-TOWERDEFENSE_PLANT_PEACAT_CUSTOM_1_ACCESS,,,商店购买（价格5000）
-NPC_TALK_LEVEL2_1_TUTORIAL_5,,,还有什么比免费更便宜呢？祝你好运！
-NPC_TALK_LEVEL1_1_TUTORIAL_3,,,那帮僵尸还在源源不断地进攻，而你的植物却不知所踪？
-TOWERDEFENSE_PLANT_ICENUT_CUSTOM_1_STORY,,,他坚信自己有朝一日会成长，变得更加强大可靠。
-NPC_TALK_LEVEL1_1_TUTORIAL_2,,,我听说了你的情况，所以赶来了。
-TOWERDEFENSE_ZOMBIE_BALLOONCOLOUR_NAME,Colorful Balloon Zombie,Colorful Balloon Zombie,多彩气球僵尸
-NPC_TALK_LEVEL1_1_TUTORIAL_5,,,没关系！你的好邻居：疯狂戴夫，特此来帮助你了！
-NPC_TALK_LEVEL1_1_TUTORIAL_4,,,看来是埃德加那家伙在作怪。
-NPC_TALK_LEVEL2_1_TUTORIAL_1,,,现在是黑夜了，伙计！
-NPC_TALK_LEVEL1_1_TUTORIAL_7,,,这些全新的——杂交植物！
-NPC_TALK_LEVEL2_1_TUTORIAL_2,,,这意味着你不能从天上获得阳光了！
-NPC_TALK_LEVEL1_1_TUTORIAL_6,,,我要给你看看我的压箱底的好东西...
-NPC_TALK_LEVEL2_1_TUTORIAL_3,,,但这难不倒你，对吧？
-TOWERDEFENSE_PLANT_CACTUSBLOVER_NAME,CactusBlover,CactusBlover,仙人三叶草
-NPC_TALK_LEVEL1_1_TUTORIAL_9,,,来，试着种植一下吧！
-TOWERDEFENSE_SHOVEL_COLD_EXPRESTION,,,移除植物时向前发射寒冰豌豆！
-NPC_TALK_LEVEL1_1_TUTORIAL_8,,,比如这株豌豆向日葵！集合生产和攻击，为你节省一倍的草坪空间！
-TOWERDEFENSE_ZOMBIE_JALAPENO_NAME,Hot Pepper Zombie,Hot Pepper Zombie,火爆辣椒僵尸
-TOWERDEFENSE_PLANT_MELONPULTSPIKE_NAME,Melon Pult Spike,Melon Pult Spike,地刺西瓜投手
-TOWERDEFENSE_PLANT_MELONPULTSPIKE_EXPRESTION,,,攻击概率生成地刺瓜皮，对车宝具！
-<!MissingKey:墓碑开始生长!>,TOMBSTONE BEGINS TO GROW,TOMBSTONE BEGINS TO GROW,墓碑开始生长!
-TOWERDEFENSE_PLANT_SUNMINE_CUSTOM_1_NAME,,,地雷龟
-TOWERDEFENSE_ZOMBIE_BED_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]1400[/color]
-伤害：[color=cc241d]即死（碾压）[/color]
+移速：[color=cc241d]慢[/color]"
+TOWERDEFENSE_ZOMBIE_LADDER_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]500 + 500[/color]
+伤害：[color=cc241d]100/s[/color]
+佩戴：[color=cc241d]扶梯（二类）[/color]
+类型：[color=cc241d]小型僵尸[/color]
+速度：[color=cc241d]快，而后慢（放下梯子后）[/color]
+特点：[color=cc241d]放下梯子让僵尸们爬过面前的植物[/color]
+弱点：[color=441D62]穿透和磁力菇[/color]"
+MAP_BACKYARD,Back Yard (Day),Back Yard (Day),后院(白天)
+TOWERDEFENSE_PLANT_WALLNUT_HANDBOOK_STORY,,,坚果：“人们想知道，经常被僵尸啃的感觉怎样？他们不知道，我有限的感官，只能让我感到一种麻麻的感觉，像是，令人放松的背部按摩。”
+TOWERDEFENSE_PLANT_PEALILYPAD_CUSTOM_1_NAME,,,热水袋
+AWARD_COLLECTABLE_SHOVEL,You got a new shovel,You got a new shovel,你获得了一把新铲子!
+BGM_CEREBRAW,Brain War,Brain War,解迷
+TOWERDEFENSE_PLANT_HYPNOGARLIC_EXPRESTION,,,魅惑大蒜可以让僵尸改变前进的路线并将其魅惑。
+SHOP_NPC_TALK_IDLE_1,,,感谢你对杂交版的游玩和关注！如果对游戏设计有什么建议，欢迎说给我听听哦！
+SHOP_NPC_TALK_IDLE_2,,,通关遇到困难？试着买一些道具吧，适当使用道具可以让游戏更轻松哦！
+SHOP_NPC_TALK_IDLE_3,,,明码标价，童叟无欺！
+TOWERDEFENSE_ZOMBIE_SCREEN_DOOR_EXPRESTION,,,他的铁栅门是有效的盾牌。
+SHOP_NPC_TALK_IDLE_4,,,潜艇伟伟迷的花俏小玩意！24小时全天候为您服务！
+<!MissingKey:寒冰菇，能短暂的冻结屏幕上所有僵尸。>,,,寒冰菇，能短暂的冻结屏幕上所有僵尸。
+<!MissingKey:磁力铲>,Magnetic shovel,Magnetic shovel,磁力铲
+TOWERDEFENSE_ZOMBIE_DISCOFIRE_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]1100[/color]
+伤害：[color=cc241d]100/s[/color]
 佩戴：[color=cc241d]----[/color]
-类型：[color=cc241d]车类僵尸[/color]
-移速：[color=cc241d]快[/color]
-亡语：[color=cc241d]床车被破坏时，会使床上的小摔哥僵尸醒来[/color]
-弱点：[color=441D62]地刺[/color]"
-TOWERDEFENSE_PLANT_POT_EXPRESTION,,,花盆可以让你在屋顶上种植植物。
-TOWERDEFENSE_PLANT_PUFFPOT_CUSTOM_1_STORY,,,天青色等烟雨，而我在等你~
-TOWERDEFENSE_PLANT_CACTUSBLOVER_EXPRESTION,,,万箭齐发！
-LOAD_LEVEL,Load level,Load level,加载关卡
-LEVEL2_7_BROADCAST_1,,,现在是凌晨，墓碑变少了！天上开始掉落小阳光了！
-TOWERDEFENSE_PLANT_TABOODOOMSHROOM_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
-威力：[color=cc241d]无限大[/color]
-范围：[color=cc241d]以自身为圆心半径约3.5格的圆[/color]
-特点：[color=cc241d]每消灭一个僵尸，僵尸所在格留下一个坑洞[/color]"
-TOWERDEFENSE_PLANT_GARGANTUARSHROOM_EXPRESTION,,,当僵尸吃下红眼菇后，会变成一个魅惑的红眼巨人。
-TOWERDEFENSE_PLANT_SCAREDYSUNSHROOM_CUSTOM_1_NAME,,,秘制汉堡
+类型：[color=cc241d]小型僵尸[/color]
+速度：[color=cc241d]慢[/color]
+特点：[color=cc241d]免疫减速与冻结，入场后召唤4只火焰舞者僵尸，且僵尸方的豌豆经过自己会点燃成火焰豌豆[/color]"
+TOWERDEFENSE_PLANT_SNOWSHROOM_NAME,Snow Shroom,Snow Shroom,雪花寒冰菇
+TOWERDEFENSE_PLANT_ICESPEARPEA_EXPRESTION,,,原版寒冰射手的升级姿态！
+MAP_FRONTLAWN,Front Yard,Front Yard,前院(白天)
+TOWERDEFENSE_PLANT_SCAREDYSUNSHROOM_NAME,ScaredySunShroom,ScaredySunShroom,阳光胆小菇
+TOWERDEFENSE_PLANT_TANGLEKELP_HANDBOOK_STORY,,,“我是完全隐形的。”缠绕海草琢磨着，“我藏匿在水面下，没人看得到我。”尽管朋友们告诉他，他们可以清楚地看到他；缠绕海草仍坚持自己的看法。
+TOWERDEFENSE_ZOMBIE_NEWSPAPER_HANDBOOK_STORY,,,读报僵尸只差一点点就完成他的数独谜题了，难怪他会暴怒。
+TOWERDEFENSE_PLANT_GARGANTUARSHROOM_HANDBOOK_EXPRESTION,,,"韧性：[color=cc241d]300[/color]
+特性：[color=C71585]白天会睡觉[/color]
+特点：[color=cc241d]吃掉它的僵尸会变成魅惑红眼巨人，巨人锤击伤害为1800（单体）[/color]"
+TOWERDEFENSE_ZOMBIE_GARGANTUAR_HANDBOOK_STORY,,,当伽刚特尔走动的时候，大地在震颤。当他悲叹的时候，其他僵尸都为之沉默。他是僵尸们梦想成为的偶像，不过他到现在还没交到女朋友。
+TOWERDEFENSE_ZOMBIE_NUT_HANDBOOK_EXPRESTION,,,"血量：[color=cc241d]1370[/color]
+伤害：[color=cc241d]100/s[/color]
+佩戴：[color=cc241d]无[/color]
+类型：[color=cc241d]小型僵尸[/color]
+速度：[color=cc241d]慢[/color]"
+TOWERDEFENSE_PLANT_SUNMINE_CUSTOM_1_STORY,,,暗中观察.jpg
+TOWERDEFENSE_PLANT_GATLINGPOT_HANDBOOK_STORY,,,机枪花盆曾经只是个普通的花盆，直到某一天他获得了这套机枪装扮。“这是抽到的，单抽出奇迹！”他如此吹嘘道，而大家要不是看见商城里打九折的装扮，可能就信了。
+<!MissingKey:邮箱>,EMAIL,EMAIL,邮箱
+TOWERDEFENSE_PLANT_SCAREDYSUNSHROOM_HANDBOOK_STORY,,,因为害怕黑暗而让自己的脑袋发光，殊不知僵尸也被吸引过来了。
+TOWERDEFENSE_PLANT_ICETALLNUT_CUSTOM_1_NAME,,,极冰战神
+TOWERDEFENSE_ZOMBIE_JACKSON_EXPRESTION,,,舞王僵尸和人类（在世或者死去的）如有雷同，纯属巧合。

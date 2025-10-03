@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
 [ext_resource type="Script" uid="uid://bjrqg8s0h6cgy" path="res://Asset/Anime/Character/Plant/Chapter2/WinterMelonShroom/Scene/TowerDefensePlantWinterMelonShroom.gd" id="2"]
-[ext_resource type="Script" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventIceSpeedDown.gd" id="3"]
+[ext_resource type="Script" uid="uid://b7bsdfdfctvuh" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventIceSpeedDown.gd" id="3"]
 [ext_resource type="Script" uid="uid://cmqmtitj4tcd8" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventHurt.gd" id="4"]
 [ext_resource type="Resource" uid="uid://c8lp8chbk41ak" path="res://Asset/Anime/Character/Plant/Chapter2/WinterMelonShroom/Config/TowerDefensePlantWinterMelonShroom.tres" id="5"]
 [ext_resource type="PackedScene" uid="uid://dxyshcy0oo4g8" path="res://Asset/Anime/Character/Plant/Chapter2/WinterMelonShroom/WinterMelonShroom.tscn" id="6"]
@@ -49,13 +49,13 @@ lifetime_randomness = 0.38
 particle_flag_disable_z = true
 emission_shape = 1
 emission_sphere_radius = 10.0
-spread = 2.5
+spread = 1.0
 flatness = 0.552
-initial_velocity_min = 203.27
-initial_velocity_max = 635.51
+initial_velocity_min = 240.58
+initial_velocity_max = 788.5
 gravity = Vector3(0, 0, 0)
-damping_min = 4.132
-damping_max = 35.765
+damping_min = 3.199
+damping_max = 36.884
 damping_curve = SubResource("CurveTexture_rw0y7")
 scale_min = 0.6
 scale_max = 0.9
@@ -72,35 +72,27 @@ sleepAnimeClip = "Sleep"
 config = ExtResource("5")
 sprite = NodePath("SpriteGroup/TransformPoint/WinterMelonShroom")
 Custom = []
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
 
 [node name="WinterMelonShroom" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("6")]
 position = Vector2(0, -30)
-layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("../../../AdobeAnimateSlot"), null, null, null]
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("AdobeAnimateSlot"), null, null, null]
 
-[node name="ShadowSprite" parent="." index="3"]
-position = Vector2(0, 24.5)
-scale = Vector2(1.2093, 1.47222)
-
-[node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2(0, 0)
-
-[node name="AdobeAnimateSlot" type="Node2D" parent="." index="6"]
-position = Vector2(35.96, -20.15)
-rotation = 0.0436727
-scale = Vector2(0.84073, 0.760601)
-skew = -0.0436727
+[node name="AdobeAnimateSlot" type="Node2D" parent="SpriteGroup/TransformPoint/WinterMelonShroom" index="0"]
+position = Vector2(36.29, -20.3)
+rotation = 0.0109182
+scale = Vector2(0.847443, 0.753218)
+skew = -0.0109183
 script = ExtResource("7")
 followSlotId = 14
 metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
 
-[node name="Marker2D" type="Marker2D" parent="AdobeAnimateSlot" index="0"]
+[node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/WinterMelonShroom/AdobeAnimateSlot" index="0"]
 position = Vector2(-42.6892, 13.0919)
 
-[node name="FireParticles" type="GPUParticles2D" parent="AdobeAnimateSlot" index="1"]
+[node name="FireParticles" type="GPUParticles2D" parent="SpriteGroup/TransformPoint/WinterMelonShroom/AdobeAnimateSlot" index="1"]
 unique_name_in_owner = true
 z_index = 3
 position = Vector2(8.79036, 13.2048)
@@ -116,11 +108,18 @@ explosiveness = 0.4
 randomness = 0.4
 process_material = SubResource("ParticleProcessMaterial_bxw42")
 
-[node name="FireComponent" parent="." index="9" node_paths=PackedStringArray("firePosMarker") instance=ExtResource("9")]
-unique_name_in_owner = true
-firePosMarker = [NodePath("../AdobeAnimateSlot/Marker2D")]
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 24.5)
+scale = Vector2(1.2093, 1.47222)
 
-[node name="AttackComponent" parent="." index="10" node_paths=PackedStringArray("checkArea") instance=ExtResource("10")]
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+
+[node name="FireComponent" parent="." index="8" node_paths=PackedStringArray("firePosMarker") instance=ExtResource("9")]
+unique_name_in_owner = true
+firePosMarker = [NodePath("../SpriteGroup/TransformPoint/WinterMelonShroom/AdobeAnimateSlot/Marker2D")]
+
+[node name="AttackComponent" parent="." index="9" node_paths=PackedStringArray("checkArea") instance=ExtResource("10")]
 unique_name_in_owner = true
 attackType = "Default"
 checkArea = NodePath("Area2D")

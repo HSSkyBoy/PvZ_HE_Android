@@ -52,24 +52,24 @@ layerSprite = [null, null, null, null, null, null, null, null, null, null, null,
 Animation/MediaReplace/Zombie_paper_paper1.png = ExtResource("12")
 
 [node name="ZombieDuckytube" parent="SpriteGroup/TransformPoint/ZombiePaper" index="0"]
-position = Vector2(-9.9256, -39.0686)
-rotation = -0.0665735
+position = Vector2(-7.9679, -41.7032)
+rotation = -0.0256933
 Animation/LayerVisible/Zombie_duckytube_inwater = false
 
 [node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombiePaper" index="1"]
-position = Vector2(-13.0032, -41.3288)
-rotation = -0.19572
-scale = Vector2(0.799274, 0.799274)
+position = Vector2(-10.1568, -45.0223)
+rotation = -0.0299284
+scale = Vector2(0.799381, 0.799381)
 
 [node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombiePaper" index="2"]
-position = Vector2(9.39501, -1.52088)
-rotation = -0.152433
-scale = Vector2(0.69951, 0.69951)
+position = Vector2(10.0509, -4.97224)
+rotation = -0.0585504
+scale = Vector2(0.699725, 0.699725)
 
 [node name="PaperSlot" parent="SpriteGroup/TransformPoint/ZombiePaper" index="3"]
-position = Vector2(-25.8511, -0.885201)
-rotation = 0.0
-scale = Vector2(0.70163, 0.70163)
+position = Vector2(-24.9809, -6.02848)
+rotation = 0.00496467
+scale = Vector2(0.70145, 0.70145)
 
 [node name="ZombieWaterLine" parent="SpriteGroup/TransformPoint" index="1" instance=ExtResource("13")]
 visible = false

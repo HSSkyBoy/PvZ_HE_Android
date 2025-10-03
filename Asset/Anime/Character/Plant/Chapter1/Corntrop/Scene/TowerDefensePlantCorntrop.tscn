@@ -20,7 +20,6 @@ fireInterval = 1.5
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/Corntrop")
 itemLayer = 2
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 37)

@@ -22,7 +22,7 @@ script = ExtResource("1")
 
 [node name="SunSprite" parent="." node_paths=PackedStringArray("layerSprite") instance=ExtResource("2")]
 unique_name_in_owner = true
-trueFrameRate = inf
+trueFrameRate = 30.0
 layerSprite = [null, null, null, null]
 
 [node name="Light" type="PointLight2D" parent="SunSprite"]

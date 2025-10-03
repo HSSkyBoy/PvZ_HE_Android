@@ -20,13 +20,13 @@ height = 70
 light_mask = 0
 layout_mode = 3
 anchors_preset = 0
-mouse_filter = 1
+mouse_filter = 2
 script = ExtResource("1")
+showCost = false
 
 [node name="Body" type="Control" parent="."]
 unique_name_in_owner = true
 light_mask = 0
-layout_mode = 3
 anchors_preset = 0
 mouse_filter = 1
 
@@ -39,7 +39,7 @@ mouse_filter = 1
 [node name="BackgroundTexture" type="TextureRect" parent="Body/Layout"]
 unique_name_in_owner = true
 light_mask = 0
-layout_mode = 2
+layout_mode = 0
 offset_left = -24.0
 offset_top = -32.0
 offset_right = 26.0
@@ -60,7 +60,6 @@ offset_bottom = 53.0
 [node name="SpriteNode" type="Control" parent="Body/Layout/BackgroundTexture/Mask"]
 unique_name_in_owner = true
 light_mask = 0
-layout_mode = 3
 anchors_preset = 0
 
 [node name="ItemCostLabel" type="Label" parent="Body/Layout/BackgroundTexture"]

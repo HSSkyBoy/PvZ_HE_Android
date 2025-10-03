@@ -10,29 +10,29 @@
 [ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qh584"]
-size = Vector2(40.5, 90)
+size = Vector2(40.5, 64)
 
 [node name="TowerDefensePlantMaganetnut" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
 script = ExtResource("2")
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/Magnetnut")
 PreviewDamagePointPersontage = 1.0
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
 
 [node name="Magnetnut" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("4")]
 position = Vector2(0, -31)
+trueFrameRate = 30.0
 skipLastFrame = false
 layerSlot = [null, null, NodePath("AdobeAnimateSlot"), null, null, null, null]
 layerSprite = [null, null, null, null, null, null, null]
 
 [node name="AdobeAnimateSlot" type="Node2D" parent="SpriteGroup/TransformPoint/Magnetnut" index="0"]
-position = Vector2(3.53258, -45.0403)
-rotation = 0.0775877
-scale = Vector2(0.59957, 0.609943)
-skew = 0.00190794
+position = Vector2(1.99275, -46.4095)
+rotation = 0.00525164
+scale = Vector2(0.599962, 0.618749)
+skew = 0.000327349
 script = ExtResource("5")
 followSlotId = 3
 offset = Vector2(65, 60)

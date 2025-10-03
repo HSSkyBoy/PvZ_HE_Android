@@ -1,0 +1,100 @@
+[gd_scene load_steps=5 format=4 uid="uid://bm6rprgfpv8bl"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://c7f8mqvh12k31" path="res://Asset/Anime/Character/Zombie/Challenge/Backup/ZombieBackup.tres" id="2"]
+[ext_resource type="PackedScene" uid="uid://cfgdfuopusvnr" path="res://Asset/Anime/Character/Zombie/Duckytube/ZombieDuckytube.tscn" id="3"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="4"]
+
+[node name="ZombieBackup" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -80)
+useTween = false
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, null, null, null, NodePath("ArmSlot"), null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ZombieDuckytube"), null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Walk"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/Zombie_backup_stash = true
+Animation/LayerVisible/Zombie_disco_chops = true
+Animation/LayerVisible/Zombie_disco_chops1 = true
+Animation/LayerVisible/Zombie_disco_collar_overlay = true
+Animation/LayerVisible/Zombie_disco_innerarm_lower = true
+Animation/LayerVisible/Zombie_disco_innerarm_upper = true
+Animation/LayerVisible/Zombie_disco_innerfoot = true
+Animation/LayerVisible/Zombie_disco_innerhand = true
+Animation/LayerVisible/Zombie_disco_innerleg_lower = true
+Animation/LayerVisible/Zombie_disco_innerleg_upper = true
+Animation/LayerVisible/Zombie_disco_lowerbody = true
+Animation/LayerVisible/Zombie_disco_outerarm_lower = true
+Animation/LayerVisible/Zombie_disco_outerarm_upper = true
+Animation/LayerVisible/Zombie_disco_outerarm_upper1 = true
+Animation/LayerVisible/Zombie_disco_outerfoot_lower = true
+Animation/LayerVisible/Zombie_disco_outerfoot_upper = true
+Animation/LayerVisible/Zombie_disco_outerhand = true
+Animation/LayerVisible/Zombie_disco_outerleg_lower = true
+Animation/LayerVisible/Zombie_disco_outerleg_upper = true
+Animation/LayerVisible/Zombie_disco_upperbody = true
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/anim_earing = true
+Animation/LayerVisible/anim_hair = true
+Animation/LayerVisible/anim_head1 = true
+Animation/LayerVisible/anim_head2 = true
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/Zombie_backup_chops.png = null
+Animation/MediaReplace/Zombie_backup_collar_overlay.png = null
+Animation/MediaReplace/Zombie_backup_innerarm_lower.png = null
+Animation/MediaReplace/Zombie_backup_innerarm_upper.png = null
+Animation/MediaReplace/Zombie_backup_innerfoot.png = null
+Animation/MediaReplace/Zombie_backup_innerhand.png = null
+Animation/MediaReplace/Zombie_backup_innerhand_point.png = null
+Animation/MediaReplace/Zombie_backup_innerleg_lower.png = null
+Animation/MediaReplace/Zombie_backup_innerleg_upper.png = null
+Animation/MediaReplace/Zombie_backup_lowerbody.png = null
+Animation/MediaReplace/Zombie_backup_outerarm_lower.png = null
+Animation/MediaReplace/Zombie_backup_outerarm_upper.png = null
+Animation/MediaReplace/Zombie_backup_outerarm_upper_bone.png = null
+Animation/MediaReplace/Zombie_backup_outerfoot_lower.png = null
+Animation/MediaReplace/Zombie_backup_outerfoot_upper.png = null
+Animation/MediaReplace/Zombie_backup_outerhand.png = null
+Animation/MediaReplace/Zombie_backup_outerleg_lower.png = null
+Animation/MediaReplace/Zombie_backup_outerleg_upper.png = null
+Animation/MediaReplace/Zombie_backup_stash.png = null
+Animation/MediaReplace/Zombie_backup_upperbody.png = null
+Animation/MediaReplace/Zombie_dancer__head.png = null
+Animation/MediaReplace/Zombie_jaw.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="ZombieDuckytube" parent="." node_paths=PackedStringArray("parentSprite") instance=ExtResource("3")]
+visible = false
+position = Vector2(-0.7994995, -90.5829)
+rotation = -0.0001053679
+scale = Vector2(1.25, 1.25)
+offset = Vector2(-15, 55)
+offsetRotate = -0.455
+parentSprite = NodePath("..")
+Layer = 12
+
+[node name="HeadSlot" type="Node2D" parent="."]
+position = Vector2(8.745444, -87.033264)
+rotation = 0.3548601
+scale = Vector2(0.9988972, 0.9988972)
+script = ExtResource("4")
+followSlotId = 15
+offset = Vector2(25, 30)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ArmSlot" type="Node2D" parent="."]
+position = Vector2(37.209198, -35.315853)
+rotation = -0.13120599
+scale = Vector2(0.7962479, 0.7962479)
+script = ExtResource("4")
+followSlotId = 22
+offset = Vector2(10, 20)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="GroundSlot" type="Node2D" parent="."]
+position = Vector2(-40, -40)
+script = ExtResource("4")
+followSlotId = 1
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

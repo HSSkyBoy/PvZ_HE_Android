@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=4 uid="uid://dskoovkqhxy7k"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://dv7r3l8pc1nbg" path="res://Asset/Anime/Character/Plant/Cover/GatlingPot/GatlingPot.tres" id="2"]
+
+[node name="GatlingPot" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -18)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/AnimeEvents = true
+Animation/LayerVisible/GatlingPea_barrel1 = true
+Animation/LayerVisible/GatlingPea_barrel2 = true
+Animation/LayerVisible/GatlingPea_barrel3 = true
+Animation/LayerVisible/GatlingPea_barrel4 = true
+Animation/LayerVisible/GatlingPea_mouth = true
+Animation/LayerVisible/GatlingPea_mouth_overlay = true
+Animation/LayerVisible/Pot_leaf1 = true
+Animation/LayerVisible/Pot_leaf2 = true
+Animation/LayerVisible/Pot_stem = true
+"Animation/LayerVisible/上盆" = true
+"Animation/LayerVisible/下盆" = true
+"Animation/LayerVisible/头套" = true
+"Animation/LayerVisible/头套尖" = true
+"Animation/LayerVisible/眉毛" = true
+"Animation/LayerVisible/眼睛" = true
+Animation/MediaReplace/GatlingPea_barrel.png = null
+Animation/MediaReplace/GatlingPea_mouth.png = null
+Animation/MediaReplace/GatlingPea_mouth_overlay.png = null
+Animation/MediaReplace/GatlingPot_0007_8.png = null
+Animation/MediaReplace/GatlingPot_0008_7.png = null
+Animation/MediaReplace/GatlingPot_0009_6.png = null
+Animation/MediaReplace/GatlingPot_0012_3.png = null
+Animation/MediaReplace/GatlingPot_0013_2.png = null
+Animation/MediaReplace/GatlingPot_0014_1.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

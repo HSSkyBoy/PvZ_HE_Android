@@ -1,20 +1,23 @@
-[gd_resource type="Resource" script_class="TowerDefensePlantConfig" load_steps=2 format=4 uid="uid://drph1bmnpilhu"]
+[gd_resource type="Resource" script_class="TowerDefensePlantConfig" load_steps=3 format=4 uid="uid://drph1bmnpilhu"]
 
-[ext_resource type="Script" uid="uid://bqd2rkadn8h4e" path="res://Resource/TowerDefense/Character/Config/TowerDefensePlantConfig.gd" id="1"]
+[ext_resource type="Resource" uid="uid://c2ny3pufsxnqs" path="res://Asset/Anime/Character/Plant/Chapter3/Snowwood/Custom/SnowwoodCoustomData.tres" id="1"]
+[ext_resource type="Script" uid="uid://bqd2rkadn8h4e" path="res://Resource/TowerDefense/Character/Config/TowerDefensePlantConfig.gd" id="2"]
 
 [resource]
-script = ExtResource("1")
+script = ExtResource("2")
 canUsePlantfood = true
 name = "PlantSnowwood"
 hitpointsNearDeath = 0.0
 hitpoints = 300.0
+explosionHurt = -1.0
 smashHurt = -1.0
 spikeHurt = -1.0
+canDragIntoWater = true
 sleepTime = "Never"
 height = 2
 damagePointData = null
 armorData = null
-customData = null
+customData = ExtResource("1")
 ashScene = null
 homeWorld = 1
 costRise = -1
@@ -27,11 +30,11 @@ plantGridType = [2, 6, 5]
 plantGridOverrideType = 0
 collisionFlags = 1
 maskFlags = 9
-unUseBuffFlags = 3
+unUseBuffFlags = 19
 physiqueTypeFlags = 0
 elementFlags = 3
 Flag/Collision = 1
 Flag/Mask = 9
-Flag/UnUseBuff = 3
+Flag/UnUseBuff = 19
 Flag/PhysiqueType = 0
 Flag/Elemet = 3

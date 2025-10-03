@@ -184,7 +184,7 @@ texture = ExtResource("9")
 light_mask = 0
 position = Vector2(2, 7)
 trueFrameRate = 30.0
-layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, NodePath("Head"), null, null, null, null, null, null, null]
 
 [node name="ZombieNode" type="Control" parent="ChooseLayer/Choose"]
 light_mask = 0
@@ -207,7 +207,7 @@ texture = ExtResource("9")
 light_mask = 0
 position = Vector2(-8, 0)
 trueFrameRate = 30.0
-layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ConeSlot"), NodePath("BucketSlot"), null, NodePath("ScreendoorSlot"), null, null, NodePath("ArmSlot"), null, null, null, null, null]
 
 [node name="PropNode" type="Control" parent="ChooseLayer/Choose"]
 light_mask = 0

@@ -53,7 +53,6 @@ expand_mode = 1
 stretch_mode = 6
 
 [node name="GUI" type="Control" parent="."]
-layout_mode = 3
 anchors_preset = 0
 
 [node name="LevelEditorChooseLayer" type="CanvasLayer" parent="GUI"]

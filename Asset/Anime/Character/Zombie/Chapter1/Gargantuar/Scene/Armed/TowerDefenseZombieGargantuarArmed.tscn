@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=4 uid="uid://jjp1op0ovanj"]
+
+[ext_resource type="PackedScene" uid="uid://dvm768541bn0o" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/Scene/Base/TowerDefenseZombieGargantuar.tscn" id="1"]
+[ext_resource type="Script" uid="uid://oc52cj5mu51m" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/Scene/Armed/TowerDefenseZombieGargantuarArmed.gd" id="2"]
+[ext_resource type="Resource" uid="uid://dj3fevo3tq33f" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/Config/TowerDefenseZombieGargantuarArmed.tres" id="3"]
+
+[node name="TowerDefenseZombieGargantuarArmed" instance=ExtResource("1")]
+script = ExtResource("2")
+config = ExtResource("3")
+
+[node name="ZombieGargantuar" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot")]
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ImpSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieGargantuar" index="0"]
+position = Vector2(-45.1534, -89.0205)
+rotation = 0.0822891
+scale = Vector2(0.998567, 0.998567)
+
+[node name="BucketSlot" parent="SpriteGroup/TransformPoint/ZombieGargantuar" index="1"]
+position = Vector2(-41.2479, -105.216)
+rotation = 0.081486
+scale = Vector2(0.999676, 0.999676)
+
+[node name="HelmetSlot" parent="SpriteGroup/TransformPoint/ZombieGargantuar" index="2"]
+position = Vector2(-47.4701, -89.7153)
+rotation = 0.081486
+scale = Vector2(0.999676, 0.999676)
+
+[node name="ScreenDoorSlot" parent="SpriteGroup/TransformPoint/ZombieGargantuar" index="3"]
+position = Vector2(-75.904, -42.2665)
+rotation = 0.349064
+scale = Vector2(0.999801, 0.999801)
+
+[node name="ImpSlot" parent="SpriteGroup/TransformPoint/ZombieGargantuar" index="4"]
+position = Vector2(47.722, -132.954)
+scale = Vector2(0.997366, 0.997366)
+
+[node name="GroundSlot" parent="SpriteGroup/TransformPoint/ZombieGargantuar" index="5"]
+position = Vector2(-65.02, -10)
+
+[editable path="SpriteGroup/TransformPoint/ZombieGargantuar"]

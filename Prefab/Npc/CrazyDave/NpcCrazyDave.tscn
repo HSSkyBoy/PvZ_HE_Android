@@ -9,12 +9,10 @@
 script = ExtResource("2")
 sprite = NodePath("CrazyDave")
 
-[node name="CrazyDave" parent="." index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("3")]
+[node name="CrazyDave" parent="." index="0" instance=ExtResource("3")]
 unique_name_in_owner = true
 light_mask = 0
 timeScale = 0.8
-layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
-layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 Animation/Clip = "IdleHanding"
 
 [node name="HandSlot" type="Node2D" parent="CrazyDave" index="0"]

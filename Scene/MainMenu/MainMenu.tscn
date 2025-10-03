@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ciums54dnk3w3" path="res://Asset/Texture/GUI/MainMenu/SelectorScreenDiyButton.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://ixtj31h63ev" path="res://Asset/Texture/GUI/MainMenu/SelectorScreenDiyButtonPress.png" id="6"]
 [ext_resource type="Texture2D" uid="uid://c3mkwcs83amse" path="res://Asset/Texture/GUI/MainMenu/SelectorScreenDiyButtonLight.png" id="7"]
-[ext_resource type="Script" uid="uid://bkksyrh6so0vp" path="res://Extends/Sprite2D/Sprite2DAnime.gd" id="8"]
+[ext_resource type="Script" path="res://Extends/Sprite2D/Sprite2DAnime.gd" id="8"]
 [ext_resource type="Texture2D" uid="uid://bqdu5ua1oig1a" path="res://Asset/Texture/GUI/MainMenu/SelectorScreenDiyButtonText.png" id="9"]
 [ext_resource type="Script" uid="uid://osivlg58el4m" path="res://Extends/Sprite2D/Sprite2DEffect.gd" id="10"]
 [ext_resource type="Texture2D" uid="uid://cvmt5xivacv3h" path="res://Asset/Texture/GUI/MainMenu/SelectorScreenShadowChallenge.png" id="11"]
@@ -405,12 +405,12 @@ texture_hover = ExtResource("6")
 texture = ExtResource("7")
 centered = false
 hframes = 5
-frame = 2
+frame = 3
 script = ExtResource("8")
 fps = 6.0
 
 [node name="DiyLightSprite2" type="Sprite2D" parent="Background/MenuTexture/DiyButton"]
-modulate = Color(1, 1, 1, 0.397556)
+modulate = Color(1, 1, 1, 0.343871)
 texture = ExtResource("9")
 centered = false
 script = ExtResource("10")
@@ -452,14 +452,12 @@ expand_mode = 1
 [node name="ChallengeButton" type="TextureButton" parent="Background/MenuTexture"]
 unique_name_in_owner = true
 process_mode = 1
-modulate = Color(0.564962, 0.564962, 0.564962, 1)
 layout_mode = 0
 offset_left = 330.0
 offset_top = 150.0
 offset_right = 643.0
 offset_bottom = 315.0
 mouse_default_cursor_shape = 2
-disabled = true
 texture_normal = ExtResource("16")
 texture_pressed = ExtResource("17")
 texture_hover = ExtResource("17")

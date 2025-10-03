@@ -56,7 +56,7 @@ func Export() -> Dictionary:
     }
 
 func GetProperty() -> Dictionary:
-    var data = super.GetProperty()
+    var data = super .GetProperty()
     data["随机创建墓碑"] = {
         "数量": {
             "Object": self, 

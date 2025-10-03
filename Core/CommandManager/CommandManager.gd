@@ -94,11 +94,15 @@ func LoadLevelButtonPressed() -> void :
             if selectedPaths.size() > 0:
                 match selectedPaths[0].get_extension():
                     "json":
-                        var json = load(selectedPaths[0])
+                        var file = FileAccess.open(selectedPaths[0], FileAccess.READ)
+                        var content = file.get_as_text()
+                        var json = JSON.new()
+                        json.parse(content, true)
                         var config: TowerDefenseLevelConfig = TowerDefenseLevelConfig.new()
                         config.data = json
                         config.Init()
-                        TowerDefenseManager.currentLevelConfig = config.duplicate(true)
+                        json = null
+                        TowerDefenseManager.currentLevelConfig = config.duplicate_deep()
                         guiLayer.visible = false
                         get_tree().paused = guiLayer.visible
                         Global.enterLevelMode = "LoadLevel"
@@ -107,7 +111,7 @@ func LoadLevelButtonPressed() -> void :
                     "tres":
                         var res = load(selectedPaths[0])
                         if res is TowerDefenseLevelConfig:
-                            TowerDefenseManager.currentLevelConfig = res.duplicate(true)
+                            TowerDefenseManager.currentLevelConfig = res.duplicate_deep()
                             guiLayer.visible = false
                             get_tree().paused = guiLayer.visible
                             Global.enterLevelMode = "LoadLevel"

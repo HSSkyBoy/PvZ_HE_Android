@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharacterCustomData" load_steps=3 format=4 uid="uid://yqcm242vq82i"]
+
+[ext_resource type="Resource" uid="uid://bbb0xhsvrro27" path="res://Asset/Anime/Character/Plant/Chapter2/GargantuarShroom/Custom/Config/GargantuarShroomCustom0.tres" id="1"]
+[ext_resource type="Script" uid="uid://onv5rieax7m5" path="res://Resource/General/Character/Costom/CharacterCustomData.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+customList = [ExtResource("1")]
+customDictionary = {
+"Custom0": {
+"Close": ["Layer 1", "Layer 2", "sleep"],
+"Config": ExtResource("1"),
+"Open": ["skin1_1", "skin1_2", "skin1_3", "skin2", "skin3"]
+}
+}
+fliterOpenAll = ["skin1_1", "skin1_2", "skin1_3", "skin2", "skin3"]
+fliterCloseAll = ["Layer 1", "Layer 2", "sleep"]
+metadata/_custom_type_script = "uid://onv5rieax7m5"

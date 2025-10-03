@@ -44,4 +44,8 @@ func Export() -> Dictionary:
     }
     if is_instance_valid(override):
         data["Override"] = override.Export()
+    for event: TowerDefenseCharacterEventBase in spawnEvent:
+        data["SpawnEvent"].append(event.Export())
+    for event: TowerDefenseCharacterEventBase in dieEvent:
+        data["DieEvent"].append(event.Export())
     return data

@@ -66,8 +66,11 @@ func PacketListChoose(_packetList: Array) -> void :
     AudioManager.AudioPlay("PacketPick", AudioManagerEnum.TYPE.SFX)
     for node in animeNode.get_children():
         node.queue_free()
-    for packetName: String in _packetList:
-        PacketNameChoose(packetName)
+    for packetConfig in _packetList:
+        if packetConfig is TowerDefenseLevelPacketConfig:
+            PacketNameChoose(packetConfig.packetName)
+        elif typeof(packetConfig) == TYPE_STRING:
+            PacketNameChoose(packetConfig)
 
 func CreateAnime(config, pos: Vector2) -> void :
     var animePacket: TowerDefenseInGamePacketShow = TowerDefenseManager.CreatePacketShow()

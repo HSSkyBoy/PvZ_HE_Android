@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=4 uid="uid://b3d6jaa3dewca"]
+
+[ext_resource type="PackedScene" uid="uid://b3qti1abse28p" path="res://Asset/Anime/Character/Zombie/Chapter3/Dolphinrider/Sprite/Base/ZombieDolphinrider.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cslbd7sig82dx" path="res://Asset/Anime/Character/Zombie/Chapter3/Dolphinrider/Sprite/GatlingPea/ZombieDolphinriderGatlingPea.gd" id="2"]
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="3"]
+[ext_resource type="Resource" uid="uid://cm21ws1v7hj7m" path="res://Asset/Anime/Character/Plant/Cover/GatlingPea/GatlingPea.tres" id="4"]
+
+[node name="ZombieDolphinriderGatlingPea" instance=ExtResource("1")]
+script = ExtResource("2")
+Animation/LayerVisible/anim_head1 = false
+Animation/LayerVisible/anim_head2 = false
+
+[node name="Head" type="Node2D" parent="." index="0" node_paths=PackedStringArray("layerSlot", "layerSprite", "parentSprite")]
+unique_name_in_owner = true
+position = Vector2(-46.17, -60.86)
+rotation = -0.341247
+scale = Vector2(-1, 1)
+script = ExtResource("3")
+flashAnimeData = ExtResource("4")
+offset = Vector2(-58, -7)
+offsetRotate = -0.25
+useTween = false
+skipLastFrame = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+parentSprite = NodePath("..")
+Animation/Clip = "HeadIdle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/AnimeEvents = false
+Animation/LayerVisible/GatlingPea_barrel1 = true
+Animation/LayerVisible/GatlingPea_barrel2 = true
+Animation/LayerVisible/GatlingPea_barrel3 = true
+Animation/LayerVisible/GatlingPea_barrel4 = true
+Animation/LayerVisible/GatlingPea_helmet = true
+Animation/LayerVisible/GatlingPea_mouth = true
+Animation/LayerVisible/GatlingPea_mouth_overlay = true
+Animation/LayerVisible/PeaShooter_eyebrow = true
+Animation/LayerVisible/anim_face = true
+Animation/LayerVisible/anim_idle = false
+Animation/LayerVisible/anim_stem = false
+Animation/LayerVisible/backleaf = false
+Animation/LayerVisible/backleaf_left_tip = false
+Animation/LayerVisible/backleaf_right_tip = false
+Animation/LayerVisible/frontleaf = false
+Animation/LayerVisible/frontleaf_right_tip = false
+Animation/LayerVisible/frontleaf_tip_left = false
+Animation/LayerVisible/idle_shoot_blink = false
+Animation/LayerVisible/stalk_bottom = false
+Animation/LayerVisible/stalk_top = false
+Animation/MediaReplace/GatlingPea_barrel.png = null
+Animation/MediaReplace/GatlingPea_blink1.png = null
+Animation/MediaReplace/GatlingPea_blink2.png = null
+Animation/MediaReplace/GatlingPea_head.png = null
+Animation/MediaReplace/GatlingPea_helmet.png = null
+Animation/MediaReplace/GatlingPea_mouth.png = null
+Animation/MediaReplace/GatlingPea_mouth_overlay.png = null
+Animation/MediaReplace/PeaShooter_backleaf.png = null
+Animation/MediaReplace/PeaShooter_backleaf_lefttip.png = null
+Animation/MediaReplace/PeaShooter_backleaf_righttip.png = null
+Animation/MediaReplace/PeaShooter_eyebrow.png = null
+Animation/MediaReplace/PeaShooter_frontleaf.png = null
+Animation/MediaReplace/PeaShooter_frontleaf_lefttip.png = null
+Animation/MediaReplace/PeaShooter_frontleaf_righttip.png = null
+Animation/MediaReplace/PeaShooter_stalk_bottom.png = null
+Animation/MediaReplace/PeaShooter_stalk_top.png = null
+Animation/MediaReplace/locator.png = null
+Layer = 19
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="HeadSlot" parent="." index="1"]
+position = Vector2(-24.3693, -41.9788)
+rotation = -0.0912465
+scale = Vector2(0.799583, 0.799583)
+
+[node name="ArmSlot" parent="." index="2"]
+position = Vector2(18.7168, -9.15782)
+rotation = -0.0771209
+scale = Vector2(0.799382, 0.799382)

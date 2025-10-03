@@ -1,0 +1,94 @@
+[gd_scene load_steps=4 format=4 uid="uid://dwry67v3r3nod"]
+
+[ext_resource type="Script" uid="uid://r4p3t7ooago2" path="res://Asset/Anime/Character/Plant/Cover/PumpkinFireIce/PumpkinFireIceSprite.gd" id="1"]
+[ext_resource type="Resource" uid="uid://b6byy6o54rg72" path="res://Asset/Anime/Character/Plant/Cover/PumpkinFireIce/PumpkinFireIce.tres" id="2"]
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="3"]
+
+[node name="PumpkinFireIce" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/Pumpkin_back = false
+Animation/LayerVisible/Pumpkin_front = true
+"Animation/LayerVisible/图层_11  复制 2" = true
+"Animation/LayerVisible/图层_11 复制" = true
+"Animation/LayerVisible/图层_12" = true
+"Animation/LayerVisible/图层_12 复制" = true
+Animation/MediaReplace/000016.png = null
+Animation/MediaReplace/000017.png = null
+Animation/MediaReplace/000018.png = null
+Animation/MediaReplace/000019.png = null
+Animation/MediaReplace/000020.png = null
+Animation/MediaReplace/000021.png = null
+Animation/MediaReplace/000022.png = null
+Animation/MediaReplace/000023.png = null
+Animation/MediaReplace/155_16.png = null
+Animation/MediaReplace/155_17.png = null
+Animation/MediaReplace/155_18.png = null
+Animation/MediaReplace/155_19.png = null
+Animation/MediaReplace/155_20.png = null
+Animation/MediaReplace/155_21.png = null
+Animation/MediaReplace/155_22.png = null
+Animation/MediaReplace/155_23.png = null
+Animation/MediaReplace/155_24.png = null
+Animation/MediaReplace/155_25.png = null
+Animation/MediaReplace/155_26.png = null
+Animation/MediaReplace/155_27.png = null
+Animation/MediaReplace/155_28.png = null
+Animation/MediaReplace/155_29.png = null
+Animation/MediaReplace/155_30.png = null
+Animation/MediaReplace/PumpkinF_backBlue.png = null
+Animation/MediaReplace/PumpkinF_frontBlue.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="Node2D" type="Node2D" parent="."]
+show_behind_parent = true
+
+[node name="Back" type="Node2D" parent="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+unique_name_in_owner = true
+show_behind_parent = true
+script = ExtResource("3")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/Pumpkin_back = true
+Animation/LayerVisible/Pumpkin_front = false
+"Animation/LayerVisible/图层_11  复制 2" = false
+"Animation/LayerVisible/图层_11 复制" = false
+"Animation/LayerVisible/图层_12" = false
+"Animation/LayerVisible/图层_12 复制" = false
+Animation/MediaReplace/000016.png = null
+Animation/MediaReplace/000017.png = null
+Animation/MediaReplace/000018.png = null
+Animation/MediaReplace/000019.png = null
+Animation/MediaReplace/000020.png = null
+Animation/MediaReplace/000021.png = null
+Animation/MediaReplace/000022.png = null
+Animation/MediaReplace/000023.png = null
+Animation/MediaReplace/155_16.png = null
+Animation/MediaReplace/155_17.png = null
+Animation/MediaReplace/155_18.png = null
+Animation/MediaReplace/155_19.png = null
+Animation/MediaReplace/155_20.png = null
+Animation/MediaReplace/155_21.png = null
+Animation/MediaReplace/155_22.png = null
+Animation/MediaReplace/155_23.png = null
+Animation/MediaReplace/155_24.png = null
+Animation/MediaReplace/155_25.png = null
+Animation/MediaReplace/155_26.png = null
+Animation/MediaReplace/155_27.png = null
+Animation/MediaReplace/155_28.png = null
+Animation/MediaReplace/155_29.png = null
+Animation/MediaReplace/155_30.png = null
+Animation/MediaReplace/PumpkinF_backBlue.png = null
+Animation/MediaReplace/PumpkinF_frontBlue.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

@@ -18,12 +18,12 @@ class_name TowerDefenseZombieGargantuarBase extends TowerDefenseZombie
 var impThrowFlag: bool = false
 
 func IdleProcessing(delta: float) -> void :
-    super.IdleProcessing(delta)
+    super .IdleProcessing(delta)
     if impThrowFlag:
         Fire()
 
 func WalkProcessing(delta: float) -> void :
-    super.WalkProcessing(delta)
+    super .WalkProcessing(delta)
     if impThrowFlag:
         Fire()
 
@@ -50,7 +50,7 @@ func Fire():
 
 @warning_ignore("unused_parameter")
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         attackAnimeClip:
             if !attackComponent.CanAttack():
@@ -62,7 +62,7 @@ func AnimeCompleted(clip: String) -> void :
 
 @warning_ignore("unused_parameter")
 func AnimeEvent(command: String, argument: Variant) -> void :
-    super.AnimeEvent(command, argument)
+    super .AnimeEvent(command, argument)
     match command:
         smashAnimeEvent:
             ViewManager.CameraShake(Vector2(randf_range(-1, 1), randf_range(-1, 1)), 2.0, 0.05, 4)
@@ -73,7 +73,7 @@ func AnimeEvent(command: String, argument: Variant) -> void :
             ImpSpawn()
 
 func DamagePointReach(damangePointName: String):
-    super.DamagePointReach(damangePointName)
+    super .DamagePointReach(damangePointName)
     match damangePointName:
         impThrowDamagePointName:
             var mapControl: TowerDefenseMapControl = TowerDefenseManager.GetMapControl()
@@ -88,16 +88,18 @@ func ImpFliterSet(open: bool = false):
 
 func ImpSpawn():
     var impConfig: TowerDefensePacketConfig = TowerDefenseManager.GetPacketConfig(impName)
-    var height: float = GetGroundHeight(impSpawnSlot.global_position.y)
+    var height: float = GetGroundHeight(impSpawnSlot.global_position.y) - groundHeight
     var imp: TowerDefenseZombieImpBase = impConfig.Create(Vector2(impSpawnSlot.global_position.x, global_position.y), gridPos, height) as TowerDefenseZombieImpBase
-    imp.ySpeed = -120.0
+    imp.ySpeed = -60.0
     imp.throw = true
     var characterNode: Node2D = TowerDefenseManager.GetCharacterNode()
     characterNode.add_child(imp)
+    imp.set_deferred("instance:hitpointScale", instance.hitpointScale)
+    imp.set_deferred("scale", scale)
     if instance.hypnoses:
         imp.Hypnoses()
     var landPosX: float = randf_range(TowerDefenseManager.GetMapCellPos(Vector2(3, 0)).x, TowerDefenseManager.GetMapCellPos(Vector2(5, 0)).x)
     var tween = create_tween()
     tween.set_ease(Tween.EASE_OUT)
-    tween.set_trans(Tween.TRANS_LINEAR)
+    tween.set_trans(Tween.TRANS_QUAD)
     tween.tween_property(imp, "global_position:x", landPosX, imp.GetFallTime())

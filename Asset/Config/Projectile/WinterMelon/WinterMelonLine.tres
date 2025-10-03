@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="TowerDefenseProjectileConfig" load_steps=6 format=4 uid="uid://b0gxmn1gqr3iu"]
 
-[ext_resource type="Script" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventIceSpeedDown.gd" id="1"]
+[ext_resource type="Script" uid="uid://b7bsdfdfctvuh" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventIceSpeedDown.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://x8go376ra0lr" path="res://Asset/Texture/TowerDefense/Projectile/WinterMelon/ProjectileWinterMelon.tscn" id="2"]
 [ext_resource type="Script" uid="uid://b7ddnv74g0463" path="res://Resource/TowerDefense/Projectile/TowerDefenseProjectileConfig.gd" id="3"]
 [ext_resource type="PackedScene" uid="uid://cyckg6uoamlaq" path="res://Prefab/Particles/Splats/WinterMelonSplats/WinterMelonSplats.tscn" id="4"]

@@ -47,7 +47,7 @@ func Refresh() -> void :
     if is_instance_valid(dieDownTimer):
         dieDownTimer.start()
 
-
+    autoCollect = GameSaveManager.GetFeatureValue("SunCollect")
 
 
 
@@ -91,8 +91,6 @@ func _input(event: InputEvent) -> void :
 
 @warning_ignore("unused_parameter")
 func _physics_process(delta: float) -> void :
-    if autoCollect:
-        return
 
 
 
@@ -142,15 +140,18 @@ func Collection() -> void :
 func DieDown() -> void :
     if isCollect:
         return
-    moveComponent.MoveClear()
-    remove_from_group("Sun")
-    die = true
-    var tween = create_tween()
-    tween.set_ease(Tween.EASE_OUT)
-    tween.set_trans(Tween.TRANS_CUBIC)
-    tween.tween_property(sprite, "modulate:a", 0.0, 0.25)
-    await tween.finished
-    Destroy()
+    if !autoCollect:
+        moveComponent.MoveClear()
+        remove_from_group("Sun")
+        die = true
+        var tween = create_tween()
+        tween.set_ease(Tween.EASE_OUT)
+        tween.set_trans(Tween.TRANS_CUBIC)
+        tween.tween_property(sprite, "modulate:a", 0.0, 0.25)
+        await tween.finished
+        Destroy()
+    else:
+        Collection()
 
 func Destroy() -> void :
     ObjectManager.PoolPush(ObjectManagerConfig.OBJECT.SUN_JALAPENO, self)

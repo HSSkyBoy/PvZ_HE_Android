@@ -31,7 +31,6 @@ eventList = [SubResource("Resource_hs6c2")]
 allEventList = [SubResource("Resource_6upry")]
 config = ExtResource("6")
 sprite = NodePath("SpriteGroup/TransformPoint/Jalapeno")
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)

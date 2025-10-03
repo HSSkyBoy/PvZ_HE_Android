@@ -14,13 +14,14 @@ var hitLineSave: int = -1
 var coinNum: int = 0
 
 func _ready() -> void :
-    super._ready()
+    super ._ready()
     hitEvent.duplicate(true)
 
 func _physics_process(delta: float) -> void :
     if Engine.is_editor_hint():
         return
-    super._physics_process(delta)
+    saveShadowPosition.y = global_position.y + 30
+    super ._physics_process(delta)
     if !is_instance_valid(TowerDefenseManager.currentControl) || !TowerDefenseManager.currentControl.isGameRunning:
         moveComponent.moveScale = 0.0
     else:
@@ -29,8 +30,11 @@ func _physics_process(delta: float) -> void :
         Destroy()
 
     if TowerDefenseMapControl.instance:
-        var cell = TowerDefenseManager.GetMapCell(gridPos)
         if is_instance_valid(cell):
+            var cellPos: Vector2 = TowerDefenseManager.GetMapCellPos(gridPos)
+            var gridSize: Vector2 = TowerDefenseManager.GetMapGridSize()
+            var offset: Vector2 = global_position - cellPos
+            cellPercentage = offset.x / gridSize.x
             inWater = cell.IsWater()
         else:
             inWater = false
@@ -42,7 +46,7 @@ func IdleEntered() -> void :
 
 @warning_ignore("unused_parameter")
 func IdleProcessing(delta: float) -> void :
-    super.IdleProcessing(delta)
+    super .IdleProcessing(delta)
     moveComponent.moveScale = timeScale
     var up: float = TowerDefenseManager.GetMapGroundUp()
     var down: float = TowerDefenseManager.GetMapGroundDown()
@@ -56,7 +60,7 @@ func IdleProcessing(delta: float) -> void :
         ChangeSpeed()
 
 func IdleExited() -> void :
-    super.IdleExited()
+    super .IdleExited()
 
 func HitCheck(area: Area2D) -> void :
     if Global.isEditor && SceneManager.currentScene == "LevelEditorStage":
@@ -122,6 +126,6 @@ func CoinFall(character: TowerDefenseCharacter, num: int) -> void :
         num -= 10
 
 func InWater() -> void :
-    super.InWater()
+    super .InWater()
     CreateSplash()
     Destroy()

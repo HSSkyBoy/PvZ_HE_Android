@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=4 uid="uid://b1fqvgvs57o5o"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://b5bugebfpn15q" path="res://Asset/Anime/Projectile/IceFireCyber/IceFireCyber.tres" id="2"]
+
+[node name="IceFireCyber" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/FirePea = true
+Animation/LayerVisible/FirePea_spark1 = true
+Animation/LayerVisible/FirePea_spark2 = true
+Animation/LayerVisible/FirePea_spark3 = true
+Animation/LayerVisible/flame1 = true
+Animation/LayerVisible/flame2 = true
+Animation/MediaReplace/CyberFireB.png = null
+Animation/MediaReplace/CyberFireB_flame.png = null
+Animation/MediaReplace/CyberFireB_spark.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

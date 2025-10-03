@@ -5,7 +5,7 @@ var head: bool = true
 
 @warning_ignore("unused_parameter")
 func _physics_process(delta: float) -> void :
-    super._physics_process(delta)
+    super ._physics_process(delta)
     if !head:
         return
     if propeller.is_node_ready():
@@ -13,7 +13,7 @@ func _physics_process(delta: float) -> void :
         propeller.light_mask = light_mask
 
 func ResetAnimation() -> void :
-    super.ResetAnimation()
+    super .ResetAnimation()
     if !head:
         return
     propeller.ResetAnimation()

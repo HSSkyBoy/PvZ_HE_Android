@@ -105,3 +105,4 @@ func CollectionButtonToggled(toggledOn: bool) -> void :
                 break
     myCollectionData["Level"] = myCollectionList
     GameSaveManager.SetKeyValue("OnlineMyCollection", myCollectionData)
+    GameSaveManager.Save()

@@ -47,20 +47,22 @@ position = Vector2(12, 33)
 
 [node name="ZombieShadowBlack" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("11")]
 position = Vector2(-12, -33)
-layerSlot = [NodePath("GroundSlot"), null, null, null, null, NodePath("HeadSlot"), null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ArmSlot"), null, null, null]
-layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ZombieDuckytube"), null, null, null, null, null, null, null]
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 
 [node name="ZombieDuckytube" parent="SpriteGroup/TransformPoint/ZombieShadowBlack" index="0"]
-position = Vector2(8.9343, -24.7971)
-rotation = -0.0300424
+position = Vector2(8.9429, -24.4714)
+rotation = -0.0375529
 
 [node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieShadowBlack" index="1"]
-position = Vector2(-14.3789, -46.1718)
+position = Vector2(-14.8714, -44.8694)
+rotation = -0.0582365
+scale = Vector2(0.799837, 0.799837)
 
 [node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieShadowBlack" index="2"]
-position = Vector2(4.37786, 1.87722)
-rotation = -0.0527881
-scale = Vector2(0.79979, 0.79979)
+position = Vector2(4.20145, 1.95872)
+rotation = -0.0527508
+scale = Vector2(0.799779, 0.799779)
 
 [node name="ZombieWaterLine" parent="SpriteGroup/TransformPoint" index="1" instance=ExtResource("12")]
 visible = false

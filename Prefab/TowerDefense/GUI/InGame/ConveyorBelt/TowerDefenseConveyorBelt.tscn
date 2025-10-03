@@ -93,7 +93,6 @@ texture = ExtResource("4")
 [node name="PacketContainer" type="Control" parent="PCControl/SubViewportContainer/SubViewport/ScaleNode"]
 unique_name_in_owner = true
 light_mask = 0
-layout_mode = 3
 anchors_preset = 0
 offset_left = 13.0
 offset_top = 34.0
@@ -167,7 +166,6 @@ texture = ExtResource("4")
 [node name="MobilePacketContainer1" type="Control" parent="MobileControl/HBoxContainer/MobileConveyorBelt1/SubViewportContainer/SubViewport/ScaleNode"]
 unique_name_in_owner = true
 light_mask = 0
-layout_mode = 3
 anchors_preset = 0
 offset_left = 49.0
 offset_top = 16.0
@@ -230,7 +228,6 @@ texture = ExtResource("4")
 [node name="MobilePacketContainer2" type="Control" parent="MobileControl/HBoxContainer/MobileConveyorBelt2/SubViewportContainer/SubViewport/ScaleNode"]
 unique_name_in_owner = true
 light_mask = 0
-layout_mode = 3
 anchors_preset = 0
 offset_left = 49.0
 offset_top = 16.0

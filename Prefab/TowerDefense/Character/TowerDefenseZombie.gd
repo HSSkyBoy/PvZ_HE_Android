@@ -26,19 +26,37 @@ const ZOMBIE_HEAD_GROSSOUT = preload("uid://bbidqxovk4j7y")
 
 @export var waterHeightPersontage: float = 0.75
 @export var waterHeight: float = 35
-var isGarlic: bool = false
+var isPause: bool = false:
+    set(_isPause):
+        isPause = _isPause
+        if isPause:
+            sprite.pause = true
+            state.process_mode = Node.PROCESS_MODE_DISABLED
+            hitBox.process_mode = Node.PROCESS_MODE_DISABLED
+            set_physics_process(false)
+        else:
+            sprite.pause = false
+            state.process_mode = Node.PROCESS_MODE_INHERIT
+            hitBox.process_mode = Node.PROCESS_MODE_INHERIT
+            set_physics_process(true)
 
+var isGarlic: bool = false
+var isChangeLine: bool = false
 var inWaterLine: bool = false
 var inSwimPlay: bool = false
 var inGround: bool = false
 var onLadder: bool = false
 var startAttack: bool = false
 
+var rect: Rect2
+var groundRight: float
+
 func _ready() -> void :
     if Engine.is_editor_hint():
         return
-    super._ready()
-
+    super ._ready()
+    rect = get_viewport().get_visible_rect()
+    groundRight = TowerDefenseManager.GetMapGroundRight()
     timeScale += randf_range(-0.1, 0.1)
     add_to_group("Zombie", true)
     walkSpeedScale += walkSpeedScale * randf_range(-0.1, 0.1)
@@ -53,44 +71,48 @@ func _ready() -> void :
 func _physics_process(delta: float) -> void :
     if Engine.is_editor_hint():
         return
-    super._physics_process(delta)
+    super ._physics_process(delta)
     if TowerDefenseMapControl.instance:
-        var cell = TowerDefenseManager.GetMapCell(gridPos)
         if is_instance_valid(cell):
-            inWater = cell.IsWater() && !instance.collisionFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE
-            onLadder = is_instance_valid(cell.characterLadder) && config.physique < TowerDefenseEnum.ZOMBIE_PHYSIQUE.HUGE && scale.x > 0.0
-            if onLadder:
-                var cellPos: Vector2 = TowerDefenseManager.GetMapCellPos(gridPos)
-                var gridSize: Vector2 = TowerDefenseManager.GetMapGridSize()
-                var offset: Vector2 = global_position - cellPos
-                var percentage: float = offset.x / gridSize.x
-                if percentage > 0.5:
-                    groundHeight = lerpf(groundHeight, 60, 2.0 * delta)
-                else:
-                    groundHeight = lerpf(groundHeight, 0, 2.0 * delta)
-            elif !inWater:
-                groundHeight = lerpf(groundHeight, 0, 2.0 * delta)
+            var cellPos: Vector2 = TowerDefenseManager.GetMapCellPos(gridPos)
+            var gridSize: Vector2 = TowerDefenseManager.GetMapGridSize()
+            var offset: Vector2 = global_position - cellPos
+            cellPercentage = offset.x / gridSize.x
+            onLadder = (instance.maskFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.GROUND_CHARACTRE) && is_instance_valid(cell.characterLadder) && config.physique < TowerDefenseEnum.ZOMBIE_PHYSIQUE.HUGE && scale.x > 0.0
+            inWater = cell.IsWater() && !(instance.maskFlags & TowerDefenseEnum.CHARACTER_COLLISION_FLAGS.OFF_GROUND_CHARACTRE)
+            if inGame:
+                if !isPause:
+                    if onLadder:
+                        if cellPercentage > 0.5:
+                            groundHeight = lerpf(groundHeight, 60, 2.0 * delta)
+                        else:
+                            groundHeight = lerpf(groundHeight, 0, 2.0 * delta)
+                    else:
+                        if !inWater:
+                            groundHeight = lerpf(groundHeight, cell.GetGroundHeight(cellPercentage), 2.0 * delta)
+                        else:
+                            groundHeight = lerpf(groundHeight, - waterHeight, 2.0 * delta)
         else:
             inWater = false
     if !inGround:
-        if global_position.x < TowerDefenseManager.GetMapGroundRight() + 20:
+        if global_position.x < groundRight + 150:
             inGround = true
             if inGame:
                 await get_tree().create_timer(randf_range(0.5, 3.0), false).timeout
                 AudioManager.AudioPlay(groan, AudioManagerEnum.TYPE.SFX)
     if scale.x < 0:
-        if global_position.x > TowerDefenseManager.GetMapGroundRight() + 60:
+        if global_position.x > rect.size.x:
             Destroy()
     showHealthComponent.alive = GameSaveManager.GetConfigValue("ShowZombieHealth")
 
 
 
 func IdleEntered() -> void :
-    super.IdleEntered()
+    super .IdleEntered()
 
 @warning_ignore("unused_parameter")
 func IdleProcessing(delta: float) -> void :
-    super.IdleProcessing(delta)
+    super .IdleProcessing(delta)
     if isRise:
         return
     sprite.timeScale = timeScale
@@ -98,7 +120,7 @@ func IdleProcessing(delta: float) -> void :
         Attack()
 
 func IdleExited() -> void :
-    super.IdleExited()
+    super .IdleExited()
 
 func GarlicEntered() -> void :
     pass
@@ -119,12 +141,17 @@ func WalkEntered() -> void :
         else:
             sprite.SetAnimation(swimAnimeClip, true, 0.2)
     else:
-        sprite.SetAnimation(walkAnimeClip, true, 0.2)
+        if outFromWater:
+            outFromWater = false
+            sprite.SetAnimation(walkAnimeClip, true, 0.0)
+        else:
+            sprite.SetAnimation(walkAnimeClip, true, 0.2)
+    await get_tree().create_timer(0.1).timeout
     groundMoveComponent.alive = true
 
 @warning_ignore("unused_parameter")
 func WalkProcessing(delta: float) -> void :
-    if global_position.x > TowerDefenseManager.GetMapGroundRight():
+    if global_position.x > groundRight:
         sprite.timeScale = timeScale * walkSpeedScale * 2.0
     else:
         sprite.timeScale = timeScale * walkSpeedScale
@@ -150,13 +177,19 @@ func AttackProcessing(delta: float) -> void :
         Walk()
     else:
         if startAttack && !nearDie && !sprite.pause && useAttackDps:
-            attackComponent.AttackDps(delta, config.attack)
+            attackComponent.AttackDps(delta * 1.5, config.attack)
     sprite.timeScale = timeScale * 2.0
 
 func AttackExited() -> void :
     pass
 
 func DieEntered() -> void :
+    if !die:
+        HitpointsEmpty()
+        die = true
+    if !nearDie:
+        HitpointsNearDie()
+        nearDie = true
     if camp == TowerDefenseEnum.CHARACTER_CAMP.ZOMBIE:
         if GameSaveManager.GetFeatureValue("Coins"):
             var item = TowerDefenseManager.FallingObjectCreate(global_position, GetGroundHeight(global_position.y), Vector2(randf_range(-50.0, 50.0), -400.0), 980.0)
@@ -190,7 +223,7 @@ func Die() -> void :
     state.send_event("ToDie")
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     if dieAnimeClip.split("&", false).has(clip):
         var tween = create_tween()
         tween.tween_property(self, "modulate:a", 0.0, 0.5)
@@ -202,6 +235,7 @@ func AnimeCompleted(clip: String) -> void :
         return
 
     if die:
+        HitBoxDestroy()
         Die()
 
 func Garlic() -> void :
@@ -226,6 +260,11 @@ func Garlic() -> void :
         for id in garlicFliters.size():
             if replaceUse[id]:
                 sprite.SetFliter(garlicFliters[id], true)
+    await ChangeLine()
+    isGarlic = false
+
+func ChangeLine() -> void :
+    isChangeLine = true
     var mapGridNum: Vector2i = TowerDefenseManager.GetMapGridNum()
     var mapGridSize: Vector2 = TowerDefenseManager.GetMapGridSize()
     var moveDir = 0
@@ -238,14 +277,15 @@ func Garlic() -> void :
     else:
         moveDir = -1
     var tween = create_tween()
+    tween.set_parallel(true)
     tween.tween_property(self, ^"global_position:y", global_position.y + mapGridSize.y * moveDir, 1.0)
+    tween.tween_property(self, ^"saveShadowPosition:y", saveShadowPosition.y + mapGridSize.y * moveDir, 1.0)
     gridPos.y += moveDir
-    saveShadowPosition.y += mapGridSize.y * moveDir
     await tween.finished
-    isGarlic = false
+    isChangeLine = false
 
 func Hypnoses(time: float = -1) -> void :
-    super.Hypnoses(time)
+    super .Hypnoses(time)
     if instance.unUseBuffFlags & TowerDefenseEnum.CHARACTER_BUFF_FLAGS.HYPNOSES:
         return
     attackComponent.target = null
@@ -253,7 +293,7 @@ func Hypnoses(time: float = -1) -> void :
         bodyHurt.emit(GetTotalHitPoint())
 
 func InWater() -> void :
-    super.InWater()
+    super .InWater()
     var tween = create_tween()
     tween.set_ease(Tween.EASE_OUT)
     tween.set_trans(Tween.TRANS_CUBIC)
@@ -280,7 +320,7 @@ func InWater() -> void :
             Walk()
 
 func OutWater() -> void :
-    super.OutWater()
+    super .OutWater()
     inSwimPlay = false
     if outSwimAnimeClip != "":
         sprite.SetAnimation(outSwimAnimeClip, false, 0.2)
@@ -301,4 +341,5 @@ func OutWater() -> void :
             duckytobeSprite.SetFliters(["Zombie_duckytube_inwater", "Zombie_duckytube"], false)
     if swimAnimeClip != walkAnimeClip:
         if !die && !nearDie:
+            outFromWater = true
             Walk()

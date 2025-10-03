@@ -8,6 +8,7 @@
 [sub_resource type="Resource" id="Resource_6dxup"]
 script = ExtResource("1")
 pos = Vector4i(1, 1, 3, 5)
+groundHeightCurve = null
 gridType = [10, 4]
 elementFlags = 0
 Flag/Elemet = 0
@@ -15,6 +16,7 @@ Flag/Elemet = 0
 [sub_resource type="Resource" id="Resource_pnaaj"]
 script = ExtResource("1")
 pos = Vector4i(4, 1, 6, 5)
+groundHeightCurve = null
 gridType = [3, 4]
 elementFlags = 0
 Flag/Elemet = 0
@@ -23,6 +25,7 @@ metadata/_custom_type_script = "uid://bk1pu7tdpvvch"
 [sub_resource type="Resource" id="Resource_1h5yc"]
 script = ExtResource("1")
 pos = Vector4i(7, 1, 9, 5)
+groundHeightCurve = null
 gridType = [2, 4]
 elementFlags = 0
 Flag/Elemet = 0

@@ -6,16 +6,16 @@ const ZAMBONI_EXPLOSION = preload("uid://bbsti03vlotx6")
 @onready var zamboniSmoke: GPUParticles2D = %ZamboniSmoke
 @onready var iceCapMarker: Marker2D = %IceCapMarker
 
-var speed: float = 20.0
+var speed: float = 30.0
 var audioPlay: bool = false
 
 @warning_ignore("unused_parameter")
 func WalkProcessing(delta: float) -> void :
     sprite.timeScale = timeScale * 0.5
     if global_position.x > TowerDefenseManager.GetMapGroundRight():
-        global_position.x -= speed * delta * sprite.timeScale * transformPoint.scale.x * 2.0
+        global_position.x -= speed * delta * sprite.timeScale * transformPoint.scale.x * scale.x * 2.0
     else:
-        global_position.x -= speed * delta * sprite.timeScale * transformPoint.scale.x
+        global_position.x -= speed * delta * sprite.timeScale * transformPoint.scale.x * scale.x
     if !audioPlay:
         if global_position.x < TowerDefenseManager.GetMapGroundRight():
             AudioManager.AudioPlay("Zamboni", AudioManagerEnum.TYPE.SFX)
@@ -31,25 +31,25 @@ func WalkProcessing(delta: float) -> void :
             Die()
 
     if instance.hitpoints < (config.hitpoints + config.hitpointsNearDeath) * 0.2:
-        speed -= delta * 0.5
+        speed -= delta * 1.0
         sprite.shake = true
 
 func HitpointsEmpty() -> void :
-    super.HitpointsEmpty()
+    super .HitpointsEmpty()
     CreateEffect()
     Destroy()
 
 func DamagePointReach(damangePointName: String) -> void :
-    super.DamagePointReach(damangePointName)
+    super .DamagePointReach(damangePointName)
     match damangePointName:
         "DamagePoint2":
-            speed = 17.5
+            speed = 25.0
         "DamagePoint3":
-            speed = 15.0
+            speed = 20.0
             zamboniSmoke.visible = true
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "Wheelie":
             CreateEffect()

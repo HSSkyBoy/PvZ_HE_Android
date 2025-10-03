@@ -49,4 +49,5 @@ func SetCustomFliters(sprite: AdobeAnimateSprite, customName: String):
 func SetDamagePoint(sprite: AdobeAnimateSprite, customName: String, index: int) -> void :
     var data: Dictionary = customDictionary[customName]
     var config: CharacterCustomConfig = data["Config"]
-    sprite.SetReplace(config.damagePointChangeMediaName, config.damagePointChangeMediaTexture[index])
+    if index < config.damagePointChangeMediaTexture.size():
+        sprite.SetReplace(config.damagePointChangeMediaName, config.damagePointChangeMediaTexture[index])

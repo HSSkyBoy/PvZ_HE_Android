@@ -8,13 +8,13 @@ var armor: TowerDefenseArmorInstance
 
 @warning_ignore("unused_parameter")
 func IdleProcessing(delta: float) -> void :
-    super.IdleProcessing(delta)
+    super .IdleProcessing(delta)
     sprite.timeScale = timeScale
     if await magnetComponent.CanArmorDraw():
         state.send_event("ToShoot")
 
 func IdleExited() -> void :
-    super.IdleExited()
+    super .IdleExited()
 
 func ShootEntered() -> void :
     sprite.SetAnimation("Begin", false, 0.2)
@@ -38,13 +38,13 @@ func NoActiveExited() -> void :
     pass
 
 func AnimeEvent(command: String, argument: Variant) -> void :
-    super.AnimeEvent(command, argument)
+    super .AnimeEvent(command, argument)
     match command:
         "action":
             armor = magnetComponent.ArmorDraw()
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "Shooting":
             if armor:
@@ -59,4 +59,4 @@ func BreakDown(_armor: TowerDefenseArmorInstance) -> void :
 @warning_ignore("unused_parameter")
 func Destroy(freeInsance: bool = true) -> void :
     magnetComponent.Destroy()
-    super.Destroy(freeInsance)
+    super .Destroy(freeInsance)

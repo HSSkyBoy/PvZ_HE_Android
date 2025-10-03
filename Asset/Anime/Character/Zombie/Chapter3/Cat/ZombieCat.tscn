@@ -1,0 +1,121 @@
+[gd_scene load_steps=4 format=4 uid="uid://dcf1p7q68go8q"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://lq00noov454y" path="res://Asset/Anime/Character/Zombie/Chapter3/Cat/ZombieCat.tres" id="2"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="3"]
+
+[node name="ZombieCat" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-60, -90)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/AnimeEvents = false
+Animation/LayerVisible/Zombie_whitewater = false
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/anim_hair = true
+Animation/LayerVisible/anim_head1 = true
+Animation/LayerVisible/anim_head2 = true
+Animation/LayerVisible/cannon0 = true
+Animation/LayerVisible/cannon1 = true
+Animation/LayerVisible/cannon2 = true
+Animation/LayerVisible/cannon3 = true
+Animation/LayerVisible/leaf1 = true
+Animation/LayerVisible/leaf2 = true
+Animation/LayerVisible/tail1 = true
+Animation/LayerVisible/tail2 = true
+Animation/LayerVisible/zombie_football_helmet = false
+Animation/LayerVisible/zombie_football_leftarm_hand = true
+Animation/LayerVisible/zombie_football_leftarm_hand1 = true
+Animation/LayerVisible/zombie_football_leftarm_lower = true
+Animation/LayerVisible/zombie_football_leftarm_upper = true
+Animation/LayerVisible/zombie_football_leftleg_foot = true
+Animation/LayerVisible/zombie_football_leftleg_lower = true
+Animation/LayerVisible/zombie_football_leftleg_upper = true
+Animation/LayerVisible/zombie_football_lowerbody = true
+Animation/LayerVisible/zombie_football_rightarm_hand = true
+Animation/LayerVisible/zombie_football_rightarm_lower = true
+Animation/LayerVisible/zombie_football_rightarm_upper = true
+Animation/LayerVisible/zombie_football_rightleg_foot = true
+Animation/LayerVisible/zombie_football_rightleg_lower = true
+Animation/LayerVisible/zombie_football_rightleg_upper = true
+Animation/LayerVisible/zombie_football_upperbody = true
+Animation/LayerVisible/zombie_football_upperbody2 = true
+Animation/LayerVisible/zombie_football_upperbody3 = true
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/Zombie_Cat_cannon0.png = null
+Animation/MediaReplace/Zombie_Cat_cannon1.png = null
+Animation/MediaReplace/Zombie_Cat_cannon2.png = null
+Animation/MediaReplace/Zombie_Cat_cannon3.png = null
+Animation/MediaReplace/Zombie_Cat_head.png = null
+Animation/MediaReplace/Zombie_Cat_helmet.png = null
+Animation/MediaReplace/Zombie_Cat_leaf1.png = null
+Animation/MediaReplace/Zombie_Cat_leaf2.png = null
+Animation/MediaReplace/Zombie_Cat_leftarm_eatinghand.png = null
+Animation/MediaReplace/Zombie_Cat_leftarm_hand.png = null
+Animation/MediaReplace/Zombie_Cat_leftleg_foot.png = null
+Animation/MediaReplace/Zombie_Cat_leftleg_lower.png = null
+Animation/MediaReplace/Zombie_Cat_leftleg_upper.png = null
+Animation/MediaReplace/Zombie_Cat_lowerbody.png = null
+Animation/MediaReplace/Zombie_Cat_outerarm_eatinghand.png = null
+Animation/MediaReplace/Zombie_Cat_rightleg_foot.png = null
+Animation/MediaReplace/Zombie_Cat_rightleg_lower.png = null
+Animation/MediaReplace/Zombie_Cat_rightleg_upper.png = null
+Animation/MediaReplace/Zombie_Cat_tail1.png = null
+Animation/MediaReplace/Zombie_Cat_tail2.png = null
+Animation/MediaReplace/Zombie_Cat_upperbody.png = null
+Animation/MediaReplace/Zombie_Cat_upperbody2.png = null
+Animation/MediaReplace/Zombie_Cat_upperbody3.png = null
+Animation/MediaReplace/Zombie_duckytube.png = null
+Animation/MediaReplace/Zombie_duckytube_inwater.png = null
+Animation/MediaReplace/Zombie_football_leftarm_eatinglower.png = null
+Animation/MediaReplace/Zombie_football_leftarm_lower.png = null
+Animation/MediaReplace/Zombie_football_rightarm_upper.png = null
+Animation/MediaReplace/Zombie_hair.png = null
+Animation/MediaReplace/Zombie_jaw.png = null
+Animation/MediaReplace/Zombie_snorkle_whitewater1.png = null
+Animation/MediaReplace/Zombie_snorkle_whitewater2.png = null
+Animation/MediaReplace/Zombie_snorkle_whitewater3.png = null
+Animation/MediaReplace/Zombie_whitewater1.png = null
+Animation/MediaReplace/Zombie_whitewater2.png = null
+Animation/MediaReplace/Zombie_whitewater3.png = null
+Animation/MediaReplace/zombie_Cat_rightarm_hand.png = null
+Animation/MediaReplace/zombie_football_leftarm_upper.png = null
+Animation/MediaReplace/zombie_football_rightarm_lower.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="HeadSlot" type="Node2D" parent="."]
+position = Vector2(-12.2657, -58.017)
+rotation = 0.00846001
+scale = Vector2(0.799729, 0.799729)
+script = ExtResource("3")
+followSlotId = 19
+offset = Vector2(20, 30)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ArmSlot" type="Node2D" parent="."]
+position = Vector2(-34.2903, -19.3662)
+rotation = -0.0624126
+scale = Vector2(0.799203, 0.799203)
+script = ExtResource("3")
+followSlotId = 14
+offset = Vector2(10, 5)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="HelmentSlot" type="Node2D" parent="."]
+position = Vector2(-7.92688, -59.5568)
+rotation = -0.00408043
+scale = Vector2(0.79966, 0.79966)
+script = ExtResource("3")
+followSlotId = 24
+offset = Vector2(30, 45)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="GroundSlot" type="Node2D" parent="."]
+position = Vector2(-96.6, -20)
+script = ExtResource("3")
+followSlotId = 1
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

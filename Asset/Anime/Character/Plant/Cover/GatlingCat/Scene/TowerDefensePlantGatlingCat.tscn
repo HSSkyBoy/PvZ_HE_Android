@@ -15,20 +15,18 @@ fireInterval = 1.5
 fireNum = 2
 config = ExtResource("3")
 sprite = NodePath("SpriteGroup/TransformPoint/GatlingCat")
-gravity = 245.0
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
 
-[node name="GatlingCat" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("4")]
+[node name="GatlingCat" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
 position = Vector2(0, -30)
-layerSlot = [null, null, null, null, NodePath("AdobeAnimateSlot"), null, null, null, null, null, null, null, NodePath("AdobeAnimateSlot2"), null, null, null, null, null, null]
 
 [node name="AdobeAnimateSlot" type="Node2D" parent="SpriteGroup/TransformPoint/GatlingCat" index="0"]
-position = Vector2(-19.7867, -41.7267)
-rotation = 0.274893
-scale = Vector2(0.794276, 0.806228)
-skew = 0.0790614
+position = Vector2(-58.41, -31.69)
+rotation = -0.504938
+scale = Vector2(0.801575, 0.797622)
+skew = -0.0508627
 script = ExtResource("5")
 followSlotId = 5
 metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
@@ -37,10 +35,8 @@ metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
 position = Vector2(18.5739, 11.5205)
 
 [node name="AdobeAnimateSlot2" type="Node2D" parent="SpriteGroup/TransformPoint/GatlingCat" index="1"]
-position = Vector2(19.1664, -19.5496)
-rotation = -0.0134144
-scale = Vector2(0.666436, 0.697181)
-skew = 0.0134143
+position = Vector2(19.1662, -20.04)
+scale = Vector2(0.665985, 0.693338)
 script = ExtResource("5")
 followSlotId = 13
 metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
@@ -52,6 +48,7 @@ position = Vector2(34.2431, 28.8957)
 visible = false
 position = Vector2(0, 47)
 scale = Vector2(0.821918, 0.77551)
+texture = null
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(0, 0)

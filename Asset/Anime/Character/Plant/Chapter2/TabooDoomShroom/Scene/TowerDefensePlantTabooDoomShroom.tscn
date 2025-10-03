@@ -22,14 +22,14 @@ metadata/_custom_type_script = "uid://codard4rr854y"
 script = ExtResource("2")
 eventList = [SubResource("Resource_hs6c2"), SubResource("Resource_koon0")]
 config = ExtResource("5")
-sprite = NodePath("FrontEffectNode/TabooDoomShroom")
-gravity = 245.0
+sprite = NodePath("SpriteGroup/TransformPoint/TabooDoomShroom")
 
 [node name="TransformPoint" parent="SpriteGroup" index="1"]
 position = Vector2(0, 30)
 
-[node name="TabooDoomShroom" parent="FrontEffectNode" index="0" instance=ExtResource("6")]
-offset = Vector2(-40.7737, -39.8442)
+[node name="TabooDoomShroom" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("6")]
+position = Vector2(0, -30)
+offset = Vector2(-39.8312, -40.9967)
 trueFrameRate = 30.0
 
 [node name="ShadowSprite" parent="." index="3"]

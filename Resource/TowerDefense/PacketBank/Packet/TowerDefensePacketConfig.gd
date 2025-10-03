@@ -18,11 +18,15 @@ const DIRT = preload("uid://tyehajadw7d1")
 @export var type: TowerDefenseEnum.PACKET_TYPE = TowerDefenseEnum.PACKET_TYPE.WHITE
 @export_category("Spawn")
 @export_enum("Noone", "Rise", "FlyDown") var spawnMethod: String = "Rise"
+@export_category("Event")
+@export var eventPress: Array[TowerDefensePacketEventBase]
+@export var eventPlant: Array[TowerDefensePacketEventBase]
 @export_category("Override")
+@export var override: TowerDefensePacketOverride
 @export var overrideCostRise: int = -1
 @export var overrideCost: int = -1
-@export var overridPacketCooldown: float = -1
-@export var overridStartingCooldown: float = -1
+@export var overridePacketCooldown: float = -1
+@export var overrideStartingCooldown: float = -1
 @export_storage var overrideWeight: int = -1
 @export_storage var overrideWavePointCost: int = -1
 @export_category("Other")
@@ -115,8 +119,99 @@ func _property_get_revert(property: StringName) -> Variant:
             return true
     return null
 
+func GetType() -> TowerDefenseEnum.PACKET_TYPE:
+    if is_instance_valid(override):
+        if override.type != TowerDefenseEnum.PACKET_TYPE.NOONE:
+            return override.type
+    return type
+
+func GetCostRise() -> int:
+    if is_instance_valid(override):
+        if override.costRise != -1:
+            return override.costRise
+    if overrideCostRise != -1:
+        return overrideCostRise
+    return characterConfig.costRise
+
+func GetCost() -> int:
+    if is_instance_valid(override):
+        if override.cost != -1:
+            return override.cost
+    if overrideCost != -1:
+        return overrideCost
+    return characterConfig.cost
+
+func GetPacketCooldown() -> float:
+    if is_instance_valid(override):
+        if override.packetCooldown != -1:
+            return override.packetCooldown
+    if overridePacketCooldown != -1:
+        return overridePacketCooldown
+    return characterConfig.packetCooldown
+
+func GetStartingCooldown() -> float:
+    if is_instance_valid(override):
+        if override.startingCooldown != -1:
+            return override.startingCooldown
+    if overrideStartingCooldown != -1:
+        return overrideStartingCooldown
+    return characterConfig.startingCooldown
+
+func GetWeight() -> int:
+    if is_instance_valid(override):
+        if override.weight != -1:
+            return override.weight
+    if overrideWeight != -1:
+        return overrideWeight
+    return characterConfig.weight
+
+func GetWavePointCost() -> int:
+    if is_instance_valid(override):
+        if override.wavePointCost != -1:
+            return override.wavePointCost
+    if overrideWavePointCost != -1:
+        return overrideWavePointCost
+    return characterConfig.wavePointCost
+
+func GetPlantCover() -> Array[String]:
+    if is_instance_valid(override):
+        if override.plantCover.size() > 0:
+            return override.plantCover
+    return characterConfig.plantCover
+
+func GetCoverCanDirectPlant() -> bool:
+    if is_instance_valid(override):
+        return override.coverCanDirectPlant
+    return false
+
+func IsLimitGridNum() -> bool:
+    if is_instance_valid(override):
+        return override.islimitGridNum
+    return true
+
+func ExecuteEventPress(packet: TowerDefenseInGamePacketShow) -> void :
+    var eventList: Array[TowerDefensePacketEventBase] = eventPress
+    if is_instance_valid(override):
+        if override.eventPress.size() > 0:
+            eventList = override.eventPress
+    for event: TowerDefensePacketEventBase in eventList:
+        event.Execute(packet)
+
+func ExecuteEventPlant(packet: TowerDefenseInGamePacketShow) -> void :
+    var eventList: Array[TowerDefensePacketEventBase] = eventPlant
+    if is_instance_valid(override):
+        if override.eventPlant.size() > 0:
+            eventList = override.eventPlant
+    for event: TowerDefensePacketEventBase in eventList:
+        event.Execute(packet)
+
 func Plant(gridPos: Vector2i, playAudio: bool = true, noLimit: bool = false) -> TowerDefenseCharacter:
     var cell: TowerDefenseCellInstance = TowerDefenseManager.GetMapCell(gridPos)
+    if Global.isEditor && SceneManager.currentScene == "LevelEditorStage":
+        if !characterConfig is TowerDefenseVaseConfig && cell.HasVase():
+            var vase = cell.GetVase() as TowerDefenseVase
+            vase.packetConfig = self.duplicate(true)
+            return null
     if !characterConfig is TowerDefenseZombieConfig && !is_instance_valid(cell):
         return null
     if !characterConfig is TowerDefenseZombieConfig && !cell.CanPacketPlant(self, noLimit):
@@ -136,7 +231,13 @@ func Plant(gridPos: Vector2i, playAudio: bool = true, noLimit: bool = false) -> 
     character.gridPos = gridPos
     character.cost = characterConfig.cost
     character.packet = self
+    if is_instance_valid(cell):
+        character.groundHeight = cell.GetGroundHeight(0.5)
+    character.z = character.groundHeight
     characterNode.add_child(character)
+    if is_instance_valid(override):
+        if is_instance_valid(override.characterOverride):
+            override.characterOverride.ExecuteCharacter(character)
     if Global.isEditor && SceneManager.currentScene == "LevelEditorStage":
         character.sprite.process_mode = Node.PROCESS_MODE_ALWAYS
         character.state.process_mode = Node.PROCESS_MODE_DISABLED
@@ -167,7 +268,7 @@ func Plant(gridPos: Vector2i, playAudio: bool = true, noLimit: bool = false) -> 
         character.cost = characterConfig.cost
     var plantedEffect: TowerDefenseEffectParticlesOnce = TowerDefenseManager.CreateEffectParticlesOnce(DIRT, gridPos)
     characterNode.add_child(plantedEffect)
-    plantedEffect.global_position = plantPos
+    plantedEffect.global_position = character.transformPoint.global_position
     if plantUseCell && ( !characterConfig is TowerDefenseZombieConfig):
         cell.CharacterPlant(self, character, noLimit)
 
@@ -184,6 +285,27 @@ func Plant(gridPos: Vector2i, playAudio: bool = true, noLimit: bool = false) -> 
             AudioManager.AudioPlay("Plant", AudioManagerEnum.TYPE.SFX)
 
     return character
+
+func HasSpawnLimit() -> bool:
+    if characterConfig is TowerDefenseZombieConfig:
+        if characterConfig.spawnLineNeed.size() > 0:
+            return true
+        if characterConfig.excludeLineGridType.size() > 0:
+            return true
+    return false
+
+func CanSpawn(line: int) -> bool:
+    var flag: bool = true
+    if characterConfig is TowerDefenseZombieConfig:
+        for gridType: TowerDefenseEnum.PLANTGRIDTYPE in characterConfig.spawnLineNeed:
+            if !TowerDefenseMapControl.instance.LineHasType(line, gridType):
+                flag = false
+                break
+        for gridType: TowerDefenseEnum.PLANTGRIDTYPE in characterConfig.excludeLineGridType:
+            if TowerDefenseMapControl.instance.LineHasType(line, gridType):
+                flag = false
+                break
+    return flag
 
 func Spawn(line: int, offsetX: float = 0.0, isIdle: bool = false) -> TowerDefenseCharacter:
     var charcaterName: String = characterConfig.name

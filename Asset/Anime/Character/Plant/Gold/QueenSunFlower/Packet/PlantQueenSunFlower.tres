@@ -1,12 +1,18 @@
-[gd_resource type="Resource" script_class="TowerDefensePacketConfig" load_steps=3 format=4 uid="uid://cspvy6mp772pl"]
+[gd_resource type="Resource" script_class="TowerDefensePacketConfig" load_steps=5 format=4 uid="uid://cspvy6mp772pl"]
 
 [ext_resource type="Resource" uid="uid://draura8w6tda8" path="res://Asset/Anime/Character/Plant/Gold/QueenSunFlower/Config/TowerDefensePlantQueenSunFlower.tres" id="1"]
 [ext_resource type="Script" uid="uid://c6d3po5310ugw" path="res://Resource/TowerDefense/PacketBank/Packet/TowerDefensePacketConfig.gd" id="2"]
+[ext_resource type="Script" uid="uid://p7yhpfahgp8d" path="res://Resource/UnlockCondition/UnlockConditionLevelFinishConfig.gd" id="3"]
+
+[sub_resource type="Resource" id="Resource_iwvtr"]
+script = ExtResource("3")
+levelSaveKey = "Challenge_Level1_3"
+metadata/_custom_type_script = "uid://p7yhpfahgp8d"
 
 [resource]
 script = ExtResource("2")
 saveKey = "PlantQueenSunFlower"
-unlockCheckList = []
+unlockCheckList = [SubResource("Resource_iwvtr")]
 name = "TOWERDEFENSE_PLANT_QUEENSUNFLOWER_NAME"
 describe = "TOWERDEFENSE_PLANT_QUEENSUNFLOWER_EXPRESTION"
 plantfood = ""
@@ -18,10 +24,13 @@ packetAnimeScale = Vector2(0.5, 0.5)
 characterConfig = ExtResource("1")
 type = 1
 spawnMethod = "Rise"
+eventPress = []
+eventPlant = []
+override = null
 overrideCostRise = -1
 overrideCost = -1
-overridPacketCooldown = -1.0
-overridStartingCooldown = -1.0
+overridePacketCooldown = -1.0
+overrideStartingCooldown = -1.0
 overrideWeight = -1
 overrideWavePointCost = -1
 initArmor = []

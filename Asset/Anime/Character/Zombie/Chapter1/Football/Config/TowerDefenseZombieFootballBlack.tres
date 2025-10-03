@@ -7,7 +7,7 @@
 
 [resource]
 script = ExtResource("4")
-physique = 1
+physique = 2
 attack = 200.0
 smashAttack = 0.0
 impactAudio = ""
@@ -15,11 +15,14 @@ weight = 4000
 wavePointCost = 500
 canSpawnPlantfood = true
 excludeLineGridType = []
+spawnLineNeed = []
 name = "ZombieFootballBlack"
 hitpointsNearDeath = 70.0
 hitpoints = 200.0
+explosionHurt = -1.0
 smashHurt = -1.0
 spikeHurt = -1.0
+canDragIntoWater = true
 sleepTime = "Never"
 height = 2
 damagePointData = ExtResource("3")

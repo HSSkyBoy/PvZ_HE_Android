@@ -29,6 +29,7 @@ shader_parameter/iceSpeedDown = false
 shader_parameter/cover = false
 shader_parameter/hypnoses = false
 shader_parameter/imitater = false
+shader_parameter/redHeat = false
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xotnw"]
 size = Vector2(70, 70.5)
@@ -43,7 +44,6 @@ eventList = [SubResource("Resource_hs6c2")]
 config = ExtResource("4")
 sprite = NodePath("SpriteGroup/TransformPoint/SunMine")
 Custom = []
-gravity = 245.0
 
 [node name="SpriteGroup" parent="." index="1"]
 material = SubResource("ShaderMaterial_vy3vg")

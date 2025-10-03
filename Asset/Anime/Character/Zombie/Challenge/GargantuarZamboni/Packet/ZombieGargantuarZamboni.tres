@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="TowerDefensePacketConfig" load_steps=3 format=4 uid="uid://c3yt8rtjiohg5"]
+
+[ext_resource type="Resource" uid="uid://csa5cqurcg5gg" path="res://Asset/Anime/Character/Zombie/Challenge/GargantuarZamboni/Config/TowerDefenseZombieGargantuarZambonii.tres" id="1"]
+[ext_resource type="Script" uid="uid://c6d3po5310ugw" path="res://Resource/TowerDefense/PacketBank/Packet/TowerDefensePacketConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+saveKey = "ZombieGargantuarZamboni"
+unlockCheckList = []
+name = "TOWERDEFENSE_ZOMBIE_GARGANTUARZOMBONI_NAME"
+describe = "TOWERDEFENSE_ZOMBIE_GARGANTUARZOMBONI_EXPRESTION"
+plantfood = ""
+handbookDescribe = "TOWERDEFENSE_ZOMBIE_GARGANTUARZOMBONI_HANDBOOK_EXPRESTION"
+handbookStory = "TOWERDEFENSE_ZOMBIE_GARGANTUARZOMBONI_HANDBOOK_STORY"
+packetAnimeClip = "Drive"
+packetAnimeOffset = Vector2(-20, 75)
+packetAnimeScale = Vector2(0.5, 0.5)
+characterConfig = ExtResource("1")
+type = 6
+spawnMethod = "Rise"
+eventPress = []
+eventPlant = []
+override = null
+overrideCostRise = -1
+overrideCost = -1
+overridePacketCooldown = -1.0
+overrideStartingCooldown = -1.0
+overrideWeight = -1
+overrideWavePointCost = 800
+initArmor = []
+plantUseCell = true
+Cell/plantUseCell = true
+Override/overrideWeight = -1
+Override/overrideWavePointCost = 800
+metadata/_custom_type_script = "uid://c6d3po5310ugw"

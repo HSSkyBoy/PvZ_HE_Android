@@ -26,7 +26,7 @@ func FlyEntered() -> void :
 func FlyProcessing(delta: float) -> void :
     sprite.timeScale = timeScale
     global_position.x -= speed * delta * sprite.timeScale * transformPoint.scale.x
-    if global_position.x < TowerDefenseManager.GetMapGroundLeft():
+    if global_position.x < TowerDefenseManager.GetMapGroundLeft() + 20:
         for balloonId in balloonList:
             ArmorDamagePointReach("BalloonColour", balloonId)
         instance.ArmorDelete("BalloonColour")
@@ -70,11 +70,11 @@ func FlyAttackExited() -> void :
     pass
 
 func AttackProcessing(delta: float) -> void :
-    super.AttackProcessing(delta)
+    super .AttackProcessing(delta)
     sprite.timeScale = timeScale * 2.0
 
 func DieProcessing(delta: float) -> void :
-    super.DieProcessing(delta)
+    super .DieProcessing(delta)
     sprite.timeScale = timeScale * 2.0
 
 func Walk() -> void :
@@ -92,13 +92,13 @@ func Blow() -> void :
         Destroy()
 
 func AnimeCompleted(clip: String) -> void :
-    super.AnimeCompleted(clip)
+    super .AnimeCompleted(clip)
     match clip:
         "Pop":
             Walk()
 
 func ArmorDamagePointReach(armorName: String, stage: int) -> void :
-    super.ArmorDamagePointReach(armorName, stage)
+    super .ArmorDamagePointReach(armorName, stage)
     match armorName:
         "BalloonColour":
             speed += 10.0 / 6.0
@@ -112,7 +112,7 @@ func ArmorDamagePointReach(armorName: String, stage: int) -> void :
             balloonList.remove_at(balloonExplodeId)
 
 func ArmorHitpointsEmpty(armorName: String) -> void :
-    super.ArmorHitpointsEmpty(armorName)
+    super .ArmorHitpointsEmpty(armorName)
     match armorName:
         "BalloonColour":
             pop = true
@@ -128,7 +128,7 @@ func ArmorHitpointsEmpty(armorName: String) -> void :
             state.send_event("ToPop")
 
 func DamagePointReach(damangePointName: String) -> void :
-    super.DamagePointReach(damangePointName)
+    super .DamagePointReach(damangePointName)
     match damangePointName:
         "Head":
             sprite.head = false

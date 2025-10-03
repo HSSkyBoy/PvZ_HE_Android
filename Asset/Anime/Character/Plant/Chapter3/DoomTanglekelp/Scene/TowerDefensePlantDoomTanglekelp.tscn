@@ -1,0 +1,50 @@
+[gd_scene load_steps=10 format=4 uid="uid://wxj6r76y4rr"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cyawo5s0jlqiw" path="res://Asset/Anime/Character/Plant/Chapter3/DoomTanglekelp/Scene/TowerDefensePlantDoomTanglekelp.gd" id="2"]
+[ext_resource type="Script" uid="uid://c3wiwula8chdo" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventExplodeHurt.gd" id="3"]
+[ext_resource type="Resource" uid="uid://d0vvt06u4ds4b" path="res://Asset/Anime/Character/Plant/Chapter3/DoomTanglekelp/Config/TowerDefensePlantDoomTanglekelp.tres" id="4"]
+[ext_resource type="PackedScene" uid="uid://bruar7bfxmmt3" path="res://Asset/Anime/Character/Plant/Chapter3/DoomTanglekelp/DoomTanglekelp.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://doyoyy3l0yq2b" path="res://Asset/Anime/Character/Plant/Chapter3/DoomTanglekelp/DoomTanglekelpGrab.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://dir0f8lu1l3b3" path="res://Script/Component/TowerDefense/Character/AttackComponent/AttackComponent.tscn" id="7"]
+
+[sub_resource type="Resource" id="Resource_eeplt"]
+script = ExtResource("3")
+metadata/_custom_type_script = "uid://c3wiwula8chdo"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5m3eh"]
+size = Vector2(84, 36)
+
+[node name="TowerDefensePlantDoomTanglekelp" node_paths=PackedStringArray("grab", "sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+grab = NodePath("SpriteGroup/DoomTanglekelpGrab")
+eventList = [SubResource("Resource_eeplt")]
+sleepAnimeClip = "Sleep"
+config = ExtResource("4")
+sprite = NodePath("SpriteGroup/TransformPoint/DoomTanglekelp")
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="DoomTanglekelp" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("5")]
+position = Vector2(0, -30)
+
+[node name="DoomTanglekelpGrab" parent="SpriteGroup" index="2" instance=ExtResource("6")]
+visible = false
+
+[node name="ShadowSprite" parent="." index="3"]
+visible = false
+position = Vector2(0, 30)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+
+[node name="AttackComponent" parent="." index="8" node_paths=PackedStringArray("checkArea") instance=ExtResource("7")]
+unique_name_in_owner = true
+attackType = "Default"
+checkArea = NodePath("CheckArea")
+
+[node name="CheckArea" type="Area2D" parent="AttackComponent" index="0"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent/CheckArea" index="0"]
+shape = SubResource("RectangleShape2D_5m3eh")

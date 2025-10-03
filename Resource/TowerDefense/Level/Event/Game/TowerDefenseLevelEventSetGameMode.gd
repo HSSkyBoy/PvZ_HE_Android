@@ -20,7 +20,7 @@ func Export() -> Dictionary:
     }
 
 func GetProperty() -> Dictionary:
-    var data = super.GetProperty()
+    var data = super .GetProperty()
     data["游戏模式"] = {
         "模式": {
             "Object": self, 
