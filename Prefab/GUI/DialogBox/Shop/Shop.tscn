@@ -1,0 +1,359 @@
+[gd_scene load_steps=20 format=4 uid="uid://dj1q7rgc2viko"]
+
+[ext_resource type="Script" uid="uid://cwr0xbkauws6" path="res://Prefab/GUI/DialogBox/Shop/Shop.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bbqkg8qu5jfj6" path="res://Asset/Texture/GUI/Shop/BGshop.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://x7geep41foee" path="res://Asset/Texture/GUI/Shop/BGshopCar.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dwth22u7pxvs4" path="res://Asset/Texture/GUI/Shop/StoreNextButton.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://rjsnfenwoh0k" path="res://Asset/Texture/GUI/Shop/StoreNextButtonHighlight.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://b6yobl881212e" path="res://Asset/Texture/GUI/Shop/StoreNextButtonDisabled.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://b6dop42sadx51" path="res://Asset/Texture/GUI/Shop/StorePrevButton.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://pgc14cjw53ej" path="res://Asset/Texture/GUI/Shop/StorePrevButtonHighlight.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://dp100ioqefqb3" path="res://Asset/Texture/GUI/Shop/StorePrevButtonDisabled.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://drxxq4kusvb1q" path="res://Asset/Texture/GUI/Shop/StoreMainMenuButton.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://ddeu88jmtuyhb" path="res://Asset/Texture/GUI/Shop/StoreMainMenuButtonDown.png" id="11"]
+[ext_resource type="FontFile" uid="uid://coqskwlqtnypf" path="res://Asset/Font/fzkt.ttf" id="12"]
+[ext_resource type="Texture2D" uid="uid://co3bsgm2oha70" path="res://Asset/Texture/GUI/Shop/StoreCarClosed.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://bww8kuioph2u3" path="res://Asset/Texture/GUI/Shop/StoreHatchbackOpen.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://b1njsixfkklf" path="res://Asset/Texture/GUI/Shop/StoreSign.png" id="15"]
+[ext_resource type="PackedScene" uid="uid://clckmqg8m4qne" path="res://Prefab/Npc/WeiWeiMi/WeiWeiMi.tscn" id="16"]
+
+[sub_resource type="Animation" id="Animation_wktqs"]
+resource_name = "PageChange"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CarTexture/NextButton:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(434, 287), Vector2(434, 289), Vector2(434, 286), Vector2(434, 287)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CarTexture/PreButton:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(62, 287), Vector2(62, 289), Vector2(62, 286), Vector2(62, 287)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CarTexture/MainMenuButton:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.064341, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(192, 408), Vector2(192, 410), Vector2(192, 407), Vector2(192, 408)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CarTexture/CloseTexture:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CarTexture/HatchbackOpenTexture:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_jt8p8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CarTexture/NextButton:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(434, 287)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CarTexture/PreButton:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(62, 287)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CarTexture/MainMenuButton:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 408)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CarTexture/CloseTexture:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CarTexture/HatchbackOpenTexture:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jtb8t"]
+_data = {
+&"PageChange": SubResource("Animation_wktqs"),
+&"RESET": SubResource("Animation_jt8p8")
+}
+
+[node name="Shop" type="Control"]
+light_mask = 0
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+metadata/_custom_type_script = "uid://b4l86rhpq35q0"
+
+[node name="BackgroundTexture" type="TextureRect" parent="."]
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="CarTexture" type="TextureRect" parent="."]
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -855.0
+offset_top = -537.0
+offset_right = 0.307983
+offset_bottom = -0.228027
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("3")
+expand_mode = 1
+
+[node name="NextButton" type="TextureButton" parent="CarTexture"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.50742
+anchor_top = 0.532815
+anchor_right = 0.676949
+anchor_bottom = 0.696758
+offset_left = -0.000366211
+offset_top = 0.999847
+offset_right = 0.00012207
+offset_bottom = 0.999847
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4")
+texture_pressed = ExtResource("5")
+texture_hover = ExtResource("5")
+texture_disabled = ExtResource("6")
+metadata/_edit_use_anchors_ = true
+
+[node name="PreButton" type="TextureButton" parent="CarTexture"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0724885
+anchor_top = 0.532815
+anchor_right = 0.192913
+anchor_bottom = 0.681854
+offset_top = 0.999847
+offset_bottom = 0.999878
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("7")
+texture_pressed = ExtResource("8")
+texture_hover = ExtResource("8")
+texture_disabled = ExtResource("9")
+metadata/_edit_use_anchors_ = true
+
+[node name="MainMenuButton" type="TextureButton" parent="CarTexture"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.224481
+anchor_top = 0.758236
+anchor_right = 0.404533
+anchor_bottom = 0.91659
+offset_left = -0.000396729
+offset_top = 1.00018
+offset_right = -0.000396729
+offset_bottom = 1.00021
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("10")
+texture_pressed = ExtResource("11")
+texture_hover = ExtResource("11")
+texture_disabled = ExtResource("10")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CarTexture/MainMenuButton"]
+light_mask = 0
+layout_mode = 0
+anchor_right = 0.952381
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(0.41171, 0.597145, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("12")
+text = "主菜单"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="PageLabel" type="Label" parent="CarTexture"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 0
+offset_left = 235.0
+offset_top = 381.0
+offset_right = 359.0
+offset_bottom = 405.0
+theme_override_colors/font_color = Color(0.462291, 0.462291, 0.462291, 1)
+theme_override_fonts/font = ExtResource("12")
+theme_override_font_sizes/font_size = 16
+text = "第1页，共1页"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemNode" type="Control" parent="CarTexture"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CloseTexture" type="TextureRect" parent="CarTexture"]
+visible = false
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 72.0
+offset_top = -5.0
+offset_right = -266.308
+offset_bottom = -161.772
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13")
+
+[node name="HatchbackOpenTexture" type="TextureRect" parent="CarTexture"]
+visible = false
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 189.0
+offset_top = -84.0
+offset_right = -307.308
+offset_bottom = -507.772
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14")
+
+[node name="LabelTexture" type="TextureRect" parent="."]
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.491
+anchor_right = 0.491
+offset_left = -254.28
+offset_right = 253.72
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("15")
+metadata/_edit_use_anchors_ = true
+
+[node name="NpcNode" type="Control" parent="."]
+light_mask = 0
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -600.0
+offset_bottom = -600.0
+grow_vertical = 0
+
+[node name="NpcWeiWeiMi" parent="NpcNode" instance=ExtResource("16")]
+unique_name_in_owner = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_jtb8t")
+}
+
+[connection signal="pressed" from="CarTexture/NextButton" to="." method="NextButtonpressed"]
+[connection signal="pressed" from="CarTexture/PreButton" to="." method="PreButtonPressed"]
+[connection signal="pressed" from="CarTexture/MainMenuButton" to="." method="MainMenuButtonPressed"]

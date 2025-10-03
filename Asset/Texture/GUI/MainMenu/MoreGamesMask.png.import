@@ -1,0 +1,15 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dc05n3r3fhrni"
+path="res://.godot/imported/MoreGamesMask.png-464047900da61f949d843024d871bee1.res"
+
+[deps]
+
+source_file="res://Asset/Texture/GUI/MainMenu/MoreGamesMask.png"
+dest_files=["res://.godot/imported/MoreGamesMask.png-464047900da61f949d843024d871bee1.res"]
+
+[params]
+
+dummy_value_ignore_me=0

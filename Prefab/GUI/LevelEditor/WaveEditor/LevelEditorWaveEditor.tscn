@@ -1,0 +1,469 @@
+[gd_scene load_steps=9 format=4 uid="uid://bddoj76vv0u1u"]
+
+[ext_resource type="Script" uid="uid://b35b1hjwysl" path="res://Prefab/GUI/LevelEditor/WaveEditor/LevelEditorWaveEditor.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://bspvinpjeyi0b" path="res://Prefab/GUI/LevelEditor/WaveEditor/PacketChoose/LevelEditorWaveEditorPacketChoose.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bua2w8mprv7s" path="res://Prefab/GUI/LevelEditor/WaveEditor/PacketContainer/LevelEditorWaveEditorPacketContainer.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://ckl0f8r55y857" path="res://Prefab/GUI/LevelEditor/EventContianer/LevelEventListContainer.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://bcy6nhsn5acy7" path="res://Prefab/GUI/LevelEditor/Inspector/LevelEditorInspector.tscn" id="5"]
+[ext_resource type="Texture2D" uid="uid://tuy45da5jdb2" path="res://Asset/Texture/GUI/General/FlagMeter/FlagMeterFlag.png" id="6"]
+[ext_resource type="PackedScene" uid="uid://bgkuthysw0876" path="res://Prefab/GUI/Button/NinePatchButtonBase/NinePatchButtonBase.tscn" id="7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y7mfi"]
+
+[node name="LevelEditorWaveEditor" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="Transform" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.85, 0.85)
+
+[node name="SpawnNode" type="Control" parent="Transform"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="LevelEditorWaveEditorPacketChoose" parent="Transform/SpawnNode" instance=ExtResource("2")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.176
+anchor_right = 1.176
+offset_left = 64.0402
+offset_top = 3.38813e-21
+offset_right = 64.0402
+offset_bottom = 3.38813e-21
+
+[node name="PoolPacketContainer" parent="Transform/SpawnNode" instance=ExtResource("3")]
+unique_name_in_owner = true
+layout_mode = 2
+anchors_preset = 0
+anchor_left = 0.235185
+anchor_right = 0.235185
+anchor_bottom = 0.0
+offset_left = 1.52588e-05
+offset_right = 661.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="RandomPacketContainer" parent="Transform/SpawnNode" instance=ExtResource("3")]
+unique_name_in_owner = true
+layout_mode = 2
+anchors_preset = 0
+anchor_left = 0.235185
+anchor_top = 0.166667
+anchor_right = 0.235185
+anchor_bottom = 0.166667
+offset_left = 1.52588e-05
+offset_right = 661.0
+offset_bottom = 96.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Transform/SpawnNode"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.235185
+anchor_top = 0.39
+anchor_right = 0.863
+anchor_bottom = 0.878
+offset_left = 1.52588e-05
+offset_top = 3.05176e-05
+offset_bottom = 0.200012
+metadata/_edit_use_anchors_ = true
+
+[node name="PacketContainerListContainer" type="VBoxContainer" parent="Transform/SpawnNode/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LevelEditorWaveEditorPacketContainer1" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer2" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer3" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer4" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer5" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer6" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+visible = false
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer7" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+visible = false
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer8" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+visible = false
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer9" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+visible = false
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer10" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+visible = false
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer11" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+visible = false
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer12" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+visible = false
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer13" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+visible = false
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer14" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+visible = false
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer15" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+visible = false
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer16" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+visible = false
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer17" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+visible = false
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer18" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+visible = false
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer19" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+visible = false
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer20" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+visible = false
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer21" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+visible = false
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer22" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+visible = false
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer23" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+visible = false
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer24" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+visible = false
+layout_mode = 2
+
+[node name="LevelEditorWaveEditorPacketContainer25" parent="Transform/SpawnNode/ScrollContainer/PacketContainerListContainer" instance=ExtResource("3")]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Transform/SpawnNode"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.242593
+anchor_top = 0.33
+anchor_right = 0.462037
+anchor_bottom = 0.391667
+offset_bottom = -1.52588e-05
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 10
+text = "每行出怪编辑"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TipsLabel" type="Label" parent="Transform/SpawnNode"]
+unique_name_in_owner = true
+modulate = Color(1, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.463889
+anchor_top = 0.33
+anchor_right = 0.687963
+anchor_bottom = 0.391667
+offset_bottom = 1.52588e-05
+theme_override_constants/outline_size = 10
+text = "请选择编辑项目"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CommandContainer" type="MarginContainer" parent="Transform/SpawnNode"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.07
+anchor_bottom = 0.07
+offset_right = 254.0
+offset_bottom = 528.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Transform/SpawnNode/CommandContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Transform/SpawnNode/CommandContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 50
+
+[node name="VboxContainer" type="VBoxContainer" parent="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="BigWaveContainer" type="HBoxContainer" parent="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer/BigWaveContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "大波数"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BigWaveSpinBox" type="SpinBox" parent="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer/BigWaveContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 1.0
+max_value = 20.0
+value = 1.0
+
+[node name="WaveIntervalContainer" type="HBoxContainer" parent="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer/WaveIntervalContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "大波间隔"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WaveIntervalSpinBox" type="SpinBox" parent="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer/WaveIntervalContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 1.0
+value = 10.0
+
+[node name="BeginColContainer" type="HBoxContainer" parent="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer/BeginColContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "波起始时间"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BeginColSpinBox" type="SpinBox" parent="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer/BeginColContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 1.0
+value = 20.0
+
+[node name="SpawnColEndContainer" type="HBoxContainer" parent="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer/SpawnColEndContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "波最大间隔时间"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="SpawnColEndSpinBox" type="SpinBox" parent="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer/SpawnColEndContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 1.0
+value = 20.0
+
+[node name="SpawnColStartContainer" type="HBoxContainer" parent="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer/SpawnColStartContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "波最小间隔时间"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="SpawnColStartSpinBox" type="SpinBox" parent="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer/SpawnColStartContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 1.0
+value = 10.0
+
+[node name="MinNextWaveHealthPercentageContainer" type="HBoxContainer" parent="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer/MinNextWaveHealthPercentageContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "残半刷新最大剩余百分比"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="MinNextWaveHealthPercentageSpinBox" type="SpinBox" parent="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer/MinNextWaveHealthPercentageContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 0.25
+
+[node name="MaxNextWaveHealthPercentageContainer" type="HBoxContainer" parent="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer/MaxNextWaveHealthPercentageContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "残半刷新最小剩余百分比"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="MaxNextWaveHealthPercentageSpinBox" type="SpinBox" parent="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer/MaxNextWaveHealthPercentageContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 0.3
+
+[node name="EventNode" type="Control" parent="Transform"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Transform/EventNode"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 247.0
+offset_right = 191.0
+offset_bottom = -69.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Transform/EventNode/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_y7mfi")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Transform/EventNode/HSplitContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="EventListContainer" parent="Transform/EventNode/HSplitContainer/PanelContainer/HBoxContainer" node_paths=PackedStringArray("inspector") instance=ExtResource("4")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+inspector = NodePath("../LevelEditorInspector")
+
+[node name="Label" parent="Transform/EventNode/HSplitContainer/PanelContainer/HBoxContainer/EventListContainer/VboxContainer" index="0"]
+text = "波事件"
+
+[node name="LevelEditorInspector" parent="Transform/EventNode/HSplitContainer/PanelContainer/HBoxContainer" instance=ExtResource("5")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(480, 0)
+layout_mode = 2
+size_flags_horizontal = 1
+
+[node name="FlagSlider" type="HSlider" parent="Transform"]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_left = 0.139815
+anchor_top = 0.925
+anchor_right = 0.831481
+anchor_bottom = 0.973333
+mouse_default_cursor_shape = 2
+theme_override_icons/tick = ExtResource("6")
+tick_count = 5
+ticks_on_borders = true
+metadata/_edit_use_anchors_ = true
+
+[node name="WaveLabel" type="Label" parent="Transform/FlagSlider"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.151272
+anchor_top = 0.137932
+anchor_bottom = 1.00001
+text = "当前波：1"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SpawnButton" parent="Transform" instance=ExtResource("7")]
+layout_mode = 0
+offset_right = 131.0
+text = "僵尸放置编辑"
+
+[node name="EventButton" parent="Transform" instance=ExtResource("7")]
+layout_mode = 0
+offset_left = 134.118
+offset_right = 247.118
+text = "事件编辑"
+
+[connection signal="value_changed" from="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer/BigWaveContainer/BigWaveSpinBox" to="." method="BigWaveSpinBoxValueChanged"]
+[connection signal="value_changed" from="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer/WaveIntervalContainer/WaveIntervalSpinBox" to="." method="WaveIntervalSpinBoxValueChanged"]
+[connection signal="value_changed" from="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer/BeginColContainer/BeginColSpinBox" to="." method="BeginColSpinBoxValueChanged"]
+[connection signal="value_changed" from="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer/SpawnColEndContainer/SpawnColEndSpinBox" to="." method="SpawnColEndSpinBoxValueChanged"]
+[connection signal="value_changed" from="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer/SpawnColStartContainer/SpawnColStartSpinBox" to="." method="SpawnColStartSpinBoxValueChanged"]
+[connection signal="value_changed" from="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer/MinNextWaveHealthPercentageContainer/MinNextWaveHealthPercentageSpinBox" to="." method="MinNextWaveHealthPercentageSpinBoxValueChanged"]
+[connection signal="value_changed" from="Transform/SpawnNode/CommandContainer/ScrollContainer/HBoxContainer/VboxContainer/MaxNextWaveHealthPercentageContainer/MaxNextWaveHealthPercentageSpinBox" to="." method="MaxNextWaveHealthPercentageSpinBoxValueChanged"]
+[connection signal="change" from="Transform/EventNode/HSplitContainer/PanelContainer/HBoxContainer/EventListContainer" to="." method="EventListContainerChange"]
+[connection signal="drag_ended" from="Transform/FlagSlider" to="." method="FlagChanged"]
+[connection signal="pressed" from="Transform/SpawnButton" to="." method="SpawnButtonPressed"]
+[connection signal="pressed" from="Transform/EventButton" to="." method="EventButtonPressed"]
+
+[editable path="Transform/EventNode/HSplitContainer/PanelContainer/HBoxContainer/EventListContainer"]

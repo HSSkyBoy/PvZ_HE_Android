@@ -1,0 +1,100 @@
+[gd_scene load_steps=4 format=4 uid="uid://0b2gtxc1y85q"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://b5bvmxosoe5pb" path="res://Asset/Anime/Character/Zombie/Chapter1/Polevaulter/ZombiePolevaulter.tres" id="2"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="3"]
+
+[node name="ZombiePolevaulter" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-48, -88)
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/AnimeEvents = true
+Animation/LayerVisible/Zombie_duckytube = false
+Animation/LayerVisible/Zombie_duckytube1 = false
+Animation/LayerVisible/Zombie_outerarm_hand = true
+Animation/LayerVisible/Zombie_polevaulter_body1 = true
+Animation/LayerVisible/Zombie_polevaulter_body2 = true
+Animation/LayerVisible/Zombie_polevaulter_innerarm_lower = true
+Animation/LayerVisible/Zombie_polevaulter_innerarm_upper = true
+Animation/LayerVisible/Zombie_polevaulter_innerhand = true
+Animation/LayerVisible/Zombie_polevaulter_innerleg_foot = true
+Animation/LayerVisible/Zombie_polevaulter_innerleg_lower = true
+Animation/LayerVisible/Zombie_polevaulter_innerleg_toe = true
+Animation/LayerVisible/Zombie_polevaulter_innerleg_upper = true
+Animation/LayerVisible/Zombie_polevaulter_outerarm_lower = true
+Animation/LayerVisible/Zombie_polevaulter_outerarm_upper = true
+Animation/LayerVisible/Zombie_polevaulter_outerleg_foot = true
+Animation/LayerVisible/Zombie_polevaulter_outerleg_lower = true
+Animation/LayerVisible/Zombie_polevaulter_outerleg_toe = true
+Animation/LayerVisible/Zombie_polevaulter_outerleg_upper = true
+"Animation/LayerVisible/Zombie_polevaulter_pole 复制" = true
+"Animation/LayerVisible/Zombie_polevaulter_pole2 复制" = true
+Animation/LayerVisible/Zombie_whitewater = false
+Animation/LayerVisible/Zombie_whitewater1 = false
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/anim_hair = true
+Animation/LayerVisible/anim_head1 = true
+Animation/LayerVisible/anim_head2 = true
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/Zombie_duckytube.png = null
+Animation/MediaReplace/Zombie_duckytube_inwater.png = null
+Animation/MediaReplace/Zombie_duckytube_whole2.png = null
+Animation/MediaReplace/Zombie_head.png = null
+Animation/MediaReplace/Zombie_innerarm_hand.png = null
+Animation/MediaReplace/Zombie_jaw.png = null
+Animation/MediaReplace/Zombie_outerarm_hand.png = null
+Animation/MediaReplace/Zombie_polevaulter_body1.png = null
+Animation/MediaReplace/Zombie_polevaulter_body2.png = null
+Animation/MediaReplace/Zombie_polevaulter_hair.png = null
+Animation/MediaReplace/Zombie_polevaulter_innerarm_lower.png = null
+Animation/MediaReplace/Zombie_polevaulter_innerarm_upper.png = null
+Animation/MediaReplace/Zombie_polevaulter_innerhand.png = null
+Animation/MediaReplace/Zombie_polevaulter_innerleg_foot.png = null
+Animation/MediaReplace/Zombie_polevaulter_innerleg_lower.png = null
+Animation/MediaReplace/Zombie_polevaulter_innerleg_toe.png = null
+Animation/MediaReplace/Zombie_polevaulter_innerleg_upper.png = null
+Animation/MediaReplace/Zombie_polevaulter_outerarm_lower.png = null
+Animation/MediaReplace/Zombie_polevaulter_outerarm_upper.png = null
+Animation/MediaReplace/Zombie_polevaulter_outerarm_upper2.png = null
+Animation/MediaReplace/Zombie_polevaulter_outerleg_foot.png = null
+Animation/MediaReplace/Zombie_polevaulter_outerleg_lower.png = null
+Animation/MediaReplace/Zombie_polevaulter_outerleg_toe.png = null
+Animation/MediaReplace/Zombie_polevaulter_outerleg_upper.png = null
+Animation/MediaReplace/Zombie_polevaulter_pole.png = null
+Animation/MediaReplace/Zombie_polevaulter_pole2.png = null
+Animation/MediaReplace/Zombie_snorkle_whitewater1.png = null
+Animation/MediaReplace/Zombie_snorkle_whitewater2.png = null
+Animation/MediaReplace/Zombie_snorkle_whitewater3.png = null
+Animation/MediaReplace/Zombie_whitewater1.png = null
+Animation/MediaReplace/Zombie_whitewater2.png = null
+Animation/MediaReplace/Zombie_whitewater3.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="HeadSlot" type="Node2D" parent="."]
+position = Vector2(-6.41602, -52.1081)
+rotation = -0.0167649
+scale = Vector2(0.799918, 0.799918)
+script = ExtResource("3")
+followSlotId = 18
+offset = Vector2(30, 30)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ArmSlot" type="Node2D" parent="."]
+position = Vector2(8.83183, -3.57275)
+rotation = -0.0436333
+scale = Vector2(0.799988, 0.799988)
+script = ExtResource("3")
+followSlotId = 24
+offset = Vector2(10, 20)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="GroundSlot" type="Node2D" parent="."]
+script = ExtResource("3")
+followSlotId = 1
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

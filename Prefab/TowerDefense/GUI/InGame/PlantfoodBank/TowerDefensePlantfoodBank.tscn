@@ -1,0 +1,136 @@
+[gd_scene load_steps=6 format=4 uid="uid://cpgpfiekj6ien"]
+
+[ext_resource type="Script" uid="uid://neumrinj01fe" path="res://Prefab/TowerDefense/GUI/InGame/PlantfoodBank/TowerDefensePlantfoodBank.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://blc6eo7x6rirp" path="res://Asset/Texture/GUI/General/Old/Plantfood/PlantfoodBank.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dc6wjpvg8eigm" path="res://Asset/Texture/GUI/General/Old/Plantfood/PlantfoodBankFilledSlot.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://ciltp8rao4gp4" path="res://Asset/Texture/GUI/General/Old/Plantfood/ButtonPlantfood.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dc3npaujeknhi" path="res://Asset/Texture/GUI/General/Old/Plantfood/ButtonDownPlantfood.png" id="5"]
+
+[node name="TowerDefensePlantfoodBank" type="Control"]
+light_mask = 0
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(0.78, 0.78)
+script = ExtResource("1")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+light_mask = 0
+layout_mode = 0
+offset_right = 273.0
+offset_bottom = 172.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer"]
+light_mask = 0
+layout_mode = 2
+texture = ExtResource("2")
+patch_margin_left = 197
+patch_margin_top = 172
+patch_margin_right = 26
+axis_stretch_horizontal = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+light_mask = 0
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="EmptyLeft" type="Control" parent="MarginContainer/HBoxContainer"]
+light_mask = 0
+custom_minimum_size = Vector2(155, 0)
+layout_mode = 2
+
+[node name="PlantfoodSlotContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="SlotTexture" type="TextureRect" parent="MarginContainer/HBoxContainer/PlantfoodSlotContainer"]
+visible = false
+light_mask = 0
+layout_mode = 2
+texture = ExtResource("3")
+stretch_mode = 5
+
+[node name="SlotTexture2" type="TextureRect" parent="MarginContainer/HBoxContainer/PlantfoodSlotContainer"]
+visible = false
+light_mask = 0
+layout_mode = 2
+texture = ExtResource("3")
+stretch_mode = 5
+
+[node name="SlotTexture3" type="TextureRect" parent="MarginContainer/HBoxContainer/PlantfoodSlotContainer"]
+visible = false
+light_mask = 0
+layout_mode = 2
+texture = ExtResource("3")
+stretch_mode = 5
+
+[node name="SlotTexture4" type="TextureRect" parent="MarginContainer/HBoxContainer/PlantfoodSlotContainer"]
+visible = false
+light_mask = 0
+layout_mode = 2
+texture = ExtResource("3")
+stretch_mode = 5
+
+[node name="SlotTexture5" type="TextureRect" parent="MarginContainer/HBoxContainer/PlantfoodSlotContainer"]
+visible = false
+light_mask = 0
+layout_mode = 2
+texture = ExtResource("3")
+stretch_mode = 5
+
+[node name="SlotTexture6" type="TextureRect" parent="MarginContainer/HBoxContainer/PlantfoodSlotContainer"]
+visible = false
+light_mask = 0
+layout_mode = 2
+texture = ExtResource("3")
+stretch_mode = 5
+
+[node name="SlotTexture7" type="TextureRect" parent="MarginContainer/HBoxContainer/PlantfoodSlotContainer"]
+visible = false
+light_mask = 0
+layout_mode = 2
+texture = ExtResource("3")
+stretch_mode = 5
+
+[node name="SlotTexture8" type="TextureRect" parent="MarginContainer/HBoxContainer/PlantfoodSlotContainer"]
+visible = false
+light_mask = 0
+layout_mode = 2
+texture = ExtResource("3")
+stretch_mode = 5
+
+[node name="SlotTexture9" type="TextureRect" parent="MarginContainer/HBoxContainer/PlantfoodSlotContainer"]
+visible = false
+light_mask = 0
+layout_mode = 2
+texture = ExtResource("3")
+stretch_mode = 5
+
+[node name="SlotTexture10" type="TextureRect" parent="MarginContainer/HBoxContainer/PlantfoodSlotContainer"]
+visible = false
+light_mask = 0
+layout_mode = 2
+texture = ExtResource("3")
+stretch_mode = 5
+
+[node name="EmptyRight" type="Control" parent="MarginContainer/HBoxContainer"]
+light_mask = 0
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="PlantfoodButton" type="TextureButton" parent="."]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 0
+offset_left = 38.0
+offset_top = 38.0
+offset_right = 143.0
+offset_bottom = 149.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4")
+texture_pressed = ExtResource("5")
+texture_hover = ExtResource("5")
+stretch_mode = 0
+
+[connection signal="pressed" from="PlantfoodButton" to="." method="PlantfoodButtonPressed"]

@@ -1,0 +1,29 @@
+[gd_scene load_steps=8 format=4 uid="uid://c0ar07i7dju5p"]
+
+[ext_resource type="PackedScene" uid="uid://jm05awl7yeg" path="res://Prefab/TowerDefense/Character/TowerDefenseGravestone.tscn" id="1"]
+[ext_resource type="Script" uid="uid://c5i3od6canhtq" path="res://Asset/Anime/Character/GraveStone/TargetCold/Scene/TowerDefenseGraveStoneTargetCold.gd" id="2"]
+[ext_resource type="Script" uid="uid://bxlwoxox5hth3" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventForzen.gd" id="3"]
+[ext_resource type="Resource" uid="uid://dxgmcxo8r3vkg" path="res://Asset/Anime/Character/GraveStone/TargetCold/Config/TowerDefenseGraveStoneTargetCold.tres" id="4"]
+[ext_resource type="PackedScene" uid="uid://dstkpvrkoq7yl" path="res://Asset/Anime/Character/GraveStone/TargetCold/GraveStoneTargetCold.tscn" id="5"]
+[ext_resource type="Texture2D" uid="uid://0ge07rl1l2gc" path="res://Asset/Anime/Character/GraveStone/TargetCold/DamagePoint/TargetStones5_1.png" id="6"]
+
+[sub_resource type="Resource" id="Resource_7laa4"]
+script = ExtResource("3")
+time = 3.0
+iceSpeedDownTime = 15.0
+fliterShield = false
+metadata/_custom_type_script = "uid://bxlwoxox5hth3"
+
+[node name="TowerDefenseGraveStoneTargetCold" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+eventList = [SubResource("Resource_7laa4")]
+config = ExtResource("4")
+sprite = NodePath("SpriteGroup/TransformPoint/GraveStoneTargetCold")
+PreviewDamagePointPersontage = 1.0
+
+[node name="GraveStoneTargetCold" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("5")]
+position = Vector2(0, -18)
+Animation/MediaReplace/TargetStones5_1.png = ExtResource("6")
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 26)

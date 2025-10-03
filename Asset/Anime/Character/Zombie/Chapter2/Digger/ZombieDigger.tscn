@@ -1,0 +1,115 @@
+[gd_scene load_steps=4 format=4 uid="uid://c1q1kwxvyt7jh"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://3yee6hfjyi2s" path="res://Asset/Anime/Character/Zombie/Chapter2/Digger/ZombieDigger.tres" id="2"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="3"]
+
+[node name="ZombieDigger" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -80)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/Zombie_digger_body = true
+Animation/LayerVisible/Zombie_digger_dig = true
+Animation/LayerVisible/Zombie_digger_dirt = true
+Animation/LayerVisible/Zombie_digger_hardhat = true
+Animation/LayerVisible/Zombie_digger_head_eye = true
+Animation/LayerVisible/Zombie_digger_head_eye1 = true
+Animation/LayerVisible/Zombie_digger_innerarm_hand = true
+Animation/LayerVisible/Zombie_digger_innerarm_lower = true
+Animation/LayerVisible/Zombie_digger_innerarm_upper = true
+Animation/LayerVisible/Zombie_digger_innerleg_foot = true
+Animation/LayerVisible/Zombie_digger_innerleg_lower = true
+Animation/LayerVisible/Zombie_digger_innerleg_upper = true
+Animation/LayerVisible/Zombie_digger_outerarm_upper = true
+Animation/LayerVisible/Zombie_digger_outerleg_foot = true
+Animation/LayerVisible/Zombie_digger_outerleg_lower = true
+Animation/LayerVisible/Zombie_digger_outerleg_upper = true
+Animation/LayerVisible/Zombie_digger_pickaxe = true
+Animation/LayerVisible/Zombie_digger_rise = true
+Animation/LayerVisible/Zombie_outerarm_hand = true
+Animation/LayerVisible/Zombie_outerarm_lower = true
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/anim_head1 = true
+Animation/LayerVisible/anim_head2 = true
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/Zombie_digger_body.png = null
+Animation/MediaReplace/Zombie_digger_dig0.png = null
+Animation/MediaReplace/Zombie_digger_dig1.png = null
+Animation/MediaReplace/Zombie_digger_dig2.png = null
+Animation/MediaReplace/Zombie_digger_dig3.png = null
+Animation/MediaReplace/Zombie_digger_dig4.png = null
+Animation/MediaReplace/Zombie_digger_dig5.png = null
+Animation/MediaReplace/Zombie_digger_dirt.png = null
+Animation/MediaReplace/Zombie_digger_hardhat.png = null
+Animation/MediaReplace/Zombie_digger_head.png = null
+Animation/MediaReplace/Zombie_digger_head2.png = null
+Animation/MediaReplace/Zombie_digger_head_eye.png = null
+Animation/MediaReplace/Zombie_digger_innerarm_hand.png = null
+Animation/MediaReplace/Zombie_digger_innerarm_lower.png = null
+Animation/MediaReplace/Zombie_digger_innerarm_upper.png = null
+Animation/MediaReplace/Zombie_digger_innerleg_foot.png = null
+Animation/MediaReplace/Zombie_digger_innerleg_lower.png = null
+Animation/MediaReplace/Zombie_digger_innerleg_upper.png = null
+Animation/MediaReplace/Zombie_digger_jaw.png = null
+Animation/MediaReplace/Zombie_digger_outerarm_hand.png = null
+Animation/MediaReplace/Zombie_digger_outerarm_lower.png = null
+Animation/MediaReplace/Zombie_digger_outerarm_upper.png = null
+Animation/MediaReplace/Zombie_digger_outerarm_upper2.png = null
+Animation/MediaReplace/Zombie_digger_outerleg_fool.png = null
+Animation/MediaReplace/Zombie_digger_outerleg_lower.png = null
+Animation/MediaReplace/Zombie_digger_outerleg_upper.png = null
+Animation/MediaReplace/Zombie_digger_pickaxe.png = null
+Animation/MediaReplace/Zombie_digger_rise2.png = null
+Animation/MediaReplace/Zombie_digger_rise3.png = null
+Animation/MediaReplace/Zombie_digger_rise4.png = null
+Animation/MediaReplace/Zombie_digger_rise5.png = null
+Animation/MediaReplace/Zombie_digger_rise6.png = null
+Animation/MediaReplace/Zombie_digger_rise_ground.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="HeadSlot" type="Node2D" parent="."]
+position = Vector2(-18.5593, -44.0959)
+rotation = 0.0164183
+scale = Vector2(0.799778, 0.799778)
+script = ExtResource("3")
+followSlotId = 11
+offset = Vector2(25, 30)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ArmSlot" type="Node2D" parent="."]
+position = Vector2(0.589239, 3.10822)
+rotation = 0.074227
+scale = Vector2(0.799742, 0.799744)
+script = ExtResource("3")
+followSlotId = 19
+offset = Vector2(10, 20)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="HardHatSlot" type="Node2D" parent="."]
+position = Vector2(-14.7402, -60.3814)
+rotation = 0.051833
+scale = Vector2(0.799643, 0.799643)
+script = ExtResource("3")
+followSlotId = 22
+offset = Vector2(55, 22)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="PickSlot" type="Node2D" parent="."]
+position = Vector2(-30.3465, 4.08595)
+rotation = 0.130735
+scale = Vector2(0.799467, 0.799467)
+script = ExtResource("3")
+followSlotId = 3
+offset = Vector2(25, 25)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="GroundSlot" type="Node2D" parent="."]
+position = Vector2(-95.17, 10)
+script = ExtResource("3")
+followSlotId = 1
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

@@ -1,0 +1,39 @@
+[gd_scene load_steps=9 format=4 uid="uid://cfyhbqdhrpbd1"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://dpksqgpmiuemp" path="res://Asset/Anime/Character/Plant/Chapter2/TabooDoomShroom/Scene/TowerDefensePlantTabooDoomShroom.gd" id="2"]
+[ext_resource type="Script" uid="uid://c3wiwula8chdo" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventExplodeHurt.gd" id="3"]
+[ext_resource type="Script" uid="uid://codard4rr854y" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventCraterCreate.gd" id="4"]
+[ext_resource type="Resource" uid="uid://bbgfhrsms15hv" path="res://Asset/Anime/Character/Plant/Chapter2/TabooDoomShroom/Config/TowerDefensePlantTabooDoomShroom.tres" id="5"]
+[ext_resource type="PackedScene" uid="uid://u70ggpgvp4bb" path="res://Asset/Anime/Character/Plant/Chapter2/TabooDoomShroom/TabooDoomShroom.tscn" id="6"]
+
+[sub_resource type="Resource" id="Resource_hs6c2"]
+script = ExtResource("3")
+type = "Bomb"
+num = 100000.0
+burns = true
+metadata/_custom_type_script = "uid://c3wiwula8chdo"
+
+[sub_resource type="Resource" id="Resource_koon0"]
+script = ExtResource("4")
+metadata/_custom_type_script = "uid://codard4rr854y"
+
+[node name="TowerDefensePlantTabooDoomShroom" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+eventList = [SubResource("Resource_hs6c2"), SubResource("Resource_koon0")]
+config = ExtResource("5")
+sprite = NodePath("FrontEffectNode/TabooDoomShroom")
+gravity = 245.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="TabooDoomShroom" parent="FrontEffectNode" index="0" instance=ExtResource("6")]
+offset = Vector2(-40.7737, -39.8442)
+trueFrameRate = 30.0
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 30)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)

@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="TowerDefensePlantConfig" load_steps=2 format=4 uid="uid://dkrqqkn8ty37x"]
+
+[ext_resource type="Script" uid="uid://bqd2rkadn8h4e" path="res://Resource/TowerDefense/Character/Config/TowerDefensePlantConfig.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+canUsePlantfood = true
+name = "PlantCorntrop"
+hitpointsNearDeath = 0.0
+hitpoints = 300.0
+smashHurt = -1.0
+spikeHurt = 300.0
+sleepTime = "Never"
+height = 1
+damagePointData = null
+armorData = null
+customData = null
+ashScene = null
+homeWorld = 1
+costRise = -1
+cost = 150
+packetCooldown = 7.5
+startingCooldown = 0.0
+plantCover = []
+plantCoverRecycle = []
+plantGridType = [1, 2, 10]
+plantGridOverrideType = 0
+collisionFlags = 9
+maskFlags = 8
+unUseBuffFlags = 0
+physiqueTypeFlags = 16
+elementFlags = 0
+Flag/Collision = 9
+Flag/Mask = 8
+Flag/UnUseBuff = 0
+Flag/PhysiqueType = 16
+Flag/Elemet = 0

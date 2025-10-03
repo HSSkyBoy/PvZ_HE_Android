@@ -1,0 +1,15 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://d0aylc13b87r0"
+path="res://.godot/imported/BrianneTod.ttf-e4147898c8ebc377b7c19341dee76827.fontdata"
+
+[deps]
+
+source_file="res://Asset/Font/BrianneTod.ttf"
+dest_files=["res://.godot/imported/BrianneTod.ttf-e4147898c8ebc377b7c19341dee76827.fontdata"]
+
+[params]
+
+dummy_value_ignore_me=0

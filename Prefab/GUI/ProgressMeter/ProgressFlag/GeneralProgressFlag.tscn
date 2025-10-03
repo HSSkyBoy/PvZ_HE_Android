@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=4 uid="uid://bhdycsmtoyxld"]
+
+[ext_resource type="Script" uid="uid://budlda1bngggr" path="res://Prefab/GUI/ProgressMeter/ProgressFlag/GeneralProgressFlag.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dfjshdtegqvp2" path="res://Asset/Texture/GUI/General/FlagMeter/FlagMeteFlagPart.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://tuy45da5jdb2" path="res://Asset/Texture/GUI/General/FlagMeter/FlagMeterFlag.png" id="3"]
+
+[node name="GeneralProgressFlag" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1")
+
+[node name="FlagMask" type="ColorRect" parent="."]
+clip_children = 1
+layout_mode = 0
+offset_left = -15.0
+offset_top = -40.0
+offset_right = 24.0
+
+[node name="Pos" type="Node2D" parent="FlagMask"]
+unique_name_in_owner = true
+position = Vector2(15, 49.3391)
+
+[node name="ProgressMeterFlagBody" type="Sprite2D" parent="FlagMask/Pos"]
+position = Vector2(12, -5.99985)
+texture = ExtResource("2")
+
+[node name="ProgressMeterFlagSurface" type="Sprite2D" parent="FlagMask/Pos/ProgressMeterFlagBody"]
+position = Vector2(0, -10.9997)
+texture = ExtResource("3")

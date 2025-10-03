@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="MowerConfig" load_steps=6 format=4 uid="uid://c3ejgs42fjxqv"]
+
+[ext_resource type="Script" uid="uid://smpmdxp3i7cd" path="res://Resource/TowerDefense/Mower/Event/MowerEventCreateSunConfig.gd" id="1"]
+[ext_resource type="Script" uid="uid://b4briakxj0xs6" path="res://Resource/TowerDefense/Mower/MowerConfig.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://d3lg64yyo5h42" path="res://Asset/Anime/Character/Mower/Sun/LawnMowerSun.tscn" id="3"]
+[ext_resource type="Texture2D" uid="uid://cltuhvqt2yj0j" path="res://Asset/Texture/TowerDefense/Mower/MowerSun.png" id="4"]
+
+[sub_resource type="Resource" id="Resource_v56j4"]
+script = ExtResource("1")
+num = 25
+metadata/_custom_type_script = "uid://smpmdxp3i7cd"
+
+[resource]
+script = ExtResource("2")
+texture = ExtResource("4")
+sprite = ExtResource("3")
+saveKey = "MowerSun"
+unlockCheckList = []
+name = "TOWERDEFENSE_MOWER_SUN_NAME"
+describe = "TOWERDEFENSE_MOWER_SUN_EXPRESTION"
+handbookDescribe = "TOWERDEFENSE_MOWER_SUN_HANDBOOK_EXPRESTION"
+handbookStory = "TOWERDEFENSE_MOWER_SUN_HANDBOOK_STORY"
+eventList = [SubResource("Resource_v56j4")]
+metadata/_custom_type_script = "uid://xmwd4jomf83s"

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=4 uid="uid://cjc8tc43kdv47"]
+
+[ext_resource type="Script" uid="uid://dfvmv6dhijek4" path="res://Prefab/GUI/NpcTalk/NpcTalkControl.gd" id="1"]
+
+[node name="NpcTalkControl" type="Node2D"]
+script = ExtResource("1")

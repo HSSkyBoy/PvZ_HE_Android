@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="TutorialConfig" load_steps=9 format=4 uid="uid://fqk4jcnpqvwe"]
+
+[ext_resource type="JSON" path="res://Asset/Config/Tutorial/Level1_5/Level1_5Tutorial.json" id="1"]
+[ext_resource type="Script" uid="uid://dhr6gtuscagn1" path="res://Core/TutorialManager/Resource/TutorialConfig.gd" id="2"]
+[ext_resource type="Script" uid="uid://bi5lpkxwgy2hn" path="res://Core/BroadCastManager/Resource/BroadCastConfig.gd" id="3"]
+[ext_resource type="Script" uid="uid://ds52nyu558rg1" path="res://Resource/Tutorial/Condition/TutorialConditionCheckCharaterNum.gd" id="4"]
+[ext_resource type="Script" uid="uid://b1kf4elevtwaq" path="res://Core/TutorialManager/Resource/TutorialStep/TutorialStepConfig.gd" id="5"]
+
+[sub_resource type="Resource" id="Resource_uw03y"]
+script = ExtResource("3")
+broadCastString = "LEVEL1_5_BROADCAST_1"
+broadCastTime = -1.0
+
+[sub_resource type="Resource" id="Resource_riicy"]
+script = ExtResource("4")
+characterName = "PlantSunflowerPea"
+method = "<="
+num = 0
+
+[sub_resource type="Resource" id="Resource_87qrj"]
+script = ExtResource("5")
+broadCastUse = true
+broadCastConfig = SubResource("Resource_uw03y")
+conditionList = [SubResource("Resource_riicy")]
+
+[resource]
+script = ExtResource("2")
+data = ExtResource("1")
+saveKey = ""
+step = [SubResource("Resource_87qrj")]
+metadata/_custom_type_script = "uid://dhr6gtuscagn1"

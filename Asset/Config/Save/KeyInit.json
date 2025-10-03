@@ -1,0 +1,30 @@
+{
+	"AdventureChapterIndex" : -1 ,
+	"AdventureChapter1Index" : -1 ,
+	"AdventureChapter2Index" : -1 ,
+	"AdventureChapter3Index" : -1 ,
+	"AdventureChapter4Index" : -1 ,
+	"AdventureChapter5Index" : -1 ,
+	"AdventureChapter6Index" : -1 ,
+	
+	"CurrentShovel" : "ShovelDefault" ,
+	"CurrentMower" : "MowerDefault" ,
+	
+	"CurrentDifficult" : "Normal" ,
+	"CoinNum" : 0.0 ,
+	"PacketReSlect" : [] ,
+	"PacketGroup1" : [] ,
+	"PacketGroup2" : [] ,
+	"PacketGroup3" : [] ,
+	"PacketGroup4" : [] ,
+	"PacketGroup5" : [] ,
+	"PacketGroup6" : [] ,
+	"PacketGroupName1" : "分组1" ,
+	"PacketGroupName2" : "分组2" ,
+	"PacketGroupName3" : "分组3" ,
+	"PacketGroupName4" : "分组4" ,
+	"PacketGroupName5" : "分组5" ,
+	"PacketGroupName6" : "分组6" ,
+	
+	"OnlineMyCollection" : {} ,
+}

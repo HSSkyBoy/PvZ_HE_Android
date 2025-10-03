@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="TowerDefensePacketConfig" load_steps=3 format=4 uid="uid://rmggo8r1mdfj"]
+
+[ext_resource type="Resource" uid="uid://dwa6qa7tplv2v" path="res://Asset/Anime/Character/Plant/Chapter1/SunflowerPea/Config/TowerDefensePlantSunflowerPea.tres" id="1"]
+[ext_resource type="Script" uid="uid://c6d3po5310ugw" path="res://Resource/TowerDefense/PacketBank/Packet/TowerDefensePacketConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+saveKey = "PlantSunflowerPea"
+unlockCheckList = []
+name = "TOWERDEFENSE_PLANT_SUNFLOWERPEA_NAME"
+describe = "TOWERDEFENSE_PLANT_SUNFLOWERPEA_EXPRESTION"
+plantfood = ""
+handbookDescribe = "TOWERDEFENSE_PLANT_SUNFLOWERPEA_HANDBOOK_EXPRESTION"
+handbookStory = "TOWERDEFENSE_PLANT_SUNFLOWERPEA_HANDBOOK_STORY"
+packetAnimeClip = "BodyIdle"
+packetAnimeOffset = Vector2(21, 28)
+packetAnimeScale = Vector2(0.5, 0.5)
+characterConfig = ExtResource("1")
+type = 0
+spawnMethod = "Rise"
+overrideCostRise = -1
+overrideCost = -1
+overridPacketCooldown = -1.0
+overridStartingCooldown = -1.0
+overrideWeight = -1
+overrideWavePointCost = -1
+initArmor = []
+plantUseCell = true
+Armor = []
+Cell/plantUseCell = true
+metadata/_custom_type_script = "uid://c6d3po5310ugw"

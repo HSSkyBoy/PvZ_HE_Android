@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="TowerDefenseProjectileConfig" load_steps=4 format=4 uid="uid://c6g53msikivs2"]
+
+[ext_resource type="PackedScene" uid="uid://bto1eksfijahm" path="res://Prefab/ProjectileEffect/Groom/TowerDefenseProjectileEffectGroom.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://66ajnsmq2qtq" path="res://Asset/Texture/TowerDefense/Projectile/Gloom/ProjectileGloom.tscn" id="2"]
+[ext_resource type="Script" uid="uid://b7ddnv74g0463" path="res://Resource/TowerDefense/Projectile/TowerDefenseProjectileConfig.gd" id="3"]
+
+[resource]
+script = ExtResource("3")
+name = "GloomDefault"
+size = Vector2(28, 28)
+baseDamage = 20.0
+projectileScene = ExtResource("2")
+projectileObject = 311
+splatSceneType = "Particles"
+splatAudio = "SplatNormal"
+splatScene = null
+splatObject = 0
+hitEffect = ExtResource("1")
+hitTargetEventList = []
+hitCharacterEventList = []
+hitGroundEventList = []
+rotateScale = 0.0
+hitBody = false
+fireLength = -1.0
+useRange = false
+rangeSize = Vector2(0.5, 0.5)
+hitPesontage = 0.25
+damageFlags = 2
+fireMethodFlags = 2
+collisionFlags = 43
+catapultHeight = 400.0
+penetrateNum = 3
+penetrateOverBack = true
+backOutGround = true
+backDuration = 1.0
+Flag/Damage = 2
+Flag/FireMethod = 2
+Flag/Collision = 43
+Catapult/Height = 400.0

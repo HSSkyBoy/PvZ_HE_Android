@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="FallingObjectWeightItemConfig" load_steps=2 format=4 uid="uid://stm3ch1rbwm2"]
+
+[ext_resource type="Script" uid="uid://cc6ssdxjdoo4v" path="res://Resource/FallingObjects/WeightItem/FallingObjectWeightItemConfig.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+empty = false
+item = 23
+weight = 1
+metadata/_custom_type_script = "uid://cc6ssdxjdoo4v"

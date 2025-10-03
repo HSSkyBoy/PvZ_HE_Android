@@ -1,0 +1,116 @@
+[gd_scene load_steps=13 format=4 uid="uid://cnwqwm6ecgmhp"]
+
+[ext_resource type="Script" uid="uid://8bcorxqvra7n" path="res://Prefab/TowerDefense/Character/TowerDefenseCharacter.gd" id="1"]
+[ext_resource type="Shader" uid="uid://bbit4jhs4p0ww" path="res://Asset/Shader/TowerDefense/ShaderTowerDefenseCharacter.gdshader" id="2"]
+[ext_resource type="Texture2D" uid="uid://c1jocs3s84m21" path="res://Asset/Texture/Character/Effect/Shadow.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://667tssge1tab" path="res://Asset/Texture/Character/Effect/Icetrap.png" id="4"]
+[ext_resource type="Shape2D" uid="uid://baneigxsob6qg" path="res://Prefab/TowerDefense/Base/TowerDefenseCollitionShape.tres" id="5"]
+[ext_resource type="PackedScene" uid="uid://th8qgki21itu" path="res://Script/Component/TowerDefense/Character/BuffComponent/BuffComponent.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://xbkiy0tlw2r" path="res://Script/Component/TowerDefense/Character/ShowHealthComponent/ShowHealthComponent.tscn" id="7"]
+[ext_resource type="Script" uid="uid://crrpyxc32l472" path="res://addons/godot_state_charts/state_chart.gd" id="8"]
+[ext_resource type="Script" uid="uid://dp7fkbu3flis1" path="res://addons/godot_state_charts/compound_state.gd" id="9"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="10"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="11"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tx1wq"]
+shader = ExtResource("2")
+shader_parameter/brightStrength = 0.0
+shader_parameter/whiteStrength = 0.0
+shader_parameter/surfaceUpPos = 0.0
+shader_parameter/surfaceDownPos = 1.0
+shader_parameter/surfacePos = 1.0
+shader_parameter/ash = false
+shader_parameter/iceSpeedDown = false
+shader_parameter/cover = false
+shader_parameter/hypnoses = false
+shader_parameter/imitater = false
+
+[node name="TowerDefenseCharacter" type="Node2D"]
+z_index = -15
+script = ExtResource("1")
+gravity = 367.5
+
+[node name="BackEffectNode" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="SpriteGroup" type="CanvasGroup" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_tx1wq")
+fit_margin = 0.0
+clear_margin = 0.0
+
+[node name="SpriteMask" type="ColorRect" parent="SpriteGroup"]
+offset_left = -30.0
+offset_top = -90.0
+offset_right = 31.0
+offset_bottom = 37.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="TransformPoint" type="Marker2D" parent="SpriteGroup"]
+unique_name_in_owner = true
+position = Vector2(0, 18)
+
+[node name="FrontEffectNode" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="ShadowSprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = -1
+position = Vector2(0, 18)
+texture = ExtResource("3")
+
+[node name="IcetrapSprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(0, 22)
+texture = ExtResource("4")
+
+[node name="HitBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+unique_name_in_owner = true
+position = Vector2(-0.25, -6.5)
+shape = ExtResource("5")
+
+[node name="BuffComponent" parent="." instance=ExtResource("6")]
+unique_name_in_owner = true
+
+[node name="ShowHealthComponent" parent="." instance=ExtResource("7")]
+unique_name_in_owner = true
+alive = false
+
+[node name="StateChart" type="Node" parent="."]
+unique_name_in_owner = true
+process_mode = 4
+script = ExtResource("8")
+
+[node name="CompoundState" type="Node" parent="StateChart"]
+script = ExtResource("9")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateChart/CompoundState"]
+script = ExtResource("10")
+
+[node name="Sleep" type="Node" parent="StateChart/CompoundState"]
+script = ExtResource("10")
+
+[node name="ToIdle" type="Node" parent="StateChart/CompoundState"]
+script = ExtResource("11")
+to = NodePath("../Idle")
+event = &"ToIdle"
+delay_in_seconds = "0.0"
+
+[node name="ToSleep" type="Node" parent="StateChart/CompoundState"]
+script = ExtResource("11")
+to = NodePath("../Sleep")
+event = &"ToSleep"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="StateChart/CompoundState/Idle" to="." method="IdleEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Idle" to="." method="IdleExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Idle" to="." method="IdleProcessing"]
+[connection signal="state_entered" from="StateChart/CompoundState/Sleep" to="." method="SleepEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Sleep" to="." method="SleepExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Sleep" to="." method="SleepProcessing"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=4 uid="uid://th8qgki21itu"]
+
+[ext_resource type="Script" uid="uid://drylf85wj08av" path="res://Script/Component/TowerDefense/Character/BuffComponent/BuffComponent.gd" id="1"]
+
+[node name="BuffComponent" type="Node2D"]
+script = ExtResource("1")

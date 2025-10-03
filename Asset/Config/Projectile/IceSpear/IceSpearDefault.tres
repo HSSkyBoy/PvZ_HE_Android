@@ -1,0 +1,65 @@
+[gd_resource type="Resource" script_class="TowerDefenseProjectileConfig" load_steps=12 format=4 uid="uid://ctle60ke6iohr"]
+
+[ext_resource type="Script" uid="uid://xug53xwvy4my" path="res://Resource/TowerDefense/Character/Buff/TowerDefenseCharacterBuffIceSpeedDown.gd" id="1"]
+[ext_resource type="Script" uid="uid://dtvfjfgy00epu" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventAddBuff.gd" id="2"]
+[ext_resource type="Script" uid="uid://bxlwoxox5hth3" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventForzen.gd" id="3"]
+[ext_resource type="Script" uid="uid://1jb2yen6kwy8" path="res://Resource/TowerDefense/Character/Event/Condition/TowerDefenseCharacterEventConditionRandom.gd" id="4"]
+[ext_resource type="PackedScene" uid="uid://cvg1cajrl4s4e" path="res://Asset/Texture/TowerDefense/Projectile/Spike/ProjectileSpike.tscn" id="5"]
+[ext_resource type="Script" uid="uid://b7ddnv74g0463" path="res://Resource/TowerDefense/Projectile/TowerDefenseProjectileConfig.gd" id="6"]
+[ext_resource type="PackedScene" uid="uid://c73f1gkmmso7m" path="res://Prefab/Particles/Splats/SnowPeaSplats/SnowPeaSplats.tscn" id="7"]
+
+[sub_resource type="Resource" id="Resource_8u1yh"]
+script = ExtResource("1")
+time = 15.0
+refresh = true
+metadata/_custom_type_script = "uid://xug53xwvy4my"
+
+[sub_resource type="Resource" id="Resource_dt5ec"]
+script = ExtResource("2")
+buffList = [SubResource("Resource_8u1yh")]
+metadata/_custom_type_script = "uid://dtvfjfgy00epu"
+
+[sub_resource type="Resource" id="Resource_mia7t"]
+script = ExtResource("3")
+time = 3.0
+iceSpeedDownTime = 15.0
+fliterShield = false
+metadata/_custom_type_script = "uid://bxlwoxox5hth3"
+
+[sub_resource type="Resource" id="Resource_1qix7"]
+script = ExtResource("4")
+eventList = [SubResource("Resource_mia7t")]
+percentage = 0.05
+metadata/_custom_type_script = "uid://1jb2yen6kwy8"
+
+[resource]
+script = ExtResource("6")
+name = "IceSpearDefault"
+size = Vector2(28, 28)
+baseDamage = 60.0
+projectileScene = ExtResource("5")
+projectileObject = 314
+splatSceneType = "Sprite"
+splatAudio = "SplatNormal"
+splatScene = ExtResource("7")
+splatObject = 102
+hitEffect = null
+hitCharacterEventList = [SubResource("Resource_dt5ec"), SubResource("Resource_1qix7")]
+hitGroundEventList = []
+hitBody = true
+fireLength = -1.0
+useRange = false
+rangeSize = Vector2(0.5, 0.5)
+hitPesontage = 0.25
+damageFlags = 2
+fireMethodFlags = 5
+collisionFlags = 1
+catapultHeight = 400.0
+penetrateNum = 3
+penetrateOverBack = true
+backOutGround = true
+backDuration = 1.0
+Flag/Damage = 2
+Flag/FireMethod = 5
+Flag/Collision = 1
+Penetrate/Num = 3

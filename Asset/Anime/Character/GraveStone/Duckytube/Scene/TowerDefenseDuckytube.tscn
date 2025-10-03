@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=4 uid="uid://c60srph3nqmhq"]
+
+[ext_resource type="PackedScene" uid="uid://jm05awl7yeg" path="res://Prefab/TowerDefense/Character/TowerDefenseGravestone.tscn" id="1"]
+[ext_resource type="Script" uid="uid://c3tpgtegwsqx1" path="res://Asset/Anime/Character/GraveStone/Duckytube/Scene/TowerDefenseDuckytube.gd" id="2"]
+[ext_resource type="Resource" uid="uid://t5dfqg2qsqab" path="res://Asset/Anime/Character/GraveStone/Duckytube/Config/TowerDefenseDuckytube.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://l0bs6172j65u" path="res://Asset/Anime/Character/GraveStone/Duckytube/Duckytube.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://dphu2bsa3yuti" path="res://Asset/Anime/Character/GraveStone/Duckytube/DamagePoint/duckytube_1.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://c1jocs3s84m21" path="res://Asset/Texture/Character/Effect/Shadow.png" id="6"]
+
+[node name="TowerDefenseDuckytube" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+rise = false
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/Duckytube")
+PreviewDamagePointPersontage = 1.0
+
+[node name="SpriteMask" parent="SpriteGroup" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 79.0
+offset_bottom = 92.0
+
+[node name="Duckytube" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+position = Vector2(0, -18)
+Animation/MediaReplace/duckytube_1.png = ExtResource("5")
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 26)
+scale = Vector2(1.11628, 1.22222)
+texture = ExtResource("6")

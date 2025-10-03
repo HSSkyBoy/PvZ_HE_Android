@@ -1,0 +1,168 @@
+[gd_scene load_steps=13 format=4 uid="uid://rpjdq2sskhcc"]
+
+[ext_resource type="Script" uid="uid://dch3mqn6uyts2" path="res://Prefab/GUI/DialogBox/DailyChallenge/DailyChallenge.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://c855vjpdgvpr" path="res://Asset/Texture/GUI/DailyChallenge/DailyChallengeBG.png" id="2"]
+[ext_resource type="FontFile" uid="uid://bibg4dobk6vpn" path="res://Asset/Font/fzjz.ttf" id="3"]
+[ext_resource type="Texture2D" uid="uid://d0smlukjcx1r6" path="res://Asset/Texture/GUI/DailyChallenge/DailyChallengeCloseButton.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://5lvxpd7jaoc4" path="res://Asset/Texture/GUI/DailyChallenge/DailyChallengeCloseButtonPress.png" id="5"]
+[ext_resource type="PackedScene" uid="uid://bml60wmq62jay" path="res://Prefab/GUI/Button/MainButton.tscn" id="6"]
+[ext_resource type="Texture2D" uid="uid://becxfsjmy31td" path="res://Asset/Texture/GUI/DailyChallenge/DailyChallengePlayButton.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://c3mh3bdn1qs1k" path="res://Asset/Texture/GUI/DailyChallenge/DailyChallengePlayButtonPress.png" id="8"]
+[ext_resource type="PackedScene" uid="uid://cpx5fm80mnnd5" path="res://Prefab/GUI/DialogBox/DailyChallenge/Calendar/Calendar.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://bgkuthysw0876" path="res://Prefab/GUI/Button/NinePatchButtonBase/NinePatchButtonBase.tscn" id="10"]
+[ext_resource type="Texture2D" uid="uid://cq4qjqgaghw66" path="res://Asset/Texture/GUI/General/Special/Present.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://begay4jmpjc5w" path="res://Asset/Texture/GUI/General/Special/PresentOpen.png" id="12"]
+
+[node name="DailyChallenge" type="Control" node_paths=PackedStringArray("dragControl")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+dragControl = NodePath("Layer/BackgroundTexture")
+metadata/_custom_type_script = "uid://b4l86rhpq35q0"
+
+[node name="Layer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="ColorRect" type="ColorRect" parent="Layer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="BackgroundTexture" type="TextureRect" parent="Layer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -486.0
+offset_top = -364.0
+offset_right = 486.0
+offset_bottom = 364.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.675, 0.675)
+pivot_offset = Vector2(486, 364)
+texture = ExtResource("2")
+
+[node name="TextLabel" type="Label" parent="Layer/BackgroundTexture"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 0
+offset_left = 299.0
+offset_right = 665.0
+offset_bottom = 85.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 48
+text = "每日挑战"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FinishLabel" type="RichTextLabel" parent="Layer/BackgroundTexture"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 0
+offset_left = 0.0740967
+offset_top = 500.296
+offset_right = 413.074
+offset_bottom = 585.296
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "本月已完成挑战[color=red]4[/color]天"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AwardLabel" type="RichTextLabel" parent="Layer/BackgroundTexture"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 0
+offset_left = 395.63
+offset_top = 482.518
+offset_right = 859.63
+offset_bottom = 603.518
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "今日第1关悬赏:[img=80]uid://4hw45nbwv7f3[/img][color=green]2000$[/color]"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="CloseButton" type="TextureButton" parent="Layer/BackgroundTexture"]
+layout_mode = 0
+offset_left = 877.111
+offset_top = 18.8148
+offset_right = 920.111
+offset_bottom = 58.8148
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4")
+texture_pressed = ExtResource("5")
+texture_hover = ExtResource("5")
+
+[node name="PlayButton" parent="Layer/BackgroundTexture" instance=ExtResource("6")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 289.0
+offset_top = 609.0
+offset_right = 675.0
+offset_bottom = 694.0
+texture_normal = ExtResource("7")
+texture_pressed = ExtResource("7")
+texture_hover = ExtResource("8")
+text = "进入挑战"
+
+[node name="TextLabel" parent="Layer/BackgroundTexture/PlayButton" index="0"]
+offset_left = 417.025
+offset_top = 465.375
+offset_right = 783.025
+offset_bottom = 550.375
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 48
+text = "进入挑战"
+
+[node name="Calendar" parent="Layer/BackgroundTexture" instance=ExtResource("9")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 98.0
+offset_top = 74.0
+offset_right = -124.0
+offset_bottom = -216.0
+
+[node name="AwardButton" parent="Layer/BackgroundTexture" instance=ExtResource("10")]
+layout_mode = 0
+offset_left = 374.889
+offset_top = 479.556
+offset_right = 474.889
+offset_bottom = 579.556
+mouse_default_cursor_shape = 2
+text = "累计奖励"
+normalTexture = ExtResource("11")
+pressedTexture = ExtResource("12")
+hoverTexture = ExtResource("12")
+
+[node name="NinePatchTexture" parent="Layer/BackgroundTexture/AwardButton" index="0"]
+texture = ExtResource("11")
+
+[node name="LabelText" parent="Layer/BackgroundTexture/AwardButton/CenterContainer" index="0"]
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_constants/outline_size = 5
+text = "累计奖励"
+
+[connection signal="pressed" from="Layer/BackgroundTexture/CloseButton" to="." method="CloseButtonPressed"]
+[connection signal="pressed" from="Layer/BackgroundTexture/PlayButton" to="." method="PlayButtonPressed"]
+[connection signal="select" from="Layer/BackgroundTexture/Calendar" to="." method="CalendarSelect"]
+[connection signal="pressed" from="Layer/BackgroundTexture/AwardButton" to="." method="AwardButtonPressed"]
+
+[editable path="Layer/BackgroundTexture/PlayButton"]
+[editable path="Layer/BackgroundTexture/AwardButton"]

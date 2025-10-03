@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=4 uid="uid://byx450bienfai"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://7rvbdtmch78e" path="res://Asset/Anime/Character/Plant/Chapter2/GargantuarShroom/GargantuarShroom.tres" id="2"]
+
+[node name="GargantuarShroom" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+"Animation/LayerVisible/Layer 1" = true
+"Animation/LayerVisible/Layer 2" = true
+Animation/LayerVisible/sleep = true
+"Animation/LayerVisible/图层_16" = true
+"Animation/LayerVisible/图层_17" = true
+"Animation/LayerVisible/图层_18" = true
+"Animation/LayerVisible/图层_19" = true
+"Animation/LayerVisible/图层_20" = true
+"Animation/LayerVisible/图层_21" = true
+"Animation/LayerVisible/图层_22" = true
+"Animation/LayerVisible/图层_23" = true
+Animation/MediaReplace/GargantuarShroom_blink.png = null
+Animation/MediaReplace/GargantuarShroom_body.png = null
+Animation/MediaReplace/GargantuarShroom_hair1.png = null
+Animation/MediaReplace/GargantuarShroom_hair2.png = null
+Animation/MediaReplace/GargantuarShroom_hair3.png = null
+Animation/MediaReplace/GargantuarShroom_hair4.png = null
+Animation/MediaReplace/GargantuarShroom_hair5.png = null
+Animation/MediaReplace/GargantuarShroom_hair6.png = null
+Animation/MediaReplace/GargantuarShroom_hair7.png = null
+Animation/MediaReplace/GargantuarShroom_hair8.png = null
+Animation/MediaReplace/GargantuarShroom_head.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

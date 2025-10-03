@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharacterCustomData" load_steps=3 format=4 uid="uid://e8atvejm3cet"]
+
+[ext_resource type="Resource" uid="uid://c7wvcpapo8stl" path="res://Asset/Anime/Character/Plant/Chapter1/SunflowerPea/Custom/Config/SunflowerPeaCustom0.tres" id="1"]
+[ext_resource type="Script" uid="uid://onv5rieax7m5" path="res://Resource/General/Character/Costom/CharacterCustomData.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+customList = [ExtResource("1")]
+customDictionary = {
+"Custom0": {
+"Close": ["anim_face_sunflower", "anim_face", "TwinSunflower_leaf1", "TwinSunflower_leaf11", "TwinSunflower_leaf12"],
+"Config": ExtResource("1"),
+"Open": ["skin1_2", "skin1_4_1", "skin1_6", "skin1_4_2", "skin1_3", "skin1_1", "skin1_5", "skin1_7_1", "skin1_7_2", "skin1_8_1", "skin1_8_2", "skin1_6"]
+}
+}
+fliterOpenAll = ["skin1_2", "skin1_4_1", "skin1_6", "skin1_4_2", "skin1_3", "skin1_1", "skin1_5", "skin1_7_1", "skin1_7_2", "skin1_8_1", "skin1_8_2", "skin1_6"]
+fliterCloseAll = ["anim_face_sunflower", "anim_face", "TwinSunflower_leaf1", "TwinSunflower_leaf11", "TwinSunflower_leaf12"]
+metadata/_custom_type_script = "uid://onv5rieax7m5"

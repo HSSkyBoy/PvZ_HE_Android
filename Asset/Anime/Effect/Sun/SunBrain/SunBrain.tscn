@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=4 uid="uid://1bpoi0mgrvd7"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://ccsjnnf12xdg2" path="res://Asset/Anime/Effect/Sun/SunBrain/SunBrain.tres" id="2"]
+
+[node name="SunBrain" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+normalAlpha = true
+trueFrameRate = 60.0
+useTween = false
+skipLastFrame = false
+layerSlot = [null, null, null, null]
+layerSprite = [null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/Sun1 = true
+Animation/LayerVisible/Sun2 = true
+Animation/LayerVisible/Sun3 = true
+Animation/MediaReplace/Sun1.png = null
+Animation/MediaReplace/Sun2.png = null
+Animation/MediaReplace/Sun3.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

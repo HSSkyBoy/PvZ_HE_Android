@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="TowerDefensePacketConfig" load_steps=5 format=4 uid="uid://bjn74ax45wp0l"]
+
+[ext_resource type="Resource" uid="uid://dyatu8exuiso7" path="res://Asset/Anime/Character/Plant/Chapter2/Gloompult/Config/TowerDefensePlantGloompult.tres" id="1"]
+[ext_resource type="Script" uid="uid://c6d3po5310ugw" path="res://Resource/TowerDefense/PacketBank/Packet/TowerDefensePacketConfig.gd" id="2"]
+[ext_resource type="Script" uid="uid://p7yhpfahgp8d" path="res://Resource/UnlockCondition/UnlockConditionLevelFinishConfig.gd" id="3"]
+
+[sub_resource type="Resource" id="Resource_o3u2h"]
+script = ExtResource("3")
+levelSaveKey = "Level2_13"
+metadata/_custom_type_script = "uid://p7yhpfahgp8d"
+
+[resource]
+script = ExtResource("2")
+saveKey = "PlantGloompult"
+unlockCheckList = [SubResource("Resource_o3u2h")]
+name = "TOWERDEFENSE_PLANT_GLOOMPULT_NAME"
+describe = "TOWERDEFENSE_PLANT_GLOOMPULT_EXPRESTION"
+plantfood = ""
+handbookDescribe = "TOWERDEFENSE_PLANT_GLOOMPULT_HANDBOOK_EXPRESTION"
+handbookStory = "TOWERDEFENSE_PLANT_GLOOMPULT_HANDBOOK_STORY"
+packetAnimeClip = "Idle"
+packetAnimeOffset = Vector2(28, 28)
+packetAnimeScale = Vector2(0.4, 0.4)
+characterConfig = ExtResource("1")
+type = 0
+spawnMethod = "Rise"
+overrideCostRise = -1
+overrideCost = -1
+overridPacketCooldown = -1.0
+overridStartingCooldown = -1.0
+overrideWeight = -1
+overrideWavePointCost = -1
+initArmor = []
+plantUseCell = true
+Cell/plantUseCell = true
+metadata/_custom_type_script = "uid://c6d3po5310ugw"

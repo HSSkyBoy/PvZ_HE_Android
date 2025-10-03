@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="TowerDefenseMowerConfig" load_steps=3 format=4 uid="uid://dxoxk85767idk"]
+
+[ext_resource type="Resource" uid="uid://b7ukt8lg7v78n" path="res://Asset/Config/Mower/Config/MowerDefault.tres" id="1"]
+[ext_resource type="Script" uid="uid://cfjh2p650f2hs" path="res://Resource/TowerDefense/Character/Config/TowerDefenseMowerConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+mowerConfig = ExtResource("1")
+name = "MowerDefault"
+hitpointsNearDeath = 0.0
+hitpoints = 300.0
+smashHurt = -1.0
+spikeHurt = -1.0
+sleepTime = "Never"
+height = 2
+damagePointData = null
+armorData = null
+customData = null
+ashScene = null
+homeWorld = 1
+costRise = -1
+cost = 100
+packetCooldown = 120.0
+startingCooldown = 120.0
+plantCover = []
+plantCoverRecycle = []
+plantGridType = [-1]
+plantGridOverrideType = 0
+collisionFlags = 31
+maskFlags = 0
+unUseBuffFlags = 4294967295
+physiqueTypeFlags = 0
+elementFlags = 0
+Flag/Collision = 31
+Flag/Mask = 0
+Flag/UnUseBuff = 4294967295
+Flag/PhysiqueType = 0
+Flag/Elemet = 0

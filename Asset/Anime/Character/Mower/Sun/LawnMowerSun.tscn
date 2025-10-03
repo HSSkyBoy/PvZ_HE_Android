@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=4 uid="uid://d3lg64yyo5h42"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://nb34asg0va4h" path="res://Asset/Anime/Character/Mower/Sun/LawnMowerSun.tres" id="2"]
+
+[node name="LawnMowerSun" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-44, 4)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/LawnMower_body = true
+Animation/LayerVisible/LawnMower_engine = true
+Animation/LayerVisible/LawnMower_pull = true
+Animation/LayerVisible/Lawnmower_backwheel1 = true
+Animation/LayerVisible/Lawnmower_backwheel2 = true
+Animation/LayerVisible/Lawnmower_backwheelshine1 = true
+Animation/LayerVisible/Lawnmower_backwheelshine2 = true
+Animation/LayerVisible/Lawnmower_exhaust = true
+Animation/LayerVisible/Lawnmower_frontwheel1 = true
+Animation/LayerVisible/Lawnmower_frontwheel2 = true
+Animation/LayerVisible/Lawnmower_wheelshine1 = true
+Animation/LayerVisible/Lawnmower_wheelshine2 = true
+Animation/LayerVisible/body2 = true
+Animation/LayerVisible/body3 = true
+Animation/LayerVisible/flower = true
+Animation/LayerVisible/lawnmower_backwheelpiece1 = true
+Animation/LayerVisible/lawnmower_backwheelpiece2 = true
+Animation/LayerVisible/lawnmower_frontwheelpiece1 = true
+Animation/LayerVisible/lawnmower_frontwheelpiece2 = true
+Animation/LayerVisible/leaf = true
+Animation/MediaReplace/LawnMowerSun_body.png = null
+Animation/MediaReplace/LawnMowerSun_body2.png = null
+Animation/MediaReplace/LawnMowerSun_body3.png = null
+Animation/MediaReplace/LawnMowerSun_engine.png = null
+Animation/MediaReplace/LawnMowerSun_exhaust.png = null
+Animation/MediaReplace/LawnMowerSun_flower.png = null
+Animation/MediaReplace/LawnMowerSun_leaf.png = null
+Animation/MediaReplace/LawnMowerSun_pull.png = null
+Animation/MediaReplace/LawnMowerSun_wheel1.png = null
+Animation/MediaReplace/LawnMowerSun_wheel2.png = null
+Animation/MediaReplace/LawnMowerSun_wheelpiece.png = null
+Animation/MediaReplace/LawnMowerSun_wheelshine.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

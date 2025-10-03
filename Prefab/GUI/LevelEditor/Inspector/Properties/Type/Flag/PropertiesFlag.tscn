@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=4 uid="uid://dwohqr20egmxg"]
+
+[ext_resource type="PackedScene" uid="uid://ch1hh04p5qvav" path="res://Prefab/GUI/LevelEditor/Inspector/Properties/Type/Base/PropertiesBase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cut1xsovumj0p" path="res://Prefab/GUI/LevelEditor/Inspector/Properties/Type/Flag/PropertiesFlag.gd" id="2"]
+
+[node name="PropertiesFlag" instance=ExtResource("1")]
+light_mask = 0
+offset_right = 109.0
+offset_bottom = 148.0
+script = ExtResource("2")
+
+[node name="CheckBoxContainer" type="VBoxContainer" parent="HBoxContainer" index="0"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3

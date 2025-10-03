@@ -1,0 +1,99 @@
+[gd_scene load_steps=15 format=4 uid="uid://cdd7wrubqjg1b"]
+
+[ext_resource type="Script" uid="uid://b81ih62sj1rv1" path="res://Asset/Config/Map/Backyard/Scene/DayFull/TowerDefenseMapBackyardFull.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://c8g416v635ov3" path="res://Asset/Config/Map/Backyard/Scene/DayFull/TowerDefenseMapBackyardFullGradient.tres" id="2"]
+[ext_resource type="Texture2D" uid="uid://d3t8qubdinn6d" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Backyard/BackyardFull.jpg" id="3"]
+[ext_resource type="Texture2D" uid="uid://6jq52ylqm2y7" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Backyard/PoolSparkly.png" id="4"]
+[ext_resource type="Shader" uid="uid://bc8ixl427erpw" path="res://Asset/Shader/Map/MapPool.gdshader" id="5"]
+[ext_resource type="Texture2D" uid="uid://cfxpmm5gfirpi" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Backyard/PoolNoise.tres" id="6"]
+[ext_resource type="Texture2D" uid="uid://c3xxq8m8jsi7x" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Backyard/BackyardFloor.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://cf1ydnwxx75xx" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Backyard/BackyardDoor.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://bbbiwhq1ib7vi" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Stripe.png" id="9"]
+
+[sub_resource type="Curve" id="Curve_x2us5"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.504444, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_lya5w"]
+curve = SubResource("Curve_x2us5")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_57fty"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(120, 200, 1)
+gravity = Vector3(0, 0, 0)
+scale_min = 0.25
+scale_max = 0.75
+alpha_curve = SubResource("CurveTexture_lya5w")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_87gsp"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(100, 200, 1)
+gravity = Vector3(0, 0, 0)
+scale_min = 0.25
+scale_max = 0.75
+alpha_curve = SubResource("CurveTexture_lya5w")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0pxt0"]
+shader = ExtResource("5")
+shader_parameter/refraction_map = ExtResource("6")
+shader_parameter/refraction_stretch = Vector2(1, 1)
+shader_parameter/refraction_strength = 0.01
+shader_parameter/timer = 6.25
+
+[node name="TowerDefenseMapBackyardFull" type="Node2D" node_paths=PackedStringArray("stripe")]
+script = ExtResource("1")
+stripe = NodePath("Stripe")
+canvasModulateGradient = ExtResource("2")
+
+[node name="Backyard" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="PoolParticles" type="GPUParticles2D" parent="."]
+position = Vector2(817, 344)
+amount = 96
+texture = ExtResource("4")
+lifetime = 2.0
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_57fty")
+
+[node name="PoolParticles2" type="GPUParticles2D" parent="."]
+position = Vector2(663, 344)
+amount = 16
+texture = ExtResource("4")
+lifetime = 2.0
+process_material = SubResource("ParticleProcessMaterial_87gsp")
+
+[node name="Pool" type="Polygon2D" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_0pxt0")
+position = Vector2(613.5, 350)
+scale = Vector2(0.649676, 2.04202)
+polygon = PackedVector2Array(-550.274, -120.469, -507.176, -120.469, -431.754, -119.49, -287.066, -119.979, -168.546, -120.959, -85.4272, -119.49, 50.0249, -120.959, 142.379, -119.979, 251.664, -120.959, 347.096, -120.469, 539.5, -119.979, 542.578, -79.8229, 542.578, -34.7695, 541.039, 12.7325, 541.039, 90.1069, 541.039, 120.959, 388.655, 120.959, 180.859, 120.959, -31.5542, 119.979, -288.605, 120.469, -356.331, 120.959, -434.832, 120.469, -550.274, 120.469, -548.735, 55.3374, -547.196, 25.465, -550.274, -4.40741, -550.274, -61.2139)
+
+[node name="BackyardFloor" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(71, 351)
+scale = Vector2(0.66, 0.66)
+texture = ExtResource("7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="BackyardDoor" type="Sprite2D" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(70, 348)
+scale = Vector2(0.66, 0.66)
+texture = ExtResource("8")
+
+[node name="Stripe" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(490, 97)
+texture = ExtResource("9")
+centered = false

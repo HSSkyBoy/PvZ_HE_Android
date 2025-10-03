@@ -1,0 +1,220 @@
+[gd_scene load_steps=9 format=4 uid="uid://2vh1csqbvbqx"]
+
+[ext_resource type="Script" uid="uid://c7l6nq6ebxlum" path="res://Prefab/TowerDefense/GUI/InGame/SeedBank/TowerDefenseInGameSeedBank.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://b04firw4ertti" path="res://Prefab/TowerDefense/GUI/InGame/ConveyorBelt/TowerDefenseConveyorBelt.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://c2ihkj4xv50hg" path="res://Asset/Texture/TowerDefense/SeedBank/SeedBank.png" id="3"]
+[ext_resource type="FontFile" uid="uid://b70va62wc3lp2" path="res://Asset/Font/fzcq.ttf" id="4"]
+[ext_resource type="Texture2D" uid="uid://b622sgilxiuad" path="res://Asset/Texture/TowerDefense/SeedBank/SunBankMobile.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://3p5tg4mgg3df" path="res://Asset/Texture/GUI/General/ShovelBank/ShovelBank.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://fbnfrolt1kma" path="res://Asset/Texture/TowerDefense/Shovel/Shovel.png" id="7"]
+[ext_resource type="PackedScene" uid="uid://cpgpfiekj6ien" path="res://Prefab/TowerDefense/GUI/InGame/PlantfoodBank/TowerDefensePlantfoodBank.tscn" id="8"]
+
+[node name="TowerDefenseInGameSeedBank" type="Control"]
+light_mask = 0
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1")
+
+[node name="Packet" type="Control" parent="."]
+light_mask = 0
+anchors_preset = 0
+
+[node name="PCControl" type="Control" parent="Packet"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ItemContainer" type="HBoxContainer" parent="Packet/PCControl"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 0
+offset_right = 446.0
+offset_bottom = 87.0
+
+[node name="ConveyorBeltContainer" type="HBoxContainer" parent="Packet/PCControl/ItemContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="Control" type="Control" parent="Packet/PCControl/ItemContainer/ConveyorBeltContainer"]
+light_mask = 0
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+
+[node name="ConveyorBelt" parent="Packet/PCControl/ItemContainer/ConveyorBeltContainer" instance=ExtResource("2")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SeedContanin" type="MarginContainer" parent="Packet/PCControl/ItemContainer"]
+unique_name_in_owner = true
+visible = false
+light_mask = 0
+custom_minimum_size = Vector2(446, 87)
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Packet/PCControl/ItemContainer/SeedContanin"]
+light_mask = 0
+custom_minimum_size = Vector2(140, 87)
+layout_mode = 2
+texture = ExtResource("3")
+patch_margin_left = 79
+patch_margin_top = 9
+patch_margin_right = 11
+patch_margin_bottom = 9
+
+[node name="SunLabel" type="Label" parent="Packet/PCControl/ItemContainer/SeedContanin/NinePatchRect"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 0
+offset_left = 9.0
+offset_top = 60.0
+offset_right = 68.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4")
+theme_override_font_sizes/font_size = 16
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Packet/PCControl/ItemContainer/SeedContanin"]
+light_mask = 0
+layout_mode = 2
+theme_override_constants/margin_left = 103
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 37
+theme_override_constants/margin_bottom = 12
+
+[node name="PacketSlotContainer" type="HBoxContainer" parent="Packet/PCControl/ItemContainer/SeedContanin/MarginContainer"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 51
+
+[node name="PacketContainer" type="HBoxContainer" parent="Packet/PCControl/ItemContainer/SeedContanin/MarginContainer"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 51
+
+[node name="MobileControl" type="Control" parent="Packet"]
+unique_name_in_owner = true
+anchors_preset = 0
+
+[node name="MobileItemContainer" type="HBoxContainer" parent="Packet/MobileControl"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 1
+offset_right = 420.0
+offset_bottom = 609.0
+mouse_filter = 2
+
+[node name="MobileConveyorBeltContainer" type="VBoxContainer" parent="Packet/MobileControl/MobileItemContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+
+[node name="MobileConveyorBelt" parent="Packet/MobileControl/MobileItemContainer/MobileConveyorBeltContainer" instance=ExtResource("2")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="MobileSeedContanin" type="MarginContainer" parent="Packet/MobileControl/MobileItemContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/margin_left = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Packet/MobileControl/MobileItemContainer/MobileSeedContanin"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Packet/MobileControl/MobileItemContainer/MobileSeedContanin/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="Packet/MobileControl/MobileItemContainer/MobileSeedContanin/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Packet/MobileControl/MobileItemContainer/MobileSeedContanin/VBoxContainer/HBoxContainer"]
+light_mask = 0
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("5")
+
+[node name="MobileSunLabel" type="Label" parent="Packet/MobileControl/MobileItemContainer/MobileSeedContanin/VBoxContainer/HBoxContainer/TextureRect"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 0
+offset_left = 54.0
+offset_top = 18.0
+offset_right = 113.0
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4")
+theme_override_font_sizes/font_size = 16
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MobileISeedContanin" type="MarginContainer" parent="Packet/MobileControl/MobileItemContainer/MobileSeedContanin/VBoxContainer"]
+unique_name_in_owner = true
+light_mask = 0
+custom_minimum_size = Vector2(194, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 30
+
+[node name="MobilePacketSlotContainer" type="VFlowContainer" parent="Packet/MobileControl/MobileItemContainer/MobileSeedContanin/VBoxContainer/MobileISeedContanin"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 490)
+layout_mode = 2
+theme_override_constants/h_separation = 98
+theme_override_constants/v_separation = 62
+
+[node name="MobilePacketContainer" type="VFlowContainer" parent="Packet/MobileControl/MobileItemContainer/MobileSeedContanin/VBoxContainer/MobileISeedContanin"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 490)
+layout_mode = 2
+theme_override_constants/h_separation = 98
+theme_override_constants/v_separation = 62
+
+[node name="ShovelNode" type="Control" parent="Packet"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+anchors_preset = 0
+offset_left = 875.0
+offset_right = 875.0
+
+[node name="ShovelButton" type="TextureButton" parent="Packet/ShovelNode"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+offset_right = 70.0
+offset_bottom = 72.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("6")
+
+[node name="ShovelSprite" type="Sprite2D" parent="Packet/ShovelNode/ShovelButton"]
+unique_name_in_owner = true
+position = Vector2(33, 34)
+texture = ExtResource("7")
+
+[node name="PlantfoodBank" parent="." instance=ExtResource("8")]
+visible = false
+offset_left = 19.0
+offset_top = 934.0
+offset_right = 19.0
+offset_bottom = 934.0
+
+[connection signal="pressed" from="Packet/ShovelNode/ShovelButton" to="." method="ShovelButtonPressed"]
+[connection signal="pick" from="PlantfoodBank" to="." method="PlantfoodPick"]

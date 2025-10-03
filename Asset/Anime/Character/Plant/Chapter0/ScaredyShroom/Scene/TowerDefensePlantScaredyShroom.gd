@@ -1,0 +1,86 @@
+@tool
+extends TowerDefensePlant
+
+@onready var fireComponent: FireComponent = %FireComponent
+@onready var attackComponent: AttackComponent = %AttackComponent
+@onready var checkScaredShape: CollisionShape2D = %CheckScaredShape
+
+@export var fireInterval: float = 1.5
+
+var projectileName: String = "PuffDefault"
+
+func _ready() -> void :
+    if Engine.is_editor_hint():
+        return
+    super._ready()
+
+    checkScaredShape.shape.size = TowerDefenseManager.GetMapGridSize() * Vector2.ONE * 2.75
+
+    fireComponent.fireInterval = fireInterval
+
+func _physics_process(delta: float) -> void :
+    if Engine.is_editor_hint():
+        return
+    super._physics_process(delta)
+    fireComponent.fireInterval = fireInterval
+
+func IdleEntered() -> void :
+    if Engine.is_editor_hint():
+        return
+    super.IdleEntered()
+    fireComponent.alive = true
+
+@warning_ignore("unused_parameter")
+func IdleProcessing(delta: float) -> void :
+    super.IdleProcessing(delta)
+    if attackComponent.CanAttack(false, false, false):
+        state.send_event("ToScared")
+        return
+    if fireComponent.CanFire(projectileName):
+        state.send_event("ToAttack")
+        return
+
+func IdleExited() -> void :
+    super.IdleExited()
+
+func AttackEntered() -> void :
+    fireComponent.Refresh()
+    sprite.SetAnimation("Fire", true, 0.4)
+
+@warning_ignore("unused_parameter")
+func AttackProcessing(delta: float) -> void :
+    sprite.timeScale = timeScale * 3.0
+    if attackComponent.CanAttack(false, false, false):
+        state.send_event("ToScared")
+
+func AttackExited() -> void :
+    pass
+
+func ScaredEntered() -> void :
+    sprite.SetAnimation("Scared", false, 0.2)
+    sprite.AddAnimation("ScaredIdle", 0.0, true, 0.2)
+
+@warning_ignore("unused_parameter")
+func ScaredProcessing(delta: float) -> void :
+    if !attackComponent.CanAttack(false, false, false):
+        state.send_event("ToIdle")
+
+func ScaredExited() -> void :
+    pass
+
+@warning_ignore("unused_parameter")
+func AnimeEvent(command: String, argument: Variant) -> void :
+    super.AnimeEvent(command, argument)
+    match command:
+        "fire":
+            AudioManager.AudioPlay("ProjectilePuff", AudioManagerEnum.TYPE.SFX)
+            var projectile: TowerDefenseProjectile
+            projectile = fireComponent.CreateProjectile(0, Vector2(300, 0), projectileName, camp, Vector2.ZERO)
+            projectile.gridPos = gridPos
+            projectile.fireLength = -1
+
+func AnimeCompleted(clip: String) -> void :
+    super.AnimeCompleted(clip)
+    match clip:
+        "Fire":
+            Idle()

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=4 uid="uid://5lapwbyqfgmi"]
+
+[ext_resource type="Script" uid="uid://d21vwyxsqrpr3" path="res://Core/TowerDefenseManager/TowerDefenseManager.gd" id="1"]
+[ext_resource type="Resource" uid="uid://bfl6f5wb3lu7m" path="res://Asset/Config/Level/TowerDefense/Test/LevelTest.tres" id="2"]
+[ext_resource type="PackedScene" uid="uid://cbl7y7e8eixcf" path="res://Prefab/GUI/CoinBank/CoinBank.tscn" id="3"]
+
+[node name="TowerDefenseManager" type="Node"]
+script = ExtResource("1")
+currentLevelConfig = ExtResource("2")
+
+[node name="GUILayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="CoinBank" parent="GUILayer" instance=ExtResource("3")]
+unique_name_in_owner = true
+process_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -994.0
+offset_top = -43.0
+offset_right = -994.0
+offset_bottom = -43.0
+grow_horizontal = 0
+grow_vertical = 0

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=4 uid="uid://wkpy2wmjkrlw"]
+
+[ext_resource type="Script" uid="uid://dcv5ka43darfk" path="res://Core/DialogManager/DialogManager.gd" id="1"]
+
+[node name="DialogManager" type="Node2D"]
+script = ExtResource("1")
+
+[node name="DialogLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+layer = 100

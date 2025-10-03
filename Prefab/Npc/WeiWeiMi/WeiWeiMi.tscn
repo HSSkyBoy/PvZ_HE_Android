@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=4 uid="uid://clckmqg8m4qne"]
+
+[ext_resource type="PackedScene" uid="uid://dxu4nl0muu0rr" path="res://Prefab/Npc/NpcBase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://b57yow0eeosy2" path="res://Prefab/Npc/WeiWeiMi/WeiWeiMi.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://dec362h0hth21" path="res://Asset/Anime/Npc/WeiWeiMi/WeiWeiMi.tscn" id="3"]
+
+[node name="NpcWeiWeiMi" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+sprite = NodePath("WeiWeiMi")
+
+[node name="WeiWeiMi" parent="." index="0" node_paths=PackedStringArray("layerSprite") instance=ExtResource("3")]
+light_mask = 0
+position = Vector2(129, 512)
+scale = Vector2(2.5, 2.5)
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="TalkBubble" parent="." index="2"]
+offset_left = 94.0
+offset_top = 108.0
+offset_right = 374.0
+offset_bottom = 291.0
+
+[node name="NextLabel" parent="TalkBubble" index="1"]
+visible = false

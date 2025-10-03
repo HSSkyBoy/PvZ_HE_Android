@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="TowerDefensePacketConfig" load_steps=3 format=4 uid="uid://clk70cm0r7bg5"]
+
+[ext_resource type="Resource" uid="uid://c2pvlh84eqv7k" path="res://Asset/Anime/Character/Mower/Sun/Config/TowerDefenseMowerSun.tres" id="1"]
+[ext_resource type="Script" uid="uid://c6d3po5310ugw" path="res://Resource/TowerDefense/PacketBank/Packet/TowerDefensePacketConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+saveKey = "MowerSun"
+unlockCheckList = []
+name = ""
+describe = ""
+plantfood = ""
+handbookDescribe = ""
+handbookStory = ""
+packetAnimeClip = "Normal"
+packetAnimeOffset = Vector2(24, 5)
+packetAnimeScale = Vector2(0.5, 0.5)
+characterConfig = ExtResource("1")
+type = 0
+spawnMethod = "Rise"
+overrideCostRise = -1
+overrideCost = -1
+overridPacketCooldown = -1.0
+overridStartingCooldown = -1.0
+overrideWeight = -1
+overrideWavePointCost = -1
+initArmor = []
+plantUseCell = true
+Cell/plantUseCell = true
+metadata/_custom_type_script = "uid://c6d3po5310ugw"

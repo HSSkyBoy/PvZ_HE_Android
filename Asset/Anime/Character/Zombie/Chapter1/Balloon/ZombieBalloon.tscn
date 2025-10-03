@@ -1,0 +1,169 @@
+[gd_scene load_steps=6 format=4 uid="uid://bbpus0bcjt8gm"]
+
+[ext_resource type="Script" uid="uid://dy84qn15o4igk" path="res://Asset/Anime/Character/Zombie/Chapter1/Balloon/ZombieBalloonSprite.gd" id="1"]
+[ext_resource type="Resource" uid="uid://t557q7e2b7nd" path="res://Asset/Anime/Character/Zombie/Chapter1/Balloon/ZombieBalloon.tres" id="2"]
+[ext_resource type="PackedScene" uid="uid://cfgdfuopusvnr" path="res://Asset/Anime/Character/Zombie/Duckytube/ZombieDuckytube.tscn" id="3"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="4"]
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="5"]
+
+[node name="ZombieBalloon" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -100)
+useTween = false
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, NodePath("ArmSlot"), NodePath("PropellerSlot"), null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ZombieDuckytube"), null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/Zombie_balloon_body1 = true
+Animation/LayerVisible/Zombie_balloon_body2 = true
+Animation/LayerVisible/Zombie_balloon_bottom = true
+Animation/LayerVisible/Zombie_balloon_innerarm_lower = true
+Animation/LayerVisible/Zombie_balloon_innerarm_upper = true
+Animation/LayerVisible/Zombie_balloon_innerleg_foot = true
+Animation/LayerVisible/Zombie_balloon_innerleg_lower = true
+Animation/LayerVisible/Zombie_balloon_innerleg_upper = true
+Animation/LayerVisible/Zombie_balloon_outerleg_foot = true
+Animation/LayerVisible/Zombie_balloon_outerleg_lower = true
+Animation/LayerVisible/Zombie_balloon_outerleg_upper = true
+Animation/LayerVisible/Zombie_balloon_string = true
+Animation/LayerVisible/Zombie_balloon_top = true
+Animation/LayerVisible/Zombie_innerarm_hand = true
+Animation/LayerVisible/Zombie_outerarm_hand = true
+Animation/LayerVisible/Zombie_outerarm_lower = true
+Animation/LayerVisible/Zombie_outerarm_upper = true
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/anim_head1 = true
+Animation/LayerVisible/anim_head2 = true
+Animation/LayerVisible/balloon_pop = true
+Animation/LayerVisible/hat = true
+Animation/LayerVisible/propeller = true
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/Zombie_balloon_body1.png = null
+Animation/MediaReplace/Zombie_balloon_body2.png = null
+Animation/MediaReplace/Zombie_balloon_bottom.png = null
+Animation/MediaReplace/Zombie_balloon_hat.png = null
+Animation/MediaReplace/Zombie_balloon_head.png = null
+Animation/MediaReplace/Zombie_balloon_innerarm_lower.png = null
+Animation/MediaReplace/Zombie_balloon_innerarm_upper.png = null
+Animation/MediaReplace/Zombie_balloon_innerleg_foot.png = null
+Animation/MediaReplace/Zombie_balloon_innerleg_lower.png = null
+Animation/MediaReplace/Zombie_balloon_innerleg_upper.png = null
+Animation/MediaReplace/Zombie_balloon_jaw.png = null
+Animation/MediaReplace/Zombie_balloon_outerarm_lower.png = null
+Animation/MediaReplace/Zombie_balloon_outerarm_upper.png = null
+Animation/MediaReplace/Zombie_balloon_outerarm_upper2.png = null
+Animation/MediaReplace/Zombie_balloon_outerleg_FOOT.png = null
+Animation/MediaReplace/Zombie_balloon_outerleg_lower.png = null
+Animation/MediaReplace/Zombie_balloon_outerleg_upper.png = null
+Animation/MediaReplace/Zombie_balloon_pop1.png = null
+Animation/MediaReplace/Zombie_balloon_pop2.png = null
+Animation/MediaReplace/Zombie_balloon_propeller.png = null
+Animation/MediaReplace/Zombie_balloon_propeller2.png = null
+Animation/MediaReplace/Zombie_balloon_string.png = null
+Animation/MediaReplace/Zombie_balloon_top.png = null
+Animation/MediaReplace/Zombie_innerarm_hand.png = null
+Animation/MediaReplace/Zombie_outerarm_hand.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="ZombieDuckytube" parent="." node_paths=PackedStringArray("parentSprite") instance=ExtResource("3")]
+visible = false
+position = Vector2(-23.1167, -59.4533)
+rotation = -0.966147
+offset = Vector2(-32.505, 43.395)
+offsetRotate = -0.96
+parentSprite = NodePath("..")
+Layer = 14
+
+[node name="PropellerSlot" type="Node2D" parent="."]
+position = Vector2(-43.15, -58.76)
+rotation = -0.102425
+scale = Vector2(0.798939, 0.798939)
+script = ExtResource("4")
+followSlotId = 21
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="Propeller" type="Node2D" parent="PropellerSlot" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+unique_name_in_owner = true
+position = Vector2(13.0769, -0.274212)
+script = ExtResource("5")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-7.545, -34.185)
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "propeller"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/Zombie_balloon_body1 = true
+Animation/LayerVisible/Zombie_balloon_body2 = true
+Animation/LayerVisible/Zombie_balloon_bottom = true
+Animation/LayerVisible/Zombie_balloon_innerarm_lower = true
+Animation/LayerVisible/Zombie_balloon_innerarm_upper = true
+Animation/LayerVisible/Zombie_balloon_innerleg_foot = true
+Animation/LayerVisible/Zombie_balloon_innerleg_lower = true
+Animation/LayerVisible/Zombie_balloon_innerleg_upper = true
+Animation/LayerVisible/Zombie_balloon_outerleg_foot = true
+Animation/LayerVisible/Zombie_balloon_outerleg_lower = true
+Animation/LayerVisible/Zombie_balloon_outerleg_upper = true
+Animation/LayerVisible/Zombie_balloon_string = true
+Animation/LayerVisible/Zombie_balloon_top = true
+Animation/LayerVisible/Zombie_innerarm_hand = true
+Animation/LayerVisible/Zombie_outerarm_hand = true
+Animation/LayerVisible/Zombie_outerarm_lower = true
+Animation/LayerVisible/Zombie_outerarm_upper = true
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/anim_head1 = true
+Animation/LayerVisible/anim_head2 = true
+Animation/LayerVisible/balloon_pop = true
+Animation/LayerVisible/hat = true
+Animation/LayerVisible/propeller = true
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/Zombie_balloon_body1.png = null
+Animation/MediaReplace/Zombie_balloon_body2.png = null
+Animation/MediaReplace/Zombie_balloon_bottom.png = null
+Animation/MediaReplace/Zombie_balloon_hat.png = null
+Animation/MediaReplace/Zombie_balloon_head.png = null
+Animation/MediaReplace/Zombie_balloon_innerarm_lower.png = null
+Animation/MediaReplace/Zombie_balloon_innerarm_upper.png = null
+Animation/MediaReplace/Zombie_balloon_innerleg_foot.png = null
+Animation/MediaReplace/Zombie_balloon_innerleg_lower.png = null
+Animation/MediaReplace/Zombie_balloon_innerleg_upper.png = null
+Animation/MediaReplace/Zombie_balloon_jaw.png = null
+Animation/MediaReplace/Zombie_balloon_outerarm_lower.png = null
+Animation/MediaReplace/Zombie_balloon_outerarm_upper.png = null
+Animation/MediaReplace/Zombie_balloon_outerarm_upper2.png = null
+Animation/MediaReplace/Zombie_balloon_outerleg_FOOT.png = null
+Animation/MediaReplace/Zombie_balloon_outerleg_lower.png = null
+Animation/MediaReplace/Zombie_balloon_outerleg_upper.png = null
+Animation/MediaReplace/Zombie_balloon_pop1.png = null
+Animation/MediaReplace/Zombie_balloon_pop2.png = null
+Animation/MediaReplace/Zombie_balloon_propeller.png = null
+Animation/MediaReplace/Zombie_balloon_propeller2.png = null
+Animation/MediaReplace/Zombie_balloon_string.png = null
+Animation/MediaReplace/Zombie_balloon_top.png = null
+Animation/MediaReplace/Zombie_innerarm_hand.png = null
+Animation/MediaReplace/Zombie_outerarm_hand.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="HeadSlot" type="Node2D" parent="."]
+position = Vector2(-27.648, -34.0516)
+rotation = -0.0575987
+scale = Vector2(0.799626, 0.799626)
+script = ExtResource("4")
+followSlotId = 16
+offset = Vector2(23, 35)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ArmSlot" type="Node2D" parent="."]
+position = Vector2(-4.61341, 0.273273)
+rotation = -0.0061475
+scale = Vector2(0.599827, 0.599827)
+script = ExtResource("4")
+followSlotId = 20
+offset = Vector2(10, 20)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="GroundSlot" type="Node2D" parent="."]
+position = Vector2(-31.56, -60)
+script = ExtResource("4")
+followSlotId = 1
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

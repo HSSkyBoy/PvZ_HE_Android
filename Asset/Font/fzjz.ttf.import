@@ -1,0 +1,15 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://bibg4dobk6vpn"
+path="res://.godot/imported/fzjz.ttf-0ba7ae5dc8b719e26c9330fdcf846855.fontdata"
+
+[deps]
+
+source_file="res://Asset/Font/fzjz.ttf"
+dest_files=["res://.godot/imported/fzjz.ttf-0ba7ae5dc8b719e26c9330fdcf846855.fontdata"]
+
+[params]
+
+dummy_value_ignore_me=0

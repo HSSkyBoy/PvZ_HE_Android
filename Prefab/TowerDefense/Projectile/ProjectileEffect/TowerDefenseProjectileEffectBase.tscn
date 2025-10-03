@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=4 uid="uid://clpu43psaiqf2"]
+
+[ext_resource type="Script" uid="uid://buawipweta0uf" path="res://Prefab/TowerDefense/Projectile/ProjectileEffect/TowerDefenseProjectileEffectBase.gd" id="1"]
+
+[node name="TowerDefenseProjectileEffectBase" type="Node2D"]
+script = ExtResource("1")

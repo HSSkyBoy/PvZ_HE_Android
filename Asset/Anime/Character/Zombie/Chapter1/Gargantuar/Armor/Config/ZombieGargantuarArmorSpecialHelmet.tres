@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CharacterArmorConfig" load_steps=5 format=4 uid="uid://3hqi6b5h245c"]
+
+[ext_resource type="Script" uid="uid://3gswocg6uh6g" path="res://Resource/General/Character/Armor/CharacterArmorConfig.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dn3hjxno7yanl" path="res://Asset/Texture/Character/Armor/BigSpecialHelmet/BigSpecialHelmet1.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bh16uove0mhr0" path="res://Asset/Texture/Character/Armor/BigSpecialHelmet/BigSpecialHelmet2.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dnyg0b5lmcrxd" path="res://Asset/Texture/Character/Armor/BigSpecialHelmet/BigSpecialHelmet3.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+armorName = "SpecialHelmet"
+damagePoint = 3000.0
+stagePersontage = [0.666, 0.333]
+replaceMethod = "Sprite"
+replaceSpriteSlotPath = NodePath("HeadSlot")
+replaceSpriteRotation = 0.0
+replaceSpriteScale = Vector2(0.8, 0.8)
+replaceSpriteOffset = Vector2(0, -5)
+replaceMediaName = &""
+stageAnimeTexture = [ExtResource("2"), ExtResource("3"), ExtResource("4")]
+openFliter = ""
+closeFliter = ""
+destroyFliter = ""
+impactAudio = "PlasticHit"
+damageAudio = ""
+explodePersontage = 1.0
+armorMethodFlags = 216
+Flag/Method = 216

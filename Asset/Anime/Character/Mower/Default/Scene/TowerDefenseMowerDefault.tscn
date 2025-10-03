@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=4 uid="uid://c4ncsetyb518i"]
+
+[ext_resource type="PackedScene" uid="uid://ckn1ugd7d88nm" path="res://Prefab/TowerDefense/Character/TowerDefenseMower.tscn" id="1"]
+[ext_resource type="Script" uid="uid://b3o8xl5rhrrbr" path="res://Asset/Anime/Character/Mower/Default/Scene/TowerDefenseMowerDefault.gd" id="2"]
+[ext_resource type="Resource" uid="uid://dxoxk85767idk" path="res://Asset/Anime/Character/Mower/Default/Config/TowerDefenseMowerDefault.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://c24slfyvogagp" path="res://Asset/Anime/Character/Mower/Default/LawnMower.tscn" id="4"]
+
+[node name="TowerDefenseMowerDefault" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/LawnMower")
+
+[node name="LawnMower" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+position = Vector2(0, -36)

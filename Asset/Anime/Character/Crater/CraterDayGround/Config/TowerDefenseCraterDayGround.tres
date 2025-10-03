@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="TowerDefenseCraterConfig" load_steps=2 format=4 uid="uid://b1woethenk802"]
+
+[ext_resource type="Script" uid="uid://c0dlo0givimi1" path="res://Resource/TowerDefense/Character/Config/TowerDefenseCraterConfig.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+dieDownTime = 60.0
+dieDownFliters = ["CraterWhole", "CraterHalf"]
+name = "CraterDayGround"
+hitpointsNearDeath = 0.0
+hitpoints = 300.0
+smashHurt = -1.0
+spikeHurt = -1.0
+sleepTime = "Never"
+height = 0
+damagePointData = null
+armorData = null
+customData = null
+ashScene = null
+homeWorld = 1
+costRise = -1
+cost = 100
+packetCooldown = 5.0
+startingCooldown = 0.0
+plantCover = []
+plantCoverRecycle = []
+plantGridType = [1, 2, 3, 10]
+plantGridOverrideType = 9
+collisionFlags = 9
+maskFlags = 9
+unUseBuffFlags = 4294967295
+physiqueTypeFlags = 0
+elementFlags = 0
+Flag/Collision = 9
+Flag/Mask = 9
+Flag/UnUseBuff = 4294967295
+Flag/PhysiqueType = 0
+Flag/Elemet = 0
+metadata/_custom_type_script = "uid://c0dlo0givimi1"

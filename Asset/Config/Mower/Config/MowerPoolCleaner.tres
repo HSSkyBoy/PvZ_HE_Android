@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="MowerConfig" load_steps=3 format=4 uid="uid://b7hptj1jxpymd"]
+
+[ext_resource type="Script" uid="uid://b4briakxj0xs6" path="res://Resource/TowerDefense/Mower/MowerConfig.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://braejccboptom" path="res://Asset/Anime/Character/Mower/PoolCleaner/PoolCleaner.tscn" id="2"]
+
+[resource]
+script = ExtResource("1")
+texture = null
+sprite = ExtResource("2")
+saveKey = "MowerPoolCleaner"
+unlockCheckList = []
+name = "TOWERDEFENSE_MOWER_DEFAULT_NAME"
+describe = "TOWERDEFENSE_MOWER_DEFAULT_EXPRESTION"
+handbookDescribe = "TOWERDEFENSE_MOWER_DEFAULT_HANDBOOK_EXPRESTION"
+handbookStory = "TOWERDEFENSE_MOWER_DEFAULT_HANDBOOK_STORY"
+eventList = []
+metadata/_custom_type_script = "uid://xmwd4jomf83s"

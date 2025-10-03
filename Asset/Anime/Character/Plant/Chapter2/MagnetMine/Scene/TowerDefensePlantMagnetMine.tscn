@@ -1,0 +1,115 @@
+[gd_scene load_steps=15 format=4 uid="uid://ca0g8dtdbp8ai"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://dxtdj5neiqt6a" path="res://Asset/Anime/Character/Plant/Chapter2/MagnetMine/Scene/TowerDefensePlantMagnetMine.gd" id="2"]
+[ext_resource type="Script" uid="uid://c3wiwula8chdo" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventExplodeHurt.gd" id="3"]
+[ext_resource type="Resource" uid="uid://by1qn4q1cwqi2" path="res://Asset/Anime/Character/Plant/Chapter2/MagnetMine/Config/TowerDefensePlantMagnetMine.tres" id="4"]
+[ext_resource type="Shader" uid="uid://bbit4jhs4p0ww" path="res://Asset/Shader/TowerDefense/ShaderTowerDefenseCharacter.gdshader" id="5"]
+[ext_resource type="PackedScene" uid="uid://wbup1k1plu1g" path="res://Asset/Anime/Character/Plant/Chapter2/MagnetMine/MagnetMine.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://dir0f8lu1l3b3" path="res://Script/Component/TowerDefense/Character/AttackComponent/AttackComponent.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://becnacp2r6c0g" path="res://Script/Component/TowerDefense/Character/MagnetComponent/MagnetComponent.tscn" id="8"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="9"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="10"]
+
+[sub_resource type="Resource" id="Resource_hs6c2"]
+script = ExtResource("3")
+type = "Mine"
+num = 1800.0
+burns = true
+metadata/_custom_type_script = "uid://c3wiwula8chdo"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vy3vg"]
+shader = ExtResource("5")
+shader_parameter/brightStrength = 0.0
+shader_parameter/whiteStrength = 0.0
+shader_parameter/surfaceUpPos = 0.0
+shader_parameter/surfaceDownPos = 1.0
+shader_parameter/surfacePos = 1.0
+shader_parameter/ash = false
+shader_parameter/iceSpeedDown = false
+shader_parameter/cover = false
+shader_parameter/hypnoses = false
+shader_parameter/imitater = false
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xotnw"]
+size = Vector2(70, 70.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_to35b"]
+size = Vector2(118, 70.5)
+
+[node name="TowerDefensePlantMagnetMine" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+readyTime = 5.0
+eventList = [SubResource("Resource_hs6c2")]
+config = ExtResource("4")
+sprite = NodePath("SpriteGroup/TransformPoint/MagnetMine")
+gravity = 245.0
+
+[node name="SpriteGroup" parent="." index="1"]
+material = SubResource("ShaderMaterial_vy3vg")
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="MagnetMine" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("6")]
+position = Vector2(0, -30)
+trueFrameRate = inf
+
+[node name="ShadowSprite" parent="." index="3"]
+visible = false
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+
+[node name="AttackComponent" parent="." index="6" node_paths=PackedStringArray("checkArea") instance=ExtResource("7")]
+unique_name_in_owner = true
+attackType = "Smash"
+checkArea = NodePath("CheckArea")
+
+[node name="CheckArea" type="Area2D" parent="AttackComponent" index="0"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent/CheckArea" index="0"]
+position = Vector2(-1, 0.75)
+shape = SubResource("RectangleShape2D_xotnw")
+
+[node name="AttackComponent2" parent="." index="7" node_paths=PackedStringArray("checkArea") instance=ExtResource("7")]
+unique_name_in_owner = true
+checkArea = NodePath("CheckArea")
+
+[node name="CheckArea" type="Area2D" parent="AttackComponent2" index="0"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent2/CheckArea" index="0"]
+position = Vector2(-1, 0.75)
+shape = SubResource("RectangleShape2D_to35b")
+
+[node name="MagnetComponent" parent="." index="8" instance=ExtResource("8")]
+unique_name_in_owner = true
+checkRange = Vector2(1.5, 1.5)
+
+[node name="CompoundState" parent="StateChart" index="0"]
+initial_state = NodePath("Ready")
+
+[node name="Ready" type="Node" parent="StateChart/CompoundState" index="1"]
+script = ExtResource("9")
+
+[node name="Fire" type="Node" parent="StateChart/CompoundState" index="2"]
+script = ExtResource("9")
+
+[node name="ToFire" type="Node" parent="StateChart/CompoundState" index="7"]
+script = ExtResource("10")
+to = NodePath("../Fire")
+event = &"ToFire"
+delay_in_seconds = "0.0"
+
+[node name="ToReady" type="Node" parent="StateChart/CompoundState" index="8"]
+script = ExtResource("10")
+to = NodePath("../Ready")
+event = &"ToReady"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="StateChart/CompoundState/Ready" to="." method="ReadyEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Ready" to="." method="ReadyExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Ready" to="." method="ReadyProcessing"]
+[connection signal="state_entered" from="StateChart/CompoundState/Fire" to="." method="FireEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Fire" to="." method="FireExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Fire" to="." method="FireProcessing"]

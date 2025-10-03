@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=4 uid="uid://f2hbscl8fjtt"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cuxhtib01bby" path="res://Asset/Anime/Character/Plant/Chapter0/HypnoShroom/Scene/TowerDefensePlantHypnoShroom.gd" id="2"]
+[ext_resource type="Resource" uid="uid://cnuebc6eincs2" path="res://Asset/Anime/Character/Plant/Chapter0/HypnoShroom/Config/TowerDefensePlantHypnoShroom.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://dedq4dyalohqh" path="res://Asset/Anime/Character/Plant/Chapter0/HypnoShroom/HypnoShroom.tscn" id="4"]
+
+[node name="TowerDefensePlantHypnoShroom" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+sleepAnimeClip = "Sleep"
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/HypnoShroom")
+gravity = 245.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="HypnoShroom" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+position = Vector2(0, -30)
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 30)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)

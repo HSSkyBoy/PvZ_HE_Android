@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="CharacterArmorData" load_steps=8 format=4 uid="uid://xko4dinbygb4"]
+
+[ext_resource type="Resource" uid="uid://clvqblkq2jo2l" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorBlackHelmet.tres" id="1"]
+[ext_resource type="Resource" uid="uid://d4b68a6hw3c2d" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorBucket.tres" id="2"]
+[ext_resource type="Resource" uid="uid://cfim36uopws7u" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorCone.tres" id="3"]
+[ext_resource type="Resource" uid="uid://byth0yfgejk1l" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorHelmet.tres" id="4"]
+[ext_resource type="Resource" uid="uid://dmgd4ygng30xn" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorScreendoor.tres" id="5"]
+[ext_resource type="Resource" uid="uid://cryuyu1d8jqbt" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorSpecialHelmet.tres" id="6"]
+[ext_resource type="Script" uid="uid://ci4c6gpjugqpl" path="res://Resource/General/Character/Armor/CharacterArmorData.gd" id="7"]
+
+[resource]
+script = ExtResource("7")
+armorList = [ExtResource("3"), ExtResource("2"), ExtResource("5"), ExtResource("4"), ExtResource("1"), ExtResource("6")]
+armorDictionary = {
+"BlackHelmet": ExtResource("1"),
+"Bucket": ExtResource("2"),
+"Cone": ExtResource("3"),
+"Helmet": ExtResource("4"),
+"Screendoor": ExtResource("5"),
+"SpecialHelmet": ExtResource("6")
+}
+fliterAllDictionary = {
+"BlackHelmet": [],
+"Bucket": ["anim_bucket"],
+"Cone": ["anim_cone"],
+"Helmet": [],
+"Screendoor": ["anim_screendoor"],
+"SpecialHelmet": []
+}
+fliterOpenDictionary = {
+"BlackHelmet": [],
+"Bucket": [],
+"Cone": [],
+"Helmet": [],
+"Screendoor": ["Zombie_innerarm_screendoor", "Zombie_innerarm_screendoor_hand", "Zombie_outerarm_screendoor"],
+"SpecialHelmet": []
+}
+fliterCloseDictionary = {
+"BlackHelmet": [],
+"Bucket": [],
+"Cone": [],
+"Helmet": [],
+"Screendoor": ["anim_innerarm1", "anim_innerarm2", "anim_innerarm3", "Zombie_outerarm_hand", "Zombie_outerarm_lower", "Zombie_outerarm_upper"],
+"SpecialHelmet": []
+}

@@ -1,0 +1,97 @@
+[gd_scene load_steps=16 format=4 uid="uid://8ci5c6qlgv1w"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://banxusgjdp14k" path="res://Asset/Anime/Character/Zombie/Chapter1/Paper/Scene/TowerDefenseZombiePaper.gd" id="2"]
+[ext_resource type="Resource" uid="uid://3lmw15vhg42g" path="res://Asset/Anime/Character/Zombie/Chapter1/Paper/Config/TowerDefenseZombiePaper.tres" id="3"]
+[ext_resource type="Resource" uid="uid://c2mqh3r8jnnma" path="res://Asset/Anime/Character/Zombie/Chapter1/Paper/DamagePoint/Config/ZombiePaperDamagePointArm.tres" id="4"]
+[ext_resource type="Resource" uid="uid://b2fo0h5w2lsk6" path="res://Asset/Anime/Character/Zombie/Chapter1/Paper/DamagePoint/Config/ZombiePaperDamagePointHead.tres" id="5"]
+[ext_resource type="Resource" uid="uid://bamb6imty1eih" path="res://Asset/Anime/Character/Zombie/Chapter1/Paper/Armor/Config/ZombiePaperArmorCone.tres" id="6"]
+[ext_resource type="Resource" uid="uid://denwx2evnn8bk" path="res://Asset/Anime/Character/Zombie/Chapter1/Paper/Armor/Config/ZombiePaperArmorBucket.tres" id="7"]
+[ext_resource type="Resource" uid="uid://dgy6npgxd3wcm" path="res://Asset/Anime/Character/Zombie/Chapter1/Paper/Armor/Config/ZombiePaperArmorHelmet.tres" id="8"]
+[ext_resource type="Resource" uid="uid://cf3lr2ru555q2" path="res://Asset/Anime/Character/Zombie/Chapter1/Paper/Armor/Config/ZombiePaperArmorBlackHelmet.tres" id="9"]
+[ext_resource type="Resource" uid="uid://c83m8nxr67g0c" path="res://Asset/Anime/Character/Zombie/Chapter1/Paper/Armor/Config/ZombiePaperArmorSpecialHelmet.tres" id="10"]
+[ext_resource type="PackedScene" uid="uid://drbscotikcmbv" path="res://Asset/Anime/Character/Zombie/Chapter1/Paper/ZombiePaper.tscn" id="11"]
+[ext_resource type="Texture2D" uid="uid://df6ws2yafp4hr" path="res://Asset/Texture/Character/Armor/Paper/ZombiePaper1.png" id="12"]
+[ext_resource type="PackedScene" uid="uid://bjm31m10ujp84" path="res://Asset/Anime/Character/Zombie/WaterLine/ZombieWaterLine.tscn" id="13"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="14"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="15"]
+
+[node name="TowerDefenseZombiePaper" node_paths=PackedStringArray("duckytobeSprite", "waterLineSprite", "sprite", "headSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+duckytobeSprite = NodePath("SpriteGroup/TransformPoint/ZombiePaper/ZombieDuckytube")
+waterLineSprite = NodePath("SpriteGroup/TransformPoint/ZombieWaterLine")
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombiePaper")
+headSlot = NodePath("SpriteGroup/TransformPoint/ZombiePaper/HeadSlot")
+damagePart = {
+"Arm": ExtResource("4"),
+"BlackHelmet": ExtResource("9"),
+"Bucket": ExtResource("7"),
+"Cone": ExtResource("6"),
+"Head": ExtResource("5"),
+"Helmet": ExtResource("8"),
+"SpecialHelmet": ExtResource("10")
+}
+PreviewDamagePointPersontage = 1.0
+Armor = ["Paper"]
+DamagePartSlot/Arm = NodePath("SpriteGroup/TransformPoint/ZombiePaper/ArmSlot")
+DamagePartSlot/Head = NodePath("SpriteGroup/TransformPoint/ZombiePaper/HeadSlot")
+DamagePartSlot/Cone = NodePath("SpriteGroup/TransformPoint/ZombiePaper/HeadSlot")
+DamagePartSlot/Bucket = NodePath("SpriteGroup/TransformPoint/ZombiePaper/HeadSlot")
+DamagePartSlot/Helmet = NodePath("SpriteGroup/TransformPoint/ZombiePaper/HeadSlot")
+DamagePartSlot/BlackHelmet = NodePath("SpriteGroup/TransformPoint/ZombiePaper/HeadSlot")
+DamagePartSlot/SpecialHelmet = NodePath("SpriteGroup/TransformPoint/ZombiePaper/HeadSlot")
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(12, 33)
+
+[node name="ZombiePaper" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("11")]
+position = Vector2(-16, -37)
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ArmSlot"), null, NodePath("HeadSlot"), null, null, null, null, null, NodePath("PaperSlot"), null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ZombieDuckytube"), null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/MediaReplace/Zombie_paper_paper1.png = ExtResource("12")
+
+[node name="ZombieDuckytube" parent="SpriteGroup/TransformPoint/ZombiePaper" index="0"]
+position = Vector2(-9.9256, -39.0686)
+rotation = -0.0665735
+Animation/LayerVisible/Zombie_duckytube_inwater = false
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombiePaper" index="1"]
+position = Vector2(-13.0032, -41.3288)
+rotation = -0.19572
+scale = Vector2(0.799274, 0.799274)
+
+[node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombiePaper" index="2"]
+position = Vector2(9.39501, -1.52088)
+rotation = -0.152433
+scale = Vector2(0.69951, 0.69951)
+
+[node name="PaperSlot" parent="SpriteGroup/TransformPoint/ZombiePaper" index="3"]
+position = Vector2(-25.8511, -0.885201)
+rotation = 0.0
+scale = Vector2(0.70163, 0.70163)
+
+[node name="ZombieWaterLine" parent="SpriteGroup/TransformPoint" index="1" instance=ExtResource("13")]
+visible = false
+position = Vector2(3, -36)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(4, -2)
+
+[node name="GroundMoveComponent" parent="." index="8" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombiePaper/GroundSlot")
+
+[node name="Gasp" type="Node" parent="StateChart/CompoundState" index="4"]
+script = ExtResource("14")
+
+[node name="ToGasp" type="Node" parent="StateChart/CompoundState" index="9"]
+script = ExtResource("15")
+to = NodePath("../Gasp")
+event = &"ToGasp"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="StateChart/CompoundState/Gasp" to="." method="GaspEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Gasp" to="." method="GaspExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Gasp" to="." method="GaspProcessing"]
+
+[editable path="SpriteGroup/TransformPoint/ZombiePaper"]

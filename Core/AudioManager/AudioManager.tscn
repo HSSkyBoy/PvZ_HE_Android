@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=4 uid="uid://bca8g28re8p8"]
+
+[ext_resource type="Script" uid="uid://cf71wycpml1yg" path="res://Core/AudioManager/AudioManager.gd" id="1"]
+
+[node name="AudioManager" type="Node"]
+process_mode = 3
+script = ExtResource("1")
+audioVolumDictionary = {
+"Music": 0.8,
+"Sfx": 0.7
+}

@@ -1,0 +1,129 @@
+[gd_scene load_steps=12 format=4 uid="uid://vsl60p6vfwq8"]
+
+[ext_resource type="Script" uid="uid://sca4xelh08pr" path="res://Prefab/GUI/DialogBox/DailyChallenge/Award/DailyChallengeAward.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://c855vjpdgvpr" path="res://Asset/Texture/GUI/DailyChallenge/DailyChallengeBG.png" id="2"]
+[ext_resource type="FontFile" uid="uid://bibg4dobk6vpn" path="res://Asset/Font/fzjz.ttf" id="3"]
+[ext_resource type="Texture2D" uid="uid://d0smlukjcx1r6" path="res://Asset/Texture/GUI/DailyChallenge/DailyChallengeCloseButton.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://5lvxpd7jaoc4" path="res://Asset/Texture/GUI/DailyChallenge/DailyChallengeCloseButtonPress.png" id="5"]
+[ext_resource type="PackedScene" uid="uid://bml60wmq62jay" path="res://Prefab/GUI/Button/MainButton.tscn" id="6"]
+[ext_resource type="Texture2D" uid="uid://becxfsjmy31td" path="res://Asset/Texture/GUI/DailyChallenge/DailyChallengePlayButton.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://c3mh3bdn1qs1k" path="res://Asset/Texture/GUI/DailyChallenge/DailyChallengePlayButtonPress.png" id="8"]
+[ext_resource type="PackedScene" uid="uid://ctbwfqkh8ysjt" path="res://Prefab/GUI/DialogBox/DailyChallenge/Award/Progress/DailyChallengeAwardProgressBar.tscn" id="9"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kx21x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6brir"]
+
+[node name="DailyChallengeAward" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+metadata/_custom_type_script = "uid://b4l86rhpq35q0"
+
+[node name="Layer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="ColorRect" type="ColorRect" parent="Layer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="BackgroundTexture" type="TextureRect" parent="Layer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -486.0
+offset_top = -364.0
+offset_right = 486.0
+offset_bottom = 364.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.675, 0.675)
+pivot_offset = Vector2(486, 364)
+texture = ExtResource("2")
+
+[node name="TextLabel" type="Label" parent="Layer/BackgroundTexture"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 0
+offset_left = 299.0
+offset_right = 665.0
+offset_bottom = 85.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 48
+text = "2025/6月奖励"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloseButton" type="TextureButton" parent="Layer/BackgroundTexture"]
+layout_mode = 0
+offset_left = 877.111
+offset_top = 18.8148
+offset_right = 920.111
+offset_bottom = 58.8148
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4")
+texture_pressed = ExtResource("5")
+texture_hover = ExtResource("5")
+
+[node name="BackButton" parent="Layer/BackgroundTexture" instance=ExtResource("6")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 289.0
+offset_top = 609.0
+offset_right = 675.0
+offset_bottom = 694.0
+texture_normal = ExtResource("7")
+texture_pressed = ExtResource("7")
+texture_hover = ExtResource("8")
+text = "返回挑战"
+
+[node name="TextLabel" parent="Layer/BackgroundTexture/BackButton" index="0"]
+offset_left = 14.8148
+offset_right = 380.815
+offset_bottom = 85.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 48
+text = "返回挑战"
+
+[node name="DailyChallengeAwardProgressBar" parent="Layer/BackgroundTexture" instance=ExtResource("9")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 136.37
+offset_top = 519.556
+offset_right = 811.37
+offset_bottom = 554.556
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Layer/BackgroundTexture"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 100.0
+offset_right = 858.0
+offset_bottom = 451.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_kx21x")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6brir")
+
+[node name="ItemContainer" type="VBoxContainer" parent="Layer/BackgroundTexture/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[connection signal="pressed" from="Layer/BackgroundTexture/CloseButton" to="." method="CloseButtonPressed"]
+[connection signal="pressed" from="Layer/BackgroundTexture/BackButton" to="." method="CloseButtonPressed"]
+
+[editable path="Layer/BackgroundTexture/BackButton"]

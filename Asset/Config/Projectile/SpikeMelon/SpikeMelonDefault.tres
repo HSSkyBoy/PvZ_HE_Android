@@ -1,0 +1,54 @@
+[gd_resource type="Resource" script_class="TowerDefenseProjectileConfig" load_steps=7 format=4 uid="uid://d1wm4plghaf6a"]
+
+[ext_resource type="Script" uid="uid://dgnek80uj8531" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventPacketSpawn.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://bshbr6o1rfytt" path="res://Asset/Texture/TowerDefense/Projectile/SpikeMelon/ProjectileSpikeMelon.tscn" id="2"]
+[ext_resource type="Script" uid="uid://b7ddnv74g0463" path="res://Resource/TowerDefense/Projectile/TowerDefenseProjectileConfig.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://ct3aai4g57k2g" path="res://Prefab/Particles/Splats/SpikeMelonpultSplats/SpikeMelonpultSplats.tscn" id="4"]
+
+[sub_resource type="Resource" id="Resource_f6jfn"]
+script = ExtResource("1")
+packetName = "PlantCaltropMelon"
+percentage = 0.4
+dieSpawn = false
+metadata/_custom_type_script = "uid://dgnek80uj8531"
+
+[sub_resource type="Resource" id="Resource_j0u50"]
+script = ExtResource("1")
+packetName = "PlantCaltropMelon"
+percentage = 1.0
+dieSpawn = true
+metadata/_custom_type_script = "uid://dgnek80uj8531"
+
+[resource]
+script = ExtResource("3")
+name = "SpikeMelonDefault"
+size = Vector2(28, 28)
+baseDamage = 80.0
+projectileScene = ExtResource("2")
+projectileObject = 315
+splatSceneType = "Particles"
+splatAudio = "MelonImpact"
+splatScene = ExtResource("4")
+splatObject = 111
+hitEffect = null
+hitTargetEventList = [SubResource("Resource_f6jfn"), SubResource("Resource_j0u50")]
+hitCharacterEventList = []
+hitGroundEventList = [SubResource("Resource_f6jfn"), SubResource("Resource_j0u50")]
+rotateScale = 5.0
+hitBody = false
+fireLength = -1.0
+useRange = true
+rangeSize = Vector2(0.5, 1.25)
+hitPesontage = 0.25
+damageFlags = 2
+fireMethodFlags = 2
+collisionFlags = 43
+catapultHeight = 600.0
+penetrateNum = 3
+penetrateOverBack = true
+backOutGround = true
+backDuration = 1.0
+Flag/Damage = 2
+Flag/FireMethod = 2
+Flag/Collision = 43
+Catapult/Height = 600.0

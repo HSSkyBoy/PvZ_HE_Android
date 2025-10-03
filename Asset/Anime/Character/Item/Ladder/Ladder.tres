@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="AdobeAnimateData" load_steps=3 format=4 uid="uid://6666gp2eya37"]
+
+[ext_resource type="Script" uid="uid://bvv4e0wytebkn" path="res://addons/AdobeAnimateEditor/Resource/AdobeAnimateData.gd" id="1"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_bjq7o"]
+_data = PackedByteArray("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")
+size_override = Vector2(77, 121)
+
+[resource]
+script = ExtResource("1")
+animeFile = "res://Asset/Anime/Character/Item/Ladder/Ladder.dat"
+frameRate = 30.0
+frameScale = 1
+frameMax = 1
+imageAtlas = SubResource("PortableCompressedTexture2D_bjq7o")
+mediaList = [Rect2(0, 0, 77, 121)]
+layerList = PackedStringArray("Ladder", "AnimeClips")
+timeline = [[[[0, Transform2D(0.800003, 0, 0, 0.800003, 0, 0), Color(1, 1, 1, 1)]]], [[[65535, Transform2D(1, 0, 0, 1, 0, 0), Color(1, 1, 1, 1)]]]]
+events = [[]]
+clips = {
+&"Idle": Vector2i(0, 0)
+}
+mediaDictionary = {
+&"Zombie_ladder_5.png": 0
+}
+layerDictionary = {
+&"AnimeClips": 1,
+&"Ladder": 0
+}
+metadata/_custom_type_script = "uid://bvv4e0wytebkn"

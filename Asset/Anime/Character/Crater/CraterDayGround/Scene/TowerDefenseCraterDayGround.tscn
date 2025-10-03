@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=4 uid="uid://bt7rwwrdyh7bh"]
+
+[ext_resource type="PackedScene" uid="uid://cwhqvqfanhp7s" path="res://Prefab/TowerDefense/Character/TowerDefenseCrater.tscn" id="1"]
+[ext_resource type="Script" uid="uid://d25qqb3od8cub" path="res://Asset/Anime/Character/Crater/CraterDayGround/Scene/TowerDefenseCraterDayGround.gd" id="2"]
+[ext_resource type="Resource" uid="uid://b1woethenk802" path="res://Asset/Anime/Character/Crater/CraterDayGround/Config/TowerDefenseCraterDayGround.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://djias5tq7rcey" path="res://Asset/Anime/Character/Crater/CraterDayGround/CraterDayGround.tscn" id="4"]
+
+[node name="TowerDefenseCraterDayGround" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+config = ExtResource("3")
+sprite = NodePath("CraterDayGround")
+
+[node name="CraterDayGround" parent="." index="1" instance=ExtResource("4")]
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/CraterHalf = false

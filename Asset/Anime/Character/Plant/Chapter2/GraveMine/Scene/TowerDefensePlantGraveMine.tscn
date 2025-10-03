@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=4 uid="uid://ddt5fmmo3p2uo"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bido2qp4ouosu" path="res://Asset/Anime/Character/Plant/Chapter2/GraveMine/Scene/TowerDefensePlantGraveMine.gd" id="2"]
+[ext_resource type="Resource" uid="uid://dxe3u273fvty0" path="res://Asset/Anime/Character/Plant/Chapter2/GraveMine/Config/TowerDefensePlantGraveMine.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://576bvdpjtrfh" path="res://Asset/Anime/Character/Plant/Chapter2/GraveMine/GraveMine.tscn" id="4"]
+
+[node name="TowerDefensePlantGraveMine" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/GraveMine")
+Custom = []
+gravity = 245.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="GraveMine" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+position = Vector2(0, -30)
+
+[node name="ShadowSprite" parent="." index="3"]
+visible = false
+position = Vector2(0, 30)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)

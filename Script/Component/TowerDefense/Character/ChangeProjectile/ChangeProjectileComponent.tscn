@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=4 uid="uid://b6w5f0q85ngb7"]
+
+[ext_resource type="Script" uid="uid://cim7x41l2xv65" path="res://Script/Component/TowerDefense/Character/ChangeProjectile/ChangeProjectileComponent.gd" id="1"]
+
+[node name="ChangeProjectileComponent" type="Node2D"]
+script = ExtResource("1")
+metadata/_custom_type_script = "uid://gkjyv2esni1c"

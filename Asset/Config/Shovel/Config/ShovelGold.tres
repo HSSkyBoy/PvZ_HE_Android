@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="ShovelConfig" load_steps=7 format=4 uid="uid://dndl4lpr71tkn"]
+
+[ext_resource type="Script" uid="uid://c3vjuf10d065k" path="res://Resource/TowerDefense/Shovel/Event/ShovelEventRecycleConfig.gd" id="1"]
+[ext_resource type="Script" uid="uid://xmwd4jomf83s" path="res://Resource/TowerDefense/Shovel/ShovelConfig.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://diamcnt3281ny" path="res://Asset/Texture/TowerDefense/Shovel/ShovelGold.png" id="3"]
+[ext_resource type="Script" uid="uid://p7yhpfahgp8d" path="res://Resource/UnlockCondition/UnlockConditionLevelFinishConfig.gd" id="4"]
+
+[sub_resource type="Resource" id="Resource_eybjc"]
+script = ExtResource("1")
+percentage = 0.2
+destroy = true
+metadata/_custom_type_script = "uid://c3vjuf10d065k"
+
+[sub_resource type="Resource" id="Resource_ryv7l"]
+script = ExtResource("4")
+levelSaveKey = "Level1_4"
+metadata/_custom_type_script = "uid://p7yhpfahgp8d"
+
+[resource]
+script = ExtResource("2")
+texture = ExtResource("3")
+saveKey = "ShovelGold"
+unlockCheckList = [SubResource("Resource_ryv7l")]
+name = "TOWERDEFENSE_SHOVEL_GOLD_NAME"
+describe = "TOWERDEFENSE_SHOVEL_GOLD_EXPRESTION"
+handbookDescribe = "TOWERDEFENSE_SHOVEL_GOLD_HANDBOOK_EXPRESTION"
+handbookStory = "TOWERDEFENSE_SHOVEL_GOLD_HANDBOOK_STORY"
+eventList = [SubResource("Resource_eybjc")]
+metadata/_custom_type_script = "uid://xmwd4jomf83s"

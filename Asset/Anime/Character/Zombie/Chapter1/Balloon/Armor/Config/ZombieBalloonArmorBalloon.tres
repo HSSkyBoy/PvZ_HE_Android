@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CharacterArmorConfig" load_steps=2 format=4 uid="uid://r7c0p3hjwro5"]
+
+[ext_resource type="Script" uid="uid://3gswocg6uh6g" path="res://Resource/General/Character/Armor/CharacterArmorConfig.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+armorName = "Balloon"
+damagePoint = 40.0
+stagePersontage = []
+replaceMethod = "Media"
+replaceSpriteSlotPath = NodePath("")
+replaceSpriteRotation = 0.0
+replaceSpriteScale = Vector2(1, 1)
+replaceSpriteOffset = Vector2(0, 0)
+replaceMediaName = &""
+stageAnimeTexture = []
+openFliter = ""
+closeFliter = ""
+destroyFliter = ""
+impactAudio = ""
+damageAudio = ""
+explodePersontage = 1.0
+armorMethodFlags = 74
+Flag/Method = 74

@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=4 uid="uid://cdbrrsgyntxe0"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://3uwlyhd0vg3v" path="res://Asset/Anime/Effect/Coin/Diamond/Diamond.tres" id="2"]
+
+[node name="Diamond" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-35, -25)
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/Diamond = true
+Animation/LayerVisible/shine1 = true
+Animation/LayerVisible/shine2 = true
+Animation/LayerVisible/shine3 = true
+Animation/LayerVisible/shine4 = true
+Animation/LayerVisible/shine5 = true
+Animation/MediaReplace/Diamond.png = null
+Animation/MediaReplace/Diamond_shine1.png = null
+Animation/MediaReplace/Diamond_shine2.png = null
+Animation/MediaReplace/Diamond_shine3.png = null
+Animation/MediaReplace/Diamond_shine4.png = null
+Animation/MediaReplace/Diamond_shine5.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

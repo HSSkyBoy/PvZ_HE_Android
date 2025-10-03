@@ -1,0 +1,92 @@
+[gd_scene load_steps=4 format=4 uid="uid://dnb383542ldh5"]
+
+[ext_resource type="Script" uid="uid://cxxsx4ys45vpq" path="res://Asset/Anime/Character/Plant/Chapter0/PeaShooterSingle/PeaShooterSingleSprite.gd" id="1"]
+[ext_resource type="Resource" uid="uid://bqvkxvlfx7kek" path="res://Asset/Anime/Character/Plant/Chapter0/PeaShooterSingle/PeaShooterSingle.tres" id="2"]
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="3"]
+
+[node name="PeaShooterSingle" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "BodyIdle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/AnimeEvents = true
+Animation/LayerVisible/anim_blink = true
+Animation/LayerVisible/anim_face = true
+Animation/LayerVisible/anim_sprout = true
+Animation/LayerVisible/anim_stem = false
+Animation/LayerVisible/backleaf = true
+Animation/LayerVisible/backleaf_left_tip = true
+Animation/LayerVisible/backleaf_right_tip = true
+Animation/LayerVisible/frontleaf = true
+Animation/LayerVisible/frontleaf_right_tip = true
+Animation/LayerVisible/frontleaf_tip_left = true
+Animation/LayerVisible/idle_mouth = true
+Animation/LayerVisible/idle_shoot_blink = true
+Animation/LayerVisible/stalk_bottom = true
+Animation/LayerVisible/stalk_top = true
+Animation/MediaReplace/PeaShooter_backleaf.png = null
+Animation/MediaReplace/PeaShooter_backleaf_lefttip.png = null
+Animation/MediaReplace/PeaShooter_backleaf_righttip.png = null
+Animation/MediaReplace/PeaShooter_blink1.png = null
+Animation/MediaReplace/PeaShooter_blink2.png = null
+Animation/MediaReplace/PeaShooter_frontleaf.png = null
+Animation/MediaReplace/PeaShooter_frontleaf_lefttip.png = null
+Animation/MediaReplace/PeaShooter_frontleaf_righttip.png = null
+Animation/MediaReplace/PeaShooter_head.png = null
+Animation/MediaReplace/PeaShooter_mouth.png = null
+Animation/MediaReplace/PeaShooter_stalk_bottom.png = null
+Animation/MediaReplace/PeaShooter_stalk_top.png = null
+Animation/MediaReplace/anim_sprout.png = null
+Animation/MediaReplace/locator.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="Head" type="Node2D" parent="." node_paths=PackedStringArray("layerSlot", "layerSprite", "parentSprite")]
+unique_name_in_owner = true
+position = Vector2(-2.49, 3.45333)
+script = ExtResource("3")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-36, -46)
+trueFrameRate = 60.0
+useTween = false
+skipLastFrame = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+parentSprite = NodePath("..")
+Animation/Clip = "HeadIdle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/AnimeEvents = true
+Animation/LayerVisible/anim_blink = true
+Animation/LayerVisible/anim_face = true
+Animation/LayerVisible/anim_sprout = true
+Animation/LayerVisible/anim_stem = true
+Animation/LayerVisible/backleaf = true
+Animation/LayerVisible/backleaf_left_tip = true
+Animation/LayerVisible/backleaf_right_tip = true
+Animation/LayerVisible/frontleaf = true
+Animation/LayerVisible/frontleaf_right_tip = true
+Animation/LayerVisible/frontleaf_tip_left = true
+Animation/LayerVisible/idle_mouth = true
+Animation/LayerVisible/idle_shoot_blink = true
+Animation/LayerVisible/stalk_bottom = true
+Animation/LayerVisible/stalk_top = true
+Animation/MediaReplace/PeaShooter_backleaf.png = null
+Animation/MediaReplace/PeaShooter_backleaf_lefttip.png = null
+Animation/MediaReplace/PeaShooter_backleaf_righttip.png = null
+Animation/MediaReplace/PeaShooter_blink1.png = null
+Animation/MediaReplace/PeaShooter_blink2.png = null
+Animation/MediaReplace/PeaShooter_frontleaf.png = null
+Animation/MediaReplace/PeaShooter_frontleaf_lefttip.png = null
+Animation/MediaReplace/PeaShooter_frontleaf_righttip.png = null
+Animation/MediaReplace/PeaShooter_head.png = null
+Animation/MediaReplace/PeaShooter_mouth.png = null
+Animation/MediaReplace/PeaShooter_stalk_bottom.png = null
+Animation/MediaReplace/PeaShooter_stalk_top.png = null
+Animation/MediaReplace/anim_sprout.png = null
+Animation/MediaReplace/locator.png = null
+Layer = 8
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

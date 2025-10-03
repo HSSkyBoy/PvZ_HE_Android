@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=4 uid="uid://b8xhdro1stqvr"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://cmxvstqdsvum6" path="res://Asset/Anime/Character/Zombie/Ash/Gargantuar/ZombieGargantuarAsh.tres" id="2"]
+
+[node name="ZombieGargantuarAsh" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -90)
+trueFrameRate = 60.0
+layerSlot = [null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/arm = true
+Animation/LayerVisible/blink = true
+Animation/LayerVisible/body = true
+Animation/LayerVisible/head = true
+Animation/LayerVisible/impblink = true
+Animation/LayerVisible/imphead = true
+Animation/LayerVisible/pile1 = true
+Animation/LayerVisible/pile2 = true
+Animation/LayerVisible/tail = true
+Animation/MediaReplace/Zombie_charred_gargantuar1.png = null
+Animation/MediaReplace/Zombie_charred_gargantuar10.png = null
+Animation/MediaReplace/Zombie_charred_gargantuar11.png = null
+Animation/MediaReplace/Zombie_charred_gargantuar2.png = null
+Animation/MediaReplace/Zombie_charred_gargantuar3.png = null
+Animation/MediaReplace/Zombie_charred_gargantuar4.png = null
+Animation/MediaReplace/Zombie_charred_gargantuar5.png = null
+Animation/MediaReplace/Zombie_charred_gargantuar6.png = null
+Animation/MediaReplace/Zombie_charred_gargantuar7.png = null
+Animation/MediaReplace/Zombie_charred_gargantuar8.png = null
+Animation/MediaReplace/Zombie_charred_gargantuar9.png = null
+Animation/MediaReplace/Zombie_charred_gargantuar_arm.png = null
+Animation/MediaReplace/Zombie_charred_gargantuar_blink1.png = null
+Animation/MediaReplace/Zombie_charred_gargantuar_blink2.png = null
+Animation/MediaReplace/Zombie_charred_gargantuar_head.png = null
+Animation/MediaReplace/Zombie_charred_gargantuar_impblink1.png = null
+Animation/MediaReplace/Zombie_charred_gargantuar_impblink2.png = null
+Animation/MediaReplace/Zombie_charred_gargantuar_imphead.png = null
+Animation/MediaReplace/Zombie_charred_pile1.png = null
+Animation/MediaReplace/Zombie_charred_pile2.png = null
+Animation/MediaReplace/Zombie_charred_tail.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

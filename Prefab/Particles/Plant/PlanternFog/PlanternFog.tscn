@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=4 uid="uid://dsc2tkcmoc8l1"]
+
+[ext_resource type="Texture2D" uid="uid://bbr17mosdlfcj" path="res://Asset/Anime/Particles/Plant/SpiritShroomFog.png" id="1"]
+
+[sub_resource type="Curve" id="Curve_jx1es"]
+_data = [Vector2(0, 0.116147), 0.0, 0.0, 0, 0, Vector2(0.238754, 0.199008), 0.0, 0.0, 0, 0, Vector2(0.49827, 0.0977337), 0.0, 0.0, 0, 0, Vector2(0.754325, 0.189802), 0.0, 0.0, 0, 0, Vector2(1, 0.106941), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CurveTexture" id="CurveTexture_53fqi"]
+curve = SubResource("Curve_jx1es")
+
+[sub_resource type="Curve" id="Curve_junw5"]
+_limits = [0.0, 1.2, 0.0, 1.0]
+_data = [Vector2(0, 1.00105), 0.0, 0.0, 0, 0, Vector2(0.251004, 0.778695), 0.0, 0.0, 0, 0, Vector2(0.497992, 1.08297), 0.0, 0.0, 0, 0, Vector2(0.748996, 0.778695), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CurveTexture" id="CurveTexture_3k0c8"]
+curve = SubResource("Curve_junw5")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_y4xrt"]
+particle_flag_disable_z = true
+angular_velocity_min = -60.0
+angular_velocity_max = 60.0
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_3k0c8")
+alpha_curve = SubResource("CurveTexture_53fqi")
+
+[node name="PlanternFog" type="GPUParticles2D"]
+amount = 32
+texture = ExtResource("1")
+lifetime = 4.0
+process_material = SubResource("ParticleProcessMaterial_y4xrt")

@@ -1,0 +1,89 @@
+{
+	"2025-06" : [
+		{
+			"Type" : "Feature" ,
+			"Key" : "SunflowerPeaCustom0" ,
+			"ConditionType" : "FinishLevelNum" ,
+			"ConditionArg" : [ 4 ] ,
+			"Icon" : "uid://brvvpwcqd3pch" ,
+			"ShowCharacter" : "PlantSunflowerPea",
+			"ShowCustom" : "Custom0"
+		},
+	],
+	"2025-07" : [
+		{
+			"Type" : "Feature" ,
+			"Key" : "FirenutCustom0" ,
+			"ConditionType" : "FinishLevelNum" ,
+			"ConditionArg" : [ 7 ] ,
+			"Icon" : "uid://cjko5cf884e6w" ,
+			"ShowCharacter" : "PlantFirenut",
+			"ShowCustom" : "Custom0"
+		},
+		{
+			"Type" : "Feature" ,
+			"Key" : "SunBombCustom0" ,
+			"ConditionType" : "FinishLevelNum" ,
+			"ConditionArg" : [ 14 ] ,
+			"Icon" : "uid://b80w7n5inokud" ,
+			"ShowCharacter" : "PlantSunBomb",
+			"ShowCustom" : "Custom0"
+		},
+		{
+			"Type" : "Feature" ,
+			"Key" : "SunMineCustom0" ,
+			"ConditionType" : "FinishLevelNum" ,
+			"ConditionArg" : [ 21 ] ,
+			"Icon" : "uid://ytxf84fwj4kf" ,
+			"ShowCharacter" : "PlantSunMine",
+			"ShowCustom" : "Custom0"
+		},
+		{
+			"Type" : "Feature" ,
+			"Key" : "ReCactusCustom0" ,
+			"ConditionType" : "FinishLevelNum" ,
+			"ConditionArg" : [ 28 ] ,
+			"Icon" : "uid://dgh8had17ky1w" ,
+			"ShowCharacter" : "PlantReCactus",
+			"ShowCustom" : "Custom0"
+		}
+	],
+	"2025-08" : [
+		{
+			"Type" : "Feature" ,
+			"Key" : "PuffPotCustom0" ,
+			"ConditionType" : "FinishLevelNum" ,
+			"ConditionArg" : [ 7 ] ,
+			"Icon" : "uid://cryfkkxtnxn48" ,
+			"ShowCharacter" : "PlantPuffPot",
+			"ShowCustom" : "Custom0"
+		},
+		{
+			"Type" : "Feature" ,
+			"Key" : "GraveMineCustom0" ,
+			"ConditionType" : "FinishLevelNum" ,
+			"ConditionArg" : [ 14 ] ,
+			"Icon" : "uid://cpcipq7hllbcf" ,
+			"ShowCharacter" : "PlantGraveMine",
+			"ShowCustom" : "Custom0"
+		},
+		{
+			"Type" : "Feature" ,
+			"Key" : "ScaredySunShroomCustom0" ,
+			"ConditionType" : "FinishLevelNum" ,
+			"ConditionArg" : [ 21 ] ,
+			"Icon" : "uid://c70cf4iol2lct" ,
+			"ShowCharacter" : "PlantScaredySunShroom",
+			"ShowCustom" : "Custom0"
+		},
+		{
+			"Type" : "Feature" ,
+			"Key" : "IcenutCustom0" ,
+			"ConditionType" : "FinishLevelNum" ,
+			"ConditionArg" : [ 28 ] ,
+			"Icon" : "uid://b7df01wj2d0qw" ,
+			"ShowCharacter" : "PlantIcenut",
+			"ShowCustom" : "Custom0"
+		}
+	]
+}

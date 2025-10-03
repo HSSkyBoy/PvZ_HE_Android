@@ -1,0 +1,97 @@
+[gd_scene load_steps=13 format=4 uid="uid://bjmlccfxdtq7p"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://by5pnrg4e23ly" path="res://Asset/Anime/Character/Plant/Gold/WildPea/Scene/TowerDefensePlantWildPea.gd" id="2"]
+[ext_resource type="Resource" uid="uid://cemx3vnun74wg" path="res://Asset/Anime/Character/Plant/Gold/WildPea/Config/TowerDefensePlantWildPea.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://ol03wo0e5dnb" path="res://Asset/Anime/Character/Plant/Gold/WildPea/WildPea.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://b5htxrgm8twcr" path="res://Script/Component/TowerDefense/Character/FireComponent/FireComponent.tscn" id="5"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="6"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="7"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_uapu3"]
+b = Vector2(2000, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_f8orx"]
+b = Vector2(2000, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_mig1w"]
+b = Vector2(2000, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_vvw8g"]
+b = Vector2(2000, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_hp6ho"]
+b = Vector2(2000, 0)
+
+[node name="TowerDefensePlantWildPea" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+fireInterval = 2.0
+fireNum = 1
+idleAnimeClip = "BodyIdle"
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/WildPea")
+gravity = 245.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="WildPea" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSprite") instance=ExtResource("4")]
+position = Vector2(0, -30)
+layerSprite = [null, null, null, null, null, null, null, null, NodePath("Head"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="Head" parent="SpriteGroup/TransformPoint/WildPea" index="0"]
+position = Vector2(-1.4167, 2.1)
+
+[node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/WildPea/Head" index="0"]
+position = Vector2(31.4706, -16.7422)
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 30)
+
+[node name="FireComponent" parent="." index="5" node_paths=PackedStringArray("firePosMarker", "checkArea") instance=ExtResource("5")]
+unique_name_in_owner = true
+firePosMarker = [NodePath("../SpriteGroup/TransformPoint/WildPea/Head/Marker2D")]
+checkArea = NodePath("Area2D")
+checkAllLine = true
+fireInterval = 1.5
+
+[node name="Area2D" type="Area2D" parent="FireComponent" index="0"]
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FireComponent/Area2D" index="0"]
+rotation = -0.261799
+shape = SubResource("SegmentShape2D_uapu3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="FireComponent/Area2D" index="1"]
+rotation = -0.1309
+shape = SubResource("SegmentShape2D_f8orx")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="FireComponent/Area2D" index="2"]
+shape = SubResource("SegmentShape2D_mig1w")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="FireComponent/Area2D" index="3"]
+rotation = 0.1309
+shape = SubResource("SegmentShape2D_vvw8g")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="FireComponent/Area2D" index="4"]
+rotation = 0.261799
+shape = SubResource("SegmentShape2D_hp6ho")
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+
+[node name="Attack" type="Node" parent="StateChart/CompoundState" index="2"]
+script = ExtResource("6")
+
+[node name="ToAttack" type="Node" parent="StateChart/CompoundState" index="6"]
+script = ExtResource("7")
+to = NodePath("../Attack")
+event = &"ToAttack"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="StateChart/CompoundState/Attack" to="." method="AttackEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Attack" to="." method="AttackExited"]
+[connection signal="state_processing" from="StateChart/CompoundState/Attack" to="." method="AttackProcessing"]
+
+[editable path="SpriteGroup/TransformPoint/WildPea"]

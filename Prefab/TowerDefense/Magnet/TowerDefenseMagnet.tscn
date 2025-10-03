@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=4 uid="uid://baxlrxaix6r2b"]
+
+[ext_resource type="PackedScene" uid="uid://o7sgb44iah6m" path="res://Prefab/TowerDefense/Base/TowerDefenseGroundItemBase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://mhrxy50y3811" path="res://Prefab/TowerDefense/Magnet/TowerDefenseMagnet.gd" id="2"]
+
+[node name="TowerDefenseMagnet" instance=ExtResource("1")]
+z_index = -10
+script = ExtResource("2")
+itemLayer = 5

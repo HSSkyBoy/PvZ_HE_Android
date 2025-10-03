@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=4 uid="uid://cwqy6uss451qt"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://dgylgjjfj35s0" path="res://Asset/Anime/Character/Plant/Chapter2/JalaSunShroom/JalaSunShroom.tres" id="2"]
+
+[node name="JalaSunShroom" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-42, -30)
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/SunShroom_head = true
+Animation/LayerVisible/anim_eyebrow = true
+Animation/LayerVisible/anim_face = true
+Animation/LayerVisible/anim_hat = true
+Animation/LayerVisible/anim_hatstem = true
+Animation/LayerVisible/anim_jalaLeft = true
+Animation/LayerVisible/anim_jalaRight = true
+Animation/LayerVisible/anim_leftstem = true
+Animation/LayerVisible/anim_rightstem = true
+Animation/LayerVisible/anim_sleep = true
+Animation/MediaReplace/JalaSunShroom_blink1.png = null
+Animation/MediaReplace/JalaSunShroom_blink2.png = null
+Animation/MediaReplace/JalaSunShroom_body.png = null
+Animation/MediaReplace/JalaSunShroom_eyebrow.png = null
+Animation/MediaReplace/JalaSunShroom_hat.png = null
+Animation/MediaReplace/JalaSunShroom_head.png = null
+Animation/MediaReplace/JalaSunShroom_jalaLeft.png = null
+Animation/MediaReplace/JalaSunShroom_jalaRight.png = null
+Animation/MediaReplace/JalaSunShroom_sleep.png = null
+Animation/MediaReplace/Jalapeno_stem.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

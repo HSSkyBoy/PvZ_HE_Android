@@ -1,0 +1,906 @@
+{
+	"Name": "Level2_5",
+	"Description": "PLAYERS_TRIP_TO_MODERN",
+	"LevelName": "PLAYERS_MORDEN_NIGHT_LEVEL_NAME",
+	"LevelNumber": 5.0,
+	"NextLevel": "",
+	"HomeWorld": "Morden",
+	"Talk": "",
+	"Tutorial": "",
+	"Map": "FrontlawnNight",
+	"BGM": "Loonboon",
+	"Reward": {
+		"RewardType": "Packet",
+		"RewardFirst": "PlantSnowShroom"
+	},
+	"Event": {
+		"EventInit": [
+			{
+				"EventName": "GravestoneCreateRandom",
+				"Value": {
+					"GravestoneNames": [
+						"GraveStoneDefault"
+					],
+					"GravestoneNum": 10.0,
+					"GravestonePos": {
+						"x": 4.0,
+						"y": 1.0,
+						"z": 9.0,
+						"w": 5.0
+					}
+				}
+			}
+		],
+		"EventReady": [],
+		"EventStart": [
+			{
+				"EventName": "SetGameMode",
+				"Value": {
+					"GameMode": "Hammer"
+				}
+			}
+		]
+	},
+	"PacketBank": {
+		"Method": "Preset",
+		"Type": "GeneralPlant",
+		"Value": [
+			"PlantSunMine",
+			"PlantGraveMine",
+			"PlantIceSunShroom"
+		]
+	},
+	"SunManager": {
+		"Open": true,
+		"Begin": 0.0,
+		"SpawnInterval": 13.0,
+		"SpawnNum": 25.0,
+		"MovingMethod": "Land"
+	},
+	"WaveManager": {
+		"FlagZombie": "ZombieFlagCone",
+		"FlagWaveInterval": 20.0,
+		"MaxNextWaveHealthPercentage": 0.15,
+		"MinNextWaveHealthPercentage": 0.2,
+		"BeginCol": 3.0,
+		"SpawnColEnd": 30.0,
+		"SpawnColStart": 15.0,
+		"Dynamic": [
+			{
+				"PointIncrementPerWave": -10.0,
+				"StartingPoints": -50.0,
+				"StartingWave": 3.0,
+				"ZombiePool": [
+					"ZombieNormal"
+				]
+			},
+			{
+				"PointIncrementPerWave": -10.0,
+				"StartingPoints": -50.0,
+				"StartingWave": 4.0,
+				"ZombiePool": [
+					"ZombieNormal"
+				]
+			},
+			{
+				"PointIncrementPerWave": -5.0,
+				"StartingPoints": -100.0,
+				"StartingWave": 5.0,
+				"ZombiePool": [
+					"ZombieNormal"
+				]
+			},
+			{
+
+			},
+			{
+				"PointIncrementPerWave": 15.0,
+				"StartingPoints": 15.0,
+				"StartingWave": 5.0,
+				"ZombiePool": [
+					"ZombieNormal"
+				]
+			},
+			{
+				"PointIncrementPerWave": 40.0,
+				"StartingPoints": 40.0,
+				"StartingWave": 4.0,
+				"ZombiePool": [
+					"ZombieNormal"
+				]
+			},
+			{
+				"PointIncrementPerWave": 60.0,
+				"StartingPoints": 60.0,
+				"StartingWave": 3.0,
+				"ZombiePool": [
+					"ZombieNormal"
+				]
+			}
+		],
+		"Wave": [
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [],
+				"Event": [
+					{
+						"EventName": "GravestoneSpawnZombie",
+						"Value": {
+							"ZombieNames": [
+								"ZombieNormal",
+								"ZombieNormalCone"
+							],
+							"ZombieNum": 6.0,
+							"Delay": [
+								0.0,
+								5.0
+							]
+						}
+					}
+				]
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [],
+				"Event": [
+					{
+						"EventName": "GravestoneSpawnZombie",
+						"Value": {
+							"ZombieNames": [
+								"ZombieNormal",
+								"ZombieNormalCone"
+							],
+							"ZombieNum": 6.0,
+							"Delay": [
+								0.0,
+								5.0
+							]
+						}
+					}
+				]
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [],
+				"Event": [
+					{
+						"EventName": "GravestoneSpawnZombie",
+						"Value": {
+							"ZombieNames": [
+								"ZombieNormal",
+								"ZombieNormalCone",
+								"ZombieNormalBucket"
+							],
+							"ZombieNum": 8.0,
+							"Delay": [
+								0.0,
+								8.0
+							],
+							"Override": {
+								"WalkSpeedScale": [
+									1.0,
+									2.0
+								]
+							}
+						}
+					}
+				]
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [],
+				"Event": [
+					{
+						"EventName": "GravestoneCreateRandom",
+						"Value": {
+							"GravestoneNames": [
+								"GraveStoneDefault"
+							],
+							"GravestoneNum": 1.0,
+							"GravestonePos": {
+								"x": 4.0,
+								"y": 1.0,
+								"z": 9.0,
+								"w": 5.0
+							}
+						}
+					},
+					{
+						"EventName": "GravestoneSpawnZombie",
+						"Value": {
+							"ZombieNames": [
+								"ZombieNormal",
+								"ZombieNormalCone",
+								"ZombieNormalBucket"
+							],
+							"ZombieNum": 8.0,
+							"Delay": [
+								0.0,
+								6.0
+							],
+							"Override": {
+								"WalkSpeedScale": [
+									1.0,
+									2.0
+								]
+							}
+						}
+					}
+				]
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [],
+				"Event": [
+					{
+						"EventName": "GravestoneSpawnZombie",
+						"Value": {
+							"ZombieNames": [
+								"ZombieNormal",
+								"ZombieNormalCone",
+								"ZombieNormalBucket"
+							],
+							"ZombieNum": 8.0,
+							"Delay": [
+								0.0,
+								8.0
+							],
+							"Override": {
+								"WalkSpeedScale": [
+									1.0,
+									2.0
+								]
+							}
+						}
+					}
+				]
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [],
+				"Event": [
+					{
+						"EventName": "GravestoneSpawnZombie",
+						"Value": {
+							"ZombieNames": [
+								"ZombieNormal",
+								"ZombieNormalCone",
+								"ZombieNormalBucket"
+							],
+							"ZombieNum": 10.0,
+							"Delay": [
+								0.0,
+								10.0
+							],
+							"Override": {
+								"WalkSpeedScale": [
+									1.0,
+									2.0
+								]
+							}
+						}
+					}
+				]
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [],
+				"Event": [
+					{
+						"EventName": "GravestoneSpawnZombie",
+						"Value": {
+							"ZombieNames": [
+								"ZombieNormal",
+								"ZombieNormalCone",
+								"ZombieFootball",
+								"ZombieNormalBucket"
+							],
+							"ZombieNum": 10.0,
+							"Delay": [
+								0.0,
+								10.0
+							],
+							"Override": {
+								"WalkSpeedScale": [
+									1.0,
+									3.0
+								]
+							}
+						}
+					}
+				]
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [],
+				"Event": [
+					{
+						"EventName": "GravestoneCreateRandom",
+						"Value": {
+							"GravestoneNames": [
+								"GraveStoneDefault"
+							],
+							"GravestoneNum": 3.0,
+							"GravestonePos": {
+								"x": 4.0,
+								"y": 1.0,
+								"z": 9.0,
+								"w": 5.0
+							}
+						}
+					},
+					{
+						"EventName": "GravestoneSpawnZombie",
+						"Value": {
+							"ZombieNames": [
+								"ZombieNormal",
+								"ZombieNormalCone",
+								"ZombieFootball",
+								"ZombieNormalBucket"
+							],
+							"ZombieNum": 10.0,
+							"Delay": [
+								0.0,
+								10.0
+							],
+							"Override": {
+								"WalkSpeedScale": [
+									1.0,
+									3.0
+								]
+							}
+						}
+					}
+				]
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [],
+				"Event": [
+					{
+						"EventName": "GravestoneSpawnZombie",
+						"Value": {
+							"ZombieNames": [
+								"ZombieNormal",
+								"ZombieNormalCone",
+								"ZombieFootball",
+								"ZombieNormalBucket"
+							],
+							"ZombieNum": 10.0,
+							"Delay": [
+								0.0,
+								15.0
+							],
+							"Override": {
+								"WalkSpeedScale": [
+									1.0,
+									3.0
+								]
+							}
+						}
+					}
+				]
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [],
+				"Event": [
+					{
+						"EventName": "GravestoneSpawnZombie",
+						"Value": {
+							"ZombieNames": [
+								"ZombieNormal",
+								"ZombieNormalCone",
+								"ZombieFootball",
+								"ZombieNormalBucket",
+								"ZombieShadow"
+							],
+							"ZombieNum": 15.0,
+							"Delay": [
+								0.0,
+								15.0
+							],
+							"Override": {
+								"WalkSpeedScale": [
+									1.0,
+									3.0
+								]
+							}
+						}
+					}
+				]
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [],
+				"Event": [
+					{
+						"EventName": "GravestoneSpawnZombie",
+						"Value": {
+							"ZombieNames": [
+								"ZombieNormal",
+								"ZombieNormalCone",
+								"ZombieFootball",
+								"ZombieNormalBucket",
+								"ZombieShadow"
+							],
+							"ZombieNum": 15.0,
+							"Delay": [
+								0.0,
+								15.0
+							],
+							"Override": {
+								"WalkSpeedScale": [
+									1.0,
+									4.0
+								]
+							}
+						}
+					}
+				]
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [],
+				"Event": [
+					{
+						"EventName": "GravestoneCreateRandom",
+						"Value": {
+							"GravestoneNames": [
+								"GraveStoneDefault"
+							],
+							"GravestoneNum": 3.0,
+							"GravestonePos": {
+								"x": 4.0,
+								"y": 1.0,
+								"z": 9.0,
+								"w": 5.0
+							}
+						}
+					},
+					{
+						"EventName": "GravestoneSpawnZombie",
+						"Value": {
+							"ZombieNames": [
+								"ZombieNormal",
+								"ZombieNormalCone",
+								"ZombieFootball",
+								"ZombieNormalBucket",
+								"ZombieShadow"
+							],
+							"ZombieNum": 15.0,
+							"Delay": [
+								0.0,
+								15.0
+							],
+							"Override": {
+								"WalkSpeedScale": [
+									1.0,
+									4.0
+								]
+							}
+						}
+					}
+				]
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [],
+				"Event": [
+					{
+						"EventName": "GravestoneSpawnZombie",
+						"Value": {
+							"ZombieNames": [
+								"ZombieNormal",
+								"ZombieNormalCone",
+								"ZombieFootball",
+								"ZombieNormalBucket",
+								"ZombieShadow"
+							],
+							"ZombieNum": 15.0,
+							"Delay": [
+								0.0,
+								15.0
+							],
+							"Override": {
+								"WalkSpeedScale": [
+									1.0,
+									4.0
+								]
+							}
+						}
+					}
+				]
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [],
+				"Event": [
+					{
+						"EventName": "GravestoneSpawnZombie",
+						"Value": {
+							"ZombieNames": [
+								"ZombieNormal",
+								"ZombieNormalCone",
+								"ZombieFootball",
+								"ZombieNormalBucket",
+								"ZombieShadow"
+							],
+							"ZombieNum": 15.0,
+							"Delay": [
+								0.0,
+								15.0
+							],
+							"Override": {
+								"WalkSpeedScale": [
+									1.0,
+									4.0
+								]
+							}
+						}
+					}
+				]
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [],
+				"Event": [
+					{
+						"EventName": "GravestoneSpawnZombie",
+						"Value": {
+							"ZombieNames": [
+								"ZombieNormal",
+								"ZombieNormalCone",
+								"ZombieFootball",
+								"ZombieNormalBucket",
+								"ZombieShadow"
+							],
+							"ZombieNum": 15.0,
+							"Delay": [
+								0.0,
+								15.0
+							],
+							"Override": {
+								"WalkSpeedScale": [
+									1.0,
+									4.0
+								]
+							}
+						}
+					}
+				]
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [],
+				"Event": [
+					{
+						"EventName": "GravestoneCreateRandom",
+						"Value": {
+							"GravestoneNames": [
+								"GraveStoneDefault"
+							],
+							"GravestoneNum": 3.0,
+							"GravestonePos": {
+								"x": 4.0,
+								"y": 1.0,
+								"z": 9.0,
+								"w": 5.0
+							}
+						}
+					},
+					{
+						"EventName": "GravestoneSpawnZombie",
+						"Value": {
+							"ZombieNames": [
+								"ZombieNormal",
+								"ZombieNormalCone",
+								"ZombieFootball",
+								"ZombieNormalBucket",
+								"ZombieShadow"
+							],
+							"ZombieNum": 15.0,
+							"Delay": [
+								0.0,
+								15.0
+							],
+							"Override": {
+								"WalkSpeedScale": [
+									1.0,
+									3.0
+								]
+							}
+						}
+					}
+				]
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [],
+				"Event": [
+					{
+						"EventName": "GravestoneSpawnZombie",
+						"Value": {
+							"ZombieNames": [
+								"ZombieNormal",
+								"ZombieNormalCone",
+								"ZombieFootball",
+								"ZombieNormalBucket",
+								"ZombieShadow"
+							],
+							"ZombieNum": 15.0,
+							"Delay": [
+								0.0,
+								15.0
+							],
+							"Override": {
+								"WalkSpeedScale": [
+									1.0,
+									4.0
+								]
+							}
+						}
+					}
+				]
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [],
+				"Event": [
+					{
+						"EventName": "GravestoneSpawnZombie",
+						"Value": {
+							"ZombieNames": [
+								"ZombieNormal",
+								"ZombieNormalCone",
+								"ZombieFootball",
+								"ZombieNormalBucket",
+								"ZombieShadow"
+							],
+							"ZombieNum": 15.0,
+							"Delay": [
+								0.0,
+								15.0
+							],
+							"Override": {
+								"WalkSpeedScale": [
+									1.0,
+									4.0
+								]
+							}
+						}
+					}
+				]
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [],
+				"Event": [
+					{
+						"EventName": "GravestoneSpawnZombie",
+						"Value": {
+							"ZombieNames": [
+								"ZombieNormal",
+								"ZombieNormalCone",
+								"ZombieFootball",
+								"ZombieNormalBucket",
+								"ZombieShadow"
+							],
+							"ZombieNum": 15.0,
+							"Delay": [
+								0.0,
+								15.0
+							],
+							"Override": {
+								"WalkSpeedScale": [
+									1.0,
+									4.0
+								]
+							}
+						}
+					}
+				]
+			},
+			{
+				"DynamicPlantfood": [
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0,
+					0.0
+				],
+				"Spawn": [],
+				"Event": [
+					{
+						"EventName": "GravestoneCreateRandom",
+						"Value": {
+							"GravestoneNames": [
+								"GraveStoneDefault"
+							],
+							"GravestoneNum": 3.0,
+							"GravestonePos": {
+								"x": 4.0,
+								"y": 1.0,
+								"z": 9.0,
+								"w": 5.0
+							}
+						}
+					},
+					{
+						"EventName": "GravestoneSpawnZombie",
+						"Value": {
+							"ZombieNames": [
+								"ZombieNormal",
+								"ZombieNormalCone",
+								"ZombieFootball",
+								"ZombieNormalBucket",
+								"ZombieShadow"
+							],
+							"ZombieNum": 20.0,
+							"Override": {
+								"WalkSpeedScale": [
+									1.0,
+									4.0
+								]
+							}
+						}
+					}
+				]
+			}
+		]
+	}
+}

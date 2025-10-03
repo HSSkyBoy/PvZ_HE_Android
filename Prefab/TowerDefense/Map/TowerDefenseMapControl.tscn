@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=4 uid="uid://q2eo6wgcbefw"]
+
+[ext_resource type="Script" uid="uid://b1tthmqfiicpx" path="res://Prefab/TowerDefense/Map/TowerDefenseMapControl.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://fbnfrolt1kma" path="res://Asset/Texture/TowerDefense/Shovel/Shovel.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://ciltp8rao4gp4" path="res://Asset/Texture/GUI/General/Old/Plantfood/ButtonPlantfood.png" id="3"]
+[ext_resource type="PackedScene" uid="uid://dpco4f0jycuf2" path="res://Asset/Config/Map/Frontlawn/Scene/Day/TowerDefenseMapFrontlawn.tscn" id="4"]
+
+[sub_resource type="Environment" id="Environment_tjnwr"]
+background_mode = 3
+background_canvas_max_layer = 1
+glow_enabled = true
+glow_intensity = 1.5
+glow_bloom = 0.02
+
+[node name="TowerDefenseMapControl" type="Node2D"]
+script = ExtResource("1")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_tjnwr")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+unique_name_in_owner = true
+
+[node name="GUILayer" type="CanvasLayer" parent="."]
+layer = 3
+follow_viewport_enabled = true
+
+[node name="SpriteNode" type="Node2D" parent="GUILayer"]
+unique_name_in_owner = true
+
+[node name="ShovelSprite" type="Sprite2D" parent="GUILayer/SpriteNode"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-71.05, -60.71)
+texture = ExtResource("2")
+
+[node name="PlantfoodSprite" type="Sprite2D" parent="GUILayer/SpriteNode"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-71.05, -60.71)
+scale = Vector2(0.78, 0.78)
+texture = ExtResource("3")
+
+[node name="MapIceCap" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="MapNode" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="TowerDefenseMapFrontlawn" parent="MapNode" instance=ExtResource("4")]

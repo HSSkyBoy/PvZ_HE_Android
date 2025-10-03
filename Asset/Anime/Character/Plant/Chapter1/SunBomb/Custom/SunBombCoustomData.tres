@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharacterCustomData" load_steps=3 format=4 uid="uid://bs2dbdw368w4g"]
+
+[ext_resource type="Resource" uid="uid://dk1d8g7lssegf" path="res://Asset/Anime/Character/Plant/Chapter1/SunBomb/Custom/Config/SunBombCustom0.tres" id="1"]
+[ext_resource type="Script" uid="uid://onv5rieax7m5" path="res://Resource/General/Character/Costom/CharacterCustomData.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+customList = [ExtResource("1")]
+customDictionary = {
+"Custom0": {
+"Close": ["1", "1 复制"],
+"Config": ExtResource("1"),
+"Open": ["skin1_1", "skin2_3_1", "skin2_1", "skin2_2", "skin3_1", "skin1_2", "skin2_3_2", "skin2_4", "skin2_5", "skin3_2"]
+}
+}
+fliterOpenAll = ["skin1_1", "skin2_3_1", "skin2_1", "skin2_2", "skin3_1", "skin1_2", "skin2_3_2", "skin2_4", "skin2_5", "skin3_2"]
+fliterCloseAll = ["1", "1 复制"]
+metadata/_custom_type_script = "uid://onv5rieax7m5"

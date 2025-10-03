@@ -1,0 +1,107 @@
+[gd_scene load_steps=4 format=4 uid="uid://cf0jfsae7635c"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://d0885cmtj2myr" path="res://Asset/Anime/Character/Zombie/Chapter1/Football/ZombieFootball.tres" id="2"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="3"]
+
+[node name="ZombieFootball" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-60, -90)
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, NodePath("ArmSlot"), null, null, null, null, NodePath("HeadSlot"), null, null, null, null, NodePath("HelmentSlot"), null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/Zombie_duckytube = false
+Animation/LayerVisible/Zombie_whitewater = true
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/anim_hair = true
+Animation/LayerVisible/anim_head1 = true
+Animation/LayerVisible/anim_head2 = true
+Animation/LayerVisible/zombie_football_helmet = false
+Animation/LayerVisible/zombie_football_leftarm_hand = true
+Animation/LayerVisible/zombie_football_leftarm_hand1 = true
+Animation/LayerVisible/zombie_football_leftarm_hand2 = true
+Animation/LayerVisible/zombie_football_leftarm_lower = true
+Animation/LayerVisible/zombie_football_leftarm_upper = true
+Animation/LayerVisible/zombie_football_leftleg_foot = true
+Animation/LayerVisible/zombie_football_leftleg_lower = true
+Animation/LayerVisible/zombie_football_leftleg_upper = true
+Animation/LayerVisible/zombie_football_lowerbody = true
+Animation/LayerVisible/zombie_football_rightarm_hand = true
+Animation/LayerVisible/zombie_football_rightarm_lower = true
+Animation/LayerVisible/zombie_football_rightarm_upper = true
+Animation/LayerVisible/zombie_football_rightleg_foot = true
+Animation/LayerVisible/zombie_football_rightleg_lower = true
+Animation/LayerVisible/zombie_football_rightleg_upper = true
+Animation/LayerVisible/zombie_football_upperbody = true
+Animation/LayerVisible/zombie_football_upperbody2 = true
+Animation/LayerVisible/zombie_football_upperbody3 = true
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/Zombie_duckytube.png = null
+Animation/MediaReplace/Zombie_duckytube_inwater.png = null
+Animation/MediaReplace/Zombie_football_head.png = null
+Animation/MediaReplace/Zombie_football_helmet.png = null
+Animation/MediaReplace/Zombie_football_leftarm_eatinghand.png = null
+Animation/MediaReplace/Zombie_football_leftarm_eatinglower.png = null
+Animation/MediaReplace/Zombie_football_leftarm_hand.png = null
+Animation/MediaReplace/Zombie_football_leftarm_lower.png = null
+Animation/MediaReplace/Zombie_football_leftleg_foot.png = null
+Animation/MediaReplace/Zombie_football_leftleg_lower.png = null
+Animation/MediaReplace/Zombie_football_leftleg_upper.png = null
+Animation/MediaReplace/Zombie_football_lowerbody.png = null
+Animation/MediaReplace/Zombie_football_outerarm_eatinghand.png = null
+Animation/MediaReplace/Zombie_football_rightarm_upper.png = null
+Animation/MediaReplace/Zombie_football_rightleg_foot.png = null
+Animation/MediaReplace/Zombie_football_rightleg_lower.png = null
+Animation/MediaReplace/Zombie_football_rightleg_upper.png = null
+Animation/MediaReplace/Zombie_football_upperbody.png = null
+Animation/MediaReplace/Zombie_football_upperbody2.png = null
+Animation/MediaReplace/Zombie_football_upperbody3.png = null
+Animation/MediaReplace/Zombie_hair.png = null
+Animation/MediaReplace/Zombie_jaw.png = null
+Animation/MediaReplace/Zombie_snorkle_whitewater1.png = null
+Animation/MediaReplace/Zombie_snorkle_whitewater2.png = null
+Animation/MediaReplace/Zombie_snorkle_whitewater3.png = null
+Animation/MediaReplace/Zombie_whitewater1.png = null
+Animation/MediaReplace/Zombie_whitewater2.png = null
+Animation/MediaReplace/Zombie_whitewater3.png = null
+Animation/MediaReplace/zombie_football_leftarm_upper.png = null
+Animation/MediaReplace/zombie_football_rightarm_hand.png = null
+Animation/MediaReplace/zombie_football_rightarm_lower.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="HeadSlot" type="Node2D" parent="."]
+position = Vector2(-12.3033, -58.4982)
+rotation = -0.0053494
+scale = Vector2(0.799925, 0.799925)
+script = ExtResource("3")
+followSlotId = 17
+offset = Vector2(20, 30)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ArmSlot" type="Node2D" parent="."]
+position = Vector2(-34.4704, -21.7887)
+rotation = -0.0183566
+scale = Vector2(0.799757, 0.799757)
+script = ExtResource("3")
+followSlotId = 12
+offset = Vector2(10, 5)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="HelmentSlot" type="Node2D" parent="."]
+position = Vector2(-7.98174, -62.9681)
+rotation = -0.00972575
+scale = Vector2(0.799904, 0.799904)
+script = ExtResource("3")
+followSlotId = 22
+offset = Vector2(30, 35)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="GroundSlot" type="Node2D" parent="."]
+position = Vector2(-110.72, -20)
+script = ExtResource("3")
+followSlotId = 1
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

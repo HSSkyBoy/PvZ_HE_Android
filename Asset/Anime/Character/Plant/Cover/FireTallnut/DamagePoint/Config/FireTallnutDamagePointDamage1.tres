@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharacterDamagePointConfig" load_steps=3 format=4 uid="uid://b8h1r8j7e3che"]
+
+[ext_resource type="Texture2D" uid="uid://cf6vflp5vjove" path="res://Asset/Anime/Character/Plant/Cover/FireTallnut/DamagePoint/FireTallnut_cracked1.png" id="1"]
+[ext_resource type="Script" uid="uid://8vg1ajd1i4ps" path="res://Resource/General/Character/DamagePoint/CharacterDamagePointConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+damagePointName = "Damage1"
+damagePersontage = 0.666
+animeEffect = null
+animeEffectOffset = Vector2(0, 0)
+isDrop = false
+animeFliterOpen = ""
+animeFliterClose = ""
+replaceMediaName = &"FireTallnut_body.png"
+replaceMediaTexture = ExtResource("1")
+damageAudio = ""
+metadata/_custom_type_script = "uid://8vg1ajd1i4ps"

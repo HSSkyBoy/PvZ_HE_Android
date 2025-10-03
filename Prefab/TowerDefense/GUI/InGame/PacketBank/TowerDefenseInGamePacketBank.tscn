@@ -1,0 +1,413 @@
+[gd_scene load_steps=25 format=4 uid="uid://iydc3rp06xgs"]
+
+[ext_resource type="Script" uid="uid://c8oi3ihcjofjk" path="res://Prefab/TowerDefense/GUI/InGame/PacketBank/TowerDefenseInGamePacketBank.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bd4qwbgjr0upr" path="res://Asset/Texture/TowerDefense/PacketBank/PacketBankCardSort.png" id="2"]
+[ext_resource type="PackedScene" uid="uid://c3g8bb7vutqsp" path="res://Prefab/TowerDefense/GUI/InGame/PacketBank/PacketCategory/PacketCategoryButton.tscn" id="3"]
+[ext_resource type="Shader" uid="uid://bi8x813unwm5l" path="res://Asset/Shader/ShaderBright.gdshader" id="4"]
+[ext_resource type="Texture2D" uid="uid://br8flgo5rvajd" path="res://Asset/Texture/TowerDefense/PacketBank/Cards2.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://tdj4o6msgch1" path="res://Asset/Texture/TowerDefense/PacketBank/Cards3.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://mgf1htk12uhi" path="res://Asset/Texture/TowerDefense/PacketBank/Cards4.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://c3lrapc1la8so" path="res://Asset/Texture/TowerDefense/PacketBank/Cards5.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://bi03i1nvq4m10" path="res://Asset/Texture/TowerDefense/PacketBank/Cards6.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://hoey72hrwb60" path="res://Asset/Texture/TowerDefense/PacketBank/PacketBankPanel.png" id="10"]
+[ext_resource type="PackedScene" uid="uid://bgkuthysw0876" path="res://Prefab/GUI/Button/NinePatchButtonBase/NinePatchButtonBase.tscn" id="11"]
+[ext_resource type="Texture2D" uid="uid://da1nikmivd2n8" path="res://Asset/Texture/TowerDefense/PacketBank/PacketBankButton.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://dphra8cjrdw34" path="res://Asset/Texture/TowerDefense/PacketBank/PacketBankButtonGlow.png" id="13"]
+[ext_resource type="FontFile" uid="uid://d0aylc13b87r0" path="res://Asset/Font/BrianneTod.ttf" id="14"]
+[ext_resource type="PackedScene" uid="uid://baeeahg8pe61u" path="res://Prefab/TowerDefense/GUI/InGame/PacketBank/PacketGroup/PacketGroupButton.tscn" id="15"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ns1b0"]
+shader = ExtResource("4")
+shader_parameter/brightStrength = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5mivh"]
+shader = ExtResource("4")
+shader_parameter/brightStrength = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u13cd"]
+shader = ExtResource("4")
+shader_parameter/brightStrength = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vx3xn"]
+shader = ExtResource("4")
+shader_parameter/brightStrength = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ehvs0"]
+shader = ExtResource("4")
+shader_parameter/brightStrength = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lkxv2"]
+shader = ExtResource("4")
+shader_parameter/brightStrength = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wu5ig"]
+shader = ExtResource("4")
+shader_parameter/brightStrength = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_livj7"]
+shader = ExtResource("4")
+shader_parameter/brightStrength = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y0xnq"]
+shader = ExtResource("4")
+shader_parameter/brightStrength = 0.0
+
+[node name="TowerDefenseInGamePacketBank" type="Control"]
+light_mask = 0
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1")
+
+[node name="Cardsort" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 609.0
+offset_top = 5.0
+offset_right = 703.0
+offset_bottom = 504.0
+texture = ExtResource("2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Cardsort"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 39.0
+offset_top = 62.0
+offset_right = -55.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 75
+
+[node name="CardWhite" parent="Cardsort/VBoxContainer" instance=ExtResource("3")]
+layout_mode = 2
+
+[node name="SpriteBrightButton" parent="Cardsort/VBoxContainer/CardWhite" index="0"]
+material = SubResource("ShaderMaterial_ns1b0")
+offset_top = -29.0
+offset_bottom = 166.0
+
+[node name="CardGold" parent="Cardsort/VBoxContainer" instance=ExtResource("3")]
+layout_mode = 2
+category = "Gold"
+
+[node name="SpriteBrightButton" parent="Cardsort/VBoxContainer/CardGold" index="0"]
+material = SubResource("ShaderMaterial_5mivh")
+offset_left = -25.0
+offset_top = -29.0
+offset_right = 167.0
+offset_bottom = 166.0
+texture = ExtResource("5")
+
+[node name="Label" parent="Cardsort/VBoxContainer/CardGold/LabelNode" index="0"]
+theme_override_colors/font_color = Color(0.984314, 0.85098, 0.180392, 1)
+text = "金卡"
+
+[node name="CardDiamond" parent="Cardsort/VBoxContainer" instance=ExtResource("3")]
+layout_mode = 2
+category = "Diamond"
+
+[node name="SpriteBrightButton" parent="Cardsort/VBoxContainer/CardDiamond" index="0"]
+material = SubResource("ShaderMaterial_u13cd")
+offset_left = -25.0
+offset_top = -29.0
+offset_right = 167.0
+offset_bottom = 166.0
+texture = ExtResource("6")
+
+[node name="Label" parent="Cardsort/VBoxContainer/CardDiamond/LabelNode" index="0"]
+theme_override_colors/font_color = Color(0.513726, 0.933333, 1, 1)
+text = "钻卡"
+
+[node name="CardColour" parent="Cardsort/VBoxContainer" instance=ExtResource("3")]
+layout_mode = 2
+category = "Colour"
+
+[node name="SpriteBrightButton" parent="Cardsort/VBoxContainer/CardColour" index="0"]
+material = SubResource("ShaderMaterial_vx3xn")
+offset_left = -25.0
+offset_top = -29.0
+offset_right = 167.0
+offset_bottom = 166.0
+texture = ExtResource("7")
+
+[node name="Label" parent="Cardsort/VBoxContainer/CardColour/LabelNode" index="0"]
+theme_override_colors/font_color = Color(0.999998, 0.588078, 0.568435, 1)
+text = "彩卡"
+
+[node name="CardStar" parent="Cardsort/VBoxContainer" instance=ExtResource("3")]
+layout_mode = 2
+category = "Star"
+
+[node name="SpriteBrightButton" parent="Cardsort/VBoxContainer/CardStar" index="0"]
+material = SubResource("ShaderMaterial_ehvs0")
+offset_left = -25.0
+offset_top = -29.0
+offset_right = 167.0
+offset_bottom = 166.0
+texture = ExtResource("8")
+
+[node name="Label" parent="Cardsort/VBoxContainer/CardStar/LabelNode" index="0"]
+theme_override_colors/font_color = Color(1, 0.984314, 0.0313726, 1)
+text = "星卡"
+
+[node name="CardOriginal" parent="Cardsort/VBoxContainer" instance=ExtResource("3")]
+layout_mode = 2
+category = "Original"
+
+[node name="SpriteBrightButton" parent="Cardsort/VBoxContainer/CardOriginal" index="0"]
+material = SubResource("ShaderMaterial_lkxv2")
+offset_left = -25.0
+offset_top = -29.0
+offset_right = 167.0
+offset_bottom = 166.0
+texture = ExtResource("9")
+
+[node name="Label" parent="Cardsort/VBoxContainer/CardOriginal/LabelNode" index="0"]
+text = "原卡"
+
+[node name="CardItem" parent="Cardsort" instance=ExtResource("3")]
+unique_name_in_owner = true
+visible = false
+offset_left = 133.0
+offset_top = 62.0
+offset_right = 133.0
+offset_bottom = 62.0
+category = "Item"
+
+[node name="SpriteBrightButton" parent="Cardsort/CardItem" index="0"]
+material = SubResource("ShaderMaterial_wu5ig")
+offset_left = -28.0
+offset_top = -29.0
+offset_right = 164.0
+offset_bottom = 166.0
+texture = ExtResource("9")
+
+[node name="Label" parent="Cardsort/CardItem/LabelNode" index="0"]
+offset_left = -12.0
+offset_right = 60.0
+theme_override_colors/font_color = Color(0.728761, 0.824951, 0.152246, 1)
+text = "物品卡"
+
+[node name="CardGraveStone" parent="Cardsort" instance=ExtResource("3")]
+unique_name_in_owner = true
+visible = false
+offset_left = 133.0
+offset_top = 137.0
+offset_right = 133.0
+offset_bottom = 137.0
+category = "GraveStone"
+
+[node name="SpriteBrightButton" parent="Cardsort/CardGraveStone" index="0"]
+material = SubResource("ShaderMaterial_livj7")
+offset_left = -28.0
+offset_top = -29.0
+offset_right = 164.0
+offset_bottom = 166.0
+texture = ExtResource("9")
+
+[node name="Label" parent="Cardsort/CardGraveStone/LabelNode" index="0"]
+offset_left = -12.0
+offset_right = 60.0
+theme_override_colors/font_color = Color(0.625597, 0.625597, 0.625597, 1)
+text = "墓碑卡"
+
+[node name="CardZombie" parent="Cardsort" instance=ExtResource("3")]
+unique_name_in_owner = true
+visible = false
+offset_left = 133.0
+offset_top = 212.0
+offset_right = 133.0
+offset_bottom = 212.0
+category = "Zombie"
+
+[node name="SpriteBrightButton" parent="Cardsort/CardZombie" index="0"]
+material = SubResource("ShaderMaterial_y0xnq")
+offset_left = -28.0
+offset_top = -29.0
+offset_right = 164.0
+offset_bottom = 166.0
+texture = ExtResource("9")
+
+[node name="Label" parent="Cardsort/CardZombie/LabelNode" index="0"]
+offset_left = -12.0
+offset_right = 60.0
+theme_override_colors/font_color = Color(0.670724, 0.417215, 1, 1)
+text = "僵尸卡"
+
+[node name="PacketBankPanelTexture" type="NinePatchRect" parent="."]
+light_mask = 0
+custom_minimum_size = Vector2(610, 513)
+layout_mode = 0
+offset_top = 1.0
+offset_right = 610.0
+offset_bottom = 514.0
+texture = ExtResource("10")
+patch_margin_left = 219
+patch_margin_top = 43
+patch_margin_right = 70
+patch_margin_bottom = 214
+
+[node name="PacketBankScroll" type="ScrollContainer" parent="PacketBankPanelTexture"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+offset_left = 17.0
+offset_top = 34.0
+offset_right = 597.0
+offset_bottom = 456.0
+horizontal_scroll_mode = 0
+scroll_deadzone = 20
+
+[node name="PacketBankMargin" type="MarginContainer" parent="PacketBankPanelTexture/PacketBankScroll"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 38
+
+[node name="PacketContainer" type="GridContainer" parent="PacketBankPanelTexture/PacketBankScroll/PacketBankMargin"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+theme_override_constants/h_separation = 52
+theme_override_constants/v_separation = 70
+columns = 11
+
+[node name="RockButton" parent="." instance=ExtResource("11")]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 457.0
+offset_right = 387.0
+offset_bottom = 499.0
+text = "INGAME_ROCK"
+
+[node name="ReSelectButton" parent="." instance=ExtResource("11")]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 462.0
+offset_right = 584.0
+offset_bottom = 493.0
+text = "INGAME_RESELECT"
+normalTexture = ExtResource("12")
+pressedTexture = ExtResource("13")
+hoverTexture = ExtResource("13")
+
+[node name="NinePatchTexture" parent="ReSelectButton" index="0"]
+texture = ExtResource("12")
+
+[node name="LabelText" parent="ReSelectButton/CenterContainer" index="0"]
+theme_override_colors/font_color = Color(0.306155, 0.122686, 6.49765e-07, 1)
+theme_override_fonts/font = ExtResource("14")
+text = "INGAME_RESELECT"
+
+[node name="ViewButton" parent="." instance=ExtResource("11")]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 462.0
+offset_right = 181.0
+offset_bottom = 493.0
+text = "INGAME_VIEW"
+normalTexture = ExtResource("12")
+pressedTexture = ExtResource("13")
+hoverTexture = ExtResource("13")
+
+[node name="NinePatchTexture" parent="ViewButton" index="0"]
+texture = ExtResource("12")
+
+[node name="LabelText" parent="ViewButton/CenterContainer" index="0"]
+theme_override_colors/font_color = Color(0.306155, 0.122686, 6.49765e-07, 1)
+theme_override_fonts/font = ExtResource("14")
+text = "INGAME_VIEW"
+
+[node name="PacketGroup" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 606.0
+offset_bottom = 33.0
+theme_override_constants/separation = 0
+
+[node name="PacketGroupButton" parent="PacketGroup" instance=ExtResource("15")]
+layout_mode = 2
+text = "卡组1"
+
+[node name="PacketGroupButton2" parent="PacketGroup" instance=ExtResource("15")]
+layout_mode = 2
+id = 2
+text = "卡组2"
+
+[node name="PacketGroupButton3" parent="PacketGroup" instance=ExtResource("15")]
+layout_mode = 2
+id = 3
+text = "卡组3"
+
+[node name="PacketGroupButton4" parent="PacketGroup" instance=ExtResource("15")]
+layout_mode = 2
+id = 4
+text = "卡组4"
+
+[node name="PacketGroupButton5" parent="PacketGroup" instance=ExtResource("15")]
+layout_mode = 2
+id = 5
+text = "卡组5"
+
+[node name="PacketGroupButton6" parent="PacketGroup" instance=ExtResource("15")]
+layout_mode = 2
+id = 6
+text = "卡组6"
+
+[node name="AnimeNode" type="Control" parent="."]
+unique_name_in_owner = true
+z_index = 10
+anchors_preset = 0
+
+[connection signal="choose" from="Cardsort/VBoxContainer/CardWhite" to="." method="CategoryChoose"]
+[connection signal="choose" from="Cardsort/VBoxContainer/CardGold" to="." method="CategoryChoose"]
+[connection signal="choose" from="Cardsort/VBoxContainer/CardDiamond" to="." method="CategoryChoose"]
+[connection signal="choose" from="Cardsort/VBoxContainer/CardColour" to="." method="CategoryChoose"]
+[connection signal="choose" from="Cardsort/VBoxContainer/CardStar" to="." method="CategoryChoose"]
+[connection signal="choose" from="Cardsort/VBoxContainer/CardOriginal" to="." method="CategoryChoose"]
+[connection signal="choose" from="Cardsort/CardItem" to="." method="CategoryChoose"]
+[connection signal="choose" from="Cardsort/CardGraveStone" to="." method="CategoryChoose"]
+[connection signal="choose" from="Cardsort/CardZombie" to="." method="CategoryChoose"]
+[connection signal="pressed" from="RockButton" to="." method="RockButtonPressed"]
+[connection signal="pressed" from="ReSelectButton" to="." method="ReSelectButtonPressed"]
+[connection signal="pressed" from="ViewButton" to="." method="ViewButtonPressed"]
+[connection signal="loadGroup" from="PacketGroup/PacketGroupButton" to="." method="LoadPacketGroup"]
+[connection signal="saveGroup" from="PacketGroup/PacketGroupButton" to="." method="SavePacketGroup"]
+[connection signal="loadGroup" from="PacketGroup/PacketGroupButton2" to="." method="LoadPacketGroup"]
+[connection signal="saveGroup" from="PacketGroup/PacketGroupButton2" to="." method="SavePacketGroup"]
+[connection signal="loadGroup" from="PacketGroup/PacketGroupButton3" to="." method="LoadPacketGroup"]
+[connection signal="saveGroup" from="PacketGroup/PacketGroupButton3" to="." method="SavePacketGroup"]
+[connection signal="loadGroup" from="PacketGroup/PacketGroupButton4" to="." method="LoadPacketGroup"]
+[connection signal="saveGroup" from="PacketGroup/PacketGroupButton4" to="." method="SavePacketGroup"]
+[connection signal="loadGroup" from="PacketGroup/PacketGroupButton5" to="." method="LoadPacketGroup"]
+[connection signal="saveGroup" from="PacketGroup/PacketGroupButton5" to="." method="SavePacketGroup"]
+[connection signal="loadGroup" from="PacketGroup/PacketGroupButton6" to="." method="LoadPacketGroup"]
+[connection signal="saveGroup" from="PacketGroup/PacketGroupButton6" to="." method="SavePacketGroup"]
+
+[editable path="Cardsort/VBoxContainer/CardWhite"]
+[editable path="Cardsort/VBoxContainer/CardWhite/SpriteBrightButton"]
+[editable path="Cardsort/VBoxContainer/CardGold"]
+[editable path="Cardsort/VBoxContainer/CardGold/SpriteBrightButton"]
+[editable path="Cardsort/VBoxContainer/CardDiamond"]
+[editable path="Cardsort/VBoxContainer/CardDiamond/SpriteBrightButton"]
+[editable path="Cardsort/VBoxContainer/CardColour"]
+[editable path="Cardsort/VBoxContainer/CardColour/SpriteBrightButton"]
+[editable path="Cardsort/VBoxContainer/CardStar"]
+[editable path="Cardsort/VBoxContainer/CardStar/SpriteBrightButton"]
+[editable path="Cardsort/VBoxContainer/CardOriginal"]
+[editable path="Cardsort/VBoxContainer/CardOriginal/SpriteBrightButton"]
+[editable path="Cardsort/CardItem"]
+[editable path="Cardsort/CardItem/SpriteBrightButton"]
+[editable path="Cardsort/CardGraveStone"]
+[editable path="Cardsort/CardGraveStone/SpriteBrightButton"]
+[editable path="Cardsort/CardZombie"]
+[editable path="Cardsort/CardZombie/SpriteBrightButton"]
+[editable path="ReSelectButton"]
+[editable path="ViewButton"]

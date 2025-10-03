@@ -1,0 +1,78 @@
+[gd_scene load_steps=11 format=4 uid="uid://cqeh28jukhnvb"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://ch52cxisy5r3n" path="res://Asset/Anime/Character/Zombie/Chapter1/Sleeper/Scene/TowerDefenseZombieSleeper.gd" id="2"]
+[ext_resource type="Resource" uid="uid://dyhausbowevwk" path="res://Asset/Anime/Character/Zombie/Chapter1/Sleeper/Config/TowerDefenseZombieSleeper.tres" id="3"]
+[ext_resource type="Resource" uid="uid://bv5l06c1dvj1n" path="res://Asset/Anime/Character/Zombie/Chapter1/Sleeper/DamagePoint/Config/ZombieSleeperDamagePointArm.tres" id="4"]
+[ext_resource type="Resource" uid="uid://1uput1b37y40" path="res://Asset/Anime/Character/Zombie/Chapter1/Sleeper/DamagePoint/Config/ZombieSleeperDamagePointHead.tres" id="5"]
+[ext_resource type="Resource" uid="uid://byidrithkk1pn" path="res://Asset/Anime/Character/Zombie/Chapter1/Sleeper/Armor/Config/ZombieSleeperArmorHat.tres" id="6"]
+[ext_resource type="PackedScene" uid="uid://djarp404nul8w" path="res://Asset/Anime/Character/Zombie/Chapter1/Sleeper/ZombieSleeper.tscn" id="7"]
+[ext_resource type="Texture2D" uid="uid://bqcn0d2em83bk" path="res://Asset/Texture/Character/Armor/SleepHat/ZombieSleepHat1.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://c2kdnxkdqj8vg" path="res://Asset/Anime/Character/Zombie/Chapter1/Sleeper/DamagePoint/Zombie_sleep_outerarm_upper2.png" id="9"]
+[ext_resource type="PackedScene" uid="uid://bjm31m10ujp84" path="res://Asset/Anime/Character/Zombie/WaterLine/ZombieWaterLine.tscn" id="10"]
+
+[node name="TowerDefenseZombieSleeper" node_paths=PackedStringArray("duckytobeSprite", "waterLineSprite", "sprite", "headSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+walkSpeedScale = 2.0
+dieAnimeClip = "Die"
+duckytobeSprite = NodePath("SpriteGroup/TransformPoint/ZombieSleeper/ZombieDuckytube")
+waterLineSprite = NodePath("SpriteGroup/TransformPoint/ZombieWaterLine")
+garlicReplace = "Zombie_sleep_head.png"
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieSleeper")
+headSlot = NodePath("SpriteGroup/TransformPoint/ZombieSleeper/HeadSlot")
+damagePart = {
+"Arm": ExtResource("4"),
+"Hat": ExtResource("6"),
+"Head": ExtResource("5")
+}
+PreviewDamagePointPersontage = 1.0
+Armor = ["Hat"]
+DamagePartSlot/Arm = NodePath("SpriteGroup/TransformPoint/ZombieSleeper/ArmSlot")
+DamagePartSlot/Head = NodePath("SpriteGroup/TransformPoint/ZombieSleeper/HeadSlot")
+DamagePartSlot/Hat = NodePath("SpriteGroup/TransformPoint/ZombieSleeper/HatSlot")
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(12, 33)
+
+[node name="ZombieSleeper" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("7")]
+position = Vector2(-12, -33)
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, NodePath("HeadSlot"), null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ArmSlot"), null, NodePath("HatSlot"), null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ZombieDuckytube"), null, null, null, null, null, null, null, null, null, null]
+Animation/MediaReplace/Zombie_sleep_0010_23.png = ExtResource("8")
+Animation/MediaReplace/Zombie_sleep_outerarm_upper.png = ExtResource("9")
+
+[node name="ZombieDuckytube" parent="SpriteGroup/TransformPoint/ZombieSleeper" index="0"]
+position = Vector2(-18.4951, -44.9148)
+rotation = 0.0088495
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieSleeper" index="1"]
+position = Vector2(-16.3345, -48.2283)
+rotation = 0.0123559
+scale = Vector2(0.799505, 0.799505)
+
+[node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieSleeper" index="2"]
+position = Vector2(-3.89513, -6.35331)
+rotation = 0.231543
+scale = Vector2(0.799988, 0.799988)
+
+[node name="HatSlot" parent="SpriteGroup/TransformPoint/ZombieSleeper" index="3"]
+position = Vector2(-10.7914, -72.4462)
+rotation = 0.0179593
+scale = Vector2(0.799924, 0.799924)
+
+[node name="GroundSlot" parent="SpriteGroup/TransformPoint/ZombieSleeper" index="4"]
+position = Vector2(-3.8006, -40)
+
+[node name="ZombieWaterLine" parent="SpriteGroup/TransformPoint" index="1" instance=ExtResource("10")]
+visible = false
+position = Vector2(-5, -37)
+useTween = true
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(4, -2)
+
+[node name="GroundMoveComponent" parent="." index="8" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieSleeper/GroundSlot")
+
+[editable path="SpriteGroup/TransformPoint/ZombieSleeper"]

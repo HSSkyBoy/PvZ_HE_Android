@@ -1,0 +1,105 @@
+[gd_scene load_steps=5 format=4 uid="uid://rg8iwkgsecjh"]
+
+[ext_resource type="PackedScene" uid="uid://vp5mpqwb0n8b" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Sprite/Normal/ZombieNormal.tscn" id="1"]
+[ext_resource type="Script" uid="uid://ddytdu7coggup" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Sprite/WildPea/ZombieNormalWildPeaSprite.gd" id="2"]
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="3"]
+[ext_resource type="Resource" uid="uid://hp41na32dsrj" path="res://Asset/Anime/Character/Plant/Gold/WildPea/WildPea.tres" id="4"]
+
+[node name="ZombieNormalWildPea" node_paths=PackedStringArray("layerSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ScreendoorSlot"), null, null, null, null, null, NodePath("ArmSlot"), null, NodePath("ConeSlot"), NodePath("BucketSlot"), null, null]
+Animation/LayerVisible/anim_hair = false
+Animation/LayerVisible/anim_head1 = false
+Animation/LayerVisible/anim_head2 = false
+
+[node name="Head" type="Node2D" parent="." index="0" node_paths=PackedStringArray("layerSlot", "layerSprite", "parentSprite")]
+unique_name_in_owner = true
+position = Vector2(-11.0633, -44.8933)
+rotation = -0.287944
+scale = Vector2(-1, 1)
+script = ExtResource("3")
+flashAnimeData = ExtResource("4")
+offset = Vector2(-43, -34)
+offsetRotate = -0.25
+trueFrameRate = 60.0
+useTween = false
+skipLastFrame = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+parentSprite = NodePath("..")
+Animation/Clip = "HeadIdle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/AnimeEvents = true
+Animation/LayerVisible/GatlingPea_barrel1 = true
+Animation/LayerVisible/GatlingPea_barrel2 = true
+Animation/LayerVisible/GatlingPea_barrel3 = true
+"Animation/LayerVisible/GatlingPea_barrel3 复制" = true
+Animation/LayerVisible/GatlingPea_barrel4 = true
+Animation/LayerVisible/GatlingPea_helmet = true
+Animation/LayerVisible/GatlingPea_mouth = true
+Animation/LayerVisible/GatlingPea_mouth_overlay = true
+Animation/LayerVisible/PeaShooter_eyebrow = true
+Animation/LayerVisible/anim_face = true
+Animation/LayerVisible/anim_face1 = true
+Animation/LayerVisible/anim_idle = true
+Animation/LayerVisible/anim_stem = true
+Animation/LayerVisible/backleaf = true
+Animation/LayerVisible/backleaf_left_tip = true
+Animation/LayerVisible/backleaf_right_tip = true
+Animation/LayerVisible/cloak1 = true
+Animation/LayerVisible/frontleaf = true
+Animation/LayerVisible/frontleaf_right_tip = true
+Animation/LayerVisible/frontleaf_tip_left = true
+Animation/LayerVisible/stalk_bottom = true
+Animation/LayerVisible/stalk_top = true
+Animation/MediaReplace/GatlingPea_barrel.png = null
+Animation/MediaReplace/GatlingPea_blink1.png = null
+Animation/MediaReplace/GatlingPea_blink2.png = null
+Animation/MediaReplace/GatlingPea_head.png = null
+Animation/MediaReplace/GatlingPea_helmet2.png = null
+Animation/MediaReplace/GatlingPea_mouth.png = null
+Animation/MediaReplace/GatlingPea_mouth_overlay.png = null
+Animation/MediaReplace/PeaShooter_backleaf.png = null
+Animation/MediaReplace/PeaShooter_backleaf_lefttip.png = null
+Animation/MediaReplace/PeaShooter_backleaf_righttip.png = null
+Animation/MediaReplace/PeaShooter_eyebrow.png = null
+Animation/MediaReplace/PeaShooter_frontleaf.png = null
+Animation/MediaReplace/PeaShooter_frontleaf_lefttip.png = null
+Animation/MediaReplace/PeaShooter_frontleaf_righttip.png = null
+Animation/MediaReplace/PeaShooter_stalk_bottom.png = null
+Animation/MediaReplace/PeaShooter_stalk_top.png = null
+Animation/MediaReplace/cloak1_green.png = null
+Animation/MediaReplace/cloak2_green.png = null
+Animation/MediaReplace/cloak3_green.png = null
+Animation/MediaReplace/cloak4_green.png = null
+Animation/MediaReplace/locator.png = null
+Layer = 14
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="HeadSlot" parent="." index="1"]
+position = Vector2(-12.9405, -45.8569)
+rotation = -0.0780462
+scale = Vector2(0.79948, 0.79948)
+
+[node name="ArmSlot" parent="." index="2"]
+position = Vector2(8.36646, 1.72305)
+rotation = -0.136823
+scale = Vector2(0.799119, 0.799119)
+
+[node name="ConeSlot" parent="." index="3"]
+position = Vector2(-8.12851, -71.7048)
+rotation = -0.100703
+scale = Vector2(0.796256, 0.796256)
+
+[node name="BucketSlot" parent="." index="4"]
+position = Vector2(-12.094, -61.0039)
+rotation = -0.0879203
+scale = Vector2(0.798269, 0.798269)
+
+[node name="ScreendoorSlot" parent="." index="5"]
+position = Vector2(-15.8693, 0.973804)
+rotation = -0.0775307
+scale = Vector2(0.798494, 0.798494)
+
+[node name="GroundSlot" parent="." index="6"]
+position = Vector2(-17.0184, -40)

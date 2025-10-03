@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=4 uid="uid://bepjav38dfli7"]
+
+[ext_resource type="Texture2D" uid="uid://dp7dx12idofx6" path="res://Asset/Anime/Particles/Special/SnowFlakes.png" id="1"]
+[ext_resource type="Material" uid="uid://c8icg4pibu1hu" path="res://Prefab/Particles/Special/SnowFlakes/SnowFlakes.tres" id="2"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ksd6p"]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[node name="SnowFlakes" type="GPUParticles2D"]
+material = SubResource("CanvasItemMaterial_ksd6p")
+amount = 6
+texture = ExtResource("1")
+lifetime = 0.5
+local_coords = true
+process_material = ExtResource("2")

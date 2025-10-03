@@ -1,0 +1,120 @@
+[gd_scene load_steps=21 format=4 uid="uid://c3tobm6a1a3p6"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://ctlqd7k8gk12a" path="res://Asset/Anime/Character/Plant/Gold/QueenSunFlower/Scene/TowerDefensePlantQueenSunFlower.gd" id="2"]
+[ext_resource type="Script" uid="uid://cmqmtitj4tcd8" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventHurt.gd" id="3"]
+[ext_resource type="Script" uid="uid://dv2ipl3b22nts" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventCreateEffect.gd" id="4"]
+[ext_resource type="Script" uid="uid://fix6uw08if5s" path="res://Resource/TowerDefense/Character/Buff/TowerDefenseCharacterBuffFireHit.gd" id="5"]
+[ext_resource type="Script" uid="uid://dtvfjfgy00epu" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventAddBuff.gd" id="6"]
+[ext_resource type="Resource" uid="uid://draura8w6tda8" path="res://Asset/Anime/Character/Plant/Gold/QueenSunFlower/Config/TowerDefensePlantQueenSunFlower.tres" id="7"]
+[ext_resource type="PackedScene" uid="uid://xw5sgh635or8" path="res://Asset/Anime/Character/Plant/Gold/QueenSunFlower/QueenSunFlower.tscn" id="8"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="9"]
+[ext_resource type="PackedScene" uid="uid://b6w5f0q85ngb7" path="res://Script/Component/TowerDefense/Character/ChangeProjectile/ChangeProjectileComponent.tscn" id="10"]
+[ext_resource type="Resource" uid="uid://jidj8nrkxt0v" path="res://Asset/Config/Projectile/Change/Fire.tres" id="11"]
+[ext_resource type="PackedScene" uid="uid://b5htxrgm8twcr" path="res://Script/Component/TowerDefense/Character/FireComponent/FireComponent.tscn" id="12"]
+[ext_resource type="PackedScene" uid="uid://c5d74tbefbann" path="res://Script/Component/TowerDefense/Character/ProduceComponent/ProduceComponent.tscn" id="13"]
+[ext_resource type="PackedScene" uid="uid://dir0f8lu1l3b3" path="res://Script/Component/TowerDefense/Character/AttackComponent/AttackComponent.tscn" id="14"]
+
+[sub_resource type="Resource" id="Resource_qxxii"]
+script = ExtResource("3")
+num = 40.0
+playSplatAudio = true
+damageFlags = 6
+collisionFlags = 27
+Flag/Damage = 6
+Flag/Collision = 27
+metadata/_custom_type_script = "uid://cmqmtitj4tcd8"
+
+[sub_resource type="Resource" id="Resource_eia3h"]
+script = ExtResource("4")
+effectObject = 103
+metadata/_custom_type_script = "uid://dv2ipl3b22nts"
+
+[sub_resource type="Resource" id="Resource_1l2cn"]
+script = ExtResource("5")
+refresh = true
+metadata/_custom_type_script = "uid://fix6uw08if5s"
+
+[sub_resource type="Resource" id="Resource_lujgt"]
+script = ExtResource("6")
+buffList = [SubResource("Resource_1l2cn")]
+metadata/_custom_type_script = "uid://dtvfjfgy00epu"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hpprs"]
+size = Vector2(54, 66)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hikgt"]
+size = Vector2(73, 73)
+
+[node name="TowerDefensePlantQueenSunFlower" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+eventList = [SubResource("Resource_qxxii"), SubResource("Resource_eia3h")]
+allEventList = [SubResource("Resource_lujgt")]
+attackInterval = 3.0
+fireInterval = 3.0
+fireNum = 4
+produceInterval = 25.0
+sunNum = 150
+config = ExtResource("7")
+sprite = NodePath("SpriteGroup/TransformPoint/QueenSunFlower")
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="QueenSunFlower" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("8")]
+position = Vector2(0, -30)
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("AdobeAnimateSlot"), null, null, null]
+
+[node name="AdobeAnimateSlot" type="Node2D" parent="SpriteGroup/TransformPoint/QueenSunFlower" index="0"]
+position = Vector2(-22.775, -26.26)
+scale = Vector2(0.799988, 0.791188)
+script = ExtResource("9")
+followSlotId = 14
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/QueenSunFlower/AdobeAnimateSlot" index="0"]
+position = Vector2(29.2504, 20.3659)
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 30)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+
+[node name="ChangeProjectileComponent" parent="." index="7" node_paths=PackedStringArray("checkArea") instance=ExtResource("10")]
+projectileConfig = ExtResource("11")
+checkArea = NodePath("Area2D")
+
+[node name="Area2D" type="Area2D" parent="ChangeProjectileComponent" index="0"]
+visible = false
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeProjectileComponent/Area2D" index="0"]
+position = Vector2(3, 0)
+shape = SubResource("RectangleShape2D_hpprs")
+
+[node name="FireComponent" parent="." index="8" node_paths=PackedStringArray("firePosMarker") instance=ExtResource("12")]
+unique_name_in_owner = true
+firePosMarker = [NodePath("../SpriteGroup/TransformPoint/QueenSunFlower/AdobeAnimateSlot/Marker2D")]
+checkAllLine = true
+fireInterval = 1.5
+
+[node name="ProduceComponent" parent="." index="9" node_paths=PackedStringArray("marker") instance=ExtResource("13")]
+unique_name_in_owner = true
+num = 150
+marker = [NodePath("../SpriteGroup/TransformPoint/QueenSunFlower/AdobeAnimateSlot/Marker2D")]
+
+[node name="AttackComponent" parent="." index="10" node_paths=PackedStringArray("checkArea") instance=ExtResource("14")]
+unique_name_in_owner = true
+attackType = "Default"
+checkArea = NodePath("Area2D")
+
+[node name="Area2D" type="Area2D" parent="AttackComponent" index="0"]
+monitorable = false
+
+[node name="AttackShape" type="CollisionShape2D" parent="AttackComponent/Area2D" index="0"]
+unique_name_in_owner = true
+position = Vector2(-1.5, -0.5)
+shape = SubResource("RectangleShape2D_hikgt")

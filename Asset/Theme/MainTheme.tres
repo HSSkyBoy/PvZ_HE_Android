@@ -1,0 +1,120 @@
+[gd_resource type="Theme" load_steps=22 format=3 uid="uid://unxwi66sc65y"]
+
+[ext_resource type="Texture2D" uid="uid://f0b1p4f814ew" path="res://Asset/Texture/GUI/General/General/OptionsCheckBox1.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://b45no7tmda0e1" path="res://Asset/Texture/GUI/General/General/OptionsCheckBox0.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://c7p5sfkril27p" path="res://Asset/Texture/GUI/General/General/OptionsSliderKnob2.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://d13rc12mgwojy" path="res://Asset/Texture/GUI/General/General/OptionsSliderSlot.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://omuqqfo1aao5" path="res://Asset/Texture/GUI/General/EditBox/EditBox.png" id="5"]
+[ext_resource type="FontFile" uid="uid://bibg4dobk6vpn" path="res://Asset/Font/fzjz.ttf" id="6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4sasy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fp1ml"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vlta7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_asjaf"]
+texture = ExtResource("4")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n4js4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kh33u"]
+texture = ExtResource("5")
+texture_margin_left = 7.0
+texture_margin_top = 8.0
+texture_margin_right = 7.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(0, 0, 90, 42)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o4r8n"]
+texture = ExtResource("5")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6d6g4"]
+texture = ExtResource("5")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_70kic"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2h6v8"]
+texture = ExtResource("5")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ji0v7"]
+texture = ExtResource("5")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bydcs"]
+texture = ExtResource("5")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ioun"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ioun"]
+texture = ExtResource("5")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n4js4"]
+texture = ExtResource("5")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[resource]
+default_font = ExtResource("6")
+default_font_size = 20
+CheckBox/icons/checked = ExtResource("1")
+CheckBox/icons/checked_disabled = ExtResource("1")
+CheckBox/icons/unchecked = ExtResource("2")
+CheckBox/icons/unchecked_disabled = ExtResource("2")
+CheckBox/styles/focus = SubResource("StyleBoxEmpty_4sasy")
+HSlider/constants/center_grabber = 0
+HSlider/constants/grabber_offset = 0
+HSlider/icons/grabber = ExtResource("3")
+HSlider/icons/grabber_disabled = ExtResource("3")
+HSlider/icons/grabber_highlight = ExtResource("3")
+HSlider/styles/grabber_area = SubResource("StyleBoxEmpty_fp1ml")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxEmpty_vlta7")
+HSlider/styles/slider = SubResource("StyleBoxTexture_asjaf")
+Label/constants/shadow_offset_x = -1
+Label/constants/shadow_offset_y = -1
+Label/constants/shadow_outline_size = 2
+LineEdit/font_sizes/font_size = 16
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_n4js4")
+LineEdit/styles/normal = SubResource("StyleBoxTexture_kh33u")
+LineEdit/styles/read_only = SubResource("StyleBoxTexture_o4r8n")
+OptionButton/constants/arrow_margin = 12
+OptionButton/font_sizes/font_size = 16
+OptionButton/styles/disabled = SubResource("StyleBoxTexture_6d6g4")
+OptionButton/styles/focus = SubResource("StyleBoxEmpty_70kic")
+OptionButton/styles/hover = SubResource("StyleBoxTexture_2h6v8")
+OptionButton/styles/normal = SubResource("StyleBoxTexture_ji0v7")
+OptionButton/styles/pressed = SubResource("StyleBoxTexture_bydcs")
+PopupMenu/font_sizes/font_size = 16
+TextEdit/font_sizes/font_size = 16
+TextEdit/styles/focus = SubResource("StyleBoxEmpty_3ioun")
+TextEdit/styles/normal = SubResource("StyleBoxTexture_3ioun")
+TextEdit/styles/read_only = SubResource("StyleBoxTexture_n4js4")

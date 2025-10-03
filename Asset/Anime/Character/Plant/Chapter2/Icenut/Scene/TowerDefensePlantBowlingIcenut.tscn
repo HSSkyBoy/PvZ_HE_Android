@@ -1,0 +1,34 @@
+[gd_scene load_steps=9 format=4 uid="uid://c5xr1nlpcpkys"]
+
+[ext_resource type="PackedScene" uid="uid://colk7liw31q6k" path="res://Prefab/TowerDefense/Character/TowerDefensePlantBowlingBase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://c1ejq28oa2fbk" path="res://Asset/Anime/Character/Plant/Chapter2/Icenut/Scene/TowerDefensePlantBowlingIcenut.gd" id="2"]
+[ext_resource type="Script" uid="uid://dvyancfxatcgc" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventBowlingHurt.gd" id="3"]
+[ext_resource type="Script" uid="uid://bxlwoxox5hth3" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventForzen.gd" id="4"]
+[ext_resource type="Resource" uid="uid://k14k8yyx6ddy" path="res://Asset/Anime/Character/Plant/Chapter2/Icenut/Config/TowerDefensePlantIcenutBowling.tres" id="5"]
+[ext_resource type="PackedScene" uid="uid://b7cyx74xpcs6u" path="res://Asset/Anime/Character/Plant/Chapter2/Icenut/Icenut.tscn" id="6"]
+
+[sub_resource type="Resource" id="Resource_yfdda"]
+script = ExtResource("3")
+num = 1800.0
+dir = "Front"
+burns = true
+metadata/_custom_type_script = "uid://dvyancfxatcgc"
+
+[sub_resource type="Resource" id="Resource_ehaue"]
+script = ExtResource("4")
+time = 5.0
+iceSpeedDownTime = 15.0
+fliterShield = true
+metadata/_custom_type_script = "uid://bxlwoxox5hth3"
+
+[node name="TowerDefensePlantBowlingIcenut" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+hitEvent = [SubResource("Resource_yfdda"), SubResource("Resource_ehaue")]
+config = ExtResource("5")
+sprite = NodePath("SpriteGroup/TransformPoint/Icenut")
+PreviewDamagePointPersontage = 1.0
+Custom = []
+
+[node name="Icenut" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("6")]
+position = Vector2(-1, -31)
+Animation/Clip = "Roll"

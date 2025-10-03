@@ -1,0 +1,94 @@
+[gd_scene load_steps=12 format=4 uid="uid://0hfxonqijrv0"]
+
+[ext_resource type="Texture2D" uid="uid://5f7ye8ar3we8" path="res://Asset/Anime/Particles/Explosion/DoomShroomExplosion/DoomShroomExplosionStem.png" id="1"]
+[ext_resource type="Material" uid="uid://clyqhtufyhqxy" path="res://Prefab/Particles/Explosion/DoomShroomExplosion/DoomShroomExplosionStem.tres" id="2"]
+[ext_resource type="Script" uid="uid://dywgdjamo0ovs" path="res://Extends/Particles/GPUParticles2DOnece.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://cfxkbckymfpq2" path="res://Asset/Anime/Particles/Explosion/DoomShroomExplosion/DoomShroomExplosionBase.png" id="4"]
+[ext_resource type="Material" uid="uid://c6rmqlw4mrnpb" path="res://Prefab/Particles/Explosion/DoomShroomExplosion/DoomShroomExplosionBase.tres" id="5"]
+[ext_resource type="Texture2D" uid="uid://b5oks6b81t45e" path="res://Asset/Anime/Particles/Explosion/DoomShroomExplosion/DoomShroomExplosionTop.png" id="6"]
+[ext_resource type="Material" uid="uid://bspgsggnglc0t" path="res://Prefab/Particles/Explosion/DoomShroomExplosion/DoomShroomExplosionTop.tres" id="7"]
+[ext_resource type="Material" uid="uid://c5ni2a3doaf44" path="res://Prefab/Particles/Explosion/DoomShroomExplosion/DoomShroomExplosionTopBig.tres" id="8"]
+[ext_resource type="Texture2D" uid="uid://bmamn6nak55k4" path="res://Asset/Anime/Particles/Explosion/DoomShroomExplosion/Doom.png" id="9"]
+[ext_resource type="Script" uid="uid://osivlg58el4m" path="res://Extends/Sprite2D/Sprite2DEffect.gd" id="10"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wyiyg"]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[node name="DoomShroomExplosionStem" type="GPUParticles2D"]
+emitting = false
+amount = 1
+texture = ExtResource("1")
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+process_material = ExtResource("2")
+script = ExtResource("3")
+
+[node name="DoomShroomExplosionBase" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_wyiyg")
+position = Vector2(0.285716, 0.714287)
+emitting = false
+amount = 1
+texture = ExtResource("4")
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+process_material = ExtResource("5")
+
+[node name="DoomShroomExplosionTop" type="GPUParticles2D" parent="."]
+position = Vector2(3.66667, -167.667)
+emitting = false
+amount = 16
+texture = ExtResource("6")
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+draw_order = 0
+process_material = ExtResource("7")
+
+[node name="DoomShroomExplosionTop3" type="GPUParticles2D" parent="."]
+position = Vector2(-101.333, -203.667)
+emitting = false
+texture = ExtResource("6")
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+draw_order = 0
+process_material = ExtResource("8")
+
+[node name="DoomShroomExplosionTop4" type="GPUParticles2D" parent="."]
+position = Vector2(98.6667, -220.667)
+emitting = false
+texture = ExtResource("6")
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+draw_order = 0
+process_material = ExtResource("8")
+
+[node name="DoomShroomExplosionTop2" type="GPUParticles2D" parent="."]
+position = Vector2(-9.33333, -258.667)
+emitting = false
+amount = 32
+texture = ExtResource("6")
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+draw_order = 0
+process_material = ExtResource("8")
+
+[node name="Doom" type="Sprite2D" parent="."]
+position = Vector2(5.33333, -57.3333)
+texture = ExtResource("9")
+offset = Vector2(-0.580338, 1.43322)
+script = ExtResource("10")
+shake = true

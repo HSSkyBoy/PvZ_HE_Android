@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CharacterCustomConfig" load_steps=2 format=4 uid="uid://dk1d8g7lssegf"]
+
+[ext_resource type="Script" uid="uid://dypv31guyoibc" path="res://Resource/General/Character/Costom/CharacterCustomConfig.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+openKey = "SunBombCustom0"
+customName = "Custom0"
+customHandbookName = "TOWERDEFENSE_PLANT_SUNBOMB_CUSTOM_1_NAME"
+customHandbookAccess = "TOWERDEFENSE_PLANT_SUNBOMB_CUSTOM_1_ACCESS"
+customHandbookStory = "TOWERDEFENSE_PLANT_SUNBOMB_CUSTOM_1_STORY"
+animeFliterOpen = "skin1_1&skin2_3_1&skin2_1&skin2_2&skin3_1&skin1_2&skin2_3_2&skin2_4&skin2_5&skin3_2"
+animeFliterClose = "1&1 复制"
+damagePointChangeMediaName = ""
+damagePointChangeMediaTexture = []
+metadata/_custom_type_script = "uid://dypv31guyoibc"

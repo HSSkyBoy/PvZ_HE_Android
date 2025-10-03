@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=4 uid="uid://dkw4bmni0lnkt"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://8by2j32vly8i" path="res://Asset/Anime/Character/Plant/Cover/TwinSunShroom/TwinSunShroom.tres" id="2"]
+
+[node name="TwinSunShroom" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/Sunflower_double_petals1 = true
+Animation/LayerVisible/Sunflower_double_petals2 = true
+Animation/LayerVisible/TwinSunflower_leaf1 = true
+Animation/LayerVisible/TwinSunflower_leaf11 = true
+Animation/LayerVisible/TwinSunflower_leaf12 = true
+Animation/LayerVisible/TwinSunflower_stem1 = true
+Animation/LayerVisible/TwinSunflower_stem2 = true
+Animation/LayerVisible/anim_face = true
+Animation/LayerVisible/anim_face2 = true
+Animation/LayerVisible/backleaf = true
+Animation/LayerVisible/backleaf_left_tip = true
+Animation/LayerVisible/backleaf_right_tip = true
+Animation/LayerVisible/frontleaf = true
+Animation/LayerVisible/frontleaf_left_tip = true
+Animation/LayerVisible/frontleaf_right_tip = true
+Animation/LayerVisible/hat1 = true
+Animation/LayerVisible/hat2 = true
+Animation/MediaReplace/PeaShooter_backleaf.png = null
+Animation/MediaReplace/PeaShooter_backleaf_lefttip.png = null
+Animation/MediaReplace/PeaShooter_backleaf_righttip.png = null
+Animation/MediaReplace/PeaShooter_frontleaf.png = null
+Animation/MediaReplace/PeaShooter_frontleaf_lefttip.png = null
+Animation/MediaReplace/PeaShooter_frontleaf_righttip.png = null
+Animation/MediaReplace/PeaShooter_stalk_bottom.png = null
+Animation/MediaReplace/PeaShooter_stalk_top.png = null
+Animation/MediaReplace/SunFlower_blink1.png = null
+Animation/MediaReplace/SunFlower_blink2.png = null
+Animation/MediaReplace/SunFlower_double_petals.png = null
+Animation/MediaReplace/SunFlower_head.png = null
+Animation/MediaReplace/SunShroom_head.png = null
+Animation/MediaReplace/TwinSunflower_leaf.png = null
+Animation/MediaReplace/TwinSunflower_stem1.png = null
+Animation/MediaReplace/TwinSunflower_stem2.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

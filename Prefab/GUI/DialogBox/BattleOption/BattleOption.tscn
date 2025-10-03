@@ -1,0 +1,118 @@
+[gd_scene load_steps=6 format=4 uid="uid://dtstbivduflfa"]
+
+[ext_resource type="Script" uid="uid://bpjvjt8qi77t0" path="res://Prefab/GUI/DialogBox/BattleOption/BattleOption.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://bgkuthysw0876" path="res://Prefab/GUI/Button/NinePatchButtonBase/NinePatchButtonBase.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://b7h3dkbuiexf8" path="res://Asset/Texture/GUI/General/General/OptionButton.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://diu057evu2onj" path="res://Asset/Texture/GUI/General/General/OptionButtonDown.png" id="4"]
+[ext_resource type="FontFile" uid="uid://bibg4dobk6vpn" path="res://Asset/Font/fzjz.ttf" id="5"]
+
+[node name="BattleOption" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+pasue = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.282353)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="PlantHealthCheckBox" type="CheckBox" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "显示植物血量"
+alignment = 1
+
+[node name="ZombieHealthCheckBox" type="CheckBox" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "显示僵尸血量"
+alignment = 1
+
+[node name="PacketUIFrontCheckBox" type="CheckBox" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "卡牌UI前置"
+alignment = 1
+
+[node name="MapEffectCheckBox" type="CheckBox" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "地图特效"
+alignment = 1
+
+[node name="BackgrounderCheckBox" type="CheckBox" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "后台运行"
+alignment = 1
+
+[node name="BackButton" parent="CenterContainer/VBoxContainer" instance=ExtResource("2")]
+custom_minimum_size = Vector2(240, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "返回游戏"
+normalTexture = ExtResource("3")
+pressedTexture = ExtResource("4")
+hoverTexture = ExtResource("4")
+
+[node name="NinePatchTexture" parent="CenterContainer/VBoxContainer/BackButton" index="0"]
+texture = ExtResource("3")
+patch_margin_left = 18
+patch_margin_top = 11
+patch_margin_right = 33
+patch_margin_bottom = 14
+
+[node name="LabelText" parent="CenterContainer/VBoxContainer/BackButton/CenterContainer" index="0"]
+theme_override_colors/font_color = Color(0, 0.760784, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.215686, 0.219608, 0.290196, 1)
+theme_override_constants/shadow_offset_x = -2
+theme_override_constants/shadow_offset_y = -2
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 24
+text = "返回游戏"
+
+[connection signal="toggled" from="CenterContainer/VBoxContainer/PlantHealthCheckBox" to="." method="PlantHealthCheckBoxToggled"]
+[connection signal="toggled" from="CenterContainer/VBoxContainer/ZombieHealthCheckBox" to="." method="ZombieHealthCheckBoxToggled"]
+[connection signal="toggled" from="CenterContainer/VBoxContainer/PacketUIFrontCheckBox" to="." method="PacketUIFrontCheckBoxToggled"]
+[connection signal="toggled" from="CenterContainer/VBoxContainer/MapEffectCheckBox" to="." method="MapEffectCheckBoxToggled"]
+[connection signal="toggled" from="CenterContainer/VBoxContainer/BackgrounderCheckBox" to="." method="BackgrounderCheckBoxToggled"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BackButton" to="." method="BackButtonPressed"]
+
+[editable path="CenterContainer/VBoxContainer/BackButton"]

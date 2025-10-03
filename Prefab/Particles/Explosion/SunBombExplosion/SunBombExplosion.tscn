@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=4 uid="uid://b73i0bacl5jnh"]
+
+[ext_resource type="Texture2D" uid="uid://dv5x6ax2qiod0" path="res://Asset/Anime/Particles/Explosion/ExplosionCloud.png" id="1"]
+[ext_resource type="Material" uid="uid://bdofhulijr8xs" path="res://Prefab/Particles/Explosion/SunBombExplosion/SunBombExplosionSide.tres" id="2"]
+[ext_resource type="Script" uid="uid://dywgdjamo0ovs" path="res://Extends/Particles/GPUParticles2DOnece.gd" id="3"]
+[ext_resource type="Material" uid="uid://bqyy2oku3mwg0" path="res://Prefab/Particles/Explosion/SunBombExplosion/SunBombExplosion.tres" id="4"]
+[ext_resource type="Texture2D" uid="uid://pk8e4gmo6lrc" path="res://Asset/Anime/Particles/Explosion/SunBoomExplosionPowie.png" id="5"]
+
+[node name="SunBombExplosion" type="GPUParticles2D"]
+z_index = 1
+emitting = false
+amount = 32
+texture = ExtResource("1")
+one_shot = true
+explosiveness = 1.0
+fixed_fps = 60
+local_coords = true
+process_material = ExtResource("2")
+script = ExtResource("3")
+
+[node name="SunBombExplosionSide" type="GPUParticles2D" parent="."]
+z_index = 1
+emitting = false
+amount = 12
+texture = ExtResource("1")
+one_shot = true
+explosiveness = 1.0
+fixed_fps = 60
+local_coords = true
+draw_order = 0
+process_material = ExtResource("4")
+
+[node name="Sprite2D" type="Sprite2D" parent="SunBombExplosionSide"]
+z_index = 1
+texture = ExtResource("5")

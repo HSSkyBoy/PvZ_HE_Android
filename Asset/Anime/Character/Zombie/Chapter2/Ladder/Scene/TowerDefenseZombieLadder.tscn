@@ -1,0 +1,111 @@
+[gd_scene load_steps=17 format=4 uid="uid://b88ccph1mx607"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cjqcq8ieej18y" path="res://Asset/Anime/Character/Zombie/Chapter2/Ladder/Scene/TowerDefenseZombieLadder.gd" id="2"]
+[ext_resource type="Resource" uid="uid://ckn4u8hlkaeul" path="res://Asset/Anime/Character/Zombie/Chapter2/Ladder/Config/TowerDefenseZombieLadder.tres" id="3"]
+[ext_resource type="Resource" uid="uid://bkvdxf2q8daaf" path="res://Asset/Anime/Character/Zombie/Chapter2/Ladder/DamagePoint/Config/ZombieLadderDamagePointArm.tres" id="4"]
+[ext_resource type="Resource" uid="uid://bcikav37xppv8" path="res://Asset/Anime/Character/Zombie/Chapter2/Ladder/DamagePoint/Config/ZombieLadderDamagePointHead.tres" id="5"]
+[ext_resource type="Resource" uid="uid://cvi786vt7onjw" path="res://Asset/Anime/Character/Zombie/Chapter2/Ladder/Armor/Config/ZombieLadderArmorLadder.tres" id="6"]
+[ext_resource type="Resource" uid="uid://2c6xhxlngotl" path="res://Asset/Anime/Character/Zombie/Chapter2/Ladder/Armor/Config/ZombieLadderArmorCone.tres" id="7"]
+[ext_resource type="Resource" uid="uid://ibwx6tehoy7r" path="res://Asset/Anime/Character/Zombie/Chapter2/Ladder/Armor/Config/ZombieLadderArmorBucket.tres" id="8"]
+[ext_resource type="Resource" uid="uid://b5jt405fa8s0a" path="res://Asset/Anime/Character/Zombie/Chapter2/Ladder/Armor/Config/ZombieLadderArmorHelmet.tres" id="9"]
+[ext_resource type="Resource" uid="uid://cu13ahi3sex1g" path="res://Asset/Anime/Character/Zombie/Chapter2/Ladder/Armor/Config/ZombieLadderArmorSpecialHelmet.tres" id="10"]
+[ext_resource type="Resource" uid="uid://dhj6fple61f3u" path="res://Asset/Anime/Character/Zombie/Chapter2/Ladder/Armor/Config/ZombieLadderArmorBlackHelmet.tres" id="11"]
+[ext_resource type="PackedScene" uid="uid://b4d7pukhamxru" path="res://Asset/Anime/Character/Zombie/Chapter2/Ladder/ZombieLadder.tscn" id="12"]
+[ext_resource type="Texture2D" uid="uid://dmy6r3e0n0oco" path="res://Asset/Texture/Character/Armor/Ladder/ZombieLadder1.png" id="13"]
+[ext_resource type="PackedScene" uid="uid://bjm31m10ujp84" path="res://Asset/Anime/Character/Zombie/WaterLine/ZombieWaterLine.tscn" id="14"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="15"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="16"]
+
+[node name="TowerDefenseZombieLadder" node_paths=PackedStringArray("duckytobeSprite", "waterLineSprite", "sprite", "headSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+walkAnimeClip = "LadderWalk"
+swimAnimeClip = "LadderWalk"
+attackAnimeClip = "LadderEat"
+duckytobeSprite = NodePath("SpriteGroup/TransformPoint/ZombieLadder/ZombieDuckytube")
+waterLineSprite = NodePath("SpriteGroup/TransformPoint/ZombieWaterLine")
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieLadder")
+headSlot = NodePath("SpriteGroup/TransformPoint/ZombieLadder/HeadSlot")
+damagePart = {
+"Arm": ExtResource("4"),
+"BlackHelmet": ExtResource("11"),
+"Bucket": ExtResource("8"),
+"Cone": ExtResource("7"),
+"Head": ExtResource("5"),
+"Helmet": ExtResource("9"),
+"Ladder": ExtResource("6"),
+"SpecialHelmet": ExtResource("10")
+}
+PreviewDamagePointPersontage = 1.0
+Armor = ["Ladder"]
+DamagePartSlot/Arm = NodePath("SpriteGroup/TransformPoint/ZombieLadder/ArmSlot")
+DamagePartSlot/Head = NodePath("SpriteGroup/TransformPoint/ZombieLadder/HeadSlot")
+DamagePartSlot/Ladder = NodePath("SpriteGroup/TransformPoint/ZombieLadder/LadderSlot")
+DamagePartSlot/Cone = NodePath("SpriteGroup/TransformPoint/ZombieLadder/HeadSlot")
+DamagePartSlot/Bucket = NodePath("SpriteGroup/TransformPoint/ZombieLadder/HeadSlot")
+DamagePartSlot/Helmet = NodePath("SpriteGroup/TransformPoint/ZombieLadder/HeadSlot")
+DamagePartSlot/SpecialHelmet = NodePath("SpriteGroup/TransformPoint/ZombieLadder/HeadSlot")
+DamagePartSlot/BlackHelmet = NodePath("SpriteGroup/TransformPoint/ZombieLadder/HeadSlot")
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(23, 44)
+
+[node name="ZombieLadder" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("12")]
+position = Vector2(-23, -44)
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("HeadSlot"), NodePath("LadderSlot"), null, NodePath("ArmSlot"), null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ZombieDuckytube"), null, null, null, null, null, null, null, null, null]
+Animation/MediaReplace/Zombie_ladder_1.png = ExtResource("13")
+
+[node name="ZombieDuckytube" parent="SpriteGroup/TransformPoint/ZombieLadder" index="0"]
+position = Vector2(-11.4151, -46.8576)
+rotation = -0.0160583
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieLadder" index="1"]
+position = Vector2(-12.8982, -49.7809)
+rotation = -0.0469001
+scale = Vector2(0.849727, 0.849727)
+
+[node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieLadder" index="2"]
+position = Vector2(-2.2545, -7.76933)
+rotation = 1.09283
+scale = Vector2(0.847668, 1.0839)
+skew = 0.0113022
+
+[node name="LadderSlot" parent="SpriteGroup/TransformPoint/ZombieLadder" index="3"]
+position = Vector2(-21.1336, 7.01607)
+
+[node name="GroundSlot" parent="SpriteGroup/TransformPoint/ZombieLadder" index="4"]
+position = Vector2(-76.65, -9.2)
+
+[node name="ZombieWaterLine" parent="SpriteGroup/TransformPoint" index="1" instance=ExtResource("14")]
+visible = false
+position = Vector2(-12, -52)
+useTween = true
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(12.6, 40)
+
+[node name="IcetrapSprite" parent="." index="4"]
+position = Vector2(20.6, 34)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(4, -2)
+
+[node name="GroundMoveComponent" parent="." index="8" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieLadder/GroundSlot")
+
+[node name="Ladder" type="Node" parent="StateChart/CompoundState" index="4"]
+script = ExtResource("15")
+
+[node name="ToLadder" type="Node" parent="StateChart/CompoundState" index="9"]
+script = ExtResource("16")
+to = NodePath("../Ladder")
+event = &"ToLadder"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="StateChart/CompoundState/Ladder" to="." method="LadderEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Ladder" to="." method="LadderExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Ladder" to="." method="LadderProcessing"]
+
+[editable path="SpriteGroup/TransformPoint/ZombieLadder"]

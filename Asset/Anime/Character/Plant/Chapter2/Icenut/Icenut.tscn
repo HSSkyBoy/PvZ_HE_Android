@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=4 uid="uid://b7cyx74xpcs6u"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://can2smucka2fu" path="res://Asset/Anime/Character/Plant/Chapter2/Icenut/Icenut.tres" id="2"]
+
+[node name="Icenut" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/AnimeEvents = false
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/anim_face = true
+Animation/LayerVisible/skin1 = false
+Animation/LayerVisible/skin2_1 = false
+Animation/LayerVisible/skin2_2 = false
+Animation/LayerVisible/skin2_3 = false
+Animation/LayerVisible/skin2_4 = false
+Animation/LayerVisible/skin2_5 = false
+Animation/LayerVisible/skin2_6 = false
+Animation/LayerVisible/skin2_7 = false
+Animation/LayerVisible/skin2_8 = false
+Animation/LayerVisible/skin3 = false
+"Animation/LayerVisible/图层_2" = true
+"Animation/LayerVisible/图层_3" = true
+"Animation/LayerVisible/图层_4" = true
+"Animation/LayerVisible/图层_5" = true
+Animation/MediaReplace/BDZX_0000_6.png = null
+Animation/MediaReplace/BDZX_0001_5.png = null
+Animation/MediaReplace/BDZX_0002_4.png = null
+Animation/MediaReplace/BDZX_0003_3.png = null
+Animation/MediaReplace/BDZX_0004_2.png = null
+Animation/MediaReplace/BDZX_0005_1.png = null
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/IceWallnut_1.png = null
+Animation/MediaReplace/IceWallnut_2.png = null
+Animation/MediaReplace/IceWallnut_3.png = null
+Animation/MediaReplace/IceWallnut_body.png = null
+Animation/MediaReplace/IceWallnut_eye1.png = null
+Animation/MediaReplace/IceWallnut_eye2.png = null
+Animation/MediaReplace/Icenut_skin1.png = null
+Animation/MediaReplace/Icenut_skin2_1.png = null
+Animation/MediaReplace/Icenut_skin2_2.png = null
+Animation/MediaReplace/Icenut_skin2_3.png = null
+Animation/MediaReplace/Icenut_skin2_4.png = null
+Animation/MediaReplace/Icenut_skin2_5.png = null
+Animation/MediaReplace/Icenut_skin2_6.png = null
+Animation/MediaReplace/Icenut_skin2_7.png = null
+Animation/MediaReplace/Icenut_skin2_8.png = null
+Animation/MediaReplace/Tallnut_body_0000_11.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=4 uid="uid://bsbisgdorksa3"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://lxgjb0ltgqd2" path="res://Asset/Anime/Character/Zombie/Chapter1/Bed/Scene/TowerDefenseZombieBed.gd" id="2"]
+[ext_resource type="Resource" uid="uid://b8ufb2kf1g5e8" path="res://Asset/Anime/Character/Zombie/Chapter1/Bed/Config/TowerDefenseZombieBed.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://dq0aaq0458aqe" path="res://Asset/Anime/Character/Zombie/Chapter1/Bed/ZombieBed.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://cbwcd57wk31d2" path="res://Asset/Anime/Character/Zombie/Chapter1/Bed/DamagePoint/Zombie_sleep_1.png" id="5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jshgv"]
+size = Vector2(141.25, 33)
+
+[node name="TowerDefenseZombieBed" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+walkSpeedScale = 0.25
+walkAnimeClip = "Idle"
+attackAnimeClip = "Idle"
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieBed")
+PreviewDamagePointPersontage = 1.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(12, 33)
+
+[node name="ZombieBed" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("4")]
+position = Vector2(-12, -33)
+trueFrameRate = 30.0
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/MediaReplace/Zombie_sleep_1.png = ExtResource("5")
+
+[node name="GroundSlot" parent="SpriteGroup/TransformPoint/ZombieBed" index="0"]
+position = Vector2(-56.6706, -9.2)
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(59.5, 37.2)
+scale = Vector2(3.33721, 1.26667)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(54.375, -2)
+shape = SubResource("RectangleShape2D_jshgv")
+
+[node name="AttackComponent" parent="." index="7"]
+attackType = "Smash"
+
+[node name="GroundMoveComponent" parent="." index="8" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieBed/GroundSlot")
+
+[editable path="SpriteGroup/TransformPoint/ZombieBed"]

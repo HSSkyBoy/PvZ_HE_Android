@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=4 uid="uid://w8387wjx2i2y"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://cnyddr3clf47" path="res://Asset/Anime/Effect/Splash/Splash.tres" id="2"]
+
+[node name="Splash" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-50, -40)
+trueFrameRate = 60.0
+layerSlot = [null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/splash_1 = true
+Animation/LayerVisible/splash_2 = true
+Animation/LayerVisible/splash_3 = true
+Animation/LayerVisible/splash_4 = true
+Animation/LayerVisible/splash_ring = true
+Animation/LayerVisible/splash_ring2 = true
+Animation/MediaReplace/splash_1.png = null
+Animation/MediaReplace/splash_2.png = null
+Animation/MediaReplace/splash_3.png = null
+Animation/MediaReplace/splash_4.png = null
+Animation/MediaReplace/splash_ring.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

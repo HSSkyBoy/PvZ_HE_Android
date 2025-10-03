@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=4 uid="uid://cilg0rnsi8l1p"]
+
+[ext_resource type="Script" uid="uid://dbjwdh4pvh3qp" path="res://Core/InternetServerManager/InternetServerManager.gd" id="1"]
+
+[node name="InternetServerManager" type="Node2D"]
+script = ExtResource("1")
+
+[node name="VersionHTTPRequest" type="HTTPRequest" parent="."]
+unique_name_in_owner = true
+use_threads = true
+
+[node name="DailyLevelHTTPRequest" type="HTTPRequest" parent="."]
+unique_name_in_owner = true
+use_threads = true
+
+[node name="OnlineLevelHTTPRequest" type="HTTPRequest" parent="."]
+unique_name_in_owner = true
+
+[connection signal="request_completed" from="VersionHTTPRequest" to="." method="VersionHTTPRequestCompleted"]
+[connection signal="request_completed" from="DailyLevelHTTPRequest" to="." method="DailyLevelHTTPRequestCompleted"]
+[connection signal="request_completed" from="OnlineLevelHTTPRequest" to="." method="OnlineLevelHTTPRequestCompleted"]

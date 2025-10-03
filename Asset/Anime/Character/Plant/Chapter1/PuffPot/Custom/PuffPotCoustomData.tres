@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharacterCustomData" load_steps=3 format=4 uid="uid://c7orf6tv2g65o"]
+
+[ext_resource type="Resource" uid="uid://dodkmac7xlu57" path="res://Asset/Anime/Character/Plant/Chapter1/PuffPot/Custom/Config/PuffPotCustom0.tres" id="1"]
+[ext_resource type="Script" uid="uid://onv5rieax7m5" path="res://Resource/General/Character/Costom/CharacterCustomData.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+customList = [ExtResource("1")]
+customDictionary = {
+"Custom0": {
+"Close": ["anim_face", "PuffShroom_stem", "PuffShroom_tip", "PuffShroom_eyes"],
+"Config": ExtResource("1"),
+"Open": ["skin1", "skin2_1", "skin2_2", "skin2_3", "skin3"]
+}
+}
+fliterOpenAll = ["skin1", "skin2_1", "skin2_2", "skin2_3", "skin3"]
+fliterCloseAll = ["anim_face", "PuffShroom_stem", "PuffShroom_tip", "PuffShroom_eyes"]
+metadata/_custom_type_script = "uid://onv5rieax7m5"

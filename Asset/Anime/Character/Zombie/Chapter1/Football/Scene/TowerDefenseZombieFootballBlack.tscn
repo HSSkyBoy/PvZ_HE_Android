@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=4 uid="uid://b1457aw23btfb"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bfk25dowfn25y" path="res://Asset/Anime/Character/Zombie/Chapter1/Football/Scene/TowerDefenseZombieFootball.gd" id="2"]
+[ext_resource type="Resource" uid="uid://q7jufx0ar2oa" path="res://Asset/Anime/Character/Zombie/Chapter1/Football/Config/TowerDefenseZombieFootballBlack.tres" id="3"]
+[ext_resource type="Resource" uid="uid://b8w8htp4yuf7k" path="res://Asset/Anime/Character/Zombie/Chapter1/Football/DamagePoint/Config/ZombieFootballDamagePointArm.tres" id="4"]
+[ext_resource type="Resource" uid="uid://d0c6qmcgnjnb0" path="res://Asset/Anime/Character/Zombie/Chapter1/Football/DamagePoint/Config/ZombieFootballDamagePointHead.tres" id="5"]
+[ext_resource type="Resource" uid="uid://do128nf5xkcec" path="res://Asset/Anime/Character/Zombie/Chapter1/Football/Armor/Config/ZombieFootballArmorHelmet.tres" id="6"]
+[ext_resource type="Resource" uid="uid://blcvqs0leo3cu" path="res://Asset/Anime/Character/Zombie/Chapter1/Football/Armor/Config/ZombieFootballArmorBlackHelmet.tres" id="7"]
+[ext_resource type="Resource" uid="uid://df6agvaejitpx" path="res://Asset/Anime/Character/Zombie/Chapter1/Football/Armor/Config/ZombieFootballArmorSpecialHelmet.tres" id="8"]
+[ext_resource type="PackedScene" uid="uid://cy2bbur6qlk4f" path="res://Asset/Anime/Character/Zombie/Chapter1/Football/ZombieFootballBlack.tscn" id="9"]
+[ext_resource type="Texture2D" uid="uid://4bhk575c1fyl" path="res://Asset/Texture/Character/Armor/BlackHelmet/ZombieBlackHelmet1.png" id="10"]
+
+[node name="TowerDefenseZombieFootballBlack" node_paths=PackedStringArray("sprite", "headSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+walkSpeedScale = 2.0
+swimAnimeClip = "Swim"
+dieWaterAnimeClip = "SwimDeath"
+garlicReplace = "Zombie_football_head.png"
+waterHeightPersontage = 0.683
+waterHeight = 45.0
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieFootball")
+headSlot = NodePath("SpriteGroup/TransformPoint/ZombieFootball/HeadSlot")
+damagePart = {
+"Arm": ExtResource("4"),
+"BlackHelmet": ExtResource("7"),
+"Head": ExtResource("5"),
+"Helmet": ExtResource("6"),
+"SpecialHelmet": ExtResource("8")
+}
+PreviewDamagePointPersontage = 1.0
+Armor = []
+DamagePartSlot/Arm = NodePath("SpriteGroup/TransformPoint/ZombieFootball/ArmSlot")
+DamagePartSlot/Head = NodePath("SpriteGroup/TransformPoint/ZombieFootball/HeadSlot")
+DamagePartSlot/Helmet = NodePath("SpriteGroup/TransformPoint/ZombieFootball/HelmentSlot")
+DamagePartSlot/BlackHelmet = NodePath("SpriteGroup/TransformPoint/ZombieFootball/HelmentSlot")
+DamagePartSlot/SpecialHelmet = NodePath("SpriteGroup/TransformPoint/ZombieFootball/HelmentSlot")
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(12, 33)
+
+[node name="ZombieFootball" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("9")]
+position = Vector2(-12, -33)
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/MediaReplace/Zombie_football_helmet.png = ExtResource("10")
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieFootball" index="0"]
+position = Vector2(-12.9926, -55.9322)
+rotation = -0.0358481
+scale = Vector2(0.799628, 0.799628)
+
+[node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieFootball" index="1"]
+position = Vector2(-36.9411, -63.8877)
+rotation = -0.0376369
+scale = Vector2(0.799609, 0.799609)
+
+[node name="HelmentSlot" parent="SpriteGroup/TransformPoint/ZombieFootball" index="2"]
+position = Vector2(31.2609, 3.76774)
+rotation = -0.130866
+scale = Vector2(0.799253, 0.799253)
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(9, 38)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(4, -2)
+
+[node name="GroundMoveComponent" parent="." index="8" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieFootball/GroundSlot")
+
+[editable path="SpriteGroup/TransformPoint/ZombieFootball"]

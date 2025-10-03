@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=4 uid="uid://becnacp2r6c0g"]
+
+[ext_resource type="Script" uid="uid://djuqi4md2cq7o" path="res://Script/Component/TowerDefense/Character/MagnetComponent/MagnetComponent.gd" id="1"]
+
+[node name="MagnetComponent" type="Node2D"]
+script = ExtResource("1")

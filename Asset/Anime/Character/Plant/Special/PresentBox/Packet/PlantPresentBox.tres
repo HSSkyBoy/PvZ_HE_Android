@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="TowerDefensePacketConfig" load_steps=3 format=4 uid="uid://ch2qvmgtlq4v8"]
+
+[ext_resource type="Resource" uid="uid://brd0ln0lrox6t" path="res://Asset/Anime/Character/Plant/Special/PresentBox/Config/TowerDefensePlantPresentBox.tres" id="1"]
+[ext_resource type="Script" uid="uid://c6d3po5310ugw" path="res://Resource/TowerDefense/PacketBank/Packet/TowerDefensePacketConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+saveKey = "PlantPresentBox"
+unlockCheckList = []
+name = "TOWERDEFENSE_PLANT_PRESENTBOX_NAME"
+describe = "TOWERDEFENSE_PLANT_PRESENTBOX_EXPRESTION"
+plantfood = ""
+handbookDescribe = "TOWERDEFENSE_PLANT_PRESENTBOX_HANDBOOK_EXPRESTION"
+handbookStory = "TOWERDEFENSE_PLANT_PRESENTBOX_HANDBOOK_STORY"
+packetAnimeClip = "Idle"
+packetAnimeOffset = Vector2(21, 28)
+packetAnimeScale = Vector2(0.4, 0.4)
+characterConfig = ExtResource("1")
+type = 5
+spawnMethod = "Rise"
+overrideCostRise = -1
+overrideCost = -1
+overridPacketCooldown = -1.0
+overridStartingCooldown = -1.0
+overrideWeight = -1
+overrideWavePointCost = -1
+initArmor = []
+plantUseCell = true
+Cell/plantUseCell = true
+metadata/_custom_type_script = "uid://c6d3po5310ugw"

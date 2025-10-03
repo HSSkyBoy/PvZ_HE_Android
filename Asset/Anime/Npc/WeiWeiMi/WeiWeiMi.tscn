@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=4 uid="uid://dec362h0hth21"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://v35ewjl77xul" path="res://Asset/Anime/Npc/WeiWeiMi/WeiWeiMi.tres" id="2"]
+
+[node name="WeiWeiMi" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+timeScale = 0.75
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/_0 = true
+Animation/LayerVisible/_1 = true
+Animation/LayerVisible/_10 = true
+Animation/LayerVisible/_11 = true
+Animation/LayerVisible/_12 = true
+Animation/LayerVisible/_13 = true
+Animation/LayerVisible/_14 = true
+Animation/LayerVisible/_15 = true
+Animation/LayerVisible/_16 = true
+Animation/LayerVisible/_2 = true
+Animation/LayerVisible/_3 = true
+Animation/LayerVisible/_4 = true
+Animation/LayerVisible/_5 = true
+Animation/LayerVisible/_6 = true
+Animation/LayerVisible/_7 = true
+Animation/LayerVisible/_8 = true
+Animation/LayerVisible/_9 = true
+Animation/LayerVisible/_pea = true
+Animation/MediaReplace/weiweifan_1.png = null
+Animation/MediaReplace/weiweifan_10.png = null
+Animation/MediaReplace/weiweifan_13.png = null
+Animation/MediaReplace/weiweifan_14.png = null
+Animation/MediaReplace/weiweifan_15.png = null
+Animation/MediaReplace/weiweifan_16.png = null
+Animation/MediaReplace/weiweifan_17.png = null
+Animation/MediaReplace/weiweifan_18.png = null
+Animation/MediaReplace/weiweifan_19.png = null
+Animation/MediaReplace/weiweifan_2.png = null
+Animation/MediaReplace/weiweifan_20.png = null
+Animation/MediaReplace/weiweifan_21.png = null
+Animation/MediaReplace/weiweifan_3.png = null
+Animation/MediaReplace/weiweifan_4.png = null
+Animation/MediaReplace/weiweifan_5.png = null
+Animation/MediaReplace/weiweifan_6.png = null
+Animation/MediaReplace/weiweifan_7.png = null
+Animation/MediaReplace/weiweifan_8.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

@@ -1,0 +1,103 @@
+[gd_scene load_steps=9 format=4 uid="uid://baeeahg8pe61u"]
+
+[ext_resource type="Script" uid="uid://duoxibuu2uciu" path="res://Prefab/TowerDefense/GUI/InGame/PacketBank/PacketGroup/PacketGroupButton.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://da1nikmivd2n8" path="res://Asset/Texture/TowerDefense/PacketBank/PacketBankButton.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dphra8cjrdw34" path="res://Asset/Texture/TowerDefense/PacketBank/PacketBankButtonGlow.png" id="3"]
+[ext_resource type="FontFile" uid="uid://d0aylc13b87r0" path="res://Asset/Font/BrianneTod.ttf" id="4"]
+[ext_resource type="Texture2D" uid="uid://3ghqdu5doa0f" path="res://Asset/Texture/TowerDefense/PacketBank/Save.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://b4t376cfp2y3w" path="res://Asset/Texture/TowerDefense/PacketBank/SavePress.png" id="6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u13cd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h6gy8"]
+
+[node name="PacketGroupButton" type="MarginContainer"]
+light_mask = 0
+custom_minimum_size = Vector2(100, 0)
+script = ExtResource("1")
+normalTexture = ExtResource("2")
+pressedTexture = ExtResource("3")
+hoverTexture = ExtResource("3")
+
+[node name="NinePatchTexture" type="NinePatchRect" parent="."]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+mouse_filter = 1
+texture = ExtResource("2")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_right = 30
+
+[node name="LabelText" type="Label" parent="MarginContainer"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+theme_override_colors/font_color = Color(0.306155, 0.122686, 6.49765e-07, 1)
+theme_override_fonts/font = ExtResource("4")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_u13cd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+mouse_default_cursor_shape = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 8
+mouse_filter = 2
+theme_override_constants/margin_right = 8
+
+[node name="SaveButton" type="TextureButton" parent="MarginContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("5")
+texture_pressed = ExtResource("6")
+texture_hover = ExtResource("6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_right = 30
+
+[node name="NameChangeLine" type="LineEdit" parent="MarginContainer3"]
+unique_name_in_owner = true
+visible = false
+light_mask = 0
+layout_mode = 2
+theme_override_colors/font_color = Color(0.306155, 0.122686, 6.49765e-07, 1)
+theme_override_fonts/font = ExtResource("4")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h6gy8")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_u13cd")
+alignment = 1
+context_menu_enabled = false
+flat = true
+select_all_on_focus = true
+caret_blink = true
+caret_blink_interval = 0.2
+
+[connection signal="button_down" from="TextureButton" to="." method="ButtonDown"]
+[connection signal="button_up" from="TextureButton" to="." method="ButtonUp"]
+[connection signal="mouse_entered" from="TextureButton" to="." method="_MouseEntered"]
+[connection signal="mouse_exited" from="TextureButton" to="." method="_MouseExited"]
+[connection signal="pressed" from="TextureButton" to="." method="_Pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="LoadButtonPressed"]
+[connection signal="pressed" from="MarginContainer2/SaveButton" to="." method="SaveButtonPressed"]
+[connection signal="editing_toggled" from="MarginContainer3/NameChangeLine" to="." method="NameChangeOver"]

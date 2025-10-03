@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AwardSettlementConfig" load_steps=5 format=4 uid="uid://buosnmgb8nxwd"]
+
+[ext_resource type="Texture2D" uid="uid://cso1fdckap36m" path="res://Asset/Texture/GUI/AwardSettlement/ExperimentalLogBackground.jpg" id="1"]
+[ext_resource type="Texture2D" uid="uid://5h0kqgkbtnu0" path="res://Asset/Texture/GUI/AwardSettlement/Paper/ExperimentalLogNote01.png" id="2"]
+[ext_resource type="Script" uid="uid://cmgsqeyod0k35" path="res://Resource/AwardNote/AwardSettlementConfig.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://bsjmgsowhewkb" path="res://Asset/Texture/GUI/General/Special/ZombieNoteSmall.png" id="4"]
+
+[resource]
+script = ExtResource("3")
+texture = ExtResource("4")
+background = ExtResource("1")
+image = ExtResource("2")
+metadata/_custom_type_script = "uid://cmgsqeyod0k35"

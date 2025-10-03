@@ -1,0 +1,238 @@
+[gd_scene load_steps=8 format=4 uid="uid://b04firw4ertti"]
+
+[ext_resource type="Script" uid="uid://bg1y4o5dv5v0n" path="res://Prefab/TowerDefense/GUI/InGame/ConveyorBelt/TowerDefenseConveyorBelt.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://ddglfhcpxg451" path="res://Asset/Texture/TowerDefense/ConveyorBelt/ConveyorBeltBackdrop.png" id="2"]
+[ext_resource type="Shader" uid="uid://wk0w3tgag3ju" path="res://Prefab/TowerDefense/GUI/InGame/ConveyorBelt/ConveyorBelt.gdshader" id="3"]
+[ext_resource type="Texture2D" uid="uid://dbyiqyhraff1b" path="res://Asset/Texture/TowerDefense/ConveyorBelt/ConveyorBelt.png" id="4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s6rq3"]
+shader = ExtResource("3")
+shader_parameter/_length = 600.0
+shader_parameter/speed = 0.06
+shader_parameter/time = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nm0a0"]
+shader = ExtResource("3")
+shader_parameter/_length = 600.0
+shader_parameter/speed = 0.06
+shader_parameter/time = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nia6q"]
+shader = ExtResource("3")
+shader_parameter/_length = 600.0
+shader_parameter/speed = 0.06
+shader_parameter/time = 0.0
+
+[node name="TowerDefenseConveyorBelt" type="Control"]
+light_mask = 0
+custom_minimum_size = Vector2(781, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 781.0
+offset_bottom = 86.0
+script = ExtResource("1")
+metadata/_edit_horizontal_guides_ = [-14.0]
+
+[node name="PCControl" type="Control" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(781, 0)
+anchors_preset = 0
+
+[node name="ConveyorBelt" type="PanelContainer" parent="PCControl"]
+light_mask = 0
+layout_mode = 0
+offset_right = 781.0
+offset_bottom = 86.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="PCControl/ConveyorBelt"]
+light_mask = 0
+custom_minimum_size = Vector2(518, 86)
+layout_mode = 2
+texture = ExtResource("2")
+patch_margin_left = 16
+patch_margin_top = 8
+patch_margin_right = 20
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="PCControl"]
+light_mask = 0
+texture_filter = 1
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 3075.0
+offset_bottom = 302.0
+scale = Vector2(0.25, 0.25)
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="PCControl/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(3068, 296)
+render_target_update_mode = 4
+
+[node name="ScaleNode" type="Control" parent="PCControl/SubViewportContainer/SubViewport"]
+light_mask = 0
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(4, 4)
+
+[node name="Belt" type="TextureRect" parent="PCControl/SubViewportContainer/SubViewport/ScaleNode"]
+unique_name_in_owner = true
+light_mask = 0
+texture_filter = 1
+material = SubResource("ShaderMaterial_s6rq3")
+layout_mode = 0
+offset_left = -4.0
+offset_top = 59.0
+offset_right = 859.0
+offset_bottom = 165.0
+texture = ExtResource("4")
+
+[node name="PacketContainer" type="Control" parent="PCControl/SubViewportContainer/SubViewport/ScaleNode"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 3
+anchors_preset = 0
+offset_left = 13.0
+offset_top = 34.0
+offset_right = 747.0
+offset_bottom = 34.0
+
+[node name="MobileControl" type="Control" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(110, 600)
+anchors_preset = 0
+offset_right = 220.0
+offset_bottom = 600.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MobileControl"]
+layout_mode = 0
+theme_override_constants/separation = 110
+
+[node name="MobileConveyorBelt1" type="Control" parent="MobileControl/HBoxContainer"]
+layout_mode = 2
+
+[node name="ConveyorBelt" type="PanelContainer" parent="MobileControl/HBoxContainer/MobileConveyorBelt1"]
+light_mask = 0
+layout_mode = 0
+offset_right = 104.0
+offset_bottom = 600.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MobileControl/HBoxContainer/MobileConveyorBelt1/ConveyorBelt"]
+light_mask = 0
+custom_minimum_size = Vector2(110, 86)
+layout_mode = 2
+texture = ExtResource("2")
+patch_margin_left = 16
+patch_margin_top = 8
+patch_margin_right = 20
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MobileControl/HBoxContainer/MobileConveyorBelt1"]
+light_mask = 0
+texture_filter = 1
+layout_mode = 0
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 391.0
+offset_bottom = 2357.0
+scale = Vector2(0.25, 0.25)
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MobileControl/HBoxContainer/MobileConveyorBelt1/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(384, 2352)
+render_target_update_mode = 4
+
+[node name="ScaleNode" type="Control" parent="MobileControl/HBoxContainer/MobileConveyorBelt1/SubViewportContainer/SubViewport"]
+light_mask = 0
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(4, 4)
+
+[node name="MobileBelt1" type="Sprite2D" parent="MobileControl/HBoxContainer/MobileConveyorBelt1/SubViewportContainer/SubViewport/ScaleNode"]
+unique_name_in_owner = true
+light_mask = 0
+texture_filter = 1
+material = SubResource("ShaderMaterial_nm0a0")
+position = Vector2(-36.9999, 295.734)
+rotation = 1.57079
+scale = Vector2(1.19237, 1)
+texture = ExtResource("4")
+
+[node name="MobilePacketContainer1" type="Control" parent="MobileControl/HBoxContainer/MobileConveyorBelt1/SubViewportContainer/SubViewport/ScaleNode"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 3
+anchors_preset = 0
+offset_left = 49.0
+offset_top = 16.0
+offset_right = 49.0
+offset_bottom = 530.0
+
+[node name="MobileConveyorBelt2" type="Control" parent="MobileControl/HBoxContainer"]
+layout_mode = 2
+
+[node name="ConveyorBelt" type="PanelContainer" parent="MobileControl/HBoxContainer/MobileConveyorBelt2"]
+light_mask = 0
+layout_mode = 0
+offset_right = 104.0
+offset_bottom = 600.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MobileControl/HBoxContainer/MobileConveyorBelt2/ConveyorBelt"]
+light_mask = 0
+custom_minimum_size = Vector2(110, 86)
+layout_mode = 2
+texture = ExtResource("2")
+patch_margin_left = 16
+patch_margin_top = 8
+patch_margin_right = 20
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MobileControl/HBoxContainer/MobileConveyorBelt2"]
+light_mask = 0
+texture_filter = 1
+layout_mode = 0
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 391.0
+offset_bottom = 2357.0
+scale = Vector2(0.25, 0.25)
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MobileControl/HBoxContainer/MobileConveyorBelt2/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(384, 2352)
+render_target_update_mode = 4
+
+[node name="ScaleNode" type="Control" parent="MobileControl/HBoxContainer/MobileConveyorBelt2/SubViewportContainer/SubViewport"]
+light_mask = 0
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(4, 4)
+
+[node name="MobileBelt2" type="Sprite2D" parent="MobileControl/HBoxContainer/MobileConveyorBelt2/SubViewportContainer/SubViewport/ScaleNode"]
+unique_name_in_owner = true
+light_mask = 0
+texture_filter = 1
+material = SubResource("ShaderMaterial_nia6q")
+position = Vector2(-36.9999, 295.734)
+rotation = 1.57079
+scale = Vector2(1.19237, 1)
+texture = ExtResource("4")
+
+[node name="MobilePacketContainer2" type="Control" parent="MobileControl/HBoxContainer/MobileConveyorBelt2/SubViewportContainer/SubViewport/ScaleNode"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 3
+anchors_preset = 0
+offset_left = 49.0
+offset_top = 16.0
+offset_right = 49.0
+offset_bottom = 530.0

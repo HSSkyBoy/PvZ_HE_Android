@@ -1,0 +1,145 @@
+[gd_scene load_steps=18 format=4 uid="uid://bq77gjkpaecwi"]
+
+[ext_resource type="Script" uid="uid://b4ummb1j526gk" path="res://Asset/Config/Map/OutsideBackyard/Scene/Day/TowerDefenseMapOutsideBackyard.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dv7f6kptj6mmp" path="res://Asset/Config/Map/OutsideBackyard/Scene/Day/TowerDefenseMapOutsideBackyardGradient.tres" id="2"]
+[ext_resource type="Texture2D" uid="uid://bgrhriqvg12xq" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Outside/OutsideBackyard.jpg" id="3"]
+[ext_resource type="Texture2D" uid="uid://6jq52ylqm2y7" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Backyard/PoolSparkly.png" id="4"]
+[ext_resource type="Shader" uid="uid://bc8ixl427erpw" path="res://Asset/Shader/Map/MapPool.gdshader" id="5"]
+[ext_resource type="Texture2D" uid="uid://cfxpmm5gfirpi" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Backyard/PoolNoise.tres" id="6"]
+[ext_resource type="Texture2D" uid="uid://c3xxq8m8jsi7x" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Backyard/BackyardFloor.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://cf1ydnwxx75xx" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Backyard/BackyardDoor.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://bbbiwhq1ib7vi" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Stripe.png" id="9"]
+
+[sub_resource type="Curve" id="Curve_x2us5"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.504444, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_jhtmk"]
+curve = SubResource("Curve_x2us5")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jhtmk"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(120, 40, 1)
+gravity = Vector3(0, 0, 0)
+scale_min = 0.25
+scale_max = 0.75
+alpha_curve = SubResource("CurveTexture_jhtmk")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mfet7"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(100, 40, 1)
+gravity = Vector3(0, 0, 0)
+scale_min = 0.25
+scale_max = 0.75
+alpha_curve = SubResource("CurveTexture_jhtmk")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3ji3c"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(120, 60, 1)
+gravity = Vector3(0, 0, 0)
+scale_min = 0.25
+scale_max = 0.75
+alpha_curve = SubResource("CurveTexture_jhtmk")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_eanrc"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(100, 60, 1)
+gravity = Vector3(0, 0, 0)
+scale_min = 0.25
+scale_max = 0.75
+alpha_curve = SubResource("CurveTexture_jhtmk")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wcu0g"]
+shader = ExtResource("5")
+shader_parameter/refraction_map = ExtResource("6")
+shader_parameter/refraction_stretch = Vector2(1, 1)
+shader_parameter/refraction_strength = 0.01
+shader_parameter/timer = 1.01
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jhtmk"]
+shader = ExtResource("5")
+shader_parameter/refraction_map = ExtResource("6")
+shader_parameter/refraction_stretch = Vector2(1, 1)
+shader_parameter/refraction_strength = 0.01
+shader_parameter/timer = 0.0
+
+[node name="TowerDefenseMapOutsideBackyard" type="Node2D" node_paths=PackedStringArray("stripe")]
+script = ExtResource("1")
+stripe = NodePath("Stripe")
+canvasModulateGradient = ExtResource("2")
+
+[node name="Backyard" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="PoolParticles" type="GPUParticles2D" parent="."]
+position = Vector2(816, 144)
+amount = 32
+texture = ExtResource("4")
+lifetime = 2.0
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_jhtmk")
+
+[node name="PoolParticles2" type="GPUParticles2D" parent="."]
+position = Vector2(672, 152)
+texture = ExtResource("4")
+lifetime = 2.0
+process_material = SubResource("ParticleProcessMaterial_mfet7")
+
+[node name="PoolParticles3" type="GPUParticles2D" parent="."]
+position = Vector2(816, 496)
+amount = 32
+texture = ExtResource("4")
+lifetime = 2.0
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_3ji3c")
+
+[node name="PoolParticles4" type="GPUParticles2D" parent="."]
+position = Vector2(672, 504)
+texture = ExtResource("4")
+lifetime = 2.0
+process_material = SubResource("ParticleProcessMaterial_eanrc")
+
+[node name="Pool1" type="Polygon2D" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_wcu0g")
+position = Vector2(620, 140)
+scale = Vector2(0.65987, 0.504202)
+polygon = PackedVector2Array(-536.469, -103.133, -536.469, -61.4833, -537.984, -13.8833, -537.984, 39.6667, -539.5, 99.1667, -489.49, 105.117, -427.357, 101.15, -416.749, 109.083, -410.687, 99.1667, -374.316, 101.15, -316.729, 93.2167, -300.059, 101.15, -197.008, 101.15, -180.338, 115.033, -127.298, 103.133, -75.7725, 101.15, -62.1334, 109.083, -51.5253, 99.1667, 57.5871, 115.033, 62.1334, 122.967, 72.7416, 115.033, 118.205, 111.067, 181.854, 113.05, 215.194, 107.1, 278.843, 117.017, 304.605, 130.9, 310.667, 105.117, 360.677, 107.1, 383.409, 101.15, 422.81, 109.083, 436.449, 95.2, 513.737, 107.1, 531.923, 107.1, 534.954, 111.067, 536.469, 63.4667, 525.861, 1.98334, 531.923, -27.7667, 519.799, -81.3167, 524.345, -91.2333, 506.16, -109.083, 434.934, -109.083, 400.079, -115.033, 292.482, -109.083, 265.204, -117.017, 245.503, -115.033, 201.555, -113.05, 162.153, -109.083, 128.813, -119, 93.9579, -115.033, 22.7318, -111.067, -18.1854, -119, -59.1025, -115.033, -74.257, -117.017, -130.329, -115.033, -174.277, -115.033, -207.617, -109.083, -268.234, -119, -310.667, -113.05, -353.1, -115.033, -395.532, -117.017, -431.903, -111.067, -471.305, -117.017, -501.614, -113.05, -516.768, -113.05)
+
+[node name="Pool2" type="Polygon2D" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_jhtmk")
+position = Vector2(628.75, 492)
+scale = Vector2(0.673309, 0.840336)
+polygon = PackedVector2Array(-522.42, -117.81, -463.012, -107.1, -411.03, -117.81, -348.651, -117.81, -296.669, -104.72, -241.717, -110.67, -160.03, -120.19, -143.693, -117.81, -122.9, -104.72, -53.0958, -107.1, -5.56927, -105.91, 73.1464, -113.05, 116.217, -111.86, 139.981, -102.34, 199.389, -104.72, 211.27, -105.91, 243.945, -114.24, 257.312, -114.24, 276.619, -111.86, 306.323, -104.72, 337.513, -98.77, 392.465, -110.67, 465.24, -109.48, 518.707, -110.67, 539.5, -103.53, 542.471, -79.73, 540.985, -72.59, 539.5, -52.36, 542.471, -22.61, 536.53, 4.76001, 545.441, 29.75, 546.926, 45.22, 543.956, 99.96, 539.5, 105.91, 529.104, 109.48, 529.104, 116.62, 521.678, 111.86, 515.737, 120.19, 451.873, 120.19, 434.051, 123.76, 414.743, 121.38, 398.406, 122.57, 386.524, 111.86, 365.731, 101.15, 327.116, 124.95, 310.779, 123.76, 309.294, 117.81, 295.927, 108.29, 261.767, 121.38, 232.063, 119, 227.608, 121.38, 215.726, 116.62, 188.992, 116.62, 178.596, 115.43, 165.229, 119, 159.288, 116.62, 71.6613, 117.81, 53.8388, 111.86, 36.0164, 114.24, 28.5903, 119, 16.7087, 104.72, -11.5101, 92.82, -38.2438, 120.19, -73.8886, 115.43, -81.3146, 117.81, -189.734, 119, -261.024, 117.81, -266.965, 120.19, -298.154, 121.38, -327.858, 110.67, -332.314, 121.38, -362.018, 121.38, -387.266, 109.48, -397.663, 121.38, -460.041, 121.38, -486.775, 108.29, -494.201, 122.57, -522.42, 122.57, -538.757, 113.05, -537.272, 54.74, -538.757, -15.47, -535.787, -65.45, -540.242, -70.21, -543.213, -114.24, -534.302, -117.81)
+
+[node name="BackyardFloor" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(71, 351)
+scale = Vector2(0.66, 0.66)
+texture = ExtResource("7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="BackyardDoor" type="Sprite2D" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(70, 348)
+scale = Vector2(0.66, 0.66)
+texture = ExtResource("8")
+
+[node name="Stripe" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(484, 74)
+scale = Vector2(1, 1.03187)
+texture = ExtResource("9")
+centered = false

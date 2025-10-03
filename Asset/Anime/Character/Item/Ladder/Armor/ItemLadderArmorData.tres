@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CharacterArmorData" load_steps=3 format=4 uid="uid://cmc821gx470e7"]
+
+[ext_resource type="Resource" uid="uid://kck8h8xr4un3" path="res://Asset/Anime/Character/Item/Ladder/Armor/Config/ItemLadderArmorLadder.tres" id="1"]
+[ext_resource type="Script" uid="uid://ci4c6gpjugqpl" path="res://Resource/General/Character/Armor/CharacterArmorData.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+armorList = [ExtResource("1")]
+armorDictionary = {
+"Ladder": ExtResource("1")
+}
+fliterAllDictionary = {
+"Ladder": ["Ladder"]
+}
+fliterOpenDictionary = {
+"Ladder": []
+}
+fliterCloseDictionary = {
+"Ladder": []
+}

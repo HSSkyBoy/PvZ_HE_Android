@@ -1,0 +1,88 @@
+{
+	"SaveKey": "Level1_5TutorialTalk",
+	"Talk": [
+		{
+			"Anime": "SmallTalk",
+			"Audio" : "CrazyDaveShort" ,
+			"Mode": "Default",
+			"Npc": "CrazyDave",
+			"Text": "NPC_TALK_LEVEL1_5_TUTORIAL_1"
+		},
+		{
+			"Anime": "SmallTalk",
+			"Audio" : "CrazyDaveShort" ,
+			"Mode": "Default",
+			"Npc": "CrazyDave",
+			"Text": "NPC_TALK_LEVEL1_5_TUTORIAL_2"
+		},
+		{
+			"Anime": "Leave",
+			"Audio" : "" ,
+			"Mode": "Tutorial",
+			"Npc": "CrazyDave",
+			"Text": "" ,
+			"Arg": [
+				"uid://fqk4jcnpqvwe"
+			]
+		},
+		{
+			"Anime": "SmallTalk",
+			"Audio" : "CrazyDaveShort" ,
+			"Mode": "Default",
+			"Npc": "CrazyDave",
+			"Text": "NPC_TALK_LEVEL1_5_TUTORIAL_3"
+		},
+		{
+			"Anime": "MediumTalk",
+			"Audio" : "CrazyDaveLong" ,
+			"Mode": "Default",
+			"Npc": "CrazyDave",
+			"Text": "NPC_TALK_LEVEL1_5_TUTORIAL_4"
+		},
+		{
+			"Anime": "MediumTalk",
+			"Audio" : "CrazyDaveLong" ,
+			"Mode": "Default",
+			"Npc": "CrazyDave",
+			"Text": "NPC_TALK_LEVEL1_5_TUTORIAL_5"
+		},
+		{
+			"Anime": "MediumTalk",
+			"Audio" : "CrazyDaveLong" ,
+			"Mode": "Default",
+			"Npc": "CrazyDave",
+			"Text": "NPC_TALK_LEVEL1_5_TUTORIAL_6"
+		},
+		{
+			"Anime": "TalkHanding",
+			"Audio" : "CrazyDaveExtralong" ,
+			"Arg": [
+				"uid://csp3p80bpd1cn"
+			],
+			"Mode": "Hand",
+			"Npc": "CrazyDave",
+			"Text": "NPC_TALK_LEVEL1_5_TUTORIAL_7"
+		},
+		{
+			"Anime": "MediumTalk",
+			"Audio" : "CrazyDaveExtralong" ,
+			"Mode": "Default",
+			"Npc": "CrazyDave",
+			"Text": "NPC_TALK_LEVEL1_5_TUTORIAL_8"
+		},
+		{
+			"Anime": "Crazy",
+			"Audio" : "CrazyDaveCrazy" ,
+			"Mode": "Default",
+			"Npc": "CrazyDave",
+			"Text": "NPC_TALK_LEVEL1_5_TUTORIAL_9"
+		},
+		{
+			"Anime": "MediumTalk",
+			"Audio" : "CrazyDaveExtralong" ,
+			"Mode": "Default",
+			"Npc": "CrazyDave",
+			"Text": "NPC_TALK_LEVEL1_5_TUTORIAL_10"
+		}
+	]
+}

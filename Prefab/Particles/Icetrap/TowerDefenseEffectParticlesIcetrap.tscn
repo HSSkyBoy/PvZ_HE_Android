@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=4 uid="uid://b0wigigia32ny"]
+
+[ext_resource type="PackedScene" uid="uid://dbyd0mqkya1j3" path="res://Prefab/TowerDefense/Effect/Once/TowerDefenseEffectParticlesOnce.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://phjufj03qg66" path="res://Prefab/Particles/Icetrap/Icetrap.tscn" id="2"]
+
+[node name="TowerDefenseEffectParticlesButterSplats" node_paths=PackedStringArray("particles") instance=ExtResource("1")]
+objectId = 203
+particles = NodePath("Icetrap")
+
+[node name="Icetrap" parent="." index="0" instance=ExtResource("2")]

@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=4 uid="uid://b1cbbcykkioe0"]
+
+[ext_resource type="Script" uid="uid://g5f7fxuj2v18" path="res://Prefab/GUI/DialogBox/DailyChallenge/Award/Item/DailyChallengeAwardItem.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://bgkuthysw0876" path="res://Prefab/GUI/Button/NinePatchButtonBase/NinePatchButtonBase.tscn" id="2"]
+
+[node name="DailyChallengeAwardItem" type="Control"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 732.0
+offset_bottom = 120.0
+mouse_filter = 2
+script = ExtResource("1")
+
+[node name="SpriteNode" type="Control" parent="."]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 84.0
+offset_top = 57.0
+offset_right = 84.0
+offset_bottom = 57.0
+
+[node name="AccessLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 167.407
+offset_top = 45.9259
+offset_right = 474.407
+offset_bottom = 84.9259
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "累计完成7天挑战获得"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GetButton" parent="." instance=ExtResource("2")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 503.704
+offset_top = 44.4445
+offset_right = 659.704
+offset_bottom = 86.4445
+text = "点击领取"
+
+[connection signal="pressed" from="GetButton" to="." method="GetButtonPressed"]

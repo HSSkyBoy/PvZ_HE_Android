@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=4 uid="uid://cs28v5to64dq"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bwqvtscf2wjwc" path="res://Asset/Anime/Character/Plant/Chapter0/Pot/Scene/TowerDefensePlantPot.gd" id="2"]
+[ext_resource type="Resource" uid="uid://qji31e3ma1w" path="res://Asset/Anime/Character/Plant/Chapter0/Pot/Config/TowerDefensePlantPot.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://cuew34oa6wvrs" path="res://Asset/Anime/Character/Plant/Chapter0/Pot/Pot.tscn" id="4"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="5"]
+[ext_resource type="Texture2D" uid="uid://b5fatcmdsnbal" path="res://Asset/Texture/Character/Effect/PotShadow.png" id="6"]
+[ext_resource type="PackedScene" uid="uid://d1l3f28mblu32" path="res://Script/Component/TowerDefense/Character/SlotComponent/SlotComponent.tscn" id="7"]
+
+[node name="TowerDefensePlantPot" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+z_index = -13
+script = ExtResource("2")
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/Pot")
+PreviewDamagePointPersontage = 1.0
+itemLayer = 2
+gravity = 245.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="Pot" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("4")]
+position = Vector2(0, -26)
+layerSlot = [NodePath("../../../ShadowSprite/AdobeAnimateSlot"), null, null, null, null, NodePath("AdobeAnimateSlot"), null]
+layerSprite = [null, null, null, null, null, null, null]
+
+[node name="AdobeAnimateSlot" type="Node2D" parent="SpriteGroup/TransformPoint/Pot" index="0"]
+position = Vector2(-32.85, -5.9967)
+scale = Vector2(0.799988, 0.799988)
+script = ExtResource("5")
+followSlotId = 6
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/Pot/AdobeAnimateSlot" index="0"]
+position = Vector2(40, 0)
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 47)
+scale = Vector2(0.821918, 0.77551)
+texture = null
+
+[node name="AdobeAnimateSlot" type="Node2D" parent="ShadowSprite" index="0"]
+position = Vector2(-27.1317, 22.25)
+scale = Vector2(0.766612, 0.799988)
+script = ExtResource("5")
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ShadowSprite2" type="Sprite2D" parent="ShadowSprite/AdobeAnimateSlot" index="0"]
+unique_name_in_owner = true
+z_index = -10
+position = Vector2(35.4053, -26.2011)
+scale = Vector2(1.21333, 1.11844)
+texture = ExtResource("6")
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+
+[node name="SlotComponent" parent="." index="7" node_paths=PackedStringArray("posMark") instance=ExtResource("7")]
+posMark = NodePath("../SpriteGroup/TransformPoint/Pot/AdobeAnimateSlot/Marker2D")
+
+[node name="ShowHealthComponent" parent="." index="8"]
+position = Vector2(0, 30)

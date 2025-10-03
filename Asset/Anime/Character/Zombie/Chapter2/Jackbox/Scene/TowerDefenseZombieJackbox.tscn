@@ -1,0 +1,117 @@
+[gd_scene load_steps=18 format=4 uid="uid://btxyp2t4ugaer"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cwdny5fkkj4i0" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackbox/Scene/TowerDefenseZombieJackbox.gd" id="2"]
+[ext_resource type="Script" uid="uid://c3wiwula8chdo" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventExplodeHurt.gd" id="3"]
+[ext_resource type="Resource" uid="uid://4osgipib31m8" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackbox/Config/TowerDefenseZombieJackbox.tres" id="4"]
+[ext_resource type="Resource" uid="uid://cdxetlc5yvbvw" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackbox/DamagePoint/Config/ZombieJackboxDamagePointArm.tres" id="5"]
+[ext_resource type="Resource" uid="uid://cytp71toc3llu" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackbox/DamagePoint/Config/ZombieJackboxDamagePointHead.tres" id="6"]
+[ext_resource type="Resource" uid="uid://eakjcfnkvk83" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackbox/Armor/Config/ZombieJackboxArmorJackbox.tres" id="7"]
+[ext_resource type="Resource" uid="uid://bjqwrh2qsb7up" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackbox/Armor/Config/ZombiejackboxArmorBucket.tres" id="8"]
+[ext_resource type="Resource" uid="uid://ksphtdgy7iis" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackbox/Armor/Config/ZombiejackboxArmorCone.tres" id="9"]
+[ext_resource type="Resource" uid="uid://d13ae6ujl52h6" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackbox/Armor/Config/ZombiejackboxArmorHelmet.tres" id="10"]
+[ext_resource type="Resource" uid="uid://cpo75jfcrj5hk" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackbox/Armor/Config/ZombiejackboxArmorBlackHelmet.tres" id="11"]
+[ext_resource type="Resource" uid="uid://cs60goofuyev6" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackbox/Armor/Config/ZombiejackboxArmorSpecialHelmet.tres" id="12"]
+[ext_resource type="PackedScene" uid="uid://n51avv4ftbrw" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackbox/ZombieJackbox.tscn" id="13"]
+[ext_resource type="PackedScene" uid="uid://bjm31m10ujp84" path="res://Asset/Anime/Character/Zombie/WaterLine/ZombieWaterLine.tscn" id="14"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="15"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="16"]
+
+[sub_resource type="Resource" id="Resource_p8fol"]
+script = ExtResource("3")
+type = "Bomb"
+num = 100000.0
+burns = true
+metadata/_custom_type_script = "uid://c3wiwula8chdo"
+
+[node name="TowerDefenseZombieJackbox" node_paths=PackedStringArray("duckytobeSprite", "waterLineSprite", "sprite", "headSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+eventList = [SubResource("Resource_p8fol")]
+walkSpeedScale = 1.5
+inSwimAnimeClip = ""
+outSwimAnimeClip = ""
+duckytobeSprite = NodePath("SpriteGroup/TransformPoint/ZombieJackbox/ZombieDuckytube")
+waterLineSprite = NodePath("SpriteGroup/TransformPoint/ZombieWaterLine")
+waterHeightPersontage = 0.73
+config = ExtResource("4")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieJackbox")
+headSlot = NodePath("SpriteGroup/TransformPoint/ZombieJackbox/HeadSlot")
+damagePart = {
+"Arm": ExtResource("5"),
+"BlackHelmet": ExtResource("11"),
+"Bucket": ExtResource("8"),
+"Cone": ExtResource("9"),
+"Head": ExtResource("6"),
+"Helmet": ExtResource("10"),
+"Jackbox": ExtResource("7"),
+"SpecialHelmet": ExtResource("12")
+}
+PreviewDamagePointPersontage = 1.0
+Armor = ["Jackbox"]
+DamagePartSlot/Arm = NodePath("SpriteGroup/TransformPoint/ZombieJackbox/ArmSlot")
+DamagePartSlot/Head = NodePath("SpriteGroup/TransformPoint/ZombieJackbox/HeadSlot")
+DamagePartSlot/Jackbox = NodePath("SpriteGroup/TransformPoint/ZombieJackbox/JackboxSlot")
+DamagePartSlot/Bucket = NodePath("SpriteGroup/TransformPoint/ZombieJackbox/HeadSlot")
+DamagePartSlot/Cone = NodePath("SpriteGroup/TransformPoint/ZombieJackbox/HeadSlot")
+DamagePartSlot/Helmet = NodePath("SpriteGroup/TransformPoint/ZombieJackbox/HeadSlot")
+DamagePartSlot/BlackHelmet = NodePath("SpriteGroup/TransformPoint/ZombieJackbox/HeadSlot")
+DamagePartSlot/SpecialHelmet = NodePath("SpriteGroup/TransformPoint/ZombieJackbox/HeadSlot")
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(23, 44)
+
+[node name="ZombieJackbox" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("13")]
+position = Vector2(-23, -44)
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, NodePath("JackboxSlot"), null, null, null, null, null, null, NodePath("ArmSlot"), null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, NodePath("ZombieDuckytube"), null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="ZombieDuckytube" parent="SpriteGroup/TransformPoint/ZombieJackbox" index="0"]
+position = Vector2(-13.97, -51.96)
+rotation = -0.0197321
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieJackbox" index="1"]
+position = Vector2(-20.3743, -57.0153)
+rotation = 0.000449098
+scale = Vector2(0.799858, 0.799858)
+
+[node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieJackbox" index="2"]
+position = Vector2(4.88438, -8.73056)
+rotation = -0.0994868
+scale = Vector2(0.746948, 0.746948)
+
+[node name="JackboxSlot" parent="SpriteGroup/TransformPoint/ZombieJackbox" index="3"]
+position = Vector2(-9.00938, -18.727)
+rotation = -0.121785
+scale = Vector2(0.670339, 0.670339)
+
+[node name="ZombieWaterLine" parent="SpriteGroup/TransformPoint" index="1" instance=ExtResource("14")]
+visible = false
+position = Vector2(-12, -58)
+useTween = true
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(12.6, 40)
+
+[node name="IcetrapSprite" parent="." index="4"]
+position = Vector2(20.6, 34)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(4, -2)
+
+[node name="GroundMoveComponent" parent="." index="8" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieJackbox/GroundSlot")
+
+[node name="Bomb" type="Node" parent="StateChart/CompoundState" index="4"]
+script = ExtResource("15")
+
+[node name="ToBomb" type="Node" parent="StateChart/CompoundState" index="9"]
+script = ExtResource("16")
+to = NodePath("../Bomb")
+event = &"ToBomb"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="StateChart/CompoundState/Bomb" to="." method="BombEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Bomb" to="." method="BombExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Bomb" to="." method="BombProcessing"]
+
+[editable path="SpriteGroup/TransformPoint/ZombieJackbox"]

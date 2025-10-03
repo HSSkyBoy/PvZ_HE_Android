@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CharacterArmorData" load_steps=3 format=4 uid="uid://bj0qc6mf4gbkb"]
+
+[ext_resource type="Resource" uid="uid://byidrithkk1pn" path="res://Asset/Anime/Character/Zombie/Chapter1/Sleeper/Armor/Config/ZombieSleeperArmorHat.tres" id="1"]
+[ext_resource type="Script" uid="uid://ci4c6gpjugqpl" path="res://Resource/General/Character/Armor/CharacterArmorData.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+armorList = [ExtResource("1")]
+armorDictionary = {
+"Hat": ExtResource("1")
+}
+fliterAllDictionary = {
+"Hat": ["anim_hat", "anim_hat1", "anim_hat2"]
+}
+fliterOpenDictionary = {
+"Hat": []
+}
+fliterCloseDictionary = {
+"Hat": []
+}

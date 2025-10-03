@@ -1,0 +1,76 @@
+[gd_scene load_steps=10 format=4 uid="uid://cs8ume75rb1ga"]
+
+[ext_resource type="Script" uid="uid://bjom1su1oluun" path="res://Asset/Config/Map/Frontlawn/Scene/Empty/TowerDefenseMapFrontlawnEmpty.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://djia1cjtbmrn1" path="res://Asset/Config/Map/Frontlawn/Scene/Empty/TowerDefenseMapFrontlawnEmptyGradient.tres" id="2"]
+[ext_resource type="Texture2D" uid="uid://ce2hfid38dj6f" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/FrontlawnEmpty.jpg" id="3"]
+[ext_resource type="Texture2D" uid="uid://bj2hxggoxhee3" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/FrontlawnSod1Row.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dysjiqip00522" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/FrontlawnSod3Row.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://dwwg5awviq8g2" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/Frontlawn.jpg" id="6"]
+[ext_resource type="Texture2D" uid="uid://bbbiwhq1ib7vi" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Stripe.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://j3ifp3elg8ak" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/FrontlawnFloor.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://bsr0qehg7lbyy" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/FrontlawnDoor.png" id="9"]
+
+[node name="TowerDefenseMapFrontlawnEmpty" type="Node2D" node_paths=PackedStringArray("stripe")]
+script = ExtResource("1")
+stripe = NodePath("CanvasGroup/Stripe")
+canvasModulateGradient = ExtResource("2")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="FrontlawnEmpty" type="Sprite2D" parent="CanvasGroup"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3")
+centered = false
+
+[node name="FrontlawnSod1Row" type="Sprite2D" parent="CanvasGroup"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(240.5, 265.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1540, 252)
+
+[node name="FrontlawnSod3Row" type="Sprite2D" parent="CanvasGroup"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(235, 150)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1542, 708)
+
+[node name="FrontlawnSod5Row" type="Sprite2D" parent="CanvasGroup"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(230.25, 50.25)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6")
+centered = false
+region_enabled = true
+region_rect = Rect2(460, 101, 1555, 1070)
+
+[node name="Stripe" type="Sprite2D" parent="CanvasGroup"]
+visible = false
+position = Vector2(494, 70)
+texture = ExtResource("7")
+centered = false
+
+[node name="FrontlawnFloor" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(100, 297)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="FrontlawnDoor" type="Sprite2D" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(101, 297)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9")

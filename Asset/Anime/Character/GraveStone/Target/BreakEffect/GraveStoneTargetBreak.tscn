@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=4 uid="uid://dtb3u3cgeprfv"]
+
+[ext_resource type="Texture2D" uid="uid://r7ed158bm5kk" path="res://Asset/Anime/Character/GraveStone/Target/BreakEffect/TargetStones1_particles.png" id="1"]
+[ext_resource type="Material" uid="uid://bhwtk4gifceog" path="res://Asset/Anime/Character/GraveStone/Target/BreakEffect/GraveStoneTargetBreakParticles.tres" id="2"]
+[ext_resource type="Script" uid="uid://dywgdjamo0ovs" path="res://Extends/Particles/GPUParticles2DOnece.gd" id="3"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jbvug"]
+particles_animation = true
+particles_anim_h_frames = 9
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[node name="GraveStoneTargetBreak" type="GPUParticles2D"]
+material = SubResource("CanvasItemMaterial_jbvug")
+emitting = false
+amount = 3
+texture = ExtResource("1")
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+draw_order = 0
+process_material = ExtResource("2")
+script = ExtResource("3")

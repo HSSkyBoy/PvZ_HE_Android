@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TowerDefenseBackgroundMusicConfig" load_steps=2 format=4 uid="uid://dtqtrp5qof7n1"]
+
+[ext_resource type="Script" uid="uid://cfhmh5e64wk8t" path="res://Resource/TowerDefense/BackgroundMusic/TowerDefenseBackgroundMusicConfig.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+translate = "BGM_FRONTLAWN"
+entry = "ChooseYourSeeds"
+flag1 = "Grasswalk"
+drums = "GrasswalkDrums"
+win = "Win"

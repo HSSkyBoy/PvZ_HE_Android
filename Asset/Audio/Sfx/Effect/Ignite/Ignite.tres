@@ -1,0 +1,9 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=4 uid="uid://sb3s6hu8adid"]
+
+[ext_resource type="AudioStream" uid="uid://xl7fttokydky" path="res://Asset/Audio/Sfx/Effect/Ignite/Ignite.ogg" id="1"]
+[ext_resource type="AudioStream" uid="uid://cdux77ywwev2o" path="res://Asset/Audio/Sfx/Effect/Ignite/Ignite2.ogg" id="2"]
+
+[resource]
+streams_count = 2
+stream_0/stream = ExtResource("1")
+stream_1/stream = ExtResource("2")

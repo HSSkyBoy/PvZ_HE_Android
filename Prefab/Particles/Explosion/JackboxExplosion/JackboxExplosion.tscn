@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=4 uid="uid://cxnt2jbnk48fp"]
+
+[ext_resource type="Texture2D" uid="uid://dv5x6ax2qiod0" path="res://Asset/Anime/Particles/Explosion/ExplosionCloud.png" id="1"]
+[ext_resource type="Material" uid="uid://dvqxbduxqp4ul" path="res://Prefab/Particles/Explosion/JackboxExplosion/JackboxExplosion.tres" id="2"]
+[ext_resource type="Script" uid="uid://dywgdjamo0ovs" path="res://Extends/Particles/GPUParticles2DOnece.gd" id="3"]
+[ext_resource type="Material" uid="uid://dw2ypllba82eh" path="res://Prefab/Particles/Explosion/JackboxExplosion/JackboxExplosionSide.tres" id="4"]
+[ext_resource type="Texture2D" uid="uid://c3am4ldt3w5v3" path="res://Asset/Anime/Particles/Explosion/Sproing.png" id="5"]
+
+[node name="JackboxExplosion" type="GPUParticles2D"]
+emitting = false
+amount = 32
+texture = ExtResource("1")
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+draw_order = 0
+process_material = ExtResource("2")
+script = ExtResource("3")
+
+[node name="JackboxExplosionSide" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 12
+texture = ExtResource("1")
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+draw_order = 0
+process_material = ExtResource("4")
+
+[node name="Sprite2D" type="Sprite2D" parent="JackboxExplosionSide"]
+texture = ExtResource("5")

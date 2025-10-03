@@ -1,0 +1,108 @@
+[gd_scene load_steps=5 format=4 uid="uid://b4d7pukhamxru"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://ct2fb3ieprkpq" path="res://Asset/Anime/Character/Zombie/Chapter2/Ladder/ZombieLadder.tres" id="2"]
+[ext_resource type="PackedScene" uid="uid://cfgdfuopusvnr" path="res://Asset/Anime/Character/Zombie/Duckytube/ZombieDuckytube.tscn" id="3"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="4"]
+
+[node name="ZombieLadder" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -80)
+useTween = false
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("HeadSlot"), NodePath("LadderSlot"), null, NodePath("ArmSlot"), null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ZombieDuckytube"), null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/AnimeEvents = false
+Animation/LayerVisible/Zombie_ladder_1 = true
+Animation/LayerVisible/Zombie_ladder_body = true
+Animation/LayerVisible/Zombie_ladder_body2 = true
+Animation/LayerVisible/Zombie_ladder_hammer = true
+Animation/LayerVisible/Zombie_ladder_innerarm_hand = true
+Animation/LayerVisible/Zombie_ladder_innerarm_hand2 = true
+Animation/LayerVisible/Zombie_ladder_innerarm_lower = true
+Animation/LayerVisible/Zombie_ladder_innerarm_upper = true
+Animation/LayerVisible/Zombie_ladder_innererarm_hand = true
+Animation/LayerVisible/Zombie_ladder_innerleg_foot = true
+Animation/LayerVisible/Zombie_ladder_innerleg_lower = true
+Animation/LayerVisible/Zombie_ladder_innerleg_upper = true
+Animation/LayerVisible/Zombie_ladder_outerarm_upper = true
+Animation/LayerVisible/Zombie_ladder_outerleg_foot = true
+Animation/LayerVisible/Zombie_ladder_outerleg_lower = true
+Animation/LayerVisible/Zombie_ladder_outerleg_upper = true
+Animation/LayerVisible/Zombie_outerarm_hand = true
+Animation/LayerVisible/Zombie_outerarm_lower = true
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/anim_head1 = true
+Animation/LayerVisible/anim_head2 = true
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/Zombie_innerarm_hand.png = null
+Animation/MediaReplace/Zombie_ladder_1.png = null
+Animation/MediaReplace/Zombie_ladder_2.png = null
+Animation/MediaReplace/Zombie_ladder_3.png = null
+Animation/MediaReplace/Zombie_ladder_4.png = null
+Animation/MediaReplace/Zombie_ladder_5.png = null
+Animation/MediaReplace/Zombie_ladder_body.png = null
+Animation/MediaReplace/Zombie_ladder_body2.png = null
+Animation/MediaReplace/Zombie_ladder_hammer.png = null
+Animation/MediaReplace/Zombie_ladder_head.png = null
+Animation/MediaReplace/Zombie_ladder_innerarm_hand.png = null
+Animation/MediaReplace/Zombie_ladder_innerarm_lower.png = null
+Animation/MediaReplace/Zombie_ladder_innerarm_upper.png = null
+Animation/MediaReplace/Zombie_ladder_innerleg_foot.png = null
+Animation/MediaReplace/Zombie_ladder_innerleg_lower.png = null
+Animation/MediaReplace/Zombie_ladder_innerleg_upper.png = null
+Animation/MediaReplace/Zombie_ladder_jaw.png = null
+Animation/MediaReplace/Zombie_ladder_outerarm_hand2.png = null
+Animation/MediaReplace/Zombie_ladder_outerarm_lower.png = null
+Animation/MediaReplace/Zombie_ladder_outerarm_upper.png = null
+Animation/MediaReplace/Zombie_ladder_outerarm_upper2.png = null
+Animation/MediaReplace/Zombie_ladder_outerleg_lower.png = null
+Animation/MediaReplace/Zombie_ladder_outerleg_upper.png = null
+Animation/MediaReplace/Zombie_outerarm_hand.png = null
+Animation/MediaReplace/Zombie_outerleg_foot.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="ZombieDuckytube" parent="." node_paths=PackedStringArray("layerSlot", "parentSprite") instance=ExtResource("3")]
+visible = false
+position = Vector2(-12.799, -45.1093)
+rotation = -0.0417515
+offset = Vector2(-4.625, 49.18)
+layerSlot = [null, null, null, null]
+parentSprite = NodePath("..")
+Layer = 13
+
+[node name="HeadSlot" type="Node2D" parent="."]
+position = Vector2(-14.7451, -47.9142)
+rotation = -0.109051
+scale = Vector2(0.849242, 0.849242)
+script = ExtResource("4")
+followSlotId = 16
+offset = Vector2(25, 30)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ArmSlot" type="Node2D" parent="."]
+position = Vector2(-4.71115, -5.55235)
+rotation = 1.07197
+scale = Vector2(0.85404, 0.957525)
+skew = -0.0205239
+script = ExtResource("4")
+followSlotId = 19
+offset = Vector2(10, 20)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="LadderSlot" type="Node2D" parent="."]
+position = Vector2(-23.9503, 10.1494)
+scale = Vector2(0.849991, 0.849991)
+script = ExtResource("4")
+followSlotId = 17
+offset = Vector2(32, 70)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="GroundSlot" type="Node2D" parent="."]
+position = Vector2(-41.765, -9.2)
+scale = Vector2(1.00041, 1.00041)
+script = ExtResource("4")
+followSlotId = 1
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=4 uid="uid://bftr1dw41t3pu"]
+
+[ext_resource type="PackedScene" uid="uid://cp8mgtcrcrxwf" path="res://Prefab/GUI/DragMenu/Select/DragMenuSelectItem.tscn" id="1"]
+[ext_resource type="Script" uid="uid://dif10kkaetui5" path="res://Prefab/GUI/DragMenu/Select/Level/DragMenuSelectItemlevel.gd" id="2"]
+
+[node name="DragMenuSelectItemlevel" instance=ExtResource("1")]
+script = ExtResource("2")
+
+[node name="CupSprite" type="Sprite2D" parent="." index="2"]
+unique_name_in_owner = true
+position = Vector2(146, 99)
+scale = Vector2(0.75, 0.75)

@@ -1,0 +1,362 @@
+{
+	"Adventure" : {
+		"Chapter" : [
+			{
+				"Name" : "前院告急" ,
+				"OpenKey" : "" ,
+				"UnlockImage" : "uid://x4ni5jmcvhqf" ,
+				"LockImage" : "" ,
+				"Background" : "uid://by78fduhfu071" ,
+				"Building" : "uid://bc45lt788mhi6" ,
+				"Level" : [
+					{
+						"OpenKey" : "" ,
+						"SaveKey" : "Level1_1" ,
+						"UnlockImage" : "uid://c2dfatw7mn1dw" ,
+						"Level" : {
+							"Normal" : "uid://cqq3ssnoqlhr" ,
+							"Difficult" : "uid://cnc2umwsjc72l" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level1_1" ,
+						"SaveKey" : "Level1_2" ,
+						"UnlockImage" : "uid://bvnfv72o5d0h4" ,
+						"Level" : {
+							"Normal" : "uid://cf3lj4jckatum" ,
+							"Difficult" : "uid://i62yje47244u" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level1_2" ,
+						"SaveKey" : "Level1_3" ,
+						"UnlockImage" : "uid://bnmjx753gyu45" ,
+						"Level" : {
+							"Normal" : "uid://dsa7f1m45qner" ,
+							"Difficult" : "uid://52iyyhp75uks" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level1_3" ,
+						"SaveKey" : "Level1_4" ,
+						"UnlockImage" : "uid://b5vhtmxv6q2pd" ,
+						"Level" : {
+							"Normal" : "uid://hd2ueq7pk4nj" ,
+							"Difficult" : "uid://c5j5wlj8hvuf0" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level1_4" ,
+						"SaveKey" : "Level1_5" ,
+						"UnlockImage" : "uid://crjtq3lhethoh" ,
+						"Level" : {
+							"Normal" : "uid://c3liume4la521" ,
+							"Difficult" : "uid://b4gg8y7b4nwb2" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level1_5" ,
+						"SaveKey" : "Level1_6" ,
+						"UnlockImage" : "uid://cdd1vm88tjen1" ,
+						"Level" : {
+							"Normal" : "uid://dqceb1xlctuic" ,
+							"Difficult" : "uid://ctnibisgens2i" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level1_6" ,
+						"SaveKey" : "Level1_7" ,
+						"UnlockImage" : "uid://4uno4r6miao5" ,
+						"Level" : {
+							"Normal" : "uid://d3fu41y1aqvi1" ,
+							"Difficult" : "uid://puyunsmsdpho" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level1_7" ,
+						"SaveKey" : "Level1_8" ,
+						"UnlockImage" : "uid://c0v1am13eha7e" ,
+						"Level" : {
+							"Normal" : "uid://dl6ah4lsgjhmc" ,
+							"Difficult" : "uid://crlu5rtsl1e4y" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level1_8" ,
+						"SaveKey" : "Level1_9" ,
+						"UnlockImage" : "uid://dkeefinyxy1cy" ,
+						"Level" : {
+							"Normal" : "uid://baccfcgmdixah" ,
+							"Difficult" : "uid://bp75b4oi1jgi2" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level1_9" ,
+						"SaveKey" : "Level1_10" ,
+						"UnlockImage" : "uid://bvm80egth28u2" ,
+						"Level" : {
+							"Normal" : "uid://bq3ktfsb4bdpv" ,
+							"Difficult" : "uid://sf371uf8ykyf" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level1_10" ,
+						"SaveKey" : "Level1_11" ,
+						"UnlockImage" : "uid://ds84pfimsr3lj" ,
+						"Level" : {
+							"Normal" : "uid://d2cnv7d4sqmds" ,
+							"Difficult" : "uid://c81ksklj8yse7" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level1_11" ,
+						"SaveKey" : "Level1_12" ,
+						"UnlockImage" : "uid://ckcbr2qg20i23" ,
+						"Level" : {
+							"Normal" : "uid://gq3cdtojdniu" ,
+							"Difficult" : "uid://bk6o5flpjdi8j" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level1_12" ,
+						"SaveKey" : "Level1_13" ,
+						"UnlockImage" : "uid://betre8q0oiqcy" ,
+						"Level" : {
+							"Normal" : "uid://dca05frkghx0l" ,
+							"Difficult" : "uid://d3rymw1qyebsc" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level1_13" ,
+						"SaveKey" : "Level1_14" ,
+						"UnlockImage" : "uid://dt6p3hfh6ki2" ,
+						"Level" : {
+							"Normal" : "uid://56edg04u73de" ,
+							"Difficult" : "uid://dxini2f7x1v1e" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level1_14" ,
+						"SaveKey" : "Level1_15" ,
+						"UnlockImage" : "uid://nhqgd1e8o4n4" ,
+						"Level" : {
+							"Normal" : "uid://d2ti2ch3qe0vx" ,
+							"Difficult" : "uid://bu6xyjvd5hd7k" ,
+							"Ultimate" : ""
+						}
+					}
+				]
+			},
+			{
+				"Name" : "夜幕降临" ,
+				"OpenKey" : "Level1_10" ,
+				"UnlockImage" : "uid://b0agqnlqeulkk" ,
+				"LockImage" : "uid://bwf55mcnkailq" ,
+				"Background" : "uid://d1tkbgkb08ka6" ,
+				"Building" : "uid://lw06igd0yrm5" ,
+				"Level" : [
+					{
+						"OpenKey" : "Level1_10" ,
+						"SaveKey" : "Level2_1" ,
+						"UnlockImage" : "uid://cqwyn4aw3c7ps" ,
+						"Level" : {
+							"Normal" : "uid://dcxvr5rell6ls" ,
+							"Difficult" : "uid://c3jfvxvr4wk3v" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level2_1" ,
+						"SaveKey" : "Level2_2" ,
+						"UnlockImage" : "uid://blog4nm4kxjgh" ,
+						"Level" : {
+							"Normal" : "uid://dityf2i7nshol" ,
+							"Difficult" : "uid://bnq55pgb30vm4" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level2_2" ,
+						"SaveKey" : "Level2_3" ,
+						"UnlockImage" : "uid://dwpioq2r51872" ,
+						"Level" : {
+							"Normal" : "uid://bgdu0qt8lggbg" ,
+							"Difficult" : "uid://scmrlvip5wyl" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level2_3" ,
+						"SaveKey" : "Level2_4" ,
+						"UnlockImage" : "uid://c1cac6xvhmru0" ,
+						"Level" : {
+							"Normal" : "uid://c531kxrhxtdhq" ,
+							"Difficult" : "uid://bl07m5oxcm222" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level2_4" ,
+						"SaveKey" : "Level2_5" ,
+						"UnlockImage" : "uid://07jp6pbaofn5" ,
+						"Level" : {
+							"Normal" : "uid://b10mfbt4mwsdv" ,
+							"Difficult" : "uid://cyvodjs6torwm" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level2_5" ,
+						"SaveKey" : "Level2_6" ,
+						"UnlockImage" : "uid://cdsssiokam1i0" ,
+						"Level" : {
+							"Normal" : "uid://cadiwu7b2jvlp" ,
+							"Difficult" : "uid://88c6dy131wpc" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level2_6" ,
+						"SaveKey" : "Level2_7" ,
+						"UnlockImage" : "uid://dsoc57nw83hxp" ,
+						"Level" : {
+							"Normal" : "uid://bm4gj1831w773" ,
+							"Difficult" : "uid://cuumsnurr0tjb" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level2_7" ,
+						"SaveKey" : "Level2_8" ,
+						"UnlockImage" : "uid://qy2jyqm6xiy1" ,
+						"Level" : {
+							"Normal" : "uid://0jhk3fkvwbyr" ,
+							"Difficult" : "uid://vxtdnkissegr" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level2_8" ,
+						"SaveKey" : "Level2_9" ,
+						"UnlockImage" : "uid://cs364ntyls76m" ,
+						"Level" : {
+							"Normal" : "uid://o3ro8fxchr6b" ,
+							"Difficult" : "uid://dtbd45mej7324" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level2_9" ,
+						"SaveKey" : "Level2_10" ,
+						"UnlockImage" : "uid://cru7qc4lj528u" ,
+						"Level" : {
+							"Normal" : "uid://ddplwcj2w0c4c" ,
+							"Difficult" : "uid://cn7c6w82sb8v3" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level2_10" ,
+						"SaveKey" : "Level2_11" ,
+						"UnlockImage" : "uid://btmhiunw3fstg" ,
+						"Level" : {
+							"Normal" : "uid://4ogb6i42sllv" ,
+							"Difficult" : "uid://dx61kesptx45r" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level2_11" ,
+						"SaveKey" : "Level2_12" ,
+						"UnlockImage" : "uid://ceqgnvjbw1d4o" ,
+						"Level" : {
+							"Normal" : "uid://v4tu0kli3enl" ,
+							"Difficult" : "uid://chhada57b2wfr" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level2_12" ,
+						"SaveKey" : "Level2_13" ,
+						"UnlockImage" : "uid://cfreq1lch1wmw" ,
+						"Level" : {
+							"Normal" : "uid://cgrr8d21a1wyf" ,
+							"Difficult" : "uid://bf8u3lpvidvs0" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level2_13" ,
+						"SaveKey" : "Level2_14" ,
+						"UnlockImage" : "uid://l670wnqfoiyf" ,
+						"Level" : {
+							"Normal" : "uid://7s50cae37sv7" ,
+							"Difficult" : "uid://ds04mxainc7js" ,
+							"Ultimate" : ""
+						}
+					},
+					{
+						"OpenKey" : "Level2_14" ,
+						"SaveKey" : "Level2_15" ,
+						"UnlockImage" : "uid://c0qkx1x7dqxgh" ,
+						"Level" : {
+							"Normal" : "uid://bi5fud0iasrsn" ,
+							"Difficult" : "uid://c3wku1wc373qu" ,
+							"Ultimate" : ""
+						}
+					}
+				]
+			},
+			{
+				"Name" : "泳池防守" ,
+				"OpenKey" : "Level2_10" ,
+				"UnlockImage" : "uid://cmgivuutq8r1n" ,
+				"LockImage" : "uid://5syacwd0qyr3" ,
+				"Background" : "uid://v1diirdvlp6d" ,
+				"Building" : "uid://cwdmul25o1jpg" ,
+				"Level" : []
+			},
+			{
+				"Name" : "穿越迷雾" ,
+				"OpenKey" : "Level3_10" ,
+				"UnlockImage" : "uid://blvbhaulv4icc" ,
+				"LockImage" : "uid://bjo3i6l8rd21c" ,
+				"Background" : "uid://dxtrel7a8geq3" ,
+				"Building" : "uid://cvq0phhgfetei" ,
+				"Level" : []
+			},
+			{
+				"Name" : "屋顶大战" ,
+				"OpenKey" : "Level4_10" ,
+				"UnlockImage" : "uid://bwkt2tm00udhn" ,
+				"LockImage" : "uid://clxjay6aclibx" ,
+				"Background" : "uid://c1j2rw50ndpfp" ,
+				"Building" : "uid://cuhn1dib2hba3" ,
+				"Level" : []
+			},
+			{
+				"Name" : "月夜决战" ,
+				"OpenKey" : "Level5_10" ,
+				"UnlockImage" : "uid://bac5bg1nufj3w" ,
+				"LockImage" : "uid://b7tx28u7vxg3g" ,
+				"Background" : "uid://cqos8oykah7cq" ,
+				"Building" : "uid://d3253ffbloguc" ,
+				"Level" : []
+			}
+		]
+	}
+}

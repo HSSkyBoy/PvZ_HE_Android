@@ -1,0 +1,67 @@
+[gd_resource type="Resource" script_class="NpcTalkConfig" load_steps=13 format=4 uid="uid://u36l1q7pgxik"]
+
+[ext_resource type="JSON" path="res://Asset/Config/Npc/Talk/Level1_11/Level1_11Talk.json" id="1"]
+[ext_resource type="Script" uid="uid://hsm3ycakkh4p" path="res://Resource/Npc/Talk/Base/NpcTalkConfig.gd" id="2"]
+[ext_resource type="Script" uid="uid://cfbd2a1cynao6" path="res://Resource/Npc/Talk/Base/NpcTalkBaseConfig.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://bbo5mxssbqcp1" path="res://Asset/Anime/Character/Plant/Chapter1/PeaPot/PeaPot.tscn" id="4"]
+[ext_resource type="Script" uid="uid://pbvxnnpyoiul" path="res://Resource/Npc/Talk/Config/NpcTalkHandConfig.gd" id="5"]
+
+[sub_resource type="Resource" id="Resource_kbq4c"]
+script = ExtResource("3")
+npc = "CrazyDave"
+text = "NPC_TALK_LEVEL1_11_TUTORIAL_1"
+anime = "Crazy"
+audio = "CrazyDaveCrazy"
+
+[sub_resource type="Resource" id="Resource_jh7pk"]
+script = ExtResource("3")
+npc = "CrazyDave"
+text = "NPC_TALK_LEVEL1_11_TUTORIAL_2"
+anime = "MediumTalk"
+audio = "CrazyDaveLong"
+
+[sub_resource type="Resource" id="Resource_4bn7y"]
+script = ExtResource("3")
+npc = "CrazyDave"
+text = "NPC_TALK_LEVEL1_11_TUTORIAL_3"
+anime = "MediumTalk"
+audio = "CrazyDaveLong"
+
+[sub_resource type="Resource" id="Resource_nhixi"]
+script = ExtResource("3")
+npc = "CrazyDave"
+text = "NPC_TALK_LEVEL1_11_TUTORIAL_4"
+anime = "MediumTalk"
+audio = "CrazyDaveLong"
+
+[sub_resource type="Resource" id="Resource_l46yg"]
+script = ExtResource("3")
+npc = "CrazyDave"
+text = "NPC_TALK_LEVEL1_11_TUTORIAL_5"
+anime = "MediumTalk"
+audio = "CrazyDaveLong"
+
+[sub_resource type="Resource" id="Resource_8w65s"]
+script = ExtResource("5")
+handScene = ExtResource("4")
+shoulderScene = null
+shoulder2Scene = null
+headScene = null
+npc = "CrazyDave"
+text = "NPC_TALK_LEVEL1_11_TUTORIAL_6"
+anime = "TalkHanding"
+audio = "CrazyDaveExtralong"
+
+[sub_resource type="Resource" id="Resource_h2gih"]
+script = ExtResource("3")
+npc = "CrazyDave"
+text = "NPC_TALK_LEVEL1_11_TUTORIAL_7"
+anime = "Crazy"
+audio = "CrazyDaveCrazy"
+
+[resource]
+script = ExtResource("2")
+data = ExtResource("1")
+saveKey = "Level1_11TutorialTalk"
+talkList = [SubResource("Resource_kbq4c"), SubResource("Resource_jh7pk"), SubResource("Resource_4bn7y"), SubResource("Resource_nhixi"), SubResource("Resource_l46yg"), SubResource("Resource_8w65s"), SubResource("Resource_h2gih")]
+metadata/_custom_type_script = "uid://hsm3ycakkh4p"

@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="TowerDefensePacketConfig" load_steps=3 format=4 uid="uid://dh53qs8xehndk"]
+
+[ext_resource type="Resource" uid="uid://dawtxqv6me74a" path="res://Asset/Anime/Character/Zombie/Chapter1/Polevaulter/Config/TowerDefenseZombiePolevaulter.tres" id="1"]
+[ext_resource type="Script" uid="uid://c6d3po5310ugw" path="res://Resource/TowerDefense/PacketBank/Packet/TowerDefensePacketConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+saveKey = "ZombiePolevaulterHelmet"
+unlockCheckList = []
+name = "TOWERDEFENSE_ZOMBIE_POLEVAULTING_NAME"
+describe = "TOWERDEFENSE_ZOMBIE_POLEVAULTING_EXPRESTION"
+plantfood = ""
+handbookDescribe = "TOWERDEFENSE_ZOMBIE_POLEVAULTING_HANDBOOK_EXPRESTION"
+handbookStory = "TOWERDEFENSE_ZOMBIE_POLEVAULTING_HANDBOOK_STORY"
+packetAnimeClip = "Idle"
+packetAnimeOffset = Vector2(25, 60)
+packetAnimeScale = Vector2(0.75, 0.75)
+characterConfig = ExtResource("1")
+type = 6
+spawnMethod = "Rise"
+overrideCostRise = -1
+overrideCost = 175
+overridPacketCooldown = -1.0
+overridStartingCooldown = -1.0
+overrideWeight = 6000
+overrideWavePointCost = 400
+initArmor = ["Helmet"]
+plantUseCell = true
+Armor = ["Helmet"]
+Cell/plantUseCell = true
+Override/overrideWeight = 6000
+Override/overrideWavePointCost = 400
+metadata/_custom_type_script = "uid://c6d3po5310ugw"

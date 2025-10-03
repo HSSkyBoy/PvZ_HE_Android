@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=4 uid="uid://dcdxn6f3d1u5w"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://cwegfa321682c" path="res://Asset/Anime/Character/Plant/Chapter3/CaltropMelon/CaltropMelon.tres" id="2"]
+
+[node name="CaltropMelon" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/AnimeEvents = false
+Animation/LayerVisible/Caltrop_horn1 = true
+Animation/LayerVisible/Caltrop_horn2 = true
+Animation/LayerVisible/Caltrop_horn3 = true
+Animation/LayerVisible/Caltrop_horn4 = true
+Animation/LayerVisible/anim_face = true
+Animation/LayerVisible/face2 = true
+Animation/MediaReplace/CaltropMelon_body.png = null
+Animation/MediaReplace/CaltropMelon_body2.png = null
+Animation/MediaReplace/Caltrop_horn1.png = null
+Animation/MediaReplace/Caltrop_horn2.png = null
+Animation/MediaReplace/Caltrop_horn3.png = null
+Animation/MediaReplace/Caltrop_horn4.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="TowerDefensePlantConfig" load_steps=2 format=4 uid="uid://cdqqr5opgx5xp"]
+
+[ext_resource type="Script" uid="uid://bqd2rkadn8h4e" path="res://Resource/TowerDefense/Character/Config/TowerDefensePlantConfig.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+canUsePlantfood = true
+name = "PlantPeaLilyPad"
+hitpointsNearDeath = 0.0
+hitpoints = 300.0
+smashHurt = -1.0
+spikeHurt = -1.0
+sleepTime = "Never"
+height = 1
+damagePointData = null
+armorData = null
+customData = null
+ashScene = null
+homeWorld = 1
+costRise = -1
+cost = 50
+packetCooldown = 7.5
+startingCooldown = 0.0
+plantCover = []
+plantCoverRecycle = []
+plantGridType = [3]
+plantGridOverrideType = 5
+collisionFlags = 9
+maskFlags = 9
+unUseBuffFlags = 0
+physiqueTypeFlags = 4
+elementFlags = 0
+Flag/Collision = 9
+Flag/Mask = 9
+Flag/UnUseBuff = 0
+Flag/PhysiqueType = 4
+Flag/Elemet = 0

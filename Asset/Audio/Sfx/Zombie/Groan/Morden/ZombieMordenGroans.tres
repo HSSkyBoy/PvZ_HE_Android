@@ -1,0 +1,17 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=7 format=4 uid="uid://caqp4aaxh60m1"]
+
+[ext_resource type="AudioStream" uid="uid://e7wj8yqw7orh" path="res://Asset/Audio/Sfx/Zombie/Groan/Morden/ZombieMordenGroans0.ogg" id="1"]
+[ext_resource type="AudioStream" uid="uid://dayns2wkmvhlt" path="res://Asset/Audio/Sfx/Zombie/Groan/Morden/ZombieMordenGroans1.ogg" id="2"]
+[ext_resource type="AudioStream" uid="uid://c2abi728yu0ld" path="res://Asset/Audio/Sfx/Zombie/Groan/Morden/ZombieMordenGroans2.ogg" id="3"]
+[ext_resource type="AudioStream" uid="uid://bmwb5tsqg6ois" path="res://Asset/Audio/Sfx/Zombie/Groan/Morden/ZombieMordenGroans3.ogg" id="4"]
+[ext_resource type="AudioStream" uid="uid://cqq21qo57xh3j" path="res://Asset/Audio/Sfx/Zombie/Groan/Morden/ZombieMordenGroans4.ogg" id="5"]
+[ext_resource type="AudioStream" uid="uid://yap18l0fykn2" path="res://Asset/Audio/Sfx/Zombie/Groan/Morden/ZombieMordenGroans5.ogg" id="6"]
+
+[resource]
+streams_count = 6
+stream_0/stream = ExtResource("1")
+stream_1/stream = ExtResource("2")
+stream_2/stream = ExtResource("3")
+stream_3/stream = ExtResource("4")
+stream_4/stream = ExtResource("5")
+stream_5/stream = ExtResource("6")

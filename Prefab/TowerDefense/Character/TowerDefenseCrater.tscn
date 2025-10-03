@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=4 uid="uid://cwhqvqfanhp7s"]
+
+[ext_resource type="PackedScene" uid="uid://cnwqwm6ecgmhp" path="res://Prefab/TowerDefense/Character/TowerDefenseCharacter.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cekw6gxu8rbiv" path="res://Prefab/TowerDefense/Character/TowerDefenseCrater.gd" id="2"]
+
+[node name="TowerDefenseCrater" instance=ExtResource("1")]
+z_index = -14
+script = ExtResource("2")
+idleAnimeClip = "Whole"
+sleepAnimeClip = "Whole"
+camp = -1
+itemLayer = 1
+gravity = 245.0
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 50)
+texture = null
+
+[node name="IcetrapSprite" parent="." index="4"]
+texture = null

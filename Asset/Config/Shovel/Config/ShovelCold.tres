@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="ShovelConfig" load_steps=9 format=4 uid="uid://bupsi62d238s4"]
+
+[ext_resource type="Script" uid="uid://28sv0sdkw66x" path="res://Resource/TowerDefense/Shovel/Event/ShovelEventCreateProjectileConfig.gd" id="1"]
+[ext_resource type="Script" uid="uid://dp131blh3op2p" path="res://Resource/TowerDefense/Shovel/Event/ShovelEventDestroyConfig.gd" id="2"]
+[ext_resource type="Script" uid="uid://xmwd4jomf83s" path="res://Resource/TowerDefense/Shovel/ShovelConfig.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://w65oao7213i7" path="res://Asset/Texture/TowerDefense/Shovel/ShovelCold.png" id="4"]
+[ext_resource type="Script" uid="uid://p7yhpfahgp8d" path="res://Resource/UnlockCondition/UnlockConditionLevelFinishConfig.gd" id="5"]
+
+[sub_resource type="Resource" id="Resource_kshus"]
+script = ExtResource("1")
+everyNum = 10
+metadata/_custom_type_script = "uid://28sv0sdkw66x"
+
+[sub_resource type="Resource" id="Resource_0b0fy"]
+script = ExtResource("2")
+metadata/_custom_type_script = "uid://dp131blh3op2p"
+
+[sub_resource type="Resource" id="Resource_ybdrr"]
+script = ExtResource("5")
+levelSaveKey = "Level2_4"
+metadata/_custom_type_script = "uid://p7yhpfahgp8d"
+
+[resource]
+script = ExtResource("3")
+texture = ExtResource("4")
+saveKey = "ShovelCold"
+unlockCheckList = [SubResource("Resource_ybdrr")]
+name = "TOWERDEFENSE_SHOVEL_COLD_NAME"
+describe = "TOWERDEFENSE_SHOVEL_COLD_EXPRESTION"
+handbookDescribe = "TOWERDEFENSE_SHOVEL_COLD_HANDBOOK_EXPRESTION"
+handbookStory = "TOWERDEFENSE_SHOVEL_COLD_HANDBOOK_STORY"
+eventList = [SubResource("Resource_kshus"), SubResource("Resource_0b0fy")]
+metadata/_custom_type_script = "uid://xmwd4jomf83s"

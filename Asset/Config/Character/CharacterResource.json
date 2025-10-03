@@ -1,0 +1,877 @@
+{
+	"ItemRake": {
+		"Sprite": "uid://cxoussiq03oo8",
+		"Scene": "uid://ualal2uqoi6d",
+		"Packet": {
+			"ItemRake": "uid://5x362hpecysi"
+		}
+	},
+	"ItemRakeSun": {
+		"Sprite": "uid://dot3sw46ogyiy",
+		"Scene": "uid://dbp6denu4nsl1",
+		"Packet": {
+			"ItemRakeSun": "uid://chblcpgyvstmd"
+		}
+	},
+	"ItemLadder": {
+		"Sprite": "uid://b3j878ksst3c3",
+		"Scene": "uid://d4fhj4dbwdu5j",
+		"Packet": {
+			"ItemLadder": "uid://cc7upj8n7samw"
+		}
+	},
+	"MowerDefault": {
+		"Sprite": "uid://c24slfyvogagp",
+		"Scene": "uid://c4ncsetyb518i",
+		"Packet": {
+			"MowerDefault": "uid://wvtm6w7jn8dp"
+		}
+	},
+	"MowerPoolCleaner": {
+		"Sprite": "uid://braejccboptom",
+		"Scene": "uid://c681ojggba16w",
+		"Packet": {
+			"MowerPoolCleaner": "uid://dscdrl5ejetox"
+		}
+	},
+	"MowerSun": {
+		"Sprite": "uid://d3lg64yyo5h42",
+		"Scene": "uid://dvxm8nmymw1j5",
+		"Packet": {
+			"MowerSun": "uid://clk70cm0r7bg5"
+		}
+	},
+	"GraveStoneDefault": {
+		"Sprite": "uid://rex8c803eb7s",
+		"Scene": "uid://14d7mb2lm57h",
+		"Packet": {
+			"GraveStoneDefault": "uid://bas1ty2j6418m"
+		}
+	},
+	"GraveStoneTarget": {
+		"Sprite": "uid://bt42liww2ng1x",
+		"Scene": "uid://ldjjttabr8x",
+		"Packet": {
+			"GraveStoneTarget": "uid://bkfcdl2dcsadj"
+		}
+	},
+	"GraveStoneTargetCoin": {
+		"Sprite": "uid://dx552ee763gw5",
+		"Scene": "uid://bus812066hpeg",
+		"Packet": {
+			"GraveStoneTargetCoin": "uid://dlnj8b7jf6g3y"
+		}
+	},
+	"GraveStoneTargetBomb": {
+		"Sprite": "uid://g3fsja5m7qb1",
+		"Scene": "uid://byux35wt0yqno",
+		"Packet": {
+			"GraveStoneTargetBomb": "uid://dbjd2iefep2tf"
+		}
+	},
+	"GraveStoneTargetSun": {
+		"Sprite": "uid://cdj8tvmgj5new",
+		"Scene": "uid://vy70bwf81hih",
+		"Packet": {
+			"GraveStoneTargetSun": "uid://nn4630cq8i1y"
+		}
+	},
+	"GraveStoneTargetCold": {
+		"Sprite": "uid://dstkpvrkoq7yl",
+		"Scene": "uid://c0ar07i7dju5p",
+		"Packet": {
+			"GraveStoneTargetCold": "uid://c8o2m3rv1qn0n"
+		}
+	},
+	"Duckytube": {
+		"Sprite": "uid://l0bs6172j65u",
+		"Scene": "uid://c60srph3nqmhq",
+		"Packet": {
+			"Duckytube": "uid://ce6w6tgrug8mi"
+		}
+	},
+	"CraterDayGround": {
+		"Sprite": "uid://djias5tq7rcey",
+		"Scene": "uid://bt7rwwrdyh7bh",
+		"Packet": {
+			"CraterDayGround": "uid://df3qvpg5t417e"
+		}
+	},
+	"PlantPeaShooterSingle": {
+		"Sprite": "uid://dnb383542ldh5",
+		"Scene": "uid://fr8gplfmnmg4",
+		"Packet": {
+			"PlantPeaShooterSingle": "uid://b1qokqkh3uqv"
+		}
+	},
+	"PlantCherryBomb": {
+		"Sprite": "uid://c0v8xt0uihryt",
+		"Scene": "uid://h61n1sxw5qyx",
+		"Packet": {
+			"PlantCherryBomb": "uid://bacatbt4d2d8o"
+		}
+	},
+	"PlantWallnut": {
+		"Sprite": "uid://boocp7vnh24m5",
+		"Scene": "uid://cc3eup5kd355o",
+		"Packet": {
+			"PlantWallnut": "uid://c5nryj3wt2qct"
+		}
+	},
+	"PlantSnowPea": {
+		"Sprite": "uid://bio0smi3lk3oy",
+		"Scene": "uid://pk46h541478l",
+		"Packet": {
+			"PlantSnowPea": "uid://8sqv5y77isyk"
+		}
+	},
+	"PlantPeaShooter": {
+		"Sprite": "uid://d4fjtijl2drwa",
+		"Scene": "uid://wa3742l47x03",
+		"Packet": {
+			"PlantPeaShooter": "uid://b4g5gmm4c6qtq"
+		}
+	},
+	"PlantHypnoShroom": {
+		"Sprite": "uid://dedq4dyalohqh",
+		"Scene": "uid://f2hbscl8fjtt",
+		"Packet": {
+			"PlantHypnoShroom": "uid://bj8lcgbcc35be"
+		}
+	},
+	"PlantScaredyShroom": {
+		"Sprite": "uid://cyb566tfwaah",
+		"Scene": "uid://bk8gxmptw25cs",
+		"Packet": {
+			"PlantScaredyShroom": "uid://c5q0nnqxw85b1"
+		}
+	},
+	"PlantSquash": {
+		"Sprite": "uid://c73d2hkvvrvop",
+		"Scene": "uid://b3vbw1nslcdey",
+		"Packet": {
+			"PlantSquash": "uid://568vt7ahbcls"
+		}
+	},
+	"PlantJalapeno": {
+		"Sprite": "uid://bijmky7ljwkls",
+		"Scene": "uid://c8ofalgya7dtg",
+		"Packet": {
+			"PlantJalapeno": "uid://dpw7qxpde8qgl"
+		}
+	},
+	"PlantPot": {
+		"Sprite": "uid://cuew34oa6wvrs",
+		"Scene": "uid://cs28v5to64dq",
+		"Packet": {
+			"PlantPot": "uid://c0crj7kxgq1c7"
+		}
+	},
+	"PlantSunflowerPea": {
+		"Sprite": "uid://cpmorpmk3064d",
+		"Scene": "uid://dk8idm88ij8e6",
+		"Packet": {
+			"PlantSunflowerPea": "uid://rmggo8r1mdfj"
+		}
+	},
+	"PlantFirenut": {
+		"Sprite": "uid://dx3bhy6xa6aio",
+		"Scene": "uid://b0u8ponnhfcbf",
+		"Packet": {
+			"PlantFirenut": "uid://dtepm7of5sy14"
+		}
+	},
+	"PlantSunBomb": {
+		"Sprite": "uid://con08apvnjxjd",
+		"Scene": "uid://bglgqahfr2407",
+		"Packet": {
+			"PlantSunBomb": "uid://c5gq3mys1kgi0"
+		}
+	},
+	"PlantSunMine": {
+		"Sprite": "uid://dprhrojrrmar5",
+		"Scene": "uid://thiv8kk7qaw8",
+		"Packet": {
+			"PlantSunMine": "uid://c3b1op5u8w5vl"
+		}
+	},
+	"PlantReCactus": {
+		"Sprite": "uid://d1vw0tfo3lpeh",
+		"Scene": "uid://cvxe5feqrsbte",
+		"Packet": {
+			"PlantReCactus": "uid://bodws0glanj15"
+		}
+	},
+	"PlantSunShroom": {
+		"Sprite": "uid://4eejky1qkkhp",
+		"Scene": "uid://cyiixbl3ko2d6",
+		"Packet": {
+			"PlantSunShroom": "uid://d1cevre6u7ah2"
+		}
+	},
+	"PlantCactusBlover": {
+		"Sprite": "uid://bc4ujbx3m3oo1",
+		"Scene": "uid://b55qmyxtvtj4s",
+		"Packet": {
+			"PlantCactusBlover": "uid://ct22tgnxcqigg"
+		}
+	},
+	"PlantMagnetnut": {
+		"Sprite": "uid://csp3p80bpd1cn",
+		"Scene": "uid://dig5lvxfk85wp",
+		"Packet": {
+			"PlantMagnetnut": "uid://bdfvfh0d6vlup"
+		}
+	},
+	"PlantPuffPot": {
+		"Sprite": "uid://cr5jh3j46437d",
+		"Scene": "uid://dcpa0r5qvm4js",
+		"Packet": {
+			"PlantPuffPot": "uid://0lt7pnef341a"
+		}
+	},
+	"PlantPeaPot": {
+		"Sprite": "uid://bbo5mxssbqcp1",
+		"Scene": "uid://txj87yx4cfum",
+		"Packet": {
+			"PlantPeaPot": "uid://bnkkso4873tcu"
+		}
+	},
+	"PlantCatPot": {
+		"Sprite": "uid://byacqta2fn3uf",
+		"Scene": "uid://b3yrx5la4ylvt",
+		"Packet": {
+			"PlantCatPot": "uid://duiy6igb1rcor"
+		}
+	},
+	"PlantCorntrop": {
+		"Sprite": "uid://bc84myt108acp",
+		"Scene": "uid://gh5olhmq0gw3",
+		"Packet": {
+			"PlantCorntrop": "uid://6fq4gcw360jo"
+		}
+	},
+	"PlantSunBean": {
+		"Sprite": "uid://dmqoxfffxb663",
+		"Scene": "uid://lc2xwu2blfpk",
+		"Packet": {
+			"PlantSunBean": "uid://cxeyct25144c7"
+		}
+	},
+	"PlantHypnoGarlic": {
+		"Sprite": "uid://bd7q2cxnksk8e",
+		"Scene": "uid://cskodyjjijmtn",
+		"Packet": {
+			"PlantHypnoGarlic": "uid://bdcbj20diqqv4"
+		}
+	},
+	"PlantGraveMine": {
+		"Sprite": "uid://576bvdpjtrfh",
+		"Scene": "uid://ddt5fmmo3p2uo",
+		"Packet": {
+			"PlantGraveMine": "uid://cybrbudkpysf0"
+		}
+	},
+	"PlantScaredySunShroom": {
+		"Sprite": "uid://ldy1vj3audt7",
+		"Scene": "uid://6relv4dbi4rb",
+		"Packet": {
+			"PlantScaredySunShroom": "uid://cl4ag3yu21cw6"
+		}
+	},
+	"PlantIcenut": {
+		"Sprite": "uid://b7cyx74xpcs6u",
+		"Scene": "uid://7wnpkj5hcgc5",
+		"Packet": {
+			"PlantIcenut": "uid://24t5qh27prnc"
+		}
+	},
+	"PlantSnowShroom": {
+		"Sprite": "uid://djkn7gsrqmxqr",
+		"Scene": "uid://bhpgh8qt136ke",
+		"Packet": {
+			"PlantSnowShroom": "uid://dlum2jfayd42m"
+		}
+	},
+	"PlantWinterMelonShroom": {
+		"Sprite": "uid://dxyshcy0oo4g8",
+		"Scene": "uid://cm3iyye86l1fs",
+		"Packet": {
+			"PlantWinterMelonShroom": "uid://bcfxyq3dlj6q"
+		}
+	},
+	"PlantGargantuarShroom": {
+		"Sprite": "uid://byx450bienfai",
+		"Scene": "uid://coso38xu11mpm",
+		"Packet": {
+			"PlantGargantuarShroom": "uid://dwdjbd35vmjpl"
+		}
+	},
+	"PlantMagnetMine": {
+		"Sprite": "uid://wbup1k1plu1g",
+		"Scene": "uid://ca0g8dtdbp8ai",
+		"Packet": {
+			"PlantMagnetMine": "uid://bbdhn4coyijs7"
+		}
+	},
+	"PlantPeaLilyPad": {
+		"Sprite": "uid://cuewregk73bwm",
+		"Scene": "uid://dcy74u4p7xj5t",
+		"Packet": {
+			"PlantPeaLilyPad": "uid://cd3n6as3dj5tx"
+		}
+	},
+	"PlantJalaSunShroom": {
+		"Sprite": "uid://cwqy6uss451qt",
+		"Scene": "uid://cfjn1d32duy7r",
+		"Packet": {
+			"PlantJalaSunShroom": "uid://cynwlw3mq7kjw"
+		}
+	},
+	"PlantFireSnowPea": {
+		"Sprite": "uid://d03bh7b2moome",
+		"Scene": "uid://b688h8n68escw",
+		"Packet": {
+			"PlantFireSnowPea": "uid://db32f020fgnq7"
+		}
+	},
+	"PlantGloompult": {
+		"Sprite": "uid://dbmne3onxa3v1",
+		"Scene": "uid://btm2phyyoibdk",
+		"Packet": {
+			"PlantGloompult": "uid://bjn74ax45wp0l"
+		}
+	},
+	"PlantIceSunShroom": {
+		"Sprite": "uid://bv7l7yawooum8",
+		"Scene": "uid://bttp0q8vglml0",
+		"Packet": {
+			"PlantIceSunShroom": "uid://ttyf0hoyej1n"
+		}
+	},
+	"PlantTabooDoomShroom": {
+		"Sprite": "uid://u70ggpgvp4bb",
+		"Scene": "uid://cfyhbqdhrpbd1",
+		"Packet": {
+			"PlantTabooDoomShroom": "uid://dr37kkgt1qlj"
+		}
+	},
+	"PlantPeaCat": {
+		"Sprite": "uid://d3cv7y73te5rv",
+		"Scene": "uid://ddfmqorhf7nqm",
+		"Packet": {
+			"PlantPeaCat": "uid://cktloah6sssiw"
+		}
+	},
+	"PlantSnowwood": {
+		"Sprite": "uid://pwdnk442d1p",
+		"Scene": "uid://cvtqelrmq7eng",
+		"Packet": {
+			"PlantSnowwood": "uid://cjh1xpdvxokku"
+		}
+	},
+	"PlantSeaNut": {
+		"Sprite": "uid://ecws3sh7kmty",
+		"Scene": "uid://d1oqjb38gcn1a",
+		"Packet": {
+			"PlantSeaNut": "uid://xrj1rholkswe"
+		}
+	},
+	"PlantMelonpultSpike": {
+		"Sprite": "uid://cm14qtjic3i00",
+		"Scene": "uid://yieg2q2arvmi",
+		"Packet": {
+			"PlantMelonpultSpike": "uid://2ee76ectewm8"
+		}
+	},
+	"PlantCaltropMelon": {
+		"Sprite": "uid://dcdxn6f3d1u5w",
+		"Scene": "uid://boovl0dn3b4ib",
+		"Packet": {
+			"PlantCaltropMelon": "uid://ccvwwyv0k82ye"
+		}
+	},
+	"PlantJalaNut": {
+		"Sprite": "uid://csuca4h8t11sj",
+		"Scene": "uid://c5eqed4frtbom",
+		"Packet": {
+			"PlantJalaNut": "uid://bou5cx3lvhta7"
+		}
+	},
+	"PlantJalaCherryBomb": {
+		"Sprite": "uid://bfbjvmfps4g75",
+		"Scene": "uid://oesd8u7nesaj",
+		"Packet": {
+			"PlantJalaCherryBomb": "uid://cfdmlxietlivr"
+		}
+	},
+	"PlantPlanternSix": {
+		"Sprite": "uid://bxjopd1hikihg",
+		"Scene": "uid://d2m8u0uajq8y5",
+		"Packet": {
+			"PlantPlanternSix": "uid://dayfj5vlvpdlr"
+		}
+	},
+	"PlantPeaWell": {
+		"Sprite": "uid://bb4wjwvli0ees",
+		"Scene": "uid://bt7e1sm7x0crp",
+		"Packet": {
+			"PlantPeaWell": "uid://dqo4n75wjjvrv"
+		}
+	},
+	"PlantPumpkinFire": {
+		"Sprite": "uid://byw6jsnuv2wf2",
+		"Scene": "uid://b3f6bsiuin3v4",
+		"Packet": {
+			"PlantPumpkinFire": "uid://cyi4yp0ib54it"
+		}
+	},
+	"PlantQueenSunFlower": {
+		"Sprite": "uid://xw5sgh635or8",
+		"Scene": "uid://c3tobm6a1a3p6",
+		"Packet": {
+			"PlantQueenSunFlower": "uid://cspvy6mp772pl"
+		}
+	},
+	"PlantWildPea": {
+		"Sprite": "uid://ol03wo0e5dnb",
+		"Scene": "uid://bjmlccfxdtq7p",
+		"Packet": {
+			"PlantWildPea": "uid://d1glotf0614q1"
+		}
+	},
+	"PlantGatlingPea": {
+		"Sprite": "uid://dmcrnrk4b516t",
+		"Scene": "uid://b37vdcodau4ie",
+		"Packet": {
+			"PlantGatlingPea": "uid://bhf6mw7c07fc7"
+		}
+	},
+	"PlantFireTallnut": {
+		"Sprite": "uid://duqh2083d5wit",
+		"Scene": "uid://drqd4cnyq77k0",
+		"Packet": {
+			"PlantFireTallnut": "uid://d8dqvmq8m0tj"
+		}
+	},
+	"PlantIceSunMine": {
+		"Sprite": "uid://32qoqhurj500",
+		"Scene": "uid://c6bre0njke2sy",
+		"Packet": {
+			"PlantIceSunMine": "uid://c4syi3mgu8y1h"
+		}
+	},
+	"PlantIceSpearPea": {
+		"Sprite": "uid://bmii2spmjg1qf",
+		"Scene": "uid://cfj1rm1i04bhe",
+		"Packet": {
+			"PlantIceSpearPea": "uid://cl0mtmjior2dp"
+		}
+	},
+	"PlantTwinSunShroom": {
+		"Sprite": "uid://dkw4bmni0lnkt",
+		"Scene": "uid://dvvve5ko0pv81",
+		"Packet": {
+			"PlantTwinSunShroom": "uid://c5y4m7jjhlxv"
+		}
+	},
+	"PlantGatlingCat": {
+		"Sprite": "uid://6tx6kou20pv",
+		"Scene": "uid://crajnxjqttff3",
+		"Packet": {
+			"PlantGatlingCat": "uid://dnqawgsdqgtmt"
+		}
+	},
+	"PlantThreeCactus": {
+		"Sprite": "uid://cwdd03vnkmpf",
+		"Scene": "uid://cba6smcm0rdli",
+		"Packet": {
+			"PlantThreeCactus": "uid://dgcqiy4gm4xq5"
+		}
+	},
+	"PlantWallnutBowling": {
+		"Sprite": "uid://boocp7vnh24m5",
+		"Scene": "uid://djj8oa8uiu213",
+		"Packet": {
+			"PlantWallnutBowling": "uid://dl4hlwcgacv31"
+		}
+	},
+	"PlantFirenutBowling": {
+		"Sprite": "uid://dx3bhy6xa6aio",
+		"Scene": "uid://0qblsawjyjn4",
+		"Packet": {
+			"PlantFirenutBowling": "uid://b8nw4rc88l181"
+		}
+	},
+	"PlantIcenutBowling": {
+		"Sprite": "uid://b7cyx74xpcs6u",
+		"Scene": "uid://c5xr1nlpcpkys",
+		"Packet": {
+			"PlantIcenutBowling": "uid://daqrvxyi2db7"
+		}
+	},
+	"PlantMagnetnutBowling": {
+		"Sprite": "uid://csp3p80bpd1cn",
+		"Scene": "uid://bp3ohvijwolsf",
+		"Packet": {
+			"PlantMagnetnutBowling": "uid://djj5l21bk2nbq"
+		}
+	},
+	"PlantJalaNutBowling": {
+		"Sprite": "uid://csuca4h8t11sj",
+		"Scene": "uid://cx3ognwquajld",
+		"Packet": {
+			"PlantJalaNutBowling": "uid://dl83lfmwqqr4g"
+		}
+	},
+	"PlantPresentBox": {
+		"Sprite": "uid://bn2uk5f11yv0g",
+		"Scene": "uid://unw0w6jxiprl",
+		"Packet": {
+			"PlantPresentBox": "uid://ch2qvmgtlq4v8"
+		}
+	},
+	"ZombieNormal": {
+		"Sprite": "uid://vp5mpqwb0n8b",
+		"Scene": "uid://b1dgft6pefocm",
+		"Packet": {
+			"ZombieNormal": "uid://b2brg7mubg1b6",
+			"ZombieNormalCone": "uid://nr80ls6usac1",
+			"ZombieNormalBucket": "uid://c1hwsineoiaq0",
+			"ZombieNormalScreendoor": "uid://cusudfn63u2ej",
+			"ZombieNormalHelmet": "uid://cspq08snxmrsr",
+			"ZombieNormalBlackHelmet": "uid://tjqhpajx1p33",
+			"ZombieNormalSpecialHelmet": "uid://do1iptskrp0u6"
+		}
+	},
+	"ZombieNormalPresentBox": {
+		"Sprite": "uid://dkijdtkiqbc6t",
+		"Scene": "uid://dbcp7ikuklxf",
+		"Packet": {
+			"ZombieNormalPresentBox": "uid://ck6j8ghg18oib"
+		}
+	},
+	"ZombieNormalPeaShooterSingle": {
+		"Sprite": "uid://c5ifitsxqpmsj",
+		"Scene": "uid://7wdadlwyjedj",
+		"Packet": {
+			"ZombieNormalPeaShooterSingle": "uid://co48jes8vdejm"
+		}
+	},
+	"ZombieNormalSnowPea": {
+		"Sprite": "uid://bld7b4b23mcya",
+		"Scene": "uid://dt60c5a5a83sd",
+		"Packet": {
+			"ZombieNormalSnowPea": "uid://1vhf7ji2qvom"
+		}
+	},
+	"ZombieNormalSunflower": {
+		"Sprite": "uid://datysqljoynjg",
+		"Scene": "uid://dnqqkieabgbc6",
+		"Packet": {
+			"ZombieNormalSunflower": "uid://b47oyxt2jfa6q"
+		}
+	},
+	"ZombieNormalWallnut": {
+		"Sprite": "uid://bobrmuicfvc3a",
+		"Scene": "uid://vj3haxa0yv87",
+		"Packet": {
+			"ZombieNormalWallnut": "uid://bp4l4gfdr7eps"
+		}
+	},
+	"ZombieNormalSquash": {
+		"Sprite": "uid://doqab6xerisx6",
+		"Scene": "uid://05lhx7kv8tg",
+		"Packet": {
+			"ZombieNormalSquash": "uid://brc365x7pt1f1"
+		}
+	},
+	"ZombieNormalJalapeno": {
+		"Sprite": "uid://bg32yy2smrn3i",
+		"Scene": "uid://cwn6hrbq7o04g",
+		"Packet": {
+			"ZombieNormalJalapeno": "uid://dkgl64b5osvox"
+		}
+	},
+	"ZombieNormalGatlingPea": {
+		"Sprite": "uid://sq1xnddydcud",
+		"Scene": "uid://2s8p6lqdyek3",
+		"Packet": {
+			"ZombieNormalGatlingPea": "uid://bba6g1tdko3pm"
+		}
+	},
+	"ZombieNormalWildPea": {
+		"Sprite": "uid://rg8iwkgsecjh",
+		"Scene": "uid://beorgh5lvgm75",
+		"Packet": {
+			"ZombieNormalWildPea": "uid://dbgl3n5kc8jl8"
+		}
+	},
+	"ZombieFlag": {
+		"Sprite": "uid://86q0ce2oyk2e",
+		"Scene": "uid://belx3kh3vioeu",
+		"Packet": {
+			"ZombieFlag": "uid://cfss3xxwoctcv",
+			"ZombieFlagCone": "uid://ce4c23uxa4dar",
+			"ZombieFlagBucket": "uid://gexvtidels5n",
+			"ZombieFlagScreendoor": "uid://beoyijlj0qrsc",
+			"ZombieFlagHelmet": "uid://duvd5gjx6gwl5",
+			"ZombieFlagBlackHelmet": "uid://dxfxvktuce7b0",
+			"ZombieFlagSpecialHelmet": "uid://b0k2nox35x58h"
+		}
+	},
+	"ZombieSleeper": {
+		"Sprite": "uid://djarp404nul8w",
+		"Scene": "uid://cqeh28jukhnvb",
+		"Packet": {
+			"ZombieSleeper": "uid://byl5u3tayuir0"
+		}
+	},
+	"ZombieBed": {
+		"Sprite": "uid://dq0aaq0458aqe",
+		"Scene": "uid://bsbisgdorksa3",
+		"Packet": {
+			"ZombieBed": "uid://cirnngowwyr21"
+		}
+	},
+	"ZombiePaper": {
+		"Sprite": "uid://drbscotikcmbv",
+		"Scene": "uid://8ci5c6qlgv1w",
+		"Packet": {
+			"ZombiePaper": "uid://vck837uoyof1",
+			"ZombiePaperCone": "uid://ccwnl16u7dbko",
+			"ZombiePaperBucket": "uid://bqsf3m1gie3lg",
+			"ZombiePaperHelmet": "uid://d0ifnyem4snj5",
+			"ZombiePaperBlackHelmet": "uid://dnebq1ikwirav",
+			"ZombiePaperSpecialHelmet": "uid://lilp24mw3kxd"
+		}
+	},
+	"ZombiePolevaulter": {
+		"Sprite": "uid://0b2gtxc1y85q",
+		"Scene": "uid://dstextersxlyr",
+		"Packet": {
+			"ZombiePolevaulter": "uid://w3di6dvolu6h",
+			"ZombiePolevaulterCone": "uid://cs4guxkrnpcjc",
+			"ZombiePolevaulterBucket": "uid://d3u5d5goqu6op",
+			"ZombiePolevaulterHelmet": "uid://dh53qs8xehndk",
+			"ZombiePolevaulterBlackHelmet": "uid://b8r6rqfomboe2",
+			"ZombiePolevaulterSpecialHelmet": "uid://fakui84guu6m"
+		}
+	},
+	"ZombieBalloon": {
+		"Sprite": "uid://bbpus0bcjt8gm",
+		"Scene": "uid://qmdofsc6cq7t",
+		"Packet": {
+			"ZombieBalloon": "uid://bpp5e8a0ex5ck",
+			"ZombieBalloonCone": "uid://c1sufy44ipto2",
+			"ZombieBalloonBucket": "uid://dfnhfpapvyfiw",
+			"ZombieBalloonHelmet": "uid://dfnqkh5fd3ig4",
+			"ZombieBalloonBlackHelmet": "uid://b0p6tkblsnlx6",
+			"ZombieBalloonSpecialHelmet": "uid://cb8ohxkgy11me"
+		}
+	},
+	"ZombieBalloonColour": {
+		"Sprite": "uid://bdcakceq5v2k4",
+		"Scene": "uid://c3qf4n5bdyhn0",
+		"Packet": {
+			"ZombieBalloonColour": "uid://dcamlax580h8d",
+			"ZombieBalloonColourCone": "uid://cf7xycbd1746i",
+			"ZombieBalloonColourBucket": "uid://duy80083j541j",
+			"ZombieBalloonColourHelmet": "uid://52rh7ndryfls",
+			"ZombieBalloonColourBlackHelmet": "uid://ciewy38n13sis",
+			"ZombieBalloonColourSpecialHelmet": "uid://dpgu8bib6as7o"
+		}
+	},
+	"ZombieFootball": {
+		"Sprite": "uid://cf0jfsae7635c",
+		"Scene": "uid://ckv74bg12u6f6",
+		"Packet": {
+			"ZombieFootball": "uid://b4u7xn7kl8072"
+		}
+	},
+	"ZombieFootballBlack": {
+		"Sprite": "uid://cy2bbur6qlk4f",
+		"Scene": "uid://b1457aw23btfb",
+		"Packet": {
+			"ZombieFootballBlack": "uid://ia5egpow4154",
+			"ZombieFootballSpecial": "uid://d675nrqe5wt6"
+		}
+	},
+	"ZombieImp": {
+		"Sprite": "uid://c1x4142vyxf6q",
+		"Scene": "uid://l5jjft52p45s",
+		"Packet": {
+			"ZombieImp": "uid://dvyqunv8qdcbs",
+			"ZombieImpCone": "uid://8wet5d7qlkg7",
+			"ZombieImpBucket": "uid://d0d1ft2rdxqsv",
+			"ZombieImpHelmet": "uid://ca7k6m5vwv6m",
+			"ZombieImpBlackHelmet": "uid://qy0uhmc8838a",
+			"ZombieImpSpecialHelmet": "uid://dmxk4a3cg257"
+		}
+	},
+	"ZombieGargantuar": {
+		"Sprite": "uid://d1jj5qhp7tex4",
+		"Scene": "uid://dvm768541bn0o",
+		"Packet": {
+			"ZombieGargantuar": "uid://cwmqpg3ofufu4",
+			"ZombieGargantuarBucket": "uid://jn4afly1dmy3",
+			"ZombieGargantuarScreendoor": "uid://cnhrvdpnh8ssp",
+			"ZombieGargantuarShield": "uid://prcregkoq3s5",
+			"ZombieGargantuarHelmet": "uid://dexo765ulkdv2",
+			"ZombieGargantuarBlackHelmet": "uid://bljqjs8wqgeg5",
+			"ZombieGargantuarSpecialHelmet": "uid://cqrf2c7s5k00d"
+		}
+	},
+	"ZombieGargantuarArmed": {
+		"Sprite": "uid://d1jj5qhp7tex4",
+		"Scene": "uid://jjp1op0ovanj",
+		"Packet": {
+			"ZombieGargantuarArmed": "uid://c0rseyb1u8xf4"
+		}
+	},
+	"ZombieGargantuarRedEyes": {
+		"Sprite": "uid://cmf6p5u5cs8ts",
+		"Scene": "uid://bc8e1ej3tesie",
+		"Packet": {
+			"ZombieGargantuarRedEyes": "uid://bc4t65ut280lj",
+			"ZombieGargantuarRedEyesBucket": "uid://dhhu3cbdp8wfq",
+			"ZombieGargantuarRedEyesScreendoor": "uid://cgmncsth3vy7a",
+			"ZombieGargantuarRedEyesShield": "uid://bldu0xtblsjw",
+			"ZombieGargantuarRedEyesHelmet": "uid://cipa1jdtob8dq",
+			"ZombieGargantuarRedEyesBlackHelmet": "uid://bauvrg7ftki0b",
+			"ZombieGargantuarRedEyesSpecialHelmet": "uid://crpl030jslyr0"
+		}
+	},
+	"ZombiePolestriker": {
+		"Sprite": "uid://d2caaj1sa2ywr",
+		"Scene": "uid://dranhg1mteucc",
+		"Packet": {
+			"ZombiePolestriker": "uid://cpju0mksdq7cu"
+		}
+	},
+	"ZombieShadow": {
+		"Sprite": "uid://balyn7bceplb6",
+		"Scene": "uid://cpmd7kfms67yv",
+		"Packet": {
+			"ZombieShadow": "uid://batngo20ly0g7",
+			"ZombieShadowCone": "uid://cscxndkc6h70g",
+			"ZombieShadowBucket": "uid://0uwfpkqxts35",
+			"ZombieShadowHelmet": "uid://wxdaws12475w",
+			"ZombieShadowBlackHelmet": "uid://l2jvyxeysb5s",
+			"ZombieShadowSpecialHelmet": "uid://bi2pnorgrk5ws"
+		}
+	},
+	"ZombieShadowBlack": {
+		"Sprite": "uid://dv2yqj4brj4op",
+		"Scene": "uid://b6pgwdp553g35",
+		"Packet": {
+			"ZombieShadowBlack": "uid://ccnkwv5mvs2pl",
+			"ZombieShadowBlackCone": "uid://bvj2duyos6ccc",
+			"ZombieShadowBlackBucket": "uid://ca4o4bnlc7blo",
+			"ZombieShadowBlackBasicHelmet": "uid://bpb4y7fq7c8xh",
+			"ZombieShadowBlackDarkHelmet": "uid://ct5qeyqd7yjh5",
+			"ZombieShadowBlackSpecialHelmet": "uid://bv1ecksfgi0ev"
+		}
+	},
+	"ZombieJackson": {
+		"Sprite": "uid://d347xv077jx0x",
+		"Scene": "uid://bd0hwnhffoc1j",
+		"Packet": {
+			"ZombieJackson": "uid://c1mf86w2b4jrn",
+			"ZombieJacksonCone": "uid://3lbuvi3cigsg",
+			"ZombieJacksonBucket": "uid://bw6d63eb0ljd5",
+			"ZombieJacksonHelmet": "uid://c7noi6mgchoch",
+			"ZombieJacksonBlackHelmet": "uid://cuwe6ld2axfvb",
+			"ZombieJacksonSpecialHelmet": "uid://b6vgdwrb5oqer"
+		}
+	},
+	"ZombieDancer": {
+		"Sprite": "uid://boehcm445gww",
+		"Scene": "uid://dnixqu1tjefg8",
+		"Packet": {
+			"ZombieDancer": "uid://c6uqrgpdixf0d",
+			"ZombieDancerCone": "uid://fxeoumbs0cjr",
+			"ZombieDancerBucket": "uid://c6crtw7wj13dk",
+			"ZombieDancerHelmet": "uid://dm3d4d3qmvlj2",
+			"ZombieDancerBlackHelmet": "uid://bf6fgp3p03qt0",
+			"ZombieDancerSpecialHelmet": "uid://cp87je6olur73"
+		}
+	},
+	"ZombieZamboni": {
+		"Sprite": "uid://dftoo8ogu8dsd",
+		"Scene": "uid://kkv5n665nefb",
+		"Packet": {
+			"ZombieZamboni": "uid://boicllklc3f1q"
+		}
+	},
+	"ZombieDigger": {
+		"Sprite": "uid://c1q1kwxvyt7jh",
+		"Scene": "uid://blb4s0qnt2u0m",
+		"Packet": {
+			"ZombieDigger": "uid://d3tlnuwfnhh3u"
+		}
+	},
+	"ZombieYetiDigger": {
+		"Sprite": "uid://djpaatp5h7ubu",
+		"Scene": "uid://bap3qogi5vb86",
+		"Packet": {
+			"ZombieYetiDigger": "uid://do5natny6uc4o"
+		}
+	},
+	"ZombieLadder": {
+		"Sprite": "uid://b4d7pukhamxru",
+		"Scene": "uid://b88ccph1mx607",
+		"Packet": {
+			"ZombieLadder": "uid://de6n4b0f6uabk",
+			"ZombieLadderCone": "uid://bgq1wbdbox01i",
+			"ZombieLadderBucket": "uid://pa7dfmb2j4k7",
+			"ZombieLadderHelmet": "uid://jpvuxxffsftw",
+			"ZombieLadderBlackHelmet": "uid://bglwms7qsxsbu",
+			"ZombieLadderSpecialHelmet": "uid://y8bhwv15p73b"
+		}
+	},
+	"ZombieJackbox": {
+		"Sprite": "uid://n51avv4ftbrw",
+		"Scene": "uid://btxyp2t4ugaer",
+		"Packet": {
+			"ZombieJackbox": "uid://jep1tg5r37g2",
+			"ZombieJackboxCone": "uid://ds28n5nhbjli3",
+			"ZombieJackboxBucket": "uid://cgmi81t5fgfwu",
+			"ZombieJackboxHelmet": "uid://dvvb6he3a5v2v",
+			"ZombieJackboxBlackHelmet": "uid://bgel7nj4xeus2",
+			"ZombieJackboxSpecialHelmet": "uid://dfdmnty0mjckb"
+		}
+	},
+	"ZombieDuck": {
+		"Sprite": "uid://cdx8flivkmr4f",
+		"Scene": "uid://cv4lwe11kmkl5",
+		"Packet": {
+			"ZombieDuck": "uid://civ1gtq6atri5",
+			"ZombieDuckCone": "uid://dh8t7b6uql1yt",
+			"ZombieDuckBucket": "uid://dg8iycdl7e7pp",
+			"ZombieDuckHelmet": "uid://spoia6c5al6x",
+			"ZombieDuckBlackHelmet": "uid://lrlmj1i5p2og",
+			"ZombieDuckSpecialHelmet": "uid://3082tlcfis45"
+		}
+	},
+	"ZombieSnorkle": {
+		"Sprite": "uid://bkrcpah82r3ie",
+		"Scene": "uid://bhy0fus6g5evj",
+		"Packet": {
+			"ZombieSnorkle": "uid://balfj80o5qji1",
+			"ZombieSnorkleHelmet": "uid://kabqlxjdk8xe",
+			"ZombieSnorkleBlackHelmet": "uid://chqe0rk03dm02",
+			"ZombieSnorkleSpecialHelmet": "uid://d4enfeibdujdx"
+		}
+	},
+	"ZombieDolphinrider": {
+		"Sprite": "uid://b3qti1abse28p",
+		"Scene": "uid://c8qfmeeswnfoh",
+		"Packet": {
+			"ZombieDolphinrider": "uid://1vnvvkalsjw0",
+			"ZombieDolphinriderHelmet": "uid://o4gic8p8ysm8",
+			"ZombieDolphinriderBlackHelmet": "uid://cjmyfgel2myd3",
+			"ZombieDolphinriderSpecialHelmet": "uid://dr2xleabq76mq"
+		}
+	}
+}

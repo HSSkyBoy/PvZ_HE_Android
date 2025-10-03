@@ -1,0 +1,61 @@
+@tool
+extends Node
+
+
+const DEFAULT_HOST: String = "127.0.0.1"
+
+
+const DEFAULT_PORT: int = 7350
+
+
+const DEFAULT_TIMEOUT = 3
+
+
+const DEFAULT_CLIENT_SCHEME: String = "http"
+
+
+const DEFAULT_SOCKET_SCHEME: String = "ws"
+
+
+const DEFAULT_LOG_LEVEL = NakamaLogger.LOG_LEVEL.DEBUG
+
+var _http_adapter = null
+var logger = NakamaLogger.new()
+
+func _ready() -> void :
+    process_mode = Node.PROCESS_MODE_ALWAYS
+
+func get_client_adapter() -> NakamaHTTPAdapter:
+    if _http_adapter == null:
+        _http_adapter = NakamaHTTPAdapter.new()
+        _http_adapter.logger = logger
+        _http_adapter.name = "NakamaHTTPAdapter"
+        add_child(_http_adapter)
+    return _http_adapter
+
+func create_socket_adapter() -> NakamaSocketAdapter:
+    var adapter = NakamaSocketAdapter.new()
+    adapter.name = "NakamaWebSocketAdapter"
+    adapter.logger = logger
+    add_child(adapter)
+    return adapter
+
+func create_client(p_server_key: String, 
+        p_host: String = DEFAULT_HOST, 
+        p_port: int = DEFAULT_PORT, 
+        p_scheme: String = DEFAULT_CLIENT_SCHEME, 
+        p_timeout: int = DEFAULT_TIMEOUT, 
+        p_log_level: int = DEFAULT_LOG_LEVEL) -> NakamaClient:
+    logger._level = p_log_level
+    return NakamaClient.new(get_client_adapter(), p_server_key, p_scheme, p_host, p_port, p_timeout)
+
+func create_socket(p_host: String = DEFAULT_HOST, 
+        p_port: int = DEFAULT_PORT, 
+        p_scheme: String = DEFAULT_SOCKET_SCHEME) -> NakamaSocket:
+    return NakamaSocket.new(create_socket_adapter(), p_host, p_port, p_scheme, true)
+
+func create_socket_from(p_client: NakamaClient) -> NakamaSocket:
+    var scheme = "ws"
+    if p_client.scheme == "https":
+        scheme = "wss"
+    return NakamaSocket.new(create_socket_adapter(), p_client.host, p_client.port, scheme, true)

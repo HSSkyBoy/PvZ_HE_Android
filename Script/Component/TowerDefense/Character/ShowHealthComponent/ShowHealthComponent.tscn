@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=4 uid="uid://xbkiy0tlw2r"]
+
+[ext_resource type="Script" uid="uid://bjqwnutekupo3" path="res://Script/Component/TowerDefense/Character/ShowHealthComponent/ShowHealthComponent.gd" id="1"]
+[ext_resource type="FontFile" uid="uid://coqskwlqtnypf" path="res://Asset/Font/fzkt.ttf" id="2"]
+
+[node name="ShowHealthComponent" type="Node2D"]
+light_mask = 0
+script = ExtResource("1")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+unique_name_in_owner = true
+light_mask = 0
+offset_left = -56.0
+offset_top = -50.0
+offset_right = 56.0
+offset_bottom = 50.0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+light_mask = 0
+layout_mode = 2
+mouse_filter = 2
+
+[node name="BodyHitpointLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+light_mask = 0
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 14
+text = "HP:100/100"
+horizontal_alignment = 1
+
+[node name="HelmetHitpointLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+light_mask = 0
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 14
+text = "HP:100/100"
+horizontal_alignment = 1
+
+[node name="ShieldHitpointLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+light_mask = 0
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.992157, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 14
+text = "HP:100/100"
+horizontal_alignment = 1

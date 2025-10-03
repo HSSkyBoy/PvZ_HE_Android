@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="TowerDefensePacketConfig" load_steps=3 format=4 uid="uid://ce6w6tgrug8mi"]
+
+[ext_resource type="Resource" uid="uid://t5dfqg2qsqab" path="res://Asset/Anime/Character/GraveStone/Duckytube/Config/TowerDefenseDuckytube.tres" id="1"]
+[ext_resource type="Script" uid="uid://c6d3po5310ugw" path="res://Resource/TowerDefense/PacketBank/Packet/TowerDefensePacketConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+saveKey = "Duckytube"
+unlockCheckList = []
+name = ""
+describe = ""
+plantfood = ""
+handbookDescribe = ""
+handbookStory = ""
+packetAnimeClip = "Idle"
+packetAnimeOffset = Vector2(25, 28)
+packetAnimeScale = Vector2(0.45, 0.45)
+characterConfig = ExtResource("1")
+type = 6
+spawnMethod = "Rise"
+overrideCostRise = -1
+overrideCost = -1
+overridPacketCooldown = -1.0
+overridStartingCooldown = -1.0
+overrideWeight = -1
+overrideWavePointCost = -1
+initArmor = []
+plantUseCell = false
+Cell/plantUseCell = false
+metadata/_custom_type_script = "uid://c6d3po5310ugw"

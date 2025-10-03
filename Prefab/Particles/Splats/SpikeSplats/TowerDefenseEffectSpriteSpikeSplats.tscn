@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=4 uid="uid://cn4yxuuid8kxl"]
+
+[ext_resource type="PackedScene" uid="uid://dwvgduivkprow" path="res://Prefab/TowerDefense/Effect/Once/TowerDefenseEffectSpriteOnce.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://br7muxuvxx77s" path="res://Prefab/Particles/Splats/SpikeSplats/SpikeSplats.tscn" id="2"]
+
+[node name="TowerDefenseEffectSpriteFireSplats" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+objectId = 105
+sprite = NodePath("SpikeSplat")
+clipsList = PackedStringArray("animation&animation2&animation3")
+
+[node name="SpikeSplat" parent="." index="0" node_paths=PackedStringArray("layerSprite") instance=ExtResource("2")]
+layerSprite = [null, null]

@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CharacterDamagePointData" load_steps=8 format=4 uid="uid://eqo3nnjd3h6b"]
+
+[ext_resource type="Resource" uid="uid://bu0fu3bsxshui" path="res://Asset/Anime/Character/GraveStone/TargetSun/DamagePoint/Config/GraveStoneTargetSunDamagePointDamage0.tres" id="1"]
+[ext_resource type="Resource" uid="uid://cflu0jmvh24ks" path="res://Asset/Anime/Character/GraveStone/TargetSun/DamagePoint/Config/GraveStoneTargetSunDamagePointDamage1.tres" id="2"]
+[ext_resource type="Resource" uid="uid://d2e0xbun7nslr" path="res://Asset/Anime/Character/GraveStone/TargetSun/DamagePoint/Config/GraveStoneTargetSunDamagePointDamage2.tres" id="3"]
+[ext_resource type="Resource" uid="uid://bfsldoegft4xl" path="res://Asset/Anime/Character/GraveStone/TargetSun/DamagePoint/Config/GraveStoneTargetSunDamagePointDamage3.tres" id="4"]
+[ext_resource type="Resource" uid="uid://dsddjqjmel7uc" path="res://Asset/Anime/Character/GraveStone/TargetSun/DamagePoint/Config/GraveStoneTargetSunDamagePointDamage4.tres" id="5"]
+[ext_resource type="Resource" uid="uid://bbxb3peg03vxa" path="res://Asset/Anime/Character/GraveStone/TargetSun/DamagePoint/Config/GraveStoneTargetSunDamagePointDamage5.tres" id="6"]
+[ext_resource type="Script" uid="uid://c3lvn8julbk1s" path="res://Resource/General/Character/DamagePoint/CharacterDamagePointData.gd" id="7"]
+
+[resource]
+script = ExtResource("7")
+damagePointList = [ExtResource("1"), ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6")]
+damagePointDictionary = {
+"Damage0": {
+"Close": [],
+"Config": ExtResource("1"),
+"Open": []
+},
+"Damage1": {
+"Close": [],
+"Config": ExtResource("2"),
+"Open": []
+},
+"Damage2": {
+"Close": [],
+"Config": ExtResource("3"),
+"Open": []
+},
+"Damage3": {
+"Close": [],
+"Config": ExtResource("4"),
+"Open": []
+},
+"Damage4": {
+"Close": [],
+"Config": ExtResource("5"),
+"Open": []
+},
+"Damage5": {
+"Close": [],
+"Config": ExtResource("6"),
+"Open": []
+}
+}
+fliterOpenAll = []
+fliterCloseAll = []
+metadata/_custom_type_script = "uid://c3lvn8julbk1s"

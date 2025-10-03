@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="TowerDefensePacketConfig" load_steps=5 format=4 uid="uid://b4g5gmm4c6qtq"]
+
+[ext_resource type="Resource" uid="uid://3w6uo505n3iv" path="res://Asset/Anime/Character/Plant/Chapter0/PeaShooter/Config/TowerDefensePlantPeaShooter.tres" id="1"]
+[ext_resource type="Script" uid="uid://c6d3po5310ugw" path="res://Resource/TowerDefense/PacketBank/Packet/TowerDefensePacketConfig.gd" id="2"]
+[ext_resource type="Script" uid="uid://p7yhpfahgp8d" path="res://Resource/UnlockCondition/UnlockConditionLevelFinishConfig.gd" id="3"]
+
+[sub_resource type="Resource" id="Resource_6i22r"]
+script = ExtResource("3")
+levelSaveKey = "Level1_10"
+metadata/_custom_type_script = "uid://p7yhpfahgp8d"
+
+[resource]
+script = ExtResource("2")
+saveKey = "PlantPeaShooter"
+unlockCheckList = [SubResource("Resource_6i22r")]
+name = "TOWERDEFENSE_PLANT_PEASHOOTER_NAME"
+describe = "TOWERDEFENSE_PLANT_PEASHOOTER_EXPRESTION"
+plantfood = ""
+handbookDescribe = "TOWERDEFENSE_PLANT_PEASHOOTER_HANDBOOK_EXPRESTION"
+handbookStory = "TOWERDEFENSE_PLANT_PEASHOOTER_HANDBOOK_STORY"
+packetAnimeClip = "BodyIdle"
+packetAnimeOffset = Vector2(21, 23)
+packetAnimeScale = Vector2(0.5, 0.5)
+characterConfig = ExtResource("1")
+type = 5
+spawnMethod = "Rise"
+overrideCostRise = -1
+overrideCost = -1
+overridPacketCooldown = -1.0
+overridStartingCooldown = -1.0
+overrideWeight = -1
+overrideWavePointCost = -1
+initArmor = []
+plantUseCell = true
+Cell/plantUseCell = true
+metadata/_custom_type_script = "uid://c6d3po5310ugw"

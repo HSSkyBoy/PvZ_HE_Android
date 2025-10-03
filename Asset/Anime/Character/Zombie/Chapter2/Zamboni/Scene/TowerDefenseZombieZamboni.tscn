@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=4 uid="uid://kkv5n665nefb"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bwgq81kythvsq" path="res://Asset/Anime/Character/Zombie/Chapter2/Zamboni/Scene/TowerDefenseZombieZamboni.gd" id="2"]
+[ext_resource type="Resource" uid="uid://bojy8x64r08hk" path="res://Asset/Anime/Character/Zombie/Chapter2/Zamboni/Config/TowerDefenseZombieZamboni.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://dftoo8ogu8dsd" path="res://Asset/Anime/Character/Zombie/Chapter2/Zamboni/ZombieZamboni.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://cokxuvmsqujsr" path="res://Asset/Anime/Character/Zombie/Chapter2/Zamboni/DamagePoint/Zombie_zamboni_1.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://tke58hte0gj3" path="res://Asset/Anime/Character/Zombie/Chapter2/Zamboni/DamagePoint/Zombie_zamboni_2.png" id="6"]
+[ext_resource type="PackedScene" uid="uid://c64t5qco6f0gu" path="res://Prefab/Particles/Smoke/ZamboniSmoke/ZamboniSmoke.tscn" id="7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jilqb"]
+size = Vector2(154, 33)
+
+[node name="TowerDefenseZombieZamboni" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+walkAnimeClip = "Idle"
+inSwimAnimeClip = ""
+swimAnimeClip = "Idle"
+outSwimAnimeClip = ""
+attackAnimeClip = "Idle"
+dieAnimeClip = "Wheelie&Wheelie2"
+dieWaterAnimeClip = "Wheelie&Wheelie2"
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieZamboni")
+PreviewDamagePointPersontage = 1.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(12, 33)
+
+[node name="ZombieZamboni" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+position = Vector2(16, -34)
+Animation/MediaReplace/Zombie_zamboni_1.png = ExtResource("5")
+Animation/MediaReplace/Zombie_zamboni_2.png = ExtResource("6")
+
+[node name="IceCapMarker" type="Marker2D" parent="SpriteGroup/TransformPoint/ZombieZamboni" index="0"]
+unique_name_in_owner = true
+position = Vector2(40, 53)
+
+[node name="ZamboniSmoke" parent="FrontEffectNode" index="0" instance=ExtResource("7")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-43, -9)
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(17, 45)
+scale = Vector2(3.02326, 1.44444)
+
+[node name="HitBox" parent="." index="5"]
+position = Vector2(28, -1)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_jilqb")

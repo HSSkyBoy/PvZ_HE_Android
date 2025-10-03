@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=4 uid="uid://xw5sgh635or8"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://cmwa0h45a55q0" path="res://Asset/Anime/Character/Plant/Gold/QueenSunFlower/QueenSunFlower.tres" id="2"]
+
+[node name="QueenSunFlower" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/1 = true
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/anim_idle = true
+Animation/LayerVisible/backleaf = true
+Animation/LayerVisible/backleaf_left_tip = true
+Animation/LayerVisible/backleaf_right_tip = true
+Animation/LayerVisible/cloak1 = true
+"Animation/LayerVisible/cloak1 复制" = true
+Animation/LayerVisible/frontleaf = true
+Animation/LayerVisible/frontleaf_left_tip = true
+Animation/LayerVisible/frontleaf_right_tip = true
+Animation/LayerVisible/stalk_bottom = true
+Animation/LayerVisible/stalk_top = true
+"Animation/LayerVisible/图层_1" = true
+"Animation/LayerVisible/图层_3" = true
+"Animation/LayerVisible/图层_67 复制" = true
+"Animation/LayerVisible/图层_69" = true
+Animation/MediaReplace/6-0001.png = null
+Animation/MediaReplace/6-0002.png = null
+Animation/MediaReplace/6-0003.png = null
+Animation/MediaReplace/6-0004.png = null
+Animation/MediaReplace/6-0005.png = null
+Animation/MediaReplace/6-0006.png = null
+Animation/MediaReplace/6-0007.png = null
+Animation/MediaReplace/6-0008.png = null
+Animation/MediaReplace/6-0009.png = null
+Animation/MediaReplace/6-0010.png = null
+Animation/MediaReplace/6-0011.png = null
+Animation/MediaReplace/6-0012.png = null
+Animation/MediaReplace/PeaShooter_backleaf.png = null
+Animation/MediaReplace/PeaShooter_backleaf_lefttip.png = null
+Animation/MediaReplace/PeaShooter_backleaf_righttip.png = null
+Animation/MediaReplace/PeaShooter_frontleaf.png = null
+Animation/MediaReplace/PeaShooter_frontleaf_lefttip.png = null
+Animation/MediaReplace/PeaShooter_frontleaf_righttip.png = null
+Animation/MediaReplace/PeaShooter_stalk_bottom.png = null
+Animation/MediaReplace/PeaShooter_stalk_top.png = null
+Animation/MediaReplace/SunFlower_double_petals_fire.png = null
+Animation/MediaReplace/SunFlower_fire1.png = null
+Animation/MediaReplace/SunFlower_fire2.png = null
+Animation/MediaReplace/SunFlower_fire3.png = null
+Animation/MediaReplace/SunFlower_head_fire.png = null
+Animation/MediaReplace/cloak00.png = null
+Animation/MediaReplace/cloaka1.png = null
+Animation/MediaReplace/cloaka2.png = null
+Animation/MediaReplace/cloaka3.png = null
+Animation/MediaReplace/cloaka4.png = null
+Animation/MediaReplace/hat.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

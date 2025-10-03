@@ -1,0 +1,100 @@
+[gd_scene load_steps=9 format=4 uid="uid://ljjll7njev6i"]
+
+[ext_resource type="Script" uid="uid://d2umg22nxc5xm" path="res://Prefab/GUI/DialogBox/Shop/ShopItem/ShopItem.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://d3humg6idsoim" path="res://Asset/Texture/GUI/Shop/StorePriceTag.png" id="2"]
+[ext_resource type="FontFile" uid="uid://d0aylc13b87r0" path="res://Asset/Font/BrianneTod.ttf" id="3"]
+[ext_resource type="PackedScene" uid="uid://cdnyb8d1qw7g4" path="res://Prefab/GUI/Button/SpriteBrightButton/SpriteBrightButton.tscn" id="4"]
+[ext_resource type="Shader" uid="uid://bi8x813unwm5l" path="res://Asset/Shader/ShaderBright.gdshader" id="5"]
+[ext_resource type="Texture2D" uid="uid://dmxt2bfog0s0u" path="res://Asset/Texture/GUI/Shop/Item/PotReplacement.png" id="6"]
+[ext_resource type="FontFile" uid="uid://coqskwlqtnypf" path="res://Asset/Font/fzkt.ttf" id="7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hanbl"]
+shader = ExtResource("5")
+shader_parameter/brightStrength = 0.0
+
+[node name="ShopItem" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1")
+
+[node name="LabelTexture" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -28.0
+offset_top = 30.0
+offset_right = 28.0
+offset_bottom = 47.0
+texture = ExtResource("2")
+
+[node name="CostLabel" type="Label" parent="LabelTexture"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 0
+offset_top = -1.0
+offset_right = 54.0
+offset_bottom = 19.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 16
+text = "$ 11"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PacketNode" type="Control" parent="."]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 1.0
+offset_top = -8.0
+offset_right = 1.0
+offset_bottom = -8.0
+
+[node name="ItemButton" parent="." instance=ExtResource("4")]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_hanbl")
+layout_mode = 0
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+texture = ExtResource("6")
+expand_mode = 1
+stretch_mode = 5
+autoSize = true
+
+[node name="DescribeLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -30.0
+offset_top = -12.0
+offset_right = 30.0
+offset_bottom = 12.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 16
+text = "7槽"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SoldOutLabel" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = -29.0
+offset_top = -20.0
+offset_right = 31.0
+offset_bottom = 4.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 16
+text = "卖光了"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouseEntered" from="ItemButton" to="." method="Talk"]
+[connection signal="pressed" from="ItemButton" to="." method="Pressed"]

@@ -1,0 +1,238 @@
+[gd_scene load_steps=8 format=4 uid="uid://fc46lp4e26sk"]
+
+[ext_resource type="Script" uid="uid://xsjlt5yfi1ow" path="res://Prefab/GUI/DialogBox/MenuDialog/MenuDialogBase.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://chuk70ax7bshq" path="res://Asset/Texture/GUI/General/DialogBox/DialogMenu.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://m88hw8qnccy3" path="res://Asset/Texture/GUI/General/General/OptionsBackToGamebButton0.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bq65uhww8tprd" path="res://Asset/Texture/GUI/General/General/OptionsBackToGamebButton1.png" id="4"]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_obgbh"]
+button_index = 6
+pressed = true
+
+[sub_resource type="InputEventKey" id="InputEventKey_byygv"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_5jdxe"]
+events = [SubResource("InputEventJoypadButton_obgbh"), SubResource("InputEventKey_byygv")]
+
+[node name="MenuDialogBase" type="Control" node_paths=PackedStringArray("dragControl")]
+light_mask = 0
+z_index = 1000
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+dragControl = NodePath("Layer/Control/DialogMenu")
+
+[node name="Layer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="Control" type="Control" parent="Layer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogMenu" type="TextureRect" parent="Layer/Control"]
+light_mask = 0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -211.5
+offset_top = -249.0
+offset_right = 211.5
+offset_bottom = 249.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2")
+
+[node name="FullScreenLabel" type="Label" parent="Layer/Control/DialogMenu"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 0
+offset_left = 206.5
+offset_top = 202.0
+offset_right = 254.5
+offset_bottom = 231.0
+theme_override_colors/font_color = Color(0.360784, 0.360784, 0.494118, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+text = "全屏"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FullScreenCheckBox" type="CheckBox" parent="Layer/Control/DialogMenu/FullScreenLabel"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 0
+offset_left = 68.0
+offset_top = -8.0
+offset_right = 118.0
+offset_bottom = 39.0
+mouse_default_cursor_shape = 2
+
+[node name="MobilePresetLabel" type="Label" parent="Layer/Control/DialogMenu"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 0
+offset_left = 77.5
+offset_top = 203.0
+offset_right = 146.5
+offset_bottom = 232.0
+theme_override_colors/font_color = Color(0.360784, 0.360784, 0.494118, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+text = "横板UI"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MobilePresetCheckBox" type="CheckBox" parent="Layer/Control/DialogMenu/MobilePresetLabel"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 0
+offset_left = 68.0
+offset_top = -8.0
+offset_right = 118.0
+offset_bottom = 39.0
+mouse_default_cursor_shape = 2
+
+[node name="MusicLabel" type="Label" parent="Layer/Control/DialogMenu"]
+light_mask = 0
+layout_mode = 0
+offset_left = 137.5
+offset_top = 118.0
+offset_right = 185.5
+offset_bottom = 147.0
+theme_override_colors/font_color = Color(0.360784, 0.360784, 0.494118, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+text = "音乐"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicHSlider" type="HSlider" parent="Layer/Control/DialogMenu/MusicLabel"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 0
+offset_left = 56.0
+offset_right = 180.0
+offset_bottom = 29.0
+mouse_default_cursor_shape = 2
+max_value = 1.0
+step = 0.001
+value = 0.8
+
+[node name="SfxLabel" type="Label" parent="Layer/Control/DialogMenu"]
+light_mask = 0
+layout_mode = 0
+offset_left = 138.0
+offset_top = 146.0
+offset_right = 186.0
+offset_bottom = 170.0
+theme_override_colors/font_color = Color(0.360784, 0.360784, 0.494118, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+text = "音效"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SfxHSlider" type="HSlider" parent="Layer/Control/DialogMenu/SfxLabel"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 0
+offset_left = 56.0
+offset_right = 180.0
+offset_bottom = 29.0
+mouse_default_cursor_shape = 2
+max_value = 1.0
+step = 0.001
+value = 0.8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Layer/Control/DialogMenu"]
+light_mask = 0
+layout_mode = 0
+offset_left = 72.5
+offset_top = 172.0
+offset_right = 317.5
+offset_bottom = 201.0
+
+[node name="AnimeFrameRateLabel" type="Label" parent="Layer/Control/DialogMenu/HBoxContainer"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+theme_override_colors/font_color = Color(0.360784, 0.360784, 0.494118, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+text = "动画帧率:24"
+horizontal_alignment = 2
+
+[node name="AnimeFrameRateSlider" type="HSlider" parent="Layer/Control/DialogMenu/HBoxContainer"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+min_value = 10.0
+max_value = 240.0
+step = 5.0
+value = 60.0
+ticks_on_borders = true
+
+[node name="BackButton" type="TextureButton" parent="Layer/Control/DialogMenu"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 0
+offset_left = 36.5
+offset_top = 372.0
+offset_right = 396.5
+offset_bottom = 472.0
+mouse_default_cursor_shape = 2
+shortcut = SubResource("Shortcut_5jdxe")
+shortcut_in_tooltip = false
+texture_normal = ExtResource("3")
+texture_pressed = ExtResource("4")
+texture_hover = ExtResource("3")
+
+[node name="Label" type="Label" parent="Layer/Control/DialogMenu/BackButton"]
+light_mask = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 31.0
+offset_right = 248.0
+offset_bottom = 74.0
+theme_override_colors/font_color = Color(0, 0.760784, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.215686, 0.219608, 0.290196, 1)
+theme_override_constants/shadow_offset_x = -2
+theme_override_constants/shadow_offset_y = -2
+theme_override_font_sizes/font_size = 36
+text = "返回游戏"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonContainer" type="VBoxContainer" parent="Layer/Control/DialogMenu"]
+light_mask = 0
+layout_mode = 0
+offset_left = 116.5
+offset_top = 228.0
+offset_right = 320.5
+offset_bottom = 352.0
+theme_override_constants/separation = -2
+
+[connection signal="pressed" from="Layer/Control/DialogMenu/FullScreenLabel/FullScreenCheckBox" to="." method="FullScreenCheckBoxPressed"]
+[connection signal="pressed" from="Layer/Control/DialogMenu/MobilePresetLabel/MobilePresetCheckBox" to="." method="MobilePresetCheckBoxPressed"]
+[connection signal="drag_ended" from="Layer/Control/DialogMenu/MusicLabel/MusicHSlider" to="." method="MusicSliderRelease"]
+[connection signal="drag_started" from="Layer/Control/DialogMenu/MusicLabel/MusicHSlider" to="." method="SliderPressed"]
+[connection signal="value_changed" from="Layer/Control/DialogMenu/MusicLabel/MusicHSlider" to="." method="MusicValueChanged"]
+[connection signal="drag_ended" from="Layer/Control/DialogMenu/SfxLabel/SfxHSlider" to="." method="SfxSliderRelease"]
+[connection signal="drag_started" from="Layer/Control/DialogMenu/SfxLabel/SfxHSlider" to="." method="SliderPressed"]
+[connection signal="value_changed" from="Layer/Control/DialogMenu/SfxLabel/SfxHSlider" to="." method="SFXValueChanged"]
+[connection signal="pressed" from="Layer/Control/DialogMenu/BackButton" to="." method="Close"]

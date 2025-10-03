@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=4 uid="uid://bijmky7ljwkls"]
+
+[ext_resource type="Script" uid="uid://c1ewwhii8s6rv" path="res://Asset/Anime/Character/Plant/Chapter0/Jalapeno/JalapenoSprite.gd" id="1"]
+[ext_resource type="Resource" uid="uid://kd135xfjgyed" path="res://Asset/Anime/Character/Plant/Chapter0/Jalapeno/Jalapeno.tres" id="2"]
+
+[node name="Jalapeno" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40.9531, -39.0406)
+timeScale = 0.75
+trueFrameRate = inf
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/Jalapeno_body = true
+Animation/LayerVisible/Jalapeno_cheek = true
+Animation/LayerVisible/Jalapeno_eye1 = true
+Animation/LayerVisible/Jalapeno_eye2 = true
+Animation/LayerVisible/Jalapeno_eyebrow1 = true
+Animation/LayerVisible/Jalapeno_eyebrow2 = true
+Animation/LayerVisible/Jalapeno_mouth = true
+Animation/LayerVisible/Jalapeno_stem = true
+Animation/MediaReplace/Jalapeno_body.png = null
+Animation/MediaReplace/Jalapeno_cheek.png = null
+Animation/MediaReplace/Jalapeno_eye1.png = null
+Animation/MediaReplace/Jalapeno_eye2.png = null
+Animation/MediaReplace/Jalapeno_eyebrow1.png = null
+Animation/MediaReplace/Jalapeno_eyebrow2.png = null
+Animation/MediaReplace/Jalapeno_mouth.png = null
+Animation/MediaReplace/Jalapeno_stem.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

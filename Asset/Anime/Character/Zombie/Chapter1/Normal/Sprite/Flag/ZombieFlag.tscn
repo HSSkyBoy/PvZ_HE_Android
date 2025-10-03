@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=4 uid="uid://86q0ce2oyk2e"]
+
+[ext_resource type="PackedScene" uid="uid://vp5mpqwb0n8b" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Sprite/Normal/ZombieNormal.tscn" id="1"]
+[ext_resource type="Script" uid="uid://clak78jql4ykp" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Sprite/Flag/ZombieFlagSprite.gd" id="2"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://ccim4e8sk714b" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Flagpole/ZombieFlagpole.tscn" id="4"]
+
+[node name="ZombieFlag" node_paths=PackedStringArray("layerSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+layerSlot = [NodePath("GroundSlot"), null, null, null, NodePath("FlagSlot"), null, null, NodePath("HeadSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ScreendoorSlot"), null, null, null, null, null, NodePath("ArmSlot"), null, NodePath("ConeSlot"), NodePath("BucketSlot"), null, null]
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/AnimeEvents = true
+Animation/LayerVisible/Zombie_flaghand = true
+Animation/LayerVisible/Zombie_innerarm_screendoor = true
+Animation/LayerVisible/anim_innerarm1 = false
+Animation/LayerVisible/anim_innerarm2 = false
+Animation/LayerVisible/anim_innerarm3 = false
+
+[node name="FlagSlot" type="Node2D" parent="." index="0"]
+show_behind_parent = true
+position = Vector2(-33.9007, -35.9708)
+rotation = -0.545228
+script = ExtResource("3")
+followSlotId = 5
+offset = Vector2(16.065, 4.875)
+useScale = false
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ZombieFlagpole" parent="FlagSlot" index="0" node_paths=PackedStringArray("layerSprite") instance=ExtResource("4")]
+unique_name_in_owner = true
+position = Vector2(21.019, -44.9259)
+rotation = 0.523599
+layerSprite = [null, null, null]
+
+[node name="HeadSlot" parent="." index="1"]
+position = Vector2(-8.83096, -49.858)
+rotation = 0.0308365
+scale = Vector2(0.799245, 0.799245)
+
+[node name="ArmSlot" parent="." index="2"]
+position = Vector2(9.64461, -0.38728)
+rotation = -0.115163
+scale = Vector2(0.798289, 0.798289)
+
+[node name="ConeSlot" parent="." index="3"]
+position = Vector2(-1.80495, -75.0244)
+rotation = -0.00298481
+scale = Vector2(0.797569, 0.797569)
+
+[node name="BucketSlot" parent="." index="4"]
+position = Vector2(-5.94908, -64.8014)
+rotation = 0.0853918
+scale = Vector2(0.798718, 0.798718)
+
+[node name="ScreendoorSlot" parent="." index="5"]
+position = Vector2(-15.9555, -1.88393)
+rotation = -0.0139056
+scale = Vector2(0.799006, 0.799006)

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=4 uid="uid://7l7qsvsxvioi"]
+
+[ext_resource type="PackedScene" uid="uid://c3lfv0vuyf8bv" path="res://Prefab/TowerDefense/Award/TowerDefenseAwardBase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bfm37t6siura" path="res://Prefab/TowerDefense/Award/Packet/TowerDefenseAwardPacket.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://bhqecss20rwpb" path="res://Prefab/TowerDefense/GUI/InGame/Packet/TowerDefenseInGamePacketShow.tscn" id="3"]
+
+[node name="TowerDefenseAwardPacket" instance=ExtResource("1")]
+z_index = 2000
+script = ExtResource("2")
+
+[node name="Packet" parent="." index="3" instance=ExtResource("3")]
+unique_name_in_owner = true
+onlyDraw = true
+
+[node name="Button" parent="." index="4"]
+offset_left = -24.0
+offset_top = -32.0
+offset_right = 26.0
+offset_bottom = 38.0
+
+[connection signal="pressed" from="Button" to="." method="Pressed"]

@@ -1,0 +1,149 @@
+[gd_scene load_steps=18 format=4 uid="uid://dt60c5a5a83sd"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://b4af5083r0uxo" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Scene/TowerDefenseZombieNormalSnowPea.gd" id="2"]
+[ext_resource type="Resource" uid="uid://biqvaryaig6hx" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Config/TowerDefenseZombieNormalSnowPea.tres" id="3"]
+[ext_resource type="Resource" uid="uid://chvyxpm81irbp" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/DamagePoint/Config/ZombieNormalDamagePointArm.tres" id="4"]
+[ext_resource type="Resource" uid="uid://cfim36uopws7u" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorCone.tres" id="5"]
+[ext_resource type="Resource" uid="uid://d4b68a6hw3c2d" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorBucket.tres" id="6"]
+[ext_resource type="Resource" uid="uid://dmgd4ygng30xn" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorScreendoor.tres" id="7"]
+[ext_resource type="Resource" uid="uid://byth0yfgejk1l" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorHelmet.tres" id="8"]
+[ext_resource type="Resource" uid="uid://clvqblkq2jo2l" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorBlackHelmet.tres" id="9"]
+[ext_resource type="Resource" uid="uid://cryuyu1d8jqbt" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/Config/ZombieNormalArmorSpecialHelmet.tres" id="10"]
+[ext_resource type="PackedScene" uid="uid://bld7b4b23mcya" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Sprite/SnowPea/ZombieNormalSnowPea.tscn" id="11"]
+[ext_resource type="PackedScene" uid="uid://b5htxrgm8twcr" path="res://Script/Component/TowerDefense/Character/FireComponent/FireComponent.tscn" id="12"]
+[ext_resource type="Script" uid="uid://crrpyxc32l472" path="res://addons/godot_state_charts/state_chart.gd" id="13"]
+[ext_resource type="Script" uid="uid://dp7fkbu3flis1" path="res://addons/godot_state_charts/compound_state.gd" id="14"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="15"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="16"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_tpna7"]
+b = Vector2(-2000, 0)
+
+[node name="TowerDefenseZombieNormalSnowPea" node_paths=PackedStringArray("sprite", "headSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+fireInterval = 1.5
+fireNum = 1
+walkAnimeClip = "Walk1&Walk2"
+swimAnimeClip = "Swim"
+dieAnimeClip = "Death1&Death2"
+dieWaterAnimeClip = "Waterdeath"
+idleAnimeClip = "Idle1&Idle2"
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieNormalSnowPea")
+headSlot = NodePath("SpriteGroup/TransformPoint/ZombieNormalSnowPea/HeadSlot")
+damagePart = {
+"Arm": ExtResource("4"),
+"BlackHelmet": ExtResource("9"),
+"Bucket": ExtResource("6"),
+"Cone": ExtResource("5"),
+"Helmet": ExtResource("8"),
+"Screendoor": ExtResource("7"),
+"SpecialHelmet": ExtResource("10")
+}
+PreviewDamagePointPersontage = 1.0
+Armor = []
+DamagePartSlot/Arm = NodePath("SpriteGroup/TransformPoint/ZombieNormalSnowPea/ArmSlot")
+DamagePartSlot/Cone = NodePath("SpriteGroup/TransformPoint/ZombieNormalSnowPea/ConeSlot")
+DamagePartSlot/Bucket = NodePath("SpriteGroup/TransformPoint/ZombieNormalSnowPea/BucketSlot")
+DamagePartSlot/Screendoor = NodePath("SpriteGroup/TransformPoint/ZombieNormalSnowPea/ScreendoorSlot")
+DamagePartSlot/Helmet = NodePath("SpriteGroup/TransformPoint/ZombieNormalSnowPea/HeadSlot")
+DamagePartSlot/BlackHelmet = NodePath("SpriteGroup/TransformPoint/ZombieNormalSnowPea/HeadSlot")
+DamagePartSlot/SpecialHelmet = NodePath("SpriteGroup/TransformPoint/ZombieNormalSnowPea/HeadSlot")
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(12, 33)
+
+[node name="ZombieNormalSnowPea" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("11")]
+position = Vector2(-12, -33)
+trueFrameRate = 30.0
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ConeSlot"), NodePath("BucketSlot"), null, NodePath("ScreendoorSlot"), null, null, NodePath("ArmSlot"), null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("Head"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="Head" parent="SpriteGroup/TransformPoint/ZombieNormalSnowPea" index="0"]
+position = Vector2(-12.01, -44.7067)
+rotation = -0.294923
+trueFrameRate = 30.0
+
+[node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/ZombieNormalSnowPea/Head" index="0"]
+position = Vector2(21.9092, -5.32209)
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieNormalSnowPea" index="1"]
+position = Vector2(-14.1882, -44.9452)
+rotation = -0.144073
+scale = Vector2(0.799423, 0.799423)
+
+[node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieNormalSnowPea" index="2"]
+position = Vector2(3.60077, 20.8756)
+rotation = -0.0959794
+scale = Vector2(0.799518, 0.799518)
+
+[node name="ConeSlot" parent="SpriteGroup/TransformPoint/ZombieNormalSnowPea" index="3"]
+position = Vector2(-12.5955, -70.4898)
+rotation = -0.230502
+scale = Vector2(0.796564, 0.796564)
+
+[node name="BucketSlot" parent="SpriteGroup/TransformPoint/ZombieNormalSnowPea" index="4"]
+position = Vector2(-15.1935, -59.8007)
+rotation = -0.277993
+scale = Vector2(0.798204, 0.798204)
+
+[node name="ScreendoorSlot" parent="SpriteGroup/TransformPoint/ZombieNormalSnowPea" index="5"]
+position = Vector2(-17.1971, 1.2947)
+rotation = -0.0531477
+scale = Vector2(0.799153, 0.799153)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(4, -2)
+
+[node name="FireComponent" parent="." index="7" node_paths=PackedStringArray("firePosMarker", "checkArea") instance=ExtResource("12")]
+unique_name_in_owner = true
+firePosMarker = [NodePath("../SpriteGroup/TransformPoint/ZombieNormalSnowPea/Head/Marker2D")]
+checkArea = NodePath("Area2D")
+fireInterval = 1.5
+
+[node name="Area2D" type="Area2D" parent="FireComponent" index="0"]
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FireComponent/Area2D" index="0"]
+shape = SubResource("SegmentShape2D_tpna7")
+
+[node name="GroundMoveComponent" parent="." index="9" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieNormalSnowPea/GroundSlot")
+
+[node name="HeadStateChart" type="Node" parent="." index="11"]
+unique_name_in_owner = true
+script = ExtResource("13")
+metadata/_custom_type_script = "uid://crrpyxc32l472"
+
+[node name="CompoundState" type="Node" parent="HeadStateChart" index="0"]
+script = ExtResource("14")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="HeadStateChart/CompoundState" index="0"]
+script = ExtResource("15")
+
+[node name="Attack" type="Node" parent="HeadStateChart/CompoundState" index="1"]
+script = ExtResource("15")
+
+[node name="ToIdle" type="Node" parent="HeadStateChart/CompoundState" index="2"]
+script = ExtResource("16")
+to = NodePath("../Idle")
+event = &"ToIdle"
+delay_in_seconds = "0.0"
+
+[node name="ToAttack" type="Node" parent="HeadStateChart/CompoundState" index="3"]
+script = ExtResource("16")
+to = NodePath("../Attack")
+event = &"ToAttack"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="HeadStateChart/CompoundState/Idle" to="." method="HeadIdleEntered"]
+[connection signal="state_exited" from="HeadStateChart/CompoundState/Idle" to="." method="HeadIdleExited"]
+[connection signal="state_physics_processing" from="HeadStateChart/CompoundState/Idle" to="." method="HeadIdleProcessing"]
+[connection signal="state_entered" from="HeadStateChart/CompoundState/Attack" to="." method="HeadAttackEntered"]
+[connection signal="state_exited" from="HeadStateChart/CompoundState/Attack" to="." method="HeadAttackExited"]
+[connection signal="state_physics_processing" from="HeadStateChart/CompoundState/Attack" to="." method="HeadAttackProcessing"]
+
+[editable path="SpriteGroup/TransformPoint/ZombieNormalSnowPea"]

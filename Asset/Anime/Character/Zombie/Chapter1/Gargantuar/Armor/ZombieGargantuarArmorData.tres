@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="CharacterArmorData" load_steps=8 format=4 uid="uid://dh747hr104fqi"]
+
+[ext_resource type="Resource" uid="uid://c4v416ks2xk7j" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/Armor/Config/ZombieGargantuarArmorBlackHelmet.tres" id="1"]
+[ext_resource type="Resource" uid="uid://c1eumy3cpy2a0" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/Armor/Config/ZombieGargantuarArmorBucket.tres" id="2"]
+[ext_resource type="Resource" uid="uid://cuby4qhrxt5uo" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/Armor/Config/ZombieGargantuarArmorHelmet.tres" id="3"]
+[ext_resource type="Resource" uid="uid://bj3dms6cau0di" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/Armor/Config/ZombieGargantuarArmorScreendoor.tres" id="4"]
+[ext_resource type="Resource" uid="uid://dhhuc6aqb3fn0" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/Armor/Config/ZombieGargantuarArmorShield.tres" id="5"]
+[ext_resource type="Resource" uid="uid://3hqi6b5h245c" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/Armor/Config/ZombieGargantuarArmorSpecialHelmet.tres" id="6"]
+[ext_resource type="Script" uid="uid://ci4c6gpjugqpl" path="res://Resource/General/Character/Armor/CharacterArmorData.gd" id="7"]
+
+[resource]
+script = ExtResource("7")
+armorList = [ExtResource("2"), ExtResource("1"), ExtResource("6"), ExtResource("4"), ExtResource("5"), ExtResource("3")]
+armorDictionary = {
+"BlackHelmet": ExtResource("1"),
+"Bucket": ExtResource("2"),
+"Helmet": ExtResource("3"),
+"Screendoor": ExtResource("4"),
+"Shield": ExtResource("5"),
+"SpecialHelmet": ExtResource("6")
+}
+fliterAllDictionary = {
+"BlackHelmet": ["zombie_football_helmet"],
+"Bucket": ["anim_bucket"],
+"Helmet": [],
+"Screendoor": ["anim_screendoor"],
+"Shield": ["anim_screendoor"],
+"SpecialHelmet": []
+}
+fliterOpenDictionary = {
+"BlackHelmet": [],
+"Bucket": [],
+"Helmet": [],
+"Screendoor": [],
+"Shield": [],
+"SpecialHelmet": []
+}
+fliterCloseDictionary = {
+"BlackHelmet": [],
+"Bucket": [],
+"Helmet": [],
+"Screendoor": [],
+"Shield": [],
+"SpecialHelmet": []
+}

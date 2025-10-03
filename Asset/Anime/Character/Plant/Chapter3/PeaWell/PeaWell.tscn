@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=4 uid="uid://bb4wjwvli0ees"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://dybqxxhnk4e50" path="res://Asset/Anime/Character/Plant/Chapter3/PeaWell/PeaWell.tres" id="2"]
+
+[node name="PeaWell" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/1 = true
+Animation/LayerVisible/10 = true
+Animation/LayerVisible/11 = true
+Animation/LayerVisible/12 = true
+Animation/LayerVisible/13 = true
+Animation/LayerVisible/14 = true
+Animation/LayerVisible/15 = true
+Animation/LayerVisible/16 = true
+Animation/LayerVisible/17 = true
+Animation/LayerVisible/18 = true
+Animation/LayerVisible/19 = true
+Animation/LayerVisible/2 = true
+Animation/LayerVisible/3 = true
+Animation/LayerVisible/4 = true
+Animation/LayerVisible/5 = true
+Animation/LayerVisible/6 = true
+Animation/LayerVisible/7 = true
+Animation/LayerVisible/8 = true
+Animation/LayerVisible/9 = true
+Animation/LayerVisible/AnimeClips = true
+Animation/MediaReplace/PeaWell_01.png = null
+Animation/MediaReplace/PeaWell_02.png = null
+Animation/MediaReplace/PeaWell_03.png = null
+Animation/MediaReplace/PeaWell_04.png = null
+Animation/MediaReplace/PeaWell_05.png = null
+Animation/MediaReplace/PeaWell_06.png = null
+Animation/MediaReplace/PeaWell_07.png = null
+Animation/MediaReplace/PeaWell_08.png = null
+Animation/MediaReplace/PeaWell_09.png = null
+Animation/MediaReplace/PeaWell_10.png = null
+Animation/MediaReplace/PeaWell_11.png = null
+Animation/MediaReplace/PeaWell_12.png = null
+Animation/MediaReplace/PeaWell_13.png = null
+Animation/MediaReplace/PeaWell_14.png = null
+Animation/MediaReplace/PeaWell_15.png = null
+Animation/MediaReplace/PeaWell_16.png = null
+Animation/MediaReplace/PeaWell_17.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

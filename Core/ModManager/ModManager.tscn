@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=4 uid="uid://db4utxyw2bk1x"]
+
+[ext_resource type="Script" uid="uid://ya4ti5nq8ljf" path="res://Core/ModManager/ModManager.gd" id="1"]
+
+[node name="ModManager" type="Node"]
+script = ExtResource("1")

@@ -1,0 +1,47 @@
+[gd_scene load_steps=10 format=4 uid="uid://bp3ohvijwolsf"]
+
+[ext_resource type="PackedScene" uid="uid://colk7liw31q6k" path="res://Prefab/TowerDefense/Character/TowerDefensePlantBowlingBase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://ceemq62qjg3kh" path="res://Asset/Anime/Character/Plant/Chapter1/Magnetnut/Scene/TowerDefensePlantBowlingMagnetnut.gd" id="2"]
+[ext_resource type="Script" uid="uid://dvyancfxatcgc" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventBowlingHurt.gd" id="3"]
+[ext_resource type="Resource" uid="uid://da1vcyx6hqlsi" path="res://Asset/Anime/Character/Plant/Chapter1/Magnetnut/Config/TowerDefensePlantMagnetnutBowling.tres" id="4"]
+[ext_resource type="PackedScene" uid="uid://csp3p80bpd1cn" path="res://Asset/Anime/Character/Plant/Chapter1/Magnetnut/Magnetnut.tscn" id="5"]
+[ext_resource type="Texture2D" uid="uid://clumw8rogu0a5" path="res://Asset/Anime/Character/Plant/Chapter1/Magnetnut/DamagePoint/MagnetnutBody.png" id="6"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="7"]
+[ext_resource type="PackedScene" uid="uid://becnacp2r6c0g" path="res://Script/Component/TowerDefense/Character/MagnetComponent/MagnetComponent.tscn" id="8"]
+
+[sub_resource type="Resource" id="Resource_yfdda"]
+script = ExtResource("3")
+num = 1800.0
+dir = "Front"
+burns = true
+metadata/_custom_type_script = "uid://dvyancfxatcgc"
+
+[node name="TowerDefensePlantBowlingMagnetnut" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+hitEvent = [SubResource("Resource_yfdda")]
+config = ExtResource("4")
+sprite = NodePath("SpriteGroup/TransformPoint/Magnetnut")
+PreviewDamagePointPersontage = 1.0
+
+[node name="Magnetnut" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("5")]
+position = Vector2(0, -30)
+layerSlot = [null, null, NodePath("AdobeAnimateSlot"), null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null]
+Animation/Clip = "Roll"
+Animation/MediaReplace/MagnetNut.png = ExtResource("6")
+
+[node name="AdobeAnimateSlot" type="Node2D" parent="SpriteGroup/TransformPoint/Magnetnut" index="0"]
+position = Vector2(14.0755, -41.2708)
+rotation = 0.251325
+scale = Vector2(0.599986, 0.619815)
+script = ExtResource("7")
+followSlotId = 3
+offset = Vector2(65, 60)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/Magnetnut/AdobeAnimateSlot" index="0"]
+
+[node name="MagnetComponent" parent="." index="8" node_paths=PackedStringArray("posMarker") instance=ExtResource("8")]
+unique_name_in_owner = true
+posMarker = NodePath("../SpriteGroup/TransformPoint/Magnetnut/AdobeAnimateSlot/Marker2D")
+checkRange = Vector2(1.5, 1.5)

@@ -1,0 +1,288 @@
+[gd_scene load_steps=14 format=4 uid="uid://7s2pv78sxbll"]
+
+[ext_resource type="Script" uid="uid://bbs10g4vqw0ts" path="res://Prefab/GUI/DialogBox/OnlineLevel/OnlineLevelPreview.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://c855vjpdgvpr" path="res://Asset/Texture/GUI/DailyChallenge/DailyChallengeBG.png" id="2"]
+[ext_resource type="FontFile" uid="uid://bibg4dobk6vpn" path="res://Asset/Font/fzjz.ttf" id="3"]
+[ext_resource type="Texture2D" uid="uid://biewbfqqa138j" path="res://Asset/Texture/GUI/LevelEditor/LevelEditorMapShowBox.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dwwg5awviq8g2" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/Frontlawn.jpg" id="5"]
+[ext_resource type="Texture2D" uid="uid://dag3demp8ma71" path="res://Asset/Texture/GUI/LevelEditor/OnlineLevelPlayedNum.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://d0smlukjcx1r6" path="res://Asset/Texture/GUI/DailyChallenge/DailyChallengeCloseButton.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://5lvxpd7jaoc4" path="res://Asset/Texture/GUI/DailyChallenge/DailyChallengeCloseButtonPress.png" id="8"]
+[ext_resource type="PackedScene" uid="uid://bml60wmq62jay" path="res://Prefab/GUI/Button/MainButton.tscn" id="9"]
+[ext_resource type="Texture2D" uid="uid://becxfsjmy31td" path="res://Asset/Texture/GUI/DailyChallenge/DailyChallengePlayButton.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://c3mh3bdn1qs1k" path="res://Asset/Texture/GUI/DailyChallenge/DailyChallengePlayButtonPress.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://dg1a7i375fjlt" path="res://Asset/Texture/GUI/LevelEditor/OnlineLevelCollectionDiabled.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://bmlvcwwbxh3xe" path="res://Asset/Texture/GUI/LevelEditor/OnlineLevelCollection.png" id="13"]
+
+[node name="OnlineLevelPreview" type="Control" node_paths=PackedStringArray("dragControl")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+dragControl = NodePath("Layer/BackgroundTexture")
+metadata/_custom_type_script = "uid://b4l86rhpq35q0"
+
+[node name="LevelInformationGetHTTPRequest" type="HTTPRequest" parent="."]
+unique_name_in_owner = true
+
+[node name="Layer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="ColorRect" type="ColorRect" parent="Layer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="BackgroundTexture" type="TextureRect" parent="Layer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -486.0
+offset_top = -364.0
+offset_right = 486.0
+offset_bottom = 364.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.675, 0.675)
+pivot_offset = Vector2(486, 364)
+texture = ExtResource("2")
+metadata/_edit_lock_ = true
+
+[node name="TextLabel" type="Label" parent="Layer/BackgroundTexture"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 0
+offset_left = 299.0
+offset_right = 665.0
+offset_bottom = 85.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 48
+text = "关卡预览"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelEditorMapShowBox" type="TextureRect" parent="Layer/BackgroundTexture"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.026
+anchor_right = 0.026
+offset_left = 91.839
+offset_top = 103.259
+offset_right = 538.839
+offset_bottom = 542.259
+scale = Vector2(0.75, 0.75)
+mouse_filter = 2
+texture = ExtResource("4")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="NameLabel" type="Label" parent="Layer/BackgroundTexture/LevelEditorMapShowBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.719
+anchor_top = 0.453
+anchor_right = 0.719
+anchor_bottom = 0.453
+offset_left = -273.393
+offset_top = 137.133
+offset_right = 70.607
+offset_bottom = 209.133
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 32
+text = "加载中..."
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="MapMask" type="ColorRect" parent="Layer/BackgroundTexture/LevelEditorMapShowBox"]
+show_behind_parent = true
+clip_children = 1
+layout_mode = 1
+anchors_preset = -1
+offset_left = 48.0
+offset_top = 48.0
+offset_right = 400.0
+offset_bottom = 314.0
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="MapTexture" type="TextureRect" parent="Layer/BackgroundTexture/LevelEditorMapShowBox/MapMask"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -24.0
+offset_right = 2424.0
+offset_bottom = 934.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.225, 0.225)
+mouse_filter = 2
+texture = ExtResource("5")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="AuthorLabel" type="RichTextLabel" parent="Layer/BackgroundTexture"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 467.0
+offset_top = 119.0
+offset_right = 835.0
+offset_bottom = 148.0
+mouse_filter = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "作者:加载中..."
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="LevelIDLabel" type="RichTextLabel" parent="Layer/BackgroundTexture"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 466.741
+offset_top = 158.074
+offset_right = 834.741
+offset_bottom = 187.074
+mouse_filter = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "关卡ID:加载中..."
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="DescribeLabel" type="RichTextLabel" parent="Layer/BackgroundTexture"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 467.0
+offset_top = 194.0
+offset_right = 834.0
+offset_bottom = 318.0
+mouse_filter = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "简介:加载中..."
+metadata/_edit_lock_ = true
+
+[node name="PlayedNumTexture" type="TextureRect" parent="Layer/BackgroundTexture"]
+layout_mode = 0
+offset_left = 453.407
+offset_top = 319.556
+offset_right = 520.407
+offset_bottom = 393.556
+texture = ExtResource("6")
+
+[node name="PlayedNumLabel" type="RichTextLabel" parent="Layer/BackgroundTexture/PlayedNumTexture"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 61.0
+offset_top = 24.0
+offset_right = 259.0
+offset_bottom = 53.0
+mouse_filter = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "游玩次数:加载中..."
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+
+[node name="DateLabel" type="RichTextLabel" parent="Layer/BackgroundTexture"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 471.185
+offset_top = 532.889
+offset_right = 838.185
+offset_bottom = 562.889
+mouse_filter = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "上传日期:加载中..."
+
+[node name="CloseButton" type="TextureButton" parent="Layer/BackgroundTexture"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 877.111
+offset_top = 18.8148
+offset_right = 920.111
+offset_bottom = 58.8148
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("7")
+texture_pressed = ExtResource("8")
+texture_hover = ExtResource("8")
+
+[node name="PlayButton" parent="Layer/BackgroundTexture" instance=ExtResource("9")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 289.0
+offset_top = 609.0
+offset_right = 675.0
+offset_bottom = 694.0
+texture_normal = ExtResource("10")
+texture_pressed = ExtResource("10")
+texture_hover = ExtResource("11")
+text = "进入挑战"
+
+[node name="TextLabel" parent="Layer/BackgroundTexture/PlayButton" index="0"]
+offset_left = 14.8148
+offset_right = 380.815
+offset_bottom = 85.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 48
+text = "进入挑战"
+
+[node name="CollectionButton" type="TextureButton" parent="Layer/BackgroundTexture"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 134.889
+offset_top = 454.37
+offset_right = 201.889
+offset_bottom = 528.37
+mouse_default_cursor_shape = 2
+disabled = true
+toggle_mode = true
+texture_normal = ExtResource("12")
+texture_pressed = ExtResource("13")
+
+[node name="CollectionLabel" type="RichTextLabel" parent="Layer/BackgroundTexture/CollectionButton"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 65.0
+offset_right = 66.0
+offset_bottom = 96.0
+mouse_filter = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "收藏"
+scroll_active = false
+
+[connection signal="request_completed" from="LevelInformationGetHTTPRequest" to="." method="LevelInformationGetHTTPRequestCompleted"]
+[connection signal="pressed" from="Layer/BackgroundTexture/CloseButton" to="." method="CloseButtonPressed"]
+[connection signal="pressed" from="Layer/BackgroundTexture/PlayButton" to="." method="PlayButtonPressed"]
+
+[editable path="Layer/BackgroundTexture/PlayButton"]

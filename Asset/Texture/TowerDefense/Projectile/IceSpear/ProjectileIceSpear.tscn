@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=4 uid="uid://bnl0hms7upsbj"]
+
+[ext_resource type="Texture2D" uid="uid://bfdqahlcysohd" path="res://Asset/Texture/TowerDefense/Projectile/IceSpear/ProjectileIceSpear.png" id="1"]
+
+[node name="ProjectileIceSpear" type="Sprite2D"]
+texture = ExtResource("1")

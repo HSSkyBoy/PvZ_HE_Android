@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="TowerDefenseZombieConfig" load_steps=3 format=4 uid="uid://bojy8x64r08hk"]
+
+[ext_resource type="Resource" uid="uid://o1h2t1pe8sx7" path="res://Asset/Anime/Character/Zombie/Chapter2/Zamboni/DamagePoint/ZombieZamboniDamagePointData.tres" id="1"]
+[ext_resource type="Script" uid="uid://fq0affmtew5n" path="res://Resource/TowerDefense/Character/Config/TowerDefenseZombieConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+physique = 5
+attack = 0.0
+smashAttack = 10000.0
+impactAudio = "ShieldHit"
+weight = 3000
+wavePointCost = 400
+canSpawnPlantfood = true
+excludeLineGridType = []
+name = "ZombieZamboni"
+hitpointsNearDeath = 0.0
+hitpoints = 1350.0
+smashHurt = -1.0
+spikeHurt = -1.0
+sleepTime = "Never"
+height = 2
+damagePointData = ExtResource("1")
+armorData = null
+customData = null
+ashScene = null
+homeWorld = 1
+costRise = -1
+cost = 225
+packetCooldown = 7.5
+startingCooldown = 0.0
+plantCover = []
+plantCoverRecycle = []
+plantGridType = [-1]
+plantGridOverrideType = 0
+collisionFlags = 9
+maskFlags = 9
+unUseBuffFlags = 7
+physiqueTypeFlags = 0
+elementFlags = 0
+Flag/Collision = 9
+Flag/Mask = 9
+Flag/UnUseBuff = 7
+Flag/PhysiqueType = 0
+Flag/Elemet = 0

@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=4 uid="uid://nbjvjnrei6vi"]
+
+[ext_resource type="PackedScene" uid="uid://clpu43psaiqf2" path="res://Prefab/TowerDefense/Projectile/ProjectileEffect/TowerDefenseProjectileEffectBase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bg4l441ftyqrf" path="res://Prefab/ProjectileEffect/PlanternSix/TowerDefenseProjectileEffectPlanternSix.gd" id="2"]
+
+[node name="TowerDefenseProjectileEffectPlanternSix" instance=ExtResource("1")]
+script = ExtResource("2")

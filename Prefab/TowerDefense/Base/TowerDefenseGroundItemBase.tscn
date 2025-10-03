@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=4 uid="uid://o7sgb44iah6m"]
+
+[ext_resource type="Script" uid="uid://b6wb8sl7c1gwj" path="res://Prefab/TowerDefense/Base/TowerDefenseGroundItemBase.gd" id="1"]
+
+[node name="TowerDefenseGroundItemBase" type="Node2D"]
+z_index = -15
+script = ExtResource("1")
+metadata/_custom_type_script = "uid://cisaddc15ap6u"

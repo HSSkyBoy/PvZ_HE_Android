@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=4 uid="uid://citia6twnyck"]
+
+[ext_resource type="Texture2D" uid="uid://bia41jucilou" path="res://Asset/Anime/Particles/Splats/PeaSplats.png" id="1"]
+[ext_resource type="Material" uid="uid://dd13ik1r0o6gq" path="res://Prefab/Particles/Splats/PeaSplats/PeaSplats.tres" id="2"]
+[ext_resource type="Script" uid="uid://dywgdjamo0ovs" path="res://Extends/Particles/GPUParticles2DOnece.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://d3jjhc3a42u3n" path="res://Asset/Anime/Particles/Splats/PeaParticles.png" id="4"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wiwmn"]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ek2em"]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[node name="PeaSplats" type="GPUParticles2D"]
+material = SubResource("CanvasItemMaterial_wiwmn")
+emitting = false
+amount = 6
+texture = ExtResource("1")
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+process_material = ExtResource("2")
+script = ExtResource("3")
+
+[node name="PeaParticles" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_ek2em")
+emitting = false
+amount = 6
+texture = ExtResource("4")
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+process_material = ExtResource("2")

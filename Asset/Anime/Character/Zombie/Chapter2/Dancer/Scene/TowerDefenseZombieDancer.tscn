@@ -1,0 +1,107 @@
+[gd_scene load_steps=15 format=4 uid="uid://dnixqu1tjefg8"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://g32ge1v4t6tu" path="res://Asset/Anime/Character/Zombie/Chapter2/Dancer/Scene/TowerDefenseZombieDancer.gd" id="2"]
+[ext_resource type="Resource" uid="uid://ccpssdws2t0dx" path="res://Asset/Anime/Character/Zombie/Chapter2/Dancer/Config/TowerDefenseZombieDancer.tres" id="3"]
+[ext_resource type="Resource" uid="uid://dq16ntvxrqymh" path="res://Asset/Anime/Character/Zombie/Chapter2/Dancer/DamagePoint/Config/ZombieDancerDamagePointArm.tres" id="4"]
+[ext_resource type="Resource" uid="uid://dyd4fq2payoyt" path="res://Asset/Anime/Character/Zombie/Chapter2/Dancer/DamagePoint/Config/ZombieDancerDamagePointHead.tres" id="5"]
+[ext_resource type="Resource" uid="uid://bdi75ybw0by0n" path="res://Asset/Anime/Character/Zombie/Chapter2/Dancer/Armor/Config/ZombieDancerArmorBlackHelmet.tres" id="6"]
+[ext_resource type="Resource" uid="uid://vios8de3nrua" path="res://Asset/Anime/Character/Zombie/Chapter2/Dancer/Armor/Config/ZombieDancerArmorBucket.tres" id="7"]
+[ext_resource type="Resource" uid="uid://bnoux24n57ehe" path="res://Asset/Anime/Character/Zombie/Chapter2/Dancer/Armor/Config/ZombieDancerArmorCone.tres" id="8"]
+[ext_resource type="Resource" uid="uid://xj8ud8lih3bs" path="res://Asset/Anime/Character/Zombie/Chapter2/Dancer/Armor/Config/ZombieDancerArmorHelmet.tres" id="9"]
+[ext_resource type="Resource" uid="uid://1y3hm6jsmfbb" path="res://Asset/Anime/Character/Zombie/Chapter2/Dancer/Armor/Config/ZombieDancerArmorSpecialHelmet.tres" id="10"]
+[ext_resource type="PackedScene" uid="uid://boehcm445gww" path="res://Asset/Anime/Character/Zombie/Chapter2/Dancer/ZombieDancer.tscn" id="11"]
+[ext_resource type="PackedScene" uid="uid://bjm31m10ujp84" path="res://Asset/Anime/Character/Zombie/WaterLine/ZombieWaterLine.tscn" id="12"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="13"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="14"]
+
+[node name="TowerDefenseZombieDancer" node_paths=PackedStringArray("duckytobeSprite", "waterLineSprite", "sprite", "headSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+duckytobeSprite = NodePath("SpriteGroup/TransformPoint/ZombieDancer/ZombieDuckytube")
+waterLineSprite = NodePath("SpriteGroup/TransformPoint/ZombieWaterLine")
+garlicReplace = "Zombie_dancer__head.png"
+waterHeightPersontage = 0.73
+idleAnimeClip = "Walk"
+sleepAnimeClip = "Walk"
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieDancer")
+headSlot = NodePath("SpriteGroup/TransformPoint/ZombieDancer/HeadSlot")
+damagePart = {
+"Arm": ExtResource("4"),
+"BlackHelmet": ExtResource("6"),
+"Bucket": ExtResource("7"),
+"Cone": ExtResource("8"),
+"Head": ExtResource("5"),
+"Helmet": ExtResource("9"),
+"SpecialHelmet": ExtResource("10")
+}
+PreviewDamagePointPersontage = 1.0
+Armor = []
+DamagePartSlot/Arm = NodePath("SpriteGroup/TransformPoint/ZombieDancer/ArmSlot")
+DamagePartSlot/Head = NodePath("SpriteGroup/TransformPoint/ZombieDancer/HeadSlot")
+DamagePartSlot/BlackHelmet = NodePath("SpriteGroup/TransformPoint/ZombieDancer/HeadSlot")
+DamagePartSlot/Bucket = NodePath("SpriteGroup/TransformPoint/ZombieDancer/HeadSlot")
+DamagePartSlot/Cone = NodePath("SpriteGroup/TransformPoint/ZombieDancer/HeadSlot")
+DamagePartSlot/Helmet = NodePath("SpriteGroup/TransformPoint/ZombieDancer/HeadSlot")
+DamagePartSlot/SpecialHelmet = NodePath("SpriteGroup/TransformPoint/ZombieDancer/HeadSlot")
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(12, 33)
+
+[node name="ZombieDancer" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("11")]
+position = Vector2(-12, -33)
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, null, null, NodePath("ArmSlot"), null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ZombieDuckytube"), null, null, null, null, null, null, null, null, null]
+
+[node name="ZombieDuckytube" parent="SpriteGroup/TransformPoint/ZombieDancer" index="0"]
+position = Vector2(18.43, -60.57)
+rotation = 0.297621
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieDancer" index="1"]
+position = Vector2(21.1152, -56.6349)
+
+[node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieDancer" index="2"]
+position = Vector2(20.3114, -51.7997)
+rotation = -3.00986
+scale = Vector2(0.794117, 1.03363)
+
+[node name="GroundSlot" parent="SpriteGroup/TransformPoint/ZombieDancer" index="3"]
+position = Vector2(-44.15, -40)
+
+[node name="ZombieWaterLine" parent="SpriteGroup/TransformPoint" index="1" instance=ExtResource("12")]
+visible = false
+position = Vector2(3, -46)
+useTween = true
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(4, -2)
+
+[node name="GroundMoveComponent" parent="." index="8" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieDancer/GroundSlot")
+
+[node name="Dance" type="Node" parent="StateChart/CompoundState" index="6"]
+script = ExtResource("13")
+
+[node name="Point" type="Node" parent="StateChart/CompoundState" index="7"]
+script = ExtResource("13")
+
+[node name="ToDance" type="Node" parent="StateChart/CompoundState" index="14"]
+script = ExtResource("14")
+to = NodePath("../Dance")
+event = &"ToDance"
+delay_in_seconds = "0.0"
+
+[node name="ToPoint" type="Node" parent="StateChart/CompoundState" index="15"]
+script = ExtResource("14")
+to = NodePath("../Point")
+event = &"ToPoint"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="StateChart/CompoundState/Dance" to="." method="DanceEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Dance" to="." method="DanceExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Dance" to="." method="DanceProcessing"]
+[connection signal="state_entered" from="StateChart/CompoundState/Point" to="." method="PointEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Point" to="." method="PointExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Point" to="." method="PointProcessing"]
+
+[editable path="SpriteGroup/TransformPoint/ZombieDancer"]

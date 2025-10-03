@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=4 uid="uid://d4fhj4dbwdu5j"]
+
+[ext_resource type="PackedScene" uid="uid://uawo0nxcj2ji" path="res://Prefab/TowerDefense/Character/TowerDefenseItem.tscn" id="1"]
+[ext_resource type="Script" uid="uid://hmxeph85jcmj" path="res://Asset/Anime/Character/Item/Ladder/Scene/TowerDefenseItemLadder.gd" id="2"]
+[ext_resource type="Resource" uid="uid://cvp7icdrs0cf6" path="res://Asset/Anime/Character/Item/Ladder/Config/TowerDefenseItemLadder.tres" id="3"]
+[ext_resource type="Resource" uid="uid://kck8h8xr4un3" path="res://Asset/Anime/Character/Item/Ladder/Armor/Config/ItemLadderArmorLadder.tres" id="4"]
+[ext_resource type="PackedScene" uid="uid://b3j878ksst3c3" path="res://Asset/Anime/Character/Item/Ladder/Ladder.tscn" id="5"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="6"]
+
+[node name="TowerDefenseItemLadder" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+z_index = -9
+script = ExtResource("2")
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/Ladder")
+camp = 2
+damagePart = {
+"Ladder": ExtResource("4")
+}
+Armor = ["Ladder"]
+DamagePartSlot/Ladder = NodePath("SpriteGroup/TransformPoint/Ladder/AdobeAnimateSlot")
+itemLayer = 6
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 37)
+
+[node name="Ladder" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("5")]
+position = Vector2(0, -37)
+trueFrameRate = 30.0
+
+[node name="AdobeAnimateSlot" type="Node2D" parent="SpriteGroup/TransformPoint/Ladder" index="0"]
+position = Vector2(20.0001, -2.99981)
+scale = Vector2(0.800003, 0.800003)
+script = ExtResource("6")
+followSlotId = 1
+offset = Vector2(50, 65)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ShadowSprite" parent="." index="3"]
+visible = false
+position = Vector2(12, 36)
+
+[editable path="SpriteGroup/TransformPoint/Ladder"]

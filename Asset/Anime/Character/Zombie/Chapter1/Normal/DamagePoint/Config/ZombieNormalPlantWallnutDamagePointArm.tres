@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharacterDamagePointConfig" load_steps=3 format=4 uid="uid://bj7i58sh5mr24"]
+
+[ext_resource type="Texture2D" uid="uid://cog5ooewiq3k7" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/DamagePoint/Zombie_outerarm_upper2.png" id="1"]
+[ext_resource type="Script" uid="uid://8vg1ajd1i4ps" path="res://Resource/General/Character/DamagePoint/CharacterDamagePointConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+damagePointName = "Arm"
+damagePersontage = 0.05
+animeEffect = null
+animeEffectOffset = Vector2(0, 0)
+isDrop = true
+animeFliterOpen = ""
+animeFliterClose = "Zombie_outerarm_hand&Zombie_outerarm_lower&Zombie_outerarm_screendoor"
+replaceMediaName = &"Zombie_outerarm_upper.png"
+replaceMediaTexture = ExtResource("1")
+damageAudio = "LimbsPop"
+metadata/_custom_type_script = "uid://8vg1ajd1i4ps"

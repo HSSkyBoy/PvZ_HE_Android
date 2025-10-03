@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=4 uid="uid://braejccboptom"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://cwc4il08hf7vh" path="res://Asset/Anime/Character/Mower/PoolCleaner/PoolCleaner.tres" id="2"]
+
+[node name="PoolCleaner" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-32, -4)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Land"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/PoolCleaner_backwheel1 = true
+Animation/LayerVisible/PoolCleaner_backwheel2 = true
+Animation/LayerVisible/PoolCleaner_body = true
+Animation/LayerVisible/PoolCleaner_body2 = true
+Animation/LayerVisible/PoolCleaner_bubble = true
+Animation/LayerVisible/PoolCleaner_frontwheel1 = true
+Animation/LayerVisible/PoolCleaner_frontwheel11 = true
+Animation/LayerVisible/PoolCleaner_funnel = true
+Animation/LayerVisible/PoolCleaner_funnel_overlay = true
+Animation/LayerVisible/PoolCleaner_tube = true
+Animation/LayerVisible/PoolCleaner_tubeend = true
+Animation/LayerVisible/PoolCleaner_whitewater = true
+Animation/MediaReplace/PoolCleaner_body1.png = null
+Animation/MediaReplace/PoolCleaner_body2.png = null
+Animation/MediaReplace/PoolCleaner_bubble.png = null
+Animation/MediaReplace/PoolCleaner_funnel.png = null
+Animation/MediaReplace/PoolCleaner_funnel_overlay.png = null
+Animation/MediaReplace/PoolCleaner_tube.png = null
+Animation/MediaReplace/PoolCleaner_tubeend.png = null
+Animation/MediaReplace/PoolCleaner_wheel.png = null
+Animation/MediaReplace/PoolCleaner_whitewater1.png = null
+Animation/MediaReplace/PoolCleaner_whitewater2.png = null
+Animation/MediaReplace/PoolCleaner_whitewater3.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

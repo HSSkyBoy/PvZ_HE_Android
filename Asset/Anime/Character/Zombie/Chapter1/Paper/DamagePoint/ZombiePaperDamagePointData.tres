@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CharacterDamagePointData" load_steps=4 format=4 uid="uid://c8xxmfqfits6q"]
+
+[ext_resource type="Resource" uid="uid://c2mqh3r8jnnma" path="res://Asset/Anime/Character/Zombie/Chapter1/Paper/DamagePoint/Config/ZombiePaperDamagePointArm.tres" id="1"]
+[ext_resource type="Resource" uid="uid://b2fo0h5w2lsk6" path="res://Asset/Anime/Character/Zombie/Chapter1/Paper/DamagePoint/Config/ZombiePaperDamagePointHead.tres" id="2"]
+[ext_resource type="Script" uid="uid://c3lvn8julbk1s" path="res://Resource/General/Character/DamagePoint/CharacterDamagePointData.gd" id="3"]
+
+[resource]
+script = ExtResource("3")
+damagePointList = [ExtResource("1"), ExtResource("2")]
+damagePointDictionary = {
+"Arm": {
+"Close": ["Zombie_paper_hands", "Zombie_paper_leftarm_lower"],
+"Config": ExtResource("1"),
+"Open": []
+},
+"Head": {
+"Close": ["anim_head1", "anim_head_look", "anim_hair", "anim_head_pupils", "anim_head_glasses", "anim_hairpiece", "anim_head_jaw"],
+"Config": ExtResource("2"),
+"Open": []
+}
+}
+fliterOpenAll = []
+fliterCloseAll = ["Zombie_paper_hands", "Zombie_paper_leftarm_lower", "anim_head1", "anim_head_look", "anim_hair", "anim_head_pupils", "anim_head_glasses", "anim_hairpiece", "anim_head_jaw"]
+metadata/_custom_type_script = "uid://c3lvn8julbk1s"

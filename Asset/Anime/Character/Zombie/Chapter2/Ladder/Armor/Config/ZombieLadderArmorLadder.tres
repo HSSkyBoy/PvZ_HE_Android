@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CharacterArmorConfig" load_steps=5 format=4 uid="uid://cvi786vt7onjw"]
+
+[ext_resource type="Script" uid="uid://3gswocg6uh6g" path="res://Resource/General/Character/Armor/CharacterArmorConfig.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dmy6r3e0n0oco" path="res://Asset/Texture/Character/Armor/Ladder/ZombieLadder1.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dchsojwhk68f4" path="res://Asset/Texture/Character/Armor/Ladder/ZombieLadder2.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://jarclo1yaibl" path="res://Asset/Texture/Character/Armor/Ladder/ZombieLadder3.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+armorName = "Ladder"
+damagePoint = 500.0
+stagePersontage = [0.666, 0.333]
+replaceMethod = "Media"
+replaceSpriteSlotPath = NodePath("")
+replaceSpriteRotation = 0.0
+replaceSpriteScale = Vector2(1, 1)
+replaceSpriteOffset = Vector2(0, 0)
+replaceMediaName = &"Zombie_ladder_1.png"
+stageAnimeTexture = [ExtResource("2"), ExtResource("3"), ExtResource("4")]
+openFliter = ""
+closeFliter = ""
+destroyFliter = "Zombie_ladder_1"
+impactAudio = "ShieldHit"
+damageAudio = ""
+explodePersontage = 1.0
+armorMethodFlags = 212
+Flag/Method = 212

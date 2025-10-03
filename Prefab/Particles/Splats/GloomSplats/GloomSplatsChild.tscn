@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=4 uid="uid://dlt2insnae31l"]
+
+[ext_resource type="Texture2D" uid="uid://bgqrj8e8qsgw8" path="res://Asset/Texture/TowerDefense/Projectile/PuffShroom/ProjectilePuffShroomPuff.png" id="1"]
+[ext_resource type="Material" uid="uid://cil8qofcu6vsa" path="res://Prefab/Particles/Splats/GloomSplats/GloomSplats.tres" id="2"]
+
+[node name="GloomSplats" type="GPUParticles2D"]
+emitting = false
+texture = ExtResource("1")
+lifetime = 0.25
+one_shot = true
+explosiveness = 0.5
+local_coords = true
+process_material = ExtResource("2")

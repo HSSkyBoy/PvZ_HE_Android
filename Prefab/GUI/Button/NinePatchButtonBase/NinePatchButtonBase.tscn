@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=4 uid="uid://bgkuthysw0876"]
+
+[ext_resource type="Script" uid="uid://caeks3y038rpd" path="res://Prefab/GUI/Button/NinePatchButtonBase/NinePatchButtonBase.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cf0u8b2j0xlep" path="res://Asset/Texture/GUI/General/Old/Button/PacketBankButton.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://cdmktov724pvn" path="res://Asset/Texture/GUI/General/Old/Button/PacketBankButtonDown.png" id="3"]
+[ext_resource type="FontFile" uid="uid://coqskwlqtnypf" path="res://Asset/Font/fzkt.ttf" id="4"]
+
+[node name="NinePatchButtonBase" type="MarginContainer"]
+light_mask = 0
+offset_right = 156.0
+offset_bottom = 42.0
+script = ExtResource("1")
+text = "START_GAME"
+normalTexture = ExtResource("2")
+pressedTexture = ExtResource("3")
+hoverTexture = ExtResource("3")
+
+[node name="NinePatchTexture" type="NinePatchRect" parent="."]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+mouse_filter = 1
+texture = ExtResource("2")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+light_mask = 0
+layout_mode = 2
+
+[node name="LabelText" type="Label" parent="CenterContainer"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 0.662745, 0.478431, 1)
+theme_override_fonts/font = ExtResource("4")
+theme_override_font_sizes/font_size = 20
+text = "START_GAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+
+[connection signal="button_down" from="TextureButton" to="." method="ButtonDown"]
+[connection signal="button_up" from="TextureButton" to="." method="ButtonUp"]
+[connection signal="mouse_entered" from="TextureButton" to="." method="_MouseEntered"]
+[connection signal="mouse_exited" from="TextureButton" to="." method="_MouseExited"]
+[connection signal="pressed" from="TextureButton" to="." method="_Pressed"]

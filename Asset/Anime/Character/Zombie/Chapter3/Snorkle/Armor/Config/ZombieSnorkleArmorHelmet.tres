@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CharacterArmorConfig" load_steps=5 format=4 uid="uid://dat20ya1dcy8c"]
+
+[ext_resource type="Script" uid="uid://3gswocg6uh6g" path="res://Resource/General/Character/Armor/CharacterArmorConfig.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://b1yls1ul6s8q4" path="res://Asset/Texture/Character/Armor/Helmet/ZombieHelmet1.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://b8pl6ewrq84ws" path="res://Asset/Texture/Character/Armor/Helmet/ZombieHelmet2.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://c5vbv6umliqdg" path="res://Asset/Texture/Character/Armor/Helmet/ZombieHelmet3.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+armorName = "Helmet"
+damagePoint = 1400.0
+stagePersontage = [0.666, 0.333]
+replaceMethod = "Sprite"
+replaceSpriteSlotPath = NodePath("HeadSlot")
+replaceSpriteRotation = 0.0
+replaceSpriteScale = Vector2(0.9, 0.9)
+replaceSpriteOffset = Vector2(4, 2)
+replaceMediaName = &""
+stageAnimeTexture = [ExtResource("2"), ExtResource("3"), ExtResource("4")]
+openFliter = ""
+closeFliter = ""
+destroyFliter = ""
+impactAudio = "PlasticHit"
+damageAudio = ""
+explodePersontage = 1.0
+armorMethodFlags = 216
+Flag/Method = 216

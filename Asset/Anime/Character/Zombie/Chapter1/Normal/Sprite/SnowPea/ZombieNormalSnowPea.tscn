@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=4 uid="uid://bld7b4b23mcya"]
+
+[ext_resource type="PackedScene" uid="uid://vp5mpqwb0n8b" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Sprite/Normal/ZombieNormal.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cf0vmr6toolo7" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Sprite/SnowPea/ZombieNormalSnowPea.gd" id="2"]
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="3"]
+[ext_resource type="Resource" uid="uid://dtoidj6eh57dt" path="res://Asset/Anime/Character/Plant/Chapter0/SnowPea/SnowPea.tres" id="4"]
+
+[node name="ZombieNormalSnowPea" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("1")]
+script = ExtResource("2")
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ConeSlot"), NodePath("BucketSlot"), null, NodePath("ScreendoorSlot"), null, null, NodePath("ArmSlot"), null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("Head"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/LayerVisible/Zombie_whitewater = true
+Animation/LayerVisible/Zombie_whitewater2 = true
+Animation/LayerVisible/anim_hair = false
+Animation/LayerVisible/anim_head1 = false
+Animation/LayerVisible/anim_head2 = false
+
+[node name="Head" type="Node2D" parent="." index="0" node_paths=PackedStringArray("layerSlot", "layerSprite", "parentSprite")]
+unique_name_in_owner = true
+position = Vector2(-11.62, -45.3467)
+rotation = -0.27567
+scale = Vector2(-1, 1)
+script = ExtResource("3")
+flashAnimeData = ExtResource("4")
+offset = Vector2(-43, -34)
+offsetRotate = -0.25
+trueFrameRate = inf
+useTween = false
+skipLastFrame = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+parentSprite = NodePath("..")
+Animation/Clip = "HeadIdle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/AnimeEvents = false
+Animation/LayerVisible/SnowPea_crystals1 = true
+Animation/LayerVisible/SnowPea_crystals2 = true
+Animation/LayerVisible/SnowPea_crystals3 = true
+Animation/LayerVisible/SnowPea_mouth = true
+Animation/LayerVisible/anim_face = true
+Animation/LayerVisible/anim_stem = false
+Animation/LayerVisible/backleaf = false
+Animation/LayerVisible/backleaf_left_tip = false
+Animation/LayerVisible/backleaf_right_tip = false
+Animation/LayerVisible/frontleaf = false
+Animation/LayerVisible/frontleaf_right_tip = false
+Animation/LayerVisible/frontleaf_tip_left = false
+Animation/LayerVisible/idle_shoot_blink = true
+Animation/LayerVisible/stalk_bottom = false
+Animation/LayerVisible/stalk_top = false
+Animation/MediaReplace/PeaShooter_backleaf.png = null
+Animation/MediaReplace/PeaShooter_backleaf_lefttip.png = null
+Animation/MediaReplace/PeaShooter_backleaf_righttip.png = null
+Animation/MediaReplace/PeaShooter_frontleaf.png = null
+Animation/MediaReplace/PeaShooter_frontleaf_lefttip.png = null
+Animation/MediaReplace/PeaShooter_frontleaf_righttip.png = null
+Animation/MediaReplace/PeaShooter_stalk_bottom.png = null
+Animation/MediaReplace/PeaShooter_stalk_top.png = null
+Animation/MediaReplace/SnowPea_blink1.png = null
+Animation/MediaReplace/SnowPea_blink2.png = null
+Animation/MediaReplace/SnowPea_crystals1.png = null
+Animation/MediaReplace/SnowPea_crystals2.png = null
+Animation/MediaReplace/SnowPea_crystals3.png = null
+Animation/MediaReplace/SnowPea_head.png = null
+Animation/MediaReplace/SnowPea_mouth.png = null
+Animation/MediaReplace/locator.png = null
+Layer = 14
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="HeadSlot" parent="." index="1"]
+position = Vector2(-13.7733, -45.8553)
+rotation = -0.0823276
+scale = Vector2(0.799664, 0.799664)
+
+[node name="ArmSlot" parent="." index="2"]
+position = Vector2(2.78127, 19.9257)
+rotation = -0.0775325
+scale = Vector2(0.799655, 0.799655)
+
+[node name="ConeSlot" parent="." index="3"]
+position = Vector2(-9.06128, -71.2541)
+rotation = -0.0939818
+scale = Vector2(0.797931, 0.797931)
+
+[node name="BucketSlot" parent="." index="4"]
+position = Vector2(-13.2327, -60.782)
+rotation = -0.158854
+scale = Vector2(0.798969, 0.798969)
+
+[node name="ScreendoorSlot" parent="." index="5"]
+position = Vector2(-17.7123, 0.804459)
+rotation = -0.0303701
+scale = Vector2(0.799512, 0.799512)
+
+[node name="GroundSlot" parent="." index="6"]
+position = Vector2(-1.94286, -40)

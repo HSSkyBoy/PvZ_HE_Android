@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=4 uid="uid://d3cv7y73te5rv"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://b311d1ce3guqx" path="res://Asset/Anime/Character/Plant/Chapter3/PeaCat/PeaCat.tres" id="2"]
+
+[node name="PeaCat" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/AnimeEvents = true
+Animation/LayerVisible/Cattail_paw1 = true
+Animation/LayerVisible/Cattail_paw2 = true
+Animation/LayerVisible/Cattail_paw3 = true
+Animation/LayerVisible/Cattail_tail = true
+Animation/LayerVisible/Cattail_tail2 = true
+Animation/LayerVisible/Cattail_tail2_overlay = true
+Animation/LayerVisible/ProjectilePea = true
+Animation/LayerVisible/anim_face = true
+Animation/LayerVisible/anim_sprout = true
+Animation/LayerVisible/idle_mouth = true
+Animation/LayerVisible/idle_shoot_blink = true
+Animation/LayerVisible/skin1_1 = false
+Animation/LayerVisible/skin1_2 = false
+Animation/LayerVisible/skin1_3 = false
+Animation/LayerVisible/skin1_4 = false
+Animation/LayerVisible/skin1_5 = false
+Animation/LayerVisible/skin2 = false
+Animation/LayerVisible/skin3_1 = false
+Animation/LayerVisible/skin3_2 = false
+Animation/LayerVisible/skin3_3 = false
+Animation/LayerVisible/skin4 = false
+Animation/MediaReplace/Cattail_paw1.png = null
+Animation/MediaReplace/Cattail_paw2.png = null
+Animation/MediaReplace/Cattail_paw3.png = null
+Animation/MediaReplace/Cattail_tail2P.png = null
+Animation/MediaReplace/Cattail_tail2P_overlay.png = null
+Animation/MediaReplace/Cattail_tailP.png = null
+Animation/MediaReplace/PeaCat_skin1_1.png = null
+Animation/MediaReplace/PeaCat_skin1_2.png = null
+Animation/MediaReplace/PeaCat_skin1_3.png = null
+Animation/MediaReplace/PeaCat_skin1_4.png = null
+Animation/MediaReplace/PeaCat_skin1_5.png = null
+Animation/MediaReplace/PeaCat_skin2.png = null
+Animation/MediaReplace/PeaCat_skin3_1.png = null
+Animation/MediaReplace/PeaCat_skin3_2.png = null
+Animation/MediaReplace/PeaCat_skin3_3.png = null
+Animation/MediaReplace/PeaCat_skin4.png = null
+Animation/MediaReplace/PeaShooter_blink1.png = null
+Animation/MediaReplace/PeaShooter_blink2.png = null
+Animation/MediaReplace/PeaShooter_head.png = null
+Animation/MediaReplace/PeaShooter_mouth.png = null
+Animation/MediaReplace/ProjectilePea.png = null
+Animation/MediaReplace/anim_sprout.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

@@ -1,0 +1,194 @@
+[gd_scene load_steps=3 format=4 uid="uid://iw48s57cgwru"]
+
+[ext_resource type="Script" uid="uid://ciay4r0qt0x45" path="res://Prefab/GUI/LevelEditor/SeedbankEditor/LevelEditorSeedbankEditor.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://r8uwdna1rkj0" path="res://Prefab/GUI/LevelEditor/SeedbankEditor/SeedBank/LevelEditorSeedbank.tscn" id="2"]
+
+[node name="LevelEditorSeedbankEditor" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1")
+
+[node name="LevelEditorSeedbank" parent="." instance=ExtResource("2")]
+
+[node name="CommandContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+offset_left = 1.0
+offset_top = 86.0
+offset_right = 274.0
+offset_bottom = 518.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CommandContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CommandContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 50
+
+[node name="TextContainer" type="VBoxContainer" parent="CommandContainer/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="MethodContainer" type="HBoxContainer" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/MethodContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "卡牌库模式"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MethodOptionButton" type="OptionButton" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/MethodContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="PacketColdDownStartContainer" type="HBoxContainer" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/PacketColdDownStartContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "卡牌开局进入冷却"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PacketColdDownStartUseCheckBox" type="CheckBox" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/PacketColdDownStartContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+
+[node name="SunContainer" type="VBoxContainer" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="SunNumContainer" type="HBoxContainer" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/SunContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/SunContainer/SunNumContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "初始阳光"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SunSpinBox" type="SpinBox" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/SunContainer/SunNumContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 100000.0
+step = 25.0
+value = 300.0
+
+[node name="SunUseContainer" type="HBoxContainer" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/SunContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/SunContainer/SunUseContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "启用阳光掉落"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SunUseCheckBox" type="CheckBox" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/SunContainer/SunUseContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+
+[node name="SunManagerContainer" type="VBoxContainer" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/SunContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="SunSpawnIntervalContainer" type="HBoxContainer" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/SunContainer/SunManagerContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/SunContainer/SunManagerContainer/SunSpawnIntervalContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "阳光掉落间隔"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SunSpawnIntervalSpinBox" type="SpinBox" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/SunContainer/SunManagerContainer/SunSpawnIntervalContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 100000.0
+step = 0.5
+value = 12.0
+suffix = "s"
+
+[node name="SunSpawnNumContainer" type="HBoxContainer" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/SunContainer/SunManagerContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/SunContainer/SunManagerContainer/SunSpawnNumContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "每次掉落数量"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SunSpawnNumSpinBox" type="SpinBox" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/SunContainer/SunManagerContainer/SunSpawnNumContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 1000.0
+step = 25.0
+value = 50.0
+
+[node name="ConveyorContainer" type="VBoxContainer" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ConveyorIntervalContainer" type="HBoxContainer" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/ConveyorContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/ConveyorContainer/ConveyorIntervalContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "传送带间隔"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ConveyorIntervalSpinBox" type="SpinBox" parent="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/ConveyorContainer/ConveyorIntervalContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 1.0
+max_value = 100000.0
+value = 5.0
+suffix = "s"
+
+[connection signal="visibility_changed" from="." to="." method="Save"]
+[connection signal="item_selected" from="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/MethodContainer/MethodOptionButton" to="." method="MethodOptionButtonItemSelected"]
+[connection signal="pressed" from="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/PacketColdDownStartContainer/PacketColdDownStartUseCheckBox" to="." method="PacketColdDownStartUseCheckBoxPressed"]
+[connection signal="value_changed" from="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/SunContainer/SunNumContainer/SunSpinBox" to="." method="SunSpinBoxValueChanged"]
+[connection signal="toggled" from="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/SunContainer/SunUseContainer/SunUseCheckBox" to="." method="SunUseCheckBoxToggled"]
+[connection signal="value_changed" from="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/SunContainer/SunManagerContainer/SunSpawnIntervalContainer/SunSpawnIntervalSpinBox" to="." method="SunSpawnIntervalSpinBoxValueChanged"]
+[connection signal="value_changed" from="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/SunContainer/SunManagerContainer/SunSpawnNumContainer/SunSpawnNumSpinBox" to="." method="SunSpawnNumSpinBoxValueChanged"]
+[connection signal="value_changed" from="CommandContainer/ScrollContainer/HBoxContainer/TextContainer/ConveyorContainer/ConveyorIntervalContainer/ConveyorIntervalSpinBox" to="." method="SunSpawnNumSpinBoxValueChanged"]

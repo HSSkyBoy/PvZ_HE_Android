@@ -1,0 +1,128 @@
+[gd_scene load_steps=14 format=4 uid="uid://6relv4dbi4rb"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://dun7xows77q1e" path="res://Asset/Anime/Character/Plant/Chapter2/ScaredySunShroom/Scene/TowerDefensePlantScaredySunShroom.gd" id="2"]
+[ext_resource type="Resource" uid="uid://c8fwrhbsfv2o5" path="res://Asset/Anime/Character/Plant/Chapter2/ScaredySunShroom/Config/TowerDefensePlantScaredySunShroom.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://ldy1vj3audt7" path="res://Asset/Anime/Character/Plant/Chapter2/ScaredySunShroom/ScaredySunShroom.tscn" id="4"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="5"]
+[ext_resource type="PackedScene" uid="uid://c5d74tbefbann" path="res://Script/Component/TowerDefense/Character/ProduceComponent/ProduceComponent.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://boq44pntt712l" path="res://Script/Component/TowerDefense/Character/GrowUpComponent/GrowUpComponent.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://b5htxrgm8twcr" path="res://Script/Component/TowerDefense/Character/FireComponent/FireComponent.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://dir0f8lu1l3b3" path="res://Script/Component/TowerDefense/Character/AttackComponent/AttackComponent.tscn" id="9"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="10"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="11"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_6yabn"]
+b = Vector2(2000, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7m14x"]
+size = Vector2(134, 144)
+
+[node name="TowerDefensePlantScaredySunShroom" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+fireInterval = 1.5
+produceInterval = 25.0
+sunNum = 15
+growUpTime = 60.0
+sleepAnimeClip = "Sleep"
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ScaredySunShroom")
+Custom = []
+gravity = 245.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="ScaredySunShroom" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("4")]
+position = Vector2(0, -30)
+layerSlot = [null, null, null, null, null, null, null, NodePath("AdobeAnimateSlot2"), null, null, NodePath("AdobeAnimateSlot"), null, null, null, null, null, null]
+
+[node name="AdobeAnimateSlot" type="Node2D" parent="SpriteGroup/TransformPoint/ScaredySunShroom" index="0"]
+position = Vector2(-34.921, -25.9535)
+rotation = -0.267614
+scale = Vector2(0.556913, 0.508886)
+script = ExtResource("5")
+followSlotId = 11
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/ScaredySunShroom/AdobeAnimateSlot" index="0"]
+position = Vector2(47.711, 28.7919)
+
+[node name="AdobeAnimateSlot2" type="Node2D" parent="SpriteGroup/TransformPoint/ScaredySunShroom" index="1"]
+position = Vector2(7.032, 0.132)
+rotation = -0.0537544
+scale = Vector2(0.799834, 0.758058)
+script = ExtResource("5")
+followSlotId = 8
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/ScaredySunShroom/AdobeAnimateSlot2" index="0"]
+position = Vector2(5.62152, 11.3506)
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 33)
+scale = Vector2(0.604651, 0.555556)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+
+[node name="ProduceComponent" parent="." index="7" node_paths=PackedStringArray("marker") instance=ExtResource("6")]
+unique_name_in_owner = true
+marker = [NodePath("../SpriteGroup/TransformPoint/ScaredySunShroom/AdobeAnimateSlot/Marker2D")]
+
+[node name="GrowUpComponent" parent="." index="8" instance=ExtResource("7")]
+unique_name_in_owner = true
+growUpTime = [60.0]
+growUpSize = [1.25]
+
+[node name="FireComponent" parent="." index="9" node_paths=PackedStringArray("firePosMarker", "checkArea") instance=ExtResource("8")]
+unique_name_in_owner = true
+firePosMarker = [NodePath("../SpriteGroup/TransformPoint/ScaredySunShroom/AdobeAnimateSlot2/Marker2D")]
+checkArea = NodePath("Area2D")
+fireInterval = 1.5
+
+[node name="Area2D" type="Area2D" parent="FireComponent" index="0"]
+collision_layer = 0
+
+[node name="CheckShape" type="CollisionShape2D" parent="FireComponent/Area2D" index="0"]
+unique_name_in_owner = true
+shape = SubResource("SegmentShape2D_6yabn")
+
+[node name="AttackComponent" parent="." index="10" node_paths=PackedStringArray("checkArea") instance=ExtResource("9")]
+unique_name_in_owner = true
+attackType = "Default"
+checkArea = NodePath("Area2D")
+checkIntreval = 0
+
+[node name="Area2D" type="Area2D" parent="AttackComponent" index="0"]
+visible = false
+
+[node name="CheckScaredShape" type="CollisionShape2D" parent="AttackComponent/Area2D" index="0"]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_7m14x")
+
+[node name="Attack" type="Node" parent="StateChart/CompoundState" index="2"]
+script = ExtResource("10")
+
+[node name="Scared" type="Node" parent="StateChart/CompoundState" index="3"]
+script = ExtResource("10")
+
+[node name="ToAttack" type="Node" parent="StateChart/CompoundState" index="7"]
+script = ExtResource("11")
+to = NodePath("../Attack")
+event = &"ToAttack"
+delay_in_seconds = "0.0"
+
+[node name="ToScared" type="Node" parent="StateChart/CompoundState" index="8"]
+script = ExtResource("11")
+to = NodePath("../Scared")
+event = &"ToScared"
+delay_in_seconds = "0.0"
+
+[connection signal="grow" from="GrowUpComponent" to="." method="GowUp"]
+[connection signal="state_entered" from="StateChart/CompoundState/Attack" to="." method="AttackEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Attack" to="." method="AttackExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Attack" to="." method="AttackProcessing"]
+[connection signal="state_entered" from="StateChart/CompoundState/Scared" to="." method="ScaredEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Scared" to="." method="ScaredExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Scared" to="." method="ScaredProcessing"]

@@ -1,0 +1,77 @@
+[gd_scene load_steps=8 format=4 uid="uid://7iektvi8ig8n"]
+
+[ext_resource type="Script" uid="uid://cjepli3nqvt1f" path="res://Prefab/GUI/LevelEditor/MapEditor/LevelEditorMapEditor.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://q2eo6wgcbefw" path="res://Prefab/TowerDefense/Map/TowerDefenseMapControl.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://cn2sof4iex5w0" path="res://Prefab/GUI/LevelEditor/MapEditor/PacketBank/LevelEditorPacketBank.tscn" id="3"]
+[ext_resource type="Texture2D" uid="uid://3p5tg4mgg3df" path="res://Asset/Texture/GUI/General/ShovelBank/ShovelBank.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://fbnfrolt1kma" path="res://Asset/Texture/TowerDefense/Shovel/Shovel.png" id="5"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_jfhdv"]
+device = -1
+keycode = 49
+unicode = 49
+
+[sub_resource type="Shortcut" id="Shortcut_7erp6"]
+events = [SubResource("InputEventKey_jfhdv")]
+
+[node name="LevelEditorMapEditor" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="TransformNode" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.85, 0.85)
+
+[node name="TowerDefenseMapControl" parent="TransformNode" instance=ExtResource("2")]
+unique_name_in_owner = true
+z_index = -100
+position = Vector2(-207.059, -9.53675e-07)
+
+[node name="LevelEditorPacketBank" parent="TransformNode" instance=ExtResource("3")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.176
+anchor_right = 1.176
+offset_left = -408.904
+offset_right = -408.904
+
+[node name="ShovelNode" type="Control" parent="TransformNode"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 3
+anchors_preset = 0
+offset_left = 790.588
+offset_right = 790.588
+
+[node name="ShovelButton" type="TextureButton" parent="TransformNode/ShovelNode"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+offset_right = 70.0
+offset_bottom = 72.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+shortcut = SubResource("Shortcut_7erp6")
+texture_normal = ExtResource("4")
+
+[node name="ShovelSprite" type="Sprite2D" parent="TransformNode/ShovelNode/ShovelButton"]
+unique_name_in_owner = true
+position = Vector2(33, 34)
+texture = ExtResource("5")
+
+[node name="CharacterNode" type="Node2D" parent="TransformNode"]
+unique_name_in_owner = true
+
+[connection signal="visibility_changed" from="." to="." method="Save"]
+[connection signal="pressed" from="TransformNode/ShovelNode/ShovelButton" to="." method="ShovelButtonPressed"]

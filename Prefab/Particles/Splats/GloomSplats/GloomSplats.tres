@@ -1,0 +1,27 @@
+[gd_resource type="ParticleProcessMaterial" load_steps=5 format=3 uid="uid://cil8qofcu6vsa"]
+
+[sub_resource type="Curve" id="Curve_6pt3n"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.289744, 0), 0.0, 0.0, 0, 0, Vector2(0.615385, 1), 0.0, 0.0, 0, 0, Vector2(0.748718, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CurveTexture" id="CurveTexture_fito7"]
+curve = SubResource("Curve_6pt3n")
+
+[sub_resource type="Curve" id="Curve_fito7"]
+_limits = [0.0, 100.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1e-05, 0), 0.0, 0.0, 0, 0, Vector2(0.746154, 100), 0.0, 0.0, 0, 0, Vector2(0.99999, 100), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_a7hi0"]
+curve = SubResource("Curve_fito7")
+
+[resource]
+particle_flag_disable_z = true
+spread = 10.0
+initial_velocity_min = 500.0
+initial_velocity_max = 550.0
+gravity = Vector3(0, 0, 0)
+damping_min = 15.887
+damping_max = 21.494
+damping_curve = SubResource("CurveTexture_a7hi0")
+alpha_curve = SubResource("CurveTexture_fito7")

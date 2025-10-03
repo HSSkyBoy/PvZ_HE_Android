@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=4 uid="uid://dral054wqsme5"]
+
+[ext_resource type="PackedScene" uid="uid://o7sgb44iah6m" path="res://Prefab/TowerDefense/Base/TowerDefenseGroundItemBase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://b2ppykgul7pmr" path="res://Prefab/TowerDefense/Portal/TowerDefensePortal.gd" id="2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghxs0"]
+size = Vector2(12, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bkuse"]
+size = Vector2(12, 33)
+
+[node name="TowerDefensePortal" instance=ExtResource("1")]
+z_index = 10
+script = ExtResource("2")
+gridPos = Vector2i(-1, 0)
+itemLayer = 10
+
+[node name="ProtalNode1" type="Node2D" parent="." index="0"]
+unique_name_in_owner = true
+
+[node name="HitBox1" type="Area2D" parent="ProtalNode1" index="0"]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 3
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ProtalNode1/HitBox1" index="0"]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_ghxs0")
+
+[node name="ProtalNode2" type="Node2D" parent="." index="1"]
+unique_name_in_owner = true
+
+[node name="HitBox2" type="Area2D" parent="ProtalNode2" index="0"]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 3
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ProtalNode2/HitBox2" index="0"]
+shape = SubResource("RectangleShape2D_bkuse")
+
+[connection signal="area_entered" from="ProtalNode1/HitBox1" to="." method="AreaEntered1"]
+[connection signal="area_entered" from="ProtalNode2/HitBox2" to="." method="AreaEntered2"]

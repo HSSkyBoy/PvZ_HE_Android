@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=4 uid="uid://djchpnx8iwbpe"]
+
+[ext_resource type="PackedScene" uid="uid://dbyd0mqkya1j3" path="res://Prefab/TowerDefense/Effect/Once/TowerDefenseEffectParticlesOnce.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://ca41wcmfs6gcm" path="res://Prefab/Particles/Splats/GloomSplats/GloomSplats.tscn" id="2"]
+
+[node name="TowerDefenseEffectParticlesGloomSplats" node_paths=PackedStringArray("particles") instance=ExtResource("1")]
+objectId = 109
+particles = NodePath("GloomSplats")
+
+[node name="GloomSplats" parent="." index="0" instance=ExtResource("2")]
+sub_emitter = NodePath(".")

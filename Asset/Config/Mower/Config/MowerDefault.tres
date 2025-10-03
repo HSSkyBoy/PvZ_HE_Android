@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="MowerConfig" load_steps=4 format=4 uid="uid://b7ukt8lg7v78n"]
+
+[ext_resource type="Script" uid="uid://b4briakxj0xs6" path="res://Resource/TowerDefense/Mower/MowerConfig.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://c24slfyvogagp" path="res://Asset/Anime/Character/Mower/Default/LawnMower.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://cc5k25o3tkrdv" path="res://Asset/Texture/TowerDefense/Mower/MowerDefault.png" id="3"]
+
+[resource]
+script = ExtResource("1")
+texture = ExtResource("3")
+sprite = ExtResource("2")
+saveKey = "MowerDefault"
+unlockCheckList = []
+name = "TOWERDEFENSE_MOWER_DEFAULT_NAME"
+describe = "TOWERDEFENSE_MOWER_DEFAULT_EXPRESTION"
+handbookDescribe = "TOWERDEFENSE_MOWER_DEFAULT_HANDBOOK_EXPRESTION"
+handbookStory = "TOWERDEFENSE_MOWER_DEFAULT_HANDBOOK_STORY"
+eventList = []
+metadata/_custom_type_script = "uid://xmwd4jomf83s"

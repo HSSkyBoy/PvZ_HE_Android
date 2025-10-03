@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="CharacterArmorData" load_steps=8 format=4 uid="uid://n5myu6cw44ne"]
+
+[ext_resource type="Resource" uid="uid://cpo75jfcrj5hk" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackbox/Armor/Config/ZombiejackboxArmorBlackHelmet.tres" id="1"]
+[ext_resource type="Resource" uid="uid://bjqwrh2qsb7up" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackbox/Armor/Config/ZombiejackboxArmorBucket.tres" id="2"]
+[ext_resource type="Resource" uid="uid://ksphtdgy7iis" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackbox/Armor/Config/ZombiejackboxArmorCone.tres" id="3"]
+[ext_resource type="Resource" uid="uid://d13ae6ujl52h6" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackbox/Armor/Config/ZombiejackboxArmorHelmet.tres" id="4"]
+[ext_resource type="Resource" uid="uid://eakjcfnkvk83" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackbox/Armor/Config/ZombieJackboxArmorJackbox.tres" id="5"]
+[ext_resource type="Resource" uid="uid://cs60goofuyev6" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackbox/Armor/Config/ZombiejackboxArmorSpecialHelmet.tres" id="6"]
+[ext_resource type="Script" uid="uid://ci4c6gpjugqpl" path="res://Resource/General/Character/Armor/CharacterArmorData.gd" id="7"]
+
+[resource]
+script = ExtResource("7")
+armorList = [ExtResource("5"), ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("1"), ExtResource("6")]
+armorDictionary = {
+"BlackHelmet": ExtResource("1"),
+"Bucket": ExtResource("2"),
+"Cone": ExtResource("3"),
+"Helmet": ExtResource("4"),
+"Jackbox": ExtResource("5"),
+"SpecialHelmet": ExtResource("6")
+}
+fliterAllDictionary = {
+"BlackHelmet": [],
+"Bucket": ["anim_bucket"],
+"Cone": ["anim_cone"],
+"Helmet": [],
+"Jackbox": ["Zombie_jackbox_box", "Zombie_jackbox_box2", "Zombie_jackbox_clownhead", "Zombie_jackbox_clownneck1", "Zombie_jackbox_clownneck2", "Zombie_jackbox_clownneck3", "Zombie_jackbox_handle"],
+"SpecialHelmet": []
+}
+fliterOpenDictionary = {
+"BlackHelmet": [],
+"Bucket": [],
+"Cone": [],
+"Helmet": [],
+"Jackbox": [],
+"SpecialHelmet": []
+}
+fliterCloseDictionary = {
+"BlackHelmet": [],
+"Bucket": [],
+"Cone": [],
+"Helmet": [],
+"Jackbox": [],
+"SpecialHelmet": []
+}

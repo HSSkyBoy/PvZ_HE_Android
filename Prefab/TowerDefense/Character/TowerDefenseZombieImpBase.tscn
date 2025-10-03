@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=4 uid="uid://s74hf6v6x5r7"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://lofqlk2oj02p" path="res://Prefab/TowerDefense/Character/TowerDefenseZombieImpBase.gd" id="2"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="3"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="4"]
+
+[node name="TowerDefenseZombieImpBase" instance=ExtResource("1")]
+script = ExtResource("2")
+flyAnimeClip = "Fly"
+landAnimeClip = "Land"
+
+[node name="Fly" type="Node" parent="StateChart/CompoundState" index="4"]
+script = ExtResource("3")
+
+[node name="Land" type="Node" parent="StateChart/CompoundState" index="5"]
+script = ExtResource("3")
+
+[node name="ToFly" type="Node" parent="StateChart/CompoundState" index="10"]
+script = ExtResource("4")
+to = NodePath("../Fly")
+event = &"ToFly"
+delay_in_seconds = "0.0"
+
+[node name="ToLand" type="Node" parent="StateChart/CompoundState" index="11"]
+script = ExtResource("4")
+to = NodePath("../Land")
+event = &"ToLand"
+delay_in_seconds = "0.0"
+
+[connection signal="land" from="." to="." method="Land"]
+[connection signal="state_entered" from="StateChart/CompoundState/Fly" to="." method="FlyEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Fly" to="." method="FlyExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Fly" to="." method="FlyProcessing"]
+[connection signal="state_entered" from="StateChart/CompoundState/Land" to="." method="LandEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Land" to="." method="LandExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Land" to="." method="LandProcessing"]

@@ -1,0 +1,219 @@
+[gd_scene load_steps=15 format=3 uid="uid://3q5h8vq3vco5"]
+
+[ext_resource type="Script" uid="uid://ygb0tynklqwx" path="res://Scene/Loading/Loading.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dwwwkdiehcime" path="res://Asset/Texture/Loading/LoadingBackground.jpg" id="2"]
+[ext_resource type="Texture2D" uid="uid://cu4ssnfbcqrcm" path="res://Asset/Texture/Loading/Logo.png" id="3"]
+[ext_resource type="PackedScene" uid="uid://bml60wmq62jay" path="res://Prefab/GUI/Button/MainButton.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://cdme6687pb8of" path="res://Asset/Texture/GUI/General/Loading/LoadBarDirt.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://c3e4mj33q60gv" path="res://Asset/Texture/GUI/General/Loading/LoadBarGrass.png" id="6"]
+[ext_resource type="FontFile" uid="uid://coqskwlqtnypf" path="res://Asset/Font/fzkt.ttf" id="7"]
+[ext_resource type="PackedScene" uid="uid://dayxpvpvasofr" path="res://Asset/Anime/Effect/LoadBar/LoadBarSprout.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://df3x3smb8umy2" path="res://Asset/Anime/Effect/LoadBar/LoadBarZombieHead.tscn" id="9"]
+[ext_resource type="Texture2D" uid="uid://cc5y8r5ycn0dh" path="res://Asset/Texture/GUI/General/Loading/SodRollCap.png" id="10"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0w6yo"]
+
+[sub_resource type="Animation" id="Animation_sa25e"]
+resource_name = "Enter"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Logo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(210, -126), Vector2(210, 44)]
+}
+
+[sub_resource type="Animation" id="Animation_a4ej1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Logo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(210, -126)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u37wy"]
+_data = {
+&"Enter": SubResource("Animation_sa25e"),
+&"RESET": SubResource("Animation_a4ej1")
+}
+
+[node name="Loading" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="LoadingBackground" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.194444
+anchor_top = -0.21
+anchor_right = 0.786111
+anchor_bottom = 0.005
+offset_left = 0.000473022
+offset_right = 0.000488281
+grow_horizontal = 2
+pivot_offset = Vector2(3.34, 0)
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -148.0
+offset_top = 217.0
+offset_right = 148.0
+offset_bottom = 263.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="OnlineButton" parent="HBoxContainer" instance=ExtResource("4")]
+visible = false
+layout_mode = 2
+text = "在线游戏"
+
+[node name="OfflineButton" parent="HBoxContainer" instance=ExtResource("4")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "开始游戏"
+
+[node name="ProgressBar" type="TextureProgressBar" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -165.0
+offset_top = -83.0
+offset_right = 156.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(160, 26)
+max_value = 1.0
+step = 0.0
+texture_under = ExtResource("5")
+texture_progress = ExtResource("6")
+texture_progress_offset = Vector2(-2, -18)
+
+[node name="StartButton" type="Button" parent="ProgressBar"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.455
+anchor_top = 1.585
+anchor_right = 0.455
+anchor_bottom = 1.585
+offset_left = -142.055
+offset_top = -78.005
+offset_right = 160.945
+offset_bottom = -40.005
+mouse_default_cursor_shape = 2
+theme_override_colors/font_disabled_color = Color(0.917647, 0.717647, 0.235294, 1)
+theme_override_colors/font_hover_color = Color(0.861358, 0.354674, 1.92523e-07, 1)
+theme_override_colors/font_color = Color(0.917022, 0.71834, 0.235452, 1)
+theme_override_fonts/font = ExtResource("7")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0w6yo")
+disabled = true
+text = "载入中..."
+flat = true
+
+[node name="LoadLabel" type="Label" parent="ProgressBar"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.681
+anchor_top = -0.851
+anchor_right = 0.681
+offset_left = -348.601
+offset_top = 98.103
+offset_right = 187.399
+offset_bottom = 80.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.280086, 1, 0.254727, 1)
+theme_override_constants/outline_size = 5
+text = "1111111111"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LoadBarSprout" parent="ProgressBar" instance=ExtResource("8")]
+unique_name_in_owner = true
+position = Vector2(22, -27)
+trueFrameRate = 30.0
+
+[node name="LoadBarSprout2" parent="ProgressBar" instance=ExtResource("8")]
+unique_name_in_owner = true
+position = Vector2(83, -26)
+scale = Vector2(-1, 1)
+trueFrameRate = 30.0
+
+[node name="LoadBarSprout3" parent="ProgressBar" instance=ExtResource("8")]
+unique_name_in_owner = true
+position = Vector2(146, -23)
+scale = Vector2(1.1, 1.1)
+trueFrameRate = 30.0
+
+[node name="LoadBarSprout4" parent="ProgressBar" instance=ExtResource("8")]
+unique_name_in_owner = true
+position = Vector2(206, -24)
+scale = Vector2(-1, 1)
+trueFrameRate = 30.0
+
+[node name="LoadBarZombieHead" parent="ProgressBar" instance=ExtResource("9")]
+unique_name_in_owner = true
+position = Vector2(251, -24)
+trueFrameRate = 30.0
+
+[node name="SodRollCap" type="Sprite2D" parent="ProgressBar"]
+unique_name_in_owner = true
+position = Vector2(0, -25)
+texture = ExtResource("10")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_u37wy")
+}
+autoplay = "Enter"
+
+[connection signal="pressed" from="HBoxContainer/OnlineButton" to="." method="OnlineButtonPressed"]
+[connection signal="pressed" from="HBoxContainer/OfflineButton" to="." method="OfflineButtonPressed"]

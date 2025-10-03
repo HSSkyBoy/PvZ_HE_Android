@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CharacterArmorConfig" load_steps=5 format=4 uid="uid://byidrithkk1pn"]
+
+[ext_resource type="Script" uid="uid://3gswocg6uh6g" path="res://Resource/General/Character/Armor/CharacterArmorConfig.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bqcn0d2em83bk" path="res://Asset/Texture/Character/Armor/SleepHat/ZombieSleepHat1.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://pt3nyhjsivj3" path="res://Asset/Texture/Character/Armor/SleepHat/ZombieSleepHat2.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://cdmp7r68nceb3" path="res://Asset/Texture/Character/Armor/SleepHat/ZombieSleepHat3.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+armorName = "Hat"
+damagePoint = 500.0
+stagePersontage = [0.666, 0.333]
+replaceMethod = "Media"
+replaceSpriteSlotPath = NodePath("")
+replaceSpriteRotation = 0.0
+replaceSpriteScale = Vector2(1, 1)
+replaceSpriteOffset = Vector2(0, 0)
+replaceMediaName = &"Zombie_sleep_0010_23.png"
+stageAnimeTexture = [ExtResource("2"), ExtResource("3"), ExtResource("4")]
+openFliter = ""
+closeFliter = ""
+destroyFliter = "anim_hat&anim_hat1&anim_hat2"
+impactAudio = "SplatNormal"
+damageAudio = ""
+explodePersontage = 1.0
+armorMethodFlags = 200
+Flag/Method = 200

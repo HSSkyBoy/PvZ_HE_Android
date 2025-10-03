@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=4 uid="uid://mux1v63kv0d8"]
+
+[ext_resource type="PackedScene" uid="uid://c3lfv0vuyf8bv" path="res://Prefab/TowerDefense/Award/TowerDefenseAwardBase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bllre7jl181y" path="res://Prefab/TowerDefense/Award/Purse/TowerDefenseAwardPurse.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://4hw45nbwv7f3" path="res://Asset/Texture/GUI/General/Special/Purse.png" id="3"]
+
+[node name="TowerDefenseAwardPurse" instance=ExtResource("1")]
+z_index = 2000
+script = ExtResource("2")
+
+[node name="Button" parent="." index="3"]
+offset_left = -48.0
+offset_top = -32.0
+offset_right = 46.0
+offset_bottom = 38.0
+
+[node name="Purse" type="Sprite2D" parent="." index="5"]
+light_mask = 0
+position = Vector2(0, 1.90735e-06)
+scale = Vector2(0.527473, 0.561404)
+texture = ExtResource("3")
+
+[connection signal="pressed" from="Button" to="." method="Pressed"]

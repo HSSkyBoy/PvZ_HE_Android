@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=4 uid="uid://ctw560gs4hov2"]
+
+[ext_resource type="Texture2D" uid="uid://bluhyb25ffpxy" path="res://Asset/Anime/Particles/Special/PuffShroomPuff.png" id="1"]
+[ext_resource type="Material" uid="uid://dndup3d40xnsw" path="res://Prefab/Particles/Special/PuffShroomPuff/PuffShroomPuff.tres" id="2"]
+
+[node name="PuffShroomPuff" type="GPUParticles2D"]
+amount = 6
+texture = ExtResource("1")
+lifetime = 0.5
+local_coords = true
+process_material = ExtResource("2")

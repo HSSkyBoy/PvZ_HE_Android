@@ -1,0 +1,116 @@
+[gd_scene load_steps=8 format=4 uid="uid://bephgxrkhh3e2"]
+
+[ext_resource type="Script" uid="uid://if4wlhhfy087" path="res://addons/godot_state_charts/utilities/editor_sidebar.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bbudjoa3ds4qj" path="res://addons/godot_state_charts/compound_state.svg" id="2"]
+[ext_resource type="Texture2D" uid="uid://dsa1nco51br8d" path="res://addons/godot_state_charts/parallel_state.svg" id="3"]
+[ext_resource type="Texture2D" uid="uid://c4ojtah20jtxc" path="res://addons/godot_state_charts/atomic_state.svg" id="4"]
+[ext_resource type="Texture2D" uid="uid://bkf1e240ouleb" path="res://addons/godot_state_charts/history_state.svg" id="5"]
+[ext_resource type="Texture2D" uid="uid://chb8tq62aj2b2" path="res://addons/godot_state_charts/transition.svg" id="6"]
+[ext_resource type="Texture2D" uid="uid://vga3avpb4gyh" path="res://addons/godot_state_charts/toggle_sidebar.svg" id="7"]
+
+[node name="EditorSidebar" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_bottom = 4
+script = ExtResource("1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="AddSection" type="VBoxContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="AddLabel" type="Label" parent="VBoxContainer/AddSection"]
+layout_mode = 2
+text = "Add"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AddNodeNameLineEdit" type="LineEdit" parent="VBoxContainer/AddSection"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Name"
+alignment = 1
+expand_to_text_length = true
+select_all_on_focus = true
+caret_blink = true
+caret_blink_interval = 0.5
+
+[node name="AddGridContainer" type="HFlowContainer" parent="VBoxContainer/AddSection"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+alignment = 1
+
+[node name="CompoundState" type="Button" parent="VBoxContainer/AddSection/AddGridContainer" groups=["statebutton"]]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+tooltip_text = "CompoundState"
+icon = ExtResource("2")
+icon_alignment = 1
+
+[node name="ParallelState" type="Button" parent="VBoxContainer/AddSection/AddGridContainer" groups=["statebutton"]]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+tooltip_text = "ParallelState"
+icon = ExtResource("3")
+icon_alignment = 1
+
+[node name="AtomicState" type="Button" parent="VBoxContainer/AddSection/AddGridContainer" groups=["statebutton"]]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+tooltip_text = "AtomicState"
+icon = ExtResource("4")
+icon_alignment = 1
+
+[node name="HistoryState" type="Button" parent="VBoxContainer/AddSection/AddGridContainer" groups=["statebutton"]]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+tooltip_text = "HistoryState"
+icon = ExtResource("5")
+icon_alignment = 1
+
+[node name="Transition" type="Button" parent="VBoxContainer/AddSection/AddGridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+tooltip_text = "Transition"
+icon = ExtResource("6")
+icon_alignment = 1
+
+[node name="NoOptionsLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 0
+text = "This node cannot have further child nodes."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Spacer" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ToggleSidebarButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "Toggle sidebar location"
+icon = ExtResource("7")
+
+[connection signal="pressed" from="VBoxContainer/AddSection/AddGridContainer/CompoundState" to="." method="_on_compound_state_pressed"]
+[connection signal="pressed" from="VBoxContainer/AddSection/AddGridContainer/ParallelState" to="." method="_on_parallel_state_pressed"]
+[connection signal="pressed" from="VBoxContainer/AddSection/AddGridContainer/AtomicState" to="." method="_on_atomic_state_pressed"]
+[connection signal="pressed" from="VBoxContainer/AddSection/AddGridContainer/HistoryState" to="." method="_on_history_state_pressed"]
+[connection signal="pressed" from="VBoxContainer/AddSection/AddGridContainer/Transition" to="." method="_on_transition_pressed"]
+[connection signal="pressed" from="VBoxContainer/ToggleSidebarButton" to="." method="_on_toggle_sidebar_button_pressed"]

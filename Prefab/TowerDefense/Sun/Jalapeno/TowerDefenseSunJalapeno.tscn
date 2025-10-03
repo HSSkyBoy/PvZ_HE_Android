@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=4 uid="uid://da7lvlco511ds"]
+
+[ext_resource type="Script" uid="uid://bgj5pl45etvdc" path="res://Prefab/TowerDefense/Sun/Jalapeno/TowerDefenseSunJalapeno.gd" id="1"]
+[ext_resource type="Script" uid="uid://fix6uw08if5s" path="res://Resource/TowerDefense/Character/Buff/TowerDefenseCharacterBuffFireHit.gd" id="2"]
+[ext_resource type="Script" uid="uid://dtvfjfgy00epu" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventAddBuff.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://dp5idl7joe0rg" path="res://Asset/Anime/Effect/Sun/SunJalapeno/SunJalapeno.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://bhh76tmil13cb" path="res://Script/Component/MoveComponent/MoveComponent.tscn" id="5"]
+
+[sub_resource type="Resource" id="Resource_eoqhk"]
+script = ExtResource("2")
+refresh = true
+metadata/_custom_type_script = "uid://fix6uw08if5s"
+
+[sub_resource type="Resource" id="Resource_wgpuo"]
+script = ExtResource("3")
+buffList = [SubResource("Resource_eoqhk")]
+metadata/_custom_type_script = "uid://dtvfjfgy00epu"
+
+[sub_resource type="Gradient" id="Gradient_plw53"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cipkv"]
+gradient = SubResource("Gradient_plw53")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.7, 0.7)
+
+[node name="TowerDefenseSunJalapeno" type="Node2D"]
+physics_interpolation_mode = 1
+z_index = 1000
+script = ExtResource("1")
+allEventList = [SubResource("Resource_wgpuo")]
+
+[node name="SunSprite" parent="." instance=ExtResource("4")]
+unique_name_in_owner = true
+trueFrameRate = 30.0
+
+[node name="Light" type="PointLight2D" parent="SunSprite"]
+unique_name_in_owner = true
+visible = false
+energy = 0.5
+texture = SubResource("GradientTexture2D_cipkv")
+
+[node name="MoveComponent" parent="SunSprite" instance=ExtResource("5")]
+unique_name_in_owner = true
+
+[node name="DieDownTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 15.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="DieDownTimer" to="." method="DieDown"]

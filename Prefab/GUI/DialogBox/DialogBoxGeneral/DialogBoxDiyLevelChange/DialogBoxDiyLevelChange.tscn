@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=4 uid="uid://dpqscpnd01xpe"]
+
+[ext_resource type="PackedScene" uid="uid://nx2prtbxim66" path="res://Prefab/GUI/DialogBox/DialogBoxGeneral/DialogPopup.tscn" id="1"]
+[ext_resource type="Script" uid="uid://byv4aqlsx3ryf" path="res://Prefab/GUI/DialogBox/DialogBoxGeneral/DialogBoxDiyLevelChange/DialogBoxDiyLevelChange.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://bml60wmq62jay" path="res://Prefab/GUI/Button/MainButton.tscn" id="3"]
+
+[node name="DialogBoxDiyLevelChange" instance=ExtResource("1")]
+script = ExtResource("2")
+
+[node name="TextLabel" parent="Layer/Control/MarginContainer2/MarginContainer/CenterContainer" index="0"]
+text = "[center][font_size=24]关卡改动[/font_size][/center]
+[center][font_size=16]发现您的关卡发生改动需要通关才能导出[/font_size][/center]"
+
+[node name="ButtonContainer" parent="Layer/Control" index="1"]
+offset_left = -179.0
+offset_top = 5.01601
+offset_right = 169.0
+offset_bottom = 51.016
+
+[node name="TrueButton" parent="Layer/Control/ButtonContainer" index="0" instance=ExtResource("3")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "进入关卡"
+
+[node name="FalseButton" parent="Layer/Control/ButtonContainer" index="1" instance=ExtResource("3")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "取消"
+
+[connection signal="pressed" from="Layer/Control/ButtonContainer/TrueButton" to="." method="TrueButtonPressed"]
+[connection signal="pressed" from="Layer/Control/ButtonContainer/FalseButton" to="." method="FalseButtonPressed"]

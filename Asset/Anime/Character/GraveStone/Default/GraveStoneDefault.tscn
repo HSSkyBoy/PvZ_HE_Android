@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=4 uid="uid://rex8c803eb7s"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://lm2i1h4kk8iu" path="res://Asset/Anime/Character/GraveStone/Default/GraveStoneDefault.tres" id="2"]
+
+[node name="GraveStoneDefault" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -50)
+useTween = false
+layerSlot = [null, null, null]
+layerSprite = [null, null, null]
+Animation/Clip = "Idle17"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/Body = true
+Animation/LayerVisible/Dirt = true
+Animation/MediaReplace/Tombstones1.png = null
+Animation/MediaReplace/Tombstones10.png = null
+Animation/MediaReplace/Tombstones11.png = null
+Animation/MediaReplace/Tombstones12.png = null
+Animation/MediaReplace/Tombstones13.png = null
+Animation/MediaReplace/Tombstones14.png = null
+Animation/MediaReplace/Tombstones15.png = null
+Animation/MediaReplace/Tombstones16.png = null
+Animation/MediaReplace/Tombstones17.png = null
+Animation/MediaReplace/Tombstones18.png = null
+Animation/MediaReplace/Tombstones19.png = null
+Animation/MediaReplace/Tombstones2.png = null
+Animation/MediaReplace/Tombstones20.png = null
+Animation/MediaReplace/Tombstones3.png = null
+Animation/MediaReplace/Tombstones4.png = null
+Animation/MediaReplace/Tombstones5.png = null
+Animation/MediaReplace/Tombstones6.png = null
+Animation/MediaReplace/Tombstones7.png = null
+Animation/MediaReplace/Tombstones8.png = null
+Animation/MediaReplace/Tombstones9.png = null
+Animation/MediaReplace/TombstonesDirt1.png = null
+Animation/MediaReplace/TombstonesDirt10.png = null
+Animation/MediaReplace/TombstonesDirt11.png = null
+Animation/MediaReplace/TombstonesDirt12.png = null
+Animation/MediaReplace/TombstonesDirt13.png = null
+Animation/MediaReplace/TombstonesDirt14.png = null
+Animation/MediaReplace/TombstonesDirt15.png = null
+Animation/MediaReplace/TombstonesDirt16.png = null
+Animation/MediaReplace/TombstonesDirt17.png = null
+Animation/MediaReplace/TombstonesDirt18.png = null
+Animation/MediaReplace/TombstonesDirt19.png = null
+Animation/MediaReplace/TombstonesDirt2.png = null
+Animation/MediaReplace/TombstonesDirt20.png = null
+Animation/MediaReplace/TombstonesDirt3.png = null
+Animation/MediaReplace/TombstonesDirt4.png = null
+Animation/MediaReplace/TombstonesDirt5.png = null
+Animation/MediaReplace/TombstonesDirt6.png = null
+Animation/MediaReplace/TombstonesDirt7.png = null
+Animation/MediaReplace/TombstonesDirt8.png = null
+Animation/MediaReplace/TombstonesDirt9.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=4 uid="uid://dbmne3onxa3v1"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://dngt52rtftp4d" path="res://Asset/Anime/Character/Plant/Chapter2/Gloompult/Gloompult.tres" id="2"]
+
+[node name="Gloompult" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-45, -36)
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/AnimeEvents = true
+"Animation/LayerVisible/图层_1" = true
+"Animation/LayerVisible/图层_11" = true
+"Animation/LayerVisible/图层_12" = true
+"Animation/LayerVisible/图层_13" = true
+"Animation/LayerVisible/图层_14" = true
+"Animation/LayerVisible/图层_15" = true
+"Animation/LayerVisible/图层_16" = true
+"Animation/LayerVisible/图层_17" = true
+"Animation/LayerVisible/图层_19" = true
+"Animation/LayerVisible/图层_2" = true
+"Animation/LayerVisible/图层_20" = true
+"Animation/LayerVisible/图层_21" = true
+"Animation/LayerVisible/图层_22" = true
+"Animation/LayerVisible/图层_23" = true
+"Animation/LayerVisible/图层_3" = true
+"Animation/LayerVisible/图层_4" = true
+"Animation/LayerVisible/图层_5" = true
+"Animation/LayerVisible/图层_6" = true
+"Animation/LayerVisible/图层_7" = true
+"Animation/LayerVisible/图层_8" = true
+"Animation/LayerVisible/图层_9" = true
+Animation/MediaReplace/Gloompult_0000s_0000_22.png = null
+Animation/MediaReplace/Gloompult_0000s_0001_21.png = null
+Animation/MediaReplace/Gloompult_0000s_0002_20.png = null
+Animation/MediaReplace/Gloompult_0000s_0003_19.png = null
+Animation/MediaReplace/Gloompult_0000s_0004_18.png = null
+Animation/MediaReplace/Gloompult_0000s_0005_17.png = null
+Animation/MediaReplace/Gloompult_0000s_0006_16.png = null
+Animation/MediaReplace/Gloompult_0000s_0007_15.png = null
+Animation/MediaReplace/Gloompult_0000s_0008_14.png = null
+Animation/MediaReplace/Gloompult_0000s_0009_13.png = null
+Animation/MediaReplace/Gloompult_0000s_0013_9.png = null
+Animation/MediaReplace/Gloompult_0000s_0014_8.png = null
+Animation/MediaReplace/Gloompult_0000s_0015_7.png = null
+Animation/MediaReplace/Gloompult_0000s_0016_6.png = null
+Animation/MediaReplace/Gloompult_0000s_0017_5.png = null
+Animation/MediaReplace/Gloompult_0000s_0018_4.png = null
+Animation/MediaReplace/Gloompult_0000s_0019_3.png = null
+Animation/MediaReplace/Gloompult_0000s_0020_2.png = null
+Animation/MediaReplace/Gloompult_0000s_0021_1.png = null
+Animation/MediaReplace/Gloompult_blink1.png = null
+Animation/MediaReplace/Gloompult_blink2.png = null
+Animation/MediaReplace/Gloompult_blow1.png = null
+Animation/MediaReplace/Gloompult_blow2.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=4 uid="uid://dq0anpngru0qq"]
+
+[ext_resource type="Script" uid="uid://brexth6bqm32x" path="res://Prefab/GUI/DialogBox/DailyChallenge/LevelChoose/Button/DailyChallengeLevelChooseButton.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://ccim4e8sk714b" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Flagpole/ZombieFlagpole.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://c3orr2y7i6k7" path="res://Asset/Texture/GUI/DailyChallenge/DailyChallengeFinish.png" id="3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_blc8v"]
+
+[node name="DailyChallengeLevelChooseButton" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1")
+
+[node name="ZombieFlagpole" parent="." node_paths=PackedStringArray("layerSprite") instance=ExtResource("2")]
+position = Vector2(14, -91)
+rotation = 0.667835
+layerSprite = [null, null, null]
+
+[node name="Button" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -46.0
+offset_top = -31.0
+offset_right = 48.0
+offset_bottom = 31.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_blc8v")
+toggle_mode = true
+text = "1"
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="FinishTexture" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -15.5
+offset_right = 15.5
+offset_bottom = 32.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("3")
+expand_mode = 1
+
+[connection signal="toggled" from="Button" to="." method="Toggled"]

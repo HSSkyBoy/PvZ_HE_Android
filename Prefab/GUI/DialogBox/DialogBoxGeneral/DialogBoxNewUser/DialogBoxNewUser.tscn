@@ -1,0 +1,96 @@
+[gd_scene load_steps=8 format=4 uid="uid://fluy240kgqxt"]
+
+[ext_resource type="PackedScene" uid="uid://nx2prtbxim66" path="res://Prefab/GUI/DialogBox/DialogBoxGeneral/DialogPopup.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cchvid52gw36u" path="res://Prefab/GUI/DialogBox/DialogBoxGeneral/DialogBoxNewUser/DialogBoxNewUser.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://bml60wmq62jay" path="res://Prefab/GUI/Button/MainButton.tscn" id="3"]
+[ext_resource type="FontFile" uid="uid://b70va62wc3lp2" path="res://Asset/Font/fzcq.ttf" id="4"]
+[ext_resource type="Texture2D" uid="uid://omuqqfo1aao5" path="res://Asset/Texture/GUI/General/EditBox/EditBox.png" id="5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b8luq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vfvn8"]
+texture = ExtResource("5")
+texture_margin_left = 15.0
+texture_margin_top = 5.0
+texture_margin_right = 15.0
+texture_margin_bottom = 5.0
+
+[node name="DialogBoxNewUser" instance=ExtResource("1")]
+script = ExtResource("2")
+
+[node name="Control" parent="Layer" index="1"]
+offset_top = 174.0
+offset_bottom = -174.0
+
+[node name="MarginContainer2" parent="Layer/Control" index="0"]
+offset_top = -126.0
+offset_bottom = 126.0
+
+[node name="TextLabel" parent="Layer/Control/MarginContainer2/MarginContainer/CenterContainer" index="0"]
+visible = false
+
+[node name="ButtonContainer" parent="Layer/Control" index="1"]
+offset_top = 27.016
+offset_bottom = 73.016
+
+[node name="ReadyButton" parent="Layer/Control/ButtonContainer" index="0" instance=ExtResource("3")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "好"
+
+[node name="CancelButton" parent="Layer/Control/ButtonContainer" index="1" instance=ExtResource("3")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "取消"
+
+[node name="ReadyButtonNewUser" parent="Layer/Control/ButtonContainer" index="2" instance=ExtResource("3")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "好"
+
+[node name="TextLabel" type="RichTextLabel" parent="Layer/Control" index="2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.0
+offset_top = -80.0
+offset_right = 103.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.92549, 0.741176, 0.447059, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/normal_font = ExtResource("4")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center][font_size=24]新用户[/font_size][/center]
+[center][font_size=16]请输入你的名字[/font_size][/center]"
+fit_content = true
+autowrap_mode = 0
+
+[node name="NameLineEdit" type="LineEdit" parent="Layer/Control" index="3"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.501
+anchor_top = 0.5
+anchor_right = 0.501
+anchor_bottom = 0.5
+offset_left = -158.416
+offset_top = -27.0
+offset_right = 153.584
+offset_bottom = 7.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_b8luq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_vfvn8")
+context_menu_enabled = false
+
+[connection signal="pressed" from="Layer/Control/ButtonContainer/ReadyButton" to="." method="ReadyButtonPressed"]
+[connection signal="pressed" from="Layer/Control/ButtonContainer/CancelButton" to="." method="CancelButtonPressed"]
+[connection signal="pressed" from="Layer/Control/ButtonContainer/ReadyButtonNewUser" to="." method="ReadyButtonNewUserPressed"]

@@ -1,0 +1,20 @@
+[gd_resource type="ParticleProcessMaterial" load_steps=3 format=4 uid="uid://dtqd0yvre0uhh"]
+
+[sub_resource type="Curve" id="Curve_oxpor"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.229508, 1), 0.0, 0.0, 0, 0, Vector2(0.506557, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_3paqh"]
+curve = SubResource("Curve_oxpor")
+
+[resource]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(10, 1, 1)
+direction = Vector3(0, -1, 0)
+spread = 60.0
+initial_velocity_min = 200.0
+initial_velocity_max = 300.0
+gravity = Vector3(0, 980, 0)
+alpha_curve = SubResource("CurveTexture_3paqh")
+anim_offset_max = 1.0

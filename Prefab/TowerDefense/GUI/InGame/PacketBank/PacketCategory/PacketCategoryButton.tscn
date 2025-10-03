@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=4 uid="uid://c3g8bb7vutqsp"]
+
+[ext_resource type="Script" uid="uid://cvdkv0oljfidr" path="res://Prefab/TowerDefense/GUI/InGame/PacketBank/PacketCategory/PacketCategoryButton.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://cdnyb8d1qw7g4" path="res://Prefab/GUI/Button/SpriteBrightButton/SpriteBrightButton.tscn" id="2"]
+[ext_resource type="Shader" uid="uid://bi8x813unwm5l" path="res://Asset/Shader/ShaderBright.gdshader" id="3"]
+[ext_resource type="Texture2D" uid="uid://ddwd6f8g8jiht" path="res://Asset/Texture/TowerDefense/PacketBank/Cards1.png" id="4"]
+[ext_resource type="FontFile" uid="uid://bibg4dobk6vpn" path="res://Asset/Font/fzjz.ttf" id="5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dcky1"]
+shader = ExtResource("3")
+shader_parameter/brightStrength = 0.0
+
+[node name="PacketCategoryButton" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1")
+
+[node name="SpriteBrightButton" parent="." instance=ExtResource("2")]
+material = SubResource("ShaderMaterial_dcky1")
+layout_mode = 0
+offset_left = -27.0
+offset_top = -30.0
+offset_right = 165.0
+offset_bottom = 165.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4")
+autoSize = true
+
+[node name="Button" parent="SpriteBrightButton/Transform" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 192.0
+offset_bottom = 195.0
+
+[node name="LabelNode" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -22.0
+offset_top = -11.0
+offset_right = -22.0
+offset_bottom = -11.0
+
+[node name="Label" type="Label" parent="LabelNode"]
+layout_mode = 0
+offset_right = 48.0
+offset_bottom = 29.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 24
+text = "白卡"
+
+[connection signal="pressed" from="SpriteBrightButton" to="." method="ButtonPressed"]
+
+[editable path="SpriteBrightButton"]

@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=4 uid="uid://boovl0dn3b4ib"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bxr206q8hqxau" path="res://Asset/Anime/Character/Plant/Chapter3/CaltropMelon/Scene/TowerDefensePlantCaltropMelon.gd" id="2"]
+[ext_resource type="Resource" uid="uid://bq7jl4arsn3sq" path="res://Asset/Anime/Character/Plant/Chapter3/CaltropMelon/Config/TowerDefensePlantCaltropMelon.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://dcdxn6f3d1u5w" path="res://Asset/Anime/Character/Plant/Chapter3/CaltropMelon/CaltropMelon.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://dir0f8lu1l3b3" path="res://Script/Component/TowerDefense/Character/AttackComponent/AttackComponent.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://b5htxrgm8twcr" path="res://Script/Component/TowerDefense/Character/FireComponent/FireComponent.tscn" id="6"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="7"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f6h0u"]
+size = Vector2(73, 33)
+
+[node name="TowerDefensePlantCaltropMelon" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+z_index = -13
+script = ExtResource("2")
+attack = 20.0
+fireInterval = 1.5
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/CaltropMelon")
+itemLayer = 2
+gravity = 245.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 37)
+
+[node name="CaltropMelon" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+position = Vector2(0, -37)
+
+[node name="ShadowSprite" parent="." index="3"]
+visible = false
+position = Vector2(0, 30)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+
+[node name="AttackComponent" parent="." index="7" node_paths=PackedStringArray("checkArea") instance=ExtResource("5")]
+unique_name_in_owner = true
+attackType = "Default"
+checkArea = NodePath("Area2D")
+
+[node name="Area2D" type="Area2D" parent="AttackComponent" index="0"]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent/Area2D" index="0"]
+position = Vector2(-1.5, -0.5)
+shape = SubResource("RectangleShape2D_f6h0u")
+
+[node name="FireComponent" parent="." index="8" instance=ExtResource("6")]
+unique_name_in_owner = true
+fireInterval = 1.5
+
+[node name="Attack" type="Node" parent="StateChart/CompoundState" index="2"]
+script = ExtResource("7")
+
+[node name="ToAttack" type="Node" parent="StateChart/CompoundState" index="6"]
+script = ExtResource("8")
+to = NodePath("../Attack")
+event = &"ToAttack"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="StateChart/CompoundState/Attack" to="." method="AttackEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Attack" to="." method="AttackExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Attack" to="." method="AttackProcessing"]

@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=4 uid="uid://ct3aai4g57k2g"]
+
+[ext_resource type="Texture2D" uid="uid://cxjji182wdn3n" path="res://Asset/Anime/Particles/Splats/SpikeMelonpultParticles.png" id="1"]
+[ext_resource type="Material" uid="uid://dj3cvkq4uvihp" path="res://Prefab/Particles/Splats/SpikeMelonpultSplats/SpikeMelonpultSplats.tres" id="2"]
+[ext_resource type="Script" uid="uid://dywgdjamo0ovs" path="res://Extends/Particles/GPUParticles2DOnece.gd" id="3"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_f76lw"]
+particles_animation = true
+particles_anim_h_frames = 9
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[node name="SpikeMelonpultSplats" type="GPUParticles2D"]
+z_index = 1
+material = SubResource("CanvasItemMaterial_f76lw")
+emitting = false
+texture = ExtResource("1")
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+process_material = ExtResource("2")
+script = ExtResource("3")

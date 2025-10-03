@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CharacterDamagePointData" load_steps=4 format=4 uid="uid://pev7ovqulqco"]
+
+[ext_resource type="Resource" uid="uid://b8w8htp4yuf7k" path="res://Asset/Anime/Character/Zombie/Chapter1/Football/DamagePoint/Config/ZombieFootballDamagePointArm.tres" id="1"]
+[ext_resource type="Resource" uid="uid://d0c6qmcgnjnb0" path="res://Asset/Anime/Character/Zombie/Chapter1/Football/DamagePoint/Config/ZombieFootballDamagePointHead.tres" id="2"]
+[ext_resource type="Script" uid="uid://c3lvn8julbk1s" path="res://Resource/General/Character/DamagePoint/CharacterDamagePointData.gd" id="3"]
+
+[resource]
+script = ExtResource("3")
+damagePointList = [ExtResource("1"), ExtResource("2")]
+damagePointDictionary = {
+"Arm": {
+"Close": ["zombie_football_leftarm_lower", "zombie_football_leftarm_hand"],
+"Config": ExtResource("1"),
+"Open": []
+},
+"Head": {
+"Close": ["anim_head1", "anim_head2", "anim_hair"],
+"Config": ExtResource("2"),
+"Open": []
+}
+}
+fliterOpenAll = []
+fliterCloseAll = ["zombie_football_leftarm_lower", "zombie_football_leftarm_hand", "anim_head1", "anim_head2", "anim_hair"]
+metadata/_custom_type_script = "uid://c3lvn8julbk1s"

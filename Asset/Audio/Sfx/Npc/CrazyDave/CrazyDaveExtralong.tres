@@ -1,0 +1,11 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=4 format=4 uid="uid://fy58t6cfkovs"]
+
+[ext_resource type="AudioStream" uid="uid://dv4wxubtk1c8" path="res://Asset/Audio/Sfx/Npc/CrazyDave/CrazyDaveExtralong1.ogg" id="1"]
+[ext_resource type="AudioStream" uid="uid://bjattnd21wjy2" path="res://Asset/Audio/Sfx/Npc/CrazyDave/CrazyDaveExtralong2.ogg" id="2"]
+[ext_resource type="AudioStream" uid="uid://codcqpcy4053s" path="res://Asset/Audio/Sfx/Npc/CrazyDave/CrazyDaveExtralong3.ogg" id="3"]
+
+[resource]
+streams_count = 3
+stream_0/stream = ExtResource("1")
+stream_1/stream = ExtResource("2")
+stream_2/stream = ExtResource("3")

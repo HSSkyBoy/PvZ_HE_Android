@@ -1,0 +1,147 @@
+[gd_scene load_steps=9 format=4 uid="uid://bhqecss20rwpb"]
+
+[ext_resource type="Script" uid="uid://cgqbfps7b87b1" path="res://Prefab/TowerDefense/GUI/InGame/Packet/TowerDefenseInGamePacketShow.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bwksngvkn16cd" path="res://Asset/Texture/TowerDefense/Packet/PC/PacketNormal.png" id="2"]
+[ext_resource type="FontFile" uid="uid://dww00k8yk5k72" path="res://Asset/Font/wryh+pico12num.ttf" id="3"]
+[ext_resource type="Texture2D" uid="uid://ca5pe3bkj7p1v" path="res://Asset/Texture/TowerDefense/Packet/PacketSelect.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://bd0qke87q6iwv" path="res://Asset/Texture/TowerDefense/Packet/PacketloveIdle.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://ytufqji3xe0p" path="res://Asset/Texture/TowerDefense/Packet/Packetlove.png" id="6"]
+
+[sub_resource type="Gradient" id="Gradient_p062k"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 0.564706)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_t8t4b"]
+gradient = SubResource("Gradient_p062k")
+width = 50
+height = 70
+
+[node name="TowerDefenseInGamePacketShow" type="Control"]
+light_mask = 0
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 1
+script = ExtResource("1")
+
+[node name="Body" type="Control" parent="."]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 1
+
+[node name="Layout" type="Control" parent="Body"]
+unique_name_in_owner = true
+light_mask = 0
+anchors_preset = 0
+mouse_filter = 1
+
+[node name="BackgroundTexture" type="TextureRect" parent="Body/Layout"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+offset_left = -24.0
+offset_top = -32.0
+offset_right = 26.0
+offset_bottom = 38.0
+texture = ExtResource("2")
+expand_mode = 1
+
+[node name="Mask" type="ColorRect" parent="Body/Layout/BackgroundTexture"]
+unique_name_in_owner = true
+clip_children = 1
+light_mask = 0
+layout_mode = 0
+offset_left = 3.0
+offset_top = 6.0
+offset_right = 47.0
+offset_bottom = 53.0
+
+[node name="SpriteNode" type="Control" parent="Body/Layout/BackgroundTexture/Mask"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ItemCostLabel" type="Label" parent="Body/Layout/BackgroundTexture"]
+unique_name_in_owner = true
+light_mask = 0
+texture_filter = 1
+layout_mode = 0
+offset_left = 2.0
+offset_top = 52.0
+offset_right = 37.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 12
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SelectTexture" type="NinePatchRect" parent="Body"]
+unique_name_in_owner = true
+visible = false
+light_mask = 0
+layout_mode = 0
+offset_left = -25.0
+offset_top = -33.0
+offset_right = 145.0
+offset_bottom = 204.0
+scale = Vector2(0.3, 0.3)
+mouse_filter = 1
+texture = ExtResource("4")
+region_rect = Rect2(0, 0, 104, 144)
+patch_margin_left = 42
+patch_margin_top = 34
+patch_margin_right = 40
+patch_margin_bottom = 36
+
+[node name="Button" type="Button" parent="Body"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+light_mask = 0
+layout_mode = 0
+offset_left = -24.0
+offset_top = -32.0
+offset_right = 26.0
+offset_bottom = 38.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+
+[node name="ColdDownProgressBar" type="TextureProgressBar" parent="Body"]
+unique_name_in_owner = true
+visible = false
+light_mask = 0
+layout_mode = 0
+offset_left = -24.0
+offset_top = -32.0
+offset_right = 26.0
+offset_bottom = 38.0
+step = 0.01
+value = 100.0
+fill_mode = 2
+texture_progress = SubResource("GradientTexture2D_t8t4b")
+
+[node name="LoveButton" type="TextureButton" parent="Body"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 4.0
+offset_top = -35.0
+offset_right = 29.0
+offset_bottom = -11.0
+mouse_filter = 1
+toggle_mode = true
+texture_normal = ExtResource("5")
+texture_pressed = ExtResource("6")
+texture_hover = ExtResource("6")
+
+[node name="ColdDownTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+
+[connection signal="mouse_entered" from="Body/Button" to="." method="MouseEntered"]
+[connection signal="mouse_exited" from="Body/Button" to="." method="MouseExited"]
+[connection signal="pressed" from="Body/Button" to="." method="Pressed"]
+[connection signal="toggled" from="Body/LoveButton" to="." method="LoveButtonToggled"]

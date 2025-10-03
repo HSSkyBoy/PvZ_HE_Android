@@ -1,0 +1,92 @@
+[gd_scene load_steps=14 format=4 uid="uid://bc8e1ej3tesie"]
+
+[ext_resource type="PackedScene" uid="uid://be74ryvl4k6y7" path="res://Prefab/TowerDefense/Character/TowerDefenseZombieGargantuarBase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://dg3pre851y0sr" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/Scene/TowerDefenseZombieGargantuarRedEyes.gd" id="2"]
+[ext_resource type="Resource" uid="uid://c0htp5ig8owav" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/Config/TowerDefenseZombieGargantuarRedEyes.tres" id="3"]
+[ext_resource type="Resource" uid="uid://c1eumy3cpy2a0" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/Armor/Config/ZombieGargantuarArmorBucket.tres" id="4"]
+[ext_resource type="Resource" uid="uid://c4v416ks2xk7j" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/Armor/Config/ZombieGargantuarArmorBlackHelmet.tres" id="5"]
+[ext_resource type="Resource" uid="uid://3hqi6b5h245c" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/Armor/Config/ZombieGargantuarArmorSpecialHelmet.tres" id="6"]
+[ext_resource type="Resource" uid="uid://bj3dms6cau0di" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/Armor/Config/ZombieGargantuarArmorScreendoor.tres" id="7"]
+[ext_resource type="Resource" uid="uid://dhhuc6aqb3fn0" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/Armor/Config/ZombieGargantuarArmorShield.tres" id="8"]
+[ext_resource type="Resource" uid="uid://cuby4qhrxt5uo" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/Armor/Config/ZombieGargantuarArmorHelmet.tres" id="9"]
+[ext_resource type="PackedScene" uid="uid://cmf6p5u5cs8ts" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/ZombieGargantuarRedEyes.tscn" id="10"]
+[ext_resource type="Texture2D" uid="uid://bsh6g1gtv07mv" path="res://Asset/Texture/Character/Armor/Bucket/ZombieBucket1.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://4bhk575c1fyl" path="res://Asset/Texture/Character/Armor/BlackHelmet/ZombieBlackHelmet1.png" id="12"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xd87"]
+size = Vector2(100.5, 33)
+
+[node name="TowerDefenseZombieGargantuarRedEyes" node_paths=PackedStringArray("impSpawnSlot", "sprite", "headSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+impName = "ZombieImp"
+impSpawnSlot = NodePath("SpriteGroup/TransformPoint/ZombieGargantuarRedEyes/ImpSlot")
+walkSpeedScale = 0.4
+waterHeightPersontage = 0.37
+waterHeight = 95.0
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieGargantuarRedEyes")
+headSlot = NodePath("SpriteGroup/TransformPoint/ZombieGargantuarRedEyes/HeadSlot")
+damagePart = {
+"BlackHelmet": ExtResource("5"),
+"Bucket": ExtResource("4"),
+"Helmet": ExtResource("9"),
+"Screendoor": ExtResource("7"),
+"Shield": ExtResource("8"),
+"SpecialHelmet": ExtResource("6")
+}
+PreviewDamagePointPersontage = 1.0
+Armor = []
+DamagePartSlot/Bucket = NodePath("SpriteGroup/TransformPoint/ZombieGargantuarRedEyes/BucketSlot")
+DamagePartSlot/BlackHelmet = NodePath("SpriteGroup/TransformPoint/ZombieGargantuarRedEyes/HelmetSlot")
+DamagePartSlot/SpecialHelmet = NodePath("SpriteGroup/TransformPoint/ZombieGargantuarRedEyes/HeadSlot")
+DamagePartSlot/Screendoor = NodePath("SpriteGroup/TransformPoint/ZombieGargantuarRedEyes/ScreenDoorSlot")
+DamagePartSlot/Shield = NodePath("SpriteGroup/TransformPoint/ZombieGargantuarRedEyes/ScreenDoorSlot")
+DamagePartSlot/Helmet = NodePath("SpriteGroup/TransformPoint/ZombieGargantuarRedEyes/HelmetSlot")
+
+[node name="SpriteMask" parent="SpriteGroup" index="0"]
+offset_left = -82.0
+offset_top = -186.0
+offset_right = 81.0
+offset_bottom = 179.0
+
+[node name="ZombieGargantuarRedEyes" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("10")]
+position = Vector2(-12, -36)
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ImpSlot"), null, null, null, null, null, null, null, null, null, null, NodePath("HeadSlot"), null, NodePath("BucketSlot"), NodePath("HelmetSlot"), null, NodePath("ScreenDoorSlot"), null, null, null, null, null, null, null, null]
+Animation/MediaReplace/Ground.png = ExtResource("11")
+Animation/MediaReplace/Zombie_bucket1.png = ExtResource("12")
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieGargantuarRedEyes" index="0"]
+position = Vector2(-48.7161, -85.5223)
+rotation = -0.022324
+scale = Vector2(0.999892, 0.999892)
+
+[node name="BucketSlot" parent="SpriteGroup/TransformPoint/ZombieGargantuarRedEyes" index="1"]
+position = Vector2(-46.7103, -102.907)
+rotation = 0.00698105
+scale = Vector2(0.999905, 0.999905)
+
+[node name="HelmetSlot" parent="SpriteGroup/TransformPoint/ZombieGargantuarRedEyes" index="2"]
+position = Vector2(-52.7305, -86.9493)
+rotation = 0.00698105
+scale = Vector2(0.999905, 0.999905)
+
+[node name="ScreenDoorSlot" parent="SpriteGroup/TransformPoint/ZombieGargantuarRedEyes" index="3"]
+position = Vector2(-60.2741, -15.5302)
+rotation = -0.122176
+scale = Vector2(0.999974, 0.999974)
+
+[node name="ImpSlot" parent="SpriteGroup/TransformPoint/ZombieGargantuarRedEyes" index="4"]
+position = Vector2(-54.8647, -108.298)
+rotation = -0.0289561
+scale = Vector2(0.999826, 0.999826)
+
+[node name="GroundSlot" parent="SpriteGroup/TransformPoint/ZombieGargantuarRedEyes" index="5"]
+position = Vector2(-114.624, -10)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+shape = SubResource("RectangleShape2D_6xd87")
+
+[node name="GroundMoveComponent" parent="." index="8" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieGargantuarRedEyes/GroundSlot")
+
+[editable path="SpriteGroup/TransformPoint/ZombieGargantuarRedEyes"]

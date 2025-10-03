@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=4 uid="uid://djkn7gsrqmxqr"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://copct3x5ysadv" path="res://Asset/Anime/Character/Plant/Chapter2/SnowShroom/SnowShroom.tres" id="2"]
+
+[node name="SnowShroom" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/IceShroom_base = true
+Animation/LayerVisible/IceShroom_head = true
+Animation/LayerVisible/anim_face = true
+Animation/LayerVisible/anim_sleep = true
+Animation/LayerVisible/skin1 = false
+Animation/LayerVisible/skin2 = false
+Animation/LayerVisible/skin3_1 = false
+Animation/LayerVisible/skin3_2 = false
+Animation/LayerVisible/skin3_3 = false
+Animation/LayerVisible/skin4_1 = false
+Animation/LayerVisible/skin4_2 = false
+"Animation/LayerVisible/图层_45" = true
+"Animation/LayerVisible/图层_45      复制 6" = true
+"Animation/LayerVisible/图层_45     复制 5" = true
+"Animation/LayerVisible/图层_45    复制 4" = true
+"Animation/LayerVisible/图层_45   复制 3" = true
+"Animation/LayerVisible/图层_45  复制 2" = true
+"Animation/LayerVisible/图层_45 复制" = true
+"Animation/LayerVisible/图层_48" = true
+"Animation/LayerVisible/图层_48      复制 6" = true
+"Animation/LayerVisible/图层_48     复制 5" = true
+"Animation/LayerVisible/图层_48    复制 4" = true
+"Animation/LayerVisible/图层_48   复制 3" = true
+"Animation/LayerVisible/图层_48  复制 2" = true
+"Animation/LayerVisible/图层_48 复制" = true
+Animation/MediaReplace/IceShroom_base.png = null
+Animation/MediaReplace/IceShroom_blink2.png = null
+Animation/MediaReplace/IceShroom_body2.png = null
+Animation/MediaReplace/IceShroom_head.png = null
+Animation/MediaReplace/SnowShroom_crystal.png = null
+Animation/MediaReplace/SnowShroom_pea.png = null
+Animation/MediaReplace/SnowShroom_skin1.png = null
+Animation/MediaReplace/SnowShroom_skin2.png = null
+Animation/MediaReplace/SnowShroom_skin3.png = null
+Animation/MediaReplace/SnowShroom_skin4.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

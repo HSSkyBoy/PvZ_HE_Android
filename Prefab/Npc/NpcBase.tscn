@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=4 uid="uid://dxu4nl0muu0rr"]
+
+[ext_resource type="Script" uid="uid://c602s1wvt0kjv" path="res://Prefab/Npc/NpcBase.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://twry6b8y4en" path="res://Asset/Texture/GUI/General/TalkBubble/TalkBubble.png" id="2"]
+[ext_resource type="FontFile" uid="uid://coqskwlqtnypf" path="res://Asset/Font/fzkt.ttf" id="3"]
+[ext_resource type="FontFile" uid="uid://dww00k8yk5k72" path="res://Asset/Font/wryh+pico12num.ttf" id="4"]
+
+[node name="NpcBase" type="Node2D"]
+light_mask = 0
+script = ExtResource("1")
+metadata/_custom_type_script = "uid://cisaddc15ap6u"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 5
+follow_viewport_enabled = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+light_mask = 0
+offset_right = 1824.0
+offset_bottom = 600.0
+color = Color(1, 1, 1, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="TalkBubble" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+light_mask = 0
+offset_left = 291.0
+offset_top = 20.0
+offset_right = 571.0
+offset_bottom = 203.0
+pivot_offset = Vector2(30, 183)
+texture = ExtResource("2")
+
+[node name="TalkLabel" type="Label" parent="TalkBubble"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 0
+offset_left = 19.0
+offset_top = 13.0
+offset_right = 258.0
+offset_bottom = 147.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 20
+text = "啊啊啊啊"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="NextLabel" type="Label" parent="TalkBubble"]
+light_mask = 0
+layout_mode = 0
+offset_left = 83.0
+offset_top = 132.0
+offset_right = 191.0
+offset_bottom = 156.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4")
+theme_override_font_sizes/font_size = 12
+text = "点击继续"
+horizontal_alignment = 1
+vertical_alignment = 1

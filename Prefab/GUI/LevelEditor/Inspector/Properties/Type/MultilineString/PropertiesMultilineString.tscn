@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=4 uid="uid://bff45o7x3xb2u"]
+
+[ext_resource type="PackedScene" uid="uid://ch1hh04p5qvav" path="res://Prefab/GUI/LevelEditor/Inspector/Properties/Type/Base/PropertiesBase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://d205al57gfgfx" path="res://Prefab/GUI/LevelEditor/Inspector/Properties/Type/MultilineString/PropertiesMultilineString.gd" id="2"]
+
+[node name="PropertiesMultilineString" instance=ExtResource("1")]
+light_mask = 0
+custom_minimum_size = Vector2(0, 150)
+offset_right = 272.0
+offset_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2")
+
+[node name="TextEdit" type="TextEdit" parent="HBoxContainer" index="0"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="text_changed" from="HBoxContainer/TextEdit" to="." method="ValueChange"]

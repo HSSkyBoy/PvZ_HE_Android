@@ -1,0 +1,129 @@
+[gd_scene load_steps=15 format=4 uid="uid://qmdofsc6cq7t"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cktqwfx1ciq8y" path="res://Asset/Anime/Character/Zombie/Chapter1/Balloon/Scene/TowerDefenseZombieBalloon.gd" id="2"]
+[ext_resource type="Resource" uid="uid://cirhgwvob6dbg" path="res://Asset/Anime/Character/Zombie/Chapter1/Balloon/Config/TowerDefenseZombieBalloon.tres" id="3"]
+[ext_resource type="Resource" uid="uid://rmtgqs06s8xp" path="res://Asset/Anime/Character/Zombie/Chapter1/Balloon/DamagePoint/Config/ZombieBalloonDamagePointArm.tres" id="4"]
+[ext_resource type="Resource" uid="uid://2nmmd3yqewqk" path="res://Asset/Anime/Character/Zombie/Chapter1/Balloon/DamagePoint/Config/ZombieBalloonDamagePointHead.tres" id="5"]
+[ext_resource type="Resource" uid="uid://didmg6gw71jhq" path="res://Asset/Anime/Character/Zombie/Chapter1/Balloon/Armor/Config/ZombieBalloonArmorCone.tres" id="6"]
+[ext_resource type="Resource" uid="uid://jocdyem1u714" path="res://Asset/Anime/Character/Zombie/Chapter1/Balloon/Armor/Config/ZombieBalloonArmorBucket.tres" id="7"]
+[ext_resource type="Resource" uid="uid://cq7o6mpq8btuj" path="res://Asset/Anime/Character/Zombie/Chapter1/Balloon/Armor/Config/ZombieBalloonArmorHelmet.tres" id="8"]
+[ext_resource type="Resource" uid="uid://cxp5pd2dtae5w" path="res://Asset/Anime/Character/Zombie/Chapter1/Balloon/Armor/Config/ZombieBalloonArmorBlackHelmet.tres" id="9"]
+[ext_resource type="Resource" uid="uid://dbrx3hot7ybc5" path="res://Asset/Anime/Character/Zombie/Chapter1/Balloon/Armor/Config/ZombieBalloonArmorSpecialHelmet.tres" id="10"]
+[ext_resource type="PackedScene" uid="uid://bbpus0bcjt8gm" path="res://Asset/Anime/Character/Zombie/Chapter1/Balloon/ZombieBalloon.tscn" id="11"]
+[ext_resource type="PackedScene" uid="uid://bjm31m10ujp84" path="res://Asset/Anime/Character/Zombie/WaterLine/ZombieWaterLine.tscn" id="12"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="13"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="14"]
+
+[node name="TowerDefenseZombieBalloon" node_paths=PackedStringArray("duckytobeSprite", "waterLineSprite", "sprite", "headSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+walkSpeedScale = 1.5
+inSwimAnimeClip = ""
+outSwimAnimeClip = ""
+attackWaterAnimeClip = ""
+duckytobeSprite = NodePath("SpriteGroup/TransformPoint/ZombieBalloon/ZombieDuckytube")
+waterLineSprite = NodePath("SpriteGroup/TransformPoint/ZombieWaterLine")
+waterHeightPersontage = 0.7
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieBalloon")
+headSlot = NodePath("SpriteGroup/TransformPoint/ZombieBalloon/HeadSlot")
+damagePart = {
+"Arm": ExtResource("4"),
+"BlackHelmet": ExtResource("9"),
+"Bucket": ExtResource("7"),
+"Cone": ExtResource("6"),
+"Head": ExtResource("5"),
+"Helmet": ExtResource("8"),
+"SpecialHelmet": ExtResource("10")
+}
+PreviewDamagePointPersontage = 1.0
+Armor = ["Balloon"]
+DamagePartSlot/Arm = NodePath("SpriteGroup/TransformPoint/ZombieBalloon/ArmSlot")
+DamagePartSlot/Head = NodePath("SpriteGroup/TransformPoint/ZombieBalloon/HeadSlot")
+DamagePartSlot/Cone = NodePath("SpriteGroup/TransformPoint/ZombieBalloon/HeadSlot")
+DamagePartSlot/Bucket = NodePath("SpriteGroup/TransformPoint/ZombieBalloon/HeadSlot")
+DamagePartSlot/Helmet = NodePath("SpriteGroup/TransformPoint/ZombieBalloon/HeadSlot")
+DamagePartSlot/BlackHelmet = NodePath("SpriteGroup/TransformPoint/ZombieBalloon/HeadSlot")
+DamagePartSlot/SpecialHelmet = NodePath("SpriteGroup/TransformPoint/ZombieBalloon/HeadSlot")
+
+[node name="SpriteMask" parent="SpriteGroup" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 89.0
+offset_bottom = 191.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(12, 33)
+
+[node name="ZombieBalloon" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("11")]
+position = Vector2(-4, -29)
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="ZombieDuckytube" parent="SpriteGroup/TransformPoint/ZombieBalloon" index="0"]
+position = Vector2(-23.1667, -55.2667)
+rotation = -0.963842
+
+[node name="PropellerSlot" parent="SpriteGroup/TransformPoint/ZombieBalloon" index="1"]
+position = Vector2(-43.6167, -54.6333)
+rotation = -0.119148
+scale = Vector2(0.798393, 0.798393)
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieBalloon" index="2"]
+position = Vector2(-27.8099, -30.4552)
+rotation = -0.0359992
+scale = Vector2(0.799762, 0.799762)
+
+[node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieBalloon" index="3"]
+position = Vector2(-4.77716, 4.06873)
+rotation = -0.00384219
+scale = Vector2(0.599888, 0.599888)
+
+[node name="GroundSlot" parent="SpriteGroup/TransformPoint/ZombieBalloon" index="4"]
+position = Vector2(-37.27, -60)
+
+[node name="ZombieWaterLine" parent="SpriteGroup/TransformPoint" index="1" instance=ExtResource("12")]
+visible = false
+position = Vector2(0, -48)
+
+[node name="GroundMoveComponent" parent="." index="8" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieBalloon/GroundSlot")
+
+[node name="Fly" type="Node" parent="StateChart/CompoundState" index="4"]
+script = ExtResource("13")
+
+[node name="FlyAttack" type="Node" parent="StateChart/CompoundState" index="5"]
+script = ExtResource("13")
+
+[node name="Pop" type="Node" parent="StateChart/CompoundState" index="6"]
+script = ExtResource("13")
+
+[node name="ToPop" type="Node" parent="StateChart/CompoundState" index="11"]
+script = ExtResource("14")
+to = NodePath("../Pop")
+event = &"ToPop"
+delay_in_seconds = "0.0"
+
+[node name="ToFly" type="Node" parent="StateChart/CompoundState" index="12"]
+script = ExtResource("14")
+to = NodePath("../Fly")
+event = &"ToFly"
+delay_in_seconds = "0.0"
+
+[node name="ToFlyAttack" type="Node" parent="StateChart/CompoundState" index="13"]
+script = ExtResource("14")
+to = NodePath("../FlyAttack")
+event = &"ToFlyAttack"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="StateChart/CompoundState/Fly" to="." method="FlyEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Fly" to="." method="FlyExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Fly" to="." method="FlyProcessing"]
+[connection signal="state_entered" from="StateChart/CompoundState/FlyAttack" to="." method="FlyAttackEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/FlyAttack" to="." method="FlyAttackExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/FlyAttack" to="." method="FlyAttackProcessing"]
+[connection signal="state_entered" from="StateChart/CompoundState/Pop" to="." method="PopEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Pop" to="." method="PopExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Pop" to="." method="PopProcessing"]
+
+[editable path="SpriteGroup/TransformPoint/ZombieBalloon"]

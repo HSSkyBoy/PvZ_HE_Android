@@ -1,0 +1,399 @@
+{
+	"Page" : [
+		{
+			"Item" : [
+				{
+					"Stage" : [
+						{
+							"SaveKey" : "PacketSlot8" ,
+							"Texture" : "uid://cx3aklbvslute" ,
+							"Describe" : "SHOP_ITEM_PACKETSLOT_8" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PACKETSLOT" ,
+							"Type" : "Coin" ,
+							"Cost" : 500 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						},
+						{
+							"SaveKey" : "PacketSlot9" ,
+							"Texture" : "uid://cx3aklbvslute" ,
+							"Describe" : "SHOP_ITEM_PACKETSLOT_9" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PACKETSLOT" ,
+							"Type" : "Coin" ,
+							"Cost" : 1000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						},
+						{
+							"SaveKey" : "PacketSlot10" ,
+							"Texture" : "uid://cx3aklbvslute" ,
+							"Describe" : "SHOP_ITEM_PACKETSLOT_10" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PACKETSLOT" ,
+							"Type" : "Coin" ,
+							"Cost" : 2000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						},
+						{
+							"SaveKey" : "PacketSlot11" ,
+							"Texture" : "uid://cx3aklbvslute" ,
+							"Describe" : "SHOP_ITEM_PACKETSLOT_11" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PACKETSLOT" ,
+							"Type" : "Coin" ,
+							"Cost" : 4000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						},
+						{
+							"SaveKey" : "PacketSlot12" ,
+							"Texture" : "uid://cx3aklbvslute" ,
+							"Describe" : "SHOP_ITEM_PACKETSLOT_12" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PACKETSLOT" ,
+							"Type" : "Coin" ,
+							"Cost" : 8000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						},
+						{
+							"SaveKey" : "PacketSlot13" ,
+							"Texture" : "uid://cx3aklbvslute" ,
+							"Describe" : "SHOP_ITEM_PACKETSLOT_13" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PACKETSLOT" ,
+							"Type" : "Coin" ,
+							"Cost" : 16000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						},
+						{
+							"SaveKey" : "PacketSlot14" ,
+							"Texture" : "uid://cx3aklbvslute" ,
+							"Describe" : "SHOP_ITEM_PACKETSLOT_14" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PACKETSLOT" ,
+							"Type" : "Coin" ,
+							"Cost" : 32000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						},
+						{
+							"SaveKey" : "PacketSlot15" ,
+							"Texture" : "uid://cx3aklbvslute" ,
+							"Describe" : "SHOP_ITEM_PACKETSLOT_15" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PACKETSLOT" ,
+							"Type" : "Coin" ,
+							"Cost" : 64000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						},
+						{
+							"SaveKey" : "PacketSlot16" ,
+							"Texture" : "uid://cx3aklbvslute" ,
+							"Describe" : "SHOP_ITEM_PACKETSLOT_16" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PACKETSLOT" ,
+							"Type" : "Coin" ,
+							"Cost" : 128000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						}
+					]
+				},
+				{
+					"Stage" : [
+						{
+							"SaveKey" : "NutBandaging" ,
+							"Texture" : "uid://dr87kt7wbjgkg" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_NUTBANDAGING" ,
+							"Type" : "Coin" ,
+							"Cost" : 200 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						}
+					]
+				},
+				{
+					"Stage" : [
+						{
+							"SaveKey" : "PotReplacement" ,
+							"Texture" : "uid://dmxt2bfog0s0u" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_POYREPLACEMENT" ,
+							"Type" : "Coin" ,
+							"Cost" : 500 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						}
+					]
+				},
+				{
+					"Stage" : [
+						{
+							"SaveKey" : "Pitchfork" ,
+							"Texture" : "uid://cybyd2aoye54" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PITCHFORK" ,
+							"Type" : "Coin" ,
+							"Cost" : 200 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 3
+						}
+					]
+				},
+				{
+					"Stage" : [
+						{
+							"SaveKey" : "PitchforkSun" ,
+							"Texture" : "uid://couj5rp7ns28s" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PITCHFORK_SUN" ,
+							"Type" : "Coin" ,
+							"Cost" : 500 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 3
+						}
+					]
+				},
+				{
+					"Stage" : [
+						{
+							"SaveKey" : "SunCollect" ,
+							"Texture" : "uid://wrxym35x1i62" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_SUNCOLLECT" ,
+							"Type" : "Coin" ,
+							"Cost" : 1000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						}
+					]
+				},
+				{
+					"Stage" : [
+						{
+							"SaveKey" : "CoinCollect" ,
+							"Texture" : "uid://cxtcenbii0ryp" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_COINCOLLECT" ,
+							"Type" : "Coin" ,
+							"Cost" : 2000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						}
+					]
+				}
+			]
+		},
+		{
+			"Item" : [
+				{
+					"Stage" : [
+						{
+							"SaveKey" : "ShovelDiamond" ,
+							"Texture" : "uid://bn73et4em88o4" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_SHOVEL_DIAMOND" ,
+							"Type" : "Coin" ,
+							"Cost" : 10000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						}
+					]
+				},
+				{
+					"Stage" : [
+						{
+							"SaveKey" : "MowerSun" ,
+							"Texture" : "uid://cltuhvqt2yj0j" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_MOWER_SUN" ,
+							"Type" : "Coin" ,
+							"Cost" : 15000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						}
+					]
+				},
+			]
+		},
+		{
+			"Item" : [
+				{
+					"Stage" : [
+						{
+							"SaveKey" : "SunShroomCustom1" ,
+							"Texture" : "uid://d3gckh0b3b5rd" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PLANT_SUNSHROOM_CUSTOM_1" ,
+							"Type" : "Coin" ,
+							"Cost" : 5000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						}
+					]
+				},
+				{
+					"Stage" : [
+						{
+							"SaveKey" : "SnowShroomCustom0" ,
+							"Texture" : "uid://dexhbu8l4fuj3" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PLANT_SNOWSHROOM_CUSTOM_0" ,
+							"Type" : "Coin" ,
+							"Cost" : 8000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						}
+					]
+				},
+				{
+					"Stage" : [
+						{
+							"SaveKey" : "WinterMelonShroomCustom0" ,
+							"Texture" : "uid://o0wppvjqrrhn" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PLANT_WINTERMELONGSHROOM_CUSTOM_0" ,
+							"Type" : "Coin" ,
+							"Cost" : 5000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						}
+					]
+				},
+				{
+					"Stage" : [
+						{
+							"SaveKey" : "PeaCatCustom0" ,
+							"Texture" : "uid://clafr70vlwdwm" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PLANT_PEACAT_CUSTOM_0" ,
+							"Type" : "Coin" ,
+							"Cost" : 5000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						}
+					]
+				},
+			]
+		},
+		{
+			"Item" : [
+				{
+					"Stage" : [
+						{
+							"SaveType" : "TowerDefensePacket" ,
+							"SaveKey" : "PlantFireTallnut" ,
+							"Texture" : "" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PLANT_FIRETALLNUT" ,
+							"Type" : "Coin" ,
+							"Cost" : 15000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						}
+					]
+				},
+				{
+					"Stage" : [
+						{
+							"SaveType" : "TowerDefensePacket" ,
+							"SaveKey" : "PlantIceSunMine" ,
+							"Texture" : "" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PLANT_ICESUNMINE" ,
+							"Type" : "Coin" ,
+							"Cost" : 15000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						}
+					]
+				},
+				{
+					"Stage" : [
+						{
+							"SaveType" : "TowerDefensePacket" ,
+							"SaveKey" : "PlantIceSpearPea" ,
+							"Texture" : "" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PLANT_ICEAPEARPEA" ,
+							"Type" : "Coin" ,
+							"Cost" : 20000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						}
+					]
+				},
+				{
+					"Stage" : [
+						{
+							"SaveType" : "TowerDefensePacket" ,
+							"SaveKey" : "PlantTwinSunShroom" ,
+							"Texture" : "" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PLANT_TWINSUNSHROOM" ,
+							"Type" : "Coin" ,
+							"Cost" : 15000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						}
+					]
+				},
+				{
+					"Stage" : [
+						{
+							"SaveType" : "TowerDefensePacket" ,
+							"SaveKey" : "PlantGatlingCat" ,
+							"Texture" : "" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PLANT_GATLINGCAT" ,
+							"Type" : "Coin" ,
+							"Cost" : 20000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						}
+					]
+				},
+				{
+					"Stage" : [
+						{
+							"SaveType" : "TowerDefensePacket" ,
+							"SaveKey" : "PlantThreeCactus" ,
+							"Texture" : "" ,
+							"Describe" : "" ,
+							"NpcTalk" : "SHOP_NPC_TALK_PLANT_THREECATUS" ,
+							"Type" : "Coin" ,
+							"Cost" : 20000 ,
+							"OpenMinNum" : 0 ,
+							"OpenMaxNum" : 1 ,
+							"AddNum" : 1
+						}
+					]
+				}
+			]
+		}
+	]
+}

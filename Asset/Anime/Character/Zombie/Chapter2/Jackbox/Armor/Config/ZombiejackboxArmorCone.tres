@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CharacterArmorConfig" load_steps=5 format=4 uid="uid://ksphtdgy7iis"]
+
+[ext_resource type="Script" uid="uid://3gswocg6uh6g" path="res://Resource/General/Character/Armor/CharacterArmorConfig.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bwi80yrsftrj7" path="res://Asset/Texture/Character/Armor/Cone/ZombieCone1.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bujah2iiggkwx" path="res://Asset/Texture/Character/Armor/Cone/ZombieCone2.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://de4momje20smp" path="res://Asset/Texture/Character/Armor/Cone/ZombieCone3.png" id="4"]
+
+[resource]
+script = ExtResource("1")
+armorName = "Cone"
+damagePoint = 370.0
+stagePersontage = [0.666, 0.333]
+replaceMethod = "Sprite"
+replaceSpriteSlotPath = NodePath("HeadSlot")
+replaceSpriteRotation = 0.0
+replaceSpriteScale = Vector2(1, 1)
+replaceSpriteOffset = Vector2(7, -26)
+replaceMediaName = &""
+stageAnimeTexture = [ExtResource("2"), ExtResource("3"), ExtResource("4")]
+openFliter = ""
+closeFliter = ""
+destroyFliter = "anim_cone"
+impactAudio = "PlasticHit"
+damageAudio = ""
+explodePersontage = 1.0
+armorMethodFlags = 200
+Flag/Method = 200

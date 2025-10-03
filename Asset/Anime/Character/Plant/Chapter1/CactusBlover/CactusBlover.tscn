@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=4 uid="uid://bc4ujbx3m3oo1"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://cbuihilqqsl4" path="res://Asset/Anime/Character/Plant/Chapter1/CactusBlover/CactusBlover.tres" id="2"]
+
+[node name="CactusBlover" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/1 = true
+Animation/LayerVisible/10 = true
+Animation/LayerVisible/2 = true
+Animation/LayerVisible/3 = true
+Animation/LayerVisible/4 = true
+Animation/LayerVisible/5 = true
+Animation/LayerVisible/6 = true
+Animation/LayerVisible/7 = true
+Animation/LayerVisible/8 = true
+Animation/LayerVisible/9 = true
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/AnimeEvents = true
+Animation/LayerVisible/Blover_dirt_back = true
+Animation/LayerVisible/Blover_dirt_front = true
+Animation/LayerVisible/Blover_head = true
+Animation/LayerVisible/Blover_petals = true
+Animation/LayerVisible/Blover_stem1 = true
+Animation/LayerVisible/Blover_stem2 = true
+Animation/MediaReplace/Blover_dirt_back.png = null
+Animation/MediaReplace/Blover_dirt_front.png = null
+Animation/MediaReplace/Blover_stem1.png = null
+Animation/MediaReplace/Blover_stem2.png = null
+Animation/MediaReplace/CactusBlover_SE1.png = null
+Animation/MediaReplace/CactusBlover_SE2.png = null
+Animation/MediaReplace/CactusBlover_head.png = null
+Animation/MediaReplace/CactusBlover_head2.png = null
+Animation/MediaReplace/CactusBlover_petal.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=4 uid="uid://br7muxuvxx77s"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://jatvv5ssp04y" path="res://Asset/Anime/Splat/Spike/SpikeSplat.tres" id="2"]
+
+[node name="SpikeSplat" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null]
+layerSprite = [null, null]
+Animation/Clip = "animation"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/sprite = true
+Animation/MediaReplace/media/cactus_projectile_hit_12x8.png = null
+Animation/MediaReplace/media/cactus_projectile_hit_17x19.png = null
+Animation/MediaReplace/media/cactus_projectile_hit_41x49.png = null
+Animation/MediaReplace/media/cactus_projectile_hit_46x46.png = null
+Animation/MediaReplace/media/cactus_projectile_hit_47x47.png = null
+Animation/MediaReplace/media/cactus_projectile_hit_47x47_2.png = null
+Animation/MediaReplace/media/cactus_projectile_hit_47x47_3.png = null
+Animation/MediaReplace/media/cactus_projectile_hit_47x47_4.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

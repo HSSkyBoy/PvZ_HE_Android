@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=4 uid="uid://dea32vayrfghd"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://fnorkggq5j3v" path="res://Asset/Anime/Effect/SodRoll/SodRoll.tres" id="2"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://0g1gjyjuyftq" path="res://Asset/Anime/Particles/Dirt/Dirtsmall.png" id="4"]
+[ext_resource type="Script" uid="uid://dywgdjamo0ovs" path="res://Extends/Particles/GPUParticles2DOnece.gd" id="5"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ksd6p"]
+particles_animation = true
+particles_anim_h_frames = 8
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[sub_resource type="Curve" id="Curve_0rvu8"]
+_data = [Vector2(0, 0.491401), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_aswy4"]
+curve = SubResource("Curve_0rvu8")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_r7b7x"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(30, 40, 1)
+direction = Vector3(-0.5, -1, 0)
+flatness = 0.554
+initial_velocity_min = 100.0
+initial_velocity_max = 150.0
+gravity = Vector3(0, 490, 0)
+scale_curve = SubResource("CurveTexture_aswy4")
+anim_offset_max = 1.0
+
+[node name="SodRoll" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(0, -300)
+trueFrameRate = 60.0
+layerSlot = [NodePath("AdobeAnimateSlot"), null, null]
+layerSprite = [null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/SodRoll = true
+Animation/LayerVisible/SodRollCap = true
+Animation/MediaReplace/SodRoll.png = null
+Animation/MediaReplace/SodRollCap.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="AdobeAnimateSlot" type="Node2D" parent="."]
+position = Vector2(288.636, -1.32057)
+script = ExtResource("3")
+followSlotId = 1
+offset = Vector2(40, 60)
+useScale = false
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="RiseDirt" type="GPUParticles2D" parent="AdobeAnimateSlot"]
+material = SubResource("CanvasItemMaterial_ksd6p")
+amount = 100
+texture = ExtResource("4")
+lifetime = 1.5
+explosiveness = 0.1
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_r7b7x")
+script = ExtResource("5")

@@ -1,0 +1,127 @@
+[gd_scene load_steps=4 format=4 uid="uid://nx2prtbxim66"]
+
+[ext_resource type="Script" uid="uid://c6ruy6phgkate" path="res://Prefab/GUI/DialogBox/DialogBoxGeneral/DialogPopup.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cybcm6grgo675" path="res://Asset/Texture/GUI/General/DialogBox/DialogBox.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://gmx4xv8y67sn" path="res://Asset/Texture/GUI/General/DialogBox/DialogHead.png" id="3"]
+
+[node name="DialogBox" type="Control" node_paths=PackedStringArray("dragControl")]
+process_mode = 3
+light_mask = 0
+z_index = 1000
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+dragControl = NodePath("Layer/Control")
+
+[node name="Layer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="ColorRect" type="ColorRect" parent="Layer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Control" type="Control" parent="Layer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 332.0
+offset_top = 192.0
+offset_right = -332.0
+offset_bottom = -192.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Layer/Control"]
+light_mask = 0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -208.0
+offset_top = -107.0
+offset_right = 208.0
+offset_bottom = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(182, 120)
+mouse_filter = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Layer/Control/MarginContainer2"]
+light_mask = 0
+layout_mode = 2
+texture = ExtResource("2")
+patch_margin_left = 37
+patch_margin_top = 79
+patch_margin_right = 50
+patch_margin_bottom = 110
+
+[node name="HeadTextureRect" type="TextureRect" parent="Layer/Control/MarginContainer2/NinePatchRect"]
+light_mask = 0
+layout_mode = 2
+anchor_left = 0.496
+anchor_right = 0.496
+offset_left = -93.336
+offset_top = -42.0
+offset_right = 93.664
+offset_bottom = 22.0
+pivot_offset = Vector2(92, 63)
+mouse_filter = 2
+texture = ExtResource("3")
+
+[node name="MarginContainer" type="MarginContainer" parent="Layer/Control/MarginContainer2"]
+light_mask = 0
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 80
+
+[node name="CenterContainer" type="CenterContainer" parent="Layer/Control/MarginContainer2/MarginContainer"]
+light_mask = 0
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="TextLabel" type="RichTextLabel" parent="Layer/Control/MarginContainer2/MarginContainer/CenterContainer"]
+light_mask = 0
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.92549, 0.741176, 0.447059, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center][font_size=24]退出[/font_size][/center]
+[center][font_size=16]确定要退出游戏吗？[/font_size][/center]"
+fit_content = true
+autowrap_mode = 0
+
+[node name="ButtonContainer" type="HBoxContainer" parent="Layer/Control"]
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.574
+anchor_right = 0.5
+anchor_bottom = 0.574
+offset_left = -174.0
+offset_top = -20.4
+offset_right = 174.0
+offset_bottom = 20.6
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1

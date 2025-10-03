@@ -1,0 +1,15 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://chjtp16hydsfq"
+path="res://.godot/imported/FireNormalModeMask.png-922d33a8e7641df8f07d67bd5ce4149d.res"
+
+[deps]
+
+source_file="res://Asset/Texture/GUI/MainMenu/FireNormalModeMask.png"
+dest_files=["res://.godot/imported/FireNormalModeMask.png-922d33a8e7641df8f07d67bd5ce4149d.res"]
+
+[params]
+
+dummy_value_ignore_me=0

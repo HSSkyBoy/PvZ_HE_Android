@@ -1,0 +1,113 @@
+[gd_scene load_steps=4 format=4 uid="uid://djpaatp5h7ubu"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://baib6u74m8h0d" path="res://Asset/Anime/Character/Zombie/Chapter2/YetiDigger/ZombieYetiDigger.tres" id="2"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="3"]
+
+[node name="ZombieYetiDigger" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -80)
+trueFrameRate = inf
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/Zombie_digger_dig = true
+Animation/LayerVisible/Zombie_digger_dirt = true
+Animation/LayerVisible/Zombie_digger_hardhat = true
+Animation/LayerVisible/Zombie_digger_hardhat1 = true
+Animation/LayerVisible/Zombie_digger_pickaxe = true
+Animation/LayerVisible/Zombie_outerarm_hand = true
+Animation/LayerVisible/Zombie_outerarm_lower = true
+Animation/LayerVisible/Zombie_yeti_body = true
+Animation/LayerVisible/Zombie_yeti_innerarm_hand = true
+Animation/LayerVisible/Zombie_yeti_innerarm_lower = true
+Animation/LayerVisible/Zombie_yeti_innerarm_upper = true
+Animation/LayerVisible/Zombie_yeti_innerleg_foot = true
+Animation/LayerVisible/Zombie_yeti_innerleg_lower = true
+Animation/LayerVisible/Zombie_yeti_innerleg_upper = true
+Animation/LayerVisible/Zombie_yeti_outerarm_upper = true
+Animation/LayerVisible/Zombie_yeti_outerleg_foot = true
+Animation/LayerVisible/Zombie_yeti_outerleg_lower = true
+Animation/LayerVisible/Zombie_yeti_outerleg_upper = true
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/anim_head1 = true
+Animation/LayerVisible/anim_head2 = true
+"Animation/LayerVisible/图层_1" = true
+"Animation/LayerVisible/图层_95" = true
+"Animation/LayerVisible/图层_95 复制" = true
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/Zombie_digger_dig0.png = null
+Animation/MediaReplace/Zombie_digger_dig1.png = null
+Animation/MediaReplace/Zombie_digger_dig2.png = null
+Animation/MediaReplace/Zombie_digger_dig3.png = null
+Animation/MediaReplace/Zombie_digger_dig4.png = null
+Animation/MediaReplace/Zombie_digger_dig5.png = null
+Animation/MediaReplace/Zombie_digger_hardhat.png = null
+Animation/MediaReplace/Zombie_digger_pickaxe.png = null
+Animation/MediaReplace/Zombie_yeti_bodyA.png = null
+Animation/MediaReplace/Zombie_yeti_digger_head2.png = null
+Animation/MediaReplace/Zombie_yeti_digger_head_eye.png = null
+Animation/MediaReplace/Zombie_yeti_digger_rise2.png = null
+Animation/MediaReplace/Zombie_yeti_digger_rise3.png = null
+Animation/MediaReplace/Zombie_yeti_digger_rise4.png = null
+Animation/MediaReplace/Zombie_yeti_digger_rise5.png = null
+Animation/MediaReplace/Zombie_yeti_digger_rise6.png = null
+Animation/MediaReplace/Zombie_yeti_digger_rise7.png = null
+Animation/MediaReplace/Zombie_yeti_headA.png = null
+Animation/MediaReplace/Zombie_yeti_headAA.png = null
+Animation/MediaReplace/Zombie_yeti_innerarm_handA.png = null
+Animation/MediaReplace/Zombie_yeti_innerarm_lowerA.png = null
+Animation/MediaReplace/Zombie_yeti_innerarm_upperA.png = null
+Animation/MediaReplace/Zombie_yeti_innerleg_footA.png = null
+Animation/MediaReplace/Zombie_yeti_innerleg_lowerA.png = null
+Animation/MediaReplace/Zombie_yeti_innerleg_upperA.png = null
+Animation/MediaReplace/Zombie_yeti_jawA.png = null
+Animation/MediaReplace/Zombie_yeti_outerarm_handA.png = null
+Animation/MediaReplace/Zombie_yeti_outerarm_lowerA.png = null
+Animation/MediaReplace/Zombie_yeti_outerarm_upperA.png = null
+Animation/MediaReplace/Zombie_yeti_outerarm_upperA2.png = null
+Animation/MediaReplace/Zombie_yeti_outerleg_footA.png = null
+Animation/MediaReplace/Zombie_yeti_outerleg_lowerA.png = null
+Animation/MediaReplace/Zombie_yeti_outerleg_upperA.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="HeadSlot" type="Node2D" parent="."]
+position = Vector2(-8.8406, -65.1151)
+scale = Vector2(0.719986, 0.719986)
+script = ExtResource("3")
+followSlotId = 15
+offset = Vector2(43, 55)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ArmSlot" type="Node2D" parent="."]
+position = Vector2(29.0597, -8.0807)
+rotation = 0.00630585
+scale = Vector2(0.719971, 0.719971)
+script = ExtResource("3")
+followSlotId = 21
+offset = Vector2(18, 40)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="HardHatSlot" type="Node2D" parent="."]
+position = Vector2(-4.20066, -92.2789)
+scale = Vector2(0.799988, 0.799988)
+script = ExtResource("3")
+followSlotId = 22
+offset = Vector2(55, 22)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="PickSlot" type="Node2D" parent="."]
+position = Vector2(-34.7857, -9.8214)
+script = ExtResource("3")
+followSlotId = 3
+offset = Vector2(25, 25)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="GroundSlot" type="Node2D" parent="."]
+position = Vector2(-87.1214, 1.05)
+script = ExtResource("3")
+followSlotId = 1
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

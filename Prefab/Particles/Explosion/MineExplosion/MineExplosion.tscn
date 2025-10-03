@@ -1,0 +1,56 @@
+[gd_scene load_steps=11 format=4 uid="uid://dqcu2ycvf4u72"]
+
+[ext_resource type="Texture2D" uid="uid://b21c2gye6x7wk" path="res://Asset/Anime/Particles/Explosion/MineExplosion/MineExplosionParticles.png" id="1"]
+[ext_resource type="Material" uid="uid://bdubdx5ahddly" path="res://Prefab/Particles/Explosion/MineExplosion/MineExplosionParticles.tres" id="2"]
+[ext_resource type="Script" uid="uid://dywgdjamo0ovs" path="res://Extends/Particles/GPUParticles2DOnece.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://cbgw3kejnr6gd" path="res://Asset/Anime/Particles/Explosion/MineMashed.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dfwmsl0l4uyc0" path="res://Asset/Anime/Particles/Explosion/ExplosionSpudow.png" id="5"]
+[ext_resource type="Script" uid="uid://osivlg58el4m" path="res://Extends/Sprite2D/Sprite2DEffect.gd" id="6"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jbvug"]
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id="Curve_ec5d3"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.755738, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_q26dj"]
+curve = SubResource("Curve_ec5d3")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_h3b8v"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+alpha_curve = SubResource("CurveTexture_q26dj")
+
+[node name="MineExplosion" type="GPUParticles2D"]
+material = SubResource("CanvasItemMaterial_jbvug")
+emitting = false
+amount = 16
+texture = ExtResource("1")
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+draw_order = 0
+process_material = ExtResource("2")
+script = ExtResource("3")
+
+[node name="Sprite2D2" type="GPUParticles2D" parent="."]
+show_behind_parent = true
+position = Vector2(2, 0)
+emitting = false
+amount = 1
+texture = ExtResource("4")
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_h3b8v")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(13, -76)
+texture = ExtResource("5")
+offset = Vector2(1.70839, -1.04293)
+script = ExtResource("6")
+shake = true
+metadata/_custom_type_script = "uid://osivlg58el4m"

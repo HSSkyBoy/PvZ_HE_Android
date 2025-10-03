@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=4 uid="uid://boocp7vnh24m5"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://bbq3v60boolbr" path="res://Asset/Anime/Character/Plant/Chapter0/Wallnut/Wallnut.tres" id="2"]
+
+[node name="Wallnut" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+trueFrameRate = inf
+useTween = false
+layerSlot = [null, null, null]
+layerSprite = [null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/anim_face = true
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/Wallnut_body.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

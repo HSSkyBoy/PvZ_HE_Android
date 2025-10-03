@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="TowerDefensePacketConfig" load_steps=3 format=4 uid="uid://cb8ohxkgy11me"]
+
+[ext_resource type="Resource" uid="uid://cirhgwvob6dbg" path="res://Asset/Anime/Character/Zombie/Chapter1/Balloon/Config/TowerDefenseZombieBalloon.tres" id="1"]
+[ext_resource type="Script" uid="uid://c6d3po5310ugw" path="res://Resource/TowerDefense/PacketBank/Packet/TowerDefensePacketConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+saveKey = "ZombieBalloonSpecialHelmet"
+unlockCheckList = []
+name = "TOWERDEFENSE_ZOMBIE_BALLOON_NAME"
+describe = "TOWERDEFENSE_ZOMBIE_BALLOON_EXPRESTION"
+plantfood = ""
+handbookDescribe = ""
+handbookStory = ""
+packetAnimeClip = "Idle"
+packetAnimeOffset = Vector2(35, 60)
+packetAnimeScale = Vector2(0.75, 0.75)
+characterConfig = ExtResource("1")
+type = 6
+spawnMethod = "FlyDown"
+overrideCostRise = -1
+overrideCost = 250
+overridPacketCooldown = -1.0
+overridStartingCooldown = -1.0
+overrideWeight = 4000
+overrideWavePointCost = 500
+initArmor = ["SpecialHelmet"]
+plantUseCell = true
+Armor = ["SpecialHelmet"]
+Cell/plantUseCell = true
+Override/overrideWeight = 4000
+Override/overrideWavePointCost = 500
+metadata/_custom_type_script = "uid://c6d3po5310ugw"

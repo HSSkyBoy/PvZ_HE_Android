@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CharacterDamagePointData" load_steps=8 format=4 uid="uid://bijc0b7xlwdr2"]
+
+[ext_resource type="Resource" uid="uid://buy831q00dj00" path="res://Asset/Anime/Character/GraveStone/TargetBomb/DamagePoint/Config/GraveStoneTargetBombDamagePointDamage0.tres" id="1"]
+[ext_resource type="Resource" uid="uid://diikrkouhxlpa" path="res://Asset/Anime/Character/GraveStone/TargetBomb/DamagePoint/Config/GraveStoneTargetBombDamagePointDamage1.tres" id="2"]
+[ext_resource type="Resource" uid="uid://b1invk41jv07o" path="res://Asset/Anime/Character/GraveStone/TargetBomb/DamagePoint/Config/GraveStoneTargetBombDamagePointDamage2.tres" id="3"]
+[ext_resource type="Resource" uid="uid://cfolvhipv7t1k" path="res://Asset/Anime/Character/GraveStone/TargetBomb/DamagePoint/Config/GraveStoneTargetBombDamagePointDamage3.tres" id="4"]
+[ext_resource type="Resource" uid="uid://dhtw4uhnrgh13" path="res://Asset/Anime/Character/GraveStone/TargetBomb/DamagePoint/Config/GraveStoneTargetBombDamagePointDamage4.tres" id="5"]
+[ext_resource type="Resource" uid="uid://dgxubnd7ya3vt" path="res://Asset/Anime/Character/GraveStone/TargetBomb/DamagePoint/Config/GraveStoneTargetBombDamagePointDamage5.tres" id="6"]
+[ext_resource type="Script" uid="uid://c3lvn8julbk1s" path="res://Resource/General/Character/DamagePoint/CharacterDamagePointData.gd" id="7"]
+
+[resource]
+script = ExtResource("7")
+damagePointList = [ExtResource("1"), ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6")]
+damagePointDictionary = {
+"Damage0": {
+"Close": [],
+"Config": ExtResource("1"),
+"Open": []
+},
+"Damage1": {
+"Close": [],
+"Config": ExtResource("2"),
+"Open": []
+},
+"Damage2": {
+"Close": [],
+"Config": ExtResource("3"),
+"Open": []
+},
+"Damage3": {
+"Close": [],
+"Config": ExtResource("4"),
+"Open": []
+},
+"Damage4": {
+"Close": [],
+"Config": ExtResource("5"),
+"Open": []
+},
+"Damage5": {
+"Close": [],
+"Config": ExtResource("6"),
+"Open": []
+}
+}
+fliterOpenAll = []
+fliterCloseAll = []
+metadata/_custom_type_script = "uid://c3lvn8julbk1s"

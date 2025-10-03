@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="TowerDefensePacketConfig" load_steps=3 format=4 uid="uid://d1glotf0614q1"]
+
+[ext_resource type="Resource" uid="uid://cemx3vnun74wg" path="res://Asset/Anime/Character/Plant/Gold/WildPea/Config/TowerDefensePlantWildPea.tres" id="1"]
+[ext_resource type="Script" uid="uid://c6d3po5310ugw" path="res://Resource/TowerDefense/PacketBank/Packet/TowerDefensePacketConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+saveKey = "PlantWildPea"
+unlockCheckList = []
+name = "TOWERDEFENSE_PLANT_WILDPEA_NAME"
+describe = "TOWERDEFENSE_PLANT_WILDPEA_EXPRESTION"
+plantfood = ""
+handbookDescribe = "TOWERDEFENSE_PLANT_WILDPEA_HANDBOOK_EXPRESTION"
+handbookStory = "TOWERDEFENSE_PLANT_WILDPEA_HANDBOOK_STORY"
+packetAnimeClip = "BodyIdle"
+packetAnimeOffset = Vector2(21, 23)
+packetAnimeScale = Vector2(0.5, 0.5)
+characterConfig = ExtResource("1")
+type = 1
+spawnMethod = "Rise"
+overrideCostRise = -1
+overrideCost = -1
+overridPacketCooldown = -1.0
+overridStartingCooldown = -1.0
+overrideWeight = -1
+overrideWavePointCost = -1
+initArmor = []
+plantUseCell = true
+Cell/plantUseCell = true
+metadata/_custom_type_script = "uid://c6d3po5310ugw"

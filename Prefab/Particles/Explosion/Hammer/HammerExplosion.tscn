@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=4 uid="uid://bm8e0aiyhegy"]
+
+[ext_resource type="Texture2D" uid="uid://bncqe57314l4f" path="res://Asset/Anime/Particles/Explosion/Hammer/Pow.png" id="1"]
+[ext_resource type="Script" uid="uid://dywgdjamo0ovs" path="res://Extends/Particles/GPUParticles2DOnece.gd" id="2"]
+
+[sub_resource type="Curve" id="Curve_a4hj7"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.909375, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_q26dj"]
+curve = SubResource("Curve_a4hj7")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_a4hj7"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_min = 0.6
+scale_max = 0.6
+alpha_curve = SubResource("CurveTexture_q26dj")
+
+[node name="HammerExplosion" type="GPUParticles2D"]
+emitting = false
+amount = 1
+texture = ExtResource("1")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+draw_order = 0
+process_material = SubResource("ParticleProcessMaterial_a4hj7")
+script = ExtResource("2")

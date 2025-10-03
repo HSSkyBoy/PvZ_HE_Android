@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="TowerDefenseProjectileConfig" load_steps=4 format=4 uid="uid://bkks1g38donj7"]
+
+[ext_resource type="PackedScene" uid="uid://cvg1cajrl4s4e" path="res://Asset/Texture/TowerDefense/Projectile/Spike/ProjectileSpike.tscn" id="1"]
+[ext_resource type="Script" uid="uid://b7ddnv74g0463" path="res://Resource/TowerDefense/Projectile/TowerDefenseProjectileConfig.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://br7muxuvxx77s" path="res://Prefab/Particles/Splats/SpikeSplats/SpikeSplats.tscn" id="3"]
+
+[resource]
+script = ExtResource("2")
+name = "SpikeDefault"
+size = Vector2(28, 28)
+baseDamage = 20.0
+projectileScene = ExtResource("1")
+projectileObject = 306
+splatSceneType = "Sprite"
+splatAudio = "SplatNormal"
+splatScene = ExtResource("3")
+splatObject = 105
+hitEffect = null
+hitTargetEventList = []
+hitCharacterEventList = []
+hitGroundEventList = []
+rotateScale = 0.0
+hitBody = true
+fireLength = -1.0
+useRange = false
+rangeSize = Vector2(0.5, 0.5)
+hitPesontage = 0.25
+damageFlags = 2
+fireMethodFlags = 32
+collisionFlags = 43
+catapultHeight = 400.0
+penetrateNum = 10000
+penetrateOverBack = true
+backOutGround = true
+backDuration = 1.0
+Flag/Damage = 2
+Flag/FireMethod = 32
+Flag/Collision = 43

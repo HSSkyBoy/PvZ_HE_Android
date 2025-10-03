@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=4 uid="uid://bmn2lj2bg0ip2"]
+
+[ext_resource type="Script" uid="uid://2luppenrewmd" path="res://Script/Component/TowerDefense/Character/RangeExecuteComponent/RangeExecuteComponent.gd" id="1"]
+
+[node name="RangeExecuteComponent" type="Node2D"]
+script = ExtResource("1")

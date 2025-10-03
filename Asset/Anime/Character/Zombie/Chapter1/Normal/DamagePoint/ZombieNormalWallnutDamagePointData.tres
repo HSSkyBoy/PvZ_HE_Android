@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="CharacterDamagePointData" load_steps=7 format=4 uid="uid://6snugltdge0m"]
+
+[ext_resource type="Resource" uid="uid://bj7i58sh5mr24" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/DamagePoint/Config/ZombieNormalPlantWallnutDamagePointArm.tres" id="1"]
+[ext_resource type="Resource" uid="uid://c3nc8e4gfcdpm" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/DamagePoint/Config/ZombieNormalWallnutDamage0.tres" id="2"]
+[ext_resource type="Resource" uid="uid://b1wmf7153dwr4" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/DamagePoint/Config/ZombieNormalWallnutDamage1.tres" id="3"]
+[ext_resource type="Resource" uid="uid://v11t1xx5durx" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/DamagePoint/Config/ZombieNormalWallnutDamaget2.tres" id="4"]
+[ext_resource type="Resource" uid="uid://c7nx2fl3rq01m" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/DamagePoint/Config/ZombieNormalPlantDamagePointHead.tres" id="5"]
+[ext_resource type="Script" uid="uid://c3lvn8julbk1s" path="res://Resource/General/Character/DamagePoint/CharacterDamagePointData.gd" id="6"]
+
+[resource]
+script = ExtResource("6")
+damagePointList = [ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("1"), ExtResource("5")]
+damagePointDictionary = {
+"Arm": {
+"Close": ["Zombie_outerarm_hand", "Zombie_outerarm_lower", "Zombie_outerarm_screendoor"],
+"Config": ExtResource("1"),
+"Open": []
+},
+"Damage0": {
+"Close": [],
+"Config": ExtResource("2"),
+"Open": []
+},
+"Damage1": {
+"Close": [],
+"Config": ExtResource("3"),
+"Open": []
+},
+"Damage2": {
+"Close": [],
+"Config": ExtResource("4"),
+"Open": []
+},
+"Head": {
+"Close": [],
+"Config": ExtResource("5"),
+"Open": []
+}
+}
+fliterOpenAll = []
+fliterCloseAll = ["Zombie_outerarm_hand", "Zombie_outerarm_lower", "Zombie_outerarm_screendoor"]
+metadata/_custom_type_script = "uid://c3lvn8julbk1s"

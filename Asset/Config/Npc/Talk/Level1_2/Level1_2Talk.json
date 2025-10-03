@@ -1,0 +1,36 @@
+{
+	"SaveKey": "Level1_2TutorialTalk",
+	"Talk": [
+		{
+			"Anime": "SmallTalk",
+			"Audio" : "CrazyDaveShort" ,
+			"Mode": "Default",
+			"Npc": "CrazyDave",
+			"Text": "NPC_TALK_LEVEL1_2_TUTORIAL_1"
+		},
+		{
+			"Anime": "MediumTalk",
+			"Audio" : "CrazyDaveLong" ,
+			"Mode": "Default",
+			"Npc": "CrazyDave",
+			"Text": "NPC_TALK_LEVEL1_2_TUTORIAL_2"
+		},
+		{
+			"Anime": "TalkHanding",
+			"Audio" : "CrazyDaveExtralong" ,
+			"Arg": [
+				"uid://dx3bhy6xa6aio"
+			],
+			"Mode": "Hand",
+			"Npc": "CrazyDave",
+			"Text": "NPC_TALK_LEVEL1_2_TUTORIAL_3"
+		},
+		{
+			"Anime": "Crazy",
+			"Audio" : "CrazyDaveCrazy" ,
+			"Mode": "Default",
+			"Npc": "CrazyDave",
+			"Text": "NPC_TALK_LEVEL1_2_TUTORIAL_4"
+		}
+	]
+}

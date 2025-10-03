@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=4 uid="uid://cbl7y7e8eixcf"]
+
+[ext_resource type="Script" uid="uid://d0aynlfd0iksq" path="res://Prefab/GUI/CoinBank/CoinBank.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://crthi3ut5yl3i" path="res://Asset/Texture/GUI/General/CoinBank/CoinBank.png" id="2"]
+[ext_resource type="FontFile" uid="uid://b70va62wc3lp2" path="res://Asset/Font/fzcq.ttf" id="3"]
+
+[node name="CoinBank" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1")
+
+[node name="CoinBankTexture" type="NinePatchRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 167.0
+offset_bottom = 40.0
+texture = ExtResource("2")
+region_rect = Rect2(0, 0, 128, 31)
+patch_margin_left = 40
+patch_margin_right = 5
+
+[node name="CoinNumLabel" type="Label" parent="CoinBankTexture"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 0
+offset_left = 38.0
+offset_top = 10.0
+offset_right = 123.0
+offset_bottom = 34.0
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 18
+text = "1234567890"
+horizontal_alignment = 1
+vertical_alignment = 1

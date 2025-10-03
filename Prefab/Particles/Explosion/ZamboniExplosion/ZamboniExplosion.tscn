@@ -1,0 +1,80 @@
+[gd_scene load_steps=12 format=4 uid="uid://bbsti03vlotx6"]
+
+[ext_resource type="Texture2D" uid="uid://dv5x6ax2qiod0" path="res://Asset/Anime/Particles/Explosion/ExplosionCloud.png" id="1"]
+[ext_resource type="Material" uid="uid://4h804xifj02" path="res://Prefab/Particles/Explosion/ZamboniExplosion/ZamboniExplosion.tres" id="2"]
+[ext_resource type="Script" uid="uid://dywgdjamo0ovs" path="res://Extends/Particles/GPUParticles2DOnece.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://bat1kkww4i4a" path="res://Asset/Anime/Particles/Part/Zomboss_particles.png" id="4"]
+[ext_resource type="Material" uid="uid://dxcctp26nq47c" path="res://Prefab/Particles/Explosion/ZamboniExplosion/ZamboniExplosionPart.tres" id="5"]
+[ext_resource type="Texture2D" uid="uid://humqkuaep5la" path="res://Asset/Anime/Character/Zombie/Chapter2/Zamboni/DamagePoint/Zombie_zamboni_1_damage2.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://v8fbmmylgpbw" path="res://Asset/Anime/Character/Zombie/Chapter2/Zamboni/DamagePoint/Zombie_zamboni_wheel.png" id="7"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pvbux"]
+particles_animation = true
+particles_anim_h_frames = 5
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="Curve" id="Curve_0pfas"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.501228, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_jv0go"]
+curve = SubResource("Curve_0pfas")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8hse5"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 60.0
+initial_velocity_min = 500.0
+initial_velocity_max = 600.0
+angular_velocity_min = -220.29
+angular_velocity_max = 206.87
+radial_velocity_min = -264.93
+radial_velocity_max = 220.15
+gravity = Vector3(0, 980, 0)
+alpha_curve = SubResource("CurveTexture_jv0go")
+
+[node name="ZamboniExplosion" type="GPUParticles2D"]
+emitting = false
+amount = 12
+texture = ExtResource("1")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+draw_order = 0
+process_material = ExtResource("2")
+script = ExtResource("3")
+
+[node name="ZamboniExplosionPart" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_pvbux")
+emitting = false
+texture = ExtResource("4")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+draw_order = 0
+process_material = ExtResource("5")
+
+[node name="ZamboniExplosionPart2" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 1
+texture = ExtResource("6")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+draw_order = 0
+process_material = SubResource("ParticleProcessMaterial_8hse5")
+
+[node name="ZamboniExplosionPart3" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 2
+texture = ExtResource("7")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+draw_order = 0
+process_material = SubResource("ParticleProcessMaterial_8hse5")

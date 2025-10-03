@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=4 uid="uid://df3x3smb8umy2"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://bwousf8w7iloi" path="res://Asset/Anime/Effect/LoadBar/LoadBarZombieHead.tres" id="2"]
+
+[node name="LoadBarZombieHead" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+timeScale = 1.25
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/Zombie_hair = true
+Animation/LayerVisible/Zombie_head = true
+Animation/LayerVisible/Zombie_jaw = true
+Animation/LayerVisible/rock = true
+Animation/LayerVisible/rock1 = true
+Animation/LayerVisible/rock2 = true
+Animation/LayerVisible/rock3 = true
+Animation/LayerVisible/rock4 = true
+Animation/LayerVisible/rock5 = true
+Animation/LayerVisible/rock6 = true
+Animation/LayerVisible/rock7 = true
+Animation/LayerVisible/rock8 = true
+Animation/MediaReplace/PotatoMine_rock1.png = null
+Animation/MediaReplace/PotatoMine_rock3.png = null
+Animation/MediaReplace/Zombie_hair.png = null
+Animation/MediaReplace/Zombie_head.png = null
+Animation/MediaReplace/Zombie_jaw.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

@@ -1,0 +1,33 @@
+[gd_resource type="ParticleProcessMaterial" load_steps=7 format=4 uid="uid://dn52sstfoiswq"]
+
+[sub_resource type="Curve" id="Curve_6jhf1"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.749386, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_jjig4"]
+curve = SubResource("Curve_6jhf1")
+
+[sub_resource type="Curve" id="Curve_esbnc"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_ji7hl"]
+_limits = [0.0, 1.1, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1.1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_ynk14"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_q215g"]
+curve_x = SubResource("Curve_esbnc")
+curve_y = SubResource("Curve_ji7hl")
+curve_z = SubResource("Curve_ynk14")
+
+[resource]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(10, -90, 0)
+gravity = Vector3(0, -3, 0)
+scale_curve = SubResource("CurveXYZTexture_q215g")
+alpha_curve = SubResource("CurveTexture_jjig4")

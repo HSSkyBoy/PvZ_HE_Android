@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=4 uid="uid://bto1eksfijahm"]
+
+[ext_resource type="PackedScene" uid="uid://clpu43psaiqf2" path="res://Prefab/TowerDefense/Projectile/ProjectileEffect/TowerDefenseProjectileEffectBase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://c8vn5g1ncreft" path="res://Prefab/ProjectileEffect/Groom/TowerDefenseProjectileEffectGroom.gd" id="2"]
+[ext_resource type="Script" uid="uid://cmqmtitj4tcd8" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventHurt.gd" id="3"]
+
+[sub_resource type="Resource" id="Resource_b7pf5"]
+script = ExtResource("3")
+num = 20.0
+playSplatAudio = true
+damageFlags = 2
+collisionFlags = 9
+Flag/Damage = 2
+Flag/Collision = 9
+metadata/_custom_type_script = "uid://cmqmtitj4tcd8"
+
+[node name="TowerDefenseProjectileEffectGroom" instance=ExtResource("1")]
+script = ExtResource("2")
+eventList = [SubResource("Resource_b7pf5")]
+
+[node name="Timer" type="Timer" parent="." index="0"]
+wait_time = 0.2
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="AttackCreate"]

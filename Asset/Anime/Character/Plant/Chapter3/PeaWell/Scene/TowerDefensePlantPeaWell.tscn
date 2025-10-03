@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=4 uid="uid://bt7e1sm7x0crp"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bevc4uktid1f3" path="res://Asset/Anime/Character/Plant/Chapter3/PeaWell/Scene/TowerDefensePlantPeaWell.gd" id="2"]
+[ext_resource type="Resource" uid="uid://cqvhwq56o7qit" path="res://Asset/Anime/Character/Plant/Chapter3/PeaWell/Config/TowerDefensePlantPeaWell.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://bb4wjwvli0ees" path="res://Asset/Anime/Character/Plant/Chapter3/PeaWell/PeaWell.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://b5htxrgm8twcr" path="res://Script/Component/TowerDefense/Character/FireComponent/FireComponent.tscn" id="5"]
+
+[node name="TowerDefensePlantPeaWell" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+fireInterval = 3.0
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/PeaWell")
+gravity = 245.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="PeaWell" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+position = Vector2(0, -30)
+
+[node name="ShadowSprite" parent="." index="3"]
+visible = false
+position = Vector2(0, 47)
+scale = Vector2(0.821918, 0.77551)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+
+[node name="FireComponent" parent="." index="7" instance=ExtResource("5")]
+unique_name_in_owner = true
+fireInterval = 3.0
+
+[node name="ShowHealthComponent" parent="." index="8"]
+position = Vector2(0, 30)

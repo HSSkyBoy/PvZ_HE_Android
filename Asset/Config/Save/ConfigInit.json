@@ -1,0 +1,12 @@
+{
+	"MusicVolum" : 0.8 ,
+	"SfxVolum" : 0.7 ,
+	"AnimeFrameRate" : 30.0 ,
+	"ShowZombieHealth" : false ,
+	"ShowPlantHealth" : false ,
+	"PacketUIFront" : false ,
+	"MapEffect" : true ,
+	"MobilePreset" : false ,
+	"FullScreen" : false ,
+	"Backgrounder" : false
+}

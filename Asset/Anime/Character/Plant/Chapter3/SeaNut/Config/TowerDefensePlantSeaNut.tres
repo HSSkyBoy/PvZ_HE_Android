@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="TowerDefensePlantConfig" load_steps=3 format=4 uid="uid://dgm0xai5jahfi"]
+
+[ext_resource type="Resource" uid="uid://djo3hafcxr8rc" path="res://Asset/Anime/Character/Plant/Chapter3/SeaNut/DamagePoint/SeaNutDamagePointData.tres" id="1"]
+[ext_resource type="Script" uid="uid://bqd2rkadn8h4e" path="res://Resource/TowerDefense/Character/Config/TowerDefensePlantConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+canUsePlantfood = true
+name = "PlantSeaNut"
+hitpointsNearDeath = 0.0
+hitpoints = 8000.0
+smashHurt = -1.0
+spikeHurt = -1.0
+sleepTime = "Never"
+height = 3
+damagePointData = ExtResource("1")
+armorData = null
+customData = null
+ashScene = null
+homeWorld = 1
+costRise = -1
+cost = 125
+packetCooldown = 30.0
+startingCooldown = 20.0
+plantCover = []
+plantCoverRecycle = []
+plantGridType = [3]
+plantGridOverrideType = 9
+collisionFlags = 1
+maskFlags = 9
+unUseBuffFlags = 3
+physiqueTypeFlags = 1
+elementFlags = 0
+Flag/Collision = 1
+Flag/Mask = 9
+Flag/UnUseBuff = 3
+Flag/PhysiqueType = 1
+Flag/Elemet = 0

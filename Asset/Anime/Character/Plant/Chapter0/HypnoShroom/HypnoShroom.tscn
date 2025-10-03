@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=4 uid="uid://dedq4dyalohqh"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://ql170dh8j380" path="res://Asset/Anime/Character/Plant/Chapter0/HypnoShroom/HypnoShroom.tres" id="2"]
+
+[node name="HypnoShroom" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+trueFrameRate = inf
+useTween = false
+layerSlot = [null, null, null, null, null]
+layerSprite = [null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+"Animation/LayerVisible/Layer 1" = true
+"Animation/LayerVisible/Layer 2" = true
+"Animation/LayerVisible/Layer 3" = true
+"Animation/LayerVisible/Layer 4" = true
+Animation/MediaReplace/HypnoShroom_body.png = null
+Animation/MediaReplace/HypnoShroom_eye1.png = null
+Animation/MediaReplace/HypnoShroom_eye2.png = null
+Animation/MediaReplace/HypnoShroom_head.png = null
+Animation/MediaReplace/HypnoShroom_sleepeye.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

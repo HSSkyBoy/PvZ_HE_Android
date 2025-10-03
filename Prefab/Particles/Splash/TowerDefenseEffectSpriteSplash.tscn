@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=4 uid="uid://ueeii5v2dl8q"]
+
+[ext_resource type="PackedScene" uid="uid://dwvgduivkprow" path="res://Prefab/TowerDefense/Effect/Once/TowerDefenseEffectSpriteOnce.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://w8387wjx2i2y" path="res://Asset/Anime/Effect/Splash/Splash.tscn" id="2"]
+
+[node name="TowerDefenseEffectSpriteFireSplats" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+objectId = 201
+sprite = NodePath("Splash")
+clipsList = PackedStringArray("Idle")
+
+[node name="Splash" parent="." index="0" instance=ExtResource("2")]

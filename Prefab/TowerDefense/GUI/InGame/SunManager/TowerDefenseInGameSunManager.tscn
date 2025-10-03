@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=4 uid="uid://dcdg6cqo7kw4r"]
+
+[ext_resource type="Script" uid="uid://m5sc5dknxl5h" path="res://Prefab/TowerDefense/GUI/InGame/SunManager/TowerDefenseInGameSunManager.gd" id="1"]
+
+[node name="TowerDefenseInGameSunManager" type="Node2D"]
+script = ExtResource("1")

@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="TowerDefensePacketConfig" load_steps=3 format=4 uid="uid://b6vgdwrb5oqer"]
+
+[ext_resource type="Resource" uid="uid://w4yvqt1l61sh" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackson/Config/TowerDefenseZombieJackson.tres" id="1"]
+[ext_resource type="Script" uid="uid://c6d3po5310ugw" path="res://Resource/TowerDefense/PacketBank/Packet/TowerDefensePacketConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+saveKey = "ZombieJacksonSpecialHelmet"
+unlockCheckList = []
+name = "TOWERDEFENSE_ZOMBIE_JACKSON_NAME"
+describe = "TOWERDEFENSE_ZOMBIE_JACKSON_EXPRESTION"
+plantfood = ""
+handbookDescribe = "TOWERDEFENSE_ZOMBIE_JACKSON_HANDBOOK_EXPRESTION"
+handbookStory = "TOWERDEFENSE_ZOMBIE_JACKSON_HANDBOOK_STORY"
+packetAnimeClip = "MoonWalk"
+packetAnimeOffset = Vector2(35, 60)
+packetAnimeScale = Vector2(0.75, 0.75)
+characterConfig = ExtResource("1")
+type = 6
+spawnMethod = "Rise"
+overrideCostRise = -1
+overrideCost = 300
+overridPacketCooldown = -1.0
+overridStartingCooldown = -1.0
+overrideWeight = -1
+overrideWavePointCost = 550
+initArmor = ["SpecialHelmet"]
+plantUseCell = true
+Armor = ["SpecialHelmet"]
+Cell/plantUseCell = true
+Override/overrideWeight = -1
+Override/overrideWavePointCost = 550
+metadata/_custom_type_script = "uid://c6d3po5310ugw"

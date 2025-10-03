@@ -1,0 +1,108 @@
+[gd_scene load_steps=5 format=4 uid="uid://drbscotikcmbv"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://dchiro23j5xpk" path="res://Asset/Anime/Character/Zombie/Chapter1/Paper/ZombiePaper.tres" id="2"]
+[ext_resource type="PackedScene" uid="uid://cfgdfuopusvnr" path="res://Asset/Anime/Character/Zombie/Duckytube/ZombieDuckytube.tscn" id="3"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="4"]
+
+[node name="ZombiePaper" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -80)
+useTween = false
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ArmSlot"), null, NodePath("HeadSlot"), null, null, null, null, null, NodePath("PaperSlot"), null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ZombieDuckytube"), null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/Zombie_paper_body = true
+Animation/LayerVisible/Zombie_paper_hands = true
+Animation/LayerVisible/Zombie_paper_hands2 = true
+Animation/LayerVisible/Zombie_paper_leftarm_lower = true
+Animation/LayerVisible/Zombie_paper_leftarm_upper = true
+Animation/LayerVisible/Zombie_paper_leftfoot = true
+Animation/LayerVisible/Zombie_paper_leftleg_lower = true
+Animation/LayerVisible/Zombie_paper_leftleg_upper = true
+Animation/LayerVisible/Zombie_paper_lowerbody1 = true
+Animation/LayerVisible/Zombie_paper_lowerbody2 = true
+Animation/LayerVisible/Zombie_paper_paper = true
+Animation/LayerVisible/Zombie_paper_rightarm_lower = true
+Animation/LayerVisible/Zombie_paper_rightarm_upper = true
+Animation/LayerVisible/Zombie_paper_rightfoot = true
+Animation/LayerVisible/Zombie_paper_rightleg_lower = true
+Animation/LayerVisible/Zombie_paper_rightleg_upper = true
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/anim_hair = true
+Animation/LayerVisible/anim_hairpiece = true
+Animation/LayerVisible/anim_head1 = true
+Animation/LayerVisible/anim_head_glasses = true
+Animation/LayerVisible/anim_head_jaw = true
+Animation/LayerVisible/anim_head_look = true
+Animation/LayerVisible/anim_head_pupils = true
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/Zombie_head.png = null
+Animation/MediaReplace/Zombie_jaw.png = null
+Animation/MediaReplace/Zombie_paper_body.png = null
+Animation/MediaReplace/Zombie_paper_glasses.png = null
+Animation/MediaReplace/Zombie_paper_hairpiece.png = null
+Animation/MediaReplace/Zombie_paper_hands.png = null
+Animation/MediaReplace/Zombie_paper_hands2.png = null
+Animation/MediaReplace/Zombie_paper_hands3.png = null
+Animation/MediaReplace/Zombie_paper_head_look.png = null
+Animation/MediaReplace/Zombie_paper_leftarm_lower.png = null
+Animation/MediaReplace/Zombie_paper_leftarm_upper.png = null
+Animation/MediaReplace/Zombie_paper_leftarm_upper2.png = null
+Animation/MediaReplace/Zombie_paper_leftfoot.png = null
+Animation/MediaReplace/Zombie_paper_leftleg_lower.png = null
+Animation/MediaReplace/Zombie_paper_leftleg_upper.png = null
+Animation/MediaReplace/Zombie_paper_lowerbody1.png = null
+Animation/MediaReplace/Zombie_paper_lowerbody2.png = null
+Animation/MediaReplace/Zombie_paper_paper1.png = null
+Animation/MediaReplace/Zombie_paper_rightarm_lower.png = null
+Animation/MediaReplace/Zombie_paper_rightarm_upper.png = null
+Animation/MediaReplace/Zombie_paper_rightfoot.png = null
+Animation/MediaReplace/Zombie_paper_rightleg_lower.png = null
+Animation/MediaReplace/Zombie_paper_rightleg_upper.png = null
+Animation/MediaReplace/Zombie_pupils.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="ZombieDuckytube" parent="." node_paths=PackedStringArray("parentSprite") instance=ExtResource("3")]
+visible = false
+position = Vector2(-10.1676, -38.7273)
+rotation = -0.0718301
+offset = Vector2(0, 52)
+parentSprite = NodePath("..")
+Animation/LayerVisible/Zombie_duckytube_inwater = true
+Layer = 12
+
+[node name="HeadSlot" type="Node2D" parent="."]
+position = Vector2(-13.7667, -40.6438)
+rotation = -0.265849
+scale = Vector2(0.798608, 0.798608)
+script = ExtResource("4")
+followSlotId = 17
+offset = Vector2(25, 30)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="ArmSlot" type="Node2D" parent="."]
+position = Vector2(9.3233, -1.08515)
+rotation = -0.16462
+scale = Vector2(0.699517, 0.699517)
+script = ExtResource("4")
+followSlotId = 15
+offset = Vector2(10, 20)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="PaperSlot" type="Node2D" parent="."]
+position = Vector2(-25.7792, 1.17026)
+rotation = -0.0243734
+scale = Vector2(0.701572, 0.701572)
+script = ExtResource("4")
+followSlotId = 23
+offset = Vector2(30, 50)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="GroundSlot" type="Node2D" parent="."]
+position = Vector2(-42.2, 45)
+script = ExtResource("4")
+followSlotId = 1
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

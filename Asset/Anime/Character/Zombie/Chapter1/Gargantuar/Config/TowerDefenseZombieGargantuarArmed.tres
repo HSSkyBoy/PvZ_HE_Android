@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="TowerDefenseZombieConfig" load_steps=5 format=4 uid="uid://dj3fevo3tq33f"]
+
+[ext_resource type="Resource" uid="uid://dh747hr104fqi" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/Armor/ZombieGargantuarArmorData.tres" id="1"]
+[ext_resource type="PackedScene" uid="uid://b8xhdro1stqvr" path="res://Asset/Anime/Character/Zombie/Ash/Gargantuar/ZombieGargantuarAsh.tscn" id="2"]
+[ext_resource type="Resource" uid="uid://x517ia6cmii" path="res://Asset/Anime/Character/Zombie/Chapter1/Gargantuar/DamagePoint/ZombieGargantuarDamagePointData.tres" id="3"]
+[ext_resource type="Script" uid="uid://fq0affmtew5n" path="res://Resource/TowerDefense/Character/Config/TowerDefenseZombieConfig.gd" id="4"]
+
+[resource]
+script = ExtResource("4")
+physique = 4
+attack = 0.0
+smashAttack = 1800.0
+impactAudio = ""
+weight = 6000
+wavePointCost = 600
+canSpawnPlantfood = true
+excludeLineGridType = []
+name = "ZombieGargantuarArmed"
+hitpointsNearDeath = 0.0
+hitpoints = 3000.0
+smashHurt = -1.0
+spikeHurt = -1.0
+sleepTime = "Never"
+height = 3
+damagePointData = ExtResource("3")
+armorData = ExtResource("1")
+customData = null
+ashScene = ExtResource("2")
+homeWorld = 1
+costRise = -1
+cost = 25
+packetCooldown = 5.0
+startingCooldown = 0.0
+plantCover = []
+plantCoverRecycle = []
+plantGridType = [-1]
+plantGridOverrideType = 0
+collisionFlags = 9
+maskFlags = 9
+unUseBuffFlags = 0
+physiqueTypeFlags = 0
+elementFlags = 0
+Flag/Collision = 9
+Flag/Mask = 9
+Flag/UnUseBuff = 0
+Flag/PhysiqueType = 0
+Flag/Elemet = 0

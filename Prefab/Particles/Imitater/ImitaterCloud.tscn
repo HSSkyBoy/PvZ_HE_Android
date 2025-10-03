@@ -1,0 +1,97 @@
+[gd_scene load_steps=16 format=4 uid="uid://djvfnrjg7vtqn"]
+
+[ext_resource type="Texture2D" uid="uid://b6fl3oaqebl1k" path="res://Asset/Anime/Particles/Imitater/ImitaterClouds.png" id="1"]
+[ext_resource type="Script" uid="uid://dywgdjamo0ovs" path="res://Extends/Particles/GPUParticles2DOnece.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://6penke171mn5" path="res://Asset/Anime/Particles/Imitater/ImitaterPuffs.png" id="3"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_sbko3"]
+particles_animation = true
+particles_anim_h_frames = 2
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id="Curve_sbko3"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.231834, 1), 0.0, 0.0, 0, 0, Vector2(0.737024, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_l2kv6"]
+curve = SubResource("Curve_sbko3")
+
+[sub_resource type="Curve" id="Curve_6hphw"]
+_data = [Vector2(0, 0.51204), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_sbko3"]
+curve = SubResource("Curve_6hphw")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_l2kv6"]
+particle_flag_disable_z = true
+angular_velocity_min = 224.59
+angular_velocity_max = 268.62
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_sbko3")
+alpha_curve = SubResource("CurveTexture_l2kv6")
+anim_speed_min = 1.76
+anim_speed_max = 1.76
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_l2kv6"]
+particles_animation = true
+particles_anim_h_frames = 8
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id="Curve_l2kv6"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.235294, 1), 0.0, 0.0, 0, 0, Vector2(0.747405, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_kirjm"]
+curve = SubResource("Curve_l2kv6")
+
+[sub_resource type="Curve" id="Curve_f3sur"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.245675, 1), 0.0, 0.0, 0, 0, Vector2(0.747405, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_r328b"]
+curve = SubResource("Curve_f3sur")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_kirjm"]
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 20.0
+emission_ring_inner_radius = 10.0
+emission_ring_cone_angle = 90.0
+angle_min = -720.0
+angle_max = 720.0
+angular_velocity_min = 105.7
+angular_velocity_max = 255.41
+orbit_velocity_min = 0.538
+orbit_velocity_max = 0.734
+radial_velocity_min = 18.35
+radial_velocity_max = 30.58
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_r328b")
+alpha_curve = SubResource("CurveTexture_kirjm")
+anim_offset_max = 1.0
+
+[node name="ImitaterCloud" type="GPUParticles2D"]
+material = SubResource("CanvasItemMaterial_sbko3")
+emitting = false
+amount = 1
+texture = ExtResource("1")
+lifetime = 0.75
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_l2kv6")
+script = ExtResource("2")
+metadata/_custom_type_script = "uid://dywgdjamo0ovs"
+
+[node name="GPUParticles2DMerge" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_l2kv6")
+emitting = false
+texture = ExtResource("3")
+lifetime = 0.75
+one_shot = true
+explosiveness = 1.0
+draw_order = 0
+process_material = SubResource("ParticleProcessMaterial_kirjm")

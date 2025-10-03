@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=4 uid="uid://cskodyjjijmtn"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cws1wmmg5hveg" path="res://Asset/Anime/Character/Plant/Chapter1/HypnoGarlic/Scene/TowerDefensePlantHypnoGarlic.gd" id="2"]
+[ext_resource type="Resource" uid="uid://7demdthvyg4r" path="res://Asset/Anime/Character/Plant/Chapter1/HypnoGarlic/Config/TowerDefensePlantHypnoGarlic.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://bd7q2cxnksk8e" path="res://Asset/Anime/Character/Plant/Chapter1/HypnoGarlic/HypnoGarlic.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://ueb15he6efcn" path="res://Asset/Anime/Character/Plant/Chapter1/HypnoGarlic/DamagePoint/Garlic_body1.png" id="5"]
+
+[node name="TowerDefensePlantHypnoGarlic" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/HypnoGarlic")
+PreviewDamagePointPersontage = 1.0
+gravity = 245.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="HypnoGarlic" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSprite") instance=ExtResource("4")]
+position = Vector2(0, -30)
+layerSprite = [null, null, null, null, null, null, null, null]
+Animation/MediaReplace/Garlic_body1.png = ExtResource("5")
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 30)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)

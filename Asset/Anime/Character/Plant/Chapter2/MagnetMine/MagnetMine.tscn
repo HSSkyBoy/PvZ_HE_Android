@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=4 uid="uid://wbup1k1plu1g"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://bykx4devhuf4v" path="res://Asset/Anime/Character/Plant/Chapter2/MagnetMine/MagnetMine.tres" id="2"]
+
+[node name="MagnetMine" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/PotatoMine_rock1 = true
+Animation/LayerVisible/PotatoMine_rock1b = true
+Animation/LayerVisible/PotatoMine_rock2 = true
+Animation/LayerVisible/PotatoMine_rock3 = true
+Animation/LayerVisible/PotatoMine_rock3b = true
+Animation/LayerVisible/PotatoMine_rock4 = true
+Animation/LayerVisible/PotatoMine_rock41 = true
+Animation/LayerVisible/PotatoMine_rock5 = true
+Animation/LayerVisible/PotatoMine_rock5b = true
+Animation/LayerVisible/PotatoMine_rock6 = true
+Animation/LayerVisible/PotatoMine_rock6b = true
+Animation/LayerVisible/PotatoMine_stem = true
+Animation/LayerVisible/anim_glow = true
+Animation/LayerVisible/anim_light = true
+Animation/LayerVisible/cap = true
+Animation/LayerVisible/eye = true
+Animation/LayerVisible/face = true
+Animation/LayerVisible/shock = true
+Animation/MediaReplace/MagnetMine_blink2.png = null
+Animation/MediaReplace/MagnetMine_body.png = null
+Animation/MediaReplace/MagnetMine_eyes.png = null
+Animation/MediaReplace/MagnetMine_eyes1.png = null
+Animation/MediaReplace/MagnetMine_eyes2.png = null
+Animation/MediaReplace/MagnetMine_stem.png = null
+Animation/MediaReplace/Magnetshroom_head1.png = null
+Animation/MediaReplace/Magnetshroom_head2.png = null
+Animation/MediaReplace/Magnetshroom_head3.png = null
+Animation/MediaReplace/Magnetshroom_head4.png = null
+Animation/MediaReplace/Magnetshroom_idle_electric1.png = null
+Animation/MediaReplace/Magnetshroom_idle_electric2.png = null
+Animation/MediaReplace/Magnetshroom_idle_electric3.png = null
+Animation/MediaReplace/Magnetshroom_shock1.png = null
+Animation/MediaReplace/Magnetshroom_shock2.png = null
+Animation/MediaReplace/Magnetshroom_shock3.png = null
+Animation/MediaReplace/Magnetshroom_stemcap_overlay.png = null
+Animation/MediaReplace/PotatoMine_rock1.png = null
+Animation/MediaReplace/PotatoMine_rock2.png = null
+Animation/MediaReplace/PotatoMine_rock3.png = null
+Animation/MediaReplace/PotatoMine_rock4.png = null
+Animation/MediaReplace/PotatoMine_rock5.png = null
+Animation/MediaReplace/PotatoMine_rock6.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

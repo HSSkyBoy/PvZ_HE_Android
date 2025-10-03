@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="AdobeAnimateData" load_steps=3 format=4 uid="uid://c1u2xjs8tsygu"]
+
+[ext_resource type="Script" uid="uid://bvv4e0wytebkn" path="res://addons/AdobeAnimateEditor/Resource/AdobeAnimateData.gd" id="1"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_abh6b"]
+_data = PackedByteArray("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")
+size_override = Vector2(72, 57)
+
+[resource]
+script = ExtResource("1")
+animeFile = "res://Asset/Anime/Character/Zombie/WaterLine/ZombieWaterLine.dat"
+frameRate = 60.0
+frameScale = 2
+frameMax = 7
+imageAtlas = SubResource("PortableCompressedTexture2D_abh6b")
+mediaList = [Rect2(0, 0, 72, 19), Rect2(0, 19, 72, 19), Rect2(0, 38, 72, 19)]
+layerList = PackedStringArray("Zombie_whitewater", "AnimeClips")
+timeline = [[[[0, Transform2D(0.799988, 0, 0, 0.799988, 0, 0.25), Color(1, 1, 1, 1)]], [[0, Transform2D(0.799988, 0, 0, 0.799988, 0.05, 0.275), Color(1, 1, 1, 1)]], [[1, Transform2D(0.799988, 0, 0, 0.799988, 0.1, 0.3), Color(1, 1, 1, 1)]], [[1, Transform2D(0.799988, 0, 0, 0.799988, 0.85, 0.4), Color(1, 1, 1, 1)]], [[2, Transform2D(0.799988, 0, 0, 0.799988, 1.6, 0.5), Color(1, 1, 1, 1)]], [[2, Transform2D(0.799988, 0, 0, 0.799988, 1.1, 0.4), Color(1, 1, 1, 1)]], [[1, Transform2D(0.799988, 0, 0, 0.799988, 0.6, 0.3), Color(1, 1, 1, 1)]]], [[[65535, Transform2D(1, 0, 0, 1, 0, 0), Color(1, 1, 1, 1)]], [[65535, Transform2D(1, 0, 0, 1, 0, 0), Color(1, 1, 1, 1)]], [[65535, Transform2D(1, 0, 0, 1, 0, 0), Color(1, 1, 1, 1)]], [[65535, Transform2D(1, 0, 0, 1, 0, 0), Color(1, 1, 1, 1)]], [[65535, Transform2D(1, 0, 0, 1, 0, 0), Color(1, 1, 1, 1)]], [[65535, Transform2D(1, 0, 0, 1, 0, 0), Color(1, 1, 1, 1)]], [[65535, Transform2D(1, 0, 0, 1, 0, 0), Color(1, 1, 1, 1)]]]]
+events = [[], [], [], [], [], [], []]
+clips = {
+&"Idle": Vector2i(0, 6)
+}
+mediaDictionary = {
+&"Zombie_whitewater1.png": 0,
+&"Zombie_whitewater2.png": 1,
+&"Zombie_whitewater3.png": 2
+}
+layerDictionary = {
+&"AnimeClips": 1,
+&"Zombie_whitewater": 0
+}
+metadata/_custom_type_script = "uid://bvv4e0wytebkn"

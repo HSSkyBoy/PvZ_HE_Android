@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=4 uid="uid://byacqta2fn3uf"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://bhi4b5tp80jga" path="res://Asset/Anime/Character/Plant/Chapter1/CatPot/CatPot.tres" id="2"]
+
+[node name="CatPot" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -18)
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/AnimeEvents = true
+Animation/LayerVisible/Cattail_spike = true
+Animation/LayerVisible/Cattail_tail = true
+Animation/LayerVisible/Cattail_tail2 = true
+Animation/LayerVisible/Cattail_tail2_overlay = true
+Animation/LayerVisible/_Pot_shadow = false
+"Animation/LayerVisible/图层_24" = true
+Animation/MediaReplace/CatPot.png = null
+Animation/MediaReplace/Cattail_spike.png = null
+Animation/MediaReplace/Cattail_tail.png = null
+Animation/MediaReplace/Cattail_tail2.png = null
+Animation/MediaReplace/Cattail_tail2_overlay.png = null
+Animation/MediaReplace/Pot_shadow.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

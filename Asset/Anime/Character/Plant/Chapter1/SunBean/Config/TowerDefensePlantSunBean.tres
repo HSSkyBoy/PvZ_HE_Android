@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="TowerDefensePlantConfig" load_steps=2 format=4 uid="uid://cdg22sdahhuqq"]
+
+[ext_resource type="Script" uid="uid://bqd2rkadn8h4e" path="res://Resource/TowerDefense/Character/Config/TowerDefensePlantConfig.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+canUsePlantfood = true
+name = "PlantSunBean"
+hitpointsNearDeath = 0.0
+hitpoints = 300.0
+smashHurt = -1.0
+spikeHurt = -1.0
+sleepTime = "Never"
+height = 2
+damagePointData = null
+armorData = null
+customData = null
+ashScene = null
+homeWorld = 1
+costRise = -1
+cost = 50
+packetCooldown = 30.0
+startingCooldown = 0.0
+plantCover = []
+plantCoverRecycle = []
+plantGridType = [4]
+plantGridOverrideType = 0
+collisionFlags = 2
+maskFlags = 2
+unUseBuffFlags = 1
+physiqueTypeFlags = 8
+elementFlags = 0
+Flag/Collision = 2
+Flag/Mask = 2
+Flag/UnUseBuff = 1
+Flag/PhysiqueType = 8
+Flag/Elemet = 0

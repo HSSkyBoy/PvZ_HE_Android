@@ -1,0 +1,280 @@
+[gd_scene load_steps=19 format=4 uid="uid://cn2sof4iex5w0"]
+
+[ext_resource type="Script" uid="uid://dykpt3qov7n62" path="res://Prefab/GUI/LevelEditor/MapEditor/PacketBank/LevelEditorPacketBank.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://c3g8bb7vutqsp" path="res://Prefab/TowerDefense/GUI/InGame/PacketBank/PacketCategory/PacketCategoryButton.tscn" id="2"]
+[ext_resource type="Shader" uid="uid://bi8x813unwm5l" path="res://Asset/Shader/ShaderBright.gdshader" id="3"]
+[ext_resource type="Texture2D" uid="uid://br8flgo5rvajd" path="res://Asset/Texture/TowerDefense/PacketBank/Cards2.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://tdj4o6msgch1" path="res://Asset/Texture/TowerDefense/PacketBank/Cards3.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://mgf1htk12uhi" path="res://Asset/Texture/TowerDefense/PacketBank/Cards4.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://c3lrapc1la8so" path="res://Asset/Texture/TowerDefense/PacketBank/Cards5.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://bi03i1nvq4m10" path="res://Asset/Texture/TowerDefense/PacketBank/Cards6.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://hoey72hrwb60" path="res://Asset/Texture/TowerDefense/PacketBank/PacketBankPanel.png" id="9"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_07x3a"]
+shader = ExtResource("3")
+shader_parameter/brightStrength = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hhj26"]
+shader = ExtResource("3")
+shader_parameter/brightStrength = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d0aoa"]
+shader = ExtResource("3")
+shader_parameter/brightStrength = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_omssq"]
+shader = ExtResource("3")
+shader_parameter/brightStrength = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_36vsk"]
+shader = ExtResource("3")
+shader_parameter/brightStrength = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oo0qo"]
+shader = ExtResource("3")
+shader_parameter/brightStrength = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_41vf4"]
+shader = ExtResource("3")
+shader_parameter/brightStrength = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8xv3j"]
+shader = ExtResource("3")
+shader_parameter/brightStrength = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kuq11"]
+shader = ExtResource("3")
+shader_parameter/brightStrength = 0.0
+
+[node name="LevelEditorPacketBank" type="Control"]
+light_mask = 0
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 371.0
+offset_top = 37.0
+offset_right = 371.0
+offset_bottom = 557.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 65
+
+[node name="CardWhite" parent="VBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
+
+[node name="SpriteBrightButton" parent="VBoxContainer/CardWhite" index="0"]
+material = SubResource("ShaderMaterial_07x3a")
+offset_top = -29.0
+offset_bottom = 166.0
+
+[node name="CardGold" parent="VBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
+category = "Gold"
+
+[node name="SpriteBrightButton" parent="VBoxContainer/CardGold" index="0"]
+material = SubResource("ShaderMaterial_hhj26")
+offset_left = -25.0
+offset_top = -29.0
+offset_right = 167.0
+offset_bottom = 166.0
+texture = ExtResource("4")
+
+[node name="Label" parent="VBoxContainer/CardGold/LabelNode" index="0"]
+theme_override_colors/font_color = Color(0.984314, 0.85098, 0.180392, 1)
+text = "金卡"
+
+[node name="CardDiamond" parent="VBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
+category = "Diamond"
+
+[node name="SpriteBrightButton" parent="VBoxContainer/CardDiamond" index="0"]
+material = SubResource("ShaderMaterial_d0aoa")
+offset_left = -25.0
+offset_top = -29.0
+offset_right = 167.0
+offset_bottom = 166.0
+texture = ExtResource("5")
+
+[node name="Label" parent="VBoxContainer/CardDiamond/LabelNode" index="0"]
+theme_override_colors/font_color = Color(0.513726, 0.933333, 1, 1)
+text = "钻卡"
+
+[node name="CardColour" parent="VBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
+category = "Colour"
+
+[node name="SpriteBrightButton" parent="VBoxContainer/CardColour" index="0"]
+material = SubResource("ShaderMaterial_omssq")
+offset_left = -25.0
+offset_top = -29.0
+offset_right = 167.0
+offset_bottom = 166.0
+texture = ExtResource("6")
+
+[node name="Label" parent="VBoxContainer/CardColour/LabelNode" index="0"]
+theme_override_colors/font_color = Color(0.999998, 0.588078, 0.568435, 1)
+text = "彩卡"
+
+[node name="CardStar" parent="VBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
+category = "Star"
+
+[node name="SpriteBrightButton" parent="VBoxContainer/CardStar" index="0"]
+material = SubResource("ShaderMaterial_36vsk")
+offset_left = -25.0
+offset_top = -29.0
+offset_right = 167.0
+offset_bottom = 166.0
+texture = ExtResource("7")
+
+[node name="Label" parent="VBoxContainer/CardStar/LabelNode" index="0"]
+theme_override_colors/font_color = Color(1, 0.984314, 0.0313726, 1)
+text = "星卡"
+
+[node name="CardOriginal" parent="VBoxContainer" instance=ExtResource("2")]
+layout_mode = 2
+category = "Original"
+
+[node name="SpriteBrightButton" parent="VBoxContainer/CardOriginal" index="0"]
+material = SubResource("ShaderMaterial_oo0qo")
+offset_left = -25.0
+offset_top = -29.0
+offset_right = 167.0
+offset_bottom = 166.0
+texture = ExtResource("8")
+
+[node name="Label" parent="VBoxContainer/CardOriginal/LabelNode" index="0"]
+text = "原卡"
+
+[node name="CardItem" parent="VBoxContainer" instance=ExtResource("2")]
+unique_name_in_owner = true
+layout_mode = 2
+category = "Item"
+
+[node name="SpriteBrightButton" parent="VBoxContainer/CardItem" index="0"]
+material = SubResource("ShaderMaterial_41vf4")
+offset_left = -28.0
+offset_top = -29.0
+offset_right = 164.0
+offset_bottom = 166.0
+texture = ExtResource("8")
+
+[node name="Label" parent="VBoxContainer/CardItem/LabelNode" index="0"]
+offset_left = -12.0
+offset_right = 60.0
+theme_override_colors/font_color = Color(0.728761, 0.824951, 0.152246, 1)
+text = "物品卡"
+
+[node name="CardGraveStone" parent="VBoxContainer" instance=ExtResource("2")]
+unique_name_in_owner = true
+layout_mode = 2
+category = "GraveStone"
+
+[node name="SpriteBrightButton" parent="VBoxContainer/CardGraveStone" index="0"]
+material = SubResource("ShaderMaterial_8xv3j")
+offset_left = -28.0
+offset_top = -29.0
+offset_right = 164.0
+offset_bottom = 166.0
+texture = ExtResource("8")
+
+[node name="Label" parent="VBoxContainer/CardGraveStone/LabelNode" index="0"]
+offset_left = -12.0
+offset_right = 60.0
+theme_override_colors/font_color = Color(0.625597, 0.625597, 0.625597, 1)
+text = "墓碑卡"
+
+[node name="CardZombie" parent="VBoxContainer" instance=ExtResource("2")]
+unique_name_in_owner = true
+layout_mode = 2
+category = "Zombie"
+
+[node name="SpriteBrightButton" parent="VBoxContainer/CardZombie" index="0"]
+material = SubResource("ShaderMaterial_kuq11")
+offset_left = -28.0
+offset_top = -29.0
+offset_right = 164.0
+offset_bottom = 166.0
+texture = ExtResource("8")
+
+[node name="Label" parent="VBoxContainer/CardZombie/LabelNode" index="0"]
+offset_left = -12.0
+offset_right = 60.0
+theme_override_colors/font_color = Color(0.670724, 0.417215, 1, 1)
+text = "僵尸卡"
+
+[node name="PacketBankPanelTexture" type="NinePatchRect" parent="."]
+light_mask = 0
+layout_mode = 0
+offset_right = 339.0
+offset_bottom = 600.0
+texture = ExtResource("9")
+patch_margin_left = 219
+patch_margin_top = 43
+patch_margin_right = 70
+patch_margin_bottom = 214
+
+[node name="PacketBankScroll" type="ScrollContainer" parent="PacketBankPanelTexture"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+offset_left = 13.0
+offset_top = 36.0
+offset_right = 323.0
+offset_bottom = 585.0
+horizontal_scroll_mode = 0
+scroll_deadzone = 20
+
+[node name="PacketBankMargin" type="MarginContainer" parent="PacketBankPanelTexture/PacketBankScroll"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 36
+
+[node name="PacketContainer" type="GridContainer" parent="PacketBankPanelTexture/PacketBankScroll/PacketBankMargin"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+theme_override_constants/h_separation = 52
+theme_override_constants/v_separation = 70
+columns = 6
+
+[connection signal="choose" from="VBoxContainer/CardWhite" to="." method="CategoryChoose"]
+[connection signal="choose" from="VBoxContainer/CardGold" to="." method="CategoryChoose"]
+[connection signal="choose" from="VBoxContainer/CardDiamond" to="." method="CategoryChoose"]
+[connection signal="choose" from="VBoxContainer/CardColour" to="." method="CategoryChoose"]
+[connection signal="choose" from="VBoxContainer/CardStar" to="." method="CategoryChoose"]
+[connection signal="choose" from="VBoxContainer/CardOriginal" to="." method="CategoryChoose"]
+[connection signal="choose" from="VBoxContainer/CardItem" to="." method="CategoryChoose"]
+[connection signal="choose" from="VBoxContainer/CardGraveStone" to="." method="CategoryChoose"]
+[connection signal="choose" from="VBoxContainer/CardZombie" to="." method="CategoryChoose"]
+
+[editable path="VBoxContainer/CardWhite"]
+[editable path="VBoxContainer/CardWhite/SpriteBrightButton"]
+[editable path="VBoxContainer/CardGold"]
+[editable path="VBoxContainer/CardGold/SpriteBrightButton"]
+[editable path="VBoxContainer/CardDiamond"]
+[editable path="VBoxContainer/CardDiamond/SpriteBrightButton"]
+[editable path="VBoxContainer/CardColour"]
+[editable path="VBoxContainer/CardColour/SpriteBrightButton"]
+[editable path="VBoxContainer/CardStar"]
+[editable path="VBoxContainer/CardStar/SpriteBrightButton"]
+[editable path="VBoxContainer/CardOriginal"]
+[editable path="VBoxContainer/CardOriginal/SpriteBrightButton"]
+[editable path="VBoxContainer/CardItem"]
+[editable path="VBoxContainer/CardItem/SpriteBrightButton"]
+[editable path="VBoxContainer/CardGraveStone"]
+[editable path="VBoxContainer/CardGraveStone/SpriteBrightButton"]
+[editable path="VBoxContainer/CardZombie"]
+[editable path="VBoxContainer/CardZombie/SpriteBrightButton"]

@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=4 uid="uid://bct1gvf1i8ohw"]
+
+[ext_resource type="Script" uid="uid://msf6qpwnfb3n" path="res://Prefab/TowerDefense/DamagePart/DamagePartDrop.gd" id="1"]
+[ext_resource type="Shader" uid="uid://bbit4jhs4p0ww" path="res://Asset/Shader/TowerDefense/ShaderTowerDefenseCharacter.gdshader" id="2"]
+[ext_resource type="PackedScene" uid="uid://bhh76tmil13cb" path="res://Script/Component/MoveComponent/MoveComponent.tscn" id="3"]
+[ext_resource type="Texture2D" uid="uid://c1jocs3s84m21" path="res://Asset/Texture/Character/Effect/Shadow.png" id="4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yvgpb"]
+shader = ExtResource("2")
+shader_parameter/brightStrength = 0.0
+shader_parameter/whiteStrength = 0.0
+shader_parameter/surfaceUpPos = 0.0
+shader_parameter/surfaceDownPos = 1.0
+shader_parameter/surfacePos = 1.0
+shader_parameter/ash = false
+shader_parameter/iceSpeedDown = false
+shader_parameter/cover = false
+shader_parameter/hypnoses = false
+shader_parameter/imitater = false
+
+[node name="BreakPartDrop" type="Node2D" groups=["Effect"]]
+physics_interpolation_mode = 1
+z_index = -7
+script = ExtResource("1")
+itemLayer = 8
+
+[node name="Sprite" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="SpriteGroup" type="CanvasGroup" parent="Sprite"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_yvgpb")
+
+[node name="MoveComponent" parent="Sprite" instance=ExtResource("3")]
+unique_name_in_owner = true
+
+[node name="ShadowSprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = -10
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4")

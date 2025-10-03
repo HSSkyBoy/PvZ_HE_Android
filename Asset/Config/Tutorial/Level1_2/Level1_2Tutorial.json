@@ -1,0 +1,35 @@
+{
+	"SaveKey": "Level1_2Tutorial",
+	"Step" : [
+		{
+			"BroadCast" : {
+				"Text" : "LEVEL1_2_TUTORIAL_1" ,
+			},
+			"Condition" : [
+				{
+					"Name" : "CheckCharacterNum" ,
+					"Data" : {
+						"CharacterName" : "PlantSunflowerPea" ,
+						"Method" : ">=" ,
+						"Num" : 1
+					}
+				}
+			]
+		},
+		{
+			"BroadCast" : {
+				"Text" : "LEVEL1_2_TUTORIAL_2"
+			},
+			"Condition" : [
+				{
+					"Name" : "CheckCharacterNum" ,
+					"Data" : {
+						"CharacterName" : "PlantSunflowerPea" ,
+						"Method" : ">=" ,
+						"Num" : 3
+					}
+				}
+			]
+		}
+	]
+}

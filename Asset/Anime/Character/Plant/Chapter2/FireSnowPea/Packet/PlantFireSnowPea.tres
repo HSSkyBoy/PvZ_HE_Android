@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="TowerDefensePacketConfig" load_steps=5 format=4 uid="uid://db32f020fgnq7"]
+
+[ext_resource type="Resource" uid="uid://bl3admeot4jbu" path="res://Asset/Anime/Character/Plant/Chapter2/FireSnowPea/Config/TowerDefensePlantFireSnowPea.tres" id="1"]
+[ext_resource type="Script" uid="uid://c6d3po5310ugw" path="res://Resource/TowerDefense/PacketBank/Packet/TowerDefensePacketConfig.gd" id="2"]
+[ext_resource type="Script" uid="uid://p7yhpfahgp8d" path="res://Resource/UnlockCondition/UnlockConditionLevelFinishConfig.gd" id="3"]
+
+[sub_resource type="Resource" id="Resource_x3vpb"]
+script = ExtResource("3")
+levelSaveKey = "Level2_12"
+metadata/_custom_type_script = "uid://p7yhpfahgp8d"
+
+[resource]
+script = ExtResource("2")
+saveKey = "PlantFireSnowPea"
+unlockCheckList = [SubResource("Resource_x3vpb")]
+name = "TOWERDEFENSE_PLANT_FIRESNOWPEA_NAME"
+describe = "TOWERDEFENSE_PLANT_FIRESNOWPEA_EXPRESTION"
+plantfood = ""
+handbookDescribe = "TOWERDEFENSE_PLANT_FIRESNOWPEA_HANDBOOK_EXPRESTION"
+handbookStory = "TOWERDEFENSE_PLANT_FIRESNOWPEA_HANDBOOK_STORY"
+packetAnimeClip = "BodyIdle"
+packetAnimeOffset = Vector2(27, 23)
+packetAnimeScale = Vector2(0.5, 0.5)
+characterConfig = ExtResource("1")
+type = 0
+spawnMethod = "Rise"
+overrideCostRise = -1
+overrideCost = -1
+overridPacketCooldown = -1.0
+overridStartingCooldown = -1.0
+overrideWeight = -1
+overrideWavePointCost = -1
+initArmor = []
+plantUseCell = true
+Cell/plantUseCell = true
+metadata/_custom_type_script = "uid://c6d3po5310ugw"

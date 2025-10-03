@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=4 uid="uid://cc3eup5kd355o"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://dbbrarmpftpfn" path="res://Asset/Anime/Character/Plant/Chapter0/Wallnut/Scene/TowerDefensePlantWallnut.gd" id="2"]
+[ext_resource type="Resource" uid="uid://cfun4xnjhs8dc" path="res://Asset/Anime/Character/Plant/Chapter0/Wallnut/Config/TowerDefensePlantWallnut.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://boocp7vnh24m5" path="res://Asset/Anime/Character/Plant/Chapter0/Wallnut/Wallnut.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://deakfnllnylp3" path="res://Asset/Anime/Character/Plant/Chapter1/Firenut/DamagePoint/WallnutBody.png" id="5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f7r4n"]
+size = Vector2(40.5, 90)
+
+[node name="TowerDefensePlantWallnut" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/Wallnut")
+PreviewDamagePointPersontage = 1.0
+gravity = 245.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="Wallnut" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+position = Vector2(0, -30)
+Animation/MediaReplace/Wallnut_body.png = ExtResource("5")
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 30)
+
+[node name="HitBox" parent="." index="5"]
+visible = true
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+shape = SubResource("RectangleShape2D_f7r4n")

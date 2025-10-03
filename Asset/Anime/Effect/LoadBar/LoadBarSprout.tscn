@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=4 uid="uid://dayxpvpvasofr"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://b1g21cff0katn" path="res://Asset/Anime/Effect/LoadBar/LoadBarSprout.tres" id="2"]
+
+[node name="LoadBarSprout" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/rock = true
+Animation/LayerVisible/rock1 = true
+Animation/LayerVisible/rock2 = true
+Animation/LayerVisible/rock3 = true
+Animation/LayerVisible/rock4 = true
+Animation/LayerVisible/rock5 = true
+Animation/LayerVisible/sprout = true
+Animation/LayerVisible/sprout_petal = true
+Animation/LayerVisible/sprout_petal1 = true
+Animation/LayerVisible/sprout_petal2 = true
+Animation/MediaReplace/PotatoMine_rock1.png = null
+Animation/MediaReplace/PotatoMine_rock3.png = null
+Animation/MediaReplace/sprout_body.png = null
+Animation/MediaReplace/sprout_petal.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

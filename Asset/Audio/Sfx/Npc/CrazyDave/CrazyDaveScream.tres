@@ -1,0 +1,9 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=4 uid="uid://xa331u64glfe"]
+
+[ext_resource type="AudioStream" uid="uid://b7vty5gk6hmko" path="res://Asset/Audio/Sfx/Npc/CrazyDave/CrazyDaveScream1.ogg" id="1"]
+[ext_resource type="AudioStream" uid="uid://bh0dp3ooxc5ei" path="res://Asset/Audio/Sfx/Npc/CrazyDave/CrazyDaveScream2.ogg" id="2"]
+
+[resource]
+streams_count = 2
+stream_0/stream = ExtResource("1")
+stream_1/stream = ExtResource("2")

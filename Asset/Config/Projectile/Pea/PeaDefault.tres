@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="TowerDefenseProjectileConfig" load_steps=4 format=4 uid="uid://b4e5lgjhpps8"]
+
+[ext_resource type="PackedScene" uid="uid://dswe1rcdgitfr" path="res://Asset/Texture/TowerDefense/Projectile/Pea/ProjectilePea.tscn" id="1"]
+[ext_resource type="Script" uid="uid://b7ddnv74g0463" path="res://Resource/TowerDefense/Projectile/TowerDefenseProjectileConfig.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://citia6twnyck" path="res://Prefab/Particles/Splats/PeaSplats/PeaSplats.tscn" id="3"]
+
+[resource]
+script = ExtResource("2")
+name = "PeaDefault"
+size = Vector2(28, 28)
+baseDamage = 20.0
+projectileScene = ExtResource("1")
+projectileObject = 301
+splatSceneType = "Particles"
+splatAudio = "SplatNormal"
+splatScene = ExtResource("3")
+splatObject = 101
+hitEffect = null
+hitTargetEventList = []
+hitCharacterEventList = []
+hitGroundEventList = []
+rotateScale = 0.0
+hitBody = false
+fireLength = -1.0
+useRange = false
+rangeSize = Vector2(0.5, 0.5)
+hitPesontage = 0.25
+damageFlags = 3
+fireMethodFlags = 1
+collisionFlags = 1
+catapultHeight = 400.0
+penetrateNum = 3
+penetrateOverBack = true
+backOutGround = true
+backDuration = 1.0
+Flag/Damage = 3
+Flag/FireMethod = 1
+Flag/Collision = 1

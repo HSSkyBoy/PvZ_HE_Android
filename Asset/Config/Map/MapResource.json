@@ -1,0 +1,28 @@
+{
+	"FrontlawnEmpty" : "uid://cycsqw8lnv5l4" ,
+	"Frontlawn" : "uid://c8qa8jblxwo08" ,
+	"FrontlawnCold" : "uid://ddjgq3ly32gu8" ,
+	"FrontlawnAfternoon" : "uid://6q6oj7juoea5" ,
+	"FrontlawnBig" : "uid://b35dqefteibsc",
+	"FrontlawnEmptyBig" : "uid://85rvr2hdp6sr",
+	"FrontlawnThreePart" : "uid://diadux8u3a4vk",
+	
+	"FrontlawnNightEmpty" : "uid://gdmoov6f7mkd",
+	"FrontlawnNight" : "uid://b1fqithn617f1" ,
+	"FrontlawnNightCold" : "uid://chav8ev4q8xny",
+	"FrontlawnNightDeep" : "uid://dxyumhs3ljrml" ,
+	"FrontlawnNightBig" : "uid://dx0hu4fu2w5ve",
+	"FrontlawnNightEmptyBig" : "uid://cej7ckr1558hn",
+	"FrontlawnNightThreePart" : "uid://bhjwt2q78kit1",
+	
+	"Backyard" : "uid://c4jxtm7atdkm",
+	"BackyardFull" : "uid://culcpr7gjdkqj",
+	"BackyardNight" : "uid://bilya6gspegdc",
+	"BackyardNightFull" : "uid://cgbhpm3od0rg2",
+	
+	"OutsideFrontlawn" : "uid://bjseuchpubv40" ,
+	"OutsideFrontlawnNight" : "uid://4kcv63d8t5qn" ,
+	
+	"OutsideBackyard" : "uid://efs1qbm5rspb" ,
+	"OutsideBackyardNight" : "uid://d4ewskl3n5sup" ,
+}

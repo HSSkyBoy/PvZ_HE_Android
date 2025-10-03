@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=4 uid="uid://dfwrdoxe03ifh"]
+
+[ext_resource type="Script" uid="uid://b7jbj15xmjpre" path="res://Prefab/TowerDefense/GUI/InGame/Packet/TowerDefenseInGamePacketSlot.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://d131d07o455pm" path="res://Asset/Texture/TowerDefense/Packet/PC/PacketSilhouette.png" id="2"]
+
+[node name="TowerDefenseInGamePacketSlot" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -25.0
+offset_top = -33.0
+offset_right = 25.0
+offset_bottom = 37.0
+texture = ExtResource("2")
+expand_mode = 1

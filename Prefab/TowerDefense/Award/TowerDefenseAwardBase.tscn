@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=4 uid="uid://c3lfv0vuyf8bv"]
+
+[ext_resource type="Script" uid="uid://ugtlvmvv0xrj" path="res://Prefab/TowerDefense/Award/TowerDefenseAwardBase.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://b23erke7vb4di" path="res://Prefab/Particles/Award/AwardRay.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://b3m35jxqhg5m1" path="res://Asset/Anime/Particles/Award/AwardPickupGlow.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://d2sijcdcjwnqi" path="res://Asset/Texture/GUI/General/Special/DownArrow.png" id="4"]
+
+[sub_resource type="Animation" id="Animation_7725w"]
+resource_name = "Arrow"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DownArrow:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -100), Vector2(0, -80), Vector2(0, -100)]
+}
+
+[sub_resource type="Animation" id="Animation_2xl8j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DownArrow:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -80)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xw60a"]
+_data = {
+&"Arrow": SubResource("Animation_7725w"),
+&"RESET": SubResource("Animation_2xl8j")
+}
+
+[node name="TowerDefenseAwardBase" type="Node2D"]
+light_mask = 0
+z_index = 1000
+script = ExtResource("1")
+
+[node name="AwardRay" parent="." instance=ExtResource("2")]
+unique_name_in_owner = true
+
+[node name="AwardPickupGlow" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+light_mask = 0
+position = Vector2(0, -26)
+texture = ExtResource("3")
+
+[node name="DownArrow" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+light_mask = 0
+position = Vector2(0, -80)
+texture = ExtResource("4")
+
+[node name="Button" type="Button" parent="."]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+light_mask = 0
+offset_left = -44.0
+offset_top = -49.0
+offset_right = 44.0
+offset_bottom = 67.0
+mouse_default_cursor_shape = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_xw60a")
+}
+autoplay = "Arrow"

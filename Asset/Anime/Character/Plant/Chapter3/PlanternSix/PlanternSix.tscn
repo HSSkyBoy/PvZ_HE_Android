@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=4 uid="uid://bxjopd1hikihg"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://rap4t7culxpa" path="res://Asset/Anime/Character/Plant/Chapter3/PlanternSix/PlanternSix.tres" id="2"]
+
+[node name="PlanternSix" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+"Animation/LayerVisible/图层_110" = true
+"Animation/LayerVisible/图层_111" = true
+"Animation/LayerVisible/图层_112" = true
+"Animation/LayerVisible/图层_113" = true
+"Animation/LayerVisible/图层_114" = true
+"Animation/LayerVisible/图层_115" = true
+"Animation/LayerVisible/图层_116" = true
+"Animation/LayerVisible/图层_117" = true
+"Animation/LayerVisible/图层_118" = true
+"Animation/LayerVisible/图层_119" = true
+"Animation/LayerVisible/图层_120" = true
+"Animation/LayerVisible/图层_122" = true
+"Animation/LayerVisible/图层_123" = true
+"Animation/LayerVisible/图层_124" = true
+Animation/MediaReplace/PlanternSix_01.png = null
+Animation/MediaReplace/PlanternSix_02.png = null
+Animation/MediaReplace/PlanternSix_03.png = null
+Animation/MediaReplace/PlanternSix_04.png = null
+Animation/MediaReplace/PlanternSix_05.png = null
+Animation/MediaReplace/PlanternSix_06.png = null
+Animation/MediaReplace/PlanternSix_07.png = null
+Animation/MediaReplace/PlanternSix_08.png = null
+Animation/MediaReplace/PlanternSix_09.png = null
+Animation/MediaReplace/PlanternSix_10.png = null
+Animation/MediaReplace/PlanternSix_11.png = null
+Animation/MediaReplace/PlanternSix_12.png = null
+Animation/MediaReplace/PlanternSix_13.png = null
+Animation/MediaReplace/PlanternSix_14.png = null
+Animation/MediaReplace/PlanternSix_15.png = null
+Animation/MediaReplace/PlanternSix_16.png = null
+Animation/MediaReplace/PlanternSix_blink1.png = null
+Animation/MediaReplace/PlanternSix_blink2.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

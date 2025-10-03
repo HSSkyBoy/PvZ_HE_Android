@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharacterDamagePointConfig" load_steps=3 format=4 uid="uid://cpb4jiiqs7mvk"]
+
+[ext_resource type="Texture2D" uid="uid://pe542foke3wo" path="res://Asset/Anime/Character/Zombie/Chapter2/Zamboni/DamagePoint/Zombie_zamboni_2_damage2.png" id="1"]
+[ext_resource type="Script" uid="uid://8vg1ajd1i4ps" path="res://Resource/General/Character/DamagePoint/CharacterDamagePointConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+damagePointName = "DamagePoint3_2"
+damagePersontage = 0.333
+animeEffect = null
+animeEffectOffset = Vector2(0, 0)
+isDrop = false
+animeFliterOpen = ""
+animeFliterClose = ""
+replaceMediaName = &"Zombie_zamboni_2.png"
+replaceMediaTexture = ExtResource("1")
+damageAudio = ""
+metadata/_custom_type_script = "uid://8vg1ajd1i4ps"

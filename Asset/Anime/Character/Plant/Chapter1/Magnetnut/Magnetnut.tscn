@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=4 uid="uid://csp3p80bpd1cn"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://dynrmb5gq1fo3" path="res://Asset/Anime/Character/Plant/Chapter1/Magnetnut/Magnetnut.tres" id="2"]
+
+[node name="Magnetnut" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/1 = true
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/AnimeEvents = true
+Animation/LayerVisible/Magnetshroom_shock = true
+Animation/LayerVisible/Magnetshroom_spot = true
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/anim_face = true
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/MagnetNut.png = null
+Animation/MediaReplace/Magnetshroom_dot.png = null
+Animation/MediaReplace/Magnetshroom_head1.png = null
+Animation/MediaReplace/Magnetshroom_head2.png = null
+Animation/MediaReplace/Magnetshroom_head3.png = null
+Animation/MediaReplace/Magnetshroom_head4.png = null
+Animation/MediaReplace/Magnetshroom_idle_electric1.png = null
+Animation/MediaReplace/Magnetshroom_idle_electric2.png = null
+Animation/MediaReplace/Magnetshroom_idle_electric3.png = null
+Animation/MediaReplace/Magnetshroom_shock1.png = null
+Animation/MediaReplace/Magnetshroom_shock2.png = null
+Animation/MediaReplace/Magnetshroom_shock3.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

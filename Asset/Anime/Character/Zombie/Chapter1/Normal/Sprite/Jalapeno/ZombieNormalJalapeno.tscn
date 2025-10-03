@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=4 uid="uid://bg32yy2smrn3i"]
+
+[ext_resource type="PackedScene" uid="uid://vp5mpqwb0n8b" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Sprite/Normal/ZombieNormal.tscn" id="1"]
+[ext_resource type="Script" uid="uid://gj4fblcrpudc" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Sprite/Jalapeno/ZombieNormalJalapenoSprite.gd" id="2"]
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="3"]
+[ext_resource type="Resource" uid="uid://kd135xfjgyed" path="res://Asset/Anime/Character/Plant/Chapter0/Jalapeno/Jalapeno.tres" id="4"]
+
+[node name="ZombieNormalJalapeno" node_paths=PackedStringArray("layerSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ScreendoorSlot"), null, null, null, null, null, NodePath("ArmSlot"), null, NodePath("ConeSlot"), NodePath("BucketSlot"), null, null]
+Animation/LayerVisible/anim_hair = false
+Animation/LayerVisible/anim_head1 = false
+Animation/LayerVisible/anim_head2 = false
+
+[node name="Head" type="Node2D" parent="." index="0" node_paths=PackedStringArray("layerSlot", "layerSprite", "parentSprite")]
+unique_name_in_owner = true
+position = Vector2(-12.1385, -43.8687)
+rotation = -0.0695045
+scale = Vector2(-1, 1)
+script = ExtResource("3")
+flashAnimeData = ExtResource("4")
+offset = Vector2(-40, -55)
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null]
+parentSprite = NodePath("..")
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/Jalapeno_body = true
+Animation/LayerVisible/Jalapeno_cheek = true
+Animation/LayerVisible/Jalapeno_eye1 = true
+Animation/LayerVisible/Jalapeno_eye2 = true
+Animation/LayerVisible/Jalapeno_eyebrow1 = true
+Animation/LayerVisible/Jalapeno_eyebrow2 = true
+Animation/LayerVisible/Jalapeno_mouth = true
+Animation/LayerVisible/Jalapeno_stem = true
+Animation/MediaReplace/Jalapeno_body.png = null
+Animation/MediaReplace/Jalapeno_cheek.png = null
+Animation/MediaReplace/Jalapeno_eye1.png = null
+Animation/MediaReplace/Jalapeno_eye2.png = null
+Animation/MediaReplace/Jalapeno_eyebrow1.png = null
+Animation/MediaReplace/Jalapeno_eyebrow2.png = null
+Animation/MediaReplace/Jalapeno_mouth.png = null
+Animation/MediaReplace/Jalapeno_stem.png = null
+Layer = 14
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="HeadSlot" parent="." index="1"]
+position = Vector2(-14.2621, -44.675)
+rotation = -0.111717
+scale = Vector2(0.799547, 0.799547)
+
+[node name="ArmSlot" parent="." index="2"]
+position = Vector2(7.97038, 2.37415)
+rotation = -0.143522
+scale = Vector2(0.799376, 0.799376)
+
+[node name="ConeSlot" parent="." index="3"]
+position = Vector2(-10.1352, -70.7191)
+rotation = -0.13092
+scale = Vector2(0.795846, 0.795846)
+
+[node name="BucketSlot" parent="." index="4"]
+position = Vector2(-14.1679, -59.9759)
+rotation = -0.141515
+scale = Vector2(0.798117, 0.798117)
+
+[node name="ScreendoorSlot" parent="." index="5"]
+position = Vector2(-15.8423, 1.85846)
+rotation = -0.097206
+scale = Vector2(0.798333, 0.798333)
+
+[node name="GroundSlot" parent="." index="6"]
+position = Vector2(-43.5991, -40)

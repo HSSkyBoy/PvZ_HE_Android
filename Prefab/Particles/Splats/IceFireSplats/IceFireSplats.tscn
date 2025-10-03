@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=4 uid="uid://dxdsva0xl5qtd"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://dlcc4gmk1wd00" path="res://Asset/Anime/Effect/Fire/Ice/IceFire.tres" id="2"]
+
+[node name="IceFireSplats" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(0, -80)
+useTween = false
+layerSlot = [null, null]
+layerSprite = [null, null]
+Animation/Clip = "Done"
+Animation/LayerVisible/AnimeClips = true
+"Animation/LayerVisible/Layer 1" = true
+Animation/MediaReplace/fire1_1_blue.png = null
+Animation/MediaReplace/fire1_2_blue.png = null
+Animation/MediaReplace/fire1_3_blue.png = null
+Animation/MediaReplace/fire1_blue.png = null
+Animation/MediaReplace/fire2_blue.png = null
+Animation/MediaReplace/fire3_blue.png = null
+Animation/MediaReplace/fire4_blue.png = null
+Animation/MediaReplace/fire4b_blue.png = null
+Animation/MediaReplace/fire5_blue.png = null
+Animation/MediaReplace/fire5b_blue.png = null
+Animation/MediaReplace/fire6_blue.png = null
+Animation/MediaReplace/fire6b_blue.png = null
+Animation/MediaReplace/fire7_blue.png = null
+Animation/MediaReplace/fire7b_blue.png = null
+Animation/MediaReplace/fire8_blue.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

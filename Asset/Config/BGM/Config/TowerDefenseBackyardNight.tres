@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TowerDefenseBackgroundMusicConfig" load_steps=2 format=4 uid="uid://dgrqmpfswfqqr"]
+
+[ext_resource type="Script" uid="uid://cfhmh5e64wk8t" path="res://Resource/TowerDefense/BackgroundMusic/TowerDefenseBackgroundMusicConfig.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+translate = "BGM_BACKYARD_NIGHT"
+entry = "ChooseYourSeeds"
+flag1 = "RigorMormist"
+drums = ""
+win = "Win"

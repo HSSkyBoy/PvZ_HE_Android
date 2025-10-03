@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CollectableConfig" load_steps=3 format=4 uid="uid://cc18oq52i2tow"]
+
+[ext_resource type="Resource" uid="uid://dxwaea34ocrjb" path="res://Asset/Config/Collectable/Config/Paper/AwardChapter2Paper.tres" id="1"]
+[ext_resource type="Script" uid="uid://dd4tcc6h254tb" path="res://Resource/TowerDefense/Collectable/CollectableConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+saveKey = "Chapter2Paper"
+config = ExtResource("1")
+metadata/_custom_type_script = "uid://dd4tcc6h254tb"

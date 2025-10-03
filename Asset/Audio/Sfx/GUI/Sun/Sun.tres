@@ -1,0 +1,13 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=5 format=4 uid="uid://dcycswum4ri0l"]
+
+[ext_resource type="AudioStream" uid="uid://bbli5v21wexve" path="res://Asset/Audio/Sfx/GUI/Sun/Sun0.wav" id="1"]
+[ext_resource type="AudioStream" uid="uid://66h07d12wbik" path="res://Asset/Audio/Sfx/GUI/Sun/Sun1.wav" id="2"]
+[ext_resource type="AudioStream" uid="uid://biwkhwnqgannj" path="res://Asset/Audio/Sfx/GUI/Sun/Sun2.wav" id="3"]
+[ext_resource type="AudioStream" uid="uid://c5v4i44wsu27i" path="res://Asset/Audio/Sfx/GUI/Sun/Sun3.wav" id="4"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("1")
+stream_1/stream = ExtResource("2")
+stream_2/stream = ExtResource("3")
+stream_3/stream = ExtResource("4")

@@ -1,0 +1,57 @@
+{
+	"SaveKey": "Level1_11TutorialTalk",
+	"Talk": [
+		{
+			"Anime": "Crazy",
+			"Audio" : "CrazyDaveCrazy" ,
+			"Mode": "Default",
+			"Npc": "CrazyDave",
+			"Text": "NPC_TALK_LEVEL1_11_TUTORIAL_1"
+		},
+		{
+			"Anime": "MediumTalk",
+			"Audio" : "CrazyDaveLong" ,
+			"Mode": "Default",
+			"Npc": "CrazyDave",
+			"Text": "NPC_TALK_LEVEL1_11_TUTORIAL_2"
+		},
+		{
+			"Anime": "MediumTalk",
+			"Audio" : "CrazyDaveLong" ,
+			"Mode": "Default",
+			"Npc": "CrazyDave",
+			"Text": "NPC_TALK_LEVEL1_11_TUTORIAL_3"
+		},
+		{
+			"Anime": "MediumTalk",
+			"Audio" : "CrazyDaveLong" ,
+			"Mode": "Default",
+			"Npc": "CrazyDave",
+			"Text": "NPC_TALK_LEVEL1_11_TUTORIAL_4"
+		},
+		{
+			"Anime": "MediumTalk",
+			"Audio" : "CrazyDaveLong" ,
+			"Mode": "Default",
+			"Npc": "CrazyDave",
+			"Text": "NPC_TALK_LEVEL1_11_TUTORIAL_5"
+		},
+		{
+			"Anime": "TalkHanding",
+			"Audio" : "CrazyDaveExtralong" ,
+			"Arg": [
+				"uid://bbo5mxssbqcp1"
+			],
+			"Mode": "Hand",
+			"Npc": "CrazyDave",
+			"Text": "NPC_TALK_LEVEL1_11_TUTORIAL_6"
+		},
+		{
+			"Anime": "Crazy",
+			"Audio" : "CrazyDaveCrazy" ,
+			"Mode": "Default",
+			"Npc": "CrazyDave",
+			"Text": "NPC_TALK_LEVEL1_11_TUTORIAL_7"
+		}
+	]
+}

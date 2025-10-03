@@ -1,0 +1,11 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=4 uid="uid://7gohllxntg34"]
+
+[ext_resource type="AudioStream" uid="uid://dk2e5e15v0k4d" path="res://Asset/Audio/Sfx/Splat/Shieldhit/ShieldHit.ogg" id="1"]
+[ext_resource type="AudioStream" uid="uid://dmj5ivvj0qxi6" path="res://Asset/Audio/Sfx/Splat/Shieldhit/ShieldHit2.ogg" id="2"]
+
+[resource]
+random_pitch = 1.2
+random_volume_offset_db = 2.0
+streams_count = 2
+stream_0/stream = ExtResource("1")
+stream_1/stream = ExtResource("2")

@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=4 uid="uid://dbp6denu4nsl1"]
+
+[ext_resource type="PackedScene" uid="uid://uawo0nxcj2ji" path="res://Prefab/TowerDefense/Character/TowerDefenseItem.tscn" id="1"]
+[ext_resource type="Script" uid="uid://27md25gjrc07" path="res://Asset/Anime/Character/Item/RakeSun/Scene/TowerDefenseItemRakeSun.gd" id="2"]
+[ext_resource type="Resource" uid="uid://d3shen3aipn06" path="res://Asset/Anime/Character/Item/RakeSun/Config/TowerDefenseItemRakeSun.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://dot3sw46ogyiy" path="res://Asset/Anime/Character/Item/RakeSun/RakeSun.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://dir0f8lu1l3b3" path="res://Script/Component/TowerDefense/Character/AttackComponent/AttackComponent.tscn" id="5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mo5c0"]
+size = Vector2(33, 33)
+
+[node name="TowerDefenseItemRakeSun" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+z_index = -13
+script = ExtResource("2")
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/RakeSun")
+itemLayer = 2
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 37)
+
+[node name="RakeSun" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+position = Vector2(0, -37)
+
+[node name="ShadowSprite" parent="." index="3"]
+visible = false
+position = Vector2(12, 36)
+
+[node name="AttackComponent" parent="." index="5" node_paths=PackedStringArray("checkArea") instance=ExtResource("5")]
+unique_name_in_owner = true
+attackType = "Default"
+checkArea = NodePath("Area2D")
+checkIntreval = 10
+
+[node name="Area2D" type="Area2D" parent="AttackComponent" index="0"]
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent/Area2D" index="0"]
+position = Vector2(-4.5, -6.5)
+shape = SubResource("RectangleShape2D_mo5c0")

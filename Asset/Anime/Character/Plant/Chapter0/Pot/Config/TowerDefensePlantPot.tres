@@ -1,0 +1,108 @@
+[gd_resource type="Resource" script_class="TowerDefensePlantConfig" load_steps=11 format=4 uid="uid://qji31e3ma1w"]
+
+[ext_resource type="Texture2D" uid="uid://deakfnllnylp3" path="res://Asset/Anime/Character/Plant/Chapter1/Firenut/DamagePoint/WallnutBody.png" id="1"]
+[ext_resource type="Script" uid="uid://8vg1ajd1i4ps" path="res://Resource/General/Character/DamagePoint/CharacterDamagePointConfig.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://cg5bhhta0502g" path="res://Asset/Anime/Character/Plant/Chapter1/Firenut/DamagePoint/WallnutCracked1.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dlxc20qt2d5sn" path="res://Asset/Anime/Character/Plant/Chapter1/Firenut/DamagePoint/WallnutCracked2.png" id="4"]
+[ext_resource type="Script" uid="uid://c3lvn8julbk1s" path="res://Resource/General/Character/DamagePoint/CharacterDamagePointData.gd" id="5"]
+[ext_resource type="Script" uid="uid://bqd2rkadn8h4e" path="res://Resource/TowerDefense/Character/Config/TowerDefensePlantConfig.gd" id="6"]
+
+[sub_resource type="Resource" id="Resource_bqbud"]
+script = ExtResource("2")
+damagePointName = "Damage0"
+damagePersontage = 1.0
+animeEffect = null
+animeEffectOffset = Vector2(0, 0)
+isDrop = false
+animeFliterOpen = ""
+animeFliterClose = ""
+replaceMediaName = &"Wallnut_body.png"
+replaceMediaTexture = ExtResource("1")
+damageAudio = ""
+metadata/_custom_type_script = "uid://8vg1ajd1i4ps"
+
+[sub_resource type="Resource" id="Resource_hcpsk"]
+script = ExtResource("2")
+damagePointName = "Damage1"
+damagePersontage = 0.666
+animeEffect = null
+animeEffectOffset = Vector2(0, 0)
+isDrop = false
+animeFliterOpen = ""
+animeFliterClose = ""
+replaceMediaName = &"Wallnut_body.png"
+replaceMediaTexture = ExtResource("3")
+damageAudio = ""
+metadata/_custom_type_script = "uid://8vg1ajd1i4ps"
+
+[sub_resource type="Resource" id="Resource_1yxcu"]
+script = ExtResource("2")
+damagePointName = "Damage2"
+damagePersontage = 0.333
+animeEffect = null
+animeEffectOffset = Vector2(0, 0)
+isDrop = false
+animeFliterOpen = ""
+animeFliterClose = ""
+replaceMediaName = &"Wallnut_body.png"
+replaceMediaTexture = ExtResource("4")
+damageAudio = ""
+metadata/_custom_type_script = "uid://8vg1ajd1i4ps"
+
+[sub_resource type="Resource" id="Resource_l0bt2"]
+script = ExtResource("5")
+damagePointList = [SubResource("Resource_bqbud"), SubResource("Resource_hcpsk"), SubResource("Resource_1yxcu")]
+damagePointDictionary = {
+"Damage0": {
+"Close": [],
+"Config": SubResource("Resource_bqbud"),
+"Open": []
+},
+"Damage1": {
+"Close": [],
+"Config": SubResource("Resource_hcpsk"),
+"Open": []
+},
+"Damage2": {
+"Close": [],
+"Config": SubResource("Resource_1yxcu"),
+"Open": []
+}
+}
+fliterOpenAll = []
+fliterCloseAll = []
+metadata/_custom_type_script = "uid://c3lvn8julbk1s"
+
+[resource]
+script = ExtResource("6")
+canUsePlantfood = true
+name = "PlantPot"
+hitpointsNearDeath = 0.0
+hitpoints = 300.0
+smashHurt = -1.0
+spikeHurt = -1.0
+sleepTime = "Never"
+height = 1
+damagePointData = SubResource("Resource_l0bt2")
+armorData = null
+customData = null
+ashScene = null
+homeWorld = 1
+costRise = -1
+cost = 25
+packetCooldown = 7.5
+startingCooldown = 0.0
+plantCover = []
+plantCoverRecycle = []
+plantGridType = [2, 1, 10]
+plantGridOverrideType = 6
+collisionFlags = 9
+maskFlags = 9
+unUseBuffFlags = 0
+physiqueTypeFlags = 2
+elementFlags = 0
+Flag/Collision = 9
+Flag/Mask = 9
+Flag/UnUseBuff = 0
+Flag/PhysiqueType = 2
+Flag/Elemet = 0

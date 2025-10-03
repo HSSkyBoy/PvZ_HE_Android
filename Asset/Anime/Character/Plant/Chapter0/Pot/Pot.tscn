@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=4 uid="uid://cuew34oa6wvrs"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://c0hq5nhaad2ks" path="res://Asset/Anime/Character/Plant/Chapter0/Pot/Pot.tres" id="2"]
+
+[node name="Pot" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -18)
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/Pot_bottom = true
+Animation/LayerVisible/Pot_leaf1 = true
+Animation/LayerVisible/Pot_leaf2 = true
+Animation/LayerVisible/Pot_stem = true
+Animation/LayerVisible/Pot_top = true
+Animation/LayerVisible/_Pot_shadow = false
+Animation/MediaReplace/Pot_bottom.png = null
+Animation/MediaReplace/Pot_bottom2.png = null
+Animation/MediaReplace/Pot_leaf1.png = null
+Animation/MediaReplace/Pot_leaf2.png = null
+Animation/MediaReplace/Pot_shadow.png = null
+Animation/MediaReplace/Pot_stem.png = null
+Animation/MediaReplace/Pot_top.png = null
+Animation/MediaReplace/Pot_water_base.png = null
+Animation/MediaReplace/Pot_water_top.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

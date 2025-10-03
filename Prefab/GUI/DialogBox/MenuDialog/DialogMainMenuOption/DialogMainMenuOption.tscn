@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=4 uid="uid://b0npiop54wclo"]
+
+[ext_resource type="PackedScene" uid="uid://fc46lp4e26sk" path="res://Prefab/GUI/DialogBox/MenuDialog/MenuDialogBase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://deplrpqqqwbk1" path="res://Prefab/GUI/DialogBox/MenuDialog/DialogMainMenuOption/DialogMainMenuOption.gd" id="2"]
+
+[node name="MenuDialogMainMenu" instance=ExtResource("1")]
+script = ExtResource("2")

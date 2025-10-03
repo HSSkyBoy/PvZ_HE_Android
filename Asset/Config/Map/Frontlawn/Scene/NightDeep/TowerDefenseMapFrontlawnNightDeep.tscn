@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=4 uid="uid://cjajvaqfblr0g"]
+
+[ext_resource type="Script" uid="uid://ds4bcitrersv7" path="res://Asset/Config/Map/Frontlawn/Scene/NightDeep/TowerDefenseMapFrontlawnNightDeep.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://xju3adrn4dx3" path="res://Asset/Config/Map/Frontlawn/Scene/NightDeep/TowerDefenseMapFrontlawnNightDeepGradient.tres" id="2"]
+[ext_resource type="Texture2D" uid="uid://gs2gvgb4id47" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/FrontlawnNightDeep.jpg" id="3"]
+[ext_resource type="Texture2D" uid="uid://bbbiwhq1ib7vi" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Stripe.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://mv675nq6gi64" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/FromtlawnNightDeepFloor.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://bs07wv0ua20em" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/FrontlawnNightDoor.png" id="6"]
+
+[node name="TowerDefenseMapFrontlawnNightDeep" type="Node2D" node_paths=PackedStringArray("stripe")]
+modulate = Color(1, 0.988235, 0.988235, 1)
+script = ExtResource("1")
+stripe = NodePath("Stripe")
+canvasModulateGradient = ExtResource("2")
+
+[node name="FrontlawnNightDeep" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3")
+centered = false
+
+[node name="Stripe" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(494, 70)
+texture = ExtResource("4")
+centered = false
+
+[node name="FrontlawnFloor" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(100, 298)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="FrontlawnDoor" type="Sprite2D" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(101, 297)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6")

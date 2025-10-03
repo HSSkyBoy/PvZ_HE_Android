@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="TowerDefenseMapConfig" load_steps=6 format=4 uid="uid://dxyumhs3ljrml"]
+
+[ext_resource type="Script" uid="uid://bk1pu7tdpvvch" path="res://Resource/TowerDefense/Map/Cell/Config/TowerDefenseCellConfig.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://cjajvaqfblr0g" path="res://Asset/Config/Map/Frontlawn/Scene/NightDeep/TowerDefenseMapFrontlawnNightDeep.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://gs2gvgb4id47" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/FrontlawnNightDeep.jpg" id="3"]
+[ext_resource type="Script" uid="uid://jariliyqi7jt" path="res://Resource/TowerDefense/Map/TowerDefenseMapConfig.gd" id="4"]
+
+[sub_resource type="Resource" id="Resource_nwiwn"]
+script = ExtResource("1")
+pos = Vector4i(1, 1, 9, 5)
+gridType = [2, 4]
+elementFlags = 0
+Flag/Elemet = 0
+
+[resource]
+script = ExtResource("4")
+translate = "MAP_FRONTLAWN_NIGHT_DEEP"
+mapTexture = ExtResource("3")
+mapScene = ExtResource("2")
+mapSize = Vector2(1400, 600)
+gridNum = Vector2i(9, 5)
+gridBeginPos = Vector2(260, 75)
+gridSize = Vector2(80, 98)
+edge = Vector4(200, 0, 1100, 576)
+cellConfig = [SubResource("Resource_nwiwn")]
+lineUse = [1, 2, 3, 4, 5]
+isNight = true
+useSunFall = true

@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=4 uid="uid://jm05awl7yeg"]
+
+[ext_resource type="PackedScene" uid="uid://cnwqwm6ecgmhp" path="res://Prefab/TowerDefense/Character/TowerDefenseCharacter.tscn" id="1"]
+[ext_resource type="Script" uid="uid://dvdmcknir82vb" path="res://Prefab/TowerDefense/Character/TowerDefenseGravestone.gd" id="2"]
+
+[node name="TowerDefenseGravestone" instance=ExtResource("1")]
+z_index = -14
+script = ExtResource("2")
+rise = true
+camp = 1
+damagePartClip = ""
+itemLayer = 1
+
+[node name="SpriteMask" parent="SpriteGroup" index="0"]
+offset_left = -39.0
+offset_top = -52.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 50)
+texture = null
+
+[node name="IcetrapSprite" parent="." index="4"]
+texture = null
+
+[node name="StateChart" parent="." index="8"]
+process_mode = 0

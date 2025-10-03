@@ -1,0 +1,345 @@
+[gd_resource type="Resource" script_class="ShopConfig" load_steps=53 format=4 uid="uid://bht62ifyb3rnh"]
+
+[ext_resource type="JSON" path="res://Asset/Config/Shop/WWM/WWMShop.json" id="1"]
+[ext_resource type="Script" uid="uid://d1hwsq2g7vxj1" path="res://Resource/Shop/ShopItemConfig.gd" id="2"]
+[ext_resource type="Script" uid="uid://ct0dy00esrc02" path="res://Resource/Shop/ShopItemStageConfig.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://cx3aklbvslute" path="res://Asset/Texture/GUI/Shop/Item/PacketSlot.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dr87kt7wbjgkg" path="res://Asset/Texture/GUI/Shop/Item/NutBandaging.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://dmxt2bfog0s0u" path="res://Asset/Texture/GUI/Shop/Item/PotReplacement.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://cybyd2aoye54" path="res://Asset/Texture/GUI/Shop/Item/Pitchfork.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://couj5rp7ns28s" path="res://Asset/Texture/GUI/Shop/Item/PitchforkSun.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://wrxym35x1i62" path="res://Asset/Texture/GUI/Shop/Item/SunCollect.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://cxtcenbii0ryp" path="res://Asset/Texture/GUI/Shop/Item/CoinCollect.png" id="10"]
+[ext_resource type="Script" uid="uid://ba3v3jc12wwm8" path="res://Resource/Shop/ShopPageConfig.gd" id="11"]
+[ext_resource type="Texture2D" uid="uid://bn73et4em88o4" path="res://Asset/Texture/TowerDefense/Shovel/ShovelDiamond.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://cltuhvqt2yj0j" path="res://Asset/Texture/TowerDefense/Mower/MowerSun.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://d3gckh0b3b5rd" path="res://Asset/Anime/Character/Plant/Chapter1/SunShroom/Custom/AwardSunShroomCustom1.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://dexhbu8l4fuj3" path="res://Asset/Anime/Character/Plant/Chapter2/SnowShroom/Custom/AwardSnowShroomCustom0.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://o0wppvjqrrhn" path="res://Asset/Anime/Character/Plant/Chapter2/WinterMelonShroom/Custom/AwardWinterMelonShroomCustom0.png" id="16"]
+[ext_resource type="Script" uid="uid://b3pejhbgol5ed" path="res://Resource/Shop/ShopConfig.gd" id="17"]
+
+[sub_resource type="Resource" id="Resource_pr0ay"]
+script = ExtResource("3")
+saveType = "Feature"
+saveKey = "PacketSlot8"
+texture = ExtResource("4")
+describe = "SHOP_ITEM_PACKETSLOT_8"
+npcTalk = "SHOP_NPC_TALK_PACKETSLOT"
+type = "Coin"
+cost = 500
+openMinNum = 0
+openMaxNum = 1
+addNum = 1
+
+[sub_resource type="Resource" id="Resource_urfor"]
+script = ExtResource("3")
+saveType = "Feature"
+saveKey = "PacketSlot9"
+texture = ExtResource("4")
+describe = "SHOP_ITEM_PACKETSLOT_9"
+npcTalk = "SHOP_NPC_TALK_PACKETSLOT"
+type = "Coin"
+cost = 1000
+openMinNum = 0
+openMaxNum = 1
+addNum = 1
+
+[sub_resource type="Resource" id="Resource_vqhsf"]
+script = ExtResource("3")
+saveType = "Feature"
+saveKey = "PacketSlot10"
+texture = ExtResource("4")
+describe = "SHOP_ITEM_PACKETSLOT_10"
+npcTalk = "SHOP_NPC_TALK_PACKETSLOT"
+type = "Coin"
+cost = 2000
+openMinNum = 0
+openMaxNum = 1
+addNum = 1
+
+[sub_resource type="Resource" id="Resource_fw0j5"]
+script = ExtResource("3")
+saveType = "Feature"
+saveKey = "PacketSlot11"
+texture = ExtResource("4")
+describe = "SHOP_ITEM_PACKETSLOT_11"
+npcTalk = "SHOP_NPC_TALK_PACKETSLOT"
+type = "Coin"
+cost = 4000
+openMinNum = 0
+openMaxNum = 1
+addNum = 1
+
+[sub_resource type="Resource" id="Resource_e3n6o"]
+script = ExtResource("3")
+saveType = "Feature"
+saveKey = "PacketSlot12"
+texture = ExtResource("4")
+describe = "SHOP_ITEM_PACKETSLOT_12"
+npcTalk = "SHOP_NPC_TALK_PACKETSLOT"
+type = "Coin"
+cost = 8000
+openMinNum = 0
+openMaxNum = 1
+addNum = 1
+
+[sub_resource type="Resource" id="Resource_ydcad"]
+script = ExtResource("3")
+saveType = "Feature"
+saveKey = "PacketSlot13"
+texture = ExtResource("4")
+describe = "SHOP_ITEM_PACKETSLOT_13"
+npcTalk = "SHOP_NPC_TALK_PACKETSLOT"
+type = "Coin"
+cost = 16000
+openMinNum = 0
+openMaxNum = 1
+addNum = 1
+
+[sub_resource type="Resource" id="Resource_6vut8"]
+script = ExtResource("3")
+saveType = "Feature"
+saveKey = "PacketSlot14"
+texture = ExtResource("4")
+describe = "SHOP_ITEM_PACKETSLOT_14"
+npcTalk = "SHOP_NPC_TALK_PACKETSLOT"
+type = "Coin"
+cost = 32000
+openMinNum = 0
+openMaxNum = 1
+addNum = 1
+
+[sub_resource type="Resource" id="Resource_7pqof"]
+script = ExtResource("3")
+saveType = "Feature"
+saveKey = "PacketSlot15"
+texture = ExtResource("4")
+describe = "SHOP_ITEM_PACKETSLOT_15"
+npcTalk = "SHOP_NPC_TALK_PACKETSLOT"
+type = "Coin"
+cost = 64000
+openMinNum = 0
+openMaxNum = 1
+addNum = 1
+
+[sub_resource type="Resource" id="Resource_ojmp1"]
+script = ExtResource("3")
+saveType = "Feature"
+saveKey = "PacketSlot16"
+texture = ExtResource("4")
+describe = "SHOP_ITEM_PACKETSLOT_16"
+npcTalk = "SHOP_NPC_TALK_PACKETSLOT"
+type = "Coin"
+cost = 128000
+openMinNum = 0
+openMaxNum = 1
+addNum = 1
+
+[sub_resource type="Resource" id="Resource_wleb8"]
+script = ExtResource("2")
+stageList = [SubResource("Resource_pr0ay"), SubResource("Resource_urfor"), SubResource("Resource_vqhsf"), SubResource("Resource_fw0j5"), SubResource("Resource_e3n6o"), SubResource("Resource_ydcad"), SubResource("Resource_6vut8"), SubResource("Resource_7pqof"), SubResource("Resource_ojmp1")]
+
+[sub_resource type="Resource" id="Resource_6ypym"]
+script = ExtResource("3")
+saveType = "Feature"
+saveKey = "NutBandaging"
+texture = ExtResource("5")
+describe = ""
+npcTalk = "SHOP_NPC_TALK_NUTBANDAGING"
+type = "Coin"
+cost = 200
+openMinNum = 0
+openMaxNum = 1
+addNum = 1
+
+[sub_resource type="Resource" id="Resource_i0odn"]
+script = ExtResource("2")
+stageList = [SubResource("Resource_6ypym")]
+
+[sub_resource type="Resource" id="Resource_s4xnj"]
+script = ExtResource("3")
+saveType = "Feature"
+saveKey = "PotReplacement"
+texture = ExtResource("6")
+describe = ""
+npcTalk = "SHOP_NPC_TALK_POYREPLACEMENT"
+type = "Coin"
+cost = 500
+openMinNum = 0
+openMaxNum = 1
+addNum = 1
+
+[sub_resource type="Resource" id="Resource_6ikwg"]
+script = ExtResource("2")
+stageList = [SubResource("Resource_s4xnj")]
+
+[sub_resource type="Resource" id="Resource_f8rko"]
+script = ExtResource("3")
+saveType = "Feature"
+saveKey = "Pitchfork"
+texture = ExtResource("7")
+describe = ""
+npcTalk = "SHOP_NPC_TALK_PITCHFORK"
+type = "Coin"
+cost = 200
+openMinNum = 0
+openMaxNum = 1
+addNum = 3
+
+[sub_resource type="Resource" id="Resource_4vim1"]
+script = ExtResource("2")
+stageList = [SubResource("Resource_f8rko")]
+
+[sub_resource type="Resource" id="Resource_rapre"]
+script = ExtResource("3")
+saveType = "Feature"
+saveKey = "PitchforkSun"
+texture = ExtResource("8")
+describe = ""
+npcTalk = "SHOP_NPC_TALK_PITCHFORK_SUN"
+type = "Coin"
+cost = 500
+openMinNum = 0
+openMaxNum = 1
+addNum = 3
+
+[sub_resource type="Resource" id="Resource_jxu1y"]
+script = ExtResource("2")
+stageList = [SubResource("Resource_rapre")]
+
+[sub_resource type="Resource" id="Resource_as6d7"]
+script = ExtResource("3")
+saveType = "Feature"
+saveKey = "SunCollect"
+texture = ExtResource("9")
+describe = ""
+npcTalk = "SHOP_NPC_TALK_SUNCOLLECT"
+type = "Coin"
+cost = 1000
+openMinNum = 0
+openMaxNum = 1
+addNum = 1
+
+[sub_resource type="Resource" id="Resource_btjy2"]
+script = ExtResource("2")
+stageList = [SubResource("Resource_as6d7")]
+
+[sub_resource type="Resource" id="Resource_bnpey"]
+script = ExtResource("3")
+saveType = "Feature"
+saveKey = "CoinCollect"
+texture = ExtResource("10")
+describe = ""
+npcTalk = "SHOP_NPC_TALK_COINCOLLECT"
+type = "Coin"
+cost = 2000
+openMinNum = 0
+openMaxNum = 1
+addNum = 1
+
+[sub_resource type="Resource" id="Resource_urwao"]
+script = ExtResource("2")
+stageList = [SubResource("Resource_bnpey")]
+
+[sub_resource type="Resource" id="Resource_7dg2t"]
+script = ExtResource("11")
+itemList = [SubResource("Resource_wleb8"), SubResource("Resource_i0odn"), SubResource("Resource_6ikwg"), SubResource("Resource_4vim1"), SubResource("Resource_jxu1y"), SubResource("Resource_btjy2"), SubResource("Resource_urwao")]
+
+[sub_resource type="Resource" id="Resource_r0gg0"]
+script = ExtResource("3")
+saveType = "Feature"
+saveKey = "ShovelDiamond"
+texture = ExtResource("12")
+describe = ""
+npcTalk = "SHOP_NPC_TALK_SHOVEL_DIAMOND"
+type = "Coin"
+cost = 10000
+openMinNum = 0
+openMaxNum = 1
+addNum = 1
+
+[sub_resource type="Resource" id="Resource_bdwut"]
+script = ExtResource("2")
+stageList = [SubResource("Resource_r0gg0")]
+
+[sub_resource type="Resource" id="Resource_p8id7"]
+script = ExtResource("3")
+saveType = "Feature"
+saveKey = "MowerSun"
+texture = ExtResource("13")
+describe = ""
+npcTalk = "SHOP_NPC_TALK_MOWER_SUN"
+type = "Coin"
+cost = 15000
+openMinNum = 0
+openMaxNum = 1
+addNum = 1
+
+[sub_resource type="Resource" id="Resource_5hwvv"]
+script = ExtResource("2")
+stageList = [SubResource("Resource_p8id7")]
+
+[sub_resource type="Resource" id="Resource_2hbym"]
+script = ExtResource("11")
+itemList = [SubResource("Resource_bdwut"), SubResource("Resource_5hwvv")]
+
+[sub_resource type="Resource" id="Resource_sjmru"]
+script = ExtResource("3")
+saveType = "Feature"
+saveKey = "SunShroomCustom1"
+texture = ExtResource("14")
+describe = ""
+npcTalk = "SHOP_NPC_TALK_PLANT_SUNSHROOM_CUSTOM_1"
+type = "Coin"
+cost = 5000
+openMinNum = 0
+openMaxNum = 1
+addNum = 1
+
+[sub_resource type="Resource" id="Resource_hbisj"]
+script = ExtResource("2")
+stageList = [SubResource("Resource_sjmru")]
+
+[sub_resource type="Resource" id="Resource_t5efe"]
+script = ExtResource("3")
+saveType = "Feature"
+saveKey = "SnowShroomCustom0"
+texture = ExtResource("15")
+describe = ""
+npcTalk = "SHOP_NPC_TALK_PLANT_SNOWSHROOM_CUSTOM_0"
+type = "Coin"
+cost = 8000
+openMinNum = 0
+openMaxNum = 1
+addNum = 1
+
+[sub_resource type="Resource" id="Resource_fpxig"]
+script = ExtResource("2")
+stageList = [SubResource("Resource_t5efe")]
+
+[sub_resource type="Resource" id="Resource_eyscm"]
+script = ExtResource("3")
+saveType = "Feature"
+saveKey = "WinterMelonShroomCustom0"
+texture = ExtResource("16")
+describe = ""
+npcTalk = "SHOP_NPC_TALK_PLANT_WINTERMELONGSHROOM_CUSTOM_0"
+type = "Coin"
+cost = 5000
+openMinNum = 0
+openMaxNum = 1
+addNum = 1
+
+[sub_resource type="Resource" id="Resource_o2yvt"]
+script = ExtResource("2")
+stageList = [SubResource("Resource_eyscm")]
+
+[sub_resource type="Resource" id="Resource_irtjs"]
+script = ExtResource("11")
+itemList = [SubResource("Resource_hbisj"), SubResource("Resource_fpxig"), SubResource("Resource_o2yvt")]
+
+[resource]
+script = ExtResource("17")
+data = ExtResource("1")
+pageList = [SubResource("Resource_7dg2t"), SubResource("Resource_2hbym"), SubResource("Resource_irtjs")]
+metadata/_custom_type_script = "uid://b3pejhbgol5ed"

@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=4 uid="uid://djias5tq7rcey"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://ccqjfj5t77lwp" path="res://Asset/Anime/Character/Crater/CraterDayGround/CraterDayGround.tres" id="2"]
+
+[node name="CraterDayGround" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-35, -10)
+useTween = false
+layerSlot = [null, null, null]
+layerSprite = [null, null, null]
+Animation/Clip = "Day"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/CraterHalf = true
+Animation/LayerVisible/CraterWhole = true
+Animation/MediaReplace/crater1.png = null
+Animation/MediaReplace/crater2.png = null
+Animation/MediaReplace/crater_fading1.png = null
+Animation/MediaReplace/crater_fading2.png = null
+Animation/MediaReplace/crater_water_day1.png = null
+Animation/MediaReplace/crater_water_day2.png = null
+Animation/MediaReplace/crater_water_night1.png = null
+Animation/MediaReplace/crater_water_night2.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

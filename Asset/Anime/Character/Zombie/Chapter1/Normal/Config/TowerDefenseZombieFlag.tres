@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="TowerDefenseZombieConfig" load_steps=5 format=4 uid="uid://cdhacb5psnkyh"]
+
+[ext_resource type="Resource" uid="uid://xko4dinbygb4" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Armor/ZombieNormalArmorData.tres" id="1"]
+[ext_resource type="PackedScene" uid="uid://bpf07yxaoaqj0" path="res://Asset/Anime/Character/Zombie/Ash/General/ZombieGeneralAsh.tscn" id="2"]
+[ext_resource type="Resource" uid="uid://dbsilmwt7hqn7" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/DamagePoint/ZombieNormalDamagePointData.tres" id="3"]
+[ext_resource type="Script" uid="uid://fq0affmtew5n" path="res://Resource/TowerDefense/Character/Config/TowerDefenseZombieConfig.gd" id="4"]
+
+[resource]
+script = ExtResource("4")
+physique = 2
+attack = 100.0
+smashAttack = 0.0
+impactAudio = ""
+weight = 1000
+wavePointCost = 100
+canSpawnPlantfood = true
+excludeLineGridType = []
+name = "ZombieFlag"
+hitpointsNearDeath = 70.0
+hitpoints = 200.0
+smashHurt = -1.0
+spikeHurt = -1.0
+sleepTime = "Never"
+height = 2
+damagePointData = ExtResource("3")
+armorData = ExtResource("1")
+customData = null
+ashScene = ExtResource("2")
+homeWorld = 1
+costRise = -1
+cost = 50
+packetCooldown = 5.0
+startingCooldown = 0.0
+plantCover = []
+plantCoverRecycle = []
+plantGridType = [-1]
+plantGridOverrideType = 0
+collisionFlags = 1
+maskFlags = 9
+unUseBuffFlags = 0
+physiqueTypeFlags = 0
+elementFlags = 0
+Flag/Collision = 1
+Flag/Mask = 9
+Flag/UnUseBuff = 0
+Flag/PhysiqueType = 0
+Flag/Elemet = 0

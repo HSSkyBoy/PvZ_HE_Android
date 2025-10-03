@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=4 uid="uid://4clk0hbsny26"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://67grtroh7ei" path="res://Asset/Anime/LevelEditor/Stage/LevelEditorStage.tres" id="2"]
+
+[node name="LevelEditorStage" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+scale = Vector2(0.63, 0.63)
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null]
+layerSprite = [null, null, null, null]
+Animation/Clip = ""
+Animation/LayerVisible/AnimeClips = true
+"Animation/LayerVisible/图层_3" = true
+"Animation/LayerVisible/图层_4" = true
+"Animation/LayerVisible/图层_5" = true
+Animation/MediaReplace/DIYStage_03.png = null
+Animation/MediaReplace/DIYStage_04.png = null
+Animation/MediaReplace/DIYStage_05.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

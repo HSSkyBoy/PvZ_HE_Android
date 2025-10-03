@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=4 uid="uid://bfbjvmfps4g75"]
+
+[ext_resource type="Script" uid="uid://jyelr28c3uxt" path="res://Asset/Anime/Character/Plant/Chapter3/JalaCherryBomb/JalaCherryBombSprite.gd" id="1"]
+[ext_resource type="Resource" uid="uid://cjkfn67wlxbdm" path="res://Asset/Anime/Character/Plant/Chapter3/JalaCherryBomb/JalaCherryBomb.tres" id="2"]
+
+[node name="JalaCherryBomb" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-39.6055, -39.9661)
+timeScale = 0.5
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/CherryBomb_leaf1 = true
+Animation/LayerVisible/CherryBomb_leaf1tip = true
+Animation/LayerVisible/CherryBomb_leaf2 = true
+Animation/LayerVisible/CherryBomb_leaf2tip = true
+Animation/LayerVisible/CherryBomb_leaf3 = true
+Animation/LayerVisible/CherryBomb_leftstem = true
+Animation/LayerVisible/CherryBomb_right1 = true
+Animation/LayerVisible/CherryBomb_right3 = true
+Animation/LayerVisible/CherryBomb_righteye11 = true
+Animation/LayerVisible/CherryBomb_righteye21 = true
+Animation/LayerVisible/CherryBomb_rightmouth1 = true
+Animation/LayerVisible/CherryBomb_rightstem = true
+Animation/LayerVisible/Jalapeno_body = true
+Animation/LayerVisible/Jalapeno_cheek = true
+Animation/LayerVisible/Jalapeno_eye1 = true
+Animation/LayerVisible/Jalapeno_eye2 = true
+Animation/LayerVisible/Jalapeno_eyebrow1 = true
+Animation/LayerVisible/Jalapeno_eyebrow2 = true
+Animation/LayerVisible/Jalapeno_mouth = true
+Animation/MediaReplace/CherryBomb_leaf1.png = null
+Animation/MediaReplace/CherryBomb_leaf1tip.png = null
+Animation/MediaReplace/CherryBomb_leaf2.png = null
+Animation/MediaReplace/CherryBomb_leaf2tip.png = null
+Animation/MediaReplace/CherryBomb_leaf3.png = null
+Animation/MediaReplace/CherryBomb_leftstem.png = null
+Animation/MediaReplace/CherryBomb_right1.png = null
+Animation/MediaReplace/CherryBomb_right3.png = null
+Animation/MediaReplace/CherryBomb_righteye11.png = null
+Animation/MediaReplace/CherryBomb_righteye21.png = null
+Animation/MediaReplace/CherryBomb_rightmouth1.png = null
+Animation/MediaReplace/CherryBomb_rightstem.png = null
+Animation/MediaReplace/Jalapeno_body.png = null
+Animation/MediaReplace/Jalapeno_cheek.png = null
+Animation/MediaReplace/Jalapeno_eye1.png = null
+Animation/MediaReplace/Jalapeno_eye2.png = null
+Animation/MediaReplace/Jalapeno_eyebrow1.png = null
+Animation/MediaReplace/Jalapeno_eyebrow2.png = null
+Animation/MediaReplace/Jalapeno_mouth.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

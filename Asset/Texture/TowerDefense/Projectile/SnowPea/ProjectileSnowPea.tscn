@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=4 uid="uid://5wxucmmmy8ne"]
+
+[ext_resource type="Texture2D" uid="uid://37q2jfnru8vq" path="res://Asset/Texture/TowerDefense/Projectile/SnowPea/ProjectileSnowPea.png" id="1"]
+[ext_resource type="PackedScene" uid="uid://bepjav38dfli7" path="res://Prefab/Particles/Special/SnowFlakes/SnowFlakes.tscn" id="2"]
+
+[node name="ProjectileSnowPea" type="Sprite2D"]
+texture = ExtResource("1")
+
+[node name="SnowFlakes" parent="." instance=ExtResource("2")]
+position = Vector2(-7, -3)

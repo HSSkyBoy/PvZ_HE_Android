@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="TutorialConfig" load_steps=7 format=4 uid="uid://qaa34anir8th"]
+
+[ext_resource type="JSON" path="res://Asset/Config/Tutorial/Level1_7/Level1_7Tutorial.json" id="1"]
+[ext_resource type="Script" uid="uid://dhr6gtuscagn1" path="res://Core/TutorialManager/Resource/TutorialConfig.gd" id="2"]
+[ext_resource type="Script" uid="uid://bi5lpkxwgy2hn" path="res://Core/BroadCastManager/Resource/BroadCastConfig.gd" id="3"]
+[ext_resource type="Script" uid="uid://b1kf4elevtwaq" path="res://Core/TutorialManager/Resource/TutorialStep/TutorialStepConfig.gd" id="4"]
+
+[sub_resource type="Resource" id="Resource_2hgjb"]
+script = ExtResource("3")
+broadCastString = "LEVEL1_7_BROADCAST_1"
+broadCastTime = 5.0
+
+[sub_resource type="Resource" id="Resource_fo4g2"]
+script = ExtResource("4")
+broadCastUse = true
+broadCastConfig = SubResource("Resource_2hgjb")
+conditionList = []
+
+[resource]
+script = ExtResource("2")
+data = ExtResource("1")
+saveKey = "Level1_7Tutorial"
+step = [SubResource("Resource_fo4g2")]
+metadata/_custom_type_script = "uid://dhr6gtuscagn1"

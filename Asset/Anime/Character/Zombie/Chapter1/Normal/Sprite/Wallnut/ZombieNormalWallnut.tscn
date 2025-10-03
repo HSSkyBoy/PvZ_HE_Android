@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=4 uid="uid://bobrmuicfvc3a"]
+
+[ext_resource type="PackedScene" uid="uid://vp5mpqwb0n8b" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Sprite/Normal/ZombieNormal.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bk81so620ihac" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Sprite/Wallnut/ZombieNormalWallnutSprite.gd" id="2"]
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="3"]
+[ext_resource type="Resource" uid="uid://bbq3v60boolbr" path="res://Asset/Anime/Character/Plant/Chapter0/Wallnut/Wallnut.tres" id="4"]
+
+[node name="ZombieNormalWallnut" node_paths=PackedStringArray("layerSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ScreendoorSlot"), null, null, null, null, null, NodePath("ArmSlot"), null, NodePath("ConeSlot"), NodePath("BucketSlot"), null, null]
+Animation/LayerVisible/anim_hair = false
+Animation/LayerVisible/anim_head1 = false
+Animation/LayerVisible/anim_head2 = false
+
+[node name="Head" type="Node2D" parent="." index="0" node_paths=PackedStringArray("layerSlot", "layerSprite", "parentSprite")]
+unique_name_in_owner = true
+position = Vector2(-1.42167, -48.7967)
+rotation = -0.0130103
+scale = Vector2(-0.75, 0.75)
+script = ExtResource("3")
+flashAnimeData = ExtResource("4")
+offset = Vector2(-45, -55)
+offsetRotate = -0.25
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null]
+layerSprite = [null, null, null]
+parentSprite = NodePath("..")
+Animation/Clip = "Roll"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/anim_face = true
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/Wallnut_body.png = null
+Layer = 14
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="HeadSlot" parent="." index="1"]
+position = Vector2(0.00889015, -48.6907)
+rotation = 0.223722
+
+[node name="ArmSlot" parent="." index="2"]
+position = Vector2(11.3894, 0.638947)
+rotation = -0.127757
+scale = Vector2(0.797143, 0.797143)
+
+[node name="ConeSlot" parent="." index="3"]
+position = Vector2(13.5959, -71.7865)
+rotation = 0.228894
+scale = Vector2(0.798997, 0.798997)
+
+[node name="BucketSlot" parent="." index="4"]
+position = Vector2(5.39791, -63.1123)
+rotation = 0.247323
+scale = Vector2(0.799311, 0.799311)
+
+[node name="ScreendoorSlot" parent="." index="5"]
+position = Vector2(-14.7762, -3.30141)
+rotation = 0.042287
+scale = Vector2(0.799494, 0.799494)
+
+[node name="GroundSlot" parent="." index="6"]
+position = Vector2(-39.7639, -40)

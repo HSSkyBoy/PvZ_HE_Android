@@ -1,0 +1,126 @@
+[gd_scene load_steps=16 format=4 uid="uid://dstextersxlyr"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://c2rvq0mgaljww" path="res://Asset/Anime/Character/Zombie/Chapter1/Polevaulter/Scene/TowerDefenseZombiePolevaulter.gd" id="2"]
+[ext_resource type="Resource" uid="uid://dawtxqv6me74a" path="res://Asset/Anime/Character/Zombie/Chapter1/Polevaulter/Config/TowerDefenseZombiePolevaulter.tres" id="3"]
+[ext_resource type="Resource" uid="uid://bjbjruearyoqb" path="res://Asset/Anime/Character/Zombie/Chapter1/Polevaulter/DamagePoint/Config/ZombiePolevaulterDamagePointArm.tres" id="4"]
+[ext_resource type="Resource" uid="uid://2y1ybcqob0e" path="res://Asset/Anime/Character/Zombie/Chapter1/Polevaulter/DamagePoint/Config/ZombiePolevaulterDamagePointHead.tres" id="5"]
+[ext_resource type="Resource" uid="uid://bldijc342sf01" path="res://Asset/Anime/Character/Zombie/Chapter1/Polevaulter/Armor/Config/ZombiePolevaulterArmorCone.tres" id="6"]
+[ext_resource type="Resource" uid="uid://brwtai4qhefeg" path="res://Asset/Anime/Character/Zombie/Chapter1/Polevaulter/Armor/Config/ZombiePolevaulterArmorBucket.tres" id="7"]
+[ext_resource type="Resource" uid="uid://d3oopdudb7qik" path="res://Asset/Anime/Character/Zombie/Chapter1/Polevaulter/Armor/Config/ZombiePolevaulterArmorHelmet.tres" id="8"]
+[ext_resource type="Resource" uid="uid://cfkg0xan7bx6p" path="res://Asset/Anime/Character/Zombie/Chapter1/Polevaulter/Armor/Config/ZombiePolevaulterArmorBlackHelmet.tres" id="9"]
+[ext_resource type="Resource" uid="uid://cof14t5esjj1u" path="res://Asset/Anime/Character/Zombie/Chapter1/Polevaulter/Armor/Config/ZombiePolevaulterArmorSpecialHelmet.tres" id="10"]
+[ext_resource type="PackedScene" uid="uid://0b2gtxc1y85q" path="res://Asset/Anime/Character/Zombie/Chapter1/Polevaulter/ZombiePolevaulter.tscn" id="11"]
+[ext_resource type="PackedScene" uid="uid://dir0f8lu1l3b3" path="res://Script/Component/TowerDefense/Character/AttackComponent/AttackComponent.tscn" id="12"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="13"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="14"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_431aq"]
+size = Vector2(100, 76)
+
+[node name="TowerDefenseZombiePolevaulter" node_paths=PackedStringArray("sprite", "headSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+inSwimAnimeClip = ""
+swimAnimeClip = "SwimWalk"
+outSwimAnimeClip = ""
+attackWaterAnimeClip = ""
+dieWaterAnimeClip = "SwimDeath"
+waterHeightPersontage = 0.625
+waterHeight = 40.0
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombiePolevaulter")
+headSlot = NodePath("SpriteGroup/TransformPoint/ZombiePolevaulter/HeadSlot")
+damagePart = {
+"Arm": ExtResource("4"),
+"BlackHelmet": ExtResource("9"),
+"Bucket": ExtResource("7"),
+"Cone": ExtResource("6"),
+"Head": ExtResource("5"),
+"Helmet": ExtResource("8"),
+"SpecialHelmet": ExtResource("10")
+}
+PreviewDamagePointPersontage = 1.0
+Armor = []
+DamagePartSlot/Arm = NodePath("SpriteGroup/TransformPoint/ZombiePolevaulter/ArmSlot")
+DamagePartSlot/Head = NodePath("SpriteGroup/TransformPoint/ZombiePolevaulter/HeadSlot")
+DamagePartSlot/Cone = NodePath("SpriteGroup/TransformPoint/ZombiePolevaulter/HeadSlot")
+DamagePartSlot/Bucket = NodePath("SpriteGroup/TransformPoint/ZombiePolevaulter/HeadSlot")
+DamagePartSlot/Helmet = NodePath("SpriteGroup/TransformPoint/ZombiePolevaulter/HeadSlot")
+DamagePartSlot/BlackHelmet = NodePath("SpriteGroup/TransformPoint/ZombiePolevaulter/HeadSlot")
+DamagePartSlot/SpecialHelmet = NodePath("SpriteGroup/TransformPoint/ZombiePolevaulter/HeadSlot")
+
+[node name="SpriteMask" parent="SpriteGroup" index="0"]
+offset_top = -196.0
+offset_bottom = 111.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(23, 44)
+
+[node name="ZombiePolevaulter" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("11")]
+position = Vector2(-23, -44)
+trueFrameRate = 30.0
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, null, NodePath("ArmSlot"), null, null, null, null, null, null]
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombiePolevaulter" index="0"]
+position = Vector2(-7.702, -49.4884)
+rotation = -0.0434902
+scale = Vector2(0.799832, 0.799832)
+
+[node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombiePolevaulter" index="1"]
+position = Vector2(10.7367, -0.641001)
+rotation = -0.183259
+scale = Vector2(0.799989, 0.799989)
+
+[node name="GroundSlot" parent="SpriteGroup/TransformPoint/ZombiePolevaulter" index="2"]
+position = Vector2(-78, -18)
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(12.6, 40)
+
+[node name="IcetrapSprite" parent="." index="4"]
+position = Vector2(20.6, 34)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(4, -2)
+
+[node name="AttackComponent2" parent="." index="6" node_paths=PackedStringArray("checkArea") instance=ExtResource("12")]
+unique_name_in_owner = true
+checkArea = NodePath("CheckJumpArea")
+checkTall = true
+
+[node name="CheckJumpArea" type="Area2D" parent="AttackComponent2" index="0"]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent2/CheckJumpArea" index="0"]
+position = Vector2(-26, -1)
+shape = SubResource("RectangleShape2D_431aq")
+
+[node name="GroundMoveComponent" parent="." index="9" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombiePolevaulter/GroundSlot")
+
+[node name="Run" type="Node" parent="StateChart/CompoundState" index="4"]
+script = ExtResource("13")
+
+[node name="Jump" type="Node" parent="StateChart/CompoundState" index="5"]
+script = ExtResource("13")
+
+[node name="ToRun" type="Node" parent="StateChart/CompoundState" index="10"]
+script = ExtResource("14")
+to = NodePath("../Run")
+event = &"ToRun"
+delay_in_seconds = "0.0"
+
+[node name="ToJump" type="Node" parent="StateChart/CompoundState" index="11"]
+script = ExtResource("14")
+to = NodePath("../Jump")
+event = &"ToJump"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="StateChart/CompoundState/Run" to="." method="RunEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Run" to="." method="RunExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Run" to="." method="RunProcessing"]
+[connection signal="state_entered" from="StateChart/CompoundState/Jump" to="." method="JumpEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Jump" to="." method="JumpExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Jump" to="." method="JumpProcessing"]
+
+[editable path="SpriteGroup/TransformPoint/ZombiePolevaulter"]

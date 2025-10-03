@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="TowerDefensePlantConfig" load_steps=3 format=4 uid="uid://n0yyarg0b5hr"]
+
+[ext_resource type="Resource" uid="uid://bjtv7st2qar23" path="res://Asset/Anime/Character/Plant/Chapter1/Firenut/DamagePoint/FirenutDamagePointData.tres" id="1"]
+[ext_resource type="Script" uid="uid://bqd2rkadn8h4e" path="res://Resource/TowerDefense/Character/Config/TowerDefensePlantConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+canUsePlantfood = true
+name = "PlantPumpkinFire"
+hitpointsNearDeath = 0.0
+hitpoints = 4000.0
+smashHurt = -1.0
+spikeHurt = -1.0
+sleepTime = "Never"
+height = 2
+damagePointData = ExtResource("1")
+armorData = null
+customData = null
+ashScene = null
+homeWorld = 2
+costRise = -1
+cost = 225
+packetCooldown = 30.0
+startingCooldown = 20.0
+plantCover = []
+plantCoverRecycle = []
+plantGridType = [7]
+plantGridOverrideType = 0
+collisionFlags = 1
+maskFlags = 9
+unUseBuffFlags = 3
+physiqueTypeFlags = 1
+elementFlags = 2
+Flag/Collision = 1
+Flag/Mask = 9
+Flag/UnUseBuff = 3
+Flag/PhysiqueType = 1
+Flag/Elemet = 2

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=4 uid="uid://l0bs6172j65u"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://bgeu4fvt2x263" path="res://Asset/Anime/Character/GraveStone/Duckytube/Duckytube.tres" id="2"]
+
+[node name="Duckytube" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-30, 15)
+timeScale = 0.5
+useTween = false
+layerSlot = [null, null, null, null]
+layerSprite = [null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/Zombie_whitewater = false
+"Animation/LayerVisible/Zombie_whitewater_复制" = false
+"Animation/LayerVisible/图层_2" = true
+Animation/MediaReplace/Zombie_whitewater1.png = null
+Animation/MediaReplace/Zombie_whitewater2.png = null
+Animation/MediaReplace/Zombie_whitewater3.png = null
+Animation/MediaReplace/duckytube_1.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

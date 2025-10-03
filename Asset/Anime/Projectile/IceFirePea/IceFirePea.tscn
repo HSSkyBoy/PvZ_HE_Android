@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=4 uid="uid://btv02lfwnomhx"]
+
+[ext_resource type="Script" uid="uid://yk1wavm7snt7" path="res://Asset/Anime/Projectile/FirePea/FirePeaSprite.gd" id="1"]
+[ext_resource type="Resource" uid="uid://cucvsqvvxnr5f" path="res://Asset/Anime/Projectile/IceFirePea/IceFirePea.tres" id="2"]
+
+[node name="IceFirePea" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+timeScale = 2.0
+useTween = false
+layerSlot = [null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/FirePea = true
+Animation/LayerVisible/FirePea_flames = true
+Animation/LayerVisible/FirePea_spark1 = true
+Animation/LayerVisible/FirePea_spark2 = true
+Animation/LayerVisible/FirePea_spark3 = true
+Animation/MediaReplace/FirePea_flame1blue.png = null
+Animation/MediaReplace/FirePea_flame2blue.png = null
+Animation/MediaReplace/FirePea_flame3blue.png = null
+Animation/MediaReplace/FirePea_sparkblue.png = null
+Animation/MediaReplace/FirePeablue.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

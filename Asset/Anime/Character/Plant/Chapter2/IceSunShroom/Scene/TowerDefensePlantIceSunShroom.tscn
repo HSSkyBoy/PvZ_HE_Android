@@ -1,0 +1,53 @@
+[gd_scene load_steps=11 format=4 uid="uid://bttp0q8vglml0"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://b78576qj30y76" path="res://Asset/Anime/Character/Plant/Chapter2/IceSunShroom/Scene/TowerDefensePlantIceSunShroom.gd" id="2"]
+[ext_resource type="Script" uid="uid://cmqmtitj4tcd8" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventHurt.gd" id="3"]
+[ext_resource type="Script" uid="uid://d37vnt7i0gkc4" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventSunCreate.gd" id="4"]
+[ext_resource type="Script" uid="uid://bxlwoxox5hth3" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventForzen.gd" id="5"]
+[ext_resource type="Resource" uid="uid://cokjxfmopi6nm" path="res://Asset/Anime/Character/Plant/Chapter2/IceSunShroom/Config/TowerDefensePlantIceSunShroom.tres" id="6"]
+[ext_resource type="PackedScene" uid="uid://bv7l7yawooum8" path="res://Asset/Anime/Character/Plant/Chapter2/IceSunShroom/IceSunShroom.tscn" id="7"]
+
+[sub_resource type="Resource" id="Resource_us7kg"]
+script = ExtResource("3")
+num = 20.0
+playSplatAudio = true
+damageFlags = 3
+collisionFlags = 15
+Flag/Damage = 3
+Flag/Collision = 15
+metadata/_custom_type_script = "uid://cmqmtitj4tcd8"
+
+[sub_resource type="Resource" id="Resource_ixw52"]
+script = ExtResource("4")
+num = 15.0
+dieCreate = false
+metadata/_custom_type_script = "uid://d37vnt7i0gkc4"
+
+[sub_resource type="Resource" id="Resource_lotg1"]
+script = ExtResource("5")
+time = 3.0
+iceSpeedDownTime = 15.0
+fliterShield = false
+metadata/_custom_type_script = "uid://bxlwoxox5hth3"
+
+[node name="TowerDefensePlantIceSunShroom" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+eventList = [SubResource("Resource_us7kg"), SubResource("Resource_ixw52"), SubResource("Resource_lotg1")]
+sleepAnimeClip = "Sleep"
+config = ExtResource("6")
+sprite = NodePath("SpriteGroup/TransformPoint/IceSunShroom")
+gravity = 245.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="IceSunShroom" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("7")]
+position = Vector2(0, -30)
+trueFrameRate = 30.0
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 30)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)

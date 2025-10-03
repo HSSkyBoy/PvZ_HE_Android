@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CharacterCustomConfig" load_steps=5 format=4 uid="uid://3qj4v1g4vj7i"]
+
+[ext_resource type="Texture2D" uid="uid://bp7bhqdwddave" path="res://Asset/Anime/Character/Plant/Chapter1/Firenut/Custom/Firenut_skin2_1.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://di4ms0316ncxq" path="res://Asset/Anime/Character/Plant/Chapter1/Firenut/Custom/Firenut_skin2_2.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dl626uftopg2e" path="res://Asset/Anime/Character/Plant/Chapter1/Firenut/Custom/Firenut_skin2_3.png" id="3"]
+[ext_resource type="Script" uid="uid://dypv31guyoibc" path="res://Resource/General/Character/Costom/CharacterCustomConfig.gd" id="4"]
+
+[resource]
+script = ExtResource("4")
+openKey = "FirenutCustom0"
+customName = "Custom0"
+customHandbookName = "TOWERDEFENSE_PLANT_FIRENUT_CUSTOM_1_NAME"
+customHandbookAccess = "TOWERDEFENSE_PLANT_FIRENUT_CUSTOM_1_ACCESS"
+customHandbookStory = "TOWERDEFENSE_PLANT_FIRENUT_CUSTOM_1_STORY"
+animeFliterOpen = "skin2_1&skin1"
+animeFliterClose = "anim_face&Torchwood_fire1"
+damagePointChangeMediaName = "Firenut_skin2_1.png"
+damagePointChangeMediaTexture = [ExtResource("1"), ExtResource("2"), ExtResource("3")]
+metadata/_custom_type_script = "uid://dypv31guyoibc"

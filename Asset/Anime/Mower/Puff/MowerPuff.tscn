@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=4 uid="uid://cv2sh3upqkd27"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://qiyly1npwvh2" path="res://Asset/Anime/Mower/Puff/MowerPuff.tres" id="2"]
+
+[node name="MowerPuff" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+position = Vector2(-110, -100)
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null]
+layerSprite = [null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/Puff = true
+Animation/MediaReplace/puff_1.png = null
+Animation/MediaReplace/puff_3.png = null
+Animation/MediaReplace/puff_4.png = null
+Animation/MediaReplace/puff_5.png = null
+Animation/MediaReplace/puff_7.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

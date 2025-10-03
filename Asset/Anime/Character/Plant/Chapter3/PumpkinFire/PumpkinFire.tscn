@@ -1,0 +1,94 @@
+[gd_scene load_steps=4 format=4 uid="uid://byw6jsnuv2wf2"]
+
+[ext_resource type="Script" uid="uid://hxqcxb2urlko" path="res://Asset/Anime/Character/Plant/Chapter3/PumpkinFire/PumpkinFireSprite.gd" id="1"]
+[ext_resource type="Resource" uid="uid://ckw0yyj82hfxr" path="res://Asset/Anime/Character/Plant/Chapter3/PumpkinFire/PumpkinFire.tres" id="2"]
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="3"]
+
+[node name="PumpkinFire" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/Pumpkin_back = false
+Animation/LayerVisible/Pumpkin_front = true
+Animation/LayerVisible/fire1 = true
+Animation/LayerVisible/fire2 = true
+Animation/LayerVisible/fire3 = true
+Animation/LayerVisible/fire4 = true
+Animation/MediaReplace/000001.png = null
+Animation/MediaReplace/000002.png = null
+Animation/MediaReplace/000003.png = null
+Animation/MediaReplace/000004.png = null
+Animation/MediaReplace/000005.png = null
+Animation/MediaReplace/000006.png = null
+Animation/MediaReplace/000007.png = null
+Animation/MediaReplace/000008.png = null
+Animation/MediaReplace/155_1.png = null
+Animation/MediaReplace/155_10.png = null
+Animation/MediaReplace/155_11.png = null
+Animation/MediaReplace/155_12.png = null
+Animation/MediaReplace/155_13.png = null
+Animation/MediaReplace/155_14.png = null
+Animation/MediaReplace/155_15.png = null
+Animation/MediaReplace/155_2.png = null
+Animation/MediaReplace/155_3.png = null
+Animation/MediaReplace/155_4.png = null
+Animation/MediaReplace/155_5.png = null
+Animation/MediaReplace/155_6.png = null
+Animation/MediaReplace/155_7.png = null
+Animation/MediaReplace/155_8.png = null
+Animation/MediaReplace/155_9.png = null
+Animation/MediaReplace/PumpkinF_back.png = null
+Animation/MediaReplace/PumpkinF_front.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Back" type="Node2D" parent="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+unique_name_in_owner = true
+z_index = -1
+script = ExtResource("3")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+trueFrameRate = 60.0
+layerSlot = [null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/Pumpkin_back = true
+Animation/LayerVisible/Pumpkin_front = false
+Animation/LayerVisible/fire1 = false
+Animation/LayerVisible/fire2 = false
+Animation/LayerVisible/fire3 = false
+Animation/LayerVisible/fire4 = false
+Animation/MediaReplace/000001.png = null
+Animation/MediaReplace/000002.png = null
+Animation/MediaReplace/000003.png = null
+Animation/MediaReplace/000004.png = null
+Animation/MediaReplace/000005.png = null
+Animation/MediaReplace/000006.png = null
+Animation/MediaReplace/000007.png = null
+Animation/MediaReplace/000008.png = null
+Animation/MediaReplace/155_1.png = null
+Animation/MediaReplace/155_10.png = null
+Animation/MediaReplace/155_11.png = null
+Animation/MediaReplace/155_12.png = null
+Animation/MediaReplace/155_13.png = null
+Animation/MediaReplace/155_14.png = null
+Animation/MediaReplace/155_15.png = null
+Animation/MediaReplace/155_2.png = null
+Animation/MediaReplace/155_3.png = null
+Animation/MediaReplace/155_4.png = null
+Animation/MediaReplace/155_5.png = null
+Animation/MediaReplace/155_6.png = null
+Animation/MediaReplace/155_7.png = null
+Animation/MediaReplace/155_8.png = null
+Animation/MediaReplace/155_9.png = null
+Animation/MediaReplace/PumpkinF_back.png = null
+Animation/MediaReplace/PumpkinF_front.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

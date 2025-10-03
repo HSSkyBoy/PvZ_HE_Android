@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=4 uid="uid://dqxukweqytvsr"]
+
+[ext_resource type="Texture2D" uid="uid://0g1gjyjuyftq" path="res://Asset/Anime/Particles/Dirt/Dirtsmall.png" id="1"]
+[ext_resource type="Material" uid="uid://c3r7p67ps2xyy" path="res://Prefab/Particles/Dirt/RiseDirt/RiseDirt.tres" id="2"]
+[ext_resource type="Script" uid="uid://dywgdjamo0ovs" path="res://Extends/Particles/GPUParticles2DOnece.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://cd1qv8lsjnj8h" path="res://Asset/Anime/Particles/Dirt/Dirtbig.png" id="4"]
+[ext_resource type="Material" uid="uid://bcolxgursvhr1" path="res://Prefab/Particles/Dirt/RiseDirt/RiseDirtBig.tres" id="5"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ksd6p"]
+particles_animation = true
+particles_anim_h_frames = 8
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_yktew"]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[node name="RiseDirt" type="GPUParticles2D"]
+z_index = -1
+material = SubResource("CanvasItemMaterial_ksd6p")
+emitting = false
+amount = 100
+texture = ExtResource("1")
+lifetime = 1.5
+one_shot = true
+explosiveness = 0.1
+local_coords = true
+process_material = ExtResource("2")
+script = ExtResource("3")
+
+[node name="RiseDirtBig" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_yktew")
+emitting = false
+texture = ExtResource("4")
+lifetime = 1.5
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+draw_order = 0
+process_material = ExtResource("5")

@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="TowerDefensePlantConfig" load_steps=2 format=4 uid="uid://dda5m0uk2kreq"]
+
+[ext_resource type="Script" uid="uid://bqd2rkadn8h4e" path="res://Resource/TowerDefense/Character/Config/TowerDefensePlantConfig.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+canUsePlantfood = true
+name = "PlantPlanternSix"
+hitpointsNearDeath = 0.0
+hitpoints = 300.0
+smashHurt = -1.0
+spikeHurt = -1.0
+sleepTime = "Never"
+height = 2
+damagePointData = null
+armorData = null
+customData = null
+ashScene = null
+homeWorld = 1
+costRise = -1
+cost = 50
+packetCooldown = 30.0
+startingCooldown = 30.0
+plantCover = []
+plantCoverRecycle = []
+plantGridType = [2, 6, 5]
+plantGridOverrideType = 0
+collisionFlags = 11
+maskFlags = 9
+unUseBuffFlags = 0
+physiqueTypeFlags = 0
+elementFlags = 2
+Flag/Collision = 11
+Flag/Mask = 9
+Flag/UnUseBuff = 0
+Flag/PhysiqueType = 0
+Flag/Elemet = 2

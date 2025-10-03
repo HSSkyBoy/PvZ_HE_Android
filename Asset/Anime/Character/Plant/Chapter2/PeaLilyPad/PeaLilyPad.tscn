@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=4 uid="uid://cuewregk73bwm"]
+
+[ext_resource type="Script" uid="uid://b0x2eqv0bye53" path="res://Asset/Anime/Character/Plant/Chapter2/PeaLilyPad/PeaLilyPadSprite.gd" id="1"]
+[ext_resource type="Resource" uid="uid://cs2bbw4fyma01" path="res://Asset/Anime/Character/Plant/Chapter2/PeaLilyPad/PeaLilyPad.tres" id="2"]
+
+[node name="PeaLilyPad" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -19.9976)
+trueFrameRate = inf
+useTween = false
+blendTimeInit = 0.2
+layerSlot = [null, null, null, null]
+layerSprite = [null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/AnimeEvents = true
+Animation/LayerVisible/body = true
+Animation/LayerVisible/idle_mouth = true
+Animation/MediaReplace/LilyPad_body.png = null
+Animation/MediaReplace/PeaShooter_mouth.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

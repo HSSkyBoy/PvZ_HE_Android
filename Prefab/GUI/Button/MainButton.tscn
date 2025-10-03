@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=4 uid="uid://bml60wmq62jay"]
+
+[ext_resource type="Texture2D" uid="uid://b7h3dkbuiexf8" path="res://Asset/Texture/GUI/General/General/OptionButton.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://diu057evu2onj" path="res://Asset/Texture/GUI/General/General/OptionButtonDown.png" id="2"]
+[ext_resource type="Script" uid="uid://cwhr6spt4auqu" path="res://Prefab/GUI/Button/MainButton.gd" id="3"]
+
+[node name="MainButton" type="TextureButton"]
+light_mask = 0
+offset_left = -58.0
+offset_top = -23.0
+offset_right = 59.0
+offset_bottom = 23.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("1")
+texture_pressed = ExtResource("2")
+texture_hover = ExtResource("1")
+stretch_mode = 0
+script = ExtResource("3")
+
+[node name="TextLabel" type="Label" parent="."]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+offset_left = 10.0
+offset_right = 107.0
+offset_bottom = 46.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0.760784, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.215686, 0.219608, 0.290196, 1)
+theme_override_constants/shadow_offset_x = -2
+theme_override_constants/shadow_offset_y = -2
+theme_override_font_sizes/font_size = 20
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="." to="." method="ButtonPressed"]
+[connection signal="resized" from="." to="." method="Resized"]
+[connection signal="resized" from="TextLabel" to="." method="Resized"]

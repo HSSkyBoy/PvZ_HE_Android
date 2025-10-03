@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=4 uid="uid://c43mrf03jpt2g"]
+
+[ext_resource type="PackedScene" uid="uid://ch1hh04p5qvav" path="res://Prefab/GUI/LevelEditor/Inspector/Properties/Type/Base/PropertiesBase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://d2vu0gmai7mdl" path="res://Prefab/GUI/LevelEditor/Inspector/Properties/Type/Int/PropertiesInt.gd" id="2"]
+
+[node name="PropertiesInt" instance=ExtResource("1")]
+light_mask = 0
+script = ExtResource("2")
+
+[node name="SpinBox" type="SpinBox" parent="HBoxContainer" index="0"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = -99999900000.0
+max_value = 99999900000.0
+
+[connection signal="value_changed" from="HBoxContainer/SpinBox" to="." method="ValueChange"]

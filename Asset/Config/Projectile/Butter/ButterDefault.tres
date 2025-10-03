@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="TowerDefenseProjectileConfig" load_steps=8 format=4 uid="uid://l4thduavkm84"]
+
+[ext_resource type="Script" uid="uid://bwpkekpvo7sto" path="res://Resource/TowerDefense/Character/Buff/TowerDefenseCharacterBuffButter.gd" id="1"]
+[ext_resource type="Script" uid="uid://dtvfjfgy00epu" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventAddBuff.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://bpu1ibbqp3m2" path="res://Asset/Texture/TowerDefense/Projectile/Butter/ProjectileButter.tscn" id="3"]
+[ext_resource type="Script" uid="uid://b7ddnv74g0463" path="res://Resource/TowerDefense/Projectile/TowerDefenseProjectileConfig.gd" id="4"]
+[ext_resource type="PackedScene" uid="uid://5se4p3vq67y8" path="res://Prefab/Particles/Splats/ButterSplats/ButterSplats.tscn" id="5"]
+
+[sub_resource type="Resource" id="Resource_c77gh"]
+script = ExtResource("1")
+time = 8.0
+refresh = true
+metadata/_custom_type_script = "uid://bwpkekpvo7sto"
+
+[sub_resource type="Resource" id="Resource_jldlt"]
+script = ExtResource("2")
+buffList = [SubResource("Resource_c77gh")]
+metadata/_custom_type_script = "uid://dtvfjfgy00epu"
+
+[resource]
+script = ExtResource("4")
+name = "ButterDefault"
+size = Vector2(28, 28)
+baseDamage = 40.0
+projectileScene = ExtResource("3")
+projectileObject = 308
+splatSceneType = "Particles"
+splatAudio = "SplatNormal"
+splatScene = ExtResource("5")
+splatObject = 106
+hitEffect = null
+hitTargetEventList = []
+hitCharacterEventList = [SubResource("Resource_jldlt")]
+hitGroundEventList = []
+rotateScale = 0.0
+hitBody = false
+fireLength = -1.0
+useRange = false
+rangeSize = Vector2(0.5, 0.5)
+hitPesontage = 0.25
+damageFlags = 2
+fireMethodFlags = 1
+collisionFlags = 33
+catapultHeight = 400.0
+penetrateNum = 3
+penetrateOverBack = true
+backOutGround = true
+backDuration = 1.0
+Flag/Damage = 2
+Flag/FireMethod = 1
+Flag/Collision = 33

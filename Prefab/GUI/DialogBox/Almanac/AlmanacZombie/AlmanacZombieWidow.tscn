@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=4 uid="uid://r4o1fp1gc7bg"]
+
+[ext_resource type="Script" uid="uid://cm4x12cadrvwe" path="res://Prefab/GUI/DialogBox/Almanac/AlmanacZombie/AlmanacZombieWidow.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://k5hl00cpf3b" path="res://Asset/Texture/GUI/Almanac/AlmanacZombieWindow.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://lqcsuorvdt5" path="res://Asset/Texture/GUI/Almanac/AlmanacZombieWindow2.png" id="3"]
+
+[node name="AlmanacZombieWidow" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1")
+
+[node name="TextureBack" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -38.0
+offset_top = -38.0
+offset_right = 38.0
+offset_bottom = 38.0
+texture = ExtResource("2")
+
+[node name="TextureFront" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -38.0
+offset_top = -38.0
+offset_right = 38.0
+offset_bottom = 38.0
+texture = ExtResource("3")
+
+[node name="Mask" type="ColorRect" parent="."]
+clip_children = 1
+light_mask = 0
+layout_mode = 0
+offset_left = -29.0
+offset_top = -27.0
+offset_right = 29.0
+offset_bottom = 26.0
+
+[node name="SpriteNode" type="Control" parent="Mask"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 3
+anchors_preset = 0
+offset_left = 9.0
+offset_right = 9.0
+
+[node name="Button" type="Button" parent="."]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+light_mask = 0
+layout_mode = 0
+offset_left = -37.0
+offset_top = -37.0
+offset_right = 36.0
+offset_bottom = 36.0
+mouse_default_cursor_shape = 2
+
+[connection signal="mouse_entered" from="Button" to="." method="MouseEntered"]
+[connection signal="mouse_exited" from="Button" to="." method="MouseExited"]
+[connection signal="pressed" from="Button" to="." method="Pressed"]

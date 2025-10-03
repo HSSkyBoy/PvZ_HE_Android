@@ -1,0 +1,202 @@
+[gd_scene load_steps=10 format=4 uid="uid://kh5l2bpv5cij"]
+
+[ext_resource type="Script" uid="uid://dj3ijvm0jcqnb" path="res://Prefab/GUI/DialogBox/DailyChallenge/LevelChoose/DailyChallengeLevelChoose.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://16rceytsrspk" path="res://Asset/Texture/GUI/DailyChallenge/DailyChallengeBGMini.png" id="2"]
+[ext_resource type="FontFile" uid="uid://bibg4dobk6vpn" path="res://Asset/Font/fzjz.ttf" id="3"]
+[ext_resource type="PackedScene" uid="uid://bml60wmq62jay" path="res://Prefab/GUI/Button/MainButton.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://becxfsjmy31td" path="res://Asset/Texture/GUI/DailyChallenge/DailyChallengePlayButton.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://c3mh3bdn1qs1k" path="res://Asset/Texture/GUI/DailyChallenge/DailyChallengePlayButtonPress.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://d0smlukjcx1r6" path="res://Asset/Texture/GUI/DailyChallenge/DailyChallengeCloseButton.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://5lvxpd7jaoc4" path="res://Asset/Texture/GUI/DailyChallenge/DailyChallengeCloseButtonPress.png" id="8"]
+[ext_resource type="PackedScene" uid="uid://dq0anpngru0qq" path="res://Prefab/GUI/DialogBox/DailyChallenge/LevelChoose/Button/DailyChallengeLevelChooseButton.tscn" id="9"]
+
+[node name="DailyChallengeLevelChoose" type="Control" node_paths=PackedStringArray("dragControl")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+dragControl = NodePath("Layer/BackgroundTexture")
+metadata/_custom_type_script = "uid://b4l86rhpq35q0"
+
+[node name="LevelHTTPRequest" type="HTTPRequest" parent="."]
+unique_name_in_owner = true
+use_threads = true
+
+[node name="Layer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="ColorRect" type="ColorRect" parent="Layer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="BackgroundTexture" type="TextureRect" parent="Layer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -411.5
+offset_top = -216.5
+offset_right = 411.5
+offset_bottom = 216.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.675, 0.675)
+pivot_offset = Vector2(411.5, 216.5)
+texture = ExtResource("2")
+
+[node name="TextLabel" type="Label" parent="Layer/BackgroundTexture"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 0
+offset_left = 236.685
+offset_top = 0.203699
+offset_right = 602.685
+offset_bottom = 85.2037
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 48
+text = "选择关卡"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayButton" parent="Layer/BackgroundTexture" instance=ExtResource("4")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 236.685
+offset_top = 330.574
+offset_right = 622.685
+offset_bottom = 415.574
+scale = Vector2(0.9, 0.9)
+texture_normal = ExtResource("5")
+texture_pressed = ExtResource("5")
+texture_hover = ExtResource("6")
+text = "开始游戏"
+
+[node name="TextLabel" parent="Layer/BackgroundTexture/PlayButton" index="0"]
+offset_left = 16.4609
+offset_right = 382.461
+offset_bottom = 85.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 48
+text = "开始游戏"
+
+[node name="CloseButton" type="TextureButton" parent="Layer/BackgroundTexture"]
+layout_mode = 0
+offset_left = 753.722
+offset_top = 19.4629
+offset_right = 796.722
+offset_bottom = 59.4629
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("7")
+texture_pressed = ExtResource("8")
+texture_hover = ExtResource("8")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Layer/BackgroundTexture"]
+layout_mode = 0
+offset_left = -55.0
+offset_top = 246.0
+offset_right = 883.0
+offset_bottom = 246.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = 120
+alignment = 1
+
+[node name="DailyChallengeLevelChooseButton" parent="Layer/BackgroundTexture/HBoxContainer" instance=ExtResource("9")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="ZombieFlagpole" parent="Layer/BackgroundTexture/HBoxContainer/DailyChallengeLevelChooseButton" index="0" node_paths=PackedStringArray("layerSprite")]
+trueFrameRate = 30.0
+layerSprite = [null, null, null]
+
+[node name="FinishTexture" parent="Layer/BackgroundTexture/HBoxContainer/DailyChallengeLevelChooseButton" index="2"]
+offset_left = 0.0
+offset_right = 31.0
+
+[node name="DailyChallengeLevelChooseButton2" parent="Layer/BackgroundTexture/HBoxContainer" instance=ExtResource("9")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="ZombieFlagpole" parent="Layer/BackgroundTexture/HBoxContainer/DailyChallengeLevelChooseButton2" index="0" node_paths=PackedStringArray("layerSprite")]
+trueFrameRate = 30.0
+layerSprite = [null, null, null]
+
+[node name="Button" parent="Layer/BackgroundTexture/HBoxContainer/DailyChallengeLevelChooseButton2" index="1"]
+text = "2"
+
+[node name="FinishTexture" parent="Layer/BackgroundTexture/HBoxContainer/DailyChallengeLevelChooseButton2" index="2"]
+offset_left = 0.0
+offset_right = 31.0
+
+[node name="DailyChallengeLevelChooseButton3" parent="Layer/BackgroundTexture/HBoxContainer" instance=ExtResource("9")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="ZombieFlagpole" parent="Layer/BackgroundTexture/HBoxContainer/DailyChallengeLevelChooseButton3" index="0" node_paths=PackedStringArray("layerSprite")]
+trueFrameRate = 30.0
+layerSprite = [null, null, null]
+
+[node name="Button" parent="Layer/BackgroundTexture/HBoxContainer/DailyChallengeLevelChooseButton3" index="1"]
+text = "3"
+
+[node name="FinishTexture" parent="Layer/BackgroundTexture/HBoxContainer/DailyChallengeLevelChooseButton3" index="2"]
+offset_left = 0.0
+offset_right = 31.0
+
+[node name="DailyChallengeLevelChooseButton4" parent="Layer/BackgroundTexture/HBoxContainer" instance=ExtResource("9")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="ZombieFlagpole" parent="Layer/BackgroundTexture/HBoxContainer/DailyChallengeLevelChooseButton4" index="0" node_paths=PackedStringArray("layerSprite")]
+trueFrameRate = 30.0
+layerSprite = [null, null, null]
+
+[node name="Button" parent="Layer/BackgroundTexture/HBoxContainer/DailyChallengeLevelChooseButton4" index="1"]
+text = "4"
+
+[node name="FinishTexture" parent="Layer/BackgroundTexture/HBoxContainer/DailyChallengeLevelChooseButton4" index="2"]
+offset_left = 0.0
+offset_right = 31.0
+
+[node name="DailyChallengeLevelChooseButton5" parent="Layer/BackgroundTexture/HBoxContainer" instance=ExtResource("9")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="ZombieFlagpole" parent="Layer/BackgroundTexture/HBoxContainer/DailyChallengeLevelChooseButton5" index="0" node_paths=PackedStringArray("layerSprite")]
+trueFrameRate = 30.0
+layerSprite = [null, null, null]
+
+[node name="Button" parent="Layer/BackgroundTexture/HBoxContainer/DailyChallengeLevelChooseButton5" index="1"]
+text = "5"
+
+[node name="FinishTexture" parent="Layer/BackgroundTexture/HBoxContainer/DailyChallengeLevelChooseButton5" index="2"]
+offset_left = 0.0
+offset_right = 31.0
+
+[connection signal="request_completed" from="LevelHTTPRequest" to="." method="LevelHttpRequestCompleted"]
+[connection signal="pressed" from="Layer/BackgroundTexture/PlayButton" to="." method="PlayButtonPressed"]
+[connection signal="pressed" from="Layer/BackgroundTexture/CloseButton" to="." method="CloseButtonPressed"]
+
+[editable path="Layer/BackgroundTexture/PlayButton"]
+[editable path="Layer/BackgroundTexture/HBoxContainer/DailyChallengeLevelChooseButton"]
+[editable path="Layer/BackgroundTexture/HBoxContainer/DailyChallengeLevelChooseButton2"]
+[editable path="Layer/BackgroundTexture/HBoxContainer/DailyChallengeLevelChooseButton3"]
+[editable path="Layer/BackgroundTexture/HBoxContainer/DailyChallengeLevelChooseButton4"]
+[editable path="Layer/BackgroundTexture/HBoxContainer/DailyChallengeLevelChooseButton5"]

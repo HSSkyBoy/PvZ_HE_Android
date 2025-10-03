@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CharacterDamagePointConfig" load_steps=2 format=4 uid="uid://csk4e2hffpd8y"]
+
+[ext_resource type="Script" uid="uid://8vg1ajd1i4ps" path="res://Resource/General/Character/DamagePoint/CharacterDamagePointConfig.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+damagePointName = "Head"
+damagePersontage = 0.0
+animeEffect = null
+animeEffectOffset = Vector2(0, 0)
+isDrop = true
+animeFliterOpen = ""
+animeFliterClose = "anim_head1&anim_head_lips&anim_head_jaw&anim_head_snorkle"
+replaceMediaName = &""
+replaceMediaTexture = null
+damageAudio = "LimbsPop"
+metadata/_custom_type_script = "uid://8vg1ajd1i4ps"

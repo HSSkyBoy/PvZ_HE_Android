@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CharacterArmorData" load_steps=7 format=4 uid="uid://c3pvwh70u588c"]
+
+[ext_resource type="Resource" uid="uid://c2cquko1d7j4x" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackson/Armor/Config/ZombieJacksonArmorBlackHelmet.tres" id="1"]
+[ext_resource type="Resource" uid="uid://bgqopft4aybio" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackson/Armor/Config/ZombieJacksonArmorBucket.tres" id="2"]
+[ext_resource type="Resource" uid="uid://k1eqc8vy08gv" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackson/Armor/Config/ZombieJacksonArmorCone.tres" id="3"]
+[ext_resource type="Resource" uid="uid://bgw4bwtjg74qo" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackson/Armor/Config/ZombieJacksonArmorHelmet.tres" id="4"]
+[ext_resource type="Resource" uid="uid://clrhfbtmms750" path="res://Asset/Anime/Character/Zombie/Chapter2/Jackson/Armor/Config/ZombieJacksonArmorSpecialHelmet.tres" id="5"]
+[ext_resource type="Script" uid="uid://ci4c6gpjugqpl" path="res://Resource/General/Character/Armor/CharacterArmorData.gd" id="6"]
+
+[resource]
+script = ExtResource("6")
+armorList = [ExtResource("1"), ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5")]
+armorDictionary = {
+"BlackHelmet": ExtResource("1"),
+"Bucket": ExtResource("2"),
+"Cone": ExtResource("3"),
+"Helmet": ExtResource("4"),
+"SpecialHelmet": ExtResource("5")
+}
+fliterAllDictionary = {
+"BlackHelmet": [],
+"Bucket": ["anim_bucket"],
+"Cone": ["anim_cone"],
+"Helmet": [],
+"SpecialHelmet": []
+}
+fliterOpenDictionary = {
+"BlackHelmet": [],
+"Bucket": [],
+"Cone": [],
+"Helmet": [],
+"SpecialHelmet": []
+}
+fliterCloseDictionary = {
+"BlackHelmet": [],
+"Bucket": [],
+"Cone": [],
+"Helmet": [],
+"SpecialHelmet": []
+}

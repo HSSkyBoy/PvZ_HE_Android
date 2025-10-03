@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=4 uid="uid://b44plfx0802bw"]
+
+[ext_resource type="Script" uid="uid://c3kh8ryw554w0" path="res://Core/ObjectManager/ObjectManager.gd" id="1"]
+
+[node name="ObjectManager" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1")

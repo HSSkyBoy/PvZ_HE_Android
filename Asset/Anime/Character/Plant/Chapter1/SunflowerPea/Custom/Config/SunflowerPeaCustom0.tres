@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CharacterCustomConfig" load_steps=2 format=4 uid="uid://c7wvcpapo8stl"]
+
+[ext_resource type="Script" uid="uid://dypv31guyoibc" path="res://Resource/General/Character/Costom/CharacterCustomConfig.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+openKey = "SunflowerPeaCustom0"
+customName = "Custom0"
+customHandbookName = "TOWERDEFENSE_PLANT_SUNFLOWERPEA_CUSTOM_1_NAME"
+customHandbookAccess = "TOWERDEFENSE_PLANT_SUNFLOWERPEA_CUSTOM_1_ACCESS"
+customHandbookStory = "TOWERDEFENSE_PLANT_SUNFLOWERPEA_CUSTOM_1_STORY"
+animeFliterOpen = "skin1_2&skin1_4_1&skin1_6&skin1_4_2&skin1_3&skin1_1&skin1_5&skin1_7_1&skin1_7_2&skin1_8_1&skin1_8_2&skin1_6"
+animeFliterClose = "anim_face_sunflower&anim_face&TwinSunflower_leaf1&TwinSunflower_leaf11&TwinSunflower_leaf12"
+damagePointChangeMediaName = ""
+damagePointChangeMediaTexture = []
+metadata/_custom_type_script = "uid://dypv31guyoibc"

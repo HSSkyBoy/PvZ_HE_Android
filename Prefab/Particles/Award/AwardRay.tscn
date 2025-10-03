@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=4 uid="uid://b23erke7vb4di"]
+
+[ext_resource type="Script" uid="uid://b3wmdwiyv5nx2" path="res://Prefab/Particles/Award/AwardRay.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dab78e5x0kl36" path="res://Asset/Anime/Particles/Award/AwardRays.png" id="2"]
+[ext_resource type="Material" uid="uid://d2g3x3tfaup0r" path="res://Prefab/Particles/Award/AwardRayFour.tres" id="3"]
+[ext_resource type="Texture2D" uid="uid://cf8xqwsfk6p4b" path="res://Asset/Anime/Particles/Award/AwardRays1.png" id="4"]
+[ext_resource type="Material" uid="uid://cxgrvw3di4uxc" path="res://Prefab/Particles/Award/AwardRay.tres" id="5"]
+[ext_resource type="Texture2D" uid="uid://cat55n3j0ivlc" path="res://Asset/Anime/Particles/Award/AwardRays2.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://lf30v75qwadm" path="res://Asset/Anime/Particles/Award/AwardGlow.png" id="7"]
+[ext_resource type="Material" uid="uid://c0mmnel4nbdch" path="res://Prefab/Particles/Award/AwardGlow.tres" id="8"]
+
+[node name="AwardRay" type="Node2D"]
+light_mask = 0
+script = ExtResource("1")
+
+[node name="AwardRayFour" type="GPUParticles2D" parent="."]
+unique_name_in_owner = true
+light_mask = 0
+emitting = false
+amount = 2
+texture = ExtResource("2")
+lifetime = 10.0
+explosiveness = 0.5
+local_coords = true
+draw_order = 0
+process_material = ExtResource("3")
+
+[node name="AwardRay1" type="GPUParticles2D" parent="."]
+unique_name_in_owner = true
+light_mask = 0
+emitting = false
+amount = 4
+texture = ExtResource("4")
+lifetime = 10.0
+explosiveness = 0.5
+local_coords = true
+draw_order = 0
+process_material = ExtResource("5")
+
+[node name="AwardRay2" type="GPUParticles2D" parent="."]
+unique_name_in_owner = true
+light_mask = 0
+emitting = false
+texture = ExtResource("6")
+lifetime = 10.0
+explosiveness = 0.5
+local_coords = true
+draw_order = 0
+process_material = ExtResource("5")
+
+[node name="AwardRayGlow" type="GPUParticles2D" parent="."]
+unique_name_in_owner = true
+light_mask = 0
+emitting = false
+amount = 5
+texture = ExtResource("7")
+lifetime = 10.0
+explosiveness = 1.0
+local_coords = true
+draw_order = 0
+process_material = ExtResource("8")

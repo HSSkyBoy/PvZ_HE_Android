@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=4 uid="uid://bd7q2cxnksk8e"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://cajrqimev6xvj" path="res://Asset/Anime/Character/Plant/Chapter1/HypnoGarlic/HypnoGarlic.tres" id="2"]
+
+[node name="HypnoGarlic" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/Eye = true
+Animation/LayerVisible/Eye2 = true
+Animation/LayerVisible/Garlic_stem1 = true
+Animation/LayerVisible/Garlic_stem2 = true
+Animation/LayerVisible/Garlic_stem3 = true
+Animation/LayerVisible/Garlic_stink = true
+Animation/LayerVisible/anim_face = true
+Animation/MediaReplace/Garlic_body1.png = null
+Animation/MediaReplace/Garlic_stem1.png = null
+Animation/MediaReplace/Garlic_stem2.png = null
+Animation/MediaReplace/Garlic_stem3.png = null
+Animation/MediaReplace/Garlic_stink1.png = null
+Animation/MediaReplace/Garlic_stink2.png = null
+Animation/MediaReplace/Garlic_stink3.png = null
+Animation/MediaReplace/Garlic_stink4.png = null
+Animation/MediaReplace/HypnoShroom_eye1.png = null
+Animation/MediaReplace/HypnoShroom_eye2.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

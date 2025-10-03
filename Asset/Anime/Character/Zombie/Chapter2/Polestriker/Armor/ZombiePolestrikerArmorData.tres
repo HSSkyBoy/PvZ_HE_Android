@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CharacterArmorData" load_steps=3 format=4 uid="uid://b0kmtuvhkiu72"]
+
+[ext_resource type="Resource" uid="uid://c571ru6n1jxpa" path="res://Asset/Anime/Character/Zombie/Chapter2/Polestriker/Armor/Config/ZombiePolestrikerArmorHelmet.tres" id="1"]
+[ext_resource type="Script" uid="uid://ci4c6gpjugqpl" path="res://Resource/General/Character/Armor/CharacterArmorData.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+armorList = [ExtResource("1")]
+armorDictionary = {
+"Helmet": ExtResource("1")
+}
+fliterAllDictionary = {
+"Helmet": ["anim_helmet"]
+}
+fliterOpenDictionary = {
+"Helmet": []
+}
+fliterCloseDictionary = {
+"Helmet": []
+}

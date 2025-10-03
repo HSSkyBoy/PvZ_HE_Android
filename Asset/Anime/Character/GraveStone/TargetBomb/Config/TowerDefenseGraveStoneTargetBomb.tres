@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="TowerDefenseGravestoneConfig" load_steps=3 format=4 uid="uid://ddxfpwxyl02ij"]
+
+[ext_resource type="Resource" uid="uid://bijc0b7xlwdr2" path="res://Asset/Anime/Character/GraveStone/TargetBomb/DamagePoint/GraveStoneTargetBombDamagePointData.tres" id="1"]
+[ext_resource type="Script" uid="uid://bfdrpohqyy2au" path="res://Resource/TowerDefense/Character/Config/TowerDefenseGravestoneConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+name = "GraveStoneTargetBomb"
+hitpointsNearDeath = 0.0
+hitpoints = 900.0
+smashHurt = -1.0
+spikeHurt = -1.0
+sleepTime = "Never"
+height = 2
+damagePointData = ExtResource("1")
+armorData = null
+customData = null
+ashScene = null
+homeWorld = 1
+costRise = -1
+cost = 50
+packetCooldown = 30.0
+startingCooldown = 15.0
+plantCover = []
+plantCoverRecycle = []
+plantGridType = [1, 2, 10]
+plantGridOverrideType = 8
+collisionFlags = 9
+maskFlags = 9
+unUseBuffFlags = 4294967295
+physiqueTypeFlags = 0
+elementFlags = 2
+Flag/Collision = 9
+Flag/Mask = 9
+Flag/UnUseBuff = 4294967295
+Flag/PhysiqueType = 0
+Flag/Elemet = 2

@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=4 uid="uid://dq0aaq0458aqe"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://dc3us7r26y3vn" path="res://Asset/Anime/Character/Zombie/Chapter1/Bed/ZombieBed.tres" id="2"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="3"]
+
+[node name="ZombieBed" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -80)
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/Zombie_ladder_1 = true
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/z1 = true
+Animation/LayerVisible/z2 = true
+Animation/LayerVisible/z3 = true
+"Animation/LayerVisible/图层_1" = true
+"Animation/LayerVisible/图层_2" = true
+"Animation/LayerVisible/头" = true
+"Animation/LayerVisible/头1" = true
+"Animation/LayerVisible/头发" = true
+"Animation/LayerVisible/帽子" = true
+"Animation/LayerVisible/帽子1" = true
+"Animation/LayerVisible/帽子2" = true
+"Animation/LayerVisible/床头" = true
+"Animation/LayerVisible/床头1" = true
+"Animation/LayerVisible/床板" = true
+"Animation/LayerVisible/枕头" = true
+"Animation/LayerVisible/轮胎" = true
+"Animation/LayerVisible/轮胎1" = true
+"Animation/LayerVisible/轮胎2" = true
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/SnowStorm_0000_2.png = null
+Animation/MediaReplace/SnowStorm_0001_1.png = null
+Animation/MediaReplace/Z.png = null
+Animation/MediaReplace/Zombie_sleep_0000_33.png = null
+Animation/MediaReplace/Zombie_sleep_0002_31.png = null
+Animation/MediaReplace/Zombie_sleep_0003_30.png = null
+Animation/MediaReplace/Zombie_sleep_0004_29.png = null
+Animation/MediaReplace/Zombie_sleep_0005_28.png = null
+Animation/MediaReplace/Zombie_sleep_0008_25.png = null
+Animation/MediaReplace/Zombie_sleep_0009_24.png = null
+Animation/MediaReplace/Zombie_sleep_0010_23.png = null
+Animation/MediaReplace/Zombie_sleep_01.png = null
+Animation/MediaReplace/Zombie_sleep_02.png = null
+Animation/MediaReplace/Zombie_sleep_1.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="GroundSlot" type="Node2D" parent="."]
+position = Vector2(-33.3412, -9.2)
+scale = Vector2(1.00041, 1.00041)
+script = ExtResource("3")
+followSlotId = 1
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"

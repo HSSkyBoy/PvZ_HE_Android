@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ChangeProjectileConfig" load_steps=7 format=4 uid="uid://5pj8jwcvds2s"]
+
+[ext_resource type="Resource" uid="uid://bulppulg1uwdo" path="res://Asset/Config/Projectile/Change/Single/PeaTrackToIceFirePeaTrack.tres" id="1"]
+[ext_resource type="Resource" uid="uid://cdriklr102vq8" path="res://Asset/Config/Projectile/Change/Single/PeaToIceFirePea.tres" id="2"]
+[ext_resource type="Resource" uid="uid://oi6cr3nnfem0" path="res://Asset/Config/Projectile/Change/Single/FirePeaTrackToIceFirePeaTrack.tres" id="3"]
+[ext_resource type="Resource" uid="uid://cpalq1oapyyhb" path="res://Asset/Config/Projectile/Change/Single/FirePeaToIceFirePea.tres" id="4"]
+[ext_resource type="Resource" uid="uid://cvt445ew4dcuq" path="res://Asset/Config/Projectile/Change/Single/SnowPeaToIceFirePea.tres" id="5"]
+[ext_resource type="Script" uid="uid://6dtpfxrdor8m" path="res://Resource/TowerDefense/Projectile/Change/ChangeProjectileConfig.gd" id="6"]
+
+[resource]
+script = ExtResource("6")
+changeList = [ExtResource("1"), ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5")]
+metadata/_custom_type_script = "uid://6dtpfxrdor8m"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharacterDamagePointConfig" load_steps=3 format=4 uid="uid://bbxb3peg03vxa"]
+
+[ext_resource type="PackedScene" uid="uid://b073rpu8pa5d8" path="res://Asset/Anime/Character/GraveStone/TargetSun/BreakEffect/GraveStoneTargetSunBreak.tscn" id="1"]
+[ext_resource type="Script" uid="uid://8vg1ajd1i4ps" path="res://Resource/General/Character/DamagePoint/CharacterDamagePointConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+damagePointName = "Damage5"
+damagePersontage = 0.0
+animeEffect = ExtResource("1")
+animeEffectOffset = Vector2(0, 0)
+isDrop = false
+animeFliterOpen = ""
+animeFliterClose = ""
+replaceMediaName = &""
+replaceMediaTexture = null
+damageAudio = ""
+metadata/_custom_type_script = "uid://8vg1ajd1i4ps"

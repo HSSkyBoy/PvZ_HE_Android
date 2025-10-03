@@ -1,0 +1,46 @@
+[gd_scene load_steps=11 format=4 uid="uid://oesd8u7nesaj"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://f8x15sdb8aah" path="res://Asset/Anime/Character/Plant/Chapter3/JalaCherryBomb/Scene/TowerDefensePlantJalaCherryBomb.gd" id="2"]
+[ext_resource type="Script" uid="uid://c3wiwula8chdo" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventExplodeHurt.gd" id="3"]
+[ext_resource type="Script" uid="uid://fix6uw08if5s" path="res://Resource/TowerDefense/Character/Buff/TowerDefenseCharacterBuffFireHit.gd" id="4"]
+[ext_resource type="Script" uid="uid://dtvfjfgy00epu" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventAddBuff.gd" id="5"]
+[ext_resource type="Resource" uid="uid://cmvpq28jq6ghr" path="res://Asset/Anime/Character/Plant/Chapter3/JalaCherryBomb/Config/TowerDefensePlantJalaCherryBomb.tres" id="6"]
+[ext_resource type="PackedScene" uid="uid://bfbjvmfps4g75" path="res://Asset/Anime/Character/Plant/Chapter3/JalaCherryBomb/JalaCherryBomb.tscn" id="7"]
+
+[sub_resource type="Resource" id="Resource_hs6c2"]
+script = ExtResource("3")
+type = "Bomb"
+num = 1800.0
+burns = true
+metadata/_custom_type_script = "uid://c3wiwula8chdo"
+
+[sub_resource type="Resource" id="Resource_qwkxd"]
+script = ExtResource("4")
+refresh = true
+metadata/_custom_type_script = "uid://fix6uw08if5s"
+
+[sub_resource type="Resource" id="Resource_6upry"]
+script = ExtResource("5")
+buffList = [SubResource("Resource_qwkxd")]
+metadata/_custom_type_script = "uid://dtvfjfgy00epu"
+
+[node name="TowerDefensePlantJalaCherryBomb" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+eventList = [SubResource("Resource_hs6c2")]
+allEventList = [SubResource("Resource_6upry")]
+config = ExtResource("6")
+sprite = NodePath("SpriteGroup/TransformPoint/JalaCherryBomb")
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="JalaCherryBomb" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("7")]
+position = Vector2(0, -30)
+offset = Vector2(-39.6903, -40.9205)
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 30)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)

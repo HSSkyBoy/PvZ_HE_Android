@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="TowerDefenseItemConfig" load_steps=2 format=4 uid="uid://dqlqppti74d08"]
+
+[ext_resource type="Script" uid="uid://ccwmqmk212fam" path="res://Resource/TowerDefense/Character/Config/TowerDefenseItemConfig.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+isLadder = false
+name = "ItemRake"
+hitpointsNearDeath = 0.0
+hitpoints = 300.0
+smashHurt = -1.0
+spikeHurt = -1.0
+sleepTime = "Never"
+height = 2
+damagePointData = null
+armorData = null
+customData = null
+ashScene = null
+homeWorld = 1
+costRise = -1
+cost = 25
+packetCooldown = 30.0
+startingCooldown = 15.0
+plantCover = []
+plantCoverRecycle = []
+plantGridType = [-1]
+plantGridOverrideType = 0
+collisionFlags = 9
+maskFlags = 8
+unUseBuffFlags = 4294967295
+physiqueTypeFlags = 0
+elementFlags = 0
+Flag/Collision = 9
+Flag/Mask = 8
+Flag/UnUseBuff = 4294967295
+Flag/PhysiqueType = 0
+Flag/Elemet = 0

@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=4 uid="uid://wa3742l47x03"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://dxuctjbrxcdnk" path="res://Asset/Anime/Character/Plant/Chapter0/PeaShooter/Scene/TowerDefensePlantPeaShooter.gd" id="2"]
+[ext_resource type="Resource" uid="uid://3w6uo505n3iv" path="res://Asset/Anime/Character/Plant/Chapter0/PeaShooter/Config/TowerDefensePlantPeaShooter.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://d4fjtijl2drwa" path="res://Asset/Anime/Character/Plant/Chapter0/PeaShooter/PeaShooter.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://b5htxrgm8twcr" path="res://Script/Component/TowerDefense/Character/FireComponent/FireComponent.tscn" id="5"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="6"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="7"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_mig1w"]
+b = Vector2(2000, 0)
+
+[node name="TowerDefensePlantPeaShooter" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+fireInterval = 1.5
+fireNum = 2
+idleAnimeClip = "BodyIdle"
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/PeaShooter")
+gravity = 245.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="PeaShooter" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSprite") instance=ExtResource("4")]
+position = Vector2(0, -30)
+trueFrameRate = 30.0
+layerSprite = [null, null, null, null, null, null, null, null, NodePath("Head"), null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="Head" parent="SpriteGroup/TransformPoint/PeaShooter" index="0"]
+position = Vector2(-0.488262, 1.90391)
+trueFrameRate = 30.0
+
+[node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/PeaShooter/Head" index="0"]
+position = Vector2(28.9559, -18.6275)
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 30)
+
+[node name="FireComponent" parent="." index="5" node_paths=PackedStringArray("firePosMarker", "checkArea") instance=ExtResource("5")]
+unique_name_in_owner = true
+firePosMarker = [NodePath("../SpriteGroup/TransformPoint/PeaShooter/Head/Marker2D")]
+checkArea = NodePath("Area2D")
+fireInterval = 1.5
+
+[node name="Area2D" type="Area2D" parent="FireComponent" index="0"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FireComponent/Area2D" index="0"]
+shape = SubResource("SegmentShape2D_mig1w")
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+
+[node name="Attack" type="Node" parent="StateChart/CompoundState" index="2"]
+script = ExtResource("6")
+
+[node name="ToAttack" type="Node" parent="StateChart/CompoundState" index="6"]
+script = ExtResource("7")
+to = NodePath("../Attack")
+event = &"ToAttack"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="StateChart/CompoundState/Attack" to="." method="AttackEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Attack" to="." method="AttackExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Attack" to="." method="AttackProcessing"]
+
+[editable path="SpriteGroup/TransformPoint/PeaShooter"]

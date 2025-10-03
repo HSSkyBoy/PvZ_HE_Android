@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="TowerDefensePacketConfig" load_steps=3 format=4 uid="uid://bi2pnorgrk5ws"]
+
+[ext_resource type="Resource" uid="uid://bcgvhwmu1020r" path="res://Asset/Anime/Character/Zombie/Chapter2/Shadow/Config/TowerDefenseZombieShadow.tres" id="1"]
+[ext_resource type="Script" uid="uid://c6d3po5310ugw" path="res://Resource/TowerDefense/PacketBank/Packet/TowerDefensePacketConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+saveKey = "ZombieShadowSpecialHelmet"
+unlockCheckList = []
+name = "TOWERDEFENSE_ZOMBIE_SHADOW_NAME"
+describe = "TOWERDEFENSE_ZOMBIE_SHADOW_EXPRESTION"
+plantfood = ""
+handbookDescribe = "TOWERDEFENSE_ZOMBIE_SHADOW_HANDBOOK_EXPRESTION"
+handbookStory = "TOWERDEFENSE_ZOMBIE_SHADOW_HANDBOOK_STORY"
+packetAnimeClip = "Idle"
+packetAnimeOffset = Vector2(30, 55)
+packetAnimeScale = Vector2(0.75, 0.75)
+characterConfig = ExtResource("1")
+type = 6
+spawnMethod = "Rise"
+overrideCostRise = -1
+overrideCost = 325
+overridPacketCooldown = -1.0
+overridStartingCooldown = -1.0
+overrideWeight = -1
+overrideWavePointCost = 550
+initArmor = ["SpecialHelmet"]
+plantUseCell = true
+Armor = ["SpecialHelmet"]
+Cell/plantUseCell = true
+Override/overrideWeight = -1
+Override/overrideWavePointCost = 550
+metadata/_custom_type_script = "uid://c6d3po5310ugw"

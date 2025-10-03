@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="TowerDefenseItemConfig" load_steps=3 format=4 uid="uid://cvp7icdrs0cf6"]
+
+[ext_resource type="Resource" uid="uid://cmc821gx470e7" path="res://Asset/Anime/Character/Item/Ladder/Armor/ItemLadderArmorData.tres" id="1"]
+[ext_resource type="Script" uid="uid://ccwmqmk212fam" path="res://Resource/TowerDefense/Character/Config/TowerDefenseItemConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+isLadder = true
+name = "ItemLadder"
+hitpointsNearDeath = 0.0
+hitpoints = 300.0
+smashHurt = -1.0
+spikeHurt = -1.0
+sleepTime = "Never"
+height = 2
+damagePointData = null
+armorData = ExtResource("1")
+customData = null
+ashScene = null
+homeWorld = 1
+costRise = -1
+cost = 50
+packetCooldown = 30.0
+startingCooldown = 15.0
+plantCover = []
+plantCoverRecycle = []
+plantGridType = [0]
+plantGridOverrideType = 0
+collisionFlags = 0
+maskFlags = 0
+unUseBuffFlags = 4294967295
+physiqueTypeFlags = 0
+elementFlags = 0
+Flag/Collision = 0
+Flag/Mask = 0
+Flag/UnUseBuff = 4294967295
+Flag/PhysiqueType = 0
+Flag/Elemet = 0

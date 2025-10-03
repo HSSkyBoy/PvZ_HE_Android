@@ -1,0 +1,20 @@
+[
+	{
+		"SaveKey" : "ShovelGold" ,
+		"SaveType" : "Feature",
+		"CheckKey" : "Level1_4" ,
+		"CheckType" : "Level"
+	},
+	{
+		"SaveKey" : "Coins" ,
+		"SaveType" : "Feature",
+		"CheckKey" : "Level1_4" ,
+		"CheckType" : "Level"
+	},
+	{
+		"SaveKey" : "Chapter1Paper" ,
+		"SaveType" : "Feature",
+		"CheckKey" : "Level1_9" ,
+		"CheckType" : "Level"
+	}
+]

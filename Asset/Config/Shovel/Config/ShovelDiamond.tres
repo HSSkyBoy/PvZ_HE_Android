@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="ShovelConfig" load_steps=5 format=4 uid="uid://des1aaagsqmcf"]
+
+[ext_resource type="Script" uid="uid://c3vjuf10d065k" path="res://Resource/TowerDefense/Shovel/Event/ShovelEventRecycleConfig.gd" id="1"]
+[ext_resource type="Script" uid="uid://xmwd4jomf83s" path="res://Resource/TowerDefense/Shovel/ShovelConfig.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://bn73et4em88o4" path="res://Asset/Texture/TowerDefense/Shovel/ShovelDiamond.png" id="3"]
+
+[sub_resource type="Resource" id="Resource_64brc"]
+script = ExtResource("1")
+percentage = 0.3
+destroy = true
+metadata/_custom_type_script = "uid://c3vjuf10d065k"
+
+[resource]
+script = ExtResource("2")
+texture = ExtResource("3")
+saveKey = "ShovelDiamond"
+unlockCheckList = []
+name = "TOWERDEFENSE_SHOVEL_DIAMOND_NAME"
+describe = "TOWERDEFENSE_SHOVEL_DIAMOND_EXPRESTION"
+handbookDescribe = "TOWERDEFENSE_SHOVEL_DIAMOND_HANDBOOK_EXPRESTION"
+handbookStory = "TOWERDEFENSE_SHOVEL_DIAMOND_HANDBOOK_STORY"
+eventList = [SubResource("Resource_64brc")]
+metadata/_custom_type_script = "uid://xmwd4jomf83s"

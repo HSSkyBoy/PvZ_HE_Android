@@ -1,0 +1,80 @@
+[gd_scene load_steps=11 format=4 uid="uid://b3vbw1nslcdey"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://du1w8fnbqjmu3" path="res://Asset/Anime/Character/Plant/Chapter0/Squash/Scene/TowerDefensePlantSquash.gd" id="2"]
+[ext_resource type="Script" uid="uid://cmqmtitj4tcd8" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventHurt.gd" id="3"]
+[ext_resource type="Resource" uid="uid://by3pot2w8kmb0" path="res://Asset/Anime/Character/Plant/Chapter0/Squash/Config/TowerDefensePlantSquash.tres" id="4"]
+[ext_resource type="PackedScene" uid="uid://c73d2hkvvrvop" path="res://Asset/Anime/Character/Plant/Chapter0/Squash/Squash.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://dir0f8lu1l3b3" path="res://Script/Component/TowerDefense/Character/AttackComponent/AttackComponent.tscn" id="6"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="7"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="8"]
+
+[sub_resource type="Resource" id="Resource_qf3vj"]
+script = ExtResource("3")
+num = 1800.0
+playSplatAudio = true
+damageFlags = 3
+collisionFlags = 9
+Flag/Damage = 3
+Flag/Collision = 9
+metadata/_custom_type_script = "uid://cmqmtitj4tcd8"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b2enb"]
+size = Vector2(202, 34)
+
+[node name="TowerDefensePlantSquash" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+eventList = [SubResource("Resource_qf3vj")]
+config = ExtResource("4")
+sprite = NodePath("SpriteGroup/TransformPoint/Squash")
+gravity = 245.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="Squash" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSprite") instance=ExtResource("5")]
+position = Vector2(0, -30)
+trueFrameRate = 30.0
+layerSprite = [null, null, null, null, null]
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 30)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+
+[node name="AttackComponent" parent="." index="7" node_paths=PackedStringArray("checkArea") instance=ExtResource("6")]
+unique_name_in_owner = true
+attackType = "Default"
+checkArea = NodePath("CheckArea")
+
+[node name="CheckArea" type="Area2D" parent="AttackComponent" index="0"]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent/CheckArea" index="0"]
+shape = SubResource("RectangleShape2D_b2enb")
+
+[node name="Ready" type="Node" parent="StateChart/CompoundState" index="2"]
+script = ExtResource("7")
+
+[node name="Jump" type="Node" parent="StateChart/CompoundState" index="3"]
+script = ExtResource("7")
+
+[node name="ToReady" type="Node" parent="StateChart/CompoundState" index="7"]
+script = ExtResource("8")
+to = NodePath("../Ready")
+event = &"ToReady"
+delay_in_seconds = "0.0"
+
+[node name="ToJump" type="Node" parent="StateChart/CompoundState" index="8"]
+script = ExtResource("8")
+to = NodePath("../Jump")
+event = &"ToJump"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="StateChart/CompoundState/Ready" to="." method="ReadyEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Ready" to="." method="ReadyExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Ready" to="." method="ReadyProcessing"]
+[connection signal="state_entered" from="StateChart/CompoundState/Jump" to="." method="JumpEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Jump" to="." method="JumpExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Jump" to="." method="JumpProcessing"]

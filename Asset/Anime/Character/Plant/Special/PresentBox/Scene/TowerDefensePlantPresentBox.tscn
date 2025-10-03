@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=4 uid="uid://unw0w6jxiprl"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://br8ietemvdjqv" path="res://Asset/Anime/Character/Plant/Special/PresentBox/Scene/TowerDefensePlantPresentBox.gd" id="2"]
+[ext_resource type="Resource" uid="uid://brd0ln0lrox6t" path="res://Asset/Anime/Character/Plant/Special/PresentBox/Config/TowerDefensePlantPresentBox.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://bn2uk5f11yv0g" path="res://Asset/Anime/Character/Plant/Special/PresentBox/PresentBox.tscn" id="4"]
+
+[node name="TowerDefensePlantPresentBox" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+z_index = -10
+script = ExtResource("2")
+packetBank = "Total"
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/PresentBox")
+itemLayer = 5
+gravity = 245.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="PresentBox" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+position = Vector2(0, -30)
+
+[node name="ShadowSprite" parent="." index="3"]
+visible = false
+position = Vector2(0, 30)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)

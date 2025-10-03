@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=4 uid="uid://ddihgm1blji17"]
+
+[ext_resource type="Script" uid="uid://bggdy5mocljby" path="res://Asset/Config/Map/Frontlawn/Scene/Afternoon/TowerDefenseMapFrontlawnAfternoon.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cp63anphxdgl8" path="res://Asset/Config/Map/Frontlawn/Scene/Afternoon/TowerDefenseMapFrontlawnAfternoonGradient.tres" id="2"]
+[ext_resource type="Texture2D" uid="uid://3h788plsvfr3" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/FrontlawnAfternoon.jpg" id="3"]
+[ext_resource type="Texture2D" uid="uid://bbbiwhq1ib7vi" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Stripe.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://bgvqxafkciin" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/FrontlawnAfternoonFloor.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://dq0b4ileuh0y6" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/FrontlawnAfternoonDoor.png" id="6"]
+
+[node name="TowerDefenseMapFrontlawnAfternoon" type="Node2D" node_paths=PackedStringArray("stripe")]
+modulate = Color(1, 0.988235, 0.988235, 1)
+script = ExtResource("1")
+stripe = NodePath("Stripe")
+canvasModulateGradient = ExtResource("2")
+
+[node name="FrontlawnNight" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3")
+centered = false
+
+[node name="Stripe" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(494, 70)
+texture = ExtResource("4")
+centered = false
+
+[node name="FrontlawnFloor" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(100, 298)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="FrontlawnDoor" type="Sprite2D" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(101, 297)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6")

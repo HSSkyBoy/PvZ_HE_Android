@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=4 uid="uid://dxyshcy0oo4g8"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://bnb2afoo5ncgh" path="res://Asset/Anime/Character/Plant/Chapter2/WinterMelonShroom/WinterMelonShroom.tres" id="2"]
+
+[node name="WinterMelonShroom" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/AnimeEvents = true
+Animation/LayerVisible/DoomShroom_eyes = true
+Animation/LayerVisible/DoomShroom_head = true
+Animation/LayerVisible/DoomShroom_spout = true
+Animation/LayerVisible/DoomShroom_tip = true
+Animation/LayerVisible/anim_face = true
+Animation/LayerVisible/skin1 = false
+Animation/LayerVisible/skin2_1 = false
+Animation/LayerVisible/skin2_2 = false
+Animation/LayerVisible/skin3_1 = false
+Animation/LayerVisible/skin3_2 = false
+Animation/LayerVisible/skin4_1 = false
+Animation/LayerVisible/skin4_2 = false
+Animation/LayerVisible/skin4_3 = false
+Animation/LayerVisible/skin4_4 = false
+Animation/LayerVisible/skin5 = false
+Animation/MediaReplace/FumeShroom_blink2.png = null
+Animation/MediaReplace/FumeShroom_body.png = null
+Animation/MediaReplace/WinterMelonShroom_head.png = null
+Animation/MediaReplace/WinterMelonShroom_skin1.png = null
+Animation/MediaReplace/WinterMelonShroom_skin2_1.png = null
+Animation/MediaReplace/WinterMelonShroom_skin2_2.png = null
+Animation/MediaReplace/WinterMelonShroom_skin3_1.png = null
+Animation/MediaReplace/WinterMelonShroom_skin3_2.png = null
+Animation/MediaReplace/WinterMelonShroom_skin4_1.png = null
+Animation/MediaReplace/WinterMelonShroom_skin4_2.png = null
+Animation/MediaReplace/WinterMelonShroom_skin4_3.png = null
+Animation/MediaReplace/WinterMelonShroom_skin4_4.png = null
+Animation/MediaReplace/WinterMelonShroom_skin5.png = null
+Animation/MediaReplace/WinterMelonShroom_spout.png = null
+Animation/MediaReplace/WinterMelonShroom_tip.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

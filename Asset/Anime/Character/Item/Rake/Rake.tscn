@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=4 uid="uid://cxoussiq03oo8"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://ci84xmfhy6mfi" path="res://Asset/Anime/Character/Item/Rake/Rake.tres" id="2"]
+
+[node name="Rake" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null]
+layerSprite = [null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+"Animation/LayerVisible/Layer 1" = true
+"Animation/LayerVisible/Layer 2" = true
+Animation/MediaReplace/rake1.png = null
+Animation/MediaReplace/rake2.png = null
+Animation/MediaReplace/rake_handle.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

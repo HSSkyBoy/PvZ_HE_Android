@@ -1,0 +1,110 @@
+[gd_scene load_steps=12 format=4 uid="uid://blb4s0qnt2u0m"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bjxlhn5iiv5ow" path="res://Asset/Anime/Character/Zombie/Chapter2/Digger/Scene/TowerDefenseZombieDigger.gd" id="2"]
+[ext_resource type="Resource" uid="uid://b2sthdtkau025" path="res://Asset/Anime/Character/Zombie/Chapter2/Digger/Config/TowerDefenseZombieDigger.tres" id="3"]
+[ext_resource type="Resource" uid="uid://dybp4l4xkgwff" path="res://Asset/Anime/Character/Zombie/Chapter2/Digger/DamagePoint/Config/ZombieDiggerDamagePointArm.tres" id="4"]
+[ext_resource type="Resource" uid="uid://dhatm2qs8qero" path="res://Asset/Anime/Character/Zombie/Chapter2/Digger/DamagePoint/Config/ZombieDiggerDamagePointHead.tres" id="5"]
+[ext_resource type="Resource" uid="uid://ckrwasaouv8e1" path="res://Asset/Anime/Character/Zombie/Chapter2/Digger/Armor/Config/ZombieDiggerArmorHardHat.tres" id="6"]
+[ext_resource type="Resource" uid="uid://be1ppc3g7ejxi" path="res://Asset/Anime/Character/Zombie/Chapter2/Digger/Armor/Config/ZombieDiggerArmorPick.tres" id="7"]
+[ext_resource type="PackedScene" uid="uid://c1q1kwxvyt7jh" path="res://Asset/Anime/Character/Zombie/Chapter2/Digger/ZombieDigger.tscn" id="8"]
+[ext_resource type="Texture2D" uid="uid://cjcrpsdfy23k3" path="res://Asset/Texture/Character/Armor/HardHat/ZombieHardHat1.png" id="9"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="10"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="11"]
+
+[node name="TowerDefenseZombieDigger" node_paths=PackedStringArray("sprite", "headSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+walkSpeedScale = 0.5
+inSwimAnimeClip = ""
+outSwimAnimeClip = ""
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieDigger")
+headSlot = NodePath("SpriteGroup/TransformPoint/ZombieDigger/HeadSlot")
+damagePart = {
+"Arm": ExtResource("4"),
+"HardHat": ExtResource("6"),
+"Head": ExtResource("5"),
+"Pick": ExtResource("7")
+}
+PreviewDamagePointPersontage = 1.0
+Armor = ["HardHat", "Pick"]
+DamagePartSlot/Arm = NodePath("SpriteGroup/TransformPoint/ZombieDigger/ArmSlot")
+DamagePartSlot/Head = NodePath("SpriteGroup/TransformPoint/ZombieDigger/HeadSlot")
+DamagePartSlot/HardHat = NodePath("SpriteGroup/TransformPoint/ZombieDigger/HardHatSlot")
+DamagePartSlot/Pick = NodePath("SpriteGroup/TransformPoint/ZombieDigger/PickSlot")
+
+[node name="SpriteMask" parent="SpriteGroup" index="0"]
+offset_top = -101.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(12, 33)
+
+[node name="ZombieDigger" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("8")]
+position = Vector2(-12, -33)
+layerSlot = [NodePath("GroundSlot"), null, NodePath("PickSlot"), null, null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, null, null, null, null, NodePath("ArmSlot"), null, null, NodePath("HardHatSlot"), null, null]
+Animation/MediaReplace/Zombie_digger_hardhat.png = ExtResource("9")
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieDigger" index="0"]
+position = Vector2(-18.0584, -44.5771)
+rotation = 0.00219335
+scale = Vector2(0.79997, 0.79997)
+
+[node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieDigger" index="1"]
+position = Vector2(1.35892, 2.83904)
+rotation = 0.00753051
+scale = Vector2(0.799963, 0.799963)
+
+[node name="HardHatSlot" parent="SpriteGroup/TransformPoint/ZombieDigger" index="2"]
+position = Vector2(-14.6459, -60.2062)
+rotation = 0.00499966
+scale = Vector2(0.799958, 0.799958)
+
+[node name="PickSlot" parent="SpriteGroup/TransformPoint/ZombieDigger" index="3"]
+position = Vector2(-30.5641, 4.70671)
+rotation = 0.0145209
+scale = Vector2(0.799937, 0.799937)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(4, -2)
+
+[node name="GroundMoveComponent" parent="." index="8" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieDigger/GroundSlot")
+
+[node name="Dig" type="Node" parent="StateChart/CompoundState" index="6"]
+script = ExtResource("10")
+
+[node name="Drill" type="Node" parent="StateChart/CompoundState" index="7"]
+script = ExtResource("10")
+
+[node name="Land" type="Node" parent="StateChart/CompoundState" index="8"]
+script = ExtResource("10")
+
+[node name="ToDig" type="Node" parent="StateChart/CompoundState" index="15"]
+script = ExtResource("11")
+to = NodePath("../Dig")
+event = &"ToDig"
+delay_in_seconds = "0.0"
+
+[node name="ToDrill" type="Node" parent="StateChart/CompoundState" index="16"]
+script = ExtResource("11")
+to = NodePath("../Drill")
+event = &"ToDrill"
+delay_in_seconds = "0.0"
+
+[node name="ToLand" type="Node" parent="StateChart/CompoundState" index="17"]
+script = ExtResource("11")
+to = NodePath("../Land")
+event = &"ToLand"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="StateChart/CompoundState/Dig" to="." method="DigEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Dig" to="." method="DigExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Dig" to="." method="DigProcessing"]
+[connection signal="state_entered" from="StateChart/CompoundState/Drill" to="." method="DrillEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Drill" to="." method="DrillExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Drill" to="." method="DrillProcessing"]
+[connection signal="state_entered" from="StateChart/CompoundState/Land" to="." method="LandEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Land" to="." method="LandExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Land" to="." method="LandProcessing"]
+
+[editable path="SpriteGroup/TransformPoint/ZombieDigger"]

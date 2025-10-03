@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=4 uid="uid://bjev0ulao283j"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://obdwwl2g7qen" path="res://Asset/Anime/Effect/DiggerRisingDirt/DiggerRisingDirt.tres" id="2"]
+
+[node name="DiggerRisingDirt" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, 0)
+trueFrameRate = 60.0
+layerSlot = [null, null]
+layerSprite = [null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/Digger_rising_dirt = true
+Animation/MediaReplace/Digger_rising_dirt.png = null
+Animation/MediaReplace/Digger_rising_dirt2.png = null
+Animation/MediaReplace/Digger_rising_dirt3.png = null
+Animation/MediaReplace/Digger_rising_dirt4.png = null
+Animation/MediaReplace/Digger_rising_dirt5.png = null
+Animation/MediaReplace/Digger_rising_dirt6.png = null
+Animation/MediaReplace/Digger_rising_dirt7.png = null
+Animation/MediaReplace/Digger_rising_dirt8.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

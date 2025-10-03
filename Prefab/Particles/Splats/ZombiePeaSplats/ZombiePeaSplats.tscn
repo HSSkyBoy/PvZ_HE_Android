@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=4 uid="uid://chqujd41x3s0r"]
+
+[ext_resource type="Texture2D" uid="uid://b3w2np8xpq6va" path="res://Asset/Anime/Particles/Splats/ZombiePeaSplats.png" id="1"]
+[ext_resource type="Material" uid="uid://d3544bbtvtc2d" path="res://Prefab/Particles/Splats/ZombiePeaSplats/ZombiePeaSplats.tres" id="2"]
+[ext_resource type="Script" uid="uid://dywgdjamo0ovs" path="res://Extends/Particles/GPUParticles2DOnece.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://5pccupnwh5de" path="res://Asset/Anime/Particles/Splats/ZombiePeaParticles.png" id="4"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wiwmn"]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ek2em"]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[node name="ZombiePeaSplats" type="GPUParticles2D"]
+material = SubResource("CanvasItemMaterial_wiwmn")
+emitting = false
+amount = 6
+texture = ExtResource("1")
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+process_material = ExtResource("2")
+script = ExtResource("3")
+
+[node name="ZombiePeaParticles" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_ek2em")
+emitting = false
+amount = 6
+texture = ExtResource("4")
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+process_material = ExtResource("2")

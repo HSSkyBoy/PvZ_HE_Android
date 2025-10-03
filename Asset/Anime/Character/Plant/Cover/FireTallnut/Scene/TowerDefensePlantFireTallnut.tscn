@@ -1,0 +1,119 @@
+[gd_scene load_steps=21 format=4 uid="uid://drqd4cnyq77k0"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://vmeaimq0e0uh" path="res://Asset/Anime/Character/Plant/Cover/FireTallnut/Scene/TowerDefensePlantFireTallnut.gd" id="2"]
+[ext_resource type="Script" uid="uid://xug53xwvy4my" path="res://Resource/TowerDefense/Character/Buff/TowerDefenseCharacterBuffIceSpeedDown.gd" id="3"]
+[ext_resource type="Script" uid="uid://dtvfjfgy00epu" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventAddBuff.gd" id="4"]
+[ext_resource type="Script" uid="uid://cmqmtitj4tcd8" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventHurt.gd" id="5"]
+[ext_resource type="Script" uid="uid://dv2ipl3b22nts" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventCreateEffect.gd" id="6"]
+[ext_resource type="Resource" uid="uid://d2dlvmahbl4d4" path="res://Asset/Anime/Character/Plant/Cover/FireTallnut/Config/TowerDefensePlantFireTallnut.tres" id="7"]
+[ext_resource type="PackedScene" uid="uid://duqh2083d5wit" path="res://Asset/Anime/Character/Plant/Cover/FireTallnut/FireTallnut.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://b6w5f0q85ngb7" path="res://Script/Component/TowerDefense/Character/ChangeProjectile/ChangeProjectileComponent.tscn" id="9"]
+[ext_resource type="Resource" uid="uid://5pj8jwcvds2s" path="res://Asset/Config/Projectile/Change/IceFire.tres" id="10"]
+[ext_resource type="PackedScene" uid="uid://dir0f8lu1l3b3" path="res://Script/Component/TowerDefense/Character/AttackComponent/AttackComponent.tscn" id="11"]
+
+[sub_resource type="Resource" id="Resource_7nsp6"]
+script = ExtResource("3")
+time = 15.0
+refresh = true
+metadata/_custom_type_script = "uid://xug53xwvy4my"
+
+[sub_resource type="Resource" id="Resource_ac8bs"]
+script = ExtResource("4")
+buffList = [SubResource("Resource_7nsp6")]
+metadata/_custom_type_script = "uid://dtvfjfgy00epu"
+
+[sub_resource type="Resource" id="Resource_iil51"]
+script = ExtResource("5")
+num = 40.0
+playSplatAudio = false
+damageFlags = 2
+collisionFlags = 9
+Flag/Damage = 2
+Flag/Collision = 9
+metadata/_custom_type_script = "uid://cmqmtitj4tcd8"
+
+[sub_resource type="Resource" id="Resource_q4v4h"]
+script = ExtResource("6")
+effectObject = 110
+metadata/_custom_type_script = "uid://dv2ipl3b22nts"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p412e"]
+size = Vector2(40.5, 90)
+
+[sub_resource type="Gradient" id="Gradient_7kd5i"]
+offsets = PackedFloat32Array(0, 0.346154, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.952991, 0.952991, 0.952991, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7kd5i"]
+gradient = SubResource("Gradient_7kd5i")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hgmr6"]
+size = Vector2(54, 66)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ogh66"]
+size = Vector2(73, 47)
+
+[node name="TowerDefensePlantFireTallnut" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+eventList = [SubResource("Resource_ac8bs"), SubResource("Resource_iil51"), SubResource("Resource_q4v4h")]
+attackInterval = 1.5
+config = ExtResource("7")
+sprite = NodePath("SpriteGroup/TransformPoint/FireTallnut")
+PreviewDamagePointPersontage = 1.0
+gravity = 245.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="FireTallnut" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("8")]
+position = Vector2(0, -30)
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 30)
+
+[node name="HitBox" parent="." index="5"]
+visible = true
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+shape = SubResource("RectangleShape2D_p412e")
+
+[node name="Light" type="PointLight2D" parent="." index="7"]
+unique_name_in_owner = true
+visible = false
+color = Color(0.552941, 1, 1, 1)
+energy = 0.35
+texture = SubResource("GradientTexture2D_7kd5i")
+
+[node name="ChangeProjectileComponent" parent="." index="8" node_paths=PackedStringArray("checkArea") instance=ExtResource("9")]
+projectileConfig = ExtResource("10")
+checkArea = NodePath("Area2D")
+
+[node name="Area2D" type="Area2D" parent="ChangeProjectileComponent" index="0"]
+visible = false
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeProjectileComponent/Area2D" index="0"]
+position = Vector2(3, 0)
+shape = SubResource("RectangleShape2D_hgmr6")
+
+[node name="AttackComponent" parent="." index="9" node_paths=PackedStringArray("checkArea") instance=ExtResource("11")]
+unique_name_in_owner = true
+attackType = "Default"
+checkArea = NodePath("Area2D")
+
+[node name="Area2D" type="Area2D" parent="AttackComponent" index="0"]
+monitorable = false
+
+[node name="AttackShape" type="CollisionShape2D" parent="AttackComponent/Area2D" index="0"]
+unique_name_in_owner = true
+position = Vector2(-1.5, -0.5)
+shape = SubResource("RectangleShape2D_ogh66")

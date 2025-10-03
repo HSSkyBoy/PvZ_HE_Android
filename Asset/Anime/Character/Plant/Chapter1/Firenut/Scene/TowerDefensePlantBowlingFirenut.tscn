@@ -1,0 +1,46 @@
+[gd_scene load_steps=13 format=4 uid="uid://0qblsawjyjn4"]
+
+[ext_resource type="PackedScene" uid="uid://colk7liw31q6k" path="res://Prefab/TowerDefense/Character/TowerDefensePlantBowlingBase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://c6ip3x7aau5w5" path="res://Asset/Anime/Character/Plant/Chapter1/Firenut/Scene/TowerDefensePlantBowlingFirenut.gd" id="2"]
+[ext_resource type="Script" uid="uid://dvyancfxatcgc" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventBowlingHurt.gd" id="3"]
+[ext_resource type="Script" uid="uid://dbfnc1ihia2jy" path="res://Resource/TowerDefense/Character/Buff/TowerDefenseCharacterBuffBurn.gd" id="4"]
+[ext_resource type="PackedScene" uid="uid://bv4juwge7ravc" path="res://Prefab/Particles/Splats/FireSplats/FireSplats.tscn" id="5"]
+[ext_resource type="Script" uid="uid://dtvfjfgy00epu" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventAddBuff.gd" id="6"]
+[ext_resource type="Resource" uid="uid://bwklflybgnsvp" path="res://Asset/Anime/Character/Plant/Chapter1/Firenut/Config/TowerDefensePlantFirenutBowling.tres" id="7"]
+[ext_resource type="PackedScene" uid="uid://dx3bhy6xa6aio" path="res://Asset/Anime/Character/Plant/Chapter1/Firenut/Firenut.tscn" id="8"]
+[ext_resource type="Texture2D" uid="uid://deakfnllnylp3" path="res://Asset/Anime/Character/Plant/Chapter1/Firenut/DamagePoint/WallnutBody.png" id="9"]
+
+[sub_resource type="Resource" id="Resource_t18tx"]
+script = ExtResource("3")
+num = 1800.0
+dir = "Front"
+burns = true
+metadata/_custom_type_script = "uid://dvyancfxatcgc"
+
+[sub_resource type="Resource" id="Resource_27dgd"]
+script = ExtResource("4")
+time = 3.0
+dpsAttack = 100.0
+splatSceneType = "Sprite"
+splatScene = ExtResource("5")
+splatInterval = 1.0
+refresh = true
+metadata/_custom_type_script = "uid://dbfnc1ihia2jy"
+
+[sub_resource type="Resource" id="Resource_8hjfg"]
+script = ExtResource("6")
+buffList = [SubResource("Resource_27dgd")]
+metadata/_custom_type_script = "uid://dtvfjfgy00epu"
+
+[node name="TowerDefensePlantBowlingFirenut" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+hitEvent = [SubResource("Resource_t18tx"), SubResource("Resource_8hjfg")]
+config = ExtResource("7")
+sprite = NodePath("SpriteGroup/TransformPoint/Firenut")
+PreviewDamagePointPersontage = 1.0
+Custom = []
+
+[node name="Firenut" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("8")]
+position = Vector2(0, -30)
+Animation/Clip = "Roll"
+Animation/MediaReplace/Wallnut_body.png = ExtResource("9")

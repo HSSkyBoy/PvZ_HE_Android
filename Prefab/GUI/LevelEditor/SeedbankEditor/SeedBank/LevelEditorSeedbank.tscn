@@ -1,0 +1,230 @@
+[gd_scene load_steps=10 format=4 uid="uid://r8uwdna1rkj0"]
+
+[ext_resource type="Script" uid="uid://c8042pqbfifhg" path="res://Prefab/GUI/LevelEditor/SeedbankEditor/SeedBank/LevelEditorSeedbank.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://c2ihkj4xv50hg" path="res://Asset/Texture/TowerDefense/SeedBank/SeedBank.png" id="2"]
+[ext_resource type="FontFile" uid="uid://b70va62wc3lp2" path="res://Asset/Font/fzcq.ttf" id="3"]
+[ext_resource type="PackedScene" uid="uid://dfwrdoxe03ifh" path="res://Prefab/TowerDefense/GUI/InGame/Packet/TowerDefenseInGamePacketSlot.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://ddglfhcpxg451" path="res://Asset/Texture/TowerDefense/ConveyorBelt/ConveyorBeltBackdrop.png" id="5"]
+[ext_resource type="Shader" uid="uid://wk0w3tgag3ju" path="res://Prefab/TowerDefense/GUI/InGame/ConveyorBelt/ConveyorBelt.gdshader" id="6"]
+[ext_resource type="Texture2D" uid="uid://dbyiqyhraff1b" path="res://Asset/Texture/TowerDefense/ConveyorBelt/ConveyorBelt.png" id="7"]
+[ext_resource type="PackedScene" uid="uid://bwah85xhr3jf8" path="res://Prefab/GUI/LevelEditor/SeedbankEditor/Choose/LevelEditorSeedBankChoose.tscn" id="8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_65std"]
+shader = ExtResource("6")
+shader_parameter/_length = 600.0
+shader_parameter/speed = 0.06
+shader_parameter/time = 0.0
+
+[node name="LevelEditorSeedbank" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1")
+
+[node name="PosMask" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+anchors_preset = 0
+offset_left = 103.0
+offset_top = 40.0
+offset_right = 103.0
+offset_bottom = 40.0
+
+[node name="SeedContanin" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+light_mask = 0
+custom_minimum_size = Vector2(446, 87)
+layout_mode = 0
+offset_right = 905.0
+offset_bottom = 87.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="SeedContanin"]
+light_mask = 0
+custom_minimum_size = Vector2(140, 87)
+layout_mode = 2
+texture = ExtResource("2")
+patch_margin_left = 79
+patch_margin_top = 9
+patch_margin_right = 11
+patch_margin_bottom = 9
+
+[node name="SunLabel" type="Label" parent="SeedContanin/NinePatchRect"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 0
+offset_left = 9.0
+offset_top = 60.0
+offset_right = 68.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 16
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="SeedContanin"]
+light_mask = 0
+layout_mode = 2
+theme_override_constants/margin_left = 103
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 37
+theme_override_constants/margin_bottom = 12
+
+[node name="PacketSlotContainer" type="HBoxContainer" parent="SeedContanin/MarginContainer"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 51
+
+[node name="TowerDefenseInGamePacketSlot" parent="SeedContanin/MarginContainer/PacketSlotContainer" instance=ExtResource("4")]
+layout_mode = 2
+
+[node name="TowerDefenseInGamePacketSlot2" parent="SeedContanin/MarginContainer/PacketSlotContainer" instance=ExtResource("4")]
+layout_mode = 2
+
+[node name="TowerDefenseInGamePacketSlot3" parent="SeedContanin/MarginContainer/PacketSlotContainer" instance=ExtResource("4")]
+layout_mode = 2
+
+[node name="TowerDefenseInGamePacketSlot4" parent="SeedContanin/MarginContainer/PacketSlotContainer" instance=ExtResource("4")]
+layout_mode = 2
+
+[node name="TowerDefenseInGamePacketSlot5" parent="SeedContanin/MarginContainer/PacketSlotContainer" instance=ExtResource("4")]
+layout_mode = 2
+
+[node name="TowerDefenseInGamePacketSlot6" parent="SeedContanin/MarginContainer/PacketSlotContainer" instance=ExtResource("4")]
+layout_mode = 2
+
+[node name="TowerDefenseInGamePacketSlot7" parent="SeedContanin/MarginContainer/PacketSlotContainer" instance=ExtResource("4")]
+layout_mode = 2
+
+[node name="TowerDefenseInGamePacketSlot8" parent="SeedContanin/MarginContainer/PacketSlotContainer" instance=ExtResource("4")]
+layout_mode = 2
+
+[node name="TowerDefenseInGamePacketSlot9" parent="SeedContanin/MarginContainer/PacketSlotContainer" instance=ExtResource("4")]
+layout_mode = 2
+
+[node name="TowerDefenseInGamePacketSlot10" parent="SeedContanin/MarginContainer/PacketSlotContainer" instance=ExtResource("4")]
+layout_mode = 2
+
+[node name="TowerDefenseInGamePacketSlot11" parent="SeedContanin/MarginContainer/PacketSlotContainer" instance=ExtResource("4")]
+layout_mode = 2
+
+[node name="TowerDefenseInGamePacketSlot12" parent="SeedContanin/MarginContainer/PacketSlotContainer" instance=ExtResource("4")]
+layout_mode = 2
+
+[node name="TowerDefenseInGamePacketSlot13" parent="SeedContanin/MarginContainer/PacketSlotContainer" instance=ExtResource("4")]
+layout_mode = 2
+
+[node name="TowerDefenseInGamePacketSlot14" parent="SeedContanin/MarginContainer/PacketSlotContainer" instance=ExtResource("4")]
+layout_mode = 2
+
+[node name="TowerDefenseInGamePacketSlot15" parent="SeedContanin/MarginContainer/PacketSlotContainer" instance=ExtResource("4")]
+layout_mode = 2
+
+[node name="TowerDefenseInGamePacketSlot16" parent="SeedContanin/MarginContainer/PacketSlotContainer" instance=ExtResource("4")]
+layout_mode = 2
+
+[node name="Conveyor" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(781, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = -53.0
+offset_top = 1.0
+offset_right = 728.0
+offset_bottom = 1.0
+
+[node name="ConveyorBelt" type="PanelContainer" parent="Conveyor"]
+light_mask = 0
+layout_mode = 0
+offset_left = 124.0
+offset_right = 957.0
+offset_bottom = 86.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Conveyor/ConveyorBelt"]
+light_mask = 0
+custom_minimum_size = Vector2(518, 86)
+layout_mode = 2
+texture = ExtResource("5")
+patch_margin_left = 16
+patch_margin_top = 8
+patch_margin_right = 20
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Conveyor"]
+light_mask = 0
+texture_filter = 1
+layout_mode = 0
+offset_left = 131.0
+offset_top = 6.0
+offset_right = 3396.0
+offset_bottom = 302.0
+scale = Vector2(0.25, 0.25)
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Conveyor/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(3265, 296)
+render_target_update_mode = 0
+
+[node name="ScaleNode" type="Control" parent="Conveyor/SubViewportContainer/SubViewport"]
+light_mask = 0
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(4, 4)
+
+[node name="Belt" type="TextureRect" parent="Conveyor/SubViewportContainer/SubViewport/ScaleNode"]
+unique_name_in_owner = true
+light_mask = 0
+texture_filter = 1
+material = SubResource("ShaderMaterial_65std")
+layout_mode = 0
+offset_left = -4.0
+offset_top = 59.0
+offset_right = 859.0
+offset_bottom = 165.0
+texture = ExtResource("7")
+
+[node name="PacketContainer" type="Control" parent="Conveyor/SubViewportContainer/SubViewport/ScaleNode"]
+light_mask = 0
+layout_mode = 3
+anchors_preset = 0
+offset_left = 13.0
+offset_top = 34.0
+offset_right = 747.0
+offset_bottom = 34.0
+
+[node name="PacketContainer" type="HBoxContainer" parent="Conveyor"]
+light_mask = 0
+layout_mode = 0
+offset_left = 2.68908
+offset_top = 43.0252
+offset_right = 2.68908
+offset_bottom = 43.0252
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 51
+
+[node name="PacketContainer" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+offset_left = 103.0
+offset_top = 40.0
+offset_right = 103.0
+offset_bottom = 40.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 51
+
+[node name="LevelEditorSeedBankChoose" parent="." instance=ExtResource("8")]
+unique_name_in_owner = true
+offset_left = 1139.0
+offset_top = -2.0
+offset_right = 1139.0
+offset_bottom = -2.0

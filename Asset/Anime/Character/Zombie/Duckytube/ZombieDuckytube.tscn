@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=4 uid="uid://cfgdfuopusvnr"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://dmfy3p4lfylw2" path="res://Asset/Anime/Character/Zombie/Duckytube/ZombieDuckytube.tres" id="2"]
+
+[node name="ZombieDuckytube" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+useTween = false
+layerSlot = [null, null, null]
+layerSprite = [null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/Zombie_duckytube = true
+Animation/LayerVisible/Zombie_duckytube_inwater = false
+Animation/MediaReplace/Zombie_duckytube.png = null
+Animation/MediaReplace/Zombie_duckytube_inwater.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

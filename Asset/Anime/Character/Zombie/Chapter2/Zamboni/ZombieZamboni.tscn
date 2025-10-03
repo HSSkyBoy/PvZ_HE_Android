@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=4 uid="uid://dftoo8ogu8dsd"]
+
+[ext_resource type="Script" uid="uid://cgwpjld3gw53g" path="res://Asset/Anime/Character/Zombie/Chapter2/Zamboni/ZombieZamboniSprite.gd" id="1"]
+[ext_resource type="Resource" uid="uid://dfprh7rx6oy1x" path="res://Asset/Anime/Character/Zombie/Chapter2/Zamboni/ZombieZamboni.tres" id="2"]
+
+[node name="ZombieZamboni" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(0, -100)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Drive"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/Zombie_head = true
+Animation/LayerVisible/Zombie_jaw = true
+Animation/LayerVisible/Zombie_zamboni_1 = true
+Animation/LayerVisible/Zombie_zamboni_2 = true
+Animation/LayerVisible/Zombie_zamboni_3 = true
+Animation/LayerVisible/Zombie_zamboni_4 = true
+Animation/LayerVisible/Zombie_zamboni_brush = true
+Animation/LayerVisible/Zombie_zamboni_seat = true
+Animation/LayerVisible/Zombie_zamboni_wheel1 = true
+Animation/LayerVisible/Zombie_zamboni_wheel2 = true
+Animation/LayerVisible/Zombie_zamboni_wires = true
+Animation/LayerVisible/Zombie_zambonidriver_beanie = true
+Animation/LayerVisible/Zombie_zambonidriver_body = true
+Animation/LayerVisible/Zombie_zambonidriver_innerarm_hand = true
+Animation/LayerVisible/Zombie_zambonidriver_legs = true
+Animation/LayerVisible/Zombie_zambonidriver_lowerarm_inner = true
+Animation/LayerVisible/Zombie_zambonidriver_lowerarm_outer = true
+Animation/LayerVisible/Zombie_zambonidriver_mullet2 = true
+Animation/LayerVisible/Zombie_zambonidriver_outerarm_hand = true
+Animation/LayerVisible/Zombie_zambonidriver_shoulder = true
+Animation/LayerVisible/Zombie_zambonidriver_upperarm = true
+Animation/MediaReplace/Zombie_head.png = null
+Animation/MediaReplace/Zombie_jaw.png = null
+Animation/MediaReplace/Zombie_zamboni_1.png = null
+Animation/MediaReplace/Zombie_zamboni_2.png = null
+Animation/MediaReplace/Zombie_zamboni_3.png = null
+Animation/MediaReplace/Zombie_zamboni_4.png = null
+Animation/MediaReplace/Zombie_zamboni_brush.png = null
+Animation/MediaReplace/Zombie_zamboni_seat.png = null
+Animation/MediaReplace/Zombie_zamboni_wheel.png = null
+Animation/MediaReplace/Zombie_zamboni_wires.png = null
+Animation/MediaReplace/Zombie_zambonidriver_beanie.png = null
+Animation/MediaReplace/Zombie_zambonidriver_body.png = null
+Animation/MediaReplace/Zombie_zambonidriver_innerarm_hand.png = null
+Animation/MediaReplace/Zombie_zambonidriver_legs.png = null
+Animation/MediaReplace/Zombie_zambonidriver_lowerarm_outer.png = null
+Animation/MediaReplace/Zombie_zambonidriver_mullet2.png = null
+Animation/MediaReplace/Zombie_zambonidriver_outerarm_hand.png = null
+Animation/MediaReplace/Zombie_zambonidriver_shoulder.png = null
+Animation/MediaReplace/Zombie_zambonidriver_upperarm.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

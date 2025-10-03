@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CharacterCustomConfig" load_steps=2 format=4 uid="uid://bs6kcma73544u"]
+
+[ext_resource type="Script" uid="uid://dypv31guyoibc" path="res://Resource/General/Character/Costom/CharacterCustomConfig.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+openKey = "PeaCatCustom0"
+customName = "Custom0"
+customHandbookName = "TOWERDEFENSE_PLANT_PEACAT_CUSTOM_1_NAME"
+customHandbookAccess = "TOWERDEFENSE_PLANT_PEACAT_CUSTOM_1_ACCESS"
+customHandbookStory = "TOWERDEFENSE_PLANT_PEACAT_CUSTOM_1_STORY"
+animeFliterOpen = "skin1_1&skin1_2&skin1_3&skin1_4&skin1_5&skin2&skin3_1&skin3_2&skin3_3&&skin4"
+animeFliterClose = ""
+damagePointChangeMediaName = ""
+damagePointChangeMediaTexture = []
+metadata/_custom_type_script = "uid://dypv31guyoibc"

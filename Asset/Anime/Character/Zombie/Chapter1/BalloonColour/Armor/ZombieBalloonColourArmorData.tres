@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="CharacterArmorData" load_steps=8 format=4 uid="uid://mqmtpq6vfpl2"]
+
+[ext_resource type="Resource" uid="uid://cypo2ge6kneq5" path="res://Asset/Anime/Character/Zombie/Chapter1/BalloonColour/Armor/Config/ZombieBalloonColourArmorBalloonColour.tres" id="1"]
+[ext_resource type="Resource" uid="uid://bxfl3061613th" path="res://Asset/Anime/Character/Zombie/Chapter1/BalloonColour/Armor/Config/ZombieBalloonColourArmorBlackHelmet.tres" id="2"]
+[ext_resource type="Resource" uid="uid://blblvkqedkkuh" path="res://Asset/Anime/Character/Zombie/Chapter1/BalloonColour/Armor/Config/ZombieBalloonColourArmorBucket.tres" id="3"]
+[ext_resource type="Resource" uid="uid://c8q8xqrxhhbby" path="res://Asset/Anime/Character/Zombie/Chapter1/BalloonColour/Armor/Config/ZombieBalloonColourArmorCone.tres" id="4"]
+[ext_resource type="Resource" uid="uid://ce7odyi14e5rd" path="res://Asset/Anime/Character/Zombie/Chapter1/BalloonColour/Armor/Config/ZombieBalloonColourArmorHelmet.tres" id="5"]
+[ext_resource type="Resource" uid="uid://e6l5ftt7ynxp" path="res://Asset/Anime/Character/Zombie/Chapter1/BalloonColour/Armor/Config/ZombieBalloonColourArmorSpecialHelmet.tres" id="6"]
+[ext_resource type="Script" uid="uid://ci4c6gpjugqpl" path="res://Resource/General/Character/Armor/CharacterArmorData.gd" id="7"]
+
+[resource]
+script = ExtResource("7")
+armorList = [ExtResource("4"), ExtResource("3"), ExtResource("5"), ExtResource("2"), ExtResource("6"), ExtResource("1")]
+armorDictionary = {
+"BalloonColour": ExtResource("1"),
+"BlackHelmet": ExtResource("2"),
+"Bucket": ExtResource("3"),
+"Cone": ExtResource("4"),
+"Helmet": ExtResource("5"),
+"SpecialHelmet": ExtResource("6")
+}
+fliterAllDictionary = {
+"BalloonColour": [],
+"BlackHelmet": [],
+"Bucket": ["anim_bucket"],
+"Cone": ["anim_cone"],
+"Helmet": [],
+"SpecialHelmet": []
+}
+fliterOpenDictionary = {
+"BalloonColour": [],
+"BlackHelmet": [],
+"Bucket": [],
+"Cone": [],
+"Helmet": [],
+"SpecialHelmet": []
+}
+fliterCloseDictionary = {
+"BalloonColour": [],
+"BlackHelmet": [],
+"Bucket": [],
+"Cone": [],
+"Helmet": [],
+"SpecialHelmet": []
+}

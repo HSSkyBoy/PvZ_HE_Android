@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="TowerDefenseProjectileConfig" load_steps=6 format=4 uid="uid://b0gxmn1gqr3iu"]
+
+[ext_resource type="Script" path="res://Resource/TowerDefense/Character/Event/General/TowerDefenseCharacterEventIceSpeedDown.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://x8go376ra0lr" path="res://Asset/Texture/TowerDefense/Projectile/WinterMelon/ProjectileWinterMelon.tscn" id="2"]
+[ext_resource type="Script" uid="uid://b7ddnv74g0463" path="res://Resource/TowerDefense/Projectile/TowerDefenseProjectileConfig.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://cyckg6uoamlaq" path="res://Prefab/Particles/Splats/WinterMelonSplats/WinterMelonSplats.tscn" id="4"]
+
+[sub_resource type="Resource" id="Resource_yjdge"]
+script = ExtResource("1")
+time = 15.0
+fliterShield = false
+metadata/_custom_type_script = "uid://b7bsdfdfctvuh"
+
+[resource]
+script = ExtResource("3")
+name = "WinterMelonDefault"
+size = Vector2(28, 28)
+baseDamage = 80.0
+projectileScene = ExtResource("2")
+projectileObject = 310
+splatSceneType = "Particles"
+splatAudio = "MelonImpact"
+splatScene = ExtResource("4")
+splatObject = 108
+hitEffect = null
+hitTargetEventList = []
+hitCharacterEventList = [SubResource("Resource_yjdge")]
+hitGroundEventList = []
+rotateScale = 5.0
+hitBody = true
+fireLength = -1.0
+useRange = true
+rangeSize = Vector2(0.5, 1.25)
+hitPesontage = 0.25
+damageFlags = 2
+fireMethodFlags = 1
+collisionFlags = 1
+catapultHeight = 400.0
+penetrateNum = 3
+penetrateOverBack = true
+backOutGround = true
+backDuration = 1.0
+Flag/Damage = 2
+Flag/FireMethod = 1
+Flag/Collision = 1

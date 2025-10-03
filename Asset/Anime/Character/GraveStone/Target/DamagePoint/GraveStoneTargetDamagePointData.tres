@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CharacterDamagePointData" load_steps=8 format=4 uid="uid://cjfs262m7fcqi"]
+
+[ext_resource type="Resource" uid="uid://n7m7b8vomvwj" path="res://Asset/Anime/Character/GraveStone/Target/DamagePoint/Config/GraveStoneTargetDamagePointDamage0.tres" id="1"]
+[ext_resource type="Resource" uid="uid://brddfbhb3tk4s" path="res://Asset/Anime/Character/GraveStone/Target/DamagePoint/Config/GraveStoneTargetDamagePointDamage1.tres" id="2"]
+[ext_resource type="Resource" uid="uid://c14ducltjcm4q" path="res://Asset/Anime/Character/GraveStone/Target/DamagePoint/Config/GraveStoneTargetDamagePointDamage2.tres" id="3"]
+[ext_resource type="Resource" uid="uid://xrnobvw35cdp" path="res://Asset/Anime/Character/GraveStone/Target/DamagePoint/Config/GraveStoneTargetDamagePointDamage3.tres" id="4"]
+[ext_resource type="Resource" uid="uid://cy0vh0x08g4wd" path="res://Asset/Anime/Character/GraveStone/Target/DamagePoint/Config/GraveStoneTargetDamagePointDamage4.tres" id="5"]
+[ext_resource type="Resource" uid="uid://r1dqn0sex3gm" path="res://Asset/Anime/Character/GraveStone/Target/DamagePoint/Config/GraveStoneTargetDamagePointDamage5.tres" id="6"]
+[ext_resource type="Script" uid="uid://c3lvn8julbk1s" path="res://Resource/General/Character/DamagePoint/CharacterDamagePointData.gd" id="7"]
+
+[resource]
+script = ExtResource("7")
+damagePointList = [ExtResource("1"), ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5"), ExtResource("6")]
+damagePointDictionary = {
+"Damage0": {
+"Close": [],
+"Config": ExtResource("1"),
+"Open": []
+},
+"Damage1": {
+"Close": [],
+"Config": ExtResource("2"),
+"Open": []
+},
+"Damage2": {
+"Close": [],
+"Config": ExtResource("3"),
+"Open": []
+},
+"Damage3": {
+"Close": [],
+"Config": ExtResource("4"),
+"Open": []
+},
+"Damage4": {
+"Close": [],
+"Config": ExtResource("5"),
+"Open": []
+},
+"Damage5": {
+"Close": [],
+"Config": ExtResource("6"),
+"Open": []
+}
+}
+fliterOpenAll = []
+fliterCloseAll = []
+metadata/_custom_type_script = "uid://c3lvn8julbk1s"

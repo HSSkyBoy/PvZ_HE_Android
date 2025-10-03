@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=4 uid="uid://ldjjttabr8x"]
+
+[ext_resource type="PackedScene" uid="uid://jm05awl7yeg" path="res://Prefab/TowerDefense/Character/TowerDefenseGravestone.tscn" id="1"]
+[ext_resource type="Script" uid="uid://b3aoc20rp0kpl" path="res://Asset/Anime/Character/GraveStone/Target/Scene/TowerDefenseGraveStoneTarget.gd" id="2"]
+[ext_resource type="Resource" uid="uid://fafyilq8ek72" path="res://Asset/Anime/Character/GraveStone/Target/Config/TowerDefenseGraveStoneTarget.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://bt42liww2ng1x" path="res://Asset/Anime/Character/GraveStone/Target/GraveStoneTarget.tscn" id="4"]
+
+[node name="TowerDefenseGraveStoneTarget" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/GraveStoneDefault")
+PreviewDamagePointPersontage = 1.0
+
+[node name="GraveStoneDefault" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+position = Vector2(0, -18)
+trueFrameRate = 30.0
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 26)

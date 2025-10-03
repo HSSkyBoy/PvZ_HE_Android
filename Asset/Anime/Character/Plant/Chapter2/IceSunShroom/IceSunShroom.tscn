@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=4 uid="uid://bv7l7yawooum8"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://c0orhyuoe2hgb" path="res://Asset/Anime/Character/Plant/Chapter2/IceSunShroom/IceSunShroom.tres" id="2"]
+
+[node name="IceSunShroom" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null, null]
+layerSprite = [null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/sleep = true
+"Animation/LayerVisible/图层_46" = true
+"Animation/LayerVisible/图层_47" = true
+"Animation/LayerVisible/图层_48" = true
+Animation/MediaReplace/IceSunShroom_0001_3.png = null
+Animation/MediaReplace/IceSunShroom_0002_2.png = null
+Animation/MediaReplace/IceSunShroom_0003_1.png = null
+Animation/MediaReplace/IceSunShroom_blink2.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

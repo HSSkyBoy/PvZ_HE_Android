@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=4 uid="uid://dfo6k1agbut6f"]
+
+[ext_resource type="PackedScene" uid="uid://fc46lp4e26sk" path="res://Prefab/GUI/DialogBox/MenuDialog/MenuDialogBase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cjy06kjbid1u0" path="res://Prefab/GUI/DialogBox/MenuDialog/DialogBattlePause/DialogBattlePause.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://bml60wmq62jay" path="res://Prefab/GUI/Button/MainButton.tscn" id="3"]
+
+[node name="MenuDialogBattle" instance=ExtResource("1")]
+script = ExtResource("2")
+pasue = true
+aliveProcessMode = 3
+
+[node name="ButtonContainer" parent="Layer/Control/DialogMenu" index="6"]
+offset_top = 236.0
+offset_bottom = 370.0
+
+[node name="HandbookButton" parent="Layer/Control/DialogMenu/ButtonContainer" index="0" instance=ExtResource("3")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "返回选关"
+
+[node name="LevelEditorButton" parent="Layer/Control/DialogMenu/ButtonContainer" index="1" instance=ExtResource("3")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "返回编辑器"
+
+[node name="RestartButton" parent="Layer/Control/DialogMenu/ButtonContainer" index="2" instance=ExtResource("3")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "重新开始"
+
+[node name="MainMenuButton" parent="Layer/Control/DialogMenu/ButtonContainer" index="3" instance=ExtResource("3")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "主菜单"
+
+[connection signal="pressed" from="Layer/Control/DialogMenu/ButtonContainer/HandbookButton" to="." method="HandbookButtonPressed"]
+[connection signal="pressed" from="Layer/Control/DialogMenu/ButtonContainer/LevelEditorButton" to="." method="LevelEditorButtonPressed"]
+[connection signal="pressed" from="Layer/Control/DialogMenu/ButtonContainer/RestartButton" to="." method="RestartButtonPressed"]
+[connection signal="pressed" from="Layer/Control/DialogMenu/ButtonContainer/MainMenuButton" to="." method="MainMenuButtonPressed"]

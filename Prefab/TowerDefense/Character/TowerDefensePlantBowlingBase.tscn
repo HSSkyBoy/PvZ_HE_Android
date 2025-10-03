@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=4 uid="uid://colk7liw31q6k"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://d2ys4ch5fet2h" path="res://Prefab/TowerDefense/Character/TowerDefensePlantBowlingBase.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://bhh76tmil13cb" path="res://Script/Component/MoveComponent/MoveComponent.tscn" id="3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ywj4"]
+size = Vector2(58, 12)
+
+[node name="TowerDefensePlantBowlingBase" instance=ExtResource("1")]
+z_index = -6
+script = ExtResource("2")
+rollAnimeClip = "Roll"
+rollYVelocity = 250.0
+hitEvent = []
+itemLayer = 9
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 30)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_5ywj4")
+
+[node name="MoveComponent" parent="." index="7" instance=ExtResource("3")]
+unique_name_in_owner = true
+
+[connection signal="area_entered" from="HitBox" to="." method="HitCheck"]

@@ -1,0 +1,74 @@
+[gd_scene load_steps=9 format=4 uid="uid://cvxe5feqrsbte"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bxfs6o5chxwsp" path="res://Asset/Anime/Character/Plant/Chapter1/ReCactus/Scene/TowerDefensePlantReCactus.gd" id="2"]
+[ext_resource type="Resource" uid="uid://b7trqflax5o8s" path="res://Asset/Anime/Character/Plant/Chapter1/ReCactus/Config/TowerDefensePlantReCactus.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://d1vw0tfo3lpeh" path="res://Asset/Anime/Character/Plant/Chapter1/ReCactus/ReCactus.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://b5htxrgm8twcr" path="res://Script/Component/TowerDefense/Character/FireComponent/FireComponent.tscn" id="5"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="6"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="7"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_mig1w"]
+b = Vector2(2000, 0)
+
+[node name="TowerDefensePlantReCactus" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+fireInterval = 1.5
+fireNum = 2
+idleAnimeClip = "BodyIdle"
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ReCactus")
+Custom = []
+gravity = 245.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="ReCactus" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+position = Vector2(0, -30)
+trueFrameRate = 30.0
+Animation/LayerVisible/Cactus_floer_top = true
+
+[node name="Head" parent="SpriteGroup/TransformPoint/ReCactus" index="0"]
+position = Vector2(0.310001, 2.17)
+trueFrameRate = 30.0
+Animation/LayerVisible/frontleaf = true
+Animation/LayerVisible/frontleaf_right_tip = true
+Animation/LayerVisible/frontleaf_tip_left = true
+
+[node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/ReCactus/Head" index="0"]
+position = Vector2(29.5794, -18.222)
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 30)
+
+[node name="FireComponent" parent="." index="5" node_paths=PackedStringArray("firePosMarker", "checkArea") instance=ExtResource("5")]
+unique_name_in_owner = true
+firePosMarker = [NodePath("../SpriteGroup/TransformPoint/ReCactus/Head/Marker2D")]
+checkArea = NodePath("Area2D")
+fireInterval = 5.0
+
+[node name="Area2D" type="Area2D" parent="FireComponent" index="0"]
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FireComponent/Area2D" index="0"]
+shape = SubResource("SegmentShape2D_mig1w")
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+
+[node name="Attack" type="Node" parent="StateChart/CompoundState" index="2"]
+script = ExtResource("6")
+
+[node name="ToAttack" type="Node" parent="StateChart/CompoundState" index="6"]
+script = ExtResource("7")
+to = NodePath("../Attack")
+event = &"ToAttack"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="StateChart/CompoundState/Attack" to="." method="AttackEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Attack" to="." method="AttackExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Attack" to="." method="AttackProcessing"]
+
+[editable path="SpriteGroup/TransformPoint/ReCactus"]

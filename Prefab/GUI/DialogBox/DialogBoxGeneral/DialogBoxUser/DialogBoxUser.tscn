@@ -1,0 +1,161 @@
+[gd_scene load_steps=9 format=4 uid="uid://bl4axhkknocdw"]
+
+[ext_resource type="PackedScene" uid="uid://nx2prtbxim66" path="res://Prefab/GUI/DialogBox/DialogBoxGeneral/DialogPopup.tscn" id="1"]
+[ext_resource type="Script" uid="uid://chpfi5s6wlsgy" path="res://Prefab/GUI/DialogBox/DialogBoxGeneral/DialogBoxUser/DialogBoxUser.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://bn6x5r8edch6c" path="res://Asset/Texture/GUI/General/DialogBox/DialogBoxLarge.png" id="3"]
+[ext_resource type="PackedScene" uid="uid://bml60wmq62jay" path="res://Prefab/GUI/Button/MainButton.tscn" id="4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m03at"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ogr48"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_56xew"]
+bg_color = Color(0, 0.745098, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4fqh5"]
+
+[node name="DialogBoxUser" instance=ExtResource("1")]
+script = ExtResource("2")
+
+[node name="Control" parent="Layer" index="1"]
+offset_top = 56.0
+offset_bottom = -56.0
+
+[node name="MarginContainer2" parent="Layer/Control" index="0"]
+offset_top = -244.0
+offset_bottom = 244.0
+
+[node name="NinePatchRect" parent="Layer/Control/MarginContainer2" index="0"]
+texture = ExtResource("3")
+patch_margin_bottom = 146
+
+[node name="ButtonContainer" parent="Layer/Control" index="1"]
+offset_left = -180.0
+offset_top = 79.888
+offset_right = 168.0
+offset_bottom = 175.888
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Layer/Control/ButtonContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RenameButton" parent="Layer/Control/ButtonContainer/VBoxContainer" index="0" instance=ExtResource("4")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "重命名"
+
+[node name="FinishButton" parent="Layer/Control/ButtonContainer/VBoxContainer" index="1" instance=ExtResource("4")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "好"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Layer/Control/ButtonContainer" index="1"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DeleteButton" parent="Layer/Control/ButtonContainer/VBoxContainer2" index="0" instance=ExtResource("4")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "删除"
+
+[node name="CancelButton" parent="Layer/Control/ButtonContainer/VBoxContainer2" index="1" instance=ExtResource("4")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "取消"
+
+[node name="TextLabel" type="RichTextLabel" parent="Layer/Control" index="2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49
+anchor_top = 0.41
+anchor_right = 0.49
+anchor_bottom = 0.41
+offset_left = -135.84
+offset_top = -152.08
+offset_right = 152.16
+offset_bottom = -123.08
+theme_override_colors/default_color = Color(0.92549, 0.741176, 0.447059, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center][font_size=24]你叫啥？[/font_size][/center]"
+fit_content = true
+autowrap_mode = 0
+
+[node name="ColorRect2" type="ColorRect" parent="Layer/Control" index="3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.495
+anchor_top = 0.411
+anchor_right = 0.495
+anchor_bottom = 0.411
+offset_left = -145.92
+offset_top = -113.544
+offset_right = 146.08
+offset_bottom = 113.456
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0.0588235, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Layer/Control/ColorRect2" index="0"]
+layout_mode = 0
+offset_right = 292.0
+offset_bottom = 226.0
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Layer/Control/ColorRect2/ScrollContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="UserContainer" type="VBoxContainer" parent="Layer/Control/ColorRect2/ScrollContainer/VBoxContainer" index="0"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CreateUserButton" type="Button" parent="Layer/Control/ColorRect2/ScrollContainer/VBoxContainer" index="1"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.901961, 0.858824, 0.74902, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m03at")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ogr48")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_56xew")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4fqh5")
+text = "(建立一位新用户)"
+
+[node name="LogOutButton" parent="Layer/Control" index="4" instance=ExtResource("4")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 474.0
+offset_top = 97.0
+offset_right = 591.0
+offset_bottom = 143.0
+size_flags_horizontal = 3
+text = "注销"
+
+[node name="BackButton" parent="Layer/Control" index="5" instance=ExtResource("4")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 459.0
+offset_top = 97.0
+offset_right = 606.0
+offset_bottom = 143.0
+size_flags_horizontal = 3
+text = "返回登录"
+
+[connection signal="pressed" from="Layer/Control/ButtonContainer/VBoxContainer/RenameButton" to="." method="RenameButtonPressed"]
+[connection signal="pressed" from="Layer/Control/ButtonContainer/VBoxContainer/FinishButton" to="." method="FinishButtonPressed"]
+[connection signal="pressed" from="Layer/Control/ButtonContainer/VBoxContainer2/DeleteButton" to="." method="DeleteButtonPressed"]
+[connection signal="pressed" from="Layer/Control/ButtonContainer/VBoxContainer2/CancelButton" to="." method="CancelButtonPressed"]
+[connection signal="pressed" from="Layer/Control/ColorRect2/ScrollContainer/VBoxContainer/CreateUserButton" to="." method="CreateUserButtonPressed"]
+[connection signal="pressed" from="Layer/Control/LogOutButton" to="." method="LogOutButtonPressed"]
+[connection signal="pressed" from="Layer/Control/BackButton" to="." method="BackButtonPressed"]

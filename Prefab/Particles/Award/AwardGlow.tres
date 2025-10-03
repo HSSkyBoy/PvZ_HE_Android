@@ -1,0 +1,21 @@
+[gd_resource type="ParticleProcessMaterial" load_steps=3 format=3 uid="uid://c0mmnel4nbdch"]
+
+[sub_resource type="Curve" id="Curve_cyyja"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_jpslm"]
+curve = SubResource("Curve_cyyja")
+
+[resource]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 128.0
+angle_min = -720.0
+angle_max = 720.0
+angular_velocity_min = 90.0
+angular_velocity_max = 90.0
+gravity = Vector3(0, 0, 0)
+scale_min = 50.0
+scale_max = 50.0
+scale_curve = SubResource("CurveTexture_jpslm")

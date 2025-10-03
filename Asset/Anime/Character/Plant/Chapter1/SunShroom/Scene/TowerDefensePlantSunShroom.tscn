@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=4 uid="uid://cyiixbl3ko2d6"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://dyje5iuf4cmp6" path="res://Asset/Anime/Character/Plant/Chapter1/SunShroom/Scene/TowerDefensePlantSunShroom.gd" id="2"]
+[ext_resource type="Resource" uid="uid://cyletqaqlcq1l" path="res://Asset/Anime/Character/Plant/Chapter1/SunShroom/Config/TowerDefensePlantSunShroom.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://4eejky1qkkhp" path="res://Asset/Anime/Character/Plant/Chapter1/SunShroom/SunShroom.tscn" id="4"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="5"]
+[ext_resource type="PackedScene" uid="uid://c5d74tbefbann" path="res://Script/Component/TowerDefense/Character/ProduceComponent/ProduceComponent.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://boq44pntt712l" path="res://Script/Component/TowerDefense/Character/GrowUpComponent/GrowUpComponent.tscn" id="7"]
+
+[node name="TowerDefensePlantSunShroom" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+produceInterval = 25.0
+sunNum = 25
+growUpTime = 60.0
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/SunShroom")
+Custom = []
+gravity = 245.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="SunShroom" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("4")]
+position = Vector2(0, -30)
+trueFrameRate = 30.0
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("AdobeAnimateSlot"), null, null, null, null, null, null, null, null, null]
+
+[node name="AdobeAnimateSlot" type="Node2D" parent="SpriteGroup/TransformPoint/SunShroom" index="0"]
+position = Vector2(-15.2, -21.53)
+scale = Vector2(0.799988, 0.746969)
+script = ExtResource("5")
+followSlotId = 32
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/SunShroom/AdobeAnimateSlot" index="0"]
+position = Vector2(29.2062, 23.8581)
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 30)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+
+[node name="ProduceComponent" parent="." index="7" node_paths=PackedStringArray("marker") instance=ExtResource("6")]
+unique_name_in_owner = true
+marker = [NodePath("../SpriteGroup/TransformPoint/SunShroom/AdobeAnimateSlot/Marker2D")]
+
+[node name="GrowUpComponent" parent="." index="8" instance=ExtResource("7")]
+unique_name_in_owner = true
+growUpTime = [60.0]
+growUpSize = [1.25]
+
+[connection signal="grow" from="GrowUpComponent" to="." method="GowUp"]

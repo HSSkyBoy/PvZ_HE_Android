@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=4 uid="uid://c7fal5vl7o5rc"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://tv4ddlesxhqw" path="res://Asset/Anime/Npc/Stinky/Stinky.tres" id="2"]
+
+[node name="Stinky" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null]
+Animation/Clip = "Out"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/_ground = false
+Animation/LayerVisible/antenna = true
+Animation/LayerVisible/body = true
+Animation/LayerVisible/shell = true
+Animation/LayerVisible/tail = true
+Animation/LayerVisible/turn = true
+Animation/MediaReplace/Ground.png = null
+Animation/MediaReplace/Stinky_antenna.png = null
+Animation/MediaReplace/Stinky_body.png = null
+Animation/MediaReplace/Stinky_shell.png = null
+Animation/MediaReplace/Stinky_tail.png = null
+Animation/MediaReplace/Stinky_turn1.png = null
+Animation/MediaReplace/Stinky_turn2.png = null
+Animation/MediaReplace/Stinky_turn3.png = null
+Animation/MediaReplace/Stinky_turn4.png = null
+Animation/MediaReplace/Stinky_turn5.png = null
+Animation/MediaReplace/Stinky_turn6.png = null
+Animation/MediaReplace/Stinky_turn7.png = null
+Animation/MediaReplace/Stinky_turn8.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

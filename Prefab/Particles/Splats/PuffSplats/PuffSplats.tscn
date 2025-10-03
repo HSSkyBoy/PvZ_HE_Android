@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=4 uid="uid://dj5uavekcsu6g"]
+
+[ext_resource type="Texture2D" uid="uid://bluhyb25ffpxy" path="res://Asset/Anime/Particles/Special/PuffShroomPuff.png" id="1"]
+[ext_resource type="Material" uid="uid://dls4tugpwsmom" path="res://Prefab/Particles/Splats/PuffSplats/PuffSplats.tres" id="2"]
+[ext_resource type="Script" uid="uid://dywgdjamo0ovs" path="res://Extends/Particles/GPUParticles2DOnece.gd" id="3"]
+
+[node name="PuffSplats" type="GPUParticles2D"]
+emitting = false
+amount = 6
+texture = ExtResource("1")
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+process_material = ExtResource("2")
+script = ExtResource("3")

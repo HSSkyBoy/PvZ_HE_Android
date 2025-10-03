@@ -1,0 +1,15 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://dww00k8yk5k72"
+path="res://.godot/imported/wryh+pico12num.ttf-a6c44c6904774e7bc811832465a53647.fontdata"
+
+[deps]
+
+source_file="res://Asset/Font/wryh+pico12num.ttf"
+dest_files=["res://.godot/imported/wryh+pico12num.ttf-a6c44c6904774e7bc811832465a53647.fontdata"]
+
+[params]
+
+dummy_value_ignore_me=0

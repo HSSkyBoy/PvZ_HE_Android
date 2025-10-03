@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=4 uid="uid://14d7mb2lm57h"]
+
+[ext_resource type="PackedScene" uid="uid://jm05awl7yeg" path="res://Prefab/TowerDefense/Character/TowerDefenseGravestone.tscn" id="1"]
+[ext_resource type="Script" uid="uid://b3ctyxjko0aj0" path="res://Asset/Anime/Character/GraveStone/Default/Scene/TowerDefenseGraveStoneDefault.gd" id="2"]
+[ext_resource type="Resource" uid="uid://juieot16lhx1" path="res://Asset/Anime/Character/GraveStone/Default/Config/TowerDefenseGraveStoneDefault.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://rex8c803eb7s" path="res://Asset/Anime/Character/GraveStone/Default/GraveStoneDefault.tscn" id="4"]
+
+[node name="TowerDefenseGraveStoneDefault" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+idleAnimeClip = "Idle1&Idle10&Idle11&Idle12&Idle13&Idle14&Idle15&Idle16&Idle17&Idle18&Idle19&Idle2&Idle20&Idle3&Idle4&Idle5&Idle6&Idle7&Idle8&Idle9"
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/GraveStoneDefault")
+
+[node name="GraveStoneDefault" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+position = Vector2(0, -18)
+Animation/Clip = "Idle1"
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 26)

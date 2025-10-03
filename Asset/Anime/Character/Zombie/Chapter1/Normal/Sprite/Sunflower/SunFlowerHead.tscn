@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=4 uid="uid://c23eqnsjkd0gb"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://d3fpkbewy23j0" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Sprite/Sunflower/SunFlowerHead.tres" id="2"]
+
+[node name="SunFlowerHead" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/SunFlower_bottompetals = true
+Animation/LayerVisible/SunFlower_leftpetal1 = true
+Animation/LayerVisible/SunFlower_leftpetal2 = true
+Animation/LayerVisible/SunFlower_leftpetal3 = true
+Animation/LayerVisible/SunFlower_leftpetal4 = true
+Animation/LayerVisible/SunFlower_leftpetal5 = true
+Animation/LayerVisible/SunFlower_leftpetal6 = true
+Animation/LayerVisible/SunFlower_leftpetal7 = true
+Animation/LayerVisible/SunFlower_leftpetal8 = true
+Animation/LayerVisible/SunFlower_rightpetal1 = true
+Animation/LayerVisible/SunFlower_rightpetal2 = true
+Animation/LayerVisible/SunFlower_rightpetal3 = true
+Animation/LayerVisible/SunFlower_rightpetal4 = true
+Animation/LayerVisible/SunFlower_rightpetal5 = true
+Animation/LayerVisible/SunFlower_rightpetal6 = true
+Animation/LayerVisible/SunFlower_rightpetal7 = true
+Animation/LayerVisible/SunFlower_rightpetal8 = true
+Animation/LayerVisible/SunFlower_rightpetal9 = true
+Animation/LayerVisible/SunFlower_toppetals = true
+Animation/LayerVisible/anim_idle = true
+Animation/MediaReplace/SunFlower_bottompetals.png = null
+Animation/MediaReplace/SunFlower_head.png = null
+Animation/MediaReplace/SunFlower_leftpetal1.png = null
+Animation/MediaReplace/SunFlower_leftpetal2.png = null
+Animation/MediaReplace/SunFlower_leftpetal3.png = null
+Animation/MediaReplace/SunFlower_leftpetal4.png = null
+Animation/MediaReplace/SunFlower_leftpetal5.png = null
+Animation/MediaReplace/SunFlower_leftpetal6.png = null
+Animation/MediaReplace/SunFlower_leftpetal7.png = null
+Animation/MediaReplace/SunFlower_leftpetal8.png = null
+Animation/MediaReplace/SunFlower_rightpetal1.png = null
+Animation/MediaReplace/SunFlower_rightpetal2.png = null
+Animation/MediaReplace/SunFlower_rightpetal3.png = null
+Animation/MediaReplace/SunFlower_rightpetal4.png = null
+Animation/MediaReplace/SunFlower_rightpetal5.png = null
+Animation/MediaReplace/SunFlower_rightpetal6.png = null
+Animation/MediaReplace/SunFlower_rightpetal7.png = null
+Animation/MediaReplace/SunFlower_rightpetal8.png = null
+Animation/MediaReplace/SunFlower_rightpetal9.png = null
+Animation/MediaReplace/SunFlower_toppetals.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

@@ -1,0 +1,802 @@
+[gd_scene load_steps=25 format=4 uid="uid://54lyi8ygt8gb"]
+
+[ext_resource type="Script" uid="uid://oca8u00h7omk" path="res://Prefab/GUI/DialogBox/Almanac/Almanac.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dac8nun5u5icb" path="res://Asset/Texture/GUI/Almanac/AlmanacChooseBackground.jpg" id="2"]
+[ext_resource type="Texture2D" uid="uid://cixidt5roa5wx" path="res://Asset/Texture/GUI/Almanac/ChallengeProp.png" id="3"]
+[ext_resource type="FontFile" uid="uid://coqskwlqtnypf" path="res://Asset/Font/fzkt.ttf" id="4"]
+[ext_resource type="PackedScene" uid="uid://bgkuthysw0876" path="res://Prefab/GUI/Button/NinePatchButtonBase/NinePatchButtonBase.tscn" id="5"]
+[ext_resource type="FontFile" uid="uid://bibg4dobk6vpn" path="res://Asset/Font/fzjz.ttf" id="6"]
+[ext_resource type="Texture2D" uid="uid://b7h3dkbuiexf8" path="res://Asset/Texture/GUI/General/General/OptionButton.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://diu057evu2onj" path="res://Asset/Texture/GUI/General/General/OptionButtonDown.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://c1jocs3s84m21" path="res://Asset/Texture/Character/Effect/Shadow.png" id="9"]
+[ext_resource type="PackedScene" uid="uid://dnb383542ldh5" path="res://Asset/Anime/Character/Plant/Chapter0/PeaShooterSingle/PeaShooterSingle.tscn" id="10"]
+[ext_resource type="PackedScene" uid="uid://vp5mpqwb0n8b" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Sprite/Normal/ZombieNormal.tscn" id="11"]
+[ext_resource type="Texture2D" uid="uid://5g77vokbovtp" path="res://Asset/Texture/GUI/General/ShovelBank/Shovel.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://bed3sfdsueadw" path="res://Asset/Texture/GUI/Almanac/AlmanacPlantBackground.jpg" id="13"]
+[ext_resource type="Texture2D" uid="uid://cifxiogddpy7c" path="res://Asset/Texture/GUI/Almanac/AlmanacIndexButton.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://btvkbaffgdpeu" path="res://Asset/Texture/GUI/Almanac/AlmanacIndexButtonHighlight.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://d3b0r21ijnq8i" path="res://Asset/Texture/GUI/Almanac/AlmanacIndexButton2.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://ub7q67yerp6h" path="res://Asset/Texture/GUI/Almanac/AlmanacIndexButton2Highlight.png" id="17"]
+[ext_resource type="PackedScene" uid="uid://5ru71tluvpvm" path="res://Prefab/GUI/InformationPanel/InformationPanel.tscn" id="18"]
+[ext_resource type="Texture2D" uid="uid://fvejtgjtsrf" path="res://Asset/Texture/GUI/Almanac/AlmanacZombieBackground.jpg" id="19"]
+[ext_resource type="PackedScene" uid="uid://ib0k47porp8k" path="res://Prefab/GUI/InformationPanel/InformationPanelZombie.tscn" id="20"]
+[ext_resource type="Texture2D" uid="uid://biufnrdaxgy2" path="res://Asset/Texture/GUI/Almanac/AlmanacPropBackground.jpg" id="21"]
+[ext_resource type="Texture2D" uid="uid://cwk7ai6cvx44r" path="res://Asset/Texture/GUI/Almanac/AlmanacPropBox.png" id="22"]
+[ext_resource type="Texture2D" uid="uid://dk5k73w0r814x" path="res://Asset/Texture/GUI/Almanac/AlmanacCloseButton.png" id="23"]
+[ext_resource type="Texture2D" uid="uid://c4tq485m7sy1b" path="res://Asset/Texture/GUI/Almanac/AlmanacCloseButtonHighlight.png" id="24"]
+
+[node name="Almanac" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1")
+pasue = true
+
+[node name="ChooseLayer" type="CanvasLayer" parent="."]
+layer = 50
+
+[node name="Choose" type="Control" parent="ChooseLayer"]
+light_mask = 0
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AlmanacChooseBackground" type="TextureRect" parent="ChooseLayer/Choose"]
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2")
+
+[node name="ChallengeProp" type="TextureRect" parent="ChooseLayer/Choose"]
+light_mask = 0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -104.5
+offset_top = -196.0
+offset_right = 104.5
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("3")
+
+[node name="TitleLabel" type="Label" parent="ChooseLayer/Choose"]
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.494
+anchor_right = 0.494
+offset_left = -424.52
+offset_top = 25.0
+offset_right = 423.48
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0.907942, 0.907942, 0.907942, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4")
+theme_override_font_sizes/font_size = 32
+text = "图鉴——索引"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlantButton" parent="ChooseLayer/Choose" instance=ExtResource("5")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.263
+anchor_top = 0.543
+anchor_right = 0.263
+anchor_bottom = 0.543
+offset_left = -91.04
+offset_top = -20.8
+offset_right = 90.96
+offset_bottom = 21.2
+text = "查看植物"
+
+[node name="LabelText" parent="ChooseLayer/Choose/PlantButton/CenterContainer" index="0"]
+theme_override_colors/font_color = Color(0.894121, 0.625701, 3.85046e-07, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = -1
+theme_override_constants/shadow_offset_y = -1
+theme_override_fonts/font = ExtResource("6")
+text = "查看植物"
+
+[node name="ZombieButton" parent="ChooseLayer/Choose" instance=ExtResource("5")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.742
+anchor_top = 0.542
+anchor_right = 0.742
+anchor_bottom = 0.542
+offset_left = -94.36
+offset_top = -21.2
+offset_right = 93.64
+offset_bottom = 21.8
+theme_override_constants/margin_bottom = 0
+text = "查看僵尸"
+normalTexture = ExtResource("7")
+pressedTexture = ExtResource("8")
+hoverTexture = ExtResource("8")
+
+[node name="NinePatchTexture" parent="ChooseLayer/Choose/ZombieButton" index="0"]
+texture = ExtResource("7")
+
+[node name="LabelText" parent="ChooseLayer/Choose/ZombieButton/CenterContainer" index="0"]
+theme_override_colors/font_color = Color(0, 0.760784, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.215686, 0.219608, 0.290196, 1)
+theme_override_constants/shadow_offset_x = -2
+theme_override_constants/shadow_offset_y = -2
+text = "查看僵尸"
+
+[node name="PropButton" parent="ChooseLayer/Choose" instance=ExtResource("5")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.498
+anchor_top = 0.845
+anchor_right = 0.498
+anchor_bottom = 0.845
+offset_left = -59.84
+offset_top = -21.0
+offset_right = 60.16
+offset_bottom = 21.0
+text = "查看道具"
+
+[node name="LabelText" parent="ChooseLayer/Choose/PropButton/CenterContainer" index="0"]
+theme_override_colors/font_color = Color(0.894121, 0.625701, 3.85046e-07, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = -1
+theme_override_constants/shadow_offset_y = -1
+theme_override_fonts/font = ExtResource("6")
+text = "查看道具"
+
+[node name="PlantNode" type="Control" parent="ChooseLayer/Choose"]
+light_mask = 0
+layout_mode = 1
+anchor_left = 0.259
+anchor_top = 0.388
+anchor_right = 0.259
+anchor_bottom = 0.388
+offset_left = 0.279999
+offset_top = 0.199997
+offset_right = 0.279999
+offset_bottom = 0.199997
+
+[node name="Shadow" type="Sprite2D" parent="ChooseLayer/Choose/PlantNode"]
+light_mask = 0
+position = Vector2(2, 37)
+texture = ExtResource("9")
+
+[node name="PeaShooterSingle" parent="ChooseLayer/Choose/PlantNode" node_paths=PackedStringArray("layerSprite") instance=ExtResource("10")]
+light_mask = 0
+position = Vector2(2, 7)
+trueFrameRate = 30.0
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="ZombieNode" type="Control" parent="ChooseLayer/Choose"]
+light_mask = 0
+layout_mode = 1
+anchor_left = 0.741
+anchor_top = 0.41
+anchor_right = 0.741
+anchor_bottom = 0.41
+offset_left = -0.28009
+offset_top = -1.52588e-05
+offset_right = -0.28009
+offset_bottom = -1.52588e-05
+
+[node name="Shadow" type="Sprite2D" parent="ChooseLayer/Choose/ZombieNode"]
+light_mask = 0
+position = Vector2(6, 36)
+texture = ExtResource("9")
+
+[node name="ZombieNormal" parent="ChooseLayer/Choose/ZombieNode" node_paths=PackedStringArray("layerSlot") instance=ExtResource("11")]
+light_mask = 0
+position = Vector2(-8, 0)
+trueFrameRate = 30.0
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="PropNode" type="Control" parent="ChooseLayer/Choose"]
+light_mask = 0
+layout_mode = 1
+anchor_left = 0.503
+anchor_top = 0.748
+anchor_right = 0.503
+anchor_bottom = 0.748
+offset_left = -0.240051
+offset_top = 0.199982
+offset_right = -0.240051
+offset_bottom = 0.199982
+
+[node name="Shovel" type="Sprite2D" parent="ChooseLayer/Choose/PropNode"]
+light_mask = 0
+texture = ExtResource("12")
+
+[node name="PlantLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+layer = 51
+visible = false
+
+[node name="Plant" type="Control" parent="PlantLayer"]
+light_mask = 0
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="PlantLayer/Plant"]
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13")
+
+[node name="TitleLabel" type="Label" parent="PlantLayer/Plant"]
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.494
+anchor_right = 0.494
+offset_left = -468.52
+offset_top = 19.0
+offset_right = 465.48
+offset_bottom = 66.0
+theme_override_colors/font_color = Color(0.810437, 0.536691, 1.92523e-07, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4")
+theme_override_font_sizes/font_size = 24
+text = "图鉴——植物"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PacketScroll" type="ScrollContainer" parent="PlantLayer/Plant"]
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 89.0
+offset_right = -363.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="PacketMargin" type="MarginContainer" parent="PlantLayer/Plant/PacketScroll"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 40
+
+[node name="PacketContainer" type="HFlowContainer" parent="PlantLayer/Plant/PacketScroll/PacketMargin"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/h_separation = 52
+theme_override_constants/v_separation = 75
+
+[node name="IndexButton" type="TextureButton" parent="PlantLayer/Plant"]
+light_mask = 0
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 26.0
+offset_top = -34.0
+offset_right = 190.0
+offset_bottom = -8.0
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14")
+texture_pressed = ExtResource("15")
+texture_hover = ExtResource("15")
+stretch_mode = 0
+
+[node name="TextLabel" type="Label" parent="PlantLayer/Plant/IndexButton"]
+light_mask = 0
+layout_mode = 2
+offset_left = 10.0
+offset_right = 154.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.164706, 0.192157, 0.356863, 1)
+theme_override_fonts/font = ExtResource("6")
+theme_override_font_sizes/font_size = 14
+text = "图鉴索引"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlantPreButton" type="TextureButton" parent="PlantLayer/Plant"]
+light_mask = 0
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 325.0
+offset_top = -34.0
+offset_right = 489.0
+offset_bottom = -8.0
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("16")
+texture_pressed = ExtResource("17")
+texture_hover = ExtResource("17")
+stretch_mode = 0
+
+[node name="TextLabel" type="Label" parent="PlantLayer/Plant/PlantPreButton"]
+light_mask = 0
+layout_mode = 2
+offset_left = 10.0
+offset_right = 154.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.164706, 0.192157, 0.356863, 1)
+theme_override_fonts/font = ExtResource("6")
+theme_override_font_sizes/font_size = 14
+text = "上一页"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlantNextButton" type="TextureButton" parent="PlantLayer/Plant"]
+light_mask = 0
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 634.0
+offset_top = -34.0
+offset_right = 798.0
+offset_bottom = -8.0
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14")
+texture_pressed = ExtResource("15")
+texture_hover = ExtResource("15")
+stretch_mode = 0
+
+[node name="TextLabel" type="Label" parent="PlantLayer/Plant/PlantNextButton"]
+light_mask = 0
+layout_mode = 2
+offset_left = 10.0
+offset_right = 154.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.164706, 0.192157, 0.356863, 1)
+theme_override_fonts/font = ExtResource("6")
+theme_override_font_sizes/font_size = 14
+text = "下一页"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlantInformationPanel" parent="PlantLayer/Plant" instance=ExtResource("18")]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -347.0
+offset_top = 87.0
+offset_right = -347.0
+offset_bottom = -513.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="ZombieLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+layer = 51
+visible = false
+
+[node name="Zombie" type="Control" parent="ZombieLayer"]
+light_mask = 0
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="ZombieLayer/Zombie"]
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("19")
+
+[node name="TitleLabel" type="Label" parent="ZombieLayer/Zombie"]
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.494
+anchor_right = 0.494
+offset_left = -466.52
+offset_top = 22.0
+offset_right = 467.48
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(0, 0.760784, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("6")
+theme_override_font_sizes/font_size = 24
+text = "图鉴——僵尸"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ZombieLayer/Zombie"]
+light_mask = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 89.0
+offset_right = -363.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="ZombieLayer/Zombie/ScrollContainer"]
+light_mask = 0
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 40
+
+[node name="ZombiePacketContainer" type="HFlowContainer" parent="ZombieLayer/Zombie/ScrollContainer/MarginContainer"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/h_separation = 75
+theme_override_constants/v_separation = 75
+
+[node name="IndexButton" type="TextureButton" parent="ZombieLayer/Zombie"]
+light_mask = 0
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 26.0
+offset_top = -34.0
+offset_right = 190.0
+offset_bottom = -8.0
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14")
+texture_pressed = ExtResource("15")
+texture_hover = ExtResource("15")
+stretch_mode = 0
+
+[node name="TextLabel" type="Label" parent="ZombieLayer/Zombie/IndexButton"]
+light_mask = 0
+layout_mode = 2
+offset_left = 10.0
+offset_right = 154.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.164706, 0.192157, 0.356863, 1)
+theme_override_fonts/font = ExtResource("6")
+theme_override_font_sizes/font_size = 14
+text = "图鉴索引"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ZombieInformationPanel" parent="ZombieLayer" instance=ExtResource("20")]
+unique_name_in_owner = true
+light_mask = 0
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -349.0
+offset_top = 76.0
+offset_right = -349.0
+offset_bottom = -524.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="PropLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+layer = 52
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="PropLayer"]
+light_mask = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21")
+
+[node name="TitleLabel" type="Label" parent="PropLayer"]
+light_mask = 0
+anchors_preset = -1
+anchor_left = 0.494
+anchor_right = 0.494
+offset_left = -424.52
+offset_top = 25.0
+offset_right = 423.48
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0.907942, 0.907942, 0.907942, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4")
+theme_override_font_sizes/font_size = 32
+text = "道具图鉴"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IndexButton" type="TextureButton" parent="PropLayer"]
+light_mask = 0
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 26.0
+offset_top = -34.0
+offset_right = 190.0
+offset_bottom = -8.0
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14")
+texture_pressed = ExtResource("15")
+texture_hover = ExtResource("15")
+stretch_mode = 0
+
+[node name="TextLabel" type="Label" parent="PropLayer/IndexButton"]
+light_mask = 0
+layout_mode = 2
+offset_left = 10.0
+offset_right = 154.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.164706, 0.192157, 0.356863, 1)
+theme_override_fonts/font = ExtResource("6")
+theme_override_font_sizes/font_size = 14
+text = "图鉴索引"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShovelBox" type="NinePatchRect" parent="PropLayer"]
+light_mask = 0
+anchors_preset = -1
+anchor_top = 0.53
+anchor_right = 1.0
+anchor_bottom = 0.53
+offset_left = 44.0
+offset_top = -219.0
+offset_right = -365.0
+offset_bottom = -3.05176e-05
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("22")
+patch_margin_left = 15
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 15
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PropLayer/ShovelBox"]
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 17.0
+offset_top = 13.0
+offset_right = -11.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="PropLayer/ShovelBox/ScrollContainer"]
+light_mask = 0
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/margin_left = 33
+theme_override_constants/margin_top = 46
+theme_override_constants/margin_right = 33
+theme_override_constants/margin_bottom = 46
+
+[node name="PropShovelContainer" type="GridContainer" parent="PropLayer/ShovelBox/ScrollContainer/MarginContainer"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/h_separation = 71
+theme_override_constants/v_separation = 95
+columns = 9
+
+[node name="MowerBox" type="NinePatchRect" parent="PropLayer"]
+light_mask = 0
+anchors_preset = -1
+anchor_top = 0.53
+anchor_right = 1.0
+anchor_bottom = 0.53
+offset_left = 44.0
+offset_top = 18.0
+offset_right = -365.0
+offset_bottom = 237.0
+texture = ExtResource("22")
+patch_margin_left = 15
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 15
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PropLayer/MowerBox"]
+light_mask = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 17.0
+offset_top = 13.0
+offset_right = -11.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="PropLayer/MowerBox/ScrollContainer"]
+light_mask = 0
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/margin_left = 33
+theme_override_constants/margin_top = 46
+theme_override_constants/margin_right = 33
+theme_override_constants/margin_bottom = 46
+
+[node name="PropMowerContainer" type="GridContainer" parent="PropLayer/MowerBox/ScrollContainer/MarginContainer"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/h_separation = 71
+theme_override_constants/v_separation = 95
+columns = 9
+
+[node name="PropInformationPanel" parent="PropLayer" instance=ExtResource("18")]
+unique_name_in_owner = true
+light_mask = 0
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -347.0
+offset_top = 87.0
+offset_right = -347.0
+offset_bottom = -513.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="PropUseButton" parent="PropLayer/PropInformationPanel" instance=ExtResource("5")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+offset_left = 69.0
+offset_top = 412.0
+offset_right = 251.0
+offset_bottom = 454.0
+text = "装备道具"
+
+[node name="LabelText" parent="PropLayer/PropInformationPanel/PropUseButton/CenterContainer" index="0"]
+theme_override_colors/font_color = Color(0.894121, 0.625701, 3.85046e-07, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = -1
+theme_override_constants/shadow_offset_y = -1
+theme_override_fonts/font = ExtResource("6")
+text = "装备道具"
+
+[node name="ButtonLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+layer = 52
+
+[node name="Button" type="Control" parent="ButtonLayer"]
+light_mask = 0
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CloseButton" type="TextureButton" parent="ButtonLayer/Button"]
+light_mask = 0
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -129.0
+offset_top = -32.0
+offset_right = -40.0
+offset_bottom = -6.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("23")
+texture_pressed = ExtResource("24")
+texture_hover = ExtResource("24")
+stretch_mode = 0
+
+[node name="TextLabel" type="Label" parent="ButtonLayer/Button/CloseButton"]
+light_mask = 0
+layout_mode = 2
+offset_left = 10.0
+offset_right = 79.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.164706, 0.192157, 0.356863, 1)
+theme_override_fonts/font = ExtResource("6")
+theme_override_font_sizes/font_size = 14
+text = "关闭"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="ChooseLayer/Choose/PlantButton" to="." method="PlantButtonPressed"]
+[connection signal="pressed" from="ChooseLayer/Choose/PlantButton" to="." method="ButtonPressed"]
+[connection signal="pressed" from="ChooseLayer/Choose/ZombieButton" to="." method="ZombieButtonPressed"]
+[connection signal="pressed" from="ChooseLayer/Choose/ZombieButton" to="." method="ButtonPressed"]
+[connection signal="pressed" from="ChooseLayer/Choose/PropButton" to="." method="PropButtonPressed"]
+[connection signal="pressed" from="ChooseLayer/Choose/PropButton" to="." method="ButtonPressed"]
+[connection signal="pressed" from="PlantLayer/Plant/IndexButton" to="." method="IndexButtonPressed"]
+[connection signal="pressed" from="PlantLayer/Plant/IndexButton" to="." method="ButtonPressed"]
+[connection signal="pressed" from="PlantLayer/Plant/PlantPreButton" to="." method="PlantPreButtonPressed"]
+[connection signal="pressed" from="PlantLayer/Plant/PlantPreButton" to="." method="ButtonPressed"]
+[connection signal="pressed" from="PlantLayer/Plant/PlantNextButton" to="." method="PlantNextButtonPressed"]
+[connection signal="pressed" from="PlantLayer/Plant/PlantNextButton" to="." method="ButtonPressed"]
+[connection signal="pressed" from="ZombieLayer/Zombie/IndexButton" to="." method="IndexButtonPressed"]
+[connection signal="pressed" from="ZombieLayer/Zombie/IndexButton" to="." method="ButtonPressed"]
+[connection signal="pressed" from="PropLayer/IndexButton" to="." method="IndexButtonPressed"]
+[connection signal="pressed" from="PropLayer/IndexButton" to="." method="ButtonPressed"]
+[connection signal="pressed" from="PropLayer/PropInformationPanel/PropUseButton" to="." method="PropUseButtonPressed"]
+[connection signal="pressed" from="PropLayer/PropInformationPanel/PropUseButton" to="." method="ButtonPressed"]
+[connection signal="pressed" from="ButtonLayer/Button/CloseButton" to="." method="CloseButtonPressed"]
+[connection signal="pressed" from="ButtonLayer/Button/CloseButton" to="." method="ButtonPressed"]
+
+[editable path="ChooseLayer/Choose/PlantButton"]
+[editable path="ChooseLayer/Choose/ZombieButton"]
+[editable path="ChooseLayer/Choose/PropButton"]
+[editable path="PropLayer/PropInformationPanel/PropUseButton"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=4 uid="uid://8fpowsb3exlb"]
+
+[ext_resource type="Script" uid="uid://7515jipunxqo" path="res://Script/Component/TowerDefense/Character/ReverseInjuryComponent/ReverseInjuryComponent.gd" id="1"]
+
+[node name="ReverseInjuryComponent" type="Node2D"]
+script = ExtResource("1")

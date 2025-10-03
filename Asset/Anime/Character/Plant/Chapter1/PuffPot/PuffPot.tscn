@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=4 uid="uid://cr5jh3j46437d"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://luapdv54caew" path="res://Asset/Anime/Character/Plant/Chapter1/PuffPot/PuffPot.tres" id="2"]
+
+[node name="PuffPot" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -23)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/AnimeEvents = true
+Animation/LayerVisible/Pot_leaf1 = true
+Animation/LayerVisible/Pot_leaf2 = true
+Animation/LayerVisible/Pot_stem = true
+Animation/LayerVisible/Pot_top = true
+Animation/LayerVisible/PuffShroom_eyes = true
+Animation/LayerVisible/PuffShroom_stem = true
+Animation/LayerVisible/PuffShroom_tip = true
+Animation/LayerVisible/_Pot_shadow = false
+Animation/LayerVisible/anim_face = true
+Animation/LayerVisible/skin1 = false
+Animation/LayerVisible/skin2_1 = false
+Animation/LayerVisible/skin2_2 = false
+Animation/LayerVisible/skin2_3 = false
+Animation/LayerVisible/skin3 = false
+Animation/MediaReplace/Pot_leaf1.png = null
+Animation/MediaReplace/Pot_leaf2.png = null
+Animation/MediaReplace/Pot_shadow.png = null
+Animation/MediaReplace/Pot_stem.png = null
+Animation/MediaReplace/Pot_top.png = null
+Animation/MediaReplace/PuffShroom_blink1.png = null
+Animation/MediaReplace/PuffShroom_blink2.png = null
+Animation/MediaReplace/PuffShroom_body.png = null
+Animation/MediaReplace/PuffShroom_skin1.png = null
+Animation/MediaReplace/PuffShroom_skin2_1.png = null
+Animation/MediaReplace/PuffShroom_skin2_2.png = null
+Animation/MediaReplace/PuffShroom_skin2_3.png = null
+Animation/MediaReplace/PuffShroom_skin3_1.png = null
+Animation/MediaReplace/PuffShroom_skin3_2.png = null
+Animation/MediaReplace/PuffShroom_stem.png = null
+Animation/MediaReplace/PuffShroom_tip.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

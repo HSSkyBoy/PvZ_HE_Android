@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=4 uid="uid://c681ojggba16w"]
+
+[ext_resource type="PackedScene" uid="uid://ckn1ugd7d88nm" path="res://Prefab/TowerDefense/Character/TowerDefenseMower.tscn" id="1"]
+[ext_resource type="Script" uid="uid://ds4xmtki7r76e" path="res://Asset/Anime/Character/Mower/PoolCleaner/Scene/TowerDefenseMowerPoolCleaner.gd" id="2"]
+[ext_resource type="Resource" uid="uid://cko8tpmepdlo7" path="res://Asset/Anime/Character/Mower/PoolCleaner/Config/TowerDefenseMowerPoolCleaner.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://braejccboptom" path="res://Asset/Anime/Character/Mower/PoolCleaner/PoolCleaner.tscn" id="4"]
+
+[node name="TowerDefenseMowerPoolCleaner" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+runAnimeClips = "Land"
+runWaterAnimeClips = "Water"
+attackAnimeClips = "lanSuck"
+attackWaterAnimeClips = "Suck"
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/PoolCleaner")
+
+[node name="PoolCleaner" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+position = Vector2(0, -36)

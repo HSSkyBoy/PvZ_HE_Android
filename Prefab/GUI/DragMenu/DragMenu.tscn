@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=4 uid="uid://8hmiilnigfwi"]
+
+[ext_resource type="Script" uid="uid://vhxhi2o2m4y1" path="res://Prefab/GUI/DragMenu/DragMenu.gd" id="1"]
+
+[node name="DragMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1")

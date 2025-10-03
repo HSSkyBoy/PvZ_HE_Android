@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CharacterCustomData" load_steps=4 format=4 uid="uid://fct8ylhcfuiw"]
+
+[ext_resource type="Resource" uid="uid://bt35trog6pdg6" path="res://Asset/Anime/Character/Plant/Chapter1/SunShroom/Custom/Config/SunShroomCustom0.tres" id="1"]
+[ext_resource type="Resource" uid="uid://ttrdivdi08eq" path="res://Asset/Anime/Character/Plant/Chapter1/SunShroom/Custom/Config/SunShroomCustom1.tres" id="2"]
+[ext_resource type="Script" uid="uid://onv5rieax7m5" path="res://Resource/General/Character/Costom/CharacterCustomData.gd" id="3"]
+
+[resource]
+script = ExtResource("3")
+customList = [ExtResource("1"), ExtResource("2")]
+customDictionary = {
+"Custom0": {
+"Close": ["SunShroom_head", "1"],
+"Config": ExtResource("1"),
+"Open": ["skin1", "skin2_1", "skin2_2", "skin2_3", "skin2_4", "skin2_5", "skin3_1", "skin3_2"]
+},
+"Custom1": {
+"Close": ["SunShroom_head", "1"],
+"Config": ExtResource("2"),
+"Open": ["skinA_1", "skinA_2", "skinB", "skin1"]
+}
+}
+fliterOpenAll = ["skin1", "skin2_1", "skin2_2", "skin2_3", "skin2_4", "skin2_5", "skin3_1", "skin3_2", "skinA_1", "skinA_2", "skinB", "skin1"]
+fliterCloseAll = ["SunShroom_head", "1", "SunShroom_head", "1"]
+metadata/_custom_type_script = "uid://onv5rieax7m5"

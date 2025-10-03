@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=4 uid="uid://cbjrnlebs22v0"]
+
+[ext_resource type="PackedScene" uid="uid://ch1hh04p5qvav" path="res://Prefab/GUI/LevelEditor/Inspector/Properties/Type/Base/PropertiesBase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bwdxo8l5oowq0" path="res://Prefab/GUI/LevelEditor/Inspector/Properties/Type/Vector2/PropertiesVector2.gd" id="2"]
+
+[node name="PropertiesVector2" instance=ExtResource("1")]
+light_mask = 0
+offset_right = 83.0
+offset_bottom = 66.0
+script = ExtResource("2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" index="0"]
+light_mask = 0
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpinBoxX" type="SpinBox" parent="HBoxContainer/VBoxContainer" index="0"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+min_value = -99999900000.0
+max_value = 99999900000.0
+step = 0.01
+prefix = "x:"
+
+[node name="SpinBoxY" type="SpinBox" parent="HBoxContainer/VBoxContainer" index="1"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+min_value = -99999900000.0
+max_value = 99999900000.0
+step = 0.01
+prefix = "y:"
+
+[connection signal="value_changed" from="HBoxContainer/VBoxContainer/SpinBoxX" to="." method="ValueChange"]
+[connection signal="value_changed" from="HBoxContainer/VBoxContainer/SpinBoxY" to="." method="ValueChange"]

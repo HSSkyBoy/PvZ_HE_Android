@@ -1,0 +1,12 @@
+{
+	"SaveKey": "Level1_7Tutorial",
+	"Step" : [
+		{
+			"BroadCast" : {
+				"Text" : "LEVEL1_7_BROADCAST_1" ,
+				"Time" : 5.0
+			},
+			"Condition" : []
+		}
+	]
+}

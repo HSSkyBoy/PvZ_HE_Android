@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=4 uid="uid://pwdnk442d1p"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://b73w4vfc2pj5q" path="res://Asset/Anime/Character/Plant/Chapter3/Snowwood/Snowwood.tres" id="2"]
+
+[node name="Snowwood" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+"Animation/LayerVisible/Layer 33" = true
+"Animation/LayerVisible/Layer 34" = true
+"Animation/LayerVisible/Layer 35" = true
+Animation/LayerVisible/SnowPea_crystals1 = true
+"Animation/LayerVisible/SnowPea_crystals1 复制" = true
+Animation/LayerVisible/SnowPea_crystals2 = true
+"Animation/LayerVisible/SnowPea_crystals2 复制" = true
+Animation/LayerVisible/SnowPea_crystals3 = true
+"Animation/LayerVisible/SnowPea_crystals3 复制" = true
+Animation/LayerVisible/Torchwood_fire1 = true
+Animation/LayerVisible/Torchwood_mouth = true
+Animation/LayerVisible/anim_face = true
+Animation/MediaReplace/SnowPea_crystals1.png = null
+Animation/MediaReplace/SnowPea_crystals2.png = null
+Animation/MediaReplace/SnowPea_crystals3.png = null
+Animation/MediaReplace/Torchwood_body.png = null
+Animation/MediaReplace/Torchwood_eyes1.png = null
+Animation/MediaReplace/Torchwood_eyes2.png = null
+Animation/MediaReplace/Torchwood_fire1a.png = null
+Animation/MediaReplace/Torchwood_fire1b.png = null
+Animation/MediaReplace/Torchwood_fire1c.png = null
+Animation/MediaReplace/Torchwood_mouth.png = null
+Animation/MediaReplace/Torchwood_spark.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=4 uid="uid://kbif4idtgolo"]
+
+[ext_resource type="PackedScene" uid="uid://bdpn70bk60cwf" path="res://Prefab/TowerDefense/Coin/Base/TowerDefenseCoinBase.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://dm4cppouc70yp" path="res://Asset/Anime/Effect/Coin/Gold/CoinGold.tscn" id="2"]
+
+[node name="TowerDefenseCoinGold" instance=ExtResource("1")]
+num = 50
+coinObjectId = 1
+
+[node name="CoinGold" parent="SpriteNode" index="0" node_paths=PackedStringArray("layerSprite") instance=ExtResource("2")]
+layerSprite = [null, null, null, null]

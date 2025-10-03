@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=4 uid="uid://dwvgduivkprow"]
+
+[ext_resource type="Script" uid="uid://bwn4qsqpewdrt" path="res://Prefab/TowerDefense/Effect/Once/TowerDefenseEffectSpriteOnce.gd" id="1"]
+
+[node name="TowerDefenseEffectSpriteOnce" type="Node2D" groups=["Effect"]]
+z_index = -5
+script = ExtResource("1")
+itemLayer = 10

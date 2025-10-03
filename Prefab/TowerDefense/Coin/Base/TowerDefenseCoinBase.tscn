@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=4 uid="uid://bdpn70bk60cwf"]
+
+[ext_resource type="Script" uid="uid://cgibkqf7nydt6" path="res://Prefab/TowerDefense/Coin/Base/TowerDefenseCoinBase.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://bhh76tmil13cb" path="res://Script/Component/MoveComponent/MoveComponent.tscn" id="2"]
+
+[node name="TowerDefenseCoinBase" type="Node2D"]
+z_index = -7
+script = ExtResource("1")
+itemLayer = 8
+
+[node name="SpriteNode" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="MoveComponent" parent="SpriteNode" instance=ExtResource("2")]
+unique_name_in_owner = true
+
+[node name="DieDownTimer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+
+[connection signal="timeout" from="DieDownTimer" to="." method="DieDown"]

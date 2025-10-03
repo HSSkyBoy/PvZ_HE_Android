@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=4 uid="uid://duqh2083d5wit"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://cbr4hl1aon5y7" path="res://Asset/Anime/Character/Plant/Cover/FireTallnut/FireTallnut.tres" id="2"]
+
+[node name="FireTallnut" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/anim_idle = true
+"Animation/LayerVisible/anim_idle 复制" = true
+Animation/LayerVisible/fire = true
+Animation/LayerVisible/fire1 = true
+Animation/LayerVisible/fire1_2 = true
+Animation/LayerVisible/fire3 = true
+Animation/LayerVisible/head = true
+Animation/MediaReplace/FireTallnut_blink1.png = null
+Animation/MediaReplace/FireTallnut_blink2.png = null
+Animation/MediaReplace/FireTallnut_body.png = null
+Animation/MediaReplace/FireTallnut_cracked1.png = null
+Animation/MediaReplace/FireTallnut_cracked2.png = null
+Animation/MediaReplace/FireTallnut_fire1_1.png = null
+Animation/MediaReplace/FireTallnut_fire1_2.png = null
+Animation/MediaReplace/FireTallnut_fire1_3.png = null
+Animation/MediaReplace/FireTallnut_fire2_1.png = null
+Animation/MediaReplace/FireTallnut_fire2_2.png = null
+Animation/MediaReplace/FireTallnut_fire2_3.png = null
+Animation/MediaReplace/FireTallnut_fire3_1.png = null
+Animation/MediaReplace/FireTallnut_fire3_2.png = null
+Animation/MediaReplace/FireTallnut_fire3_3.png = null
+Animation/MediaReplace/FireTallnut_head.png = null
+Animation/MediaReplace/Torchwood_fire1a.png = null
+Animation/MediaReplace/Torchwood_fire1b.png = null
+Animation/MediaReplace/Torchwood_fire1c.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

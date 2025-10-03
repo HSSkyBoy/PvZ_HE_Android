@@ -1,0 +1,76 @@
+[gd_scene load_steps=12 format=4 uid="uid://cv4lwe11kmkl5"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://dwkmh8gf01q7s" path="res://Asset/Anime/Character/Zombie/Chapter3/Duck/Scene/TowerDefenseZombieDuck.gd" id="2"]
+[ext_resource type="Resource" uid="uid://dk6a4445hgk3d" path="res://Asset/Anime/Character/Zombie/Chapter3/Duck/Config/TowerDefenseZombieDuck.tres" id="3"]
+[ext_resource type="Resource" uid="uid://dcf4jlp7c5shy" path="res://Asset/Anime/Character/Zombie/Chapter3/Duck/DamagePoint/Config/ZombieDuckDamagePointArm.tres" id="4"]
+[ext_resource type="Resource" uid="uid://1eq1spanepgn" path="res://Asset/Anime/Character/Zombie/Chapter3/Duck/DamagePoint/Config/ZombieDuckDamagePointHead.tres" id="5"]
+[ext_resource type="Resource" uid="uid://le7h1dggibce" path="res://Asset/Anime/Character/Zombie/Chapter3/Duck/Armor/Config/ZombieDuckArmorBucket.tres" id="6"]
+[ext_resource type="Resource" uid="uid://by7kwmpve5wkr" path="res://Asset/Anime/Character/Zombie/Chapter3/Duck/Armor/Config/ZombieDuckArmorCone.tres" id="7"]
+[ext_resource type="Resource" uid="uid://b15w5fw1578wa" path="res://Asset/Anime/Character/Zombie/Chapter3/Duck/Armor/Config/ZombieDuckArmorHelmet.tres" id="8"]
+[ext_resource type="Resource" uid="uid://dtc2i4pyai75g" path="res://Asset/Anime/Character/Zombie/Chapter3/Duck/Armor/Config/ZombieDuckArmorBlackHelmet.tres" id="9"]
+[ext_resource type="Resource" uid="uid://b3nojrbfbp2yd" path="res://Asset/Anime/Character/Zombie/Chapter3/Duck/Armor/Config/ZombieDuckArmorSpecialHelmet.tres" id="10"]
+[ext_resource type="PackedScene" uid="uid://cdx8flivkmr4f" path="res://Asset/Anime/Character/Zombie/Chapter3/Duck/ZombieDuck.tscn" id="11"]
+
+[node name="TowerDefenseZombieDuck" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+inSwimAnimeClip = ""
+swimAnimeClip = "Swim"
+outSwimAnimeClip = ""
+attackWaterAnimeClip = ""
+dieWaterAnimeClip = "SwimDeath"
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieDuck")
+damagePart = {
+"Arm": ExtResource("4"),
+"BlackHelmet": ExtResource("9"),
+"Bucket": ExtResource("6"),
+"Cone": ExtResource("7"),
+"Head": ExtResource("5"),
+"Helmet": ExtResource("8"),
+"SpecialHelmet": ExtResource("10")
+}
+PreviewDamagePointPersontage = 1.0
+Armor = []
+DamagePartSlot/Arm = NodePath("SpriteGroup/TransformPoint/ZombieDuck/ArmSlot")
+DamagePartSlot/Head = NodePath("SpriteGroup/TransformPoint/ZombieDuck/HeadSlot")
+DamagePartSlot/Bucket = NodePath("SpriteGroup/TransformPoint/ZombieDuck/BucketSlot")
+DamagePartSlot/Cone = NodePath("SpriteGroup/TransformPoint/ZombieDuck/ConeSlot")
+DamagePartSlot/Helmet = NodePath("SpriteGroup/TransformPoint/ZombieDuck/HeadSlot")
+DamagePartSlot/BlackHelmet = NodePath("SpriteGroup/TransformPoint/ZombieDuck/HeadSlot")
+DamagePartSlot/SpecialHelmet = NodePath("SpriteGroup/TransformPoint/ZombieDuck/HeadSlot")
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(12, 33)
+
+[node name="ZombieDuck" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("11")]
+position = Vector2(-12, -33)
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieDuck" index="0"]
+position = Vector2(-12.9406, -45.857)
+rotation = -0.0780458
+scale = Vector2(0.799477, 0.799477)
+
+[node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieDuck" index="1"]
+position = Vector2(8.36624, 1.72308)
+rotation = -0.136812
+scale = Vector2(0.799115, 0.799115)
+
+[node name="ConeSlot" parent="SpriteGroup/TransformPoint/ZombieDuck" index="2"]
+position = Vector2(-8.12852, -71.7048)
+rotation = -0.100703
+scale = Vector2(0.796256, 0.796256)
+
+[node name="BucketSlot" parent="SpriteGroup/TransformPoint/ZombieDuck" index="3"]
+position = Vector2(-12.094, -61.0039)
+rotation = -0.0879202
+scale = Vector2(0.798269, 0.798269)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(4, -2)
+
+[node name="GroundMoveComponent" parent="." index="8" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieDuck/GroundSlot")
+
+[editable path="SpriteGroup/TransformPoint/ZombieDuck"]

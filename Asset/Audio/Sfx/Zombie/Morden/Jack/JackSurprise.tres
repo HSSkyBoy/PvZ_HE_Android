@@ -1,0 +1,9 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=4 uid="uid://jqc32qtarc68"]
+
+[ext_resource type="AudioStream" uid="uid://b7ldrjbwi7uy" path="res://Asset/Audio/Sfx/Zombie/Morden/Jack/JackSurprise.ogg" id="1"]
+[ext_resource type="AudioStream" uid="uid://cgblm15lvx5n1" path="res://Asset/Audio/Sfx/Zombie/Morden/Jack/JackSurprise2.ogg" id="2"]
+
+[resource]
+streams_count = 2
+stream_0/stream = ExtResource("1")
+stream_1/stream = ExtResource("2")

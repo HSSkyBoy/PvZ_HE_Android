@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=4 uid="uid://ldy1vj3audt7"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://dys5rp3l5hm3u" path="res://Asset/Anime/Character/Plant/Chapter2/ScaredySunShroom/ScaredySunShroom.tres" id="2"]
+
+[node name="ScaredySunShroom" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-36, -40)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/AnimeEvents = true
+Animation/LayerVisible/ScaredyShroom_eye_big1 = true
+Animation/LayerVisible/ScaredyShroom_eye_big2 = true
+Animation/LayerVisible/ScaredyShroom_eyebrow1 = true
+Animation/LayerVisible/ScaredyShroom_eyebrow2 = true
+Animation/LayerVisible/ScaredyShroom_lips = true
+Animation/LayerVisible/ScaredyShroom_mouth = true
+Animation/LayerVisible/ScaredyShroom_sweat1 = true
+Animation/LayerVisible/ScaredyShroom_sweat2 = true
+Animation/LayerVisible/SunShroom_head = true
+Animation/LayerVisible/anim_eye1 = true
+Animation/LayerVisible/anim_eye2 = true
+Animation/LayerVisible/anim_face = true
+Animation/LayerVisible/skin1 = false
+Animation/LayerVisible/skin2_1 = false
+Animation/LayerVisible/skin2_2 = false
+Animation/MediaReplace/ScaredyShroom_eye1.png = null
+Animation/MediaReplace/ScaredyShroom_eye2.png = null
+Animation/MediaReplace/ScaredyShroom_eye_big.png = null
+Animation/MediaReplace/ScaredyShroom_eyebrow1.png = null
+Animation/MediaReplace/ScaredyShroom_eyebrow2.png = null
+Animation/MediaReplace/ScaredyShroom_lips.png = null
+Animation/MediaReplace/ScaredyShroom_mouth.png = null
+Animation/MediaReplace/ScaredyShroom_stem.png = null
+Animation/MediaReplace/ScaredyShroom_sweat.png = null
+Animation/MediaReplace/ScaredySunShroom_skin1.png = null
+Animation/MediaReplace/ScaredySunShroom_skin2_1.png = null
+Animation/MediaReplace/ScaredySunShroom_skin2_2.png = null
+Animation/MediaReplace/SunShroom_head.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=4 uid="uid://ddfmqorhf7nqm"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bg08463ay0wea" path="res://Asset/Anime/Character/Plant/Chapter3/PeaCat/Scene/TowerDefensePlantPeaCat.gd" id="2"]
+[ext_resource type="Resource" uid="uid://cyuupo4gmvweo" path="res://Asset/Anime/Character/Plant/Chapter3/PeaCat/Config/TowerDefensePlantPeaCat.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://d3cv7y73te5rv" path="res://Asset/Anime/Character/Plant/Chapter3/PeaCat/PeaCat.tscn" id="4"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="5"]
+[ext_resource type="PackedScene" uid="uid://b5htxrgm8twcr" path="res://Script/Component/TowerDefense/Character/FireComponent/FireComponent.tscn" id="6"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="7"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="8"]
+
+[node name="TowerDefensePlantPeaCat" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+fireInterval = 1.5
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/PeaCat")
+Custom = []
+gravity = 245.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="PeaCat" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+position = Vector2(0, -30)
+
+[node name="AdobeAnimateSlot" type="Node2D" parent="SpriteGroup/TransformPoint/PeaCat" index="0"]
+position = Vector2(-60.0567, -45.1233)
+script = ExtResource("5")
+followSlotId = 5
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/PeaCat/AdobeAnimateSlot" index="0"]
+position = Vector2(14.1167, 12.9167)
+
+[node name="AdobeAnimateSlot2" type="Node2D" parent="SpriteGroup/TransformPoint/PeaCat" index="1"]
+position = Vector2(21.6133, -16.7467)
+scale = Vector2(0.666473, 0.699059)
+script = ExtResource("5")
+followSlotId = 11
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/PeaCat/AdobeAnimateSlot2" index="0"]
+position = Vector2(21.7022, 25.32)
+
+[node name="ShadowSprite" parent="." index="3"]
+visible = false
+position = Vector2(0, 47)
+scale = Vector2(0.821918, 0.77551)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+
+[node name="FireComponent" parent="." index="7" node_paths=PackedStringArray("firePosMarker") instance=ExtResource("6")]
+unique_name_in_owner = true
+firePosMarker = [NodePath("../SpriteGroup/TransformPoint/PeaCat/AdobeAnimateSlot/Marker2D"), NodePath("../SpriteGroup/TransformPoint/PeaCat/AdobeAnimateSlot2/Marker2D")]
+fireInterval = 1.5
+
+[node name="Attack" type="Node" parent="StateChart/CompoundState" index="2"]
+script = ExtResource("7")
+
+[node name="ToAttack" type="Node" parent="StateChart/CompoundState" index="6"]
+script = ExtResource("8")
+to = NodePath("../Attack")
+event = &"ToAttack"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="StateChart/CompoundState/Attack" to="." method="AttackEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Attack" to="." method="AttackExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Attack" to="." method="AttackProcessing"]

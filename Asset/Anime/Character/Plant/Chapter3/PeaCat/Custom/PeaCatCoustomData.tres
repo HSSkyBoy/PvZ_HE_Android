@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CharacterCustomData" load_steps=3 format=4 uid="uid://c50tuongvwk1o"]
+
+[ext_resource type="Resource" uid="uid://bs6kcma73544u" path="res://Asset/Anime/Character/Plant/Chapter3/PeaCat/Custom/Config/PeaCatCustom0.tres" id="1"]
+[ext_resource type="Script" uid="uid://onv5rieax7m5" path="res://Resource/General/Character/Costom/CharacterCustomData.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+customList = [ExtResource("1")]
+customDictionary = {
+"Custom0": {
+"Close": [],
+"Config": ExtResource("1"),
+"Open": ["skin1_1", "skin1_2", "skin1_3", "skin1_4", "skin1_5", "skin2", "skin3_1", "skin3_2", "skin3_3", "skin4"]
+}
+}
+fliterOpenAll = ["skin1_1", "skin1_2", "skin1_3", "skin1_4", "skin1_5", "skin2", "skin3_1", "skin3_2", "skin3_3", "skin4"]
+fliterCloseAll = []
+metadata/_custom_type_script = "uid://onv5rieax7m5"

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=4 uid="uid://cptmlwtfqwsmt"]
+
+[ext_resource type="Script" uid="uid://c0v73sij5kw2d" path="res://Script/Component/TowerDefense/Character/GroundMoveComponent/GroundMoveComponent.gd" id="1"]
+
+[node name="GroundMoveComponent" type="Node2D"]
+script = ExtResource("1")

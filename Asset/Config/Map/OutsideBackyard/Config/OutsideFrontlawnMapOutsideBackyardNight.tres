@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="TowerDefenseMapConfig" load_steps=8 format=4 uid="uid://d4ewskl3n5sup"]
+
+[ext_resource type="Script" uid="uid://bk1pu7tdpvvch" path="res://Resource/TowerDefense/Map/Cell/Config/TowerDefenseCellConfig.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://tvbpwiiqh6xp" path="res://Asset/Config/Map/OutsideBackyard/Scene/Night/TowerDefenseMapOutsideBackyardNight.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://cli3086pjc3jf" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Outside/OutsideBackyardNight.jpg" id="3"]
+[ext_resource type="Script" uid="uid://jariliyqi7jt" path="res://Resource/TowerDefense/Map/TowerDefenseMapConfig.gd" id="4"]
+
+[sub_resource type="Resource" id="Resource_hg8hn"]
+script = ExtResource("1")
+pos = Vector4i(1, 1, 9, 1)
+gridType = [3, 4]
+elementFlags = 0
+Flag/Elemet = 0
+metadata/_custom_type_script = "uid://bk1pu7tdpvvch"
+
+[sub_resource type="Resource" id="Resource_6wvj2"]
+script = ExtResource("1")
+pos = Vector4i(1, 2, 9, 3)
+gridType = [10, 4]
+elementFlags = 0
+Flag/Elemet = 0
+
+[sub_resource type="Resource" id="Resource_oq3n6"]
+script = ExtResource("1")
+pos = Vector4i(1, 4, 9, 5)
+gridType = [3, 4]
+elementFlags = 0
+Flag/Elemet = 0
+metadata/_custom_type_script = "uid://bk1pu7tdpvvch"
+
+[resource]
+script = ExtResource("4")
+translate = "MAP_OUTSIDE_BACKYARD_NIGHT"
+mapTexture = ExtResource("3")
+mapScene = ExtResource("2")
+mapSize = Vector2(1400, 600)
+gridNum = Vector2i(9, 5)
+gridBeginPos = Vector2(260, 75)
+gridSize = Vector2(80, 98)
+edge = Vector4(200, 0, 1100, 576)
+cellConfig = [SubResource("Resource_hg8hn"), SubResource("Resource_6wvj2"), SubResource("Resource_oq3n6")]
+lineUse = [1, 2, 3, 4, 5]
+isNight = true
+useSunFall = false

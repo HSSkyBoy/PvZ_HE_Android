@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=4 uid="uid://ctbwfqkh8ysjt"]
+
+[ext_resource type="Texture2D" uid="uid://bj1ylx31emnpo" path="res://Asset/Texture/GUI/DailyChallenge/Award/RewardProgressBack.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://bgr3r4lkwwsis" path="res://Asset/Texture/GUI/DailyChallenge/Award/RewardProgressFill.png" id="2"]
+[ext_resource type="Script" uid="uid://pkkyceq5sqti" path="res://Prefab/GUI/DialogBox/DailyChallenge/Award/Progress/DailyChallengeAwardProgressBar.gd" id="3"]
+
+[node name="DailyChallengeAwardProgressBar" type="TextureProgressBar"]
+texture_under = ExtResource("1")
+texture_progress = ExtResource("2")
+script = ExtResource("3")
+
+[node name="TickNode" type="Control" parent="."]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

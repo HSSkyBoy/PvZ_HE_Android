@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=4 uid="uid://u70ggpgvp4bb"]
+
+[ext_resource type="Script" uid="uid://dnajmihkskd6w" path="res://Asset/Anime/Character/Plant/Chapter2/TabooDoomShroom/TabooDoomShroomSprite.gd" id="1"]
+[ext_resource type="Resource" uid="uid://bpg8tnsjqpexh" path="res://Asset/Anime/Character/Plant/Chapter2/TabooDoomShroom/TabooDoomShroom.tres" id="2"]
+
+[node name="TabooDoomShroom" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40.7455, -39.9428)
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+"Animation/LayerVisible/图层_23" = true
+"Animation/LayerVisible/图层_24" = true
+"Animation/LayerVisible/图层_25" = true
+"Animation/LayerVisible/图层_26" = true
+"Animation/LayerVisible/图层_27" = true
+Animation/MediaReplace/TabooDoomShroom_0001_5.png = null
+Animation/MediaReplace/TabooDoomShroom_0002_4.png = null
+Animation/MediaReplace/TabooDoomShroom_0003_3.png = null
+Animation/MediaReplace/TabooDoomShroom_0004_2.png = null
+Animation/MediaReplace/TabooDoomShroom_0005_1.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

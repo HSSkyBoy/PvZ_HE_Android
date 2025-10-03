@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=4 uid="uid://b7eq2mfpja1dy"]
+
+[ext_resource type="PackedScene" uid="uid://o7sgb44iah6m" path="res://Prefab/TowerDefense/Base/TowerDefenseGroundItemBase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://jiggy3s6krya" path="res://Prefab/TowerDefense/IceCap/TowerDefenseIceCap.gd" id="2"]
+[ext_resource type="Shader" uid="uid://wi60j2trxhix" path="res://Prefab/TowerDefense/IceCap/TowerDefenseIceCap.gdshader" id="3"]
+[ext_resource type="Texture2D" uid="uid://r4wgmnik74lx" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Ice.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://eiwmij34itno" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/IceCap.png" id="5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_euvdl"]
+shader = ExtResource("3")
+shader_parameter/iceLength = 150.0
+
+[node name="TowerDefenseIceCap" instance=ExtResource("1")]
+z_index = -14
+script = ExtResource("2")
+length = 0.0
+clearTime = 90.0
+itemLayer = 1
+
+[node name="IceSprite" type="Sprite2D" parent="." index="0"]
+unique_name_in_owner = true
+texture_repeat = 2
+material = SubResource("ShaderMaterial_euvdl")
+position = Vector2(150.5, 18)
+texture = ExtResource("4")
+offset = Vector2(-75.5226, -4)
+
+[node name="IceCapSprite" type="Sprite2D" parent="." index="1"]
+unique_name_in_owner = true
+position = Vector2(0, 14)
+texture = ExtResource("5")

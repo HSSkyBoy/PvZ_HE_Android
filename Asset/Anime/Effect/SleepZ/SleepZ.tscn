@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=4 uid="uid://bynt7ha6s6wvb"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://lu1tbijfgvjq" path="res://Asset/Anime/Effect/SleepZ/SleepZ.tres" id="2"]
+
+[node name="SleepZ" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null]
+layerSprite = [null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/z1 = true
+Animation/LayerVisible/z2 = true
+Animation/LayerVisible/z3 = true
+Animation/MediaReplace/Z.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="CharacterArmorData" load_steps=5 format=4 uid="uid://cv2f43mb7x2ll"]
+
+[ext_resource type="Resource" uid="uid://blcvqs0leo3cu" path="res://Asset/Anime/Character/Zombie/Chapter1/Football/Armor/Config/ZombieFootballArmorBlackHelmet.tres" id="1"]
+[ext_resource type="Resource" uid="uid://do128nf5xkcec" path="res://Asset/Anime/Character/Zombie/Chapter1/Football/Armor/Config/ZombieFootballArmorHelmet.tres" id="2"]
+[ext_resource type="Resource" uid="uid://df6agvaejitpx" path="res://Asset/Anime/Character/Zombie/Chapter1/Football/Armor/Config/ZombieFootballArmorSpecialHelmet.tres" id="3"]
+[ext_resource type="Script" uid="uid://ci4c6gpjugqpl" path="res://Resource/General/Character/Armor/CharacterArmorData.gd" id="4"]
+
+[resource]
+script = ExtResource("4")
+armorList = [ExtResource("2"), ExtResource("1"), ExtResource("3")]
+armorDictionary = {
+"BlackHelmet": ExtResource("1"),
+"Helmet": ExtResource("2"),
+"SpecialHelmet": ExtResource("3")
+}
+fliterAllDictionary = {
+"BlackHelmet": ["zombie_football_helmet"],
+"Helmet": ["zombie_football_helmet"],
+"SpecialHelmet": ["zombie_football_helmet"]
+}
+fliterOpenDictionary = {
+"BlackHelmet": [],
+"Helmet": [],
+"SpecialHelmet": []
+}
+fliterCloseDictionary = {
+"BlackHelmet": [],
+"Helmet": [],
+"SpecialHelmet": []
+}

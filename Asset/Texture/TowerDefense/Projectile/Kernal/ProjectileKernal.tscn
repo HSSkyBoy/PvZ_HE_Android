@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=4 uid="uid://c5i60e3puevnc"]
+
+[ext_resource type="Texture2D" uid="uid://btoss5lyc8brj" path="res://Asset/Texture/TowerDefense/Projectile/Kernal/ProjectileKernal.png" id="1"]
+
+[node name="ProjectileKernal" type="Sprite2D"]
+texture = ExtResource("1")

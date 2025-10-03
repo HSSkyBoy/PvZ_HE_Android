@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=4 uid="uid://c3lnqei4itfpx"]
+
+[ext_resource type="PackedScene" uid="uid://cnwqwm6ecgmhp" path="res://Prefab/TowerDefense/Character/TowerDefenseCharacter.tscn" id="1"]
+[ext_resource type="Script" uid="uid://ckxrfgo82i8j" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.gd" id="2"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="3"]
+
+[node name="TowerDefensePlant" instance=ExtResource("1")]
+z_index = -11
+script = ExtResource("2")
+plantAnimeClip = ""
+plantfoodOnAnimeClip = "plantfood_on"
+plantfoodAnimeClip = "plantfood"
+plantfoodOffAnimeClip = "plantfood_off"
+plantfoodEndMethod = "Noone"
+plantfoodLoopTime = -1.0
+plantfoodLoopCount = -1
+itemLayer = 4
+gravity = 245.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 26)
+
+[node name="HitBox" parent="." index="5"]
+visible = false
+
+[node name="CompoundState" parent="StateChart" index="0"]
+initial_state = NodePath("Plant")
+
+[node name="Plant" type="Node" parent="StateChart/CompoundState" index="0"]
+script = ExtResource("3")
+
+[connection signal="state_entered" from="StateChart/CompoundState/Plant" to="." method="PlantEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Plant" to="." method="PlantExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Plant" to="." method="PlantProcessing"]

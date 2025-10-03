@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=4 uid="uid://doqab6xerisx6"]
+
+[ext_resource type="PackedScene" uid="uid://vp5mpqwb0n8b" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Sprite/Normal/ZombieNormal.tscn" id="1"]
+[ext_resource type="Script" uid="uid://vciwr8cffkfm" path="res://Asset/Anime/Character/Zombie/Chapter1/Normal/Sprite/Squash/ZombieNormalSquashSprite.gd" id="2"]
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="3"]
+[ext_resource type="Resource" uid="uid://5pcp1cmy5pxe" path="res://Asset/Anime/Character/Plant/Chapter0/Squash/Squash.tres" id="4"]
+
+[node name="ZombieNormalSquash" node_paths=PackedStringArray("layerSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("ScreendoorSlot"), null, null, null, null, null, NodePath("ArmSlot"), null, NodePath("ConeSlot"), NodePath("BucketSlot"), null, null]
+Animation/LayerVisible/anim_hair = false
+Animation/LayerVisible/anim_head1 = false
+Animation/LayerVisible/anim_head2 = false
+
+[node name="Head" type="Node2D" parent="." index="0" node_paths=PackedStringArray("layerSlot", "layerSprite", "parentSprite")]
+unique_name_in_owner = true
+position = Vector2(-6.7, -49.32)
+rotation = -0.152051
+scale = Vector2(-0.75, 0.75)
+script = ExtResource("3")
+flashAnimeData = ExtResource("4")
+offset = Vector2(-40, -58)
+offsetRotate = -0.25
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null, null, null]
+layerSprite = [null, null, null, null, null]
+parentSprite = NodePath("..")
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/Squash_body = true
+Animation/LayerVisible/Squash_stem = true
+Animation/LayerVisible/anim_eye = true
+Animation/LayerVisible/anim_face = true
+Animation/MediaReplace/Squash_body.png = null
+Animation/MediaReplace/Squash_eyebrows.png = null
+Animation/MediaReplace/Squash_eyes.png = null
+Animation/MediaReplace/Squash_stem.png = null
+Layer = 14
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="HeadSlot" parent="." index="1"]
+position = Vector2(-8.29248, -51.1581)
+rotation = 0.031604
+scale = Vector2(0.799412, 0.799412)
+
+[node name="ArmSlot" parent="." index="2"]
+position = Vector2(6.04668, -1.39391)
+rotation = 0.111724
+scale = Vector2(0.798757, 0.798757)
+
+[node name="ConeSlot" parent="." index="3"]
+position = Vector2(0.268307, -76.9153)
+rotation = 0.0980329
+scale = Vector2(0.799724, 0.799724)
+
+[node name="BucketSlot" parent="." index="4"]
+position = Vector2(-6.10041, -67.1504)
+rotation = 0.0
+scale = Vector2(0.799988, 0.799988)
+
+[node name="ScreendoorSlot" parent="." index="5"]
+position = Vector2(-16.2397, -1.92909)
+rotation = 0.0
+scale = Vector2(0.799334, 0.799334)
+
+[node name="GroundSlot" parent="." index="6"]
+position = Vector2(-43.5991, -40)

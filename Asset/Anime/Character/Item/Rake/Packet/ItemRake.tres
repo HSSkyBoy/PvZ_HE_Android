@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="TowerDefensePacketConfig" load_steps=3 format=4 uid="uid://5x362hpecysi"]
+
+[ext_resource type="Resource" uid="uid://dqlqppti74d08" path="res://Asset/Anime/Character/Item/Rake/Config/TowerDefenseItemRake.tres" id="1"]
+[ext_resource type="Script" uid="uid://c6d3po5310ugw" path="res://Resource/TowerDefense/PacketBank/Packet/TowerDefensePacketConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+saveKey = "ItemRake"
+unlockCheckList = []
+name = ""
+describe = ""
+plantfood = ""
+handbookDescribe = ""
+handbookStory = ""
+packetAnimeClip = "Idle"
+packetAnimeOffset = Vector2(21, 20)
+packetAnimeScale = Vector2(0.5, 0.5)
+characterConfig = ExtResource("1")
+type = 0
+spawnMethod = "Rise"
+overrideCostRise = -1
+overrideCost = -1
+overridPacketCooldown = -1.0
+overridStartingCooldown = -1.0
+overrideWeight = -1
+overrideWavePointCost = -1
+initArmor = []
+plantUseCell = false
+Cell/plantUseCell = false
+metadata/_custom_type_script = "uid://c6d3po5310ugw"

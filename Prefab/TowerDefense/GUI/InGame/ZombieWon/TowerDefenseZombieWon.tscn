@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=4 uid="uid://chrvpojeedrwe"]
+
+[ext_resource type="Script" uid="uid://c6v7tkpj0kjhp" path="res://Prefab/TowerDefense/GUI/InGame/ZombieWon/TowerDefenseZombieWon.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://cuidn7hqw703i" path="res://Asset/Anime/ZombieWon/ZombiesWon.tscn" id="2"]
+
+[node name="TowerDefenseZombieWon" type="Node"]
+script = ExtResource("1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ZombiesWonSprite" parent="." node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("2")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(540, 300)
+layerSlot = [null, null]
+layerSprite = [null, null]
+
+[connection signal="animeCompleted" from="ZombiesWonSprite" to="." method="AnimeCompleted"]

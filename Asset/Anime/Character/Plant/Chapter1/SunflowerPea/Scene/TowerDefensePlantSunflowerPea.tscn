@@ -1,0 +1,118 @@
+[gd_scene load_steps=16 format=4 uid="uid://dk8idm88ij8e6"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://wneph3eojixr" path="res://Asset/Anime/Character/Plant/Chapter1/SunflowerPea/Scene/TowerDefensePlantSunflowerPea.gd" id="2"]
+[ext_resource type="Resource" uid="uid://dwa6qa7tplv2v" path="res://Asset/Anime/Character/Plant/Chapter1/SunflowerPea/Config/TowerDefensePlantSunflowerPea.tres" id="3"]
+[ext_resource type="Script" uid="uid://3gswocg6uh6g" path="res://Resource/General/Character/Armor/CharacterArmorConfig.gd" id="4"]
+[ext_resource type="Texture2D" uid="uid://bsh6g1gtv07mv" path="res://Asset/Texture/Character/Armor/Bucket/ZombieBucket1.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://c8j6e6siocnub" path="res://Asset/Texture/Character/Armor/Bucket/ZombieBucket2.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://dgcx0y0jelv7v" path="res://Asset/Texture/Character/Armor/Bucket/ZombieBucket3.png" id="7"]
+[ext_resource type="PackedScene" uid="uid://cpmorpmk3064d" path="res://Asset/Anime/Character/Plant/Chapter1/SunflowerPea/SunflowerPea.tscn" id="8"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="9"]
+[ext_resource type="PackedScene" uid="uid://b5htxrgm8twcr" path="res://Script/Component/TowerDefense/Character/FireComponent/FireComponent.tscn" id="10"]
+[ext_resource type="PackedScene" uid="uid://c5d74tbefbann" path="res://Script/Component/TowerDefense/Character/ProduceComponent/ProduceComponent.tscn" id="11"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="12"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="13"]
+
+[sub_resource type="Resource" id="Resource_dliej"]
+script = ExtResource("4")
+armorName = "Bucket"
+damagePoint = 1100.0
+stagePersontage = [0.666, 0.333]
+replaceMethod = "Sprite"
+replaceSpriteSlotPath = NodePath("")
+replaceSpriteRotation = -0.5
+replaceSpriteScale = Vector2(-0.75, 0.75)
+replaceSpriteOffset = Vector2(-5, -20)
+replaceMediaName = &""
+stageAnimeTexture = [ExtResource("5"), ExtResource("6"), ExtResource("7")]
+openFliter = ""
+closeFliter = ""
+destroyFliter = ""
+impactAudio = ""
+damageAudio = ""
+explodePersontage = 1.0
+armorMethodFlags = 216
+Flag/Method = 216
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_bb4mx"]
+b = Vector2(2000, 0)
+
+[node name="TowerDefensePlantSunflowerPea" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+fireInterval = 1.5
+fireNum = 1
+produceInterval = 25.0
+sunNum = 25
+idleAnimeClip = "BodyIdle"
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/SunflowerPea")
+damagePart = {
+"Bucket": SubResource("Resource_dliej")
+}
+Armor = []
+Custom = []
+DamagePartSlot/Bucket = null
+gravity = 245.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="SunflowerPea" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("8")]
+position = Vector2(0, -30)
+trueFrameRate = 30.0
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, NodePath("SunflowerSlot"), null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, NodePath("Head"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="Head" parent="SpriteGroup/TransformPoint/SunflowerPea" index="0"]
+position = Vector2(13.55, -17.75)
+trueFrameRate = 30.0
+
+[node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/SunflowerPea/Head" index="0"]
+position = Vector2(26.87, -18.76)
+
+[node name="SunflowerSlot" type="Node2D" parent="SpriteGroup/TransformPoint/SunflowerPea" index="1"]
+position = Vector2(-12.4207, -15.9796)
+scale = Vector2(0.599976, 0.533978)
+script = ExtResource("9")
+followSlotId = 21
+offset = Vector2(30.8, 18.775)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/SunflowerPea/SunflowerSlot" index="0"]
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 30)
+
+[node name="FireComponent" parent="." index="5" node_paths=PackedStringArray("firePosMarker", "checkArea") instance=ExtResource("10")]
+unique_name_in_owner = true
+firePosMarker = [NodePath("../SpriteGroup/TransformPoint/SunflowerPea/Head/Marker2D")]
+checkArea = NodePath("Area2D")
+
+[node name="Area2D" type="Area2D" parent="FireComponent" index="0"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FireComponent/Area2D" index="0"]
+shape = SubResource("SegmentShape2D_bb4mx")
+
+[node name="ProduceComponent" parent="." index="6" node_paths=PackedStringArray("marker") instance=ExtResource("11")]
+unique_name_in_owner = true
+marker = [NodePath("../SpriteGroup/TransformPoint/SunflowerPea/SunflowerSlot/Marker2D")]
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+
+[node name="Attack" type="Node" parent="StateChart/CompoundState" index="2"]
+script = ExtResource("12")
+
+[node name="ToAttack" type="Node" parent="StateChart/CompoundState" index="6"]
+script = ExtResource("13")
+to = NodePath("../Attack")
+event = &"ToAttack"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="StateChart/CompoundState/Attack" to="." method="AttackEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Attack" to="." method="AttackExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Attack" to="." method="AttackProcessing"]
+
+[editable path="SpriteGroup/TransformPoint/SunflowerPea"]

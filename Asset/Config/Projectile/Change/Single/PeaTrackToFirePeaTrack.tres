@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ChangeProjectileSingleConfig" load_steps=3 format=4 uid="uid://dggcnamly0s1w"]
+
+[ext_resource type="Resource" uid="uid://8arfbqp4gfqq" path="res://Asset/Config/Projectile/Pea/FirePeaTrack.tres" id="1"]
+[ext_resource type="Script" uid="uid://6nlvob10fv6n" path="res://Resource/TowerDefense/Projectile/Change/ChangeProjectileSingleConfig.gd" id="2"]
+
+[resource]
+script = ExtResource("2")
+projectileName = "PeaTrack"
+projectileConfig = ExtResource("1")
+changeAudio = "FireHit"
+metadata/_custom_type_script = "uid://6nlvob10fv6n"

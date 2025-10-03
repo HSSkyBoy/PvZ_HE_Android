@@ -1,0 +1,9 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=4 uid="uid://cqhroo0vy0pog"]
+
+[ext_resource type="AudioStream" uid="uid://bmxdmapefjhb5" path="res://Asset/Audio/Sfx/Splat/PlasticHit/PlasticHit.ogg" id="1"]
+[ext_resource type="AudioStream" uid="uid://dsrhgflcnwik4" path="res://Asset/Audio/Sfx/Splat/PlasticHit/PlasticHit2.ogg" id="2"]
+
+[resource]
+streams_count = 2
+stream_0/stream = ExtResource("1")
+stream_1/stream = ExtResource("2")

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CharacterCustomConfig" load_steps=2 format=4 uid="uid://ttrdivdi08eq"]
+
+[ext_resource type="Script" uid="uid://dypv31guyoibc" path="res://Resource/General/Character/Costom/CharacterCustomConfig.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+openKey = "SunShroomCustom1"
+customName = "Custom1"
+customHandbookName = "TOWERDEFENSE_PLANT_SUNSHROOM_CUSTOM_2_NAME"
+customHandbookAccess = "TOWERDEFENSE_PLANT_SUNSHROOM_CUSTOM_2_ACCESS"
+customHandbookStory = "TOWERDEFENSE_PLANT_SUNSHROOM_CUSTOM_2_STORY"
+animeFliterOpen = "skinA_1&skinA_2&skinB&skin1"
+animeFliterClose = "SunShroom_head&1"
+damagePointChangeMediaName = ""
+damagePointChangeMediaTexture = []
+metadata/_custom_type_script = "uid://dypv31guyoibc"

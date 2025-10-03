@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=4 uid="uid://yuy41gol2ced"]
+
+[ext_resource type="Script" uid="uid://bxkphuxfdlnpm" path="res://Core/ViewManager/ViewManager.gd" id="1"]
+
+[node name="ViewManager" type="Node"]
+script = ExtResource("1")
+
+[node name="EffectLayer" type="CanvasLayer" parent="."]
+layer = 50
+
+[node name="FullScreenColorRect" type="ColorRect" parent="EffectLayer"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.47451, 1, 0.772549, 1)

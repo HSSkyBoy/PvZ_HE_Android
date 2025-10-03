@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=4 uid="uid://bus812066hpeg"]
+
+[ext_resource type="PackedScene" uid="uid://jm05awl7yeg" path="res://Prefab/TowerDefense/Character/TowerDefenseGravestone.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bp5fkg3mb4uw" path="res://Asset/Anime/Character/GraveStone/TargetCoin/Scene/TowerDefenseGraveStoneTargetCoin.gd" id="2"]
+[ext_resource type="Resource" uid="uid://ci4oa4qcc0iub" path="res://Asset/Anime/Character/GraveStone/TargetCoin/Config/TowerDefenseGraveStoneTargetCoin.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://dx552ee763gw5" path="res://Asset/Anime/Character/GraveStone/TargetCoin/GraveStoneTargetCoin.tscn" id="4"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_48j5j"]
+load_path = "res://.godot/imported/TargetStones2_1.png-c0c4fee6349b567f02755578dc35a1f4.ctex"
+
+[node name="TowerDefenseGraveStoneTargetCoin" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/GraveStoneTargetCoin")
+PreviewDamagePointPersontage = 1.0
+
+[node name="GraveStoneTargetCoin" parent="SpriteGroup/TransformPoint" index="0" instance=ExtResource("4")]
+position = Vector2(0, -18)
+trueFrameRate = 30.0
+Animation/MediaReplace/TargetStones2_1.png = SubResource("CompressedTexture2D_48j5j")
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 26)

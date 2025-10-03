@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CharacterDamagePointConfig" load_steps=4 format=4 uid="uid://xrnobvw35cdp"]
+
+[ext_resource type="PackedScene" uid="uid://dtb3u3cgeprfv" path="res://Asset/Anime/Character/GraveStone/Target/BreakEffect/GraveStoneTargetBreak.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://cpcu1tlqgh4vm" path="res://Asset/Anime/Character/GraveStone/Target/DamagePoint/TargetStones1_4.png" id="2"]
+[ext_resource type="Script" uid="uid://8vg1ajd1i4ps" path="res://Resource/General/Character/DamagePoint/CharacterDamagePointConfig.gd" id="3"]
+
+[resource]
+script = ExtResource("3")
+damagePointName = "Damage3"
+damagePersontage = 0.4
+animeEffect = ExtResource("1")
+animeEffectOffset = Vector2(0, 0)
+isDrop = false
+animeFliterOpen = ""
+animeFliterClose = ""
+replaceMediaName = &"TargetStones1_1.png"
+replaceMediaTexture = ExtResource("2")
+damageAudio = ""
+metadata/_custom_type_script = "uid://8vg1ajd1i4ps"

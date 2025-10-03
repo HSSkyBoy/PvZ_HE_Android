@@ -1,0 +1,98 @@
+[gd_scene load_steps=4 format=4 uid="uid://bio0smi3lk3oy"]
+
+[ext_resource type="Script" uid="uid://cmh4cdx1jnh8g" path="res://Asset/Anime/Character/Plant/Chapter0/SnowPea/SnowPea.gd" id="1"]
+[ext_resource type="Resource" uid="uid://dtoidj6eh57dt" path="res://Asset/Anime/Character/Plant/Chapter0/SnowPea/SnowPea.tres" id="2"]
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="3"]
+
+[node name="SnowPea" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+trueFrameRate = inf
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, NodePath("Head"), null, null, null, null, null, null, null, null]
+Animation/Clip = "BodyIdle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/AnimeEvents = false
+Animation/LayerVisible/SnowPea_crystals1 = false
+Animation/LayerVisible/SnowPea_crystals2 = false
+Animation/LayerVisible/SnowPea_crystals3 = false
+Animation/LayerVisible/SnowPea_mouth = false
+Animation/LayerVisible/anim_face = false
+Animation/LayerVisible/anim_stem = false
+Animation/LayerVisible/backleaf = true
+Animation/LayerVisible/backleaf_left_tip = true
+Animation/LayerVisible/backleaf_right_tip = true
+Animation/LayerVisible/frontleaf = true
+Animation/LayerVisible/frontleaf_right_tip = true
+Animation/LayerVisible/frontleaf_tip_left = true
+Animation/LayerVisible/idle_shoot_blink = false
+Animation/LayerVisible/stalk_bottom = true
+Animation/LayerVisible/stalk_top = true
+Animation/MediaReplace/PeaShooter_backleaf.png = null
+Animation/MediaReplace/PeaShooter_backleaf_lefttip.png = null
+Animation/MediaReplace/PeaShooter_backleaf_righttip.png = null
+Animation/MediaReplace/PeaShooter_frontleaf.png = null
+Animation/MediaReplace/PeaShooter_frontleaf_lefttip.png = null
+Animation/MediaReplace/PeaShooter_frontleaf_righttip.png = null
+Animation/MediaReplace/PeaShooter_stalk_bottom.png = null
+Animation/MediaReplace/PeaShooter_stalk_top.png = null
+Animation/MediaReplace/SnowPea_blink1.png = null
+Animation/MediaReplace/SnowPea_blink2.png = null
+Animation/MediaReplace/SnowPea_crystals1.png = null
+Animation/MediaReplace/SnowPea_crystals2.png = null
+Animation/MediaReplace/SnowPea_crystals3.png = null
+Animation/MediaReplace/SnowPea_head.png = null
+Animation/MediaReplace/SnowPea_mouth.png = null
+Animation/MediaReplace/locator.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"
+
+[node name="Head" type="Node2D" parent="." node_paths=PackedStringArray("layerSlot", "layerSprite", "parentSprite")]
+unique_name_in_owner = true
+position = Vector2(-1.13667, 1.89)
+script = ExtResource("3")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-36, -46)
+trueFrameRate = inf
+useTween = false
+skipLastFrame = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+parentSprite = NodePath("..")
+Animation/Clip = "HeadIdle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/AnimeEvents = false
+Animation/LayerVisible/SnowPea_crystals1 = true
+Animation/LayerVisible/SnowPea_crystals2 = true
+Animation/LayerVisible/SnowPea_crystals3 = true
+Animation/LayerVisible/SnowPea_mouth = true
+Animation/LayerVisible/anim_face = true
+Animation/LayerVisible/anim_stem = false
+Animation/LayerVisible/backleaf = false
+Animation/LayerVisible/backleaf_left_tip = false
+Animation/LayerVisible/backleaf_right_tip = false
+Animation/LayerVisible/frontleaf = false
+Animation/LayerVisible/frontleaf_right_tip = false
+Animation/LayerVisible/frontleaf_tip_left = false
+Animation/LayerVisible/idle_shoot_blink = true
+Animation/LayerVisible/stalk_bottom = false
+Animation/LayerVisible/stalk_top = false
+Animation/MediaReplace/PeaShooter_backleaf.png = null
+Animation/MediaReplace/PeaShooter_backleaf_lefttip.png = null
+Animation/MediaReplace/PeaShooter_backleaf_righttip.png = null
+Animation/MediaReplace/PeaShooter_frontleaf.png = null
+Animation/MediaReplace/PeaShooter_frontleaf_lefttip.png = null
+Animation/MediaReplace/PeaShooter_frontleaf_righttip.png = null
+Animation/MediaReplace/PeaShooter_stalk_bottom.png = null
+Animation/MediaReplace/PeaShooter_stalk_top.png = null
+Animation/MediaReplace/SnowPea_blink1.png = null
+Animation/MediaReplace/SnowPea_blink2.png = null
+Animation/MediaReplace/SnowPea_crystals1.png = null
+Animation/MediaReplace/SnowPea_crystals2.png = null
+Animation/MediaReplace/SnowPea_crystals3.png = null
+Animation/MediaReplace/SnowPea_head.png = null
+Animation/MediaReplace/SnowPea_mouth.png = null
+Animation/MediaReplace/locator.png = null
+Layer = 8
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

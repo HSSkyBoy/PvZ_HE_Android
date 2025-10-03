@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=4 uid="uid://vj37cdm6poxn"]
+
+[ext_resource type="Script" uid="uid://bsp5nixci2ltb" path="res://Prefab/TowerDefense/GUI/Slider/LevelDifficult/LevelDifficultSlider.gd" id="1"]
+
+[node name="LevelDifficultSlider" type="HSlider"]
+offset_right = 1146.0
+offset_bottom = 115.0
+mouse_default_cursor_shape = 2
+max_value = 6.0
+rounded = true
+tick_count = 3
+ticks_on_borders = true
+script = ExtResource("1")
+
+[connection signal="drag_ended" from="." to="." method="DragEnd"]

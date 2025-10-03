@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=4 uid="uid://ecws3sh7kmty"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://06sm15nh6v43" path="res://Asset/Anime/Character/Plant/Chapter3/SeaNut/SeaNut.tres" id="2"]
+
+[node name="SeaNut" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -10)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = false
+Animation/LayerVisible/AnimeEvents = false
+Animation/LayerVisible/SeaShroom_blink = true
+Animation/LayerVisible/SeaShroom_head = true
+Animation/LayerVisible/SeaShroom_lips = true
+Animation/LayerVisible/SeaShroom_tentacles = true
+Animation/LayerVisible/SeahShroom_mouth = true
+Animation/LayerVisible/anim_face = true
+Animation/LayerVisible/anim_waterline = true
+Animation/LayerVisible/blink = true
+Animation/MediaReplace/SeaNut_blink1.png = null
+Animation/MediaReplace/SeaNut_blink2.png = null
+Animation/MediaReplace/SeaNut_body.png = null
+Animation/MediaReplace/SeaNut_lips.png = null
+Animation/MediaReplace/SeaNut_mouth.png = null
+Animation/MediaReplace/SeaShroom_foam.png = null
+Animation/MediaReplace/SeaShroom_head.png = null
+Animation/MediaReplace/SeaShroom_tentacles.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

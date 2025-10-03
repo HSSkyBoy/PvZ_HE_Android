@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=4 uid="uid://dkwhkpg0ys0sj"]
+
+[ext_resource type="PackedScene" uid="uid://ch1hh04p5qvav" path="res://Prefab/GUI/LevelEditor/Inspector/Properties/Type/Base/PropertiesBase.tscn" id="1"]
+[ext_resource type="Script" uid="uid://dgjdychpg0670" path="res://Prefab/GUI/LevelEditor/Inspector/Properties/Type/Vector4i/PropertiesVector4i.gd" id="2"]
+
+[node name="PropertiesVector4i" instance=ExtResource("1")]
+light_mask = 0
+offset_right = 83.0
+offset_bottom = 66.0
+script = ExtResource("2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" index="0"]
+light_mask = 0
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer" index="0"]
+layout_mode = 2
+
+[node name="SpinBoxX1" type="SpinBox" parent="HBoxContainer/VBoxContainer/HBoxContainer" index="0"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = -99999900000.0
+max_value = 99999900000.0
+prefix = "x1:"
+
+[node name="SpinBoxX2" type="SpinBox" parent="HBoxContainer/VBoxContainer/HBoxContainer" index="1"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = -99999900000.0
+max_value = 99999900000.0
+prefix = "x2:"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/VBoxContainer" index="1"]
+layout_mode = 2
+
+[node name="SpinBoxY1" type="SpinBox" parent="HBoxContainer/VBoxContainer/HBoxContainer2" index="0"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = -99999900000.0
+max_value = 99999900000.0
+prefix = "y1:"
+
+[node name="SpinBoxY2" type="SpinBox" parent="HBoxContainer/VBoxContainer/HBoxContainer2" index="1"]
+unique_name_in_owner = true
+light_mask = 0
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = -99999900000.0
+max_value = 99999900000.0
+prefix = "y2:"
+
+[connection signal="value_changed" from="HBoxContainer/VBoxContainer/HBoxContainer/SpinBoxX1" to="." method="ValueChange"]
+[connection signal="value_changed" from="HBoxContainer/VBoxContainer/HBoxContainer/SpinBoxX2" to="." method="ValueChange"]
+[connection signal="value_changed" from="HBoxContainer/VBoxContainer/HBoxContainer2/SpinBoxY1" to="." method="ValueChange"]
+[connection signal="value_changed" from="HBoxContainer/VBoxContainer/HBoxContainer2/SpinBoxY2" to="." method="ValueChange"]

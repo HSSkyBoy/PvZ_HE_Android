@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=4 uid="uid://cdj8tvmgj5new"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://dgrf36c7iju01" path="res://Asset/Anime/Character/GraveStone/TargetSun/GraveStoneTargetSun.tres" id="2"]
+
+[node name="GraveStoneTargetSun" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -50)
+trueFrameRate = 60.0
+useTween = false
+layerSlot = [null, null, null]
+layerSprite = [null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/Dirt = true
+Animation/LayerVisible/GraveStone = true
+Animation/MediaReplace/TargetStones4_1.png = null
+Animation/MediaReplace/TombstonesDirt4.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

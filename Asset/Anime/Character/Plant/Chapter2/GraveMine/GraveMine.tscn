@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=4 uid="uid://576bvdpjtrfh"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://dsyw54uu7ms63" path="res://Asset/Anime/Character/Plant/Chapter2/GraveMine/GraveMine.tres" id="2"]
+
+[node name="GraveMine" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/Gravebuster_eyebrows = true
+Animation/LayerVisible/Gravebuster_head = true
+Animation/LayerVisible/Gravebuster_leaf1 = true
+Animation/LayerVisible/Gravebuster_leaf2 = true
+Animation/LayerVisible/Gravebuster_leaf3 = true
+Animation/LayerVisible/Gravebuster_leaf4 = true
+Animation/LayerVisible/Gravebuster_leaf5 = true
+Animation/LayerVisible/Gravebuster_tooth1 = true
+Animation/LayerVisible/Gravebuster_tooth2 = true
+Animation/LayerVisible/Gravebuster_tooth3 = true
+Animation/LayerVisible/Gravebuster_tooth4 = true
+Animation/LayerVisible/Gravebuster_tooth5 = true
+Animation/LayerVisible/Gravebuster_tooth6 = true
+Animation/LayerVisible/Gravebuster_vines = true
+Animation/LayerVisible/PotatoMine_rock1 = true
+Animation/LayerVisible/PotatoMine_rock1b = true
+Animation/LayerVisible/PotatoMine_rock3 = true
+Animation/LayerVisible/PotatoMine_rock3b = true
+Animation/LayerVisible/PotatoMine_rock4 = true
+Animation/LayerVisible/PotatoMine_rock5 = true
+Animation/LayerVisible/PotatoMine_rock5b = true
+Animation/LayerVisible/PotatoMine_rock6 = true
+Animation/LayerVisible/PotatoMine_rock6b = true
+Animation/LayerVisible/skin1 = false
+Animation/LayerVisible/skin2_1 = false
+Animation/LayerVisible/skin2_2 = false
+"Animation/LayerVisible/图层_85" = true
+Animation/MediaReplace/GraveMine_eyebrows.png = null
+Animation/MediaReplace/GraveMine_head.png = null
+Animation/MediaReplace/GraveMine_leaf1.png = null
+Animation/MediaReplace/GraveMine_leaf2.png = null
+Animation/MediaReplace/GraveMine_skin1.png = null
+Animation/MediaReplace/GraveMine_skin2_1.png = null
+Animation/MediaReplace/GraveMine_skin2_2.png = null
+Animation/MediaReplace/GraveMine_tooth1.png = null
+Animation/MediaReplace/GraveMine_tooth2.png = null
+Animation/MediaReplace/GraveMine_tooth3.png = null
+Animation/MediaReplace/GraveMine_tooth4.png = null
+Animation/MediaReplace/GraveMine_tooth5.png = null
+Animation/MediaReplace/GraveMine_tooth6.png = null
+Animation/MediaReplace/GraveMine_vines.png = null
+Animation/MediaReplace/PotatoMine_light1.png = null
+Animation/MediaReplace/PotatoMine_rock1b.png = null
+Animation/MediaReplace/PotatoMine_rock3b.png = null
+Animation/MediaReplace/PotatoMine_rock4b.png = null
+Animation/MediaReplace/PotatoMine_rock5b.png = null
+Animation/MediaReplace/PotatoMine_rock6b.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

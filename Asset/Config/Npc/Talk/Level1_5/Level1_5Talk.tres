@@ -1,0 +1,98 @@
+[gd_resource type="Resource" script_class="NpcTalkConfig" load_steps=19 format=4 uid="uid://xjs5ol68n7qi"]
+
+[ext_resource type="JSON" path="res://Asset/Config/Npc/Talk/Level1_5/Level1_5Talk.json" id="1"]
+[ext_resource type="Script" uid="uid://hsm3ycakkh4p" path="res://Resource/Npc/Talk/Base/NpcTalkConfig.gd" id="2"]
+[ext_resource type="Script" uid="uid://cfbd2a1cynao6" path="res://Resource/Npc/Talk/Base/NpcTalkBaseConfig.gd" id="3"]
+[ext_resource type="Script" uid="uid://q7m30dhi56iu" path="res://Resource/Npc/Talk/Config/NpcTalkTutorialConfig.gd" id="4"]
+[ext_resource type="Resource" uid="uid://fqk4jcnpqvwe" path="res://Asset/Config/Tutorial/Level1_5/Level1_5Tutorial.tres" id="5"]
+[ext_resource type="PackedScene" uid="uid://csp3p80bpd1cn" path="res://Asset/Anime/Character/Plant/Chapter1/Magnetnut/Magnetnut.tscn" id="6"]
+[ext_resource type="Script" uid="uid://pbvxnnpyoiul" path="res://Resource/Npc/Talk/Config/NpcTalkHandConfig.gd" id="7"]
+
+[sub_resource type="Resource" id="Resource_tfguk"]
+script = ExtResource("3")
+npc = "CrazyDave"
+text = "NPC_TALK_LEVEL1_5_TUTORIAL_1"
+anime = "SmallTalk"
+audio = "CrazyDaveShort"
+
+[sub_resource type="Resource" id="Resource_bvyhv"]
+script = ExtResource("3")
+npc = "CrazyDave"
+text = "NPC_TALK_LEVEL1_5_TUTORIAL_2"
+anime = "SmallTalk"
+audio = "CrazyDaveShort"
+
+[sub_resource type="Resource" id="Resource_f3kxh"]
+script = ExtResource("4")
+tutorial = ExtResource("5")
+npc = "CrazyDave"
+text = ""
+anime = "Leave"
+audio = ""
+
+[sub_resource type="Resource" id="Resource_rtlpq"]
+script = ExtResource("3")
+npc = "CrazyDave"
+text = "NPC_TALK_LEVEL1_5_TUTORIAL_3"
+anime = "SmallTalk"
+audio = "CrazyDaveShort"
+
+[sub_resource type="Resource" id="Resource_co6u7"]
+script = ExtResource("3")
+npc = "CrazyDave"
+text = "NPC_TALK_LEVEL1_5_TUTORIAL_4"
+anime = "MediumTalk"
+audio = "CrazyDaveLong"
+
+[sub_resource type="Resource" id="Resource_665ww"]
+script = ExtResource("3")
+npc = "CrazyDave"
+text = "NPC_TALK_LEVEL1_5_TUTORIAL_5"
+anime = "MediumTalk"
+audio = "CrazyDaveLong"
+
+[sub_resource type="Resource" id="Resource_v0k2p"]
+script = ExtResource("3")
+npc = "CrazyDave"
+text = "NPC_TALK_LEVEL1_5_TUTORIAL_6"
+anime = "MediumTalk"
+audio = "CrazyDaveLong"
+
+[sub_resource type="Resource" id="Resource_e6hlu"]
+script = ExtResource("7")
+handScene = ExtResource("6")
+shoulderScene = null
+shoulder2Scene = null
+headScene = null
+npc = "CrazyDave"
+text = "NPC_TALK_LEVEL1_5_TUTORIAL_7"
+anime = "TalkHanding"
+audio = "CrazyDaveExtralong"
+
+[sub_resource type="Resource" id="Resource_ll8er"]
+script = ExtResource("3")
+npc = "CrazyDave"
+text = "NPC_TALK_LEVEL1_5_TUTORIAL_8"
+anime = "MediumTalk"
+audio = "CrazyDaveExtralong"
+
+[sub_resource type="Resource" id="Resource_fgfhk"]
+script = ExtResource("3")
+npc = "CrazyDave"
+text = "NPC_TALK_LEVEL1_5_TUTORIAL_9"
+anime = "Crazy"
+audio = "CrazyDaveCrazy"
+
+[sub_resource type="Resource" id="Resource_u0phv"]
+script = ExtResource("3")
+npc = "CrazyDave"
+text = "NPC_TALK_LEVEL1_5_TUTORIAL_10"
+anime = "MediumTalk"
+audio = "CrazyDaveExtralong"
+
+[resource]
+script = ExtResource("2")
+data = ExtResource("1")
+saveKey = "Level1_5TutorialTalk"
+talkList = [SubResource("Resource_tfguk"), SubResource("Resource_bvyhv"), SubResource("Resource_f3kxh"), SubResource("Resource_rtlpq"), SubResource("Resource_co6u7"), SubResource("Resource_665ww"), SubResource("Resource_v0k2p"), SubResource("Resource_e6hlu"), SubResource("Resource_ll8er"), SubResource("Resource_fgfhk"), SubResource("Resource_u0phv")]
+metadata/_custom_type_script = "uid://hsm3ycakkh4p"

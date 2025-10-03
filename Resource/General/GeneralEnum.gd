@@ -1,0 +1,13 @@
+class_name GeneralEnum
+
+enum HOMEWORLD{
+    NOONE = 0, 
+    MORDEN = 1, 
+}
+
+enum FEATURES{
+    TOWERDEFENSE_SHOVEL, 
+    TOWERDEFENSE_WORLDMAP, 
+    TOWERDEFENSE_PLANTFOOD, 
+    COINS, 
+}

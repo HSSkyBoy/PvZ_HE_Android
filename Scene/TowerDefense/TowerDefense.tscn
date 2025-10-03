@@ -1,0 +1,600 @@
+[gd_scene load_steps=32 format=4 uid="uid://cttxxkxrktmki"]
+
+[ext_resource type="Script" uid="uid://bj5gh3rfqu50" path="res://Scene/TowerDefense/TowerDefenseControl.gd" id="1"]
+[ext_resource type="Resource" uid="uid://bfl6f5wb3lu7m" path="res://Asset/Config/Level/TowerDefense/Test/LevelTest.tres" id="2"]
+[ext_resource type="Script" uid="uid://xhefwpju6rka" path="res://Script/Camera/CameraMovingControl.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://cjc8tc43kdv47" path="res://Prefab/GUI/NpcTalk/NpcTalkControl.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://q2eo6wgcbefw" path="res://Prefab/TowerDefense/Map/TowerDefenseMapControl.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://iydc3rp06xgs" path="res://Prefab/TowerDefense/GUI/InGame/PacketBank/TowerDefenseInGamePacketBank.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://chrvpojeedrwe" path="res://Prefab/TowerDefense/GUI/InGame/ZombieWon/TowerDefenseZombieWon.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://bgkuthysw0876" path="res://Prefab/GUI/Button/NinePatchButtonBase/NinePatchButtonBase.tscn" id="8"]
+[ext_resource type="Texture2D" uid="uid://da1nikmivd2n8" path="res://Asset/Texture/TowerDefense/PacketBank/PacketBankButton.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://dphra8cjrdw34" path="res://Asset/Texture/TowerDefense/PacketBank/PacketBankButtonGlow.png" id="10"]
+[ext_resource type="FontFile" uid="uid://d0aylc13b87r0" path="res://Asset/Font/BrianneTod.ttf" id="11"]
+[ext_resource type="PackedScene" uid="uid://cdnyb8d1qw7g4" path="res://Prefab/GUI/Button/SpriteBrightButton/SpriteBrightButton.tscn" id="12"]
+[ext_resource type="Shader" uid="uid://bi8x813unwm5l" path="res://Asset/Shader/ShaderBright.gdshader" id="13"]
+[ext_resource type="Texture2D" uid="uid://dgviglko6y6sa" path="res://Asset/Texture/GUI/TowerDefense/Level/LevelChooseOption.png" id="14"]
+[ext_resource type="PackedScene" uid="uid://bml60wmq62jay" path="res://Prefab/GUI/Button/MainButton.tscn" id="15"]
+[ext_resource type="PackedScene" uid="uid://2vh1csqbvbqx" path="res://Prefab/TowerDefense/GUI/InGame/SeedBank/TowerDefenseInGameSeedBank.tscn" id="16"]
+[ext_resource type="PackedScene" uid="uid://dqo2jc1bsf6gq" path="res://Prefab/TowerDefense/GUI/InGame/LevelControl/TowerDefenseInGameLevelControl.tscn" id="17"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxr3p"]
+size = Vector2(379, 1997)
+
+[sub_resource type="Animation" id="Animation_50gkw"]
+resource_name = "Enter"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TowerDefenseInGamePacketBank:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 600), Vector2(0, 86)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ShopButton:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AlmanacButton:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("%TowerDefenseInGamePacketBank:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_y04q1"]
+resource_name = "Exit"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TowerDefenseInGamePacketBank:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 86), Vector2(0, 600)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ShopButton:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AlmanacButton:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("%TowerDefenseInGamePacketBank:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_fdhmt"]
+resource_name = "MobileEnter"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TowerDefenseInGamePacketBank:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(210, 600), Vector2(210, 72)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ShopButton:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AlmanacButton:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("%TowerDefenseInGamePacketBank:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_ptdco"]
+resource_name = "MobileExit"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TowerDefenseInGamePacketBank:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(210, 72), Vector2(210, 600)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ShopButton:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AlmanacButton:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("%TowerDefenseInGamePacketBank:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_7jw7n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TowerDefenseInGamePacketBank:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 600)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ShopButton:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AlmanacButton:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("%TowerDefenseInGamePacketBank:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a1v7b"]
+_data = {
+&"Enter": SubResource("Animation_50gkw"),
+&"Exit": SubResource("Animation_y04q1"),
+&"MobileEnter": SubResource("Animation_fdhmt"),
+&"MobileExit": SubResource("Animation_ptdco"),
+&"RESET": SubResource("Animation_7jw7n")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fdhmt"]
+shader = ExtResource("13")
+shader_parameter/brightStrength = 0.0
+
+[sub_resource type="InputEventKey" id="InputEventKey_pxr3p"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_ewbhq"]
+events = [SubResource("InputEventKey_pxr3p")]
+
+[sub_resource type="Animation" id="Animation_4cyyy"]
+resource_name = "Enter"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -88), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_cmofa"]
+resource_name = "MobileEnter"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-210, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_07xgw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-220, -88)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4h7tl"]
+_data = {
+&"Enter": SubResource("Animation_4cyyy"),
+&"MobileEnter": SubResource("Animation_cmofa"),
+&"RESET": SubResource("Animation_07xgw")
+}
+
+[node name="TowerDefenseControl" type="Node"]
+process_mode = 1
+script = ExtResource("1")
+levelConfig = ExtResource("2")
+
+[node name="Camera" type="Node" parent="." node_paths=PackedStringArray("camera", "edgeMarkUL", "edgeMarkDR")]
+script = ExtResource("3")
+alive = false
+camera = NodePath("Camera")
+edgeMarkUL = NodePath("CameraBeginMarker")
+edgeMarkDR = NodePath("DownRightMarker")
+
+[node name="CameraBeginMarker" type="Marker2D" parent="Camera"]
+unique_name_in_owner = true
+
+[node name="CameraRightViewMarker" type="Marker2D" parent="Camera"]
+unique_name_in_owner = true
+position = Vector2(320, 0)
+
+[node name="CameraPreViewMarker" type="Marker2D" parent="Camera"]
+unique_name_in_owner = true
+position = Vector2(264, 0)
+
+[node name="Camera" type="Camera2D" parent="Camera"]
+unique_name_in_owner = true
+anchor_mode = 0
+
+[node name="DownRightMarker" type="Marker2D" parent="Camera"]
+position = Vector2(1080, 600)
+
+[node name="TalkLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="NpcTalkControl" parent="TalkLayer" instance=ExtResource("4")]
+unique_name_in_owner = true
+
+[node name="MapLayer" type="CanvasLayer" parent="."]
+layer = 0
+follow_viewport_enabled = true
+
+[node name="TowerDefenseMapControl" parent="MapLayer" node_paths=PackedStringArray("canvasModulateCharacter", "seedBank") instance=ExtResource("5")]
+unique_name_in_owner = true
+z_index = -100
+canvasModulateCharacter = NodePath("../../CharacterLayer/CanvasModulate")
+seedBank = NodePath("../../GUILayerBack/TowerDefenseInGameSeedBank")
+
+[node name="ZombieWonArea" type="Area2D" parent="MapLayer"]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapLayer/ZombieWonArea"]
+position = Vector2(-13.5, 998.5)
+shape = SubResource("RectangleShape2D_pxr3p")
+
+[node name="GUILayerFront" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="TowerDefenseInGamePacketBank" parent="GUILayerFront" node_paths=PackedStringArray("seedBank") instance=ExtResource("6")]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+seedBank = NodePath("../../GUILayerBack/TowerDefenseInGameSeedBank")
+
+[node name="PacketBankAnimationPlayer" type="AnimationPlayer" parent="GUILayerFront/TowerDefenseInGamePacketBank"]
+unique_name_in_owner = true
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_a1v7b")
+}
+
+[node name="TowerDefenseZombieWon" parent="GUILayerFront" instance=ExtResource("7")]
+unique_name_in_owner = true
+
+[node name="ShopButton" parent="GUILayerFront" instance=ExtResource("8")]
+visible = false
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -343.0
+offset_top = -34.0
+offset_right = -186.0
+offset_bottom = -3.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "商店"
+normalTexture = ExtResource("9")
+pressedTexture = ExtResource("10")
+hoverTexture = ExtResource("10")
+
+[node name="NinePatchTexture" parent="GUILayerFront/ShopButton" index="0"]
+texture = ExtResource("9")
+
+[node name="LabelText" parent="GUILayerFront/ShopButton/CenterContainer" index="0"]
+theme_override_colors/font_color = Color(0.306155, 0.122686, 6.49765e-07, 1)
+theme_override_fonts/font = ExtResource("11")
+text = "商店"
+
+[node name="AlmanacButton" parent="GUILayerFront" instance=ExtResource("8")]
+visible = false
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.002
+anchor_right = 1.0
+anchor_bottom = 1.002
+offset_left = -179.0
+offset_top = -35.2001
+offset_right = -22.0
+offset_bottom = -4.20007
+text = "查看图鉴"
+normalTexture = ExtResource("9")
+pressedTexture = ExtResource("10")
+hoverTexture = ExtResource("10")
+
+[node name="NinePatchTexture" parent="GUILayerFront/AlmanacButton" index="0"]
+texture = ExtResource("9")
+
+[node name="LabelText" parent="GUILayerFront/AlmanacButton/CenterContainer" index="0"]
+theme_override_colors/font_color = Color(0.306155, 0.122686, 6.49765e-07, 1)
+theme_override_fonts/font = ExtResource("11")
+text = "查看图鉴"
+
+[node name="OptionButton" parent="GUILayerFront" instance=ExtResource("12")]
+unique_name_in_owner = true
+visible = false
+material = SubResource("ShaderMaterial_fdhmt")
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -56.0
+offset_right = 139.0
+offset_bottom = 75.0
+grow_vertical = 0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("14")
+autoSize = true
+
+[node name="GUILayerBack" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+layer = 0
+
+[node name="ButtonPause" parent="GUILayerBack" instance=ExtResource("15")]
+unique_name_in_owner = true
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -122.0
+offset_top = 6.0
+offset_right = -5.0
+offset_bottom = 59.0
+grow_horizontal = 0
+toggle_mode = true
+shortcut = SubResource("Shortcut_ewbhq")
+shortcut_in_tooltip = false
+text = "菜单"
+
+[node name="CheckBox2X" type="CheckBox" parent="GUILayerBack"]
+unique_name_in_owner = true
+light_mask = 0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -102.0
+offset_top = 50.0
+offset_bottom = 114.0
+grow_horizontal = 0
+scale = Vector2(0.78, 0.78)
+mouse_default_cursor_shape = 2
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 24
+text = "加速"
+
+[node name="TowerDefenseInGameSeedBank" parent="GUILayerBack" instance=ExtResource("16")]
+unique_name_in_owner = true
+offset_left = -220.0
+offset_top = -88.0
+offset_right = -220.0
+offset_bottom = -88.0
+
+[node name="SeedBankAnimationPlayer" type="AnimationPlayer" parent="GUILayerBack/TowerDefenseInGameSeedBank"]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_4h7tl")
+}
+
+[node name="CharacterLayer" type="CanvasLayer" parent="."]
+layer = 0
+follow_viewport_enabled = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="CharacterLayer"]
+
+[node name="CharacterNode" type="Node2D" parent="CharacterLayer"]
+unique_name_in_owner = true
+y_sort_enabled = true
+
+[node name="TowerDefenseInGameLevelControl" parent="." instance=ExtResource("17")]
+unique_name_in_owner = true
+
+[connection signal="area_entered" from="MapLayer/ZombieWonArea" to="." method="ZombieWonAreaEntered"]
+[connection signal="view" from="GUILayerFront/TowerDefenseInGamePacketBank" to="." method="ViewMap"]
+[connection signal="pressed" from="GUILayerFront/ShopButton" to="." method="ShopButtonPressed"]
+[connection signal="pressed" from="GUILayerFront/AlmanacButton" to="." method="AlmanacButtonPressed"]
+[connection signal="pressed" from="GUILayerFront/OptionButton" to="." method="OptionButtonPressed"]
+
+[editable path="GUILayerFront/ShopButton"]
+[editable path="GUILayerFront/AlmanacButton"]

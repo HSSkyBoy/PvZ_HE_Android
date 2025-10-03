@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=4 uid="uid://c5ijtocn0v2wx"]
+
+[ext_resource type="PackedScene" uid="uid://dbyd0mqkya1j3" path="res://Prefab/TowerDefense/Effect/Once/TowerDefenseEffectParticlesOnce.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://ct3aai4g57k2g" path="res://Prefab/Particles/Splats/SpikeMelonpultSplats/SpikeMelonpultSplats.tscn" id="2"]
+
+[node name="TowerDefenseEffectParticlesSnowPeaSplats" node_paths=PackedStringArray("particles") instance=ExtResource("1")]
+objectId = 111
+particles = NodePath("SpikeMelonpultSplats")
+
+[node name="SpikeMelonpultSplats" parent="." index="0" instance=ExtResource("2")]

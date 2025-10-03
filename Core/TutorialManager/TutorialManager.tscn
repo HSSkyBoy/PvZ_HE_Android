@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=4 uid="uid://bejohau4b3njp"]
+
+[ext_resource type="Script" uid="uid://byncaulm8tquk" path="res://Core/TutorialManager/TutorialManager.gd" id="1"]
+
+[node name="TutorialManager" type="Node"]
+script = ExtResource("1")

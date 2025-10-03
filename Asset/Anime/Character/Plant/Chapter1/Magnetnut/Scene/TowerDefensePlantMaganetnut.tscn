@@ -1,0 +1,78 @@
+[gd_scene load_steps=10 format=4 uid="uid://dig5lvxfk85wp"]
+
+[ext_resource type="PackedScene" uid="uid://c3lnqei4itfpx" path="res://Prefab/TowerDefense/Character/TowerDefensePlant.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bxmsgr5lqk6wj" path="res://Asset/Anime/Character/Plant/Chapter1/Magnetnut/Scene/TowerDefensePlantMaganetnut.gd" id="2"]
+[ext_resource type="Resource" uid="uid://7cj5ktqlk63a" path="res://Asset/Anime/Character/Plant/Chapter1/Magnetnut/Config/TowerDefensePlantMagnetnut.tres" id="3"]
+[ext_resource type="PackedScene" uid="uid://csp3p80bpd1cn" path="res://Asset/Anime/Character/Plant/Chapter1/Magnetnut/Magnetnut.tscn" id="4"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="5"]
+[ext_resource type="PackedScene" uid="uid://becnacp2r6c0g" path="res://Script/Component/TowerDefense/Character/MagnetComponent/MagnetComponent.tscn" id="6"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="7"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qh584"]
+size = Vector2(40.5, 90)
+
+[node name="TowerDefensePlantMaganetnut" node_paths=PackedStringArray("sprite") instance=ExtResource("1")]
+script = ExtResource("2")
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/Magnetnut")
+PreviewDamagePointPersontage = 1.0
+gravity = 245.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(0, 30)
+
+[node name="Magnetnut" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot", "layerSprite") instance=ExtResource("4")]
+position = Vector2(0, -31)
+skipLastFrame = false
+layerSlot = [null, null, NodePath("AdobeAnimateSlot"), null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null]
+
+[node name="AdobeAnimateSlot" type="Node2D" parent="SpriteGroup/TransformPoint/Magnetnut" index="0"]
+position = Vector2(3.53258, -45.0403)
+rotation = 0.0775877
+scale = Vector2(0.59957, 0.609943)
+skew = 0.00190794
+script = ExtResource("5")
+followSlotId = 3
+offset = Vector2(65, 60)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[node name="Marker2D" type="Marker2D" parent="SpriteGroup/TransformPoint/Magnetnut/AdobeAnimateSlot" index="0"]
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(0, 30)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 0)
+shape = SubResource("RectangleShape2D_qh584")
+
+[node name="MagnetComponent" parent="." index="7" node_paths=PackedStringArray("posMarker") instance=ExtResource("6")]
+unique_name_in_owner = true
+posMarker = NodePath("../SpriteGroup/TransformPoint/Magnetnut/AdobeAnimateSlot/Marker2D")
+
+[node name="Shoot" type="Node" parent="StateChart/CompoundState" index="2"]
+script = ExtResource("7")
+
+[node name="NoActive" type="Node" parent="StateChart/CompoundState" index="3"]
+script = ExtResource("7")
+
+[node name="ToShoot" type="Node" parent="StateChart/CompoundState" index="7"]
+script = ExtResource("8")
+to = NodePath("../Shoot")
+event = &"ToShoot"
+delay_in_seconds = "0.0"
+
+[node name="ToNoActive" type="Node" parent="StateChart/CompoundState" index="8"]
+script = ExtResource("8")
+to = NodePath("../NoActive")
+event = &"ToNoActive"
+delay_in_seconds = "0.0"
+
+[connection signal="breakDown" from="MagnetComponent" to="." method="BreakDown"]
+[connection signal="state_entered" from="StateChart/CompoundState/Shoot" to="." method="ShootEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Shoot" to="." method="ShootExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Shoot" to="." method="ShootProcessing"]
+[connection signal="state_entered" from="StateChart/CompoundState/NoActive" to="." method="NoActiveEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/NoActive" to="." method="NoActiveExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/NoActive" to="." method="NoActiveProcessing"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=4 uid="uid://66ajnsmq2qtq"]
+
+[ext_resource type="Texture2D" uid="uid://b7r2lenrqloe" path="res://Asset/Texture/TowerDefense/Projectile/Gloom/ProjectileGloompult.png" id="1"]
+
+[node name="ProjectileGloom" type="Sprite2D"]
+texture = ExtResource("1")

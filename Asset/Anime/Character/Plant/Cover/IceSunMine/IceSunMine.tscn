@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=4 uid="uid://32qoqhurj500"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://p654it0y5j4" path="res://Asset/Anime/Character/Plant/Cover/IceSunMine/IceSunMine.tres" id="2"]
+
+[node name="IceSunMine" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/PotatoMine_rock1 = true
+Animation/LayerVisible/PotatoMine_rock1b = true
+Animation/LayerVisible/PotatoMine_rock2 = true
+Animation/LayerVisible/PotatoMine_rock3 = true
+Animation/LayerVisible/PotatoMine_rock3b = true
+Animation/LayerVisible/PotatoMine_rock4 = true
+Animation/LayerVisible/PotatoMine_rock41 = true
+Animation/LayerVisible/PotatoMine_rock5 = true
+Animation/LayerVisible/PotatoMine_rock5b = true
+Animation/LayerVisible/PotatoMine_rock6 = true
+Animation/LayerVisible/PotatoMine_rock6b = true
+Animation/LayerVisible/anim_face = true
+Animation/LayerVisible/anim_glow = true
+Animation/LayerVisible/anim_light = true
+Animation/LayerVisible/head = true
+Animation/LayerVisible/light3 = true
+Animation/MediaReplace/IceSunMine_light1.png = null
+Animation/MediaReplace/IceSunMine_light2.png = null
+Animation/MediaReplace/IceSunShroom_0001_3.png = null
+Animation/MediaReplace/PotatoMine_body.png = null
+Animation/MediaReplace/PotatoMine_light1.png = null
+Animation/MediaReplace/PotatoMine_rock1.png = null
+Animation/MediaReplace/PotatoMine_rock2.png = null
+Animation/MediaReplace/PotatoMine_rock3.png = null
+Animation/MediaReplace/PotatoMine_rock4.png = null
+Animation/MediaReplace/PotatoMine_rock5.png = null
+Animation/MediaReplace/PotatoMine_rock6.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

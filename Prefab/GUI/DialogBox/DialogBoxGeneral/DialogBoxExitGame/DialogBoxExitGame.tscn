@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=4 uid="uid://2ruypbgb1o60"]
+
+[ext_resource type="PackedScene" uid="uid://nx2prtbxim66" path="res://Prefab/GUI/DialogBox/DialogBoxGeneral/DialogPopup.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cit6wj1k2edtt" path="res://Prefab/GUI/DialogBox/DialogBoxGeneral/DialogBoxExitGame/DialogBoxExitGame.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://bml60wmq62jay" path="res://Prefab/GUI/Button/MainButton.tscn" id="3"]
+
+[node name="DialogBoxExitGame" instance=ExtResource("1")]
+script = ExtResource("2")
+
+[node name="ButtonContainer" parent="Layer/Control" index="1"]
+offset_left = -179.0
+offset_top = 5.01601
+offset_right = 169.0
+offset_bottom = 51.016
+
+[node name="TrueButton" parent="Layer/Control/ButtonContainer" index="0" instance=ExtResource("3")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "是"
+
+[node name="FalseButton" parent="Layer/Control/ButtonContainer" index="1" instance=ExtResource("3")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "否"
+
+[connection signal="pressed" from="Layer/Control/ButtonContainer/TrueButton" to="." method="TrueButtonPressed"]
+[connection signal="pressed" from="Layer/Control/ButtonContainer/FalseButton" to="." method="FalseButtonPressed"]

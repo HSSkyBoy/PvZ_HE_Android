@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=4 uid="uid://cov352ltsv2sg"]
+
+[ext_resource type="Texture2D" uid="uid://0g1gjyjuyftq" path="res://Asset/Anime/Particles/Dirt/Dirtsmall.png" id="1"]
+[ext_resource type="Material" uid="uid://mcqpbkqxrved" path="res://Prefab/Particles/Dirt/MineRiseDirt/MineRiseDirt.tres" id="2"]
+[ext_resource type="Script" uid="uid://dywgdjamo0ovs" path="res://Extends/Particles/GPUParticles2DOnece.gd" id="3"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ksd6p"]
+particles_animation = true
+particles_anim_h_frames = 8
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[node name="MineRiseDirt" type="GPUParticles2D"]
+z_index = -1
+material = SubResource("CanvasItemMaterial_ksd6p")
+emitting = false
+amount = 30
+texture = ExtResource("1")
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.1
+local_coords = true
+process_material = ExtResource("2")
+script = ExtResource("3")

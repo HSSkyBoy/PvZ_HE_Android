@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="TutorialConfig" load_steps=16 format=4 uid="uid://svqi6ba2ngme"]
+
+[ext_resource type="JSON" path="res://Asset/Config/Tutorial/Level1_1/Level1_1Tutorial.json" id="1"]
+[ext_resource type="Script" uid="uid://dhr6gtuscagn1" path="res://Core/TutorialManager/Resource/TutorialConfig.gd" id="2"]
+[ext_resource type="Script" uid="uid://bi5lpkxwgy2hn" path="res://Core/BroadCastManager/Resource/BroadCastConfig.gd" id="3"]
+[ext_resource type="Script" uid="uid://ds52nyu558rg1" path="res://Resource/Tutorial/Condition/TutorialConditionCheckCharaterNum.gd" id="4"]
+[ext_resource type="Script" uid="uid://b1kf4elevtwaq" path="res://Core/TutorialManager/Resource/TutorialStep/TutorialStepConfig.gd" id="5"]
+[ext_resource type="Script" uid="uid://den2fuuqc7urd" path="res://Resource/Tutorial/Condition/TutorialConditionCheckSunCollect.gd" id="6"]
+
+[sub_resource type="Resource" id="Resource_hn75x"]
+script = ExtResource("3")
+broadCastString = "LEVEL1_1_TUTORIAL_1"
+broadCastTime = -1.0
+
+[sub_resource type="Resource" id="Resource_5cuy8"]
+script = ExtResource("4")
+characterName = "PlantSunflowerPea"
+method = ">="
+num = 1
+
+[sub_resource type="Resource" id="Resource_1hk62"]
+script = ExtResource("5")
+broadCastUse = true
+broadCastConfig = SubResource("Resource_hn75x")
+conditionList = [SubResource("Resource_5cuy8")]
+
+[sub_resource type="Resource" id="Resource_2i7yw"]
+script = ExtResource("3")
+broadCastString = "LEVEL1_1_TUTORIAL_2"
+broadCastTime = -1.0
+
+[sub_resource type="Resource" id="Resource_qluqj"]
+script = ExtResource("6")
+num = 25
+
+[sub_resource type="Resource" id="Resource_2qn4y"]
+script = ExtResource("5")
+broadCastUse = true
+broadCastConfig = SubResource("Resource_2i7yw")
+conditionList = [SubResource("Resource_qluqj")]
+
+[sub_resource type="Resource" id="Resource_tne7k"]
+script = ExtResource("3")
+broadCastString = "LEVEL1_1_TUTORIAL_3"
+broadCastTime = -1.0
+
+[sub_resource type="Resource" id="Resource_xj7fu"]
+script = ExtResource("4")
+characterName = "PlantSunflowerPea"
+method = ">="
+num = 1
+
+[sub_resource type="Resource" id="Resource_cxain"]
+script = ExtResource("5")
+broadCastUse = true
+broadCastConfig = SubResource("Resource_tne7k")
+conditionList = [SubResource("Resource_xj7fu")]
+
+[resource]
+script = ExtResource("2")
+data = ExtResource("1")
+saveKey = "Level1_1Tutorial"
+step = [SubResource("Resource_1hk62"), SubResource("Resource_2qn4y"), SubResource("Resource_cxain")]
+metadata/_custom_type_script = "uid://dhr6gtuscagn1"

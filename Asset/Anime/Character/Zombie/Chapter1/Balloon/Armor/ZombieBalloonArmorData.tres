@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="CharacterArmorData" load_steps=8 format=4 uid="uid://fwqjunryjvyd"]
+
+[ext_resource type="Resource" uid="uid://r7c0p3hjwro5" path="res://Asset/Anime/Character/Zombie/Chapter1/Balloon/Armor/Config/ZombieBalloonArmorBalloon.tres" id="1"]
+[ext_resource type="Resource" uid="uid://cxp5pd2dtae5w" path="res://Asset/Anime/Character/Zombie/Chapter1/Balloon/Armor/Config/ZombieBalloonArmorBlackHelmet.tres" id="2"]
+[ext_resource type="Resource" uid="uid://jocdyem1u714" path="res://Asset/Anime/Character/Zombie/Chapter1/Balloon/Armor/Config/ZombieBalloonArmorBucket.tres" id="3"]
+[ext_resource type="Resource" uid="uid://didmg6gw71jhq" path="res://Asset/Anime/Character/Zombie/Chapter1/Balloon/Armor/Config/ZombieBalloonArmorCone.tres" id="4"]
+[ext_resource type="Resource" uid="uid://cq7o6mpq8btuj" path="res://Asset/Anime/Character/Zombie/Chapter1/Balloon/Armor/Config/ZombieBalloonArmorHelmet.tres" id="5"]
+[ext_resource type="Resource" uid="uid://dbrx3hot7ybc5" path="res://Asset/Anime/Character/Zombie/Chapter1/Balloon/Armor/Config/ZombieBalloonArmorSpecialHelmet.tres" id="6"]
+[ext_resource type="Script" uid="uid://ci4c6gpjugqpl" path="res://Resource/General/Character/Armor/CharacterArmorData.gd" id="7"]
+
+[resource]
+script = ExtResource("7")
+armorList = [ExtResource("4"), ExtResource("3"), ExtResource("5"), ExtResource("2"), ExtResource("6"), ExtResource("1")]
+armorDictionary = {
+"Balloon": ExtResource("1"),
+"BlackHelmet": ExtResource("2"),
+"Bucket": ExtResource("3"),
+"Cone": ExtResource("4"),
+"Helmet": ExtResource("5"),
+"SpecialHelmet": ExtResource("6")
+}
+fliterAllDictionary = {
+"Balloon": [],
+"BlackHelmet": [],
+"Bucket": ["anim_bucket"],
+"Cone": ["anim_cone"],
+"Helmet": [],
+"SpecialHelmet": []
+}
+fliterOpenDictionary = {
+"Balloon": [],
+"BlackHelmet": [],
+"Bucket": [],
+"Cone": [],
+"Helmet": [],
+"SpecialHelmet": []
+}
+fliterCloseDictionary = {
+"Balloon": [],
+"BlackHelmet": [],
+"Bucket": [],
+"Cone": [],
+"Helmet": [],
+"SpecialHelmet": []
+}

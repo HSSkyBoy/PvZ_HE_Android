@@ -1,0 +1,99 @@
+[gd_scene load_steps=7 format=4 uid="uid://buhu7tmsbjtc6"]
+
+[ext_resource type="PackedScene" uid="uid://cnwqwm6ecgmhp" path="res://Prefab/TowerDefense/Character/TowerDefenseCharacter.tscn" id="1"]
+[ext_resource type="Script" uid="uid://cjj1lefvsj7d" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://dir0f8lu1l3b3" path="res://Script/Component/TowerDefense/Character/AttackComponent/AttackComponent.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://cptmlwtfqwsmt" path="res://Script/Component/TowerDefense/Character/GroundMoveComponent/GroundMoveComponent.tscn" id="4"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="5"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="6"]
+
+[node name="TowerDefenseZombie" instance=ExtResource("1")]
+z_index = -8
+script = ExtResource("2")
+groan = "ZombieMordenGroans"
+walkSpeedScale = 1.0
+useAttackDps = true
+walkAnimeClip = "Walk"
+swimAnimeClip = "Walk"
+attackAnimeClip = "Eat"
+dieAnimeClip = "Death"
+dieWaterAnimeClip = "Death"
+waterAnimeFliter = ""
+garlicFliters = ["anim_head2", "anim_tongue"]
+garlicReplace = "Zombie_head.png"
+waterHeightPersontage = 0.76
+waterHeight = 35.0
+camp = 1
+itemLayer = 7
+gravity = 245.0
+
+[node name="SpriteMask" parent="SpriteGroup" index="0"]
+offset_left = -45.0
+offset_top = -129.0
+offset_right = 44.0
+offset_bottom = 62.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(12, 36)
+
+[node name="ShadowSprite" parent="." index="3"]
+position = Vector2(12, 36)
+scale = Vector2(1.2, 1.2)
+
+[node name="IcetrapSprite" parent="." index="4"]
+position = Vector2(13, 35)
+
+[node name="AttackComponent" parent="." index="7" node_paths=PackedStringArray("checkArea") instance=ExtResource("3")]
+unique_name_in_owner = true
+checkArea = NodePath("../HitBox")
+
+[node name="GroundMoveComponent" parent="." index="8" instance=ExtResource("4")]
+unique_name_in_owner = true
+
+[node name="Garlic" type="Node" parent="StateChart/CompoundState" index="2"]
+script = ExtResource("5")
+
+[node name="Walk" type="Node" parent="StateChart/CompoundState" index="3"]
+script = ExtResource("5")
+
+[node name="Attack" type="Node" parent="StateChart/CompoundState" index="4"]
+script = ExtResource("5")
+
+[node name="Die" type="Node" parent="StateChart/CompoundState" index="5"]
+script = ExtResource("5")
+
+[node name="ToWalk" type="Node" parent="StateChart/CompoundState" index="6"]
+script = ExtResource("6")
+to = NodePath("../Walk")
+event = &"ToWalk"
+delay_in_seconds = "0.0"
+
+[node name="ToAttck" type="Node" parent="StateChart/CompoundState" index="7"]
+script = ExtResource("6")
+to = NodePath("../Attack")
+event = &"ToAttck"
+delay_in_seconds = "0.0"
+
+[node name="ToGarlic" type="Node" parent="StateChart/CompoundState" index="8"]
+script = ExtResource("6")
+to = NodePath("../Garlic")
+event = &"ToGarlic"
+delay_in_seconds = "0.0"
+
+[node name="ToDie" type="Node" parent="StateChart/CompoundState" index="9"]
+script = ExtResource("6")
+to = NodePath("../Die")
+event = &"ToDie"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="StateChart/CompoundState/Garlic" to="." method="GarlicEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Garlic" to="." method="GarlicExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Garlic" to="." method="GarlicProcessing"]
+[connection signal="state_entered" from="StateChart/CompoundState/Walk" to="." method="WalkEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Walk" to="." method="WalkExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Walk" to="." method="WalkProcessing"]
+[connection signal="state_entered" from="StateChart/CompoundState/Attack" to="." method="AttackEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Attack" to="." method="AttackExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Attack" to="." method="AttackProcessing"]
+[connection signal="state_entered" from="StateChart/CompoundState/Die" to="." method="DieEntered"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Die" to="." method="DieProcessing"]

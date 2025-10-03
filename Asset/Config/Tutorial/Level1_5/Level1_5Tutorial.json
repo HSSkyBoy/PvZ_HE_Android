@@ -1,0 +1,20 @@
+{
+	"SaveKey": "",
+	"Step" : [
+		{
+			"BroadCast" : {
+				"Text" : "LEVEL1_5_BROADCAST_1"
+			},
+			"Condition" : [
+				{
+					"Name" : "CheckCharacterNum" ,
+					"Data" : {
+						"CharacterName" : "PlantSunflowerPea" ,
+						"Method" : "<=" ,
+						"Num" : 0
+					}
+				}
+			]
+		}
+	]
+}

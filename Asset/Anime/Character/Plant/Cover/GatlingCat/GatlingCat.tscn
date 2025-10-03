@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=4 uid="uid://6tx6kou20pv"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://po2bls1rcoiq" path="res://Asset/Anime/Character/Plant/Cover/GatlingCat/GatlingCat.tres" id="2"]
+
+[node name="GatlingCat" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(-40, -40)
+useTween = false
+layerSlot = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+layerSprite = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+Animation/Clip = "Idle"
+Animation/LayerVisible/AnimeClips = true
+Animation/LayerVisible/AnimeEvents = true
+Animation/LayerVisible/Cattail_paw1 = true
+Animation/LayerVisible/Cattail_paw2 = true
+Animation/LayerVisible/Cattail_paw3 = true
+Animation/LayerVisible/Cattail_tail = true
+Animation/LayerVisible/Cattail_tail2 = true
+Animation/LayerVisible/Cattail_tail2_overlay = true
+Animation/LayerVisible/GatlingPea_barrel1 = true
+Animation/LayerVisible/GatlingPea_barrel2 = true
+Animation/LayerVisible/GatlingPea_barrel3 = true
+Animation/LayerVisible/GatlingPea_barrel4 = true
+Animation/LayerVisible/GatlingPea_mouth = true
+Animation/LayerVisible/GatlingPea_mouth_overlay = true
+Animation/LayerVisible/PeaShooter_eyebrow = true
+Animation/LayerVisible/anim_face = true
+Animation/LayerVisible/helmet = true
+Animation/LayerVisible/idle_shoot_blink = true
+Animation/LayerVisible/tail3 = true
+Animation/MediaReplace/Cattail_paw1.png = null
+Animation/MediaReplace/Cattail_paw2.png = null
+Animation/MediaReplace/Cattail_paw3.png = null
+Animation/MediaReplace/Cattail_tail2P.png = null
+Animation/MediaReplace/Cattail_tailP.png = null
+Animation/MediaReplace/GatlingCat_helmet.png = null
+Animation/MediaReplace/GatlingCat_tail3.png = null
+Animation/MediaReplace/GatlingCat_tail_overlay.png = null
+Animation/MediaReplace/GatlingPea_barrel.png = null
+Animation/MediaReplace/GatlingPea_blink1.png = null
+Animation/MediaReplace/GatlingPea_blink2.png = null
+Animation/MediaReplace/GatlingPea_head.png = null
+Animation/MediaReplace/GatlingPea_mouth.png = null
+Animation/MediaReplace/GatlingPea_mouth_overlay.png = null
+Animation/MediaReplace/PeaShooter_eyebrow.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

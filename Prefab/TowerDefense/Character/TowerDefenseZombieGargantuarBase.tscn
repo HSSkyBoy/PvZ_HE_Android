@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=4 uid="uid://be74ryvl4k6y7"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bh715qjuxly5w" path="res://Prefab/TowerDefense/Character/TowerDefenseZombieGargantuarBase.gd" id="2"]
+[ext_resource type="Script" uid="uid://domu0k4tfig2c" path="res://addons/godot_state_charts/atomic_state.gd" id="3"]
+[ext_resource type="Script" uid="uid://bnuagwct5sv5y" path="res://addons/godot_state_charts/transition.gd" id="4"]
+
+[node name="TowerDefenseZombieGargantuarBasic" instance=ExtResource("1")]
+script = ExtResource("2")
+fireAnimeClip = "Fire"
+smashAnimeEvent = "smash"
+impFireEvent = "fire"
+impName = ""
+impFilter = "Zombie_imp_jaw&Zombie_imp_head&Zombie_imp_body1&Zombie_imp_body2&Zombie_imp_outerleg_upper&Zombie_imp_outerleg_lower&Zombie_imp_outerleg_foot&Zombie_imp_innerleg_upper&Zombie_imp_innerleg_lower&Zombie_imp_innerleg_foot&Zombie_imp_innerarm_upper&Zombie_imp_outerarm_lower&Zombie_imp_outerarm_upper&Zombie_imp_innerarm_lower&Zombie_gargantuar_whiterope&Zombie_duckytube"
+impFliters = ["Zombie_imp_jaw", "Zombie_imp_head", "Zombie_imp_body1", "Zombie_imp_body2", "Zombie_imp_outerleg_upper", "Zombie_imp_outerleg_lower", "Zombie_imp_outerleg_foot", "Zombie_imp_innerleg_upper", "Zombie_imp_innerleg_lower", "Zombie_imp_innerleg_foot", "Zombie_imp_innerarm_upper", "Zombie_imp_outerarm_lower", "Zombie_imp_outerarm_upper", "Zombie_imp_innerarm_lower", "Zombie_gargantuar_whiterope", "Zombie_duckytube"]
+impThrowDamagePointName = "ThrowImp"
+groan = "ZombieGargantuarGroans"
+useAttackDps = false
+inSwimAnimeClip = ""
+outSwimAnimeClip = ""
+attackAnimeClip = "Smash"
+attackWaterAnimeClip = ""
+
+[node name="ShadowSprite" parent="." index="3"]
+scale = Vector2(2.07273, 1.56522)
+
+[node name="AttackComponent" parent="." index="7"]
+attackType = "Smash"
+
+[node name="Fire" type="Node" parent="StateChart/CompoundState" index="4"]
+script = ExtResource("3")
+
+[node name="ToFire" type="Node" parent="StateChart/CompoundState" index="9"]
+script = ExtResource("4")
+to = NodePath("../Fire")
+event = &"ToFire"
+delay_in_seconds = "0.0"
+
+[connection signal="state_entered" from="StateChart/CompoundState/Fire" to="." method="FireEntered"]
+[connection signal="state_exited" from="StateChart/CompoundState/Fire" to="." method="FireExited"]
+[connection signal="state_physics_processing" from="StateChart/CompoundState/Fire" to="." method="FireProcessing"]

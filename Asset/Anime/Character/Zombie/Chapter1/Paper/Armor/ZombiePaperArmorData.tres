@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="CharacterArmorData" load_steps=8 format=4 uid="uid://c2e6hk4uq1mqk"]
+
+[ext_resource type="Resource" uid="uid://cf3lr2ru555q2" path="res://Asset/Anime/Character/Zombie/Chapter1/Paper/Armor/Config/ZombiePaperArmorBlackHelmet.tres" id="1"]
+[ext_resource type="Resource" uid="uid://denwx2evnn8bk" path="res://Asset/Anime/Character/Zombie/Chapter1/Paper/Armor/Config/ZombiePaperArmorBucket.tres" id="2"]
+[ext_resource type="Resource" uid="uid://bamb6imty1eih" path="res://Asset/Anime/Character/Zombie/Chapter1/Paper/Armor/Config/ZombiePaperArmorCone.tres" id="3"]
+[ext_resource type="Resource" uid="uid://dgy6npgxd3wcm" path="res://Asset/Anime/Character/Zombie/Chapter1/Paper/Armor/Config/ZombiePaperArmorHelmet.tres" id="4"]
+[ext_resource type="Resource" uid="uid://f67pwi22mh6w" path="res://Asset/Anime/Character/Zombie/Chapter1/Paper/Armor/Config/ZombiePaperArmorPaper.tres" id="5"]
+[ext_resource type="Resource" uid="uid://c83m8nxr67g0c" path="res://Asset/Anime/Character/Zombie/Chapter1/Paper/Armor/Config/ZombiePaperArmorSpecialHelmet.tres" id="6"]
+[ext_resource type="Script" uid="uid://ci4c6gpjugqpl" path="res://Resource/General/Character/Armor/CharacterArmorData.gd" id="7"]
+
+[resource]
+script = ExtResource("7")
+armorList = [ExtResource("5"), ExtResource("3"), ExtResource("2"), ExtResource("4"), ExtResource("1"), ExtResource("6")]
+armorDictionary = {
+"BlackHelmet": ExtResource("1"),
+"Bucket": ExtResource("2"),
+"Cone": ExtResource("3"),
+"Helmet": ExtResource("4"),
+"Paper": ExtResource("5"),
+"SpecialHelmet": ExtResource("6")
+}
+fliterAllDictionary = {
+"BlackHelmet": [],
+"Bucket": ["anim_bucket"],
+"Cone": ["anim_cone"],
+"Helmet": [],
+"Paper": ["Zombie_paper_paper"],
+"SpecialHelmet": []
+}
+fliterOpenDictionary = {
+"BlackHelmet": [],
+"Bucket": [],
+"Cone": [],
+"Helmet": [],
+"Paper": [],
+"SpecialHelmet": []
+}
+fliterCloseDictionary = {
+"BlackHelmet": [],
+"Bucket": [],
+"Cone": [],
+"Helmet": [],
+"Paper": [],
+"SpecialHelmet": []
+}

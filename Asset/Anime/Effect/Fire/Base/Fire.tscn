@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=4 uid="uid://c4fjg42kgeupv"]
+
+[ext_resource type="Script" uid="uid://dcjlwjqgdivmr" path="res://Extends/AdobeAnimateSprite/AdobeAnimateSpriteBase.gd" id="1"]
+[ext_resource type="Resource" uid="uid://gfeu0aidac6e" path="res://Asset/Anime/Effect/Fire/Base/Fire.tres" id="2"]
+
+[node name="Fire" type="Node2D" node_paths=PackedStringArray("layerSlot", "layerSprite")]
+script = ExtResource("1")
+flashAnimeData = ExtResource("2")
+offset = Vector2(0, -80)
+useTween = false
+layerSlot = [null, null]
+layerSprite = [null, null]
+Animation/Clip = "Done"
+Animation/LayerVisible/AnimeClips = true
+"Animation/LayerVisible/Layer 1" = true
+Animation/MediaReplace/fire1.png = null
+Animation/MediaReplace/fire1_1.png = null
+Animation/MediaReplace/fire1_2.png = null
+Animation/MediaReplace/fire1_3.png = null
+Animation/MediaReplace/fire2.png = null
+Animation/MediaReplace/fire3.png = null
+Animation/MediaReplace/fire4.png = null
+Animation/MediaReplace/fire4b.png = null
+Animation/MediaReplace/fire5.png = null
+Animation/MediaReplace/fire5b.png = null
+Animation/MediaReplace/fire6.png = null
+Animation/MediaReplace/fire6b.png = null
+Animation/MediaReplace/fire7.png = null
+Animation/MediaReplace/fire7b.png = null
+Animation/MediaReplace/fire8.png = null
+metadata/_custom_type_script = "uid://dcjlwjqgdivmr"

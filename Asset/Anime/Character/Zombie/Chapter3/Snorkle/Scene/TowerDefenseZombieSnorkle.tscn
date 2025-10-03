@@ -1,0 +1,74 @@
+[gd_scene load_steps=10 format=4 uid="uid://bhy0fus6g5evj"]
+
+[ext_resource type="PackedScene" uid="uid://buhu7tmsbjtc6" path="res://Prefab/TowerDefense/Character/TowerDefenseZombie.tscn" id="1"]
+[ext_resource type="Script" uid="uid://bil4cxtx4k5wr" path="res://Asset/Anime/Character/Zombie/Chapter3/Snorkle/Scene/TowerDefenseZombieSnorkle.gd" id="2"]
+[ext_resource type="Resource" uid="uid://b1w66hcooinge" path="res://Asset/Anime/Character/Zombie/Chapter3/Snorkle/Config/TowerDefenseZombieSnorkle.tres" id="3"]
+[ext_resource type="Resource" uid="uid://co537d8wk2trx" path="res://Asset/Anime/Character/Zombie/Chapter3/Snorkle/DamagePoint/Config/ZombieSnorkleDamagePointArm.tres" id="4"]
+[ext_resource type="Resource" uid="uid://csk4e2hffpd8y" path="res://Asset/Anime/Character/Zombie/Chapter3/Snorkle/DamagePoint/Config/ZombieSnorkleDamagePointHead.tres" id="5"]
+[ext_resource type="Resource" uid="uid://dat20ya1dcy8c" path="res://Asset/Anime/Character/Zombie/Chapter3/Snorkle/Armor/Config/ZombieSnorkleArmorHelmet.tres" id="6"]
+[ext_resource type="Resource" uid="uid://dswwhb2lomp7n" path="res://Asset/Anime/Character/Zombie/Chapter3/Snorkle/Armor/Config/ZombieSnorkleArmorBlackHelmet.tres" id="7"]
+[ext_resource type="Resource" uid="uid://d2ou8b5l3dpji" path="res://Asset/Anime/Character/Zombie/Chapter3/Snorkle/Armor/Config/ZombieSnorkleArmorSpecialHelmet.tres" id="8"]
+[ext_resource type="PackedScene" uid="uid://bkrcpah82r3ie" path="res://Asset/Anime/Character/Zombie/Chapter3/Snorkle/ZombieSnorkle.tscn" id="9"]
+
+[node name="TowerDefenseZombieSnorkle" node_paths=PackedStringArray("sprite", "headSlot") instance=ExtResource("1")]
+script = ExtResource("2")
+inSwimAnimeClip = "Jump"
+swimAnimeClip = "Swim"
+outSwimAnimeClip = ""
+attackWaterAnimeClip = "SwimEat"
+dieWaterAnimeClip = "SwimDeath"
+waterHeightPersontage = 1.0
+waterHeight = 0.0
+config = ExtResource("3")
+sprite = NodePath("SpriteGroup/TransformPoint/ZombieSnorkle")
+headSlot = NodePath("SpriteGroup/TransformPoint/ZombieSnorkle/HeadSlot")
+damagePart = {
+"Arm": ExtResource("4"),
+"BlackHelmet": ExtResource("7"),
+"Head": ExtResource("5"),
+"Helmet": ExtResource("6"),
+"SpecialHelmet": ExtResource("8")
+}
+PreviewDamagePointPersontage = 1.0
+Armor = []
+DamagePartSlot/Arm = NodePath("SpriteGroup/TransformPoint/ZombieSnorkle/ArmSlot")
+DamagePartSlot/Head = NodePath("SpriteGroup/TransformPoint/ZombieSnorkle/HeadSlot")
+DamagePartSlot/Helmet = NodePath("SpriteGroup/TransformPoint/ZombieSnorkle/HeadSlot")
+DamagePartSlot/BlackHelmet = NodePath("SpriteGroup/TransformPoint/ZombieSnorkle/HeadSlot")
+DamagePartSlot/SpecialHelmet = NodePath("SpriteGroup/TransformPoint/ZombieSnorkle/HeadSlot")
+
+[node name="SpriteMask" parent="SpriteGroup" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 89.0
+offset_bottom = 191.0
+
+[node name="TransformPoint" parent="SpriteGroup" index="1"]
+position = Vector2(12, 33)
+
+[node name="ZombieSnorkle" parent="SpriteGroup/TransformPoint" index="0" node_paths=PackedStringArray("layerSlot") instance=ExtResource("9")]
+position = Vector2(-12, -33)
+layerSlot = [NodePath("GroundSlot"), null, null, null, null, null, null, null, null, null, null, null, NodePath("HeadSlot"), null, null, null, null, null, NodePath("ArmSlot"), null, null, null]
+
+[node name="HeadSlot" parent="SpriteGroup/TransformPoint/ZombieSnorkle" index="0"]
+position = Vector2(-15.2838, -49.2759)
+rotation = -0.142798
+scale = Vector2(0.797833, 0.798869)
+skew = 0.00234747
+
+[node name="ArmSlot" parent="SpriteGroup/TransformPoint/ZombieSnorkle" index="1"]
+position = Vector2(17.7889, -1.38245)
+rotation = -0.378386
+scale = Vector2(0.798061, 0.798061)
+
+[node name="GroundSlot" parent="SpriteGroup/TransformPoint/ZombieSnorkle" index="2"]
+position = Vector2(-63.6, -20)
+scale = Vector2(1.00041, 1.00041)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(4, -2)
+
+[node name="GroundMoveComponent" parent="." index="8" node_paths=PackedStringArray("groundNode")]
+groundNode = NodePath("../SpriteGroup/TransformPoint/ZombieSnorkle/GroundSlot")
+
+[editable path="SpriteGroup/TransformPoint/ZombieSnorkle"]

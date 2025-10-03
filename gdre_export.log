@@ -1,0 +1,60 @@
+GDRE Tools 1.0.1-dev.278+gb69114
+Windows 10.0.26200, NVIDIA GeForce RTX 3060 Laptop GPU, opengl3
+Opening file: E:/Tools/GDRE_tools-editor-windows/植物大战僵尸杂交版v0.5.1发布版.APK
+Loaded 2897 imported files
+Detected Engine Version: 4.4.1.stable
+Detected Bytecode Revision: 4.3.0-stable (77af6ca)
+Extracted 5911 files, no errors detected!
+Recreating plugin configs...
+Loading resource strings, this may take a while!!
+Resource strings loaded!
+Saved project config.
+
+
+********************************EXPORT REPORT********************************
+
+Totals:                                 
+Decompiled scripts:                     533
+Failed scripts:                         0
+Imported resources for export session:  2897
+Successfully converted:                 2897
+Lossy:                                  63
+Rewrote metadata:                       837
+Non-importable conversions:             0
+Not converted:                          0
+Failed conversions:                     0
+-------------
+
+------
+
+The following plugins failed to have their plugin.cfg regenerated:
+_Godot-IDE_
+
+
+
+---------------------------------IMPORTANT NOTES----------------------------------
+
+
+Translation Export Incomplete:
+WARNING: Could not recover 104 keys for res://Asset/Translate/Translate.csv
+
+
+------
+Incomplete Plugin Export:
+The following addons failed to have their plugin.cfg regenerated
+You may encounter editor errors due to this.
+Tip: Try finding the plugin in the Godot Asset Library or Github.
+
+ - _Godot-IDE_
+
+
+
+------------------------------------------------------------------------------------
+
+Use Godot editor version 4.4.1.stable to edit the project.
+Note: the project may be using a custom version of Godot. Detection for this has not been implemented yet.
+If you find that you have many non-import errors upon opening the project 
+(i.e. scripts or shaders have many errors), use the original game's binary as the export template.
+
+*******************************************************************************
+

@@ -1,0 +1,119 @@
+[gd_scene load_steps=15 format=4 uid="uid://1q4y2f7e27vq"]
+
+[ext_resource type="Script" uid="uid://xw8d0b3rt404" path="res://Asset/Config/Map/Frontlawn/Scene/NightBig/TowerDefenseMapFrontlawnNightBig.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cxjgn3csj0iga" path="res://Asset/Config/Map/Frontlawn/Scene/NightBig/TowerDefenseMapFrontlawnNightBigGradient.tres" id="2"]
+[ext_resource type="Texture2D" uid="uid://c6iifv7melwv3" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/FrontlawnNightBig.jpg" id="3"]
+[ext_resource type="Script" uid="uid://cv5jare6apwcu" path="res://Extends/PointLight2D/PointLight2DFollowMudulate.gd" id="4"]
+[ext_resource type="Texture2D" uid="uid://bbbiwhq1ib7vi" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Stripe.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://j3ifp3elg8ak" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/FrontlawnFloor.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://bs07wv0ua20em" path="res://Asset/Texture/TowerDefense/Background/TowerDefenseMap/Frontlawn/FrontlawnNightDoor.png" id="7"]
+
+[sub_resource type="Gradient" id="Gradient_tmbv5"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e8ger"]
+gradient = SubResource("Gradient_tmbv5")
+width = 24
+height = 24
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.8)
+
+[sub_resource type="Curve" id="Curve_e38p8"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.130268, 1), 0.0, 0.0, 0, 0, Vector2(0.130278, 1), 0.0, 0.0, 0, 0, Vector2(0.214559, 0.524642), 0.0, 0.0, 0, 0, Vector2(0.283525, 1), 0.0, 0.0, 0, 0, Vector2(0.37931, 0.534976), 0.0, 0.0, 0, 0, Vector2(0.478927, 1), 0.0, 0.0, 0, 0, Vector2(0.570881, 0.514308), 0.0, 0.0, 0, 0, Vector2(0.666667, 1), 0.0, 0.0, 0, 0, Vector2(0.750958, 0.483307), 0.0, 0.0, 0, 0, Vector2(0.850575, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 12
+
+[sub_resource type="CurveTexture" id="CurveTexture_m8hty"]
+curve = SubResource("Curve_e38p8")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vgmsb"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(600, 300, 1)
+spread = 180.0
+initial_velocity_min = 25.0
+initial_velocity_max = 50.0
+angular_velocity_min = -200.0
+angular_velocity_max = 100.0
+orbit_velocity_min = -0.0539999
+orbit_velocity_max = 0.0400001
+gravity = Vector3(0, 0, 0)
+linear_accel_min = -10.0
+linear_accel_max = 6.0
+radial_accel_min = -12.0
+radial_accel_max = 6.0
+tangential_accel_min = -10.0
+tangential_accel_max = 5.0
+damping_max = 6.0
+scale_min = 0.5
+scale_max = 0.5
+color = Color(1, 1, 0.756863, 1)
+alpha_curve = SubResource("CurveTexture_m8hty")
+
+[sub_resource type="Gradient" id="Gradient_bwo8c"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4pp5k"]
+gradient = SubResource("Gradient_bwo8c")
+width = 1500
+height = 1500
+fill = 1
+fill_from = Vector2(0, 0.5)
+fill_to = Vector2(0.8, 0)
+
+[node name="TowerDefenseMapFrontlawnNightBig" type="Node2D" node_paths=PackedStringArray("stripe")]
+modulate = Color(1, 0.988235, 0.988235, 1)
+script = ExtResource("1")
+stripe = NodePath("Stripe")
+canvasModulateGradient = ExtResource("2")
+
+[node name="FrontlawnNight" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3")
+centered = false
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(704, 320)
+amount = 24
+texture = SubResource("GradientTexture2D_e8ger")
+lifetime = 5.0
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_vgmsb")
+
+[node name="PointLight2DFollowMudulate" type="PointLight2D" parent="." node_paths=PackedStringArray("followNode")]
+position = Vector2(371.5, 300)
+scale = Vector2(0.496667, 0.4)
+color = Color(1, 0.988235, 0.988235, 1)
+range_layer_max = 512
+texture = SubResource("GradientTexture2D_4pp5k")
+script = ExtResource("4")
+followNode = NodePath("..")
+saveEnergy = 1.0
+
+[node name="Stripe" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(507, 64)
+scale = Vector2(1, 1.0757)
+texture = ExtResource("5")
+centered = false
+
+[node name="FrontlawnFloor" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(101, 296)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="CanvasLayer"]
+color = Color(0.67451, 0.67451, 0.67451, 1)
+
+[node name="FrontlawnDoor" type="Sprite2D" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(101, 297.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7")

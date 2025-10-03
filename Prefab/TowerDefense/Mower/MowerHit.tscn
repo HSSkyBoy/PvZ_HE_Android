@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=4 uid="uid://dtuc07xfk33qc"]
+
+[ext_resource type="Script" uid="uid://j46jph3agikn" path="res://Prefab/TowerDefense/Mower/MowerHit.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://4jfayk5d18ic" path="res://Asset/Anime/Mower/Hit/MowerHit.tscn" id="2"]
+[ext_resource type="Script" uid="uid://b6lojhfkgvhsw" path="res://addons/AdobeAnimateEditor/Node/AdobeAnimateSlot.gd" id="3"]
+
+[node name="MoverHit" type="Node2D"]
+z_index = -8
+script = ExtResource("1")
+itemLayer = 7
+
+[node name="MowerHitSprite" parent="." node_paths=PackedStringArray("layerSprite") instance=ExtResource("2")]
+position = Vector2(24, -8)
+layerSprite = [null, null]
+
+[node name="AdobeAnimateSlot" type="Node2D" parent="MowerHitSprite"]
+unique_name_in_owner = true
+position = Vector2(58.9802, 23.7566)
+rotation = 1.70613
+scale = Vector2(0.687996, 1.01762)
+skew = 1.43051e-05
+script = ExtResource("3")
+followSlotId = 1
+offset = Vector2(23, 76)
+metadata/_custom_type_script = "uid://b6lojhfkgvhsw"
+
+[connection signal="animeCompleted" from="MowerHitSprite" to="." method="AnimeComplete"]
